@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`tinker-turret-dodge-v1.1.3`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/tinker-turret-dodge-v1.1.3) | 2026-10-10 | [tinker_turret_dodge.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-turret-dodge-v1.1.3/tinker_turret_dodge.lua) | 0 |
+| [`tinker-turret-dodge-v1.1.3`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/tinker-turret-dodge-v1.1.3) | 2026-10-10 | [tinker_turret_dodge.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-turret-dodge-v1.1.3/tinker_turret_dodge.lua) | 2 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=tinker-turret-dodge&expanded=true)
 <!-- releases:end -->

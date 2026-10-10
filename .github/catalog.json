@@ -93,6 +93,50 @@
           "Open settings: `Scripts → Scripts → Tinker`."
         ]
       }
+    },
+    {
+      "id": "auto_shackleshot",
+      "tag": "auto-shackleshot",
+      "title": "Auto Shackleshot",
+      "kind": "lua",
+      "file": "Auto_Shackleshot.lua",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-10",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-shackleshot-v1.0.0/Auto_Shackleshot.lua"
+      },
+      "ru": {
+        "tagline": "автоматическое применение Shackleshot за Windranger",
+        "about": "Скрипт для автоматического использования Shackleshot на Windranger.",
+        "features": [
+          "Автоматически находит вражеских героев, проверяет возможность связать и применяет Shackleshot",
+          "Автоматический режим можно включить с заданной минуты игры",
+          "Ручной режим применения при удержании кнопки",
+          "Публикация скрипта: <a href=\"https://discord.com/channels/408315082439917578/1552753037259571301/1552754805103927438\" target=\"_blank\" rel=\"noopener\">Discord</a>"
+        ],
+        "install": [
+          "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-shackleshot-v1.0.0/Auto_Shackleshot.lua\" target=\"_blank\" rel=\"noopener\"><code>Auto_Shackleshot.lua</code></a> в `umbrella\\scripts`.",
+          "Поместите <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> туда же.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте настройки: `Скрипты → Скрипты → Auto Shackleshot`."
+        ]
+      },
+      "en": {
+        "tagline": "automatic Shackleshot on Windranger",
+        "about": "A script for automatically using Shackleshot on Windranger.",
+        "features": [
+          "Automatically finds enemy heroes, checks whether they can be shackled, and casts Shackleshot when possible",
+          "Automatic mode can be enabled from a specified game minute",
+          "Manual casting mode while holding a key",
+          "Script post: <a href=\"https://discord.com/channels/408315082439917578/1552753037259571301/1552754805103927438\" target=\"_blank\" rel=\"noopener\">Discord</a>"
+        ],
+        "install": [
+          "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-shackleshot-v1.0.0/Auto_Shackleshot.lua\" target=\"_blank\" rel=\"noopener\"><code>Auto_Shackleshot.lua</code></a> in `umbrella\\scripts`.",
+          "Place <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> alongside it.",
+          "Reload the Lua scripts.",
+          "Open settings: `Scripts → Scripts → Auto Shackleshot`."
+        ]
+      }
     }
   ]
 }
