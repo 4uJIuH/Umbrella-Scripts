@@ -3,9 +3,13 @@
 автоматическое использование спарков на линии / automatic Spark Wraith usage on the lane
 
 <!-- releases:start -->
-Релизов пока нет. No releases yet.
+Скачать: [Auto_Spark.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-spark-v1.0.0/Auto_Spark.lua) — `auto-spark-v1.0.0`, 2026-10-10
 
-[Релизы на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-spark&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`auto-spark-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/auto-spark-v1.0.0) | 2026-10-10 | [Auto_Spark.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-spark-v1.0.0/Auto_Spark.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-spark&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -25,6 +29,15 @@
 2. Поместите <a href="https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> туда же.
 3. Перезагрузите Lua-скрипты.
 4. Откройте настройки: `Скрипты → Скрипты → Auto Spark`.
+
+## Что нового
+
+**Обновление**
+
+- Добавлены два режима работы: автоматический и механический.
+- Добавлена настройка клавиши каста для механического режима.
+- В автоматическом режиме Spark Wraith применяется до заданной минуты игры.
+- В механическом режиме Spark Wraith применяется только при удержании клавиши.
 
 ---
 
@@ -47,3 +60,12 @@ A script for automatically using Spark Wraith on the lane.
 2. Place <a href="https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> alongside it.
 3. Reload the Lua scripts.
 4. Open settings: `Scripts → Scripts → Auto Spark`.
+
+## Changelog
+
+**Script Update**
+
+- Added two operating modes: Automatic and Manual.
+- Added a cast-key bind setting for the Manual mode.
+- In Automatic mode, Spark Wraith is cast until the configured game minute.
+- In Manual mode, Spark Wraith is cast only while the key is held.
