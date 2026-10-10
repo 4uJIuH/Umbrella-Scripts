@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`auto-shackleshot-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/auto-shackleshot-v1.0.0) | 2026-10-10 | [Auto_Shackleshot.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-shackleshot-v1.0.0/Auto_Shackleshot.lua) | 0 |
+| [`auto-shackleshot-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/auto-shackleshot-v1.0.0) | 2026-10-10 | [Auto_Shackleshot.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-shackleshot-v1.0.0/Auto_Shackleshot.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-shackleshot&expanded=true)
 <!-- releases:end -->

@@ -3,9 +3,13 @@
 автоматическое Blink-комбо на Earth Spirit / automatic Blink combo on Earth Spirit
 
 <!-- releases:start -->
-Релизов пока нет. No releases yet.
+Скачать: [earth_spirit_kick_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/earth-spirit-kick-combo-v1.0.0/earth_spirit_kick_combo.lua) — `earth-spirit-kick-combo-v1.0.0`, 2026-10-10
 
-[Релизы на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=earth-spirit-kick-combo&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`earth-spirit-kick-combo-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/earth-spirit-kick-combo-v1.0.0) | 2026-10-10 | [earth_spirit_kick_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/earth-spirit-kick-combo-v1.0.0/earth_spirit_kick_combo.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=earth-spirit-kick-combo&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

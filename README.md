@@ -83,9 +83,10 @@ Earth Spirit Kick Combo: download `earth_spirit_kick_combo.lua` and `!_qLocalize
 | --- | --- | --- |
 | [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 2 | `tinker-turret-dodge-v1.1.3` |
 | [Tinker Auto Farm](scripts/tinker_auto_farm) | 2 | `tinker-auto-farm-v1.0.3` |
-| [Auto Shackleshot](scripts/auto_shackleshot) | 0 | `auto-shackleshot-v1.0.0` |
+| [Auto Shackleshot](scripts/auto_shackleshot) | 1 | `auto-shackleshot-v1.0.0` |
 | [Auto Spark](scripts/auto_spark) | 0 | `auto-spark-v1.0.0` |
 | [Rune Destruction](scripts/rune_destruction) | 0 | `rune-destruction-v1.0.2` |
+| [Earth Spirit Kick Combo](scripts/earth_spirit_kick_combo) | 0 | `earth-spirit-kick-combo-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
