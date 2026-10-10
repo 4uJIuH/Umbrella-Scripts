@@ -17,7 +17,7 @@
 - [Dorman Combo Assistant](scripts/dorman_combo_assistant) — комбо-ассистент для Dorman в Deadlock
 - [Rem Assistant](scripts/rem_assistant) — ассистент способностей и лечения для Rem в Deadlock
 - [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — ESP для Souls Vault и Rem's Tunnel с таймером возрождения
-- [qLocalization](scripts/q_localizer) — сторонняя библиотека для локализации Lua-интерфейсов; автор qfun (qfun_g9s), это не мой скрипт
+- [qLocalization](scripts/q_localizer) — вспомогательная библиотека для локализации Lua-интерфейсов
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -81,7 +81,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Dorman Combo Assistant](scripts/dorman_combo_assistant) — a combo assistant for Dorman in Deadlock
 - [Rem Assistant](scripts/rem_assistant) — ability and healing assistant for Rem in Deadlock
 - [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — ESP for Souls Vault and Rem's Tunnel with respawn timers
-- [qLocalization](scripts/q_localizer) — a third-party Lua interface localization library by qfun (qfun_g9s), not my script
+- [qLocalization](scripts/q_localizer) — a helper library for localizing Lua interfaces
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -140,6 +140,7 @@ and place it alongside scripts that require localization. This third-party libra
 | [Dorman Combo Assistant](scripts/dorman_combo_assistant) | 0 | `dorman-combo-assistant-v1.0.0` |
 | [Rem Assistant](scripts/rem_assistant) | 0 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 0 | `vault-tunnel-esp-v1.0.0` |
+| [qLocalization](scripts/q_localizer) | 0 | `q-localizer-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

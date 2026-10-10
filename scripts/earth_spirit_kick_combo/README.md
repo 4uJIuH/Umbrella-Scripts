@@ -27,7 +27,7 @@ Lua-скрипт для автоматического Blink-комбо на Ear
 ## Установка
 
 1. Поместите `earth_spirit_kick_combo.lua` в `umbrella\scripts`.
-2. Убедитесь, что рядом находится <a href="https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a>.
+2. Убедитесь, что рядом находится <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a>.
 3. Перезагрузите Lua-скрипты.
 4. Откройте настройки: `General → Earth Spirit Kick Combo`.
 
@@ -50,6 +50,6 @@ A Lua script for an automatic Earth Spirit Blink combo: blink behind an enemy an
 ## Install
 
 1. Place `earth_spirit_kick_combo.lua` in `umbrella\scripts`.
-2. Make sure <a href="https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> is alongside it.
+2. Make sure <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> is alongside it.
 3. Reload the Lua scripts.
 4. Open settings: `General → Earth Spirit Kick Combo`.

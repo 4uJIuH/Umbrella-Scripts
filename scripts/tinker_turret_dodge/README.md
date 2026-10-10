@@ -23,7 +23,7 @@ Lua-скрипт для автоматической постановки тур
 ## Установка
 
 1. Поместите `tinker_turret_dodge.lua` в `umbrella\scripts`.
-2. Поместите <a href="https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> в `umbrella\scripts`.
+2. Поместите <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> в `umbrella\scripts`.
 3. Перезагрузите Lua-скрипты.
 4. Откройте настройки: `General → Tinker Turret Dodge`.
 
@@ -49,7 +49,7 @@ Tinker Turret Dodge is a Lua script for automatically placing Tinker turrets aga
 ## Install
 
 1. Place `tinker_turret_dodge.lua` in `umbrella\scripts`.
-2. Place <a href="https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> in `umbrella\scripts`.
+2. Place <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> in `umbrella\scripts`.
 3. Reload the Lua scripts.
 4. Open settings: `General → Tinker Turret Dodge`.
 

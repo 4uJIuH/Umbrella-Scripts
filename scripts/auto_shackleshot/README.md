@@ -24,7 +24,7 @@
 ## Установка
 
 1. Поместите <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-shackleshot-v1.0.0/Auto_Shackleshot.lua" target="_blank" rel="noopener"><code>Auto_Shackleshot.lua</code></a> в `umbrella\scripts`.
-2. Поместите <a href="https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> туда же.
+2. Поместите <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> туда же.
 3. Перезагрузите Lua-скрипты.
 4. Откройте настройки: `Скрипты → Скрипты → Auto Shackleshot`.
 
@@ -44,6 +44,6 @@ A script for automatically using Shackleshot on Windranger.
 ## Install
 
 1. Place <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-shackleshot-v1.0.0/Auto_Shackleshot.lua" target="_blank" rel="noopener"><code>Auto_Shackleshot.lua</code></a> in `umbrella\scripts`.
-2. Place <a href="https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> alongside it.
+2. Place <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> alongside it.
 3. Reload the Lua scripts.
 4. Open settings: `Scripts → Scripts → Auto Shackleshot`.
