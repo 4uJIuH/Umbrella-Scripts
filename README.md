@@ -57,8 +57,9 @@ Rem Assistant: скачай `Rem_Assistant.lua` и `!_qLocalizer.lua` в `%cheat
 Souls Vault / Rem's Tunnel ESP: скачай `VaultTunnelESP.lua` в папку скриптов Deadlock,
 перезагрузи Lua-скрипты и открой `Visuals → World → Show Me More → Vault & Tunnel ESP`.
 
-qLocalization: [скачай `!_qLocalizer.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua)
-и положи рядом со скриптами, которым нужна локализация. Это сторонняя библиотека автора qfun (qfun_g9s), не мой скрипт.
+qLocalization: [скачай `_qLocalizer.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua),
+переименуй файл в `!_qLocalizer.lua` и положи рядом со скриптами, которым нужна локализация.
+Это сторонняя библиотека автора qfun (qfun_g9s), не мой скрипт.
 
 ---
 
@@ -121,8 +122,9 @@ Rem Assistant: download `Rem_Assistant.lua` and `!_qLocalizer.lua` into
 Souls Vault / Rem's Tunnel ESP: download `VaultTunnelESP.lua` into your Deadlock scripts folder,
 reload the Lua scripts, and open `Visuals → World → Show Me More → Vault & Tunnel ESP`.
 
-qLocalization: [download `!_qLocalizer.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua)
-and place it alongside scripts that require localization. This third-party library is by qfun (qfun_g9s), not my script.
+qLocalization: [download `_qLocalizer.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua),
+rename it to `!_qLocalizer.lua`, and place it alongside scripts that require localization.
+This third-party library is by qfun (qfun_g9s), not my script.
 
 ## Downloads
 

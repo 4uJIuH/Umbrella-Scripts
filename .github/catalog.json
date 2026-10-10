@@ -24,7 +24,7 @@
         ],
         "install": [
           "Поместите `tinker_turret_dodge.lua` в `umbrella\\scripts`.",
-          "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> в `umbrella\\scripts`.",
+          "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a> в `umbrella\\scripts`.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `General → Tinker Turret Dodge`."
         ]
@@ -39,7 +39,7 @@
         ],
         "install": [
           "Place `tinker_turret_dodge.lua` in `umbrella\\scripts`.",
-          "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> in `umbrella\\scripts`.",
+          "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a> in `umbrella\\scripts`.",
           "Reload the Lua scripts.",
           "Open settings: `General → Tinker Turret Dodge`."
         ]
@@ -121,7 +121,7 @@
         ],
         "install": [
           "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-shackleshot-v1.0.0/Auto_Shackleshot.lua\" target=\"_blank\" rel=\"noopener\"><code>Auto_Shackleshot.lua</code></a> в `umbrella\\scripts`.",
-          "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> туда же.",
+          "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a> туда же.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `Скрипты → Скрипты → Auto Shackleshot`."
         ]
@@ -137,7 +137,7 @@
         ],
         "install": [
           "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-shackleshot-v1.0.0/Auto_Shackleshot.lua\" target=\"_blank\" rel=\"noopener\"><code>Auto_Shackleshot.lua</code></a> in `umbrella\\scripts`.",
-          "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> alongside it.",
+          "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a> alongside it.",
           "Reload the Lua scripts.",
           "Open settings: `Scripts → Scripts → Auto Shackleshot`."
         ]
@@ -169,7 +169,7 @@
         ],
         "install": [
           "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-spark-v1.0.0/Auto_Spark.lua\" target=\"_blank\" rel=\"noopener\"><code>Auto_Spark.lua</code></a> в `umbrella\\scripts`.",
-          "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> туда же.",
+          "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a> туда же.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `Скрипты → Скрипты → Auto Spark`."
         ]
@@ -187,7 +187,7 @@
         ],
         "install": [
           "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-spark-v1.0.0/Auto_Spark.lua\" target=\"_blank\" rel=\"noopener\"><code>Auto_Spark.lua</code></a> in `umbrella\\scripts`.",
-          "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> alongside it.",
+          "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a> alongside it.",
           "Reload the Lua scripts.",
           "Open settings: `Scripts → Scripts → Auto Spark`."
         ]
@@ -267,7 +267,7 @@
         ],
         "install": [
           "Поместите `earth_spirit_kick_combo.lua` в `umbrella\\scripts`.",
-          "Убедитесь, что рядом находится <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
+          "Убедитесь, что рядом находится <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a>.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `General → Earth Spirit Kick Combo`."
         ]
@@ -286,7 +286,7 @@
         ],
         "install": [
           "Place `earth_spirit_kick_combo.lua` in `umbrella\\scripts`.",
-          "Make sure <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> is alongside it.",
+          "Make sure <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a> is alongside it.",
           "Reload the Lua scripts.",
           "Open settings: `General → Earth Spirit Kick Combo`."
         ]
@@ -318,7 +318,7 @@
         ],
         "install": [
           "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua\" target=\"_blank\" rel=\"noopener\"><code>hp_mana_67_ping.lua</code></a> в `umbrella\\scripts`.",
-          "Убедитесь, что рядом находится <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
+          "Убедитесь, что рядом находится <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a>.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `General → HP/Mana 67 Ping → Settings`."
         ]
@@ -336,7 +336,7 @@
         ],
         "install": [
           "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua\" target=\"_blank\" rel=\"noopener\"><code>hp_mana_67_ping.lua</code></a> in `umbrella\\scripts`.",
-          "Make sure <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> is alongside it.",
+          "Make sure <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a> is alongside it.",
           "Reload the Lua scripts.",
           "Open settings: `General → HP/Mana 67 Ping → Settings`."
         ]
@@ -368,7 +368,7 @@
         ],
         "install": [
           "Поместите `lone_druid_bear_pull.lua` в `umbrella\\scripts`.",
-          "Убедитесь, что рядом находится <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
+          "Убедитесь, что рядом находится <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a>.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `General → Spirit Bear Pull`."
         ]
@@ -386,7 +386,7 @@
         ],
         "install": [
           "Place `lone_druid_bear_pull.lua` in `umbrella\\scripts`.",
-          "Make sure <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> is alongside it.",
+          "Make sure <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a> is alongside it.",
           "Reload the Lua scripts.",
           "Open settings: `General → Spirit Bear Pull`."
         ]
@@ -417,7 +417,7 @@
         ],
         "install": [
           "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/dorman-combo-assistant-v1.0.0/Dorman.lua\" target=\"_blank\" rel=\"noopener\"><code>Dorman.lua</code></a> в `%cheat_dir%/deadlock_scripts`.",
-          "Убедитесь, что рядом находится обязательный <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
+          "Убедитесь, что рядом находится обязательный <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a>.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `Heroes → Hero List → The Dorman → Dorman`."
         ]
@@ -434,7 +434,7 @@
         ],
         "install": [
           "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/dorman-combo-assistant-v1.0.0/Dorman.lua\" target=\"_blank\" rel=\"noopener\"><code>Dorman.lua</code></a> in `%cheat_dir%/deadlock_scripts`.",
-          "Make sure the required <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> is alongside it.",
+          "Make sure the required <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a> is alongside it.",
           "Reload the Lua scripts.",
           "Open settings: `Heroes → Hero List → The Dorman → Dorman`."
         ]
@@ -470,7 +470,7 @@
         ],
         "install": [
           "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/rem-assistant-v1.0.0/Rem_Assistant.lua\" target=\"_blank\" rel=\"noopener\"><code>Rem_Assistant.lua</code></a> в `%cheat_dir%/deadlock_scripts`.",
-          "Поместите туда же обязательный <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> для переводов.",
+          "Поместите туда же обязательный <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a> для переводов.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `Heroes → Hero List → Rem → Rem Assistant`."
         ]
@@ -492,7 +492,7 @@
         ],
         "install": [
           "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/rem-assistant-v1.0.0/Rem_Assistant.lua\" target=\"_blank\" rel=\"noopener\"><code>Rem_Assistant.lua</code></a> in `%cheat_dir%/deadlock_scripts`.",
-          "Place the required <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> alongside it for translations.",
+          "Place the required <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a> alongside it for translations.",
           "Reload the Lua scripts.",
           "Open settings: `Heroes → Hero List → Rem → Rem Assistant`."
         ]
@@ -547,7 +547,7 @@
       "initial": {
         "version": "1.0.0",
         "date": "2026-10-11",
-        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua"
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua"
       },
       "ru": {
         "tagline": "вспомогательная библиотека для локализации Lua-интерфейсов",
@@ -560,7 +560,8 @@
           "Не мой скрипт: автор оригинала — qfun (qfun_g9s)"
         ],
         "install": [
-          "Скачайте <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
+          "Скачайте <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a>.",
+          "Переименуйте скачанный файл в `!_qLocalizer.lua`.",
           "Поместите файл в папку `scripts` рядом со скриптами, которым нужна локализация.",
           "Перезагрузите Lua-скрипты."
         ]
@@ -576,7 +577,8 @@
           "Not my script: the original author is qfun (qfun_g9s)"
         ],
         "install": [
-          "Download <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
+          "Download <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>_qLocalizer.lua</code></a>.",
+          "Rename the downloaded file to `!_qLocalizer.lua`.",
           "Place the file in the `scripts` folder alongside scripts that need localization.",
           "Reload the Lua scripts."
         ]

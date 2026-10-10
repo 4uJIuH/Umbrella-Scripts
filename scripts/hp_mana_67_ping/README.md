@@ -26,9 +26,11 @@ Lua-скрипт для Dota 2, который отслеживает здоро
 ## Установка
 
 1. Поместите <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua" target="_blank" rel="noopener"><code>hp_mana_67_ping.lua</code></a> в `umbrella\scripts`.
-2. Убедитесь, что рядом находится <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a>.
+2. Убедитесь, что рядом находится <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua" target="_blank" rel="noopener"><code>_qLocalizer.lua</code></a>.
 3. Перезагрузите Lua-скрипты.
 4. Откройте настройки: `General → HP/Mana 67 Ping → Settings`.
+
+Примечание: GitHub скачивает библиотеку как `_qLocalizer.lua`; переименуй её в `!_qLocalizer.lua` перед загрузкой Lua-скриптов.
 
 ## Что нового
 
@@ -55,9 +57,11 @@ A Dota 2 Lua script that tracks the hero's health and mana and sends a message t
 ## Install
 
 1. Place <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua" target="_blank" rel="noopener"><code>hp_mana_67_ping.lua</code></a> in `umbrella\scripts`.
-2. Make sure <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> is alongside it.
+2. Make sure <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua" target="_blank" rel="noopener"><code>_qLocalizer.lua</code></a> is alongside it.
 3. Reload the Lua scripts.
 4. Open settings: `General → HP/Mana 67 Ping → Settings`.
+
+Note: GitHub downloads the library as `_qLocalizer.lua`; rename it to `!_qLocalizer.lua` before loading Lua scripts.
 
 ## Changelog
 

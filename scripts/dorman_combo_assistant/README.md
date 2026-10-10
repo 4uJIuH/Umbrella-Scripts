@@ -25,9 +25,11 @@
 ## Установка
 
 1. Поместите <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/dorman-combo-assistant-v1.0.0/Dorman.lua" target="_blank" rel="noopener"><code>Dorman.lua</code></a> в `%cheat_dir%/deadlock_scripts`.
-2. Убедитесь, что рядом находится обязательный <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a>.
+2. Убедитесь, что рядом находится обязательный <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua" target="_blank" rel="noopener"><code>_qLocalizer.lua</code></a>.
 3. Перезагрузите Lua-скрипты.
 4. Откройте настройки: `Heroes → Hero List → The Dorman → Dorman`.
+
+Примечание: GitHub скачивает библиотеку как `_qLocalizer.lua`; переименуй её в `!_qLocalizer.lua` перед загрузкой Lua-скриптов.
 
 ---
 
@@ -46,6 +48,8 @@ A combo assistant script for Dorman in Deadlock with three independent modes, ea
 ## Install
 
 1. Place <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/dorman-combo-assistant-v1.0.0/Dorman.lua" target="_blank" rel="noopener"><code>Dorman.lua</code></a> in `%cheat_dir%/deadlock_scripts`.
-2. Make sure the required <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> is alongside it.
+2. Make sure the required <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua" target="_blank" rel="noopener"><code>_qLocalizer.lua</code></a> is alongside it.
 3. Reload the Lua scripts.
 4. Open settings: `Heroes → Hero List → The Dorman → Dorman`.
+
+Note: GitHub downloads the library as `_qLocalizer.lua`; rename it to `!_qLocalizer.lua` before loading Lua scripts.

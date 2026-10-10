@@ -114,6 +114,10 @@ def section(script, lang, mine):
     steps = t.get("install") or INSTALL[script["kind"]][lang]
     steps = [s % {"file": script["file"]} if "%(" in s else s for s in steps]
     out += ["%d. %s" % (i + 1, s) for i, s in enumerate(steps)]
+    if script.get("needs_q_localizer"):
+        out += ["", ("Примечание: GitHub скачивает библиотеку как `_qLocalizer.lua`; переименуй её в `!_qLocalizer.lua` перед загрузкой Lua-скриптов."
+                     if ru else
+                     "Note: GitHub downloads the library as `_qLocalizer.lua`; rename it to `!_qLocalizer.lua` before loading Lua scripts.")]
     text = changelog(script, lang)
     if mine and text:
         out += ["", "## %s" % ("Что нового" if ru else "Changelog"), "", text]

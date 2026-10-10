@@ -24,9 +24,10 @@ qLocalization автоматически локализует интерфейс
 
 ## Установка
 
-1. Скачайте <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a>.
-2. Поместите файл в папку `scripts` рядом со скриптами, которым нужна локализация.
-3. Перезагрузите Lua-скрипты.
+1. Скачайте <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua" target="_blank" rel="noopener"><code>_qLocalizer.lua</code></a>.
+2. Переименуйте скачанный файл в `!_qLocalizer.lua`.
+3. Поместите файл в папку `scripts` рядом со скриптами, которым нужна локализация.
+4. Перезагрузите Lua-скрипты.
 
 ## Что нового
 
@@ -51,9 +52,10 @@ qLocalization automatically localizes Lua script interfaces. It was developed fo
 
 ## Install
 
-1. Download <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a>.
-2. Place the file in the `scripts` folder alongside scripts that need localization.
-3. Reload the Lua scripts.
+1. Download <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua" target="_blank" rel="noopener"><code>_qLocalizer.lua</code></a>.
+2. Rename the downloaded file to `!_qLocalizer.lua`.
+3. Place the file in the `scripts` folder alongside scripts that need localization.
+4. Reload the Lua scripts.
 
 ## Changelog
 

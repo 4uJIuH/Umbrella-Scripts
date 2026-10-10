@@ -30,9 +30,11 @@
 ## Установка
 
 1. Поместите <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/rem-assistant-v1.0.0/Rem_Assistant.lua" target="_blank" rel="noopener"><code>Rem_Assistant.lua</code></a> в `%cheat_dir%/deadlock_scripts`.
-2. Поместите туда же обязательный <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> для переводов.
+2. Поместите туда же обязательный <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua" target="_blank" rel="noopener"><code>_qLocalizer.lua</code></a> для переводов.
 3. Перезагрузите Lua-скрипты.
 4. Откройте настройки: `Heroes → Hero List → Rem → Rem Assistant`.
+
+Примечание: GitHub скачивает библиотеку как `_qLocalizer.lua`; переименуй её в `!_qLocalizer.lua` перед загрузкой Lua-скриптов.
 
 ## Что нового
 
@@ -69,9 +71,11 @@ A script for Rem in Deadlock that automates abilities and ally healing, predicts
 ## Install
 
 1. Place <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/rem-assistant-v1.0.0/Rem_Assistant.lua" target="_blank" rel="noopener"><code>Rem_Assistant.lua</code></a> in `%cheat_dir%/deadlock_scripts`.
-2. Place the required <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> alongside it for translations.
+2. Place the required <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua" target="_blank" rel="noopener"><code>_qLocalizer.lua</code></a> alongside it for translations.
 3. Reload the Lua scripts.
 4. Open settings: `Heroes → Hero List → Rem → Rem Assistant`.
+
+Note: GitHub downloads the library as `_qLocalizer.lua`; rename it to `!_qLocalizer.lua` before loading Lua scripts.
 
 ## Changelog
 
