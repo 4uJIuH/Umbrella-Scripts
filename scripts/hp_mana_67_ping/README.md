@@ -3,9 +3,13 @@
 сообщения при достижении значений HP и маны, оканчивающихся на 67 / chat messages when HP or mana reaches a value ending in 67
 
 <!-- releases:start -->
-Релизов пока нет. No releases yet.
+Скачать: [hp_mana_67_ping.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua) — `hp-mana-67-ping-v1.0.1`, 2026-10-10
 
-[Релизы на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=hp-mana-67-ping&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`hp-mana-67-ping-v1.0.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/hp-mana-67-ping-v1.0.1) | 2026-10-10 | [hp_mana_67_ping.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=hp-mana-67-ping&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -21,7 +25,7 @@ Lua-скрипт для Dota 2, который отслеживает здоро
 
 ## Установка
 
-1. Поместите `hp_mana_67_ping.lua` в `umbrella\scripts`.
+1. Поместите <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua" target="_blank" rel="noopener"><code>hp_mana_67_ping.lua</code></a> в `umbrella\scripts`.
 2. Убедитесь, что рядом находится <a href="https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a>.
 3. Перезагрузите Lua-скрипты.
 4. Откройте настройки: `General → HP/Mana 67 Ping → Settings`.
@@ -50,7 +54,7 @@ A Dota 2 Lua script that tracks the hero's health and mana and sends a message t
 
 ## Install
 
-1. Place `hp_mana_67_ping.lua` in `umbrella\scripts`.
+1. Place <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua" target="_blank" rel="noopener"><code>hp_mana_67_ping.lua</code></a> in `umbrella\scripts`.
 2. Make sure <a href="https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua" target="_blank" rel="noopener"><code>!_qLocalizer.lua</code></a> is alongside it.
 3. Reload the Lua scripts.
 4. Open settings: `General → HP/Mana 67 Ping → Settings`.

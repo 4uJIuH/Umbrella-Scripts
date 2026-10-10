@@ -95,6 +95,7 @@ HP/Mana 67 Ping: download `hp_mana_67_ping.lua` and `!_qLocalizer.lua` into
 | [Auto Spark](scripts/auto_spark) | 0 | `auto-spark-v1.0.0` |
 | [Rune Destruction](scripts/rune_destruction) | 0 | `rune-destruction-v1.0.2` |
 | [Earth Spirit Kick Combo](scripts/earth_spirit_kick_combo) | 0 | `earth-spirit-kick-combo-v1.0.0` |
+| [HP/Mana 67 Ping](scripts/hp_mana_67_ping) | 0 | `hp-mana-67-ping-v1.0.1` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
