@@ -10,6 +10,7 @@
 - [Tinker Auto Farm](scripts/tinker_auto_farm) — автоматический фарм на Тинкере
 - [Auto Shackleshot](scripts/auto_shackleshot) — автоматическое применение Shackleshot за Windranger
 - [Auto Spark](scripts/auto_spark) — автоматическое использование спарков на линии
+- [Rune Destruction](scripts/rune_destruction) — отправка подконтрольных юнитов к рунам
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -28,6 +29,9 @@ Auto Shackleshot: скачай `Auto_Shackleshot.lua` и `!_qLocalizer.lua` в `
 Auto Spark: скачай `Auto_Spark.lua` и `!_qLocalizer.lua` в `umbrella\scripts`,
 перезагрузи Lua-скрипты и открой `Скрипты → Скрипты → Auto Spark`.
 
+Rune Destruction: скачай `rune_units.lua` в `umbrella\scripts`, перезагрузи Lua-скрипты
+и открой `Scripts → Rune Units`.
+
 ---
 
 # English
@@ -42,6 +46,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Tinker Auto Farm](scripts/tinker_auto_farm) — automatic farming on Tinker
 - [Auto Shackleshot](scripts/auto_shackleshot) — automatic Shackleshot on Windranger
 - [Auto Spark](scripts/auto_spark) — automatic Spark Wraith usage on the lane
+- [Rune Destruction](scripts/rune_destruction) — send controlled units to runes
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -59,6 +64,9 @@ Auto Shackleshot: download `Auto_Shackleshot.lua` and `!_qLocalizer.lua` into
 
 Auto Spark: download `Auto_Spark.lua` and `!_qLocalizer.lua` into `umbrella\scripts`,
 reload the Lua scripts, and open `Scripts → Scripts → Auto Spark`.
+
+Rune Destruction: download `rune_units.lua` into `umbrella\scripts`, reload the Lua scripts,
+and open `Scripts → Rune Units`.
 
 ## Downloads
 
