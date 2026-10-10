@@ -16,7 +16,7 @@
 - [Spirit Bear Pull](scripts/spirit_bear_pull) — автоматический отвод крипов медведем Lone Druid
 - [Dorman Combo Assistant](scripts/dorman_combo_assistant) — комбо-ассистент для Dorman в Deadlock
 - [Rem Assistant](scripts/rem_assistant) — ассистент способностей и лечения для Rem в Deadlock
-- [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — ESP разрушаемых объектов с таймером возрождения
+- [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — ESP для Souls Vault и Rem's Tunnel с таймером возрождения
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -76,7 +76,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Spirit Bear Pull](scripts/spirit_bear_pull) — automatically pull a creep wave with Lone Druid's bear
 - [Dorman Combo Assistant](scripts/dorman_combo_assistant) — a combo assistant for Dorman in Deadlock
 - [Rem Assistant](scripts/rem_assistant) — ability and healing assistant for Rem in Deadlock
-- [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — breakable-object ESP with respawn timers
+- [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — ESP for Souls Vault and Rem's Tunnel with respawn timers
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -131,6 +131,7 @@ reload the Lua scripts, and open `Visuals → World → Show Me More → Vault &
 | [Spirit Bear Pull](scripts/spirit_bear_pull) | 0 | `spirit-bear-pull-v1.0.0` |
 | [Dorman Combo Assistant](scripts/dorman_combo_assistant) | 0 | `dorman-combo-assistant-v1.0.0` |
 | [Rem Assistant](scripts/rem_assistant) | 0 | `rem-assistant-v1.0.0` |
+| [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 0 | `vault-tunnel-esp-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
