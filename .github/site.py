@@ -54,6 +54,7 @@ def entry(script, folder, kind):
         "id": script["id"],
         "title": script["title"],
         "kind": kind,
+        "category": script["category"],
         "file": versions[0]["file"] if versions else script["file"],
         "total": SERIES[-1][2].get(script["id"], 0),
         "tag": script["tag"],

@@ -13,6 +13,7 @@ git tag spirit-bear-pull-v1.0.0
 git push origin spirit-bear-pull-v1.0.0
 ```
 
-Tag prefixes, package files, and script descriptions are configured in `catalog.json`.
+Tag prefixes, package files, script categories (`dota` or `deadlock`), and descriptions are
+configured in `catalog.json`.
 `readme.yml` updates the script pages and download statistics; `site.yml` builds and publishes
 the GitHub Pages site.

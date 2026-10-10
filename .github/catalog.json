@@ -6,6 +6,7 @@
       "tag": "tinker-turret-dodge",
       "title": "Tinker Turret Dodge",
       "kind": "lua",
+      "category": "dota",
       "file": "tinker_turret_dodge.lua",
       "initial": {
         "version": "1.1.3",
@@ -48,6 +49,7 @@
       "tag": "tinker-auto-farm",
       "title": "Tinker Auto Farm",
       "kind": "lua",
+      "category": "dota",
       "file": "Tinker-Auto-Farm.zip",
       "package": "package",
       "initial": {
@@ -99,6 +101,7 @@
       "tag": "auto-shackleshot",
       "title": "Auto Shackleshot",
       "kind": "lua",
+      "category": "dota",
       "file": "Auto_Shackleshot.lua",
       "initial": {
         "version": "1.0.0",
@@ -143,6 +146,7 @@
       "tag": "auto-spark",
       "title": "Auto Spark",
       "kind": "lua",
+      "category": "dota",
       "file": "Auto_Spark.lua",
       "initial": {
         "version": "1.0.0",
@@ -191,6 +195,7 @@
       "tag": "rune-destruction",
       "title": "Rune Destruction",
       "kind": "lua",
+      "category": "dota",
       "file": "rune_units.lua",
       "initial": {
         "version": "1.0.2",
@@ -237,6 +242,7 @@
       "tag": "earth-spirit-kick-combo",
       "title": "Earth Spirit Kick Combo",
       "kind": "lua",
+      "category": "dota",
       "file": "earth_spirit_kick_combo.lua",
       "initial": {
         "version": "1.0.0",
@@ -287,6 +293,7 @@
       "tag": "hp-mana-67-ping",
       "title": "HP/Mana 67 Ping",
       "kind": "lua",
+      "category": "dota",
       "file": "hp_mana_67_ping.lua",
       "initial": {
         "version": "1.0.1",
@@ -335,6 +342,7 @@
       "tag": "spirit-bear-pull",
       "title": "Spirit Bear Pull",
       "kind": "lua",
+      "category": "dota",
       "file": "lone_druid_bear_pull.lua",
       "initial": {
         "version": "1.0.0",
