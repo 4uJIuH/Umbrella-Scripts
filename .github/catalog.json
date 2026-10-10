@@ -8,6 +8,7 @@
       "kind": "lua",
       "category": "dota",
       "file": "tinker_turret_dodge.lua",
+      "needs_q_localizer": true,
       "initial": {
         "version": "1.1.3",
         "date": "2026-10-10",
@@ -23,7 +24,7 @@
         ],
         "install": [
           "Поместите `tinker_turret_dodge.lua` в `umbrella\\scripts`.",
-          "Поместите <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> в `umbrella\\scripts`.",
+          "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> в `umbrella\\scripts`.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `General → Tinker Turret Dodge`."
         ]
@@ -38,7 +39,7 @@
         ],
         "install": [
           "Place `tinker_turret_dodge.lua` in `umbrella\\scripts`.",
-          "Place <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> in `umbrella\\scripts`.",
+          "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> in `umbrella\\scripts`.",
           "Reload the Lua scripts.",
           "Open settings: `General → Tinker Turret Dodge`."
         ]
@@ -103,6 +104,7 @@
       "kind": "lua",
       "category": "dota",
       "file": "Auto_Shackleshot.lua",
+      "needs_q_localizer": true,
       "initial": {
         "version": "1.0.0",
         "date": "2026-10-10",
@@ -119,7 +121,7 @@
         ],
         "install": [
           "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-shackleshot-v1.0.0/Auto_Shackleshot.lua\" target=\"_blank\" rel=\"noopener\"><code>Auto_Shackleshot.lua</code></a> в `umbrella\\scripts`.",
-          "Поместите <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> туда же.",
+          "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> туда же.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `Скрипты → Скрипты → Auto Shackleshot`."
         ]
@@ -135,7 +137,7 @@
         ],
         "install": [
           "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-shackleshot-v1.0.0/Auto_Shackleshot.lua\" target=\"_blank\" rel=\"noopener\"><code>Auto_Shackleshot.lua</code></a> in `umbrella\\scripts`.",
-          "Place <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> alongside it.",
+          "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> alongside it.",
           "Reload the Lua scripts.",
           "Open settings: `Scripts → Scripts → Auto Shackleshot`."
         ]
@@ -148,6 +150,7 @@
       "kind": "lua",
       "category": "dota",
       "file": "Auto_Spark.lua",
+      "needs_q_localizer": true,
       "initial": {
         "version": "1.0.0",
         "date": "2026-10-10",
@@ -166,7 +169,7 @@
         ],
         "install": [
           "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-spark-v1.0.0/Auto_Spark.lua\" target=\"_blank\" rel=\"noopener\"><code>Auto_Spark.lua</code></a> в `umbrella\\scripts`.",
-          "Поместите <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> туда же.",
+          "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> туда же.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `Скрипты → Скрипты → Auto Spark`."
         ]
@@ -184,7 +187,7 @@
         ],
         "install": [
           "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-spark-v1.0.0/Auto_Spark.lua\" target=\"_blank\" rel=\"noopener\"><code>Auto_Spark.lua</code></a> in `umbrella\\scripts`.",
-          "Place <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> alongside it.",
+          "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> alongside it.",
           "Reload the Lua scripts.",
           "Open settings: `Scripts → Scripts → Auto Spark`."
         ]
@@ -244,6 +247,7 @@
       "kind": "lua",
       "category": "dota",
       "file": "earth_spirit_kick_combo.lua",
+      "needs_q_localizer": true,
       "initial": {
         "version": "1.0.0",
         "date": "2026-10-10",
@@ -263,7 +267,7 @@
         ],
         "install": [
           "Поместите `earth_spirit_kick_combo.lua` в `umbrella\\scripts`.",
-          "Убедитесь, что рядом находится <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
+          "Убедитесь, что рядом находится <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `General → Earth Spirit Kick Combo`."
         ]
@@ -282,7 +286,7 @@
         ],
         "install": [
           "Place `earth_spirit_kick_combo.lua` in `umbrella\\scripts`.",
-          "Make sure <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> is alongside it.",
+          "Make sure <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> is alongside it.",
           "Reload the Lua scripts.",
           "Open settings: `General → Earth Spirit Kick Combo`."
         ]
@@ -295,6 +299,7 @@
       "kind": "lua",
       "category": "dota",
       "file": "hp_mana_67_ping.lua",
+      "needs_q_localizer": true,
       "initial": {
         "version": "1.0.1",
         "date": "2026-10-10",
@@ -313,7 +318,7 @@
         ],
         "install": [
           "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua\" target=\"_blank\" rel=\"noopener\"><code>hp_mana_67_ping.lua</code></a> в `umbrella\\scripts`.",
-          "Убедитесь, что рядом находится <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
+          "Убедитесь, что рядом находится <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `General → HP/Mana 67 Ping → Settings`."
         ]
@@ -331,7 +336,7 @@
         ],
         "install": [
           "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua\" target=\"_blank\" rel=\"noopener\"><code>hp_mana_67_ping.lua</code></a> in `umbrella\\scripts`.",
-          "Make sure <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> is alongside it.",
+          "Make sure <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> is alongside it.",
           "Reload the Lua scripts.",
           "Open settings: `General → HP/Mana 67 Ping → Settings`."
         ]
@@ -344,6 +349,7 @@
       "kind": "lua",
       "category": "dota",
       "file": "lone_druid_bear_pull.lua",
+      "needs_q_localizer": true,
       "initial": {
         "version": "1.0.0",
         "date": "2026-10-10",
@@ -362,7 +368,7 @@
         ],
         "install": [
           "Поместите `lone_druid_bear_pull.lua` в `umbrella\\scripts`.",
-          "Убедитесь, что рядом находится <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
+          "Убедитесь, что рядом находится <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `General → Spirit Bear Pull`."
         ]
@@ -380,7 +386,7 @@
         ],
         "install": [
           "Place `lone_druid_bear_pull.lua` in `umbrella\\scripts`.",
-          "Make sure <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> is alongside it.",
+          "Make sure <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> is alongside it.",
           "Reload the Lua scripts.",
           "Open settings: `General → Spirit Bear Pull`."
         ]
@@ -393,6 +399,7 @@
       "kind": "lua",
       "category": "deadlock",
       "file": "Dorman.lua",
+      "needs_q_localizer": true,
       "initial": {
         "version": "1.0.0",
         "date": "2026-10-10",
@@ -410,7 +417,7 @@
         ],
         "install": [
           "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/dorman-combo-assistant-v1.0.0/Dorman.lua\" target=\"_blank\" rel=\"noopener\"><code>Dorman.lua</code></a> в `%cheat_dir%/deadlock_scripts`.",
-          "Убедитесь, что рядом находится обязательный <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
+          "Убедитесь, что рядом находится обязательный <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `Heroes → Hero List → The Dorman → Dorman`."
         ]
@@ -427,7 +434,7 @@
         ],
         "install": [
           "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/dorman-combo-assistant-v1.0.0/Dorman.lua\" target=\"_blank\" rel=\"noopener\"><code>Dorman.lua</code></a> in `%cheat_dir%/deadlock_scripts`.",
-          "Make sure the required <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> is alongside it.",
+          "Make sure the required <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> is alongside it.",
           "Reload the Lua scripts.",
           "Open settings: `Heroes → Hero List → The Dorman → Dorman`."
         ]
@@ -440,6 +447,7 @@
       "kind": "lua",
       "category": "deadlock",
       "file": "Rem_Assistant.lua",
+      "needs_q_localizer": true,
       "initial": {
         "version": "1.0.0",
         "date": "2026-10-11",
@@ -462,7 +470,7 @@
         ],
         "install": [
           "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/rem-assistant-v1.0.0/Rem_Assistant.lua\" target=\"_blank\" rel=\"noopener\"><code>Rem_Assistant.lua</code></a> в `%cheat_dir%/deadlock_scripts`.",
-          "Поместите туда же обязательный <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> для переводов.",
+          "Поместите туда же обязательный <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> для переводов.",
           "Перезагрузите Lua-скрипты.",
           "Откройте настройки: `Heroes → Hero List → Rem → Rem Assistant`."
         ]
@@ -484,7 +492,7 @@
         ],
         "install": [
           "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/rem-assistant-v1.0.0/Rem_Assistant.lua\" target=\"_blank\" rel=\"noopener\"><code>Rem_Assistant.lua</code></a> in `%cheat_dir%/deadlock_scripts`.",
-          "Place the required <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> alongside it for translations.",
+          "Place the required <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> alongside it for translations.",
           "Reload the Lua scripts.",
           "Open settings: `Heroes → Hero List → Rem → Rem Assistant`."
         ]
@@ -526,6 +534,51 @@
           "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/vault-tunnel-esp-v1.0.0/VaultTunnelESP.lua\" target=\"_blank\" rel=\"noopener\"><code>VaultTunnelESP.lua</code></a> in your Deadlock scripts folder.",
           "Reload the Lua scripts.",
           "Open settings: `Visuals → World → Show Me More → Vault & Tunnel ESP`."
+        ]
+      }
+    },
+    {
+      "id": "q_localizer",
+      "tag": "q-localizer",
+      "title": "qLocalization",
+      "kind": "lua",
+      "category": "auxiliary",
+      "file": "!_qLocalizer.lua",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-11",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua"
+      },
+      "ru": {
+        "tagline": "вспомогательная библиотека для локализации Lua-интерфейсов",
+        "about": "qLocalization автоматически локализует интерфейсы Lua-скриптов. Библиотека разработана для Dota 2 и также работает в Deadlock. Оригинальный автор — qfun (qfun_g9s); это не мой скрипт.",
+        "features": [
+          "Автоматически сопоставляет доступные языки интерфейса с переводами — вручную задавать индексы языков не нужно",
+          "Поддерживает собственные языки: достаточно добавить перевод с соответствующим кодом",
+          "Позволяет использовать ключи переводов для названий элементов меню и подсказок, а также оборачивать библиотеку Menu через `WrapLibrary`",
+          "Нужен некоторым скриптам каталога для русского и английского интерфейса; автономным скриптам не требуется",
+          "Не мой скрипт: автор оригинала — qfun (qfun_g9s)"
+        ],
+        "install": [
+          "Скачайте <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
+          "Поместите файл в папку `scripts` рядом со скриптами, которым нужна локализация.",
+          "Перезагрузите Lua-скрипты."
+        ]
+      },
+      "en": {
+        "tagline": "a helper library for localizing Lua interfaces",
+        "about": "qLocalization automatically localizes Lua script interfaces. It was developed for Dota 2 and also works in Deadlock. The original author is qfun (qfun_g9s); this is not my script.",
+        "features": [
+          "Maps available interface languages to translations automatically, without manually setting language indexes",
+          "Supports custom languages by adding translations under the corresponding language code",
+          "Lets scripts use translation keys for menu labels and tooltips, and wrap the Menu library with `WrapLibrary`",
+          "Required by some scripts in this catalog for localized interfaces; standalone scripts do not need it",
+          "Not my script: the original author is qfun (qfun_g9s)"
+        ],
+        "install": [
+          "Download <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
+          "Place the file in the `scripts` folder alongside scripts that need localization.",
+          "Reload the Lua scripts."
         ]
       }
     }

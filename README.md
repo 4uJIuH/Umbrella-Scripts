@@ -17,6 +17,7 @@
 - [Dorman Combo Assistant](scripts/dorman_combo_assistant) — комбо-ассистент для Dorman в Deadlock
 - [Rem Assistant](scripts/rem_assistant) — ассистент способностей и лечения для Rem в Deadlock
 - [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — ESP для Souls Vault и Rem's Tunnel с таймером возрождения
+- [qLocalization](scripts/q_localizer) — сторонняя библиотека для локализации Lua-интерфейсов; автор qfun (qfun_g9s), это не мой скрипт
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -56,6 +57,9 @@ Rem Assistant: скачай `Rem_Assistant.lua` и `!_qLocalizer.lua` в `%cheat
 Souls Vault / Rem's Tunnel ESP: скачай `VaultTunnelESP.lua` в папку скриптов Deadlock,
 перезагрузи Lua-скрипты и открой `Visuals → World → Show Me More → Vault & Tunnel ESP`.
 
+qLocalization: [скачай `!_qLocalizer.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua)
+и положи рядом со скриптами, которым нужна локализация. Это сторонняя библиотека автора qfun (qfun_g9s), не мой скрипт.
+
 ---
 
 # English
@@ -77,6 +81,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Dorman Combo Assistant](scripts/dorman_combo_assistant) — a combo assistant for Dorman in Deadlock
 - [Rem Assistant](scripts/rem_assistant) — ability and healing assistant for Rem in Deadlock
 - [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — ESP for Souls Vault and Rem's Tunnel with respawn timers
+- [qLocalization](scripts/q_localizer) — a third-party Lua interface localization library by qfun (qfun_g9s), not my script
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -115,6 +120,9 @@ Rem Assistant: download `Rem_Assistant.lua` and `!_qLocalizer.lua` into
 
 Souls Vault / Rem's Tunnel ESP: download `VaultTunnelESP.lua` into your Deadlock scripts folder,
 reload the Lua scripts, and open `Visuals → World → Show Me More → Vault & Tunnel ESP`.
+
+qLocalization: [download `!_qLocalizer.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/!_qLocalizer.lua)
+and place it alongside scripts that require localization. This third-party library is by qfun (qfun_g9s), not my script.
 
 ## Downloads
 
