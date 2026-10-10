@@ -61,7 +61,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Rune Destruction](scripts/rune_destruction) — send controlled units to runes
 - [Earth Spirit Kick Combo](scripts/earth_spirit_kick_combo) — automatic Blink combo on Earth Spirit
 - [HP/Mana 67 Ping](scripts/hp_mana_67_ping) — chat messages when HP or mana reaches a value ending in 67
-- [Spirit Bear Pull](scripts/spirit_bear_pull) — automatically pull creeps with Lone Druid's bear
+- [Spirit Bear Pull](scripts/spirit_bear_pull) — automatically pull a creep wave with Lone Druid's bear
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -104,6 +104,7 @@ Spirit Bear Pull: download `lone_druid_bear_pull.lua` and `!_qLocalizer.lua` int
 | [Rune Destruction](scripts/rune_destruction) | 0 | `rune-destruction-v1.0.2` |
 | [Earth Spirit Kick Combo](scripts/earth_spirit_kick_combo) | 0 | `earth-spirit-kick-combo-v1.0.0` |
 | [HP/Mana 67 Ping](scripts/hp_mana_67_ping) | 0 | `hp-mana-67-ping-v1.0.1` |
+| [Spirit Bear Pull](scripts/spirit_bear_pull) | 0 | `spirit-bear-pull-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
