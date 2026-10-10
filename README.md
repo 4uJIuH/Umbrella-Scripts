@@ -57,8 +57,9 @@ Auto Shackleshot: download `Auto_Shackleshot.lua` and `!_qLocalizer.lua` into
 <!-- stats:start -->
 | script | downloads | latest |
 | --- | --- | --- |
-| [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 0 | `tinker-turret-dodge-v1.1.3` |
-| [Tinker Auto Farm](scripts/tinker_auto_farm) | 0 | `tinker-auto-farm-v1.0.3` |
+| [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 2 | `tinker-turret-dodge-v1.1.3` |
+| [Tinker Auto Farm](scripts/tinker_auto_farm) | 2 | `tinker-auto-farm-v1.0.3` |
+| [Auto Shackleshot](scripts/auto_shackleshot) | 0 | `auto-shackleshot-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
