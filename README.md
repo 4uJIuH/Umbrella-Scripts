@@ -16,6 +16,7 @@
 - [Spirit Bear Pull](scripts/spirit_bear_pull) — автоматический отвод крипов медведем Lone Druid
 - [Dorman Combo Assistant](scripts/dorman_combo_assistant) — комбо-ассистент для Dorman в Deadlock
 - [Rem Assistant](scripts/rem_assistant) — ассистент способностей и лечения для Rem в Deadlock
+- [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — ESP разрушаемых объектов с таймером возрождения
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -52,6 +53,9 @@ Dorman Combo Assistant: скачай `Dorman.lua` и `!_qLocalizer.lua` в `%che
 Rem Assistant: скачай `Rem_Assistant.lua` и `!_qLocalizer.lua` в `%cheat_dir%/deadlock_scripts`,
 перезагрузи Lua-скрипты и открой `Heroes → Hero List → Rem → Rem Assistant`.
 
+Souls Vault / Rem's Tunnel ESP: скачай `VaultTunnelESP.lua` в папку скриптов Deadlock,
+перезагрузи Lua-скрипты и открой `Visuals → World → Show Me More → Vault & Tunnel ESP`.
+
 ---
 
 # English
@@ -72,6 +76,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Spirit Bear Pull](scripts/spirit_bear_pull) — automatically pull a creep wave with Lone Druid's bear
 - [Dorman Combo Assistant](scripts/dorman_combo_assistant) — a combo assistant for Dorman in Deadlock
 - [Rem Assistant](scripts/rem_assistant) — ability and healing assistant for Rem in Deadlock
+- [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — breakable-object ESP with respawn timers
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -107,6 +112,9 @@ Dorman Combo Assistant: download `Dorman.lua` and `!_qLocalizer.lua` into
 
 Rem Assistant: download `Rem_Assistant.lua` and `!_qLocalizer.lua` into
 `%cheat_dir%/deadlock_scripts`, reload the Lua scripts, and open `Heroes → Hero List → Rem → Rem Assistant`.
+
+Souls Vault / Rem's Tunnel ESP: download `VaultTunnelESP.lua` into your Deadlock scripts folder,
+reload the Lua scripts, and open `Visuals → World → Show Me More → Vault & Tunnel ESP`.
 
 ## Downloads
 
