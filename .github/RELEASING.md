@@ -1,17 +1,18 @@
-# Tinker Turret Dodge releases
+# Script releases
 
-The release workflow creates a GitHub release and attaches
-`scripts/tinker_turret_dodge/tinker_turret_dodge.lua`.
+The release workflow creates a GitHub release from the matching tag and changelogs.
+Tinker Auto Farm is packaged from `scripts/tinker_auto_farm/package` as
+`Tinker-Auto-Farm.zip`; Tinker Turret Dodge attaches its Lua file directly.
 
-1. Update the script version and both changelogs.
+1. Update the matching script sources and both changelogs.
 2. Commit the changes.
-3. Tag and push the version:
+3. Tag and push the version (for example):
 
 ```bash
-git tag tinker-turret-dodge-v1.1.4
-git push origin tinker-turret-dodge-v1.1.4
+git tag tinker-auto-farm-v1.0.4
+git push origin tinker-auto-farm-v1.0.4
 ```
 
-The tag prefix and script descriptions are configured in `catalog.json`.
-`readme.yml` updates the script page and download statistics; `site.yml` builds
-and publishes the GitHub Pages site.
+Tag prefixes, package files, and script descriptions are configured in `catalog.json`.
+`readme.yml` updates the script pages and download statistics; `site.yml` builds and publishes
+the GitHub Pages site.

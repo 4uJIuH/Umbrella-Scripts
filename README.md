@@ -7,14 +7,18 @@
 
 <!-- scripts:ru:start -->
 - [Tinker Turret Dodge](scripts/tinker_turret_dodge) — автоматический додж опасных способностей турелями Тинкера
+- [Tinker Auto Farm](scripts/tinker_auto_farm) — автоматический фарм на Тинкере
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
 
 ## Установка
 
-Для Tinker Turret Dodge скачай `tinker_turret_dodge.lua` и `!_qLocalizer.lua` в папку
-`umbrella\scripts`, перезагрузи Lua-скрипты и открой `General → Tinker Turret Dodge`.
+Tinker Turret Dodge: скачай `tinker_turret_dodge.lua` и `!_qLocalizer.lua` в `umbrella\scripts`,
+перезагрузи Lua-скрипты и открой `General → Tinker Turret Dodge`.
+
+Tinker Auto Farm: скачай и распакуй `Tinker-Auto-Farm.zip`, помести `Tinker.lua` и папку `lib`
+в `umbrella\scripts`, перезагрузи Lua-скрипты и открой `Scripts → Scripts → Tinker`.
 
 ---
 
@@ -27,14 +31,18 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 
 <!-- scripts:en:start -->
 - [Tinker Turret Dodge](scripts/tinker_turret_dodge) — automatically dodges dangerous abilities with Tinker turrets
+- [Tinker Auto Farm](scripts/tinker_auto_farm) — automatic farming on Tinker
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
 
 ## Install
 
-Download `tinker_turret_dodge.lua` and `!_qLocalizer.lua` into `umbrella\scripts`, reload the Lua
-scripts, and open `General → Tinker Turret Dodge`.
+Tinker Turret Dodge: download `tinker_turret_dodge.lua` and `!_qLocalizer.lua` into
+`umbrella\scripts`, reload the Lua scripts, and open `General → Tinker Turret Dodge`.
+
+Tinker Auto Farm: download and extract `Tinker-Auto-Farm.zip`, place `Tinker.lua` and the `lib`
+folder in `umbrella\scripts`, reload the Lua scripts, and open `Scripts → Scripts → Tinker`.
 
 ## Downloads
 

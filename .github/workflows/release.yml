@@ -2,11 +2,11 @@ name: release
 
 on:
   push:
-    tags: ["tinker-turret-dodge-v*"]
+    tags: ["tinker-*-v*"]
   workflow_dispatch:
     inputs:
       tag:
-        description: "Tag, e.g. draft-helper-v2.0.0"
+        description: "Tag, e.g. tinker-auto-farm-v1.0.3"
         required: true
 
 permissions:

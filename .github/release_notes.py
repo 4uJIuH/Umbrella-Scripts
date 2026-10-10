@@ -2,6 +2,7 @@ import json
 import os
 import re
 import sys
+import zipfile
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parents[1]
@@ -46,6 +47,32 @@ def manifest_path(script):
     return path if path.exists() else None
 
 
+def build_package(script):
+    script_dir = BASE / "scripts" / script["id"]
+    package_dir = script_dir / script["package"]
+    try:
+        package_dir.resolve().relative_to(script_dir.resolve())
+    except ValueError:
+        raise SystemExit("package directory must stay inside %s" % script["id"])
+    if not package_dir.is_dir():
+        raise SystemExit("package directory not found: %s" % package_dir)
+
+    filename = Path(script["file"])
+    if filename.name != script["file"] or filename.suffix.lower() != ".zip":
+        raise SystemExit("package file must be a .zip filename")
+
+    output = BASE / "dist" / filename.name
+    output.parent.mkdir(parents=True, exist_ok=True)
+    files = sorted(path for path in package_dir.rglob("*") if path.is_file())
+    if not files:
+        raise SystemExit("package directory is empty: %s" % package_dir)
+
+    with zipfile.ZipFile(output, "w", zipfile.ZIP_DEFLATED) as archive:
+        for path in files:
+            archive.write(path, path.relative_to(package_dir).as_posix())
+    return output.relative_to(BASE).as_posix()
+
+
 def check_version(script, version):
     text = (BASE / "scripts" / script["id"] / script["file"]).read_text(encoding="utf-8")
     m = re.search(r'VERSION = "([^"]+)"', text)
@@ -81,7 +108,9 @@ def main():
             check_version(script, tag[len(script["tag"]) + 2:])
             lines += ["manifest=%s" % script["id"].replace("_", " ")]
         path = ""
-        if script["kind"] == "lua":
+        if "package" in script:
+            path = build_package(script)
+        elif script["kind"] == "lua":
             path = "scripts/%s/%s" % (script["id"], script["file"])
         lines += ["found=true", "path=%s" % path, "title=%s" % script["title"],
                   "version=%s" % tag[len(script["tag"]) + 1:]]
