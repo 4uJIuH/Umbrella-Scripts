@@ -9,6 +9,7 @@
 - [Tinker Turret Dodge](scripts/tinker_turret_dodge) — автоматический додж опасных способностей турелями Тинкера
 - [Tinker Auto Farm](scripts/tinker_auto_farm) — автоматический фарм на Тинкере
 - [Auto Shackleshot](scripts/auto_shackleshot) — автоматическое применение Shackleshot за Windranger
+- [Auto Spark](scripts/auto_spark) — автоматическое использование спарков на линии
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -24,6 +25,9 @@ Tinker Auto Farm: скачай и распакуй `Tinker-Auto-Farm.zip`, по�
 Auto Shackleshot: скачай `Auto_Shackleshot.lua` и `!_qLocalizer.lua` в `umbrella\scripts`,
 перезагрузи Lua-скрипты и открой `Скрипты → Скрипты → Auto Shackleshot`.
 
+Auto Spark: скачай `Auto_Spark.lua` и `!_qLocalizer.lua` в `umbrella\scripts`,
+перезагрузи Lua-скрипты и открой `Скрипты → Скрипты → Auto Spark`.
+
 ---
 
 # English
@@ -37,6 +41,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Tinker Turret Dodge](scripts/tinker_turret_dodge) — automatically dodges dangerous abilities with Tinker turrets
 - [Tinker Auto Farm](scripts/tinker_auto_farm) — automatic farming on Tinker
 - [Auto Shackleshot](scripts/auto_shackleshot) — automatic Shackleshot on Windranger
+- [Auto Spark](scripts/auto_spark) — automatic Spark Wraith usage on the lane
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -51,6 +56,9 @@ folder in `umbrella\scripts`, reload the Lua scripts, and open `Scripts → Scri
 
 Auto Shackleshot: download `Auto_Shackleshot.lua` and `!_qLocalizer.lua` into
 `umbrella\scripts`, reload the Lua scripts, and open `Scripts → Scripts → Auto Shackleshot`.
+
+Auto Spark: download `Auto_Spark.lua` and `!_qLocalizer.lua` into `umbrella\scripts`,
+reload the Lua scripts, and open `Scripts → Scripts → Auto Spark`.
 
 ## Downloads
 
