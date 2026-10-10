@@ -15,6 +15,7 @@
 - [HP/Mana 67 Ping](scripts/hp_mana_67_ping) — сообщения при достижении значений HP и маны, оканчивающихся на 67
 - [Spirit Bear Pull](scripts/spirit_bear_pull) — автоматический отвод крипов медведем Lone Druid
 - [Dorman Combo Assistant](scripts/dorman_combo_assistant) — комбо-ассистент для Dorman в Deadlock
+- [Rem Assistant](scripts/rem_assistant) — ассистент способностей и лечения для Rem в Deadlock
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -48,6 +49,9 @@ Spirit Bear Pull: скачай `lone_druid_bear_pull.lua` и `!_qLocalizer.lua` 
 Dorman Combo Assistant: скачай `Dorman.lua` и `!_qLocalizer.lua` в `%cheat_dir%/deadlock_scripts`,
 перезагрузи Lua-скрипты и открой `Heroes → Hero List → The Dorman → Dorman`.
 
+Rem Assistant: скачай `Rem_Assistant.lua` и `!_qLocalizer.lua` в `%cheat_dir%/deadlock_scripts`,
+перезагрузи Lua-скрипты и открой `Heroes → Hero List → Rem → Rem Assistant`.
+
 ---
 
 # English
@@ -67,6 +71,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [HP/Mana 67 Ping](scripts/hp_mana_67_ping) — chat messages when HP or mana reaches a value ending in 67
 - [Spirit Bear Pull](scripts/spirit_bear_pull) — automatically pull a creep wave with Lone Druid's bear
 - [Dorman Combo Assistant](scripts/dorman_combo_assistant) — a combo assistant for Dorman in Deadlock
+- [Rem Assistant](scripts/rem_assistant) — ability and healing assistant for Rem in Deadlock
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -99,6 +104,9 @@ Spirit Bear Pull: download `lone_druid_bear_pull.lua` and `!_qLocalizer.lua` int
 
 Dorman Combo Assistant: download `Dorman.lua` and `!_qLocalizer.lua` into
 `%cheat_dir%/deadlock_scripts`, reload the Lua scripts, and open `Heroes → Hero List → The Dorman → Dorman`.
+
+Rem Assistant: download `Rem_Assistant.lua` and `!_qLocalizer.lua` into
+`%cheat_dir%/deadlock_scripts`, reload the Lua scripts, and open `Heroes → Hero List → Rem → Rem Assistant`.
 
 ## Downloads
 
