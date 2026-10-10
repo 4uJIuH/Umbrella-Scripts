@@ -77,6 +77,7 @@ and open `Scripts → Rune Units`.
 | [Tinker Auto Farm](scripts/tinker_auto_farm) | 2 | `tinker-auto-farm-v1.0.3` |
 | [Auto Shackleshot](scripts/auto_shackleshot) | 0 | `auto-shackleshot-v1.0.0` |
 | [Auto Spark](scripts/auto_spark) | 0 | `auto-spark-v1.0.0` |
+| [Rune Destruction](scripts/rune_destruction) | 0 | `rune-destruction-v1.0.2` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
