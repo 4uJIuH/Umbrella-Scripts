@@ -122,6 +122,7 @@ Rem Assistant: download `Rem_Assistant.lua` and `!_qLocalizer.lua` into
 | [HP/Mana 67 Ping](scripts/hp_mana_67_ping) | 0 | `hp-mana-67-ping-v1.0.1` |
 | [Spirit Bear Pull](scripts/spirit_bear_pull) | 0 | `spirit-bear-pull-v1.0.0` |
 | [Dorman Combo Assistant](scripts/dorman_combo_assistant) | 0 | `dorman-combo-assistant-v1.0.0` |
+| [Rem Assistant](scripts/rem_assistant) | 0 | `rem-assistant-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
