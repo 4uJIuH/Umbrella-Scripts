@@ -11,6 +11,7 @@
 - [Auto Shackleshot](scripts/auto_shackleshot) — автоматическое применение Shackleshot за Windranger
 - [Auto Spark](scripts/auto_spark) — автоматическое использование спарков на линии
 - [Rune Destruction](scripts/rune_destruction) — отправка подконтрольных юнитов к рунам
+- [Earth Spirit Kick Combo](scripts/earth_spirit_kick_combo) — автоматическое Blink-комбо на Earth Spirit
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -32,6 +33,9 @@ Auto Spark: скачай `Auto_Spark.lua` и `!_qLocalizer.lua` в `umbrella\scr
 Rune Destruction: скачай `rune_units.lua` в `umbrella\scripts`, перезагрузи Lua-скрипты
 и открой `Scripts → Rune Units`.
 
+Earth Spirit Kick Combo: скачай `earth_spirit_kick_combo.lua` и `!_qLocalizer.lua` в
+`umbrella\scripts`, перезагрузи Lua-скрипты и открой `General → Earth Spirit Kick Combo`.
+
 ---
 
 # English
@@ -47,6 +51,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Auto Shackleshot](scripts/auto_shackleshot) — automatic Shackleshot on Windranger
 - [Auto Spark](scripts/auto_spark) — automatic Spark Wraith usage on the lane
 - [Rune Destruction](scripts/rune_destruction) — send controlled units to runes
+- [Earth Spirit Kick Combo](scripts/earth_spirit_kick_combo) — automatic Blink combo on Earth Spirit
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -67,6 +72,9 @@ reload the Lua scripts, and open `Scripts → Scripts → Auto Spark`.
 
 Rune Destruction: download `rune_units.lua` into `umbrella\scripts`, reload the Lua scripts,
 and open `Scripts → Rune Units`.
+
+Earth Spirit Kick Combo: download `earth_spirit_kick_combo.lua` and `!_qLocalizer.lua` into
+`umbrella\scripts`, reload the Lua scripts, and open `General → Earth Spirit Kick Combo`.
 
 ## Downloads
 
