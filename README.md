@@ -50,6 +50,7 @@ folder in `umbrella\scripts`, reload the Lua scripts, and open `Scripts → Scri
 | script | downloads | latest |
 | --- | --- | --- |
 | [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 0 | `tinker-turret-dodge-v1.1.3` |
+| [Tinker Auto Farm](scripts/tinker_auto_farm) | 0 | `tinker-auto-farm-v1.0.3` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
