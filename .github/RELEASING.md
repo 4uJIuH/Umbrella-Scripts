@@ -9,8 +9,8 @@ Tinker Auto Farm is packaged from `scripts/tinker_auto_farm/package` as
 3. Tag and push the version (for example):
 
 ```bash
-git tag spirit-bear-pull-v1.0.0
-git push origin spirit-bear-pull-v1.0.0
+git tag dorman-combo-assistant-v1.0.0
+git push origin dorman-combo-assistant-v1.0.0
 ```
 
 Tag prefixes, package files, script categories (`dota` or `deadlock`), and descriptions are

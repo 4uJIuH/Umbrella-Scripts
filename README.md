@@ -14,6 +14,7 @@
 - [Earth Spirit Kick Combo](scripts/earth_spirit_kick_combo) — автоматическое Blink-комбо на Earth Spirit
 - [HP/Mana 67 Ping](scripts/hp_mana_67_ping) — сообщения при достижении значений HP и маны, оканчивающихся на 67
 - [Spirit Bear Pull](scripts/spirit_bear_pull) — автоматический отвод крипов медведем Lone Druid
+- [Dorman Combo Assistant](scripts/dorman_combo_assistant) — комбо-ассистент для Dorman в Deadlock
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -44,6 +45,9 @@ HP/Mana 67 Ping: скачай `hp_mana_67_ping.lua` и `!_qLocalizer.lua` в `um
 Spirit Bear Pull: скачай `lone_druid_bear_pull.lua` и `!_qLocalizer.lua` в `umbrella\scripts`,
 перезагрузи Lua-скрипты и открой `General → Spirit Bear Pull`.
 
+Dorman Combo Assistant: скачай `Dorman.lua` и `!_qLocalizer.lua` в `%cheat_dir%/deadlock_scripts`,
+перезагрузи Lua-скрипты и открой `Heroes → Hero List → The Dorman → Dorman`.
+
 ---
 
 # English
@@ -62,6 +66,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Earth Spirit Kick Combo](scripts/earth_spirit_kick_combo) — automatic Blink combo on Earth Spirit
 - [HP/Mana 67 Ping](scripts/hp_mana_67_ping) — chat messages when HP or mana reaches a value ending in 67
 - [Spirit Bear Pull](scripts/spirit_bear_pull) — automatically pull a creep wave with Lone Druid's bear
+- [Dorman Combo Assistant](scripts/dorman_combo_assistant) — a combo assistant for Dorman in Deadlock
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -91,6 +96,9 @@ HP/Mana 67 Ping: download `hp_mana_67_ping.lua` and `!_qLocalizer.lua` into
 
 Spirit Bear Pull: download `lone_druid_bear_pull.lua` and `!_qLocalizer.lua` into
 `umbrella\scripts`, reload the Lua scripts, and open `General → Spirit Bear Pull`.
+
+Dorman Combo Assistant: download `Dorman.lua` and `!_qLocalizer.lua` into
+`%cheat_dir%/deadlock_scripts`, reload the Lua scripts, and open `Heroes → Hero List → The Dorman → Dorman`.
 
 ## Downloads
 
