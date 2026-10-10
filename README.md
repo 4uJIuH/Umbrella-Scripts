@@ -12,6 +12,7 @@
 - [Auto Spark](scripts/auto_spark) — автоматическое использование спарков на линии
 - [Rune Destruction](scripts/rune_destruction) — отправка подконтрольных юнитов к рунам
 - [Earth Spirit Kick Combo](scripts/earth_spirit_kick_combo) — автоматическое Blink-комбо на Earth Spirit
+- [HP/Mana 67 Ping](scripts/hp_mana_67_ping) — сообщения при достижении значений HP и маны, оканчивающихся на 67
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -36,6 +37,9 @@ Rune Destruction: скачай `rune_units.lua` в `umbrella\scripts`, пере�
 Earth Spirit Kick Combo: скачай `earth_spirit_kick_combo.lua` и `!_qLocalizer.lua` в
 `umbrella\scripts`, перезагрузи Lua-скрипты и открой `General → Earth Spirit Kick Combo`.
 
+HP/Mana 67 Ping: скачай `hp_mana_67_ping.lua` и `!_qLocalizer.lua` в `umbrella\scripts`,
+перезагрузи Lua-скрипты и открой `General → HP/Mana 67 Ping → Settings`.
+
 ---
 
 # English
@@ -52,6 +56,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Auto Spark](scripts/auto_spark) — automatic Spark Wraith usage on the lane
 - [Rune Destruction](scripts/rune_destruction) — send controlled units to runes
 - [Earth Spirit Kick Combo](scripts/earth_spirit_kick_combo) — automatic Blink combo on Earth Spirit
+- [HP/Mana 67 Ping](scripts/hp_mana_67_ping) — chat messages when HP or mana reaches a value ending in 67
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -75,6 +80,9 @@ and open `Scripts → Rune Units`.
 
 Earth Spirit Kick Combo: download `earth_spirit_kick_combo.lua` and `!_qLocalizer.lua` into
 `umbrella\scripts`, reload the Lua scripts, and open `General → Earth Spirit Kick Combo`.
+
+HP/Mana 67 Ping: download `hp_mana_67_ping.lua` and `!_qLocalizer.lua` into
+`umbrella\scripts`, reload the Lua scripts, and open `General → HP/Mana 67 Ping → Settings`.
 
 ## Downloads
 

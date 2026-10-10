@@ -281,6 +281,54 @@
           "Open settings: `General → Earth Spirit Kick Combo`."
         ]
       }
+    },
+    {
+      "id": "hp_mana_67_ping",
+      "tag": "hp-mana-67-ping",
+      "title": "HP/Mana 67 Ping",
+      "kind": "lua",
+      "file": "hp_mana_67_ping.lua",
+      "initial": {
+        "version": "1.0.1",
+        "date": "2026-10-10",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua"
+      },
+      "ru": {
+        "tagline": "сообщения при достижении значений HP и маны, оканчивающихся на 67",
+        "about": "Lua-скрипт для Dota 2, который отслеживает здоровье и ману и отправляет сообщение в общий чат при достижении отображаемого значения, оканчивающегося на 67.",
+        "features": [
+          "После нажатия бинда отслеживает HP и ману и срабатывает на отображаемых значениях от 67 до 6767, оканчивающихся на 67",
+          "После отправки сообщения отслеживание останавливается; для нового цикла нажмите бинд снова",
+          "Можно задать отдельные пользовательские сообщения для HP и маны; если поля пусты, используются стандартные сообщения",
+          "Отдельный бинд независимо отслеживает достижение 67% HP или маны и отправляет стандартный игровой alert",
+          "Русский и английский интерфейс через qLocalization",
+          "Скрипт и обновление 1.0.1: <a href=\"https://discord.com/channels/408315082439917578/1550937404464955572/1550952857640108106\" target=\"_blank\" rel=\"noopener\">Discord</a>"
+        ],
+        "install": [
+          "Поместите <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua\" target=\"_blank\" rel=\"noopener\"><code>hp_mana_67_ping.lua</code></a> в `umbrella\\scripts`.",
+          "Убедитесь, что рядом находится <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a>.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте настройки: `General → HP/Mana 67 Ping → Settings`."
+        ]
+      },
+      "en": {
+        "tagline": "chat messages when HP or mana reaches a value ending in 67",
+        "about": "A Dota 2 Lua script that tracks the hero's health and mana and sends a message to all chat when a displayed value ending in 67 is reached.",
+        "features": [
+          "After pressing the bind, tracks HP and mana and triggers on displayed values from 67 to 6767 that end in 67",
+          "Tracking stops after a message is sent; press the bind again to start a new cycle",
+          "Set separate custom messages for HP and mana; default messages are used when the fields are empty",
+          "A separate bind independently tracks when HP or mana reaches 67% and sends the standard in-game alert",
+          "Russian and English interface through qLocalization",
+          "Script and 1.0.1 update: <a href=\"https://discord.com/channels/408315082439917578/1550937404464955572/1550952857640108106\" target=\"_blank\" rel=\"noopener\">Discord</a>"
+        ],
+        "install": [
+          "Place <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua\" target=\"_blank\" rel=\"noopener\"><code>hp_mana_67_ping.lua</code></a> in `umbrella\\scripts`.",
+          "Make sure <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> is alongside it.",
+          "Reload the Lua scripts.",
+          "Open settings: `General → HP/Mana 67 Ping → Settings`."
+        ]
+      }
     }
   ]
 }

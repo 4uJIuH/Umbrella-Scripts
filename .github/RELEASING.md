@@ -9,8 +9,8 @@ Tinker Auto Farm is packaged from `scripts/tinker_auto_farm/package` as
 3. Tag and push the version (for example):
 
 ```bash
-git tag earth-spirit-kick-combo-v1.0.0
-git push origin earth-spirit-kick-combo-v1.0.0
+git tag hp-mana-67-ping-v1.0.1
+git push origin hp-mana-67-ping-v1.0.1
 ```
 
 Tag prefixes, package files, and script descriptions are configured in `catalog.json`.
