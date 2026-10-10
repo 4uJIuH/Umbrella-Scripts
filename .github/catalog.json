@@ -1,0 +1,47 @@
+{
+  "repo": "4uJIuH/umbrella-scripts",
+  "scripts": [
+    {
+      "id": "tinker_turret_dodge",
+      "tag": "tinker-turret-dodge",
+      "title": "Tinker Turret Dodge",
+      "kind": "lua",
+      "file": "tinker_turret_dodge.lua",
+      "initial": {
+        "version": "1.1.3",
+        "date": "2026-10-10",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/tinker_turret_dodge.lua"
+      },
+      "ru": {
+        "tagline": "автоматический додж опасных способностей турелями Тинкера",
+        "about": "Lua-скрипт для автоматической постановки турелей Тинкера против опасных способностей в Dota 2. Скрипт конфликтует с <a href=\"https://discord.com/channels/408315082439917578/1552392228284923904\" target=\"_blank\" rel=\"noopener\">Tinker Helper</a>.",
+        "features": [
+          "Автоматический додж: откидывает Тинкера от вражеских блинков и способностей",
+          "Реагирует на Black Hole, Chronosphere, Reverse Polarity и множество других скиллов",
+          "Для фарма можно использовать <a href=\"https://discord.com/channels/408315082439917578/1553927573229142027\" target=\"_blank\" rel=\"noopener\">эту сборку</a> (буду менять по необходимости, тестируйте)"
+        ],
+        "install": [
+          "Поместите `tinker_turret_dodge.lua` в `umbrella\\scripts`.",
+          "Поместите <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте настройки: `General → Tinker Turret Dodge`."
+        ]
+      },
+      "en": {
+        "tagline": "automatically dodges dangerous abilities with Tinker turrets",
+        "about": "Tinker Turret Dodge is a Lua script for automatically placing Tinker turrets against dangerous abilities in Dota 2. It conflicts with <a href=\"https://discord.com/channels/408315082439917578/1552392228284923904\" target=\"_blank\" rel=\"noopener\">Tinker Helper</a>.",
+        "features": [
+          "Automatic dodge: pushes Tinker away from enemy blinks and abilities",
+          "Reacts to Black Hole, Chronosphere, Reverse Polarity, and many other skills",
+          "For farming, you can use <a href=\"https://discord.com/channels/408315082439917578/1553927573229142027\" target=\"_blank\" rel=\"noopener\">this setup</a> (I will change it as needed; please test it)"
+        ],
+        "install": [
+          "Place `tinker_turret_dodge.lua` in `umbrella\\scripts`.",
+          "Place <a href=\"https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/!_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open settings: `General → Tinker Turret Dodge`."
+        ]
+      }
+    }
+  ]
+}

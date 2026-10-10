@@ -1,0 +1,58 @@
+name: release
+
+on:
+  push:
+    tags: ["tinker-turret-dodge-v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag, e.g. draft-helper-v2.0.0"
+        required: true
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ inputs.tag || github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: notes
+        id: notes
+        run: python .github/release_notes.py "$TAG"
+
+      - uses: softprops/action-gh-release@v2
+        if: steps.notes.outputs.found == 'true'
+        with:
+          tag_name: ${{ env.TAG }}
+          target_commitish: ${{ github.sha }}
+          files: ${{ steps.notes.outputs.path }}
+          name: ${{ steps.notes.outputs.title }} ${{ steps.notes.outputs.version }}
+          body_path: body.md
+
+      - name: version manifest
+        if: steps.notes.outputs.manifest != ''
+        run: |
+          git fetch --depth 1 origin main
+          git checkout -B main origin/main
+          python .github/release_notes.py "$TAG" --manifest "$GITHUB_SHA"
+          git config user.name github-actions
+          git config user.email actions@github.com
+          git add scripts
+          git commit -m "${{ steps.notes.outputs.manifest }} ${TAG##*-v}: version manifest"
+          git pull --rebase
+          git push origin main
+
+      - name: pages
+        if: steps.notes.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run readme.yml --ref main

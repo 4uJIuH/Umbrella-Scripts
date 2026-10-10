@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+body.md
+.agents/
+skills-lock.json
+*.spec
+_site/
