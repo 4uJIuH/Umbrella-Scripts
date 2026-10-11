@@ -132,7 +132,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | script | downloads | latest |
 | --- | --- | --- |
 | [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 2 | `tinker-turret-dodge-v1.1.3` |
-| [Tinker Auto Farm](scripts/tinker_auto_farm) | 2 | `tinker-auto-farm-v1.0.3` |
+| [Tinker Auto Farm](scripts/tinker_auto_farm) | 3 | `tinker-auto-farm-v1.0.3` |
 | [Auto Shackleshot](scripts/auto_shackleshot) | 1 | `auto-shackleshot-v1.0.0` |
 | [Auto Spark](scripts/auto_spark) | 0 | `auto-spark-v1.0.0` |
 | [Rune Destruction](scripts/rune_destruction) | 0 | `rune-destruction-v1.0.2` |
@@ -142,12 +142,12 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Dorman Combo Assistant](scripts/dorman_combo_assistant) | 0 | `dorman-combo-assistant-v1.0.0` |
 | [Rem Assistant](scripts/rem_assistant) | 0 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 0 | `vault-tunnel-esp-v1.0.0` |
-| [qLocalization](scripts/q_localizer) | 0 | `q-localizer-v1.0.0` |
+| [qLocalization](scripts/q_localizer) | 3 | `q-localizer-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
   <img alt="Downloads over time" src=".github/stats/stats-light.svg" width="840">
 </picture>
 
-2026-10-10
+2026-10-11
 <!-- stats:end -->
