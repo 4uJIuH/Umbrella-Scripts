@@ -38,6 +38,10 @@
 
 ## Что нового
 
+**Обновление v1.2.2**
+
+- В карточке библиотеки в Script Manager явно указано авторство qLocalization: qfun (qfun_g9s).
+
 **Обновление v1.2.1**
 
 - Обновлён визуальный стиль панели: добавлены плавное появление и закрытие с анимацией фона.
@@ -70,6 +74,10 @@ An Umbrella script manager with a draggable panel that checks the full catalog o
 3. Open `Scripts → Scripts → Script Manager`, assign a key to `Open manager` (defaults to `Insert`), then open the panel and check the selected script.
 
 ## Changelog
+
+**Update v1.2.2**
+
+- The qLocalization library card in Script Manager now clearly credits its author, qfun (qfun_g9s).
 
 **Update v1.2.1**
 

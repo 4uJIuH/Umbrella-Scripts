@@ -316,7 +316,7 @@ local qLocalization = (function()
 	return lib
 end)()
 
-local VERSION = "1.2.1"
+local VERSION = "1.2.2"
 
 local localization = qLocalization.new({
 	en = {
@@ -330,8 +330,8 @@ local localization = qLocalization.new({
 		sm_panel_installed = "INSTALLED",
 		sm_panel_latest = "LATEST",
 		sm_panel_status = "ACTIVITY",
-		sm_panel_localizer_title = "Localization library",
-		sm_panel_localizer_desc = "Automatically installed as !_qLocalizer.lua",
+		sm_panel_localizer_title = "qLocalization",
+		sm_panel_localizer_desc = "Author: qfun (qfun_g9s) · installed as !_qLocalizer.lua",
 		sm_panel_localizer_ready = "Installed",
 		sm_panel_not_detected = "Not detected",
 		sm_panel_not_checked = "Not checked",
@@ -397,8 +397,8 @@ local localization = qLocalization.new({
 		sm_panel_installed = "УСТАНОВЛЕНА",
 		sm_panel_latest = "ПОСЛЕДНЯЯ",
 		sm_panel_status = "СОСТОЯНИЕ",
-		sm_panel_localizer_title = "Библиотека локализации",
-		sm_panel_localizer_desc = "Установится автоматически как !_qLocalizer.lua",
+		sm_panel_localizer_title = "qLocalization",
+		sm_panel_localizer_desc = "Автор: qfun (qfun_g9s) · устанавливается как !_qLocalizer.lua",
 		sm_panel_localizer_ready = "Установлена",
 		sm_panel_not_detected = "Не обнаружена",
 		sm_panel_not_checked = "Не проверена",

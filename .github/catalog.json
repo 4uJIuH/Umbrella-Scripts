@@ -592,8 +592,8 @@
       "category": "auxiliary",
       "file": "script_manager.lua",
       "initial": {
-        "version": "1.0.1",
-        "date": "2026-10-12",
+        "version": "1.2.2",
+        "date": "2026-10-13",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/script_manager/script_manager.lua"
       },
       "ru": {
