@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`earth-spirit-kick-combo-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/earth-spirit-kick-combo-v1.0.0) | 2026-10-10 | [earth_spirit_kick_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/earth-spirit-kick-combo-v1.0.0/earth_spirit_kick_combo.lua) | 0 |
+| [`earth-spirit-kick-combo-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/earth-spirit-kick-combo-v1.0.0) | 2026-10-10 | [earth_spirit_kick_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/earth-spirit-kick-combo-v1.0.0/earth_spirit_kick_combo.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=earth-spirit-kick-combo&expanded=true)
 <!-- releases:end -->

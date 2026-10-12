@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`hp-mana-67-ping-v1.0.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/hp-mana-67-ping-v1.0.1) | 2026-10-10 | [hp_mana_67_ping.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua) | 0 |
+| [`hp-mana-67-ping-v1.0.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/hp-mana-67-ping-v1.0.1) | 2026-10-10 | [hp_mana_67_ping.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=hp-mana-67-ping&expanded=true)
 <!-- releases:end -->

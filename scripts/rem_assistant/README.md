@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`rem-assistant-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/rem-assistant-v1.0.0) | 2026-10-10 | [Rem_Assistant.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/rem-assistant-v1.0.0/Rem_Assistant.lua) | 0 |
+| [`rem-assistant-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/rem-assistant-v1.0.0) | 2026-10-10 | [Rem_Assistant.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/rem-assistant-v1.0.0/Rem_Assistant.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=rem-assistant&expanded=true)
 <!-- releases:end -->

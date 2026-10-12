@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`auto-spark-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/auto-spark-v1.0.0) | 2026-10-10 | [Auto_Spark.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-spark-v1.0.0/Auto_Spark.lua) | 0 |
+| [`auto-spark-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/auto-spark-v1.0.0) | 2026-10-10 | [Auto_Spark.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-spark-v1.0.0/Auto_Spark.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-spark&expanded=true)
 <!-- releases:end -->

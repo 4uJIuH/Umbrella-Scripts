@@ -7,7 +7,7 @@ ESP для Souls Vault и Rem's Tunnel с таймером возрождени�
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`vault-tunnel-esp-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/vault-tunnel-esp-v1.0.0) | 2026-10-10 | [VaultTunnelESP.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/vault-tunnel-esp-v1.0.0/VaultTunnelESP.lua) | 0 |
+| [`vault-tunnel-esp-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/vault-tunnel-esp-v1.0.0) | 2026-10-10 | [VaultTunnelESP.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/vault-tunnel-esp-v1.0.0/VaultTunnelESP.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=vault-tunnel-esp&expanded=true)
 <!-- releases:end -->

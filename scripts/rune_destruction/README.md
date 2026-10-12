@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`rune-destruction-v1.0.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/rune-destruction-v1.0.2) | 2026-10-10 | [rune_units.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/rune-destruction-v1.0.2/rune_units.lua) | 0 |
+| [`rune-destruction-v1.0.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/rune-destruction-v1.0.2) | 2026-10-10 | [rune_units.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/rune-destruction-v1.0.2/rune_units.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=rune-destruction&expanded=true)
 <!-- releases:end -->

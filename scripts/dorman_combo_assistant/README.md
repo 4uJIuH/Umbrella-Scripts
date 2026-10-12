@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`dorman-combo-assistant-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/dorman-combo-assistant-v1.0.0) | 2026-10-10 | [Dorman.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dorman-combo-assistant-v1.0.0/Dorman.lua) | 0 |
+| [`dorman-combo-assistant-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/dorman-combo-assistant-v1.0.0) | 2026-10-10 | [Dorman.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dorman-combo-assistant-v1.0.0/Dorman.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=dorman-combo-assistant&expanded=true)
 <!-- releases:end -->

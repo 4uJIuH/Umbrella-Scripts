@@ -1,7 +1,49 @@
 # Script Manager
 
-Script Manager checks the GitHub catalog when asked and offers the selected Dota script update for installation. It creates a `.script-manager.bak` backup before replacing an existing file, installs `!_qLocalizer.lua` only when a selected script requires it and the library is missing, then reloads the Script System.
+проверка и установка обновлений Dota-скриптов по кнопке / check and install Dota script updates on demand
 
-Tinker Auto Farm is provided as a ZIP and must be extracted manually into the scripts folder.
+<!-- releases:start -->
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.0.0/script_manager.lua) — `script-manager-v1.0.0`, 2026-10-12
 
-Place `script_manager.lua` in `umbrella\scripts`, reload Lua scripts, then open `Scripts → Scripts → Script Manager`.
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`script-manager-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.0.0) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.0.0/script_manager.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=script-manager&expanded=true)
+<!-- releases:end -->
+
+## Что умеет
+
+Отдельный менеджер Dota-скриптов: проверяет версии в GitHub-каталоге и устанавливает выбранное обновление по подтверждению пользователя.
+
+- Проверяет доступные версии по кнопке
+- Устанавливает обновления отдельных Dota-скриптов и перезагружает Script System
+- Сохраняет резервную копию заменяемого файла
+- Устанавливает обязательный `!_qLocalizer.lua`, если он требуется и отсутствует
+- Скачивает Tinker Auto Farm как ZIP для ручной распаковки
+
+## Установка
+
+1. Поместите `script_manager.lua` в `umbrella\scripts`.
+2. Перезагрузите Lua-скрипты.
+3. Откройте `Scripts → Scripts → Script Manager`, выберите Dota-скрипт, нажмите «Проверить обновления», затем установите обновление.
+
+---
+
+# Script Manager (English)
+
+## What it does
+
+A standalone Dota script manager that checks versions from the GitHub catalog and installs a selected update after user confirmation.
+
+- Checks for available versions on demand
+- Installs individual Dota script updates and reloads the Script System
+- Keeps a backup of any file it replaces
+- Installs the required `!_qLocalizer.lua` when needed and missing
+- Downloads Tinker Auto Farm as a ZIP for manual extraction
+
+## Install
+
+1. Place `script_manager.lua` in `umbrella\scripts`.
+2. Reload the Lua scripts.
+3. Open `Scripts → Scripts → Script Manager`, select a Dota script, click “Check for updates”, then install the update.

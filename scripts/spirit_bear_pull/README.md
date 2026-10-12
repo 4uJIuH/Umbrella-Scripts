@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`spirit-bear-pull-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/spirit-bear-pull-v1.0.0) | 2026-10-10 | [lone_druid_bear_pull.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-bear-pull-v1.0.0/lone_druid_bear_pull.lua) | 0 |
+| [`spirit-bear-pull-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/spirit-bear-pull-v1.0.0) | 2026-10-10 | [lone_druid_bear_pull.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-bear-pull-v1.0.0/lone_druid_bear_pull.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=spirit-bear-pull&expanded=true)
 <!-- releases:end -->

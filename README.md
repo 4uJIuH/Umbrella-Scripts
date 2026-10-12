@@ -18,6 +18,7 @@
 - [Rem Assistant](scripts/rem_assistant) — ассистент способностей и лечения для Rem в Deadlock
 - [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — ESP для Souls Vault и Rem's Tunnel с таймером возрождения
 - [qLocalization](scripts/q_localizer) — вспомогательная библиотека для локализации Lua-интерфейсов
+- [Script Manager](scripts/script_manager) — проверка и установка обновлений Dota-скриптов по кнопке
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -83,6 +84,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Rem Assistant](scripts/rem_assistant) — ability and healing assistant for Rem in Deadlock
 - [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — ESP for Souls Vault and Rem's Tunnel with respawn timers
 - [qLocalization](scripts/q_localizer) — a helper library for localizing Lua interfaces
+- [Script Manager](scripts/script_manager) — check and install Dota script updates on demand
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -131,18 +133,19 @@ This third-party library is by qfun (qfun_g9s), not my script.
 <!-- stats:start -->
 | script | downloads | latest |
 | --- | --- | --- |
-| [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 2 | `tinker-turret-dodge-v1.1.3` |
-| [Tinker Auto Farm](scripts/tinker_auto_farm) | 3 | `tinker-auto-farm-v1.0.3` |
-| [Auto Shackleshot](scripts/auto_shackleshot) | 1 | `auto-shackleshot-v1.0.0` |
-| [Auto Spark](scripts/auto_spark) | 0 | `auto-spark-v1.0.0` |
-| [Rune Destruction](scripts/rune_destruction) | 0 | `rune-destruction-v1.0.2` |
-| [Earth Spirit Kick Combo](scripts/earth_spirit_kick_combo) | 0 | `earth-spirit-kick-combo-v1.0.0` |
-| [HP/Mana 67 Ping](scripts/hp_mana_67_ping) | 0 | `hp-mana-67-ping-v1.0.1` |
-| [Spirit Bear Pull](scripts/spirit_bear_pull) | 0 | `spirit-bear-pull-v1.0.0` |
-| [Dorman Combo Assistant](scripts/dorman_combo_assistant) | 0 | `dorman-combo-assistant-v1.0.0` |
-| [Rem Assistant](scripts/rem_assistant) | 0 | `rem-assistant-v1.0.0` |
-| [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 0 | `vault-tunnel-esp-v1.0.0` |
+| [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 3 | `tinker-turret-dodge-v1.1.3` |
+| [Tinker Auto Farm](scripts/tinker_auto_farm) | 4 | `tinker-auto-farm-v1.0.3` |
+| [Auto Shackleshot](scripts/auto_shackleshot) | 2 | `auto-shackleshot-v1.0.0` |
+| [Auto Spark](scripts/auto_spark) | 1 | `auto-spark-v1.0.0` |
+| [Rune Destruction](scripts/rune_destruction) | 1 | `rune-destruction-v1.0.2` |
+| [Earth Spirit Kick Combo](scripts/earth_spirit_kick_combo) | 1 | `earth-spirit-kick-combo-v1.0.0` |
+| [HP/Mana 67 Ping](scripts/hp_mana_67_ping) | 1 | `hp-mana-67-ping-v1.0.1` |
+| [Spirit Bear Pull](scripts/spirit_bear_pull) | 1 | `spirit-bear-pull-v1.0.0` |
+| [Dorman Combo Assistant](scripts/dorman_combo_assistant) | 1 | `dorman-combo-assistant-v1.0.0` |
+| [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
+| [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 3 | `q-localizer-v1.0.0` |
+| [Script Manager](scripts/script_manager) | 0 | `script-manager-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
