@@ -1,3 +1,9 @@
+**Update v1.3.0**
+
+- Added a dedicated appearance panel with selectable themes and accent colors.
+- Added controls for background blur, panel opacity and text scale, plus a compact script-list mode.
+- Fixed default appearance values and localized the settings panel in Russian and English.
+
 **Update v1.2.2**
 
 - The qLocalization library card in Script Manager now clearly credits its author, qfun (qfun_g9s).

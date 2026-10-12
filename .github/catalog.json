@@ -592,7 +592,7 @@
       "category": "auxiliary",
       "file": "script_manager.lua",
       "initial": {
-        "version": "1.2.2",
+        "version": "1.3.0",
         "date": "2026-10-13",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/script_manager/script_manager.lua"
       },
@@ -601,6 +601,8 @@
         "about": "Менеджер скриптов Umbrella с перетаскиваемой панелью: автоматически проверяет весь каталог, сохраняет версии и время проверки и устанавливает обновления по запросу.",
         "features": [
           "Проверяет доступные версии по кнопке",
+          "Настраивает тему, акцентный цвет, размытие фона, прозрачность и масштаб интерфейса",
+          "Поддерживает компактное отображение списка скриптов",
           "Устанавливает обновления отдельных Dota-скриптов и перезагружает Script System",
           "Сохраняет резервную копию заменяемого файла",
           "Устанавливает обязательный `!_qLocalizer.lua`, если он требуется и отсутствует",
@@ -620,6 +622,8 @@
         "about": "An Umbrella script manager with a draggable panel that checks the full catalog on startup, saves versions and check time, and installs updates on demand.",
         "features": [
           "Checks for available versions on demand",
+          "Customizes the theme, accent color, background blur, opacity, and interface scale",
+          "Supports a compact script-list layout",
           "Installs individual Dota script updates and reloads the Script System",
           "Keeps a backup of any file it replaces",
           "Installs the required `!_qLocalizer.lua` when needed and missing",

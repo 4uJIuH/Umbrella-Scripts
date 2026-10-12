@@ -316,13 +316,40 @@ local qLocalization = (function()
 	return lib
 end)()
 
-local VERSION = "1.2.2"
+local VERSION = "1.3.0"
 
 local localization = qLocalization.new({
 	en = {
 		sm_group_main = "Script Manager",
 		sm_open = "Open manager",
 		sm_open_tip = "Opens the Script Manager panel",
+		sm_ui_tab = "Script Manager Visuals",
+		sm_ui_group = "Interface",
+		sm_ui_subtitle = "Settings are saved automatically and applied to the panel",
+		sm_ui_enabled = "Enabled",
+		sm_ui_disabled = "Disabled",
+		sm_ui_back = "Back",
+		sm_ui_blur = "Background blur",
+		sm_ui_blur_tip = "Blur the game behind the manager",
+		sm_ui_blur_power = "Blur strength",
+		sm_ui_opacity = "Panel opacity",
+		sm_ui_scale = "Panel scale",
+		sm_ui_theme = "Theme",
+		sm_ui_accent = "Accent color",
+		sm_ui_compact = "Compact mode",
+		sm_ui_compact_tip = "Use tighter spacing in the script list",
+		sm_theme_graphite = "Graphite",
+		sm_theme_midnight = "Midnight",
+		sm_theme_warm = "Warm",
+		sm_theme_purple = "Purple",
+		sm_theme_red = "Red",
+		sm_theme_oled = "OLED",
+		sm_accent_red = "Red",
+		sm_accent_teal = "Teal",
+		sm_accent_blue = "Blue",
+		sm_accent_purple = "Purple",
+		sm_accent_orange = "Orange",
+		sm_accent_green = "Green",
 		sm_panel_title = "Script Manager",
 		sm_panel_subtitle = "UMBRELLA UPDATE CENTER",
 		sm_panel_scripts = "DOTA SCRIPTS",
@@ -390,6 +417,33 @@ local localization = qLocalization.new({
 		sm_group_main = "Script Manager",
 		sm_open = "Открыть менеджер",
 		sm_open_tip = "Открывает панель Script Manager",
+		sm_ui_tab = "Визуал Script Manager",
+		sm_ui_group = "Внешний вид",
+		sm_ui_subtitle = "Настройки сохраняются автоматически и сразу применяются к панели",
+		sm_ui_enabled = "Включено",
+		sm_ui_disabled = "Выключено",
+		sm_ui_back = "Назад",
+		sm_ui_blur = "Размытие фона",
+		sm_ui_blur_tip = "Размывает игру за окном менеджера",
+		sm_ui_blur_power = "Сила размытия",
+		sm_ui_opacity = "Прозрачность панели",
+		sm_ui_scale = "Масштаб панели",
+		sm_ui_theme = "Тема",
+		sm_ui_accent = "Акцентный цвет",
+		sm_ui_compact = "Компактный режим",
+		sm_ui_compact_tip = "Уменьшает интервалы в списке скриптов",
+		sm_theme_graphite = "Графит",
+		sm_theme_midnight = "Полночь",
+		sm_theme_warm = "Тёплая",
+		sm_theme_purple = "Фиолетовая",
+		sm_theme_red = "Красная",
+		sm_theme_oled = "OLED",
+		sm_accent_red = "Красный",
+		sm_accent_teal = "Бирюзовый",
+		sm_accent_blue = "Синий",
+		sm_accent_purple = "Фиолетовый",
+		sm_accent_orange = "Оранжевый",
+		sm_accent_green = "Зелёный",
 		sm_panel_title = "Script Manager",
 		sm_panel_subtitle = "ЦЕНТР ОБНОВЛЕНИЙ UMBRELLA",
 		sm_panel_scripts = "СКРИПТЫ DOTA",
@@ -474,6 +528,19 @@ local items = {
 }
 
 local ui = {}
+local appearance = {}
+local THEME_COLORS = {
+	graphite = { card = {16, 23, 32}, base = {21, 30, 41}, sidebar = {19, 28, 39}, edge = {48, 62, 78} },
+	midnight = { card = {10, 15, 29}, base = {16, 22, 40}, sidebar = {13, 19, 35}, edge = {48, 65, 99} },
+	warm = { card = {28, 21, 18}, base = {39, 29, 24}, sidebar = {33, 25, 21}, edge = {91, 67, 55} },
+	purple = { card = {20, 14, 31}, base = {29, 20, 43}, sidebar = {24, 17, 36}, edge = {75, 56, 99} },
+	red = { card = {31, 13, 18}, base = {43, 20, 25}, sidebar = {36, 16, 22}, edge = {105, 57, 66} },
+	oled = { card = {0, 0, 0}, base = {8, 8, 9}, sidebar = {4, 4, 5}, edge = {42, 42, 46} },
+}
+local ACCENT_COLORS = {
+	red = {239, 68, 68}, teal = {54, 186, 169}, blue = {56, 141, 255},
+	purple = {183, 92, 242}, orange = {255, 159, 67}, green = {76, 205, 112},
+}
 local selected_index = math.max(1, math.min(#items,
 	Config.ReadInt("script_manager", "selected_index", 1)))
 local selected_release
@@ -489,15 +556,48 @@ local panel = {
 	open = false,
 	visibility = 0,
 	animation_time = os.clock(),
-	width = 820,
-	height = 520,
+	width = 920,
+	height = 600,
 	x = nil,
 	y = nil,
 	dragging = false,
 	mouse_captured = false,
 	hits = {},
 	status_key = "sm_status_idle",
+	settings_open = false,
+	settings_drag = nil,
+	settings_scroll = 0,
+	settings_clip = nil,
 }
+
+local function setting_value(widget, fallback)
+	if not widget or type(widget.Get) ~= "function" then return fallback end
+	local value = widget:Get()
+	if value == nil then return fallback end
+	return value
+end
+
+local function setting_enabled(widget, fallback)
+	local value = setting_value(widget, fallback)
+	if type(value) == "boolean" then return value end
+	if type(value) == "number" then return value ~= 0 end
+	if type(value) == "string" then return value == "1" or value == "true" or value == "on" end
+	return fallback == true
+end
+
+local function save_appearance()
+	Config.WriteInt("script_manager", "blur", setting_enabled(appearance.blur, true) and 1 or 0)
+	Config.WriteInt("script_manager", "blur_power", tonumber(setting_value(appearance.blur_power, 70)) or 70)
+	Config.WriteInt("script_manager", "opacity", tonumber(setting_value(appearance.opacity, 92)) or 92)
+	Config.WriteInt("script_manager", "scale", tonumber(setting_value(appearance.scale, 120)) or 100)
+	local theme_ids = { "graphite", "midnight", "warm", "purple", "red", "oled" }
+	local accent_ids = { "red", "teal", "blue", "purple", "orange", "green" }
+	local theme_index = tonumber(setting_value(appearance.theme, 0)) or 0
+	local accent_index = tonumber(setting_value(appearance.accent, 1)) or 1
+	Config.WriteString("script_manager", "theme", theme_ids[theme_index + 1] or "graphite")
+	Config.WriteString("script_manager", "accent", accent_ids[accent_index + 1] or "teal")
+	Config.WriteInt("script_manager", "compact", setting_enabled(appearance.compact, false) and 1 or 0)
+end
 
 do
 	local tab = UI.Create("Scripts", "Scripts", "Script Manager")
@@ -506,6 +606,46 @@ do
 	local page = tab:Create("Settings")
 	local g_main = page:Create("sm_group_main", Enum.GroupSide.Left)
 	ui.open = g_main:Bind("sm_open", Enum.ButtonCode.KEY_INSERT)
+
+	-- Visual settings are intentionally kept inside the in-panel gear.
+	-- These lightweight objects preserve the same Get/Set interface used by the
+	-- panel without registering a second menu tab outside Script Manager.
+	local function config_widget(name, default, is_string)
+		local object = {}
+		function object:Get()
+			if is_string then return Config.ReadString("script_manager", name, default) end
+			return Config.ReadInt("script_manager", name, default)
+		end
+		function object:Set(value)
+			if is_string then
+				Config.WriteString("script_manager", name, tostring(value))
+			else
+				Config.WriteInt("script_manager", name, type(value) == "boolean" and (value and 1 or 0) or tonumber(value) or default)
+			end
+		end
+		return object
+	end
+
+	appearance.blur = config_widget("blur", 1)
+	appearance.blur_power = config_widget("blur_power", 70)
+	appearance.opacity = config_widget("opacity", 92)
+	appearance.scale = config_widget("scale", 120)
+	local function config_index_widget(name, ids, default)
+		local object = {}
+		function object:Get()
+			local current = Config.ReadString("script_manager", name, ids[default + 1])
+			for index, id in ipairs(ids) do if id == current then return index - 1 end end
+			return default
+		end
+		function object:Set(value)
+			local index = math.max(0, math.min(#ids - 1, tonumber(value) or default))
+			Config.WriteString("script_manager", name, ids[index + 1])
+		end
+		return object
+	end
+	appearance.theme = config_index_widget("theme", { "graphite", "midnight", "warm", "purple", "red", "oled" }, 0)
+	appearance.accent = config_index_widget("accent", { "red", "teal", "blue", "purple", "orange", "green" }, 1)
+	appearance.compact = config_widget("compact", 0)
 	ui.open:ToolTip("sm_open_tip")
 end
 
@@ -948,11 +1088,13 @@ local function ensure_panel_fonts()
 end
 
 local function panel_text(font, size, value, x, y, color)
-	Render.Text(font, size, tostring(value), Vec2(x, y), color)
+	local scale = math.max(0.8, math.min(1.2, (tonumber(setting_value(appearance.scale, 120)) or 100) / 100))
+	Render.Text(font, math.max(1, math.floor(size * scale)), tostring(value), Vec2(x, y), color)
 end
 
 local function panel_measure(font, size, value)
-	return Render.TextSize(font, size, tostring(value)).x
+	local scale = math.max(0.8, math.min(1.2, (tonumber(setting_value(appearance.scale, 120)) or 100) / 100))
+	return Render.TextSize(font, math.max(1, math.floor(size * scale)), tostring(value)).x
 end
 
 local function panel_wrap(value, font, size, width, max_lines)
@@ -991,8 +1133,14 @@ end
 
 local function panel_button(title, x, y, width, height, enabled, primary, mx, my)
 	local hover = enabled and point_in(mx, my, x, y, x + width, y + height)
-	local fill = primary and Color(54, 186, 169, enabled and (hover and 255 or 235) or 100)
+	local accent_ids = { "red", "teal", "blue", "purple", "orange", "green" }
+	local accent = ACCENT_COLORS[accent_ids[(tonumber(setting_value(appearance.accent, 1)) or 1) + 1]] or ACCENT_COLORS.teal
+	local fill = primary and Color(accent[1], accent[2], accent[3], enabled and (hover and 255 or 235) or 100)
 		or Color(34, 46, 59, enabled and (hover and 255 or 220) or 110)
+	if enabled and hover then
+		Render.FilledRect(Vec2(x - 2, y - 2), Vec2(x + width + 2, y + height + 2),
+			Color(accent[1], accent[2], accent[3], 30), 10)
+	end
 	Render.FilledRect(Vec2(x, y), Vec2(x + width, y + height), fill, 8)
 	if not primary then
 		Render.Rect(Vec2(x, y), Vec2(x + width, y + height),
@@ -1031,25 +1179,49 @@ local function draw_manager_panel()
 	panel.x = math.max(16, math.min(panel.x, screen.x - width - 16))
 	panel.y = math.max(16, math.min(panel.y, screen.y - height - 16))
 	local visibility = panel.visibility
+	local opacity = math.max(0.45, math.min(1, (tonumber(setting_value(appearance.opacity, 92)) or 92) / 100))
+	local blur_enabled = setting_enabled(appearance.blur, true)
+	local blur_power = math.max(0.1, math.min(1, (tonumber(setting_value(appearance.blur_power, 70)) or 70) / 100))
 	local x, y, w, h = math.floor(panel.x), math.floor(panel.y - (1 - visibility) * 12), width, height
 	local mx, my = Input.GetCursorPos()
-	local edge, text, muted = Color(48, 62, 78), Color(232, 239, 246), Color(143, 159, 176)
-	local card, base, sidebar = Color(16, 23, 32), Color(21, 30, 41), Color(19, 28, 39)
+	local theme_ids = { "graphite", "midnight", "warm", "purple", "red", "oled" }
+	local accent_ids = { "red", "teal", "blue", "purple", "orange", "green" }
+	local theme = THEME_COLORS[theme_ids[(tonumber(setting_value(appearance.theme, 0)) or 0) + 1]] or THEME_COLORS.graphite
+	local accent = ACCENT_COLORS[accent_ids[(tonumber(setting_value(appearance.accent, 1)) or 1) + 1]] or ACCENT_COLORS.teal
+	local edge = Color(theme.edge[1], theme.edge[2], theme.edge[3])
+	local text, muted = Color(232, 239, 246), Color(143, 159, 176)
+	local card = Color(theme.card[1], theme.card[2], theme.card[3])
+	local base = Color(theme.base[1], theme.base[2], theme.base[3])
+	local sidebar = Color(theme.sidebar[1], theme.sidebar[2], theme.sidebar[3])
+	local accent_color = Color(accent[1], accent[2], accent[3])
+	-- accent softness is derived per control
+	-- card lift is reserved for elevated detail blocks
+	local compact = setting_enabled(appearance.compact, false)
 	panel.hits = {}
 
 	Render.FilledRect(Vec2(0, 0), Vec2(screen.x, screen.y),
-		Color(3, 7, 12, math.floor(96 * visibility)))
-	Render.Blur(Vec2(x, y), Vec2(x + w, y + h), 0.7 * visibility, 0.9, 14)
-	Render.FilledRect(Vec2(x, y), Vec2(x + w, y + h), card, 14)
+		Color(3, 7, 12, math.floor(96 * visibility * opacity)))
+	if blur_enabled then
+		Render.Blur(Vec2(x, y), Vec2(x + w, y + h), blur_power * visibility, 1.0, 14)
+	end
+	Render.FilledRect(Vec2(x, y), Vec2(x + w, y + h),
+		Color(card.r, card.g, card.b, math.floor(255 * opacity * visibility)), 14)
 	Render.Rect(Vec2(x, y), Vec2(x + w, y + h), edge, 14)
-	Render.FilledRect(Vec2(x + 1, y + 1), Vec2(x + w - 1, y + 5), Color(54, 186, 169), 3)
+	Render.FilledRect(Vec2(x + 1, y + 1), Vec2(x + w - 1, y + 5), accent_color, 3)
 	Render.FilledRect(Vec2(x + 1, y + 6), Vec2(x + w - 1, y + 62), base, 0)
 	Render.Line(Vec2(x, y + 62), Vec2(x + w, y + 62), edge, 1)
 
-	Render.FilledCircle(Vec2(x + 30, y + 33), 11, Color(54, 186, 169, 245))
+	Render.FilledCircle(Vec2(x + 30, y + 33), 11, accent_color)
 	Render.FilledCircle(Vec2(x + 30, y + 33), 5, card)
 	panel_text(panel_fonts.bold, 19, L("sm_panel_title"), x + 50, y + 14, text)
 	panel_text(panel_fonts.medium, 9, L("sm_panel_subtitle"), x + 51, y + 39, muted)
+
+	local gear_x, gear_y = x + w - 78, y + 16
+	local gear_hover = point_in(mx, my, gear_x, gear_y, gear_x + 26, gear_y + 26)
+	Render.FilledRect(Vec2(gear_x, gear_y), Vec2(gear_x + 26, gear_y + 26),
+		gear_hover and Color(55, 76, 94, 255) or Color(38, 53, 68, 220), 7)
+	panel_text(panel_fonts.medium, 16, "⚙", gear_x + 1, gear_y - 1, text)
+	panel_hit("settings", gear_x, gear_y, gear_x + 26, gear_y + 26)
 
 	local close_x, close_y = x + w - 42, y + 16
 	local close_hover = point_in(mx, my, close_x, close_y, close_x + 26, close_y + 26)
@@ -1057,20 +1229,116 @@ local function draw_manager_panel()
 		Color(47, 61, 76, close_hover and 255 or 190), 7)
 	panel_text(panel_fonts.medium, 16, "x", close_x + 9, close_y + 4, text)
 	panel_hit("close", close_x, close_y, close_x + 26, close_y + 26)
-	panel_hit("drag", x, y, x + w - 48, y + 62)
+	panel_hit("drag", x, y, x + w - 112, y + 62)
+
+	if panel.settings_open then
+		local sx, sy, sw = x + 34, y + 92, w - 68
+		local view_top, view_bottom = y + 84, y + h - 74
+		local content_h = 610
+		local max_scroll = math.max(0, content_h - (view_bottom - view_top))
+		panel.settings_scroll = math.max(0, math.min(max_scroll, panel.settings_scroll or 0))
+		local scroll_y = panel.settings_scroll
+		Render.PushClip(Vec2(x + 18, view_top), Vec2(x + w - 18, view_bottom), true)
+		sy = sy - scroll_y
+		panel_text(panel_fonts.bold, 10, L("sm_ui_group"), sx, sy, muted)
+		panel_text(panel_fonts.bold, 26, L("sm_ui_tab"), sx, sy + 28, text)
+		panel_text(panel_fonts.regular, 12, L("sm_ui_subtitle"), sx, sy + 58, muted)
+		local rows = {
+			{ "sm_ui_blur", "blur" },
+			{ "sm_ui_compact", "compact" },
+		}
+		local row_y = sy + 92
+		for _, row in ipairs(rows) do
+			local value = setting_enabled(appearance[row[2]], row[2] == "blur")
+			Render.FilledRect(Vec2(sx, row_y), Vec2(sx + sw, row_y + 48), base, 8)
+			panel_text(panel_fonts.medium, 13, L(row[1]), sx + 16, row_y + 9, text)
+			panel_text(panel_fonts.regular, 10,
+				value and L("sm_ui_enabled") or L("sm_ui_disabled"), sx + 16, row_y + 29, muted)
+			local tx = sx + sw - 55
+			Render.FilledRect(Vec2(tx, row_y + 12), Vec2(tx + 38, row_y + 34), value and accent_color or Color(59, 66, 76), 11)
+			Render.FilledCircle(Vec2(value and tx + 27 or tx + 11, row_y + 23), 8, Color(245, 248, 250))
+			panel_hit("setting_toggle", sx, row_y, sx + sw, row_y + 48, row[2])
+			row_y = row_y + 58
+		end
+		local themes = {
+			{ "sm_theme_graphite", "graphite" }, { "sm_theme_midnight", "midnight" },
+			{ "sm_theme_warm", "warm" }, { "sm_theme_purple", "purple" },
+			{ "sm_theme_red", "red" }, { "sm_theme_oled", "oled" },
+		}
+		local current_theme = Config.ReadString("script_manager", "theme", "graphite")
+		Render.FilledRect(Vec2(sx, row_y), Vec2(sx + sw, row_y + 76), base, 8)
+		panel_text(panel_fonts.medium, 13, L("sm_ui_theme"), sx + 16, row_y + 9, text)
+		local theme_x = sx + 16
+		for _, theme_item in ipairs(themes) do
+			local tw = 92
+			local selected_theme = current_theme == theme_item[2]
+			Render.FilledRect(Vec2(theme_x, row_y + 30), Vec2(theme_x + tw - 6, row_y + 58),
+				selected_theme and accent_color or Color(48, 57, 68), 6)
+			panel_text(panel_fonts.medium, 10, L(theme_item[1]), theme_x + 8, row_y + 37,
+				selected_theme and Color(8, 18, 24) or muted)
+			panel_hit("theme", theme_x, row_y + 25, theme_x + tw - 6, row_y + 64, theme_item[2])
+			theme_x = theme_x + tw
+		end
+		row_y = row_y + 86
+		local accents = {
+			{ "sm_accent_red", "red", {239,68,68} }, { "sm_accent_teal", "teal", {54,186,169} },
+			{ "sm_accent_blue", "blue", {56,141,255} }, { "sm_accent_purple", "purple", {183,92,242} },
+			{ "sm_accent_orange", "orange", {255,159,67} }, { "sm_accent_green", "green", {76,205,112} },
+		}
+		local current_accent = Config.ReadString("script_manager", "accent", "teal")
+		Render.FilledRect(Vec2(sx, row_y), Vec2(sx + sw, row_y + 62), base, 8)
+		panel_text(panel_fonts.medium, 13, L("sm_ui_accent"), sx + 16, row_y + 9, text)
+		for i, accent_item in ipairs(accents) do
+			local cx = sx + 30 + (i - 1) * 42
+			local selected_accent = current_accent == accent_item[2]
+			if selected_accent then Render.FilledCircle(Vec2(cx, row_y + 39), 13, Color(235, 240, 245, 220)) end
+			Render.FilledCircle(Vec2(cx, row_y + 39), 9, Color(accent_item[3][1], accent_item[3][2], accent_item[3][3]))
+			panel_hit("accent", cx - 14, row_y + 23, cx + 14, row_y + 53, accent_item[2])
+		end
+		row_y = row_y + 72
+		local sliders = {
+			{ "sm_ui_blur_power", "blur_power", 10, 100 },
+			{ "sm_ui_opacity", "opacity", 45, 100 },
+			{ "sm_ui_scale", "scale", 80, 120 },
+		}
+		for _, row in ipairs(sliders) do
+			local value = tonumber(setting_value(appearance[row[2]], row[3])) or row[3]
+			Render.FilledRect(Vec2(sx, row_y), Vec2(sx + sw, row_y + 58), base, 8)
+			panel_text(panel_fonts.medium, 13, L(row[1]), sx + 16, row_y + 9, text)
+			panel_text(panel_fonts.bold, 12, tostring(value) .. "%", sx + sw - 56, row_y + 9, accent_color)
+			local bar_x, bar_y, bar_w = sx + 16, row_y + 36, sw - 32
+			Render.FilledRect(Vec2(bar_x, bar_y), Vec2(bar_x + bar_w, bar_y + 4), Color(55, 67, 80), 2)
+			local k = math.max(0, math.min(1, (value - row[3]) / (row[4] - row[3])))
+			Render.FilledRect(Vec2(bar_x, bar_y), Vec2(bar_x + bar_w * k, bar_y + 4), accent_color, 2)
+			panel_hit("setting_slider", bar_x - 8, row_y, bar_x + bar_w + 8, row_y + 58, row)
+			row_y = row_y + 68
+		end
+		Render.PopClip()
+		local track_x = x + w - 12
+		local track_y, track_h = view_top + 8, view_bottom - view_top - 16
+		Render.FilledRect(Vec2(track_x, track_y), Vec2(track_x + 4, track_y + track_h), Color(48, 61, 75, 180), 2)
+		local thumb_h = math.max(38, track_h * (track_h / math.max(track_h, content_h)))
+		local thumb_y = track_y + (track_h - thumb_h) * (panel.settings_scroll / math.max(1, max_scroll))
+		Render.FilledRect(Vec2(track_x - 2, thumb_y), Vec2(track_x + 6, thumb_y + thumb_h), accent_color, 4)
+		panel_button(L("sm_ui_back"), sx, y + h - 62, 120, 36, true, false, mx, my)
+		panel_hit("settings_back", sx, y + h - 62, sx + 120, y + h - 26)
+		return
+	end
 
 	local main_x = x + 24
 	local footer_y = y + h - 62
 	do
 		local left_x, left_y = x + 12, y + 74
-		local left_w, left_h = 220, footer_y - left_y - 8
+		local left_w, left_h = 244, footer_y - left_y - 8
+		Render.FilledRect(Vec2(left_x + 3, left_y + 4), Vec2(left_x + left_w + 3, left_y + left_h + 4), Color(0, 0, 0, 45), 12)
 		Render.FilledRect(Vec2(left_x, left_y), Vec2(left_x + left_w, left_y + left_h), sidebar, 10)
+		Render.Rect(Vec2(left_x, left_y), Vec2(left_x + left_w, left_y + left_h), edge, 10)
 		panel_text(panel_fonts.bold, 10, L("sm_panel_scripts"), left_x + 14, left_y + 13, muted)
 		Render.Line(Vec2(left_x + 12, left_y + 35), Vec2(left_x + left_w - 12, left_y + 35), edge, 1)
-		local first_row_y = left_y + 43
-		local row_step = math.max(22, math.min(42,
+		local first_row_y = left_y + (compact and 38 or 43)
+		local row_step = math.max(compact and 19 or 22, math.min(compact and 34 or 42,
 			math.floor((footer_y - 8 - first_row_y) / #items)))
-		local row_h = math.max(20, row_step - 3)
+		local row_h = math.max(compact and 17 or 20, row_step - 3)
 		for i, item in ipairs(items) do
 			local row_y = first_row_y + (i - 1) * row_step
 			local row_x = left_x + 8
@@ -1087,7 +1355,7 @@ local function draw_manager_panel()
 				Render.FilledRect(Vec2(row_x, row_y), Vec2(row_x + row_w, row_y + row_h),
 					Color(39, 62, 72), 7)
 				Render.FilledRect(Vec2(row_x, row_y + 6), Vec2(row_x + 3, row_y + row_h - 6),
-					Color(54, 186, 169), 2)
+					accent_color, 2)
 			elseif hover then
 				Render.FilledRect(Vec2(row_x, row_y), Vec2(row_x + row_w, row_y + row_h),
 					Color(30, 42, 55), 7)
@@ -1107,13 +1375,15 @@ local function draw_manager_panel()
 			panel_hit("select", row_x, row_y, row_x + row_w, row_y + row_h, i)
 		end
 
-		local detail_x, detail_y = x + 250, y + 80
-		local detail_w = w - 272
+		local detail_x, detail_y = x + 274, y + 80
+		local detail_w = w - 298
 		local item = selected()
 		local title = item and L(item.key) or L("sm_panel_title")
 		local desc = item and L(item.description_key) or ""
+		Render.FilledRect(Vec2(detail_x - 14, detail_y - 12), Vec2(detail_x + detail_w, footer_y - 12), Color(8, 14, 22, 80), 12)
+		Render.Rect(Vec2(detail_x - 14, detail_y - 12), Vec2(detail_x + detail_w, footer_y - 12), Color(edge.r, edge.g, edge.b, 120), 12)
 		panel_text(panel_fonts.bold, 9, L("sm_panel_selected"), detail_x, detail_y, muted)
-		panel_text(panel_fonts.bold, 21, title, detail_x, detail_y + 21, text)
+		panel_text(panel_fonts.bold, 22, title, detail_x, detail_y + 21, text)
 		local lines = panel_wrap(desc, panel_fonts.regular, 13, detail_w - 8, 2)
 		for i, line in ipairs(lines) do
 			panel_text(panel_fonts.regular, 13, line, detail_x, detail_y + 53 + (i - 1) * 18, muted)
@@ -1216,7 +1486,24 @@ local function handle_panel_click(x, y)
 		if point_in(x, y, hit.x0, hit.y0, hit.x1, hit.y1) then
 			if hit.kind == "close" then
 				panel.open, panel.dragging = false, false
-			elseif hit.kind == "drag" then
+			elseif hit.kind == "settings" then
+					panel.settings_open = not panel.settings_open
+				elseif hit.kind == "settings_back" then
+					panel.settings_open = false
+				elseif hit.kind == "setting_toggle" then
+					local widget = appearance[hit.value]
+					if widget and type(widget.Set) == "function" then widget:Set(not setting_enabled(widget, false)); save_appearance() end
+				elseif hit.kind == "theme" then
+					local ids = { graphite = 0, midnight = 1, warm = 2, purple = 3, red = 4, oled = 5 }
+					if appearance.theme and type(appearance.theme.Set) == "function" then appearance.theme:Set(ids[hit.value] or 0) end
+					Config.WriteString("script_manager", "theme", hit.value)
+				elseif hit.kind == "accent" then
+					local ids = { red = 0, teal = 1, blue = 2, purple = 3, orange = 4, green = 5 }
+					if appearance.accent and type(appearance.accent.Set) == "function" then appearance.accent:Set(ids[hit.value] or 1) end
+					Config.WriteString("script_manager", "accent", hit.value)
+				elseif hit.kind == "setting_slider" then
+					panel.settings_drag = { row = hit.value, x0 = hit.x0, x1 = hit.x1 }
+				elseif hit.kind == "drag" then
 				panel.dragging = true
 				panel.drag_dx, panel.drag_dy = x - panel.x, y - panel.y
 			elseif hit.kind == "select" then
@@ -1249,6 +1536,21 @@ function script.OnScriptsLoaded()
 end
 
 function script.OnUpdateEx()
+		if panel.settings_drag and Input.IsKeyDown(Enum.ButtonCode.KEY_MOUSE1, true) then
+			local drag = panel.settings_drag
+			local cursor_x = Input.GetCursorPos()
+			local row = drag and drag.row
+			if not row then return end
+			local x0 = drag and drag.x0 or 0
+			local x1 = drag and drag.x1 or 1
+			local ratio = math.max(0, math.min(1, (cursor_x - x0) / math.max(1, x1 - x0)))
+			local value = math.floor(row[3] + (row[4] - row[3]) * ratio + 0.5)
+			local widget = appearance[row[2]]
+			if widget and type(widget.Set) == "function" then widget:Set(value) end
+			save_appearance()
+		elseif panel.settings_drag then
+			panel.settings_drag = nil
+		end
 	if ui.open:IsPressed() and not Input.IsInputCaptured() then
 		panel.open = not panel.open
 		panel.dragging = false
@@ -1291,12 +1593,27 @@ function script.OnKeyEvent(data)
 		and panel.mouse_captured
 	then
 		panel.mouse_captured = false
+		panel.settings_drag = nil
 		if panel.dragging then
 			panel.dragging = false
 			Config.WriteInt("script_manager", "panel_x", math.floor(panel.x))
 			Config.WriteInt("script_manager", "panel_y", math.floor(panel.y))
 		end
 		return false
+	end
+	if data.event == Enum.EKeyEvent.EKeyEvent_SCROLL_UP or data.event == Enum.EKeyEvent.EKeyEvent_SCROLL_DOWN then
+		if panel.settings_open then
+			local cursor_x, cursor_y = Input.GetCursorPos()
+			local panel_y = (panel.y or 0) - (1 - panel.visibility) * 12
+			if point_in(cursor_x, cursor_y, panel.x or 0, panel_y + 84,
+				(panel.x or 0) + panel.width, panel_y + panel.height - 74)
+			then
+				local direction = data.event == Enum.EKeyEvent.EKeyEvent_SCROLL_DOWN and 1 or -1
+				panel.settings_scroll = math.max(0,
+					math.min(300, (panel.settings_scroll or 0) + direction * 70))
+				return false
+			end
+		end
 	end
 	if not panel.open or panel.visibility < 0.85 then return true end
 	if data.key == Enum.ButtonCode.KEY_ESCAPE

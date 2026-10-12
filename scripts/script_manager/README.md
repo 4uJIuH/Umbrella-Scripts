@@ -23,6 +23,8 @@
 Менеджер скриптов Umbrella с перетаскиваемой панелью: автоматически проверяет весь каталог, сохраняет версии и время проверки и устанавливает обновления по запросу.
 
 - Проверяет доступные версии по кнопке
+- Позволяет выбрать тему и акцентный цвет, настроить размытие, прозрачность и масштаб текста
+- Поддерживает компактный режим списка скриптов
 - Устанавливает обновления отдельных Dota-скриптов и перезагружает Script System
 - Сохраняет резервную копию заменяемого файла
 - Устанавливает обязательный `!_qLocalizer.lua`, если он требуется и отсутствует
@@ -38,6 +40,12 @@
 3. Откройте `Scripts → Scripts → Script Manager`, назначьте клавишу для `Open manager` (по умолчанию `Insert`), затем откройте панель и проверьте выбранный скрипт.
 
 ## Что нового
+
+**Обновление v1.3.0**
+
+- Добавлена отдельная панель визуальных настроек: темы оформления и акцентные цвета.
+- Появились настройки размытия фона, прозрачности и масштаба текста панели, а также компактный режим списка.
+- Исправлены значения визуальных настроек по умолчанию; подписи панели настроек локализованы на русский и английский.
 
 **Обновление v1.2.2**
 
@@ -60,6 +68,8 @@
 An Umbrella script manager with a draggable panel that checks the full catalog on startup, saves versions and check time, and installs updates on demand.
 
 - Checks for available versions on demand
+- Lets you customize the theme, accent color, background blur, opacity, and text scale
+- Supports a compact script-list layout
 - Installs individual Dota script updates and reloads the Script System
 - Keeps a backup of any file it replaces
 - Installs the required `!_qLocalizer.lua` when needed and missing
@@ -75,6 +85,12 @@ An Umbrella script manager with a draggable panel that checks the full catalog o
 3. Open `Scripts → Scripts → Script Manager`, assign a key to `Open manager` (defaults to `Insert`), then open the panel and check the selected script.
 
 ## Changelog
+
+**Update v1.3.0**
+
+- Added a dedicated appearance panel with selectable themes and accent colors.
+- Added controls for background blur, panel opacity and text scale, plus a compact script-list mode.
+- Fixed default appearance values and localized the settings panel in Russian and English.
 
 **Update v1.2.2**
 
