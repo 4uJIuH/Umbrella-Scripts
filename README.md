@@ -145,7 +145,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 4 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 1 | `script-manager-v1.2.2` |
+| [Script Manager](scripts/script_manager) | 2 | `script-manager-v1.3.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

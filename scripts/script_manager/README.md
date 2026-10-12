@@ -3,11 +3,12 @@
 проверка и установка обновлений Dota-скриптов по кнопке / check and install Dota script updates on demand
 
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.2.2/script_manager.lua) — `script-manager-v1.2.2`, 2026-10-12
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.3.0/script_manager.lua) — `script-manager-v1.3.0`, 2026-10-12
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`script-manager-v1.2.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.2.2) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.2.2/script_manager.lua) | 0 |
+| [`script-manager-v1.3.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.3.0) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.3.0/script_manager.lua) | 0 |
+| [`script-manager-v1.2.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.2.2) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.2.2/script_manager.lua) | 1 |
 | [`script-manager-v1.2.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.2.1) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.2.1/script_manager.lua) | 0 |
 | [`script-manager-v1.2.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.2.0) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.2.0/script_manager.lua) | 0 |
 | [`script-manager-v1.1.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.1.1) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.1.1/script_manager.lua) | 0 |
@@ -23,8 +24,8 @@
 Менеджер скриптов Umbrella с перетаскиваемой панелью: автоматически проверяет весь каталог, сохраняет версии и время проверки и устанавливает обновления по запросу.
 
 - Проверяет доступные версии по кнопке
-- Позволяет выбрать тему и акцентный цвет, настроить размытие, прозрачность и масштаб текста
-- Поддерживает компактный режим списка скриптов
+- Настраивает тему, акцентный цвет, размытие фона, прозрачность и масштаб интерфейса
+- Поддерживает компактное отображение списка скриптов
 - Устанавливает обновления отдельных Dota-скриптов и перезагружает Script System
 - Сохраняет резервную копию заменяемого файла
 - Устанавливает обязательный `!_qLocalizer.lua`, если он требуется и отсутствует
@@ -68,7 +69,7 @@
 An Umbrella script manager with a draggable panel that checks the full catalog on startup, saves versions and check time, and installs updates on demand.
 
 - Checks for available versions on demand
-- Lets you customize the theme, accent color, background blur, opacity, and text scale
+- Customizes the theme, accent color, background blur, opacity, and interface scale
 - Supports a compact script-list layout
 - Installs individual Dota script updates and reloads the Script System
 - Keeps a backup of any file it replaces
