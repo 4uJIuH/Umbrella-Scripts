@@ -598,34 +598,36 @@
       },
       "ru": {
         "tagline": "проверка и установка обновлений Dota-скриптов по кнопке",
-        "about": "Отдельный менеджер Dota-скриптов: проверяет версии в GitHub-каталоге и устанавливает выбранное обновление по подтверждению пользователя.",
+        "about": "Менеджер Dota-скриптов с отдельной перетаскиваемой панелью: показывает версии, проверяет GitHub и устанавливает выбранные обновления по запросу.",
         "features": [
           "Проверяет доступные версии по кнопке",
           "Устанавливает обновления отдельных Dota-скриптов и перезагружает Script System",
           "Сохраняет резервную копию заменяемого файла",
           "Устанавливает обязательный `!_qLocalizer.lua`, если он требуется и отсутствует",
-          "Скачивает Tinker Auto Farm как ZIP для ручной распаковки"
+          "Скачивает Tinker Auto Farm как ZIP для ручной распаковки",
+          "Показывает список скриптов, установленную и последнюю версии в отдельной панели"
         ],
         "install": [
           "Поместите `script_manager.lua` в `umbrella\\scripts`.",
           "Перезагрузите Lua-скрипты.",
-          "Откройте `Scripts → Scripts → Script Manager`, выберите Dota-скрипт, нажмите «Проверить обновления», затем установите обновление."
+          "Откройте `Scripts → Scripts → Script Manager`, назначьте клавишу для `Open manager` (по умолчанию `Insert`), затем откройте панель и проверьте выбранный скрипт."
         ]
       },
       "en": {
         "tagline": "check and install Dota script updates on demand",
-        "about": "A standalone Dota script manager that checks versions from the GitHub catalog and installs a selected update after user confirmation.",
+        "about": "A Dota script manager with a draggable panel that displays versions, checks GitHub, and installs selected updates on demand.",
         "features": [
           "Checks for available versions on demand",
           "Installs individual Dota script updates and reloads the Script System",
           "Keeps a backup of any file it replaces",
           "Installs the required `!_qLocalizer.lua` when needed and missing",
-          "Downloads Tinker Auto Farm as a ZIP for manual extraction"
+          "Downloads Tinker Auto Farm as a ZIP for manual extraction",
+          "Shows the script list and installed/latest versions in a dedicated panel"
         ],
         "install": [
           "Place `script_manager.lua` in `umbrella\\scripts`.",
           "Reload the Lua scripts.",
-          "Open `Scripts → Scripts → Script Manager`, select a Dota script, click “Check for updates”, then install the update."
+          "Open `Scripts → Scripts → Script Manager`, assign a key to `Open manager` (defaults to `Insert`), then open the panel and check the selected script."
         ]
       }
     }
