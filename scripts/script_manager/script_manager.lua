@@ -316,7 +316,7 @@ local qLocalization = (function()
 	return lib
 end)()
 
-local VERSION = "1.1.1"
+local VERSION = "1.2.0"
 
 local localization = qLocalization.new({
 	en = {
@@ -339,12 +339,37 @@ local localization = qLocalization.new({
 		sm_panel_update_badge = "UPDATE",
 		sm_panel_manual_badge = "MANUAL ZIP",
 		sm_panel_installing_badge = "WORKING",
-		sm_panel_check_button = "Check updates",
+		sm_panel_check_button = "Check all",
 		sm_panel_install_button = "Install update",
 		sm_panel_download_button = "Download ZIP",
 		sm_panel_localizer_button = "Install qLocalization",
-		sm_status_idle = "Select a script and check for updates",
-		sm_status_fetching = "Checking GitHub...",
+		sm_panel_scripts_tab = "Scripts",
+		sm_panel_settings_tab = "Settings",
+		sm_panel_settings_heading = "Manager preferences",
+		sm_panel_settings_intro = "Choose how the update center behaves. Changes are saved automatically.",
+		sm_panel_last_checked = "Last checked: %s",
+		sm_panel_last_scan_heading = "LAST SUCCESSFUL CATALOG CHECK",
+		sm_panel_never_checked = "No successful checks yet",
+		sm_panel_auto_check_title = "Check on startup",
+		sm_panel_auto_check_desc = "Refresh script versions whenever Script Manager loads.",
+		sm_panel_compact_title = "Compact script list",
+		sm_panel_compact_desc = "Use tighter rows to show more scripts at once.",
+		sm_panel_settings_note = "The open hotkey is configured in the Script Manager menu.",
+		sm_panel_cached = "CACHED",
+		sm_panel_checking = "CHECKING",
+		sm_panel_error_badge = "CHECK FAILED",
+		sm_panel_state_current = "UP TO DATE",
+		sm_panel_state_available = "UPDATE AVAILABLE",
+		sm_panel_state_manual = "PACKAGE",
+		sm_panel_state_error = "CHECK FAILED",
+		sm_panel_state_unknown = "NOT CHECKED",
+		sm_status_idle = "Select a script to see its saved update status",
+		sm_status_fetching = "Refreshing all script versions from GitHub...",
+		sm_status_checked = "Check complete (successful / failed): %s",
+		sm_status_cache_current = "Saved result: up to date at v%s",
+		sm_status_cache_available = "Saved update available: v%s",
+		sm_status_cache_manual = "Saved package version: v%s",
+		sm_status_cache_error = "Last check failed: %s",
 		sm_status_current = "Already up to date: %s",
 		sm_status_available = "Update available: %s",
 		sm_status_installed = "Installed %s. Reloading scripts...",
@@ -360,6 +385,7 @@ local localization = qLocalization.new({
 		sm_item_earth = "Earth Spirit Kick Combo",
 		sm_item_hp = "HP/Mana 67 Ping",
 		sm_item_bear = "Spirit Bear Pull",
+		sm_item_manager = "Script Manager",
 		sm_desc_ttd = "Dodges dangerous abilities with Tinker turrets.",
 		sm_desc_farm = "Tinker Auto Farm package. ZIP installation is manual.",
 		sm_desc_shackleshot = "Automatically assists with Shackleshot.",
@@ -368,6 +394,7 @@ local localization = qLocalization.new({
 		sm_desc_earth = "Automates Earth Spirit's Blink and kick combo.",
 		sm_desc_hp = "Tracks HP and mana milestones and sends chat alerts.",
 		sm_desc_bear = "Uses Lone Druid's bear to pull a creep wave.",
+		sm_desc_manager = "Checks and installs updates for supported Umbrella scripts.",
 	},
 	ru = {
 		sm_group_main = "Script Manager",
@@ -389,12 +416,37 @@ local localization = qLocalization.new({
 		sm_panel_update_badge = "ОБНОВЛЕНИЕ",
 		sm_panel_manual_badge = "ZIP ВРУЧНУЮ",
 		sm_panel_installing_badge = "РАБОТАЕТ",
-		sm_panel_check_button = "Проверить",
+		sm_panel_check_button = "Проверить все",
 		sm_panel_install_button = "Установить",
 		sm_panel_download_button = "Скачать ZIP",
 		sm_panel_localizer_button = "Установить qLocalization",
-		sm_status_idle = "Выберите скрипт и проверьте обновления",
-		sm_status_fetching = "Проверка GitHub...",
+		sm_panel_scripts_tab = "Скрипты",
+		sm_panel_settings_tab = "Настройки",
+		sm_panel_settings_heading = "Настройки менеджера",
+		sm_panel_settings_intro = "Настройте работу центра обновлений. Изменения сохраняются автоматически.",
+		sm_panel_last_checked = "Последняя проверка: %s",
+		sm_panel_last_scan_heading = "ПОСЛЕДНЯЯ УСПЕШНАЯ ПРОВЕРКА КАТАЛОГА",
+		sm_panel_never_checked = "Успешных проверок ещё не было",
+		sm_panel_auto_check_title = "Проверять при запуске",
+		sm_panel_auto_check_desc = "Обновлять версии скриптов при каждой загрузке Script Manager.",
+		sm_panel_compact_title = "Компактный список",
+		sm_panel_compact_desc = "Уменьшить высоту строк, чтобы видеть больше скриптов.",
+		sm_panel_settings_note = "Клавиша открытия настраивается в меню Script Manager.",
+		sm_panel_cached = "СОХРАНЕНО",
+		sm_panel_checking = "ПРОВЕРКА",
+		sm_panel_error_badge = "ОШИБКА",
+		sm_panel_state_current = "АКТУАЛЕН",
+		sm_panel_state_available = "ЕСТЬ ОБНОВЛЕНИЕ",
+		sm_panel_state_manual = "ZIP-ПАКЕТ",
+		sm_panel_state_error = "ОШИБКА",
+		sm_panel_state_unknown = "НЕ ПРОВЕРЕН",
+		sm_status_idle = "Выберите скрипт, чтобы увидеть сохранённый статус обновления",
+		sm_status_fetching = "Обновление версий всех скриптов с GitHub...",
+		sm_status_checked = "Проверка завершена (успешно / с ошибкой): %s",
+		sm_status_cache_current = "Сохранённый результат: актуальная версия v%s",
+		sm_status_cache_available = "Доступно обновление: v%s (сохранённый результат)",
+		sm_status_cache_manual = "Сохранённая версия пакета: v%s",
+		sm_status_cache_error = "Последняя проверка завершилась ошибкой: %s",
 		sm_status_current = "Установлена последняя версия: %s",
 		sm_status_available = "Доступно обновление: %s",
 		sm_status_installed = "Установлена версия %s. Перезагрузка скриптов...",
@@ -410,6 +462,7 @@ local localization = qLocalization.new({
 		sm_item_earth = "Earth Spirit Kick Combo",
 		sm_item_hp = "HP/Mana 67 Ping",
 		sm_item_bear = "Spirit Bear Pull",
+		sm_item_manager = "Script Manager",
 		sm_desc_ttd = "Уклоняется от опасных способностей с помощью турелей Тинкера.",
 		sm_desc_farm = "Пакет Tinker Auto Farm. ZIP нужно установить вручную.",
 		sm_desc_shackleshot = "Автоматизирует помощь с Shackleshot.",
@@ -418,6 +471,7 @@ local localization = qLocalization.new({
 		sm_desc_earth = "Автоматизирует Blink-комбо Earth Spirit с толчком.",
 		sm_desc_hp = "Следит за значениями HP и маны и отправляет сообщения в чат.",
 		sm_desc_bear = "Использует медведя Lone Druid для отвода волны крипов.",
+		sm_desc_manager = "Проверяет и устанавливает обновления поддерживаемых скриптов Umbrella.",
 	},
 })
 
@@ -426,6 +480,7 @@ local L = localization.Get
 local JSON = require("assets.JSON")
 
 local CATALOG_URL = "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/manager/catalog.json"
+local catalog_request_count = 0
 local items = {
 	{ id = "tinker_turret_dodge", key = "sm_item_ttd", file = "tinker_turret_dodge.lua", needs_localizer = true },
 	{ id = "tinker_auto_farm", key = "sm_item_farm", file = "Tinker-Auto-Farm.zip", manual = true },
@@ -435,6 +490,7 @@ local items = {
 	{ id = "earth_spirit_kick_combo", key = "sm_item_earth", file = "earth_spirit_kick_combo.lua", needs_localizer = true },
 	{ id = "hp_mana_67_ping", key = "sm_item_hp", file = "hp_mana_67_ping.lua", needs_localizer = true },
 	{ id = "spirit_bear_pull", key = "sm_item_bear", file = "lone_druid_bear_pull.lua", needs_localizer = true },
+	{ id = "script_manager", key = "sm_item_manager", file = "script_manager.lua" },
 }
 local description_keys = {
 	tinker_turret_dodge = "sm_desc_ttd",
@@ -445,10 +501,12 @@ local description_keys = {
 	earth_spirit_kick_combo = "sm_desc_earth",
 	hp_mana_67_ping = "sm_desc_hp",
 	spirit_bear_pull = "sm_desc_bear",
+	script_manager = "sm_desc_manager",
 }
 
 local ui = {}
-local selected_index = 1
+local selected_index = math.max(1, math.min(#items,
+	Config.ReadInt("script_manager", "selected_index", 1)))
 local selected_release
 local installed_version
 local working = false
@@ -456,6 +514,10 @@ local reload_at
 local can_install = false
 local can_download = false
 local localizer_installed = false
+local cached_releases = {}
+local last_checked_at = Config.ReadInt("script_manager", "last_checked_at", 0)
+local auto_check_enabled = Config.ReadInt("script_manager", "auto_check", 1) ~= 0
+local compact_rows = Config.ReadInt("script_manager", "compact_rows", 0) ~= 0
 local panel = {
 	open = false,
 	width = 820,
@@ -466,7 +528,9 @@ local panel = {
 	mouse_captured = false,
 	hits = {},
 	status_key = "sm_status_idle",
+	page = Config.ReadString("script_manager", "page", "scripts"),
 }
+if panel.page ~= "settings" then panel.page = "scripts" end
 
 do
 	local tab = UI.Create("Scripts", "Scripts", "Script Manager")
@@ -600,8 +664,9 @@ local function fetch(url, done)
 end
 
 local function load_catalog(done)
+	catalog_request_count = catalog_request_count + 1
 	set_status("sm_status_fetching")
-	fetch(CATALOG_URL, function(text, err)
+	fetch(CATALOG_URL .. "?_=" .. tostring(os.time()) .. "-" .. tostring(catalog_request_count), function(text, err)
 		if not text then return done(nil, err) end
 		local ok, manifest = pcall(function() return JSON:decode(text) end)
 		if not ok or type(manifest) ~= "table" then return done(nil, "catalog could not be parsed") end
@@ -627,38 +692,114 @@ local function installed_script_version(item)
 	return text and text:match('VERSION%s*=%s*"([^"]+)"') or nil
 end
 
+local function cache_key(suffix, item)
+	return suffix .. "_" .. item.id
+end
+
+local function load_update_cache()
+	last_checked_at = math.max(0, Config.ReadInt("script_manager", "last_checked_at", 0))
+	for _, item in ipairs(items) do
+		local version = Config.ReadString("script_manager", cache_key("latest", item), "")
+		local url = Config.ReadString("script_manager", cache_key("url", item), "")
+		local release_url = Config.ReadString("script_manager", cache_key("release", item), "")
+		if valid_version(version) and trusted_url(url)
+			and (release_url == "" or trusted_url(release_url))
+		then
+			cached_releases[item.id] = {
+				version = version,
+				url = url,
+				release = release_url ~= "" and release_url or nil,
+				manual = item.manual == true,
+				status = Config.ReadString("script_manager", cache_key("status", item), ""),
+				error = Config.ReadString("script_manager", cache_key("error", item), ""),
+			}
+		end
+	end
+end
+
+local function save_cached_release(item, release, status, err)
+	local cached = {
+		version = release and release.version or nil,
+		url = release and release.url or nil,
+		release = release and release.release or nil,
+		manual = item.manual == true,
+		status = status,
+		error = err or "",
+	}
+	cached_releases[item.id] = cached
+	if release then
+		Config.WriteString("script_manager", cache_key("latest", item), release.version)
+		Config.WriteString("script_manager", cache_key("url", item), release.url)
+		Config.WriteString("script_manager", cache_key("release", item), release.release or "")
+	end
+	Config.WriteString("script_manager", cache_key("status", item), status)
+	Config.WriteString("script_manager", cache_key("error", item), cached.error)
+end
+
+local function last_checked_text()
+	if last_checked_at <= 0 then return L("sm_panel_never_checked") end
+	return string.format(L("sm_panel_last_checked"), os.date("%Y-%m-%d %H:%M", last_checked_at))
+end
+
+local function show_cached_selection()
+	local item = selected()
+	selected_release = item and cached_releases[item.id] or nil
+	installed_version = item and installed_script_version(item) or nil
+	set_actions(false, false)
+
+	local cached = selected_release
+	if not cached then
+		return set_status("sm_status_idle")
+	elseif cached.status == "error" then
+		return set_status("sm_status_cache_error", cached.error)
+	elseif item.manual then
+		set_actions(false, true)
+		return set_status("sm_status_cache_manual", cached.version)
+	end
+
+	local comparison = installed_version and compare_versions(installed_version, cached.version) or nil
+	if comparison == 0 or (comparison and comparison > 0) then
+		return set_status("sm_status_cache_current", comparison > 0 and installed_version or cached.version)
+	end
+	set_actions(true, false)
+	set_status("sm_status_cache_available", cached.version)
+end
+
 local function update_check()
 	if working then return end
 	working = true
-	selected_release = nil
-	local requested_item = selected()
-	installed_version = installed_script_version(requested_item)
 	set_actions(false, false)
 	load_catalog(function(manifest, err)
 		working = false
-		if selected() ~= requested_item then return end
 		if not manifest then return set_status("sm_status_error", err) end
-		local release, release_error = selected_manifest(manifest, requested_item)
-		if not release then return set_status("sm_status_error", release_error) end
-		selected_release = release
-		if requested_item.manual then
-			set_actions(false, true)
-			return set_status("sm_status_manual", release.version)
+
+		local checked_count, errors = 0, 0
+		for _, item in ipairs(items) do
+			local release, release_error = selected_manifest(manifest, item)
+			if release then
+				local state = "available"
+				if item.manual then
+					state = "manual"
+				else
+					local local_version = installed_script_version(item)
+					local comparison = local_version and compare_versions(local_version, release.version) or nil
+					if comparison == 0 or (comparison and comparison > 0) then
+						state = "current"
+					end
+				end
+				save_cached_release(item, release, state)
+				checked_count = checked_count + 1
+			else
+				local cached = cached_releases[item.id]
+				save_cached_release(item, cached, "error", release_error)
+				errors = errors + 1
+			end
 		end
 
-		local path = selected_path(requested_item)
-		if not path then return set_status("sm_status_error", "cheat directory is unavailable") end
-		local installed_text = read_file(path)
-		installed_version = installed_text and installed_text:match('VERSION%s*=%s*"([^"]+)"') or nil
-		local comparison = installed_version and compare_versions(installed_version, release.version) or nil
-
-		if comparison == 0 then
-			return set_status("sm_status_current", release.version)
-		elseif comparison and comparison > 0 then
-			return set_status("sm_status_current", installed_version)
-		end
-		set_actions(true, false)
-		set_status("sm_status_available", release.version)
+		last_checked_at = os.time()
+		Config.WriteInt("script_manager", "last_checked_at", last_checked_at)
+		show_cached_selection()
+		set_status("sm_status_checked", string.format("%d / %d", checked_count, errors))
 	end)
 end
 
@@ -823,10 +964,7 @@ local function install_localizer_button()
 end
 
 local function selection_changed()
-	selected_release = nil
-	installed_version = installed_script_version(selected())
-	set_actions(false, false)
-	set_status("sm_status_idle")
+	show_cached_selection()
 end
 
 local script = {}
@@ -943,6 +1081,23 @@ local function draw_manager_panel()
 	panel_text(panel_fonts.bold, 19, L("sm_panel_title"), x + 50, y + 14, text)
 	panel_text(panel_fonts.medium, 9, L("sm_panel_subtitle"), x + 51, y + 39, muted)
 
+	local scripts_tab_x, tabs_y = x + w - 220, y + 17
+	local function draw_tab(key, title, tab_x, active)
+		local tab_w = 84
+		local hover = point_in(mx, my, tab_x, tabs_y, tab_x + tab_w, tabs_y + 29)
+		Render.FilledRect(Vec2(tab_x, tabs_y), Vec2(tab_x + tab_w, tabs_y + 29),
+			active and Color(39, 62, 72) or Color(24, 34, 46, hover and 245 or 180), 7)
+		if active then
+			Render.FilledRect(Vec2(tab_x + 10, tabs_y + 26), Vec2(tab_x + tab_w - 10, tabs_y + 28),
+				Color(54, 186, 169), 1)
+		end
+		panel_text(panel_fonts.medium, 11, title, tab_x + 12, tabs_y + 8,
+			active and Color(115, 227, 199) or muted)
+		panel_hit(key, tab_x, tabs_y, tab_x + tab_w, tabs_y + 29)
+	end
+	draw_tab("scripts_tab", L("sm_panel_scripts_tab"), scripts_tab_x, panel.page == "scripts")
+	draw_tab("settings_tab", L("sm_panel_settings_tab"), scripts_tab_x + 90, panel.page == "settings")
+
 	local close_x, close_y = x + w - 42, y + 16
 	local close_hover = point_in(mx, my, close_x, close_y, close_x + 26, close_y + 26)
 	Render.FilledRect(Vec2(close_x, close_y), Vec2(close_x + 26, close_y + 26),
@@ -951,125 +1106,188 @@ local function draw_manager_panel()
 	panel_hit("close", close_x, close_y, close_x + 26, close_y + 26)
 	panel_hit("drag", x, y, x + w - 48, y + 62)
 
-	local left_x, left_y = x + 12, y + 74
-	local left_w, left_h = 220, h - 88
-	Render.FilledRect(Vec2(left_x, left_y), Vec2(left_x + left_w, left_y + left_h), sidebar, 10)
-	panel_text(panel_fonts.bold, 10, L("sm_panel_scripts"), left_x + 14, left_y + 13, muted)
-	Render.Line(Vec2(left_x + 12, left_y + 35), Vec2(left_x + left_w - 12, left_y + 35), edge, 1)
-	for i, item in ipairs(items) do
-		local row_y = left_y + 43 + (i - 1) * 39
-		local row_x = left_x + 8
-		local row_w, row_h = left_w - 16, 34
-		local active = i == selected_index
-		local hover = point_in(mx, my, row_x, row_y, row_x + row_w, row_y + row_h)
-		if active then
-			Render.FilledRect(Vec2(row_x, row_y), Vec2(row_x + row_w, row_y + row_h),
-				Color(39, 62, 72), 7)
-			Render.FilledRect(Vec2(row_x, row_y + 7), Vec2(row_x + 3, row_y + row_h - 7),
-				Color(54, 186, 169), 2)
-		elseif hover then
-			Render.FilledRect(Vec2(row_x, row_y), Vec2(row_x + row_w, row_y + row_h),
-				Color(30, 42, 55), 7)
+	local main_x, main_y, main_w = x + 24, y + 80, w - 48
+	if panel.page == "settings" then
+		panel_text(panel_fonts.bold, 9, L("sm_panel_settings_tab"):upper(), main_x, main_y, muted)
+		panel_text(panel_fonts.bold, 22, L("sm_panel_settings_heading"), main_x, main_y + 18, text)
+		panel_text(panel_fonts.regular, 12, L("sm_panel_settings_intro"), main_x, main_y + 49, muted)
+
+		local function settings_row(kind, title_key, desc_key, row_y, enabled)
+			local row_h = 72
+			Render.FilledRect(Vec2(main_x, row_y), Vec2(main_x + main_w, row_y + row_h), base, 9)
+			Render.FilledCircle(Vec2(main_x + 18, row_y + 23), 4,
+				enabled and Color(91, 202, 155) or Color(90, 109, 127))
+			panel_text(panel_fonts.medium, 13, L(title_key), main_x + 32, row_y + 14, text)
+			panel_text(panel_fonts.regular, 10, L(desc_key), main_x + 32, row_y + 39, muted)
+			local toggle_w, toggle_h = 48, 24
+			local toggle_x, toggle_y = main_x + main_w - toggle_w - 16, row_y + 24
+			local toggle_color = enabled and Color(54, 186, 169) or Color(49, 61, 75)
+			Render.FilledRect(Vec2(toggle_x, toggle_y), Vec2(toggle_x + toggle_w, toggle_y + toggle_h),
+				toggle_color, 12)
+			local knob_x = enabled and (toggle_x + toggle_w - 13) or (toggle_x + 13)
+			Render.FilledCircle(Vec2(knob_x, toggle_y + 12), 8, Color(238, 244, 248))
+			panel_hit(kind, toggle_x - 8, row_y, main_x + main_w - 8, row_y + row_h)
 		end
-		Render.FilledCircle(Vec2(row_x + 17, row_y + 17), 4,
-			active and Color(90, 220, 190) or Color(90, 109, 127))
-		panel_text(active and panel_fonts.medium or panel_fonts.regular, 12, L(item.key),
-			row_x + 30, row_y + 9, active and text or Color(185, 198, 211))
-		panel_hit("select", row_x, row_y, row_x + row_w, row_y + row_h, i)
-	end
 
-	local main_x, main_y = x + 250, y + 80
-	local main_w = w - 272
-	local item = selected()
-	local title = item and L(item.key) or L("sm_panel_title")
-	local desc = item and L(description_keys[item.id]) or ""
-	panel_text(panel_fonts.bold, 9, L("sm_panel_selected"), main_x, main_y, muted)
-	panel_text(panel_fonts.bold, 21, title, main_x, main_y + 21, text)
-	local lines = panel_wrap(desc, panel_fonts.regular, 13, main_w - 8, 3)
-	for i, line in ipairs(lines) do
-		panel_text(panel_fonts.regular, 13, line, main_x, main_y + 53 + (i - 1) * 18, muted)
-	end
+		settings_row("toggle_auto", "sm_panel_auto_check_title", "sm_panel_auto_check_desc",
+			main_y + 75, auto_check_enabled)
+		settings_row("toggle_compact", "sm_panel_compact_title", "sm_panel_compact_desc",
+			main_y + 158, compact_rows)
 
-	local badge_text, badge_color
-	if working then
-		badge_text, badge_color = L("sm_panel_installing_badge"), Color(208, 171, 89)
-	elseif item and item.manual then
-		badge_text, badge_color = L("sm_panel_manual_badge"), Color(208, 171, 89)
-	elseif can_install then
-		badge_text, badge_color = L("sm_panel_update_badge"), Color(229, 161, 91)
-	elseif selected_release then
-		badge_text, badge_color = L("sm_panel_current_badge"), Color(91, 202, 155)
+		local info_y = main_y + 243
+		Render.FilledRect(Vec2(main_x, info_y), Vec2(main_x + main_w, info_y + 72), sidebar, 9)
+		panel_text(panel_fonts.bold, 9, L("sm_panel_last_scan_heading"), main_x + 14, info_y + 12, muted)
+		panel_text(panel_fonts.medium, 13, last_checked_text(), main_x + 14, info_y + 34, text)
+		panel_text(panel_fonts.regular, 10, L("sm_panel_settings_note"),
+			main_x + 14, info_y + 55, muted)
 	else
-		badge_text, badge_color = L("sm_panel_not_checked"), muted
-	end
-	local badge_w = panel_measure(panel_fonts.bold, 9, badge_text) + 18
-	local badge_y = main_y + 103
-	Render.FilledRect(Vec2(main_x, badge_y), Vec2(main_x + badge_w, badge_y + 22),
-		Color(badge_color.r, badge_color.g, badge_color.b, 35), 6)
-	panel_text(panel_fonts.bold, 9, badge_text, main_x + 9, badge_y + 6, badge_color)
+		local left_x, left_y = x + 12, y + 74
+		local left_w, left_h = 220, h - 88
+		Render.FilledRect(Vec2(left_x, left_y), Vec2(left_x + left_w, left_y + left_h), sidebar, 10)
+		panel_text(panel_fonts.bold, 10, L("sm_panel_scripts"), left_x + 14, left_y + 13, muted)
+		Render.Line(Vec2(left_x + 12, left_y + 35), Vec2(left_x + left_w - 12, left_y + 35), edge, 1)
+		for i, item in ipairs(items) do
+			local row_step = compact_rows and 33 or 42
+			local row_y = left_y + 43 + (i - 1) * row_step
+			local row_x = left_x + 8
+			local row_w, row_h = left_w - 16, compact_rows and 29 or 38
+			local active = i == selected_index
+			local hover = point_in(mx, my, row_x, row_y, row_x + row_w, row_y + row_h)
+			local cached = cached_releases[item.id]
+			local dot_color = cached and cached.status == "current" and Color(91, 202, 155)
+				or cached and cached.status == "available" and Color(229, 161, 91)
+				or cached and cached.status == "manual" and Color(119, 168, 224)
+				or cached and cached.status == "error" and Color(224, 106, 105)
+				or Color(90, 109, 127)
+			if active then
+				Render.FilledRect(Vec2(row_x, row_y), Vec2(row_x + row_w, row_y + row_h),
+					Color(39, 62, 72), 7)
+				Render.FilledRect(Vec2(row_x, row_y + 6), Vec2(row_x + 3, row_y + row_h - 6),
+					Color(54, 186, 169), 2)
+			elseif hover then
+				Render.FilledRect(Vec2(row_x, row_y), Vec2(row_x + row_w, row_y + row_h),
+					Color(30, 42, 55), 7)
+			end
+			Render.FilledCircle(Vec2(row_x + 17, row_y + (compact_rows and 14 or 12)), 4, dot_color)
+			panel_text(active and panel_fonts.medium or panel_fonts.regular, 12, L(item.key),
+				row_x + 30, row_y + (compact_rows and 7 or 4), active and text or Color(185, 198, 211))
+			if not compact_rows then
+				local summary = cached and cached.status == "available" and ("v" .. cached.version)
+					or cached and cached.status == "current" and L("sm_panel_state_current")
+					or cached and cached.status == "manual" and L("sm_panel_state_manual")
+					or cached and cached.status == "error" and L("sm_panel_state_error")
+					or L("sm_panel_state_unknown")
+				panel_text(panel_fonts.regular, 9, summary, row_x + 30, row_y + 21, muted)
+			end
+			panel_hit("select", row_x, row_y, row_x + row_w, row_y + row_h, i)
+		end
 
-	local box_y = main_y + 140
-	local box_gap = 10
-	local box_w = (main_w - box_gap) / 2
-	local function version_box(box_x, heading, value)
-		Render.FilledRect(Vec2(box_x, box_y), Vec2(box_x + box_w, box_y + 68), base, 8)
-		Render.Rect(Vec2(box_x, box_y), Vec2(box_x + box_w, box_y + 68), edge, 8)
-		panel_text(panel_fonts.bold, 9, heading, box_x + 12, box_y + 11, muted)
-		panel_text(panel_fonts.bold, 18, value, box_x + 12, box_y + 32, text)
-	end
-	version_box(main_x, L("sm_panel_installed"),
-		installed_version and ("v" .. installed_version) or L("sm_panel_not_detected"))
-	version_box(main_x + box_w + box_gap, L("sm_panel_latest"),
-		selected_release and ("v" .. selected_release.version) or L("sm_panel_not_checked"))
+		local detail_x, detail_y = x + 250, y + 80
+		local detail_w = w - 272
+		local item = selected()
+		local title = item and L(item.key) or L("sm_panel_title")
+		local desc = item and L(description_keys[item.id]) or ""
+		panel_text(panel_fonts.bold, 9, L("sm_panel_selected"), detail_x, detail_y, muted)
+		panel_text(panel_fonts.bold, 21, title, detail_x, detail_y + 21, text)
+		local lines = panel_wrap(desc, panel_fonts.regular, 13, detail_w - 8, 2)
+		for i, line in ipairs(lines) do
+			panel_text(panel_fonts.regular, 13, line, detail_x, detail_y + 53 + (i - 1) * 18, muted)
+		end
+		panel_text(panel_fonts.regular, 9, last_checked_text(), detail_x, detail_y + 82, muted)
 
-	local status_y = box_y + 80
-	Render.FilledRect(Vec2(main_x, status_y), Vec2(main_x + main_w, status_y + 58), base, 8)
-	Render.FilledCircle(Vec2(main_x + 15, status_y + 17), 4,
-		panel.status_key == "sm_status_error" and Color(224, 106, 105) or Color(54, 186, 169))
-	panel_text(panel_fonts.bold, 9, L("sm_panel_status"), main_x + 28, status_y + 10, muted)
-	local status_color = panel.status_key == "sm_status_error" and Color(239, 152, 145) or text
-	local status_lines = panel_wrap(panel_status_text(), panel_fonts.regular, 12, main_w - 24, 2)
-	for i, line in ipairs(status_lines) do
-		panel_text(panel_fonts.regular, 12, line, main_x + 12, status_y + 27 + (i - 1) * 16, status_color)
-	end
+		local badge_text, badge_color
+		local cached = item and cached_releases[item.id]
+		if working then
+			badge_text, badge_color = L("sm_panel_checking"), Color(208, 171, 89)
+		elseif cached and cached.status == "error" then
+			badge_text, badge_color = L("sm_panel_error_badge"), Color(224, 106, 105)
+		elseif item and item.manual then
+			badge_text, badge_color = L("sm_panel_manual_badge"), Color(208, 171, 89)
+		elseif can_install then
+			badge_text, badge_color = L("sm_panel_update_badge"), Color(229, 161, 91)
+		elseif cached and cached.status == "current" then
+			badge_text, badge_color = L("sm_panel_current_badge"), Color(91, 202, 155)
+		elseif selected_release then
+			badge_text, badge_color = L("sm_panel_cached"), muted
+		else
+			badge_text, badge_color = L("sm_panel_not_checked"), muted
+		end
+		local badge_w = panel_measure(panel_fonts.bold, 9, badge_text) + 18
+		local badge_y = detail_y + 101
+		Render.FilledRect(Vec2(detail_x, badge_y), Vec2(detail_x + badge_w, badge_y + 22),
+			Color(badge_color.r, badge_color.g, badge_color.b, 35), 6)
+		panel_text(panel_fonts.bold, 9, badge_text, detail_x + 9, badge_y + 6, badge_color)
 
-	local library_y = status_y + 70
-	local library_h = 54
-	Render.FilledRect(Vec2(main_x, library_y), Vec2(main_x + main_w, library_y + library_h), base, 8)
-	Render.FilledCircle(Vec2(main_x + 17, library_y + 18), 4,
-		localizer_installed and Color(91, 202, 155) or Color(208, 171, 89))
-	panel_text(panel_fonts.medium, 12, L("sm_panel_localizer_title"), main_x + 30, library_y + 9, text)
-	panel_text(panel_fonts.regular, 10, L("sm_panel_localizer_desc"), main_x + 30, library_y + 29, muted)
-	local library_button_w = 172
-	local library_button_x = main_x + main_w - library_button_w - 10
-	local library_button_text = localizer_installed and L("sm_panel_localizer_ready")
-		or L("sm_panel_localizer_button")
-	panel_button(library_button_text, library_button_x, library_y + 10, library_button_w, 34,
-		not working and not localizer_installed, false, mx, my)
-	panel_hit("localizer", library_button_x, library_y + 10,
-		library_button_x + library_button_w, library_y + 44)
+		local box_y = detail_y + 137
+		local box_gap = 10
+		local box_w = (detail_w - box_gap) / 2
+		local function version_box(box_x, heading, value)
+			Render.FilledRect(Vec2(box_x, box_y), Vec2(box_x + box_w, box_y + 64), base, 8)
+			Render.Rect(Vec2(box_x, box_y), Vec2(box_x + box_w, box_y + 64), edge, 8)
+			panel_text(panel_fonts.bold, 9, heading, box_x + 12, box_y + 10, muted)
+			panel_text(panel_fonts.bold, 18, value, box_x + 12, box_y + 31, text)
+		end
+		version_box(detail_x, L("sm_panel_installed"),
+			installed_version and ("v" .. installed_version) or L("sm_panel_not_detected"))
+		version_box(detail_x + box_w + box_gap, L("sm_panel_latest"),
+			selected_release and ("v" .. selected_release.version) or L("sm_panel_not_checked"))
+
+		local status_y = box_y + 75
+		Render.FilledRect(Vec2(detail_x, status_y), Vec2(detail_x + detail_w, status_y + 54), base, 8)
+		Render.FilledCircle(Vec2(detail_x + 15, status_y + 17), 4,
+			(cached and cached.status == "error") and Color(224, 106, 105) or Color(54, 186, 169))
+		panel_text(panel_fonts.bold, 9, L("sm_panel_status"), detail_x + 28, status_y + 9, muted)
+		local status_color = (cached and cached.status == "error") and Color(239, 152, 145) or text
+		local status_lines = panel_wrap(panel_status_text(), panel_fonts.regular, 11, detail_w - 24, 2)
+		for i, line in ipairs(status_lines) do
+			panel_text(panel_fonts.regular, 11, line, detail_x + 12, status_y + 25 + (i - 1) * 14, status_color)
+		end
+
+		local library_y = status_y + 64
+		Render.FilledRect(Vec2(detail_x, library_y), Vec2(detail_x + detail_w, library_y + 48), base, 8)
+		Render.FilledCircle(Vec2(detail_x + 17, library_y + 17), 4,
+			localizer_installed and Color(91, 202, 155) or Color(208, 171, 89))
+		panel_text(panel_fonts.medium, 11, L("sm_panel_localizer_title"), detail_x + 30, library_y + 7, text)
+		panel_text(panel_fonts.regular, 9, L("sm_panel_localizer_desc"), detail_x + 30, library_y + 26, muted)
+		local library_button_w = 156
+		local library_button_x = detail_x + detail_w - library_button_w - 10
+		local library_button_text = localizer_installed and L("sm_panel_localizer_ready")
+			or L("sm_panel_localizer_button")
+		panel_button(library_button_text, library_button_x, library_y + 7, library_button_w, 34,
+			not working and not localizer_installed, false, mx, my)
+		panel_hit("localizer", library_button_x, library_y + 7,
+			library_button_x + library_button_w, library_y + 41)
+	end
 
 	local footer_y = y + h - 62
 	Render.Line(Vec2(x + 12, footer_y), Vec2(x + w - 12, footer_y), edge, 1)
 	local button_y, button_h = footer_y + 13, 36
 	local check_w, action_w, gap = 174, 174, 10
-	local action_text = item and (item.manual and L("sm_panel_download_button")
-		or L("sm_panel_install_button")) or L("sm_panel_install_button")
-	local action_enabled = item and (item.manual and can_download
-		or (not item.manual and can_install)) or false
-	panel_button(L("sm_panel_check_button"), main_x, button_y, check_w, button_h,
-		not working, false, mx, my)
-	panel_hit("check", main_x, button_y, main_x + check_w, button_y + button_h)
-	local action_x = main_x + check_w + gap
-	panel_button(action_text, action_x, button_y, action_w, button_h,
-		action_enabled and not working, true, mx, my)
-	panel_hit(item and item.manual and "download" or "install", action_x, button_y,
-		action_x + action_w, button_y + button_h)
+	if panel.page == "scripts" then
+		local item = selected()
+		local action_text = item and (item.manual and L("sm_panel_download_button")
+			or L("sm_panel_install_button")) or L("sm_panel_install_button")
+		local action_enabled = item and (item.manual and can_download
+			or (not item.manual and can_install)) or false
+		panel_button(L("sm_panel_check_button"), main_x, button_y, check_w, button_h,
+			not working, false, mx, my)
+		panel_hit("check", main_x, button_y, main_x + check_w, button_y + button_h)
+		local action_x = main_x + check_w + gap
+		panel_button(action_text, action_x, button_y, action_w, button_h,
+			action_enabled and not working, true, mx, my)
+		panel_hit(item and item.manual and "download" or "install", action_x, button_y,
+			action_x + action_w, button_y + button_h)
+	else
+		panel_button(L("sm_panel_check_button"), main_x, button_y, check_w, button_h,
+			not working, true, mx, my)
+		panel_hit("check", main_x, button_y, main_x + check_w, button_y + button_h)
+	end
 end
 
 local function select_panel_item(index)
 	if not items[index] or index == selected_index then return end
 	selected_index = index
+	Config.WriteInt("script_manager", "selected_index", selected_index)
 	selection_changed()
 end
 
@@ -1079,9 +1297,18 @@ local function handle_panel_click(x, y)
 		if point_in(x, y, hit.x0, hit.y0, hit.x1, hit.y1) then
 			if hit.kind == "close" then
 				panel.open, panel.dragging = false, false
+			elseif hit.kind == "scripts_tab" or hit.kind == "settings_tab" then
+				panel.page = hit.kind == "settings_tab" and "settings" or "scripts"
+				Config.WriteString("script_manager", "page", panel.page)
 			elseif hit.kind == "drag" then
 				panel.dragging = true
 				panel.drag_dx, panel.drag_dy = x - panel.x, y - panel.y
+			elseif hit.kind == "toggle_auto" then
+				auto_check_enabled = not auto_check_enabled
+				Config.WriteInt("script_manager", "auto_check", auto_check_enabled and 1 or 0)
+			elseif hit.kind == "toggle_compact" then
+				compact_rows = not compact_rows
+				Config.WriteInt("script_manager", "compact_rows", compact_rows and 1 or 0)
 			elseif hit.kind == "select" then
 				select_panel_item(hit.value)
 			elseif hit.kind == "check" then
@@ -1099,15 +1326,16 @@ local function handle_panel_click(x, y)
 end
 
 set_status("sm_status_idle")
-installed_version = installed_script_version(selected())
+load_update_cache()
+show_cached_selection()
 local scripts_dir = scripts_path()
 localizer_installed = scripts_dir ~= nil and read_file(scripts_dir .. "!_qLocalizer.lua") ~= nil
-set_actions(false, false)
 
 function script.OnScriptsLoaded()
 	if ai_bridge and type(ai_bridge.mcp_log) == "function" then
 		ai_bridge.mcp_log("info", "Script Manager loaded", { version = VERSION })
 	end
+	if auto_check_enabled then update_check() end
 end
 
 function script.OnUpdateEx()

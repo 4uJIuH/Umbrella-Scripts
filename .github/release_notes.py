@@ -92,7 +92,7 @@ def write_manager_catalog():
     items = []
     for script in CATALOG["scripts"]:
         path = manifest_path(script)
-        if script.get("category") != "dota" or not path:
+        if (script.get("category") != "dota" and script["id"] != "script_manager") or not path:
             continue
         version = json.loads(path.read_text(encoding="utf-8"))
         items.append({
@@ -116,7 +116,7 @@ def write_manager_catalog():
     path = BASE / "scripts" / "manager" / "catalog.json"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(feed, indent=2) + NL, encoding="utf-8", newline=NL)
-    print("%s updated (%d Dota entries)" % (path.relative_to(BASE).as_posix(), len(items)))
+    print("%s updated (%d managed scripts)" % (path.relative_to(BASE).as_posix(), len(items)))
 
 
 def write_manifest(script, tag, sha):

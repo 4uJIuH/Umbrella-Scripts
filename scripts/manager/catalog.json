@@ -68,6 +68,14 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-bear-pull-v1.0.0/lone_druid_bear_pull.lua",
       "manual": false,
       "needs_q_localizer": true
+    },
+    {
+      "id": "script_manager",
+      "version": "1.1.1",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/cbca644d452ae203ae3a2e6706d746601d68411f/scripts/script_manager/script_manager.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.1.1/script_manager.lua",
+      "manual": false,
+      "needs_q_localizer": false
     }
   ]
 }

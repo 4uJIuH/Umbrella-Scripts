@@ -1,6 +1,6 @@
 # Script Manager
 
-проверка и установка обновлений Dota-скриптов по кнопке / check and install Dota script updates on demand
+автопроверка и установка обновлений скриптов Umbrella / automatic checks and updates for Umbrella scripts
 
 <!-- releases:start -->
 Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.1.1/script_manager.lua) — `script-manager-v1.1.1`, 2026-10-12
@@ -17,14 +17,17 @@
 
 ## Что умеет
 
-Менеджер Dota-скриптов с отдельной перетаскиваемой панелью: показывает версии, проверяет GitHub и устанавливает выбранные обновления по запросу.
+Менеджер скриптов Umbrella с отдельной перетаскиваемой панелью: проверяет версии всего каталога при запуске и устанавливает выбранные обновления по запросу.
 
-- Проверяет доступные версии по кнопке
+- Автоматически проверяет версии всего каталога при запуске и сохраняет результаты и время проверки
+- Кнопка «Проверить все» принудительно загружает каталог заново
 - Устанавливает обновления отдельных Dota-скриптов и перезагружает Script System
+- Может обновлять собственную версию
 - Сохраняет резервную копию заменяемого файла
 - Устанавливает обязательный `!_qLocalizer.lua`, если он требуется и отсутствует
 - Скачивает Tinker Auto Farm как ZIP для ручной распаковки
 - Показывает список скриптов, установленную и последнюю версии в отдельной панели
+- Внутренние настройки включают автопроверку и компактный список
 
 ## Установка
 
@@ -34,10 +37,12 @@
 
 ## Что нового
 
-**Обновление v1.1.1**
+**Обновление v1.2.0**
 
-- Убран Script Manager из списка управляемых Dota-скриптов: он не входит в каталог обновлений и не должен отображаться как доступный для проверки.
-- Устранена ошибка `script not found in catalog` при выборе самого менеджера.
+- Script Manager есть в списке и каталоге обновлений и умеет обновлять себя.
+- При запуске автоматически проверяется весь каталог; версии и время проверки сохраняются.
+- Кнопка «Проверить все» загружает актуальные данные. Обновления устанавливаются только по вашему нажатию.
+- В панель добавлена вкладка настроек для автопроверки и компактного списка.
 
 ---
 
@@ -45,14 +50,17 @@
 
 ## What it does
 
-A Dota script manager with a draggable panel that displays versions, checks GitHub, and installs selected updates on demand.
+An Umbrella script manager with a draggable panel that checks the GitHub catalog on startup and installs selected updates on demand.
 
-- Checks for available versions on demand
+- Checks all catalog versions on startup and saves results and the check time
+- The “Check all” button fetches a fresh catalog
 - Installs individual Dota script updates and reloads the Script System
+- Can update itself
 - Keeps a backup of any file it replaces
 - Installs the required `!_qLocalizer.lua` when needed and missing
 - Downloads Tinker Auto Farm as a ZIP for manual extraction
 - Shows the script list and installed/latest versions in a dedicated panel
+- Includes in-panel settings for startup checks and compact list layout
 
 ## Install
 
@@ -62,7 +70,9 @@ A Dota script manager with a draggable panel that displays versions, checks GitH
 
 ## Changelog
 
-**Update v1.1.1**
+**Update v1.2.0**
 
-- Removed Script Manager from the managed Dota scripts list because it is not part of the update catalog.
-- Fixed the `script not found in catalog` error caused by selecting the manager itself.
+- Script Manager is listed in the update catalog and can update itself.
+- The full catalog is checked at startup; versions and check time are saved.
+- “Check all” fetches fresh data. Updates are installed only after your click.
+- Added in-panel settings for startup checks and compact list layout.

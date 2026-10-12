@@ -1,4 +1,7 @@
-**Update v1.1.1**
+**Update v1.2.0**
 
-- Removed Script Manager from the managed Dota scripts list because it is not part of the update catalog.
-- Fixed the `script not found in catalog` error caused by selecting the manager itself.
+- Script Manager is back in the managed list and update catalog, and can update itself.
+- The manager checks the full catalog on load. Versions, statuses, and the last successful check time are saved across reloads.
+- The “Check all” button fetches a fresh catalog and replaces the cached results; installing an update still requires an explicit click.
+- Added an in-panel settings tab with toggles for startup checks and compact list layout.
+- Refined the panel structure, navigation, and script rows to show each script's version and update state.
