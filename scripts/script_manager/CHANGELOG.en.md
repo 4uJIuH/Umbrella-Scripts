@@ -1,3 +1,10 @@
+**Update v1.4.0**
+
+- Rebuilt the Script Manager panel with a cleaner layout and a clearer view of each script, its versions, and update status.
+- Refreshed the script list and detail cards with recognizable icons, status indicators, smooth animations, and tooltips.
+- Moved appearance controls into a dedicated, scrollable settings view with themes, accent colors, background blur and opacity, scaling, and compact mode.
+- Preserved the panel scale saved by the previous version.
+
 **Update v1.3.0**
 
 - Added a dedicated appearance panel with selectable themes and accent colors.

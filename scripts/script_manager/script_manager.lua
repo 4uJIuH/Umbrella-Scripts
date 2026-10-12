@@ -316,7 +316,7 @@ local qLocalization = (function()
 	return lib
 end)()
 
-local VERSION = "1.3.0"
+local VERSION = "1.4.0"
 
 local localization = qLocalization.new({
 	en = {
@@ -412,6 +412,21 @@ local localization = qLocalization.new({
 		sm_desc_hp = "Tracks HP and mana thresholds and sends chat alerts.",
 		sm_desc_bear = "Uses Lone Druid's Spirit Bear to pull a creep wave.",
 		sm_desc_manager = "Checks script versions and installs selected updates.",
+		sm_tip_settings = "Appearance",
+		sm_tip_back = "Back to scripts",
+		sm_tip_close = "Close",
+		sm_tip_check = "Check every script for updates",
+		sm_ui_theme_sub = "Color scheme of the panel",
+		sm_ui_accent_sub = "Buttons, highlights and active items",
+		sm_ui_window = "Window",
+		sm_ui_defaults = "Reset",
+		sm_ui_scale_sub = "Size of the whole panel",
+		sm_ui_opacity_sub = "How see-through the panel is",
+		sm_row_update = "Update v%s",
+		sm_pill_updates = "%d updates",
+		sm_pill_current = "All up to date",
+		sm_chip_zip = "ZIP package",
+		sm_chip_localizer = "Needs qLocalization",
 	},
 	ru = {
 		sm_group_main = "Script Manager",
@@ -506,6 +521,21 @@ local localization = qLocalization.new({
 		sm_desc_hp = "Отслеживает пороги здоровья и маны и отправляет сообщения в чат.",
 		sm_desc_bear = "Использует Spirit Bear Lone Druid для отвода волны крипов.",
 		sm_desc_manager = "Проверяет версии скриптов и устанавливает выбранные обновления.",
+		sm_tip_settings = "Оформление",
+		sm_tip_back = "Назад к скриптам",
+		sm_tip_close = "Закрыть",
+		sm_tip_check = "Проверить обновления всех скриптов",
+		sm_ui_theme_sub = "Цветовая схема панели",
+		sm_ui_accent_sub = "Кнопки, выделение и активные элементы",
+		sm_ui_window = "Окно",
+		sm_ui_defaults = "Сбросить",
+		sm_ui_scale_sub = "Размер всей панели",
+		sm_ui_opacity_sub = "Насколько прозрачна панель",
+		sm_row_update = "Обновление v%s",
+		sm_pill_updates = "Обновлений: %d",
+		sm_pill_current = "Всё актуально",
+		sm_chip_zip = "ZIP-пакет",
+		sm_chip_localizer = "Нужна qLocalization",
 	},
 })
 
@@ -515,6 +545,12 @@ local JSON = require("assets.JSON")
 
 local CATALOG_URL = "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/manager/catalog.json"
 local catalog_request_count = 0
+local PAL = {
+	blue = { 10, 132, 255 }, indigo = { 94, 92, 230 }, orange = { 255, 159, 10 }, green = { 48, 209, 88 },
+	purple = { 191, 90, 242 }, teal = { 48, 176, 199 }, red = { 255, 69, 58 }, gray = { 142, 142, 147 },
+	cyan = { 100, 210, 255 }, yellow = { 255, 214, 10 }, pink = { 255, 55, 95 },
+}
+
 local items = {
 	{ id = "tinker_turret_dodge", key = "sm_item_ttd", description_key = "sm_desc_ttd", file = "tinker_turret_dodge.lua", needs_localizer = true },
 	{ id = "tinker_auto_farm", key = "sm_item_farm", description_key = "sm_desc_farm", file = "Tinker-Auto-Farm.zip", manual = true },
@@ -527,20 +563,24 @@ local items = {
 	{ id = "script_manager", key = "sm_item_manager", description_key = "sm_desc_manager", file = "script_manager.lua" },
 }
 
+local ITEM_STYLE = {
+	tinker_turret_dodge = { "shield", PAL.blue },
+	tinker_auto_farm = { "bag", PAL.orange },
+	auto_shackleshot = { "pointer", PAL.teal },
+	auto_spark = { "bolt", PAL.indigo },
+	rune_destruction = { "gift", PAL.pink },
+	earth_spirit_kick_combo = { "hand", PAL.green },
+	hp_mana_67_ping = { "percent", PAL.red },
+	spirit_bear_pull = { "users", PAL.purple },
+	script_manager = { "wrench", PAL.gray },
+}
+for _, entry in ipairs(items) do
+	local style = ITEM_STYLE[entry.id]
+	entry.glyph = style and style[1] or "bolt"
+	entry.tile = style and style[2] or PAL.gray
+end
+
 local ui = {}
-local appearance = {}
-local THEME_COLORS = {
-	graphite = { card = {16, 23, 32}, base = {21, 30, 41}, sidebar = {19, 28, 39}, edge = {48, 62, 78} },
-	midnight = { card = {10, 15, 29}, base = {16, 22, 40}, sidebar = {13, 19, 35}, edge = {48, 65, 99} },
-	warm = { card = {28, 21, 18}, base = {39, 29, 24}, sidebar = {33, 25, 21}, edge = {91, 67, 55} },
-	purple = { card = {20, 14, 31}, base = {29, 20, 43}, sidebar = {24, 17, 36}, edge = {75, 56, 99} },
-	red = { card = {31, 13, 18}, base = {43, 20, 25}, sidebar = {36, 16, 22}, edge = {105, 57, 66} },
-	oled = { card = {0, 0, 0}, base = {8, 8, 9}, sidebar = {4, 4, 5}, edge = {42, 42, 46} },
-}
-local ACCENT_COLORS = {
-	red = {239, 68, 68}, teal = {54, 186, 169}, blue = {56, 141, 255},
-	purple = {183, 92, 242}, orange = {255, 159, 67}, green = {76, 205, 112},
-}
 local selected_index = math.max(1, math.min(#items,
 	Config.ReadInt("script_manager", "selected_index", 1)))
 local selected_release
@@ -552,52 +592,7 @@ local can_download = false
 local localizer_installed = false
 local cached_releases = {}
 local last_checked_at = Config.ReadInt("script_manager", "last_checked_at", 0)
-local panel = {
-	open = false,
-	visibility = 0,
-	animation_time = os.clock(),
-	width = 920,
-	height = 600,
-	x = nil,
-	y = nil,
-	dragging = false,
-	mouse_captured = false,
-	hits = {},
-	status_key = "sm_status_idle",
-	settings_open = false,
-	settings_drag = nil,
-	settings_scroll = 0,
-	settings_clip = nil,
-}
-
-local function setting_value(widget, fallback)
-	if not widget or type(widget.Get) ~= "function" then return fallback end
-	local value = widget:Get()
-	if value == nil then return fallback end
-	return value
-end
-
-local function setting_enabled(widget, fallback)
-	local value = setting_value(widget, fallback)
-	if type(value) == "boolean" then return value end
-	if type(value) == "number" then return value ~= 0 end
-	if type(value) == "string" then return value == "1" or value == "true" or value == "on" end
-	return fallback == true
-end
-
-local function save_appearance()
-	Config.WriteInt("script_manager", "blur", setting_enabled(appearance.blur, true) and 1 or 0)
-	Config.WriteInt("script_manager", "blur_power", tonumber(setting_value(appearance.blur_power, 70)) or 70)
-	Config.WriteInt("script_manager", "opacity", tonumber(setting_value(appearance.opacity, 92)) or 92)
-	Config.WriteInt("script_manager", "scale", tonumber(setting_value(appearance.scale, 120)) or 100)
-	local theme_ids = { "graphite", "midnight", "warm", "purple", "red", "oled" }
-	local accent_ids = { "red", "teal", "blue", "purple", "orange", "green" }
-	local theme_index = tonumber(setting_value(appearance.theme, 0)) or 0
-	local accent_index = tonumber(setting_value(appearance.accent, 1)) or 1
-	Config.WriteString("script_manager", "theme", theme_ids[theme_index + 1] or "graphite")
-	Config.WriteString("script_manager", "accent", accent_ids[accent_index + 1] or "teal")
-	Config.WriteInt("script_manager", "compact", setting_enabled(appearance.compact, false) and 1 or 0)
-end
+local panel = { status_key = "sm_status_idle" }
 
 do
 	local tab = UI.Create("Scripts", "Scripts", "Script Manager")
@@ -606,48 +601,9 @@ do
 	local page = tab:Create("Settings")
 	local g_main = page:Create("sm_group_main", Enum.GroupSide.Left)
 	ui.open = g_main:Bind("sm_open", Enum.ButtonCode.KEY_INSERT)
-
-	-- Visual settings are intentionally kept inside the in-panel gear.
-	-- These lightweight objects preserve the same Get/Set interface used by the
-	-- panel without registering a second menu tab outside Script Manager.
-	local function config_widget(name, default, is_string)
-		local object = {}
-		function object:Get()
-			if is_string then return Config.ReadString("script_manager", name, default) end
-			return Config.ReadInt("script_manager", name, default)
-		end
-		function object:Set(value)
-			if is_string then
-				Config.WriteString("script_manager", name, tostring(value))
-			else
-				Config.WriteInt("script_manager", name, type(value) == "boolean" and (value and 1 or 0) or tonumber(value) or default)
-			end
-		end
-		return object
-	end
-
-	appearance.blur = config_widget("blur", 1)
-	appearance.blur_power = config_widget("blur_power", 70)
-	appearance.opacity = config_widget("opacity", 92)
-	appearance.scale = config_widget("scale", 120)
-	local function config_index_widget(name, ids, default)
-		local object = {}
-		function object:Get()
-			local current = Config.ReadString("script_manager", name, ids[default + 1])
-			for index, id in ipairs(ids) do if id == current then return index - 1 end end
-			return default
-		end
-		function object:Set(value)
-			local index = math.max(0, math.min(#ids - 1, tonumber(value) or default))
-			Config.WriteString("script_manager", name, ids[index + 1])
-		end
-		return object
-	end
-	appearance.theme = config_index_widget("theme", { "graphite", "midnight", "warm", "purple", "red", "oled" }, 0)
-	appearance.accent = config_index_widget("accent", { "red", "teal", "blue", "purple", "orange", "green" }, 1)
-	appearance.compact = config_widget("compact", 0)
 	ui.open:ToolTip("sm_open_tip")
 end
+
 
 local function set_status(key, value)
 	panel.status_key = key
@@ -1076,83 +1032,499 @@ end
 
 local script = {}
 
-local panel_fonts
-local function ensure_panel_fonts()
-	if panel_fonts then return end
-	local flags = Enum.FontCreate.FONTFLAG_ANTIALIAS
-	panel_fonts = {
-		regular = Render.LoadFont("Arial", flags, 400),
-		medium = Render.LoadFont("Arial", flags, 600),
-		bold = Render.LoadFont("Arial", flags, 700),
-	}
+----------------------------------------------------------------------
+-- Visual layer
+----------------------------------------------------------------------
+
+local ROUND = Enum.DrawFlags.RoundCornersAll
+local ROUND_TOP = Enum.DrawFlags.RoundCornersTop
+local ROUND_BOTTOM = Enum.DrawFlags.RoundCornersBottom
+local ROUND_NONE = Enum.DrawFlags.RoundCornersNone
+
+local K = {
+	W = 960,
+	H = 640,
+	TB = 52,
+	FT = 64,
+	P = 14,
+	SIDE = 292,
+	WHEEL = 80,
+	TIP_DELAY = 0.35,
+	SCALES = { 80, 90, 100, 110, 125, 150 },
+	GLYPH = {
+		gear = "\u{f013}", close = "\u{f00d}", check = "\u{f00c}", arrow_down = "\u{f063}",
+		alert = "\u{f06a}", info = "\u{f05a}", palette = "\u{f53f}", moon = "\u{f186}",
+		compress = "\u{f066}", blur = "\u{f042}", drop = "\u{f043}", eye = "\u{f06e}",
+		expand = "\u{f424}", shield = "\u{f3ed}", bag = "\u{f290}", pointer = "\u{f245}",
+		bolt = "\u{f0e7}", gift = "\u{f06b}", hand = "\u{f25a}", percent = "\u{f295}",
+		users = "\u{f0c0}", wrench = "\u{f0ad}", lang = "\u{f1ab}", chevron = "\u{f054}",
+		search = "\u{f002}",
+	},
+	THEMES = {
+		{ id = "graphite", main = { 15, 15, 16 }, side = { 22, 22, 24 }, bar = { 26, 26, 28 }, card = { 28, 28, 30 }, raised = { 44, 44, 46 }, pill = { 58, 58, 60 }, thumb = { 99, 99, 102 } },
+		{ id = "midnight", main = { 11, 14, 24 }, side = { 16, 20, 33 }, bar = { 20, 25, 40 }, card = { 22, 27, 43 }, raised = { 36, 44, 66 }, pill = { 49, 58, 84 }, thumb = { 84, 96, 130 } },
+		{ id = "warm", main = { 19, 16, 14 }, side = { 27, 23, 20 }, bar = { 31, 27, 23 }, card = { 34, 29, 25 }, raised = { 52, 45, 39 }, pill = { 66, 58, 51 }, thumb = { 108, 97, 88 } },
+		{ id = "purple", main = { 16, 12, 24 }, side = { 23, 17, 34 }, bar = { 27, 20, 40 }, card = { 30, 22, 44 }, raised = { 48, 36, 68 }, pill = { 62, 48, 86 }, thumb = { 104, 86, 136 } },
+		{ id = "red", main = { 22, 11, 13 }, side = { 31, 16, 18 }, bar = { 36, 19, 22 }, card = { 40, 21, 24 }, raised = { 60, 34, 38 }, pill = { 76, 45, 50 }, thumb = { 124, 84, 90 } },
+		{ id = "oled", main = { 0, 0, 0 }, side = { 8, 8, 9 }, bar = { 12, 12, 13 }, card = { 17, 17, 18 }, raised = { 34, 34, 36 }, pill = { 48, 48, 50 }, thumb = { 92, 92, 96 } },
+	},
+	ACCENTS = {
+		{ id = "red", c = PAL.red },
+		{ id = "teal", c = PAL.teal },
+		{ id = "blue", c = PAL.blue },
+		{ id = "purple", c = PAL.purple },
+		{ id = "orange", c = PAL.orange },
+		{ id = "green", c = PAL.green },
+	},
+	ACCENT_ALPHA = { accent = 255, select = 51, accent_soft = 36, accent_pill = 90 },
+	DEFAULTS = { blur = 1, blur_power = 70, opacity = 92, scale = 100, compact = 0, theme = "graphite", accent = "teal" },
+}
+
+local C = {
+	main = { 15, 15, 16 }, side = { 22, 22, 24 }, bar = { 26, 26, 28 }, card = { 28, 28, 30 },
+	raised = { 44, 44, 46 }, pill = { 58, 58, 60 }, thumb = { 99, 99, 102 },
+	text = { 255, 255, 255 }, text2 = { 235, 235, 245, 153 }, text3 = { 235, 235, 245, 77 }, text4 = { 235, 235, 245, 46 },
+	sep = { 84, 84, 88, 153 }, sep2 = { 84, 84, 88, 87 },
+	fill2 = { 120, 120, 128, 82 }, fill3 = { 118, 118, 128, 61 }, fill4 = { 118, 118, 128, 46 },
+	hover = { 255, 255, 255, 9 }, glow = { 255, 255, 255, 28 }, press = { 0, 0, 0, 46 },
+	border = { 255, 255, 255, 20 }, outline = { 255, 255, 255, 26 }, black = { 0, 0, 0 },
+	sb = { 235, 235, 245, 77 }, sb_hover = { 235, 235, 245, 140 },
+	accent = { 54, 186, 169 }, accent_soft = { 54, 186, 169, 36 }, accent_pill = { 54, 186, 169, 90 }, select = { 54, 186, 169, 51 },
+}
+
+local function clamp(v, a, b) return v < a and a or (v > b and b or v) end
+local function ease_out(t) return 1 - (1 - t) * (1 - t) end
+local function ease_in_out(t)
+	if t < 0.5 then return 2 * t * t end
+	return 1 - ((-2 * t + 2) ^ 2) / 2
 end
 
-local function panel_text(font, size, value, x, y, color)
-	local scale = math.max(0.8, math.min(1.2, (tonumber(setting_value(appearance.scale, 120)) or 100) / 100))
-	Render.Text(font, math.max(1, math.floor(size * scale)), tostring(value), Vec2(x, y), color)
+local S = {
+	open = false,
+	alpha = 0,
+	now = os.clock(),
+	dt = 0.016,
+	tweens = {},
+	settings = false,
+	last_settings = false,
+	fade_t = 1,
+	detail_t = 1,
+	wx = nil,
+	wy = nil,
+	press = nil,
+	drag = nil,
+	slide = nil,
+	sb_drag = nil,
+	scroll = 0,
+	scroll_to = 0,
+	content_h = 0,
+	view_h = 0,
+	sb_until = 0,
+	tip = nil,
+	tip_shown = nil,
+	tip_since = 0,
+	pill = {},
+}
+
+----------------------------------------------------------------------
+-- Settings (persisted in Config, same keys as before)
+----------------------------------------------------------------------
+
+local SET = {}
+
+local function find_id(list, id)
+	for _, entry in ipairs(list) do
+		if entry.id == id then return entry end
+	end
+	return list[1]
 end
 
-local function panel_measure(font, size, value)
-	local scale = math.max(0.8, math.min(1.2, (tonumber(setting_value(appearance.scale, 120)) or 100) / 100))
-	return Render.TextSize(font, math.max(1, math.floor(size * scale)), tostring(value)).x
+local function nearest_scale(value)
+	local best = K.SCALES[1]
+	for _, option in ipairs(K.SCALES) do
+		if math.abs(option - value) < math.abs(best - value) then best = option end
+	end
+	return best
 end
 
-local function panel_wrap(value, font, size, width, max_lines)
-	local lines, current = {}, ""
-	for word in tostring(value):gmatch("%S+") do
-		local candidate = current == "" and word or (current .. " " .. word)
-		if current ~= "" and panel_measure(font, size, candidate) > width then
-			lines[#lines + 1] = current
-			current = word
-			if max_lines and #lines >= max_lines then break end
-		else
-			current = candidate
+local function load_settings()
+	local d = K.DEFAULTS
+	SET.blur = Config.ReadInt("script_manager", "blur", d.blur) ~= 0 and 1 or 0
+	SET.blur_power = clamp(Config.ReadInt("script_manager", "blur_power", d.blur_power), 10, 100)
+	SET.opacity = clamp(Config.ReadInt("script_manager", "opacity", d.opacity), 45, 100)
+	SET.scale = nearest_scale(Config.ReadInt("script_manager", "ui_scale",
+		Config.ReadInt("script_manager", "scale", d.scale)))
+	SET.compact = Config.ReadInt("script_manager", "compact", d.compact) ~= 0 and 1 or 0
+	SET.theme = find_id(K.THEMES, Config.ReadString("script_manager", "theme", d.theme)).id
+	SET.accent = find_id(K.ACCENTS, Config.ReadString("script_manager", "accent", d.accent)).id
+end
+
+local function save_settings()
+	Config.WriteInt("script_manager", "blur", SET.blur)
+	Config.WriteInt("script_manager", "blur_power", SET.blur_power)
+	Config.WriteInt("script_manager", "opacity", SET.opacity)
+	Config.WriteInt("script_manager", "ui_scale", SET.scale)
+	Config.WriteInt("script_manager", "compact", SET.compact)
+	Config.WriteString("script_manager", "theme", SET.theme)
+	Config.WriteString("script_manager", "accent", SET.accent)
+end
+
+----------------------------------------------------------------------
+-- Theme (animated palette transitions)
+----------------------------------------------------------------------
+
+local theme = { from = {}, to = {}, k = 1 }
+
+function theme.target()
+	local base = find_id(K.THEMES, SET.theme)
+	local pick = find_id(K.ACCENTS, SET.accent)
+	local out = {}
+	for name, c in pairs(base) do
+		if name ~= "id" then out[name] = { c[1], c[2], c[3], c[4] or 255 } end
+	end
+	for name, alpha in pairs(K.ACCENT_ALPHA) do
+		out[name] = { pick.c[1], pick.c[2], pick.c[3], alpha }
+	end
+	return out
+end
+
+function theme.tick(dt)
+	if theme.k >= 1 then return end
+	theme.k = math.min(1, theme.k + dt / 0.3)
+	local e = ease_in_out(theme.k)
+	for name, c in pairs(theme.to) do
+		local from, dest = theme.from[name], C[name]
+		for i = 1, 4 do dest[i] = from[i] + (c[i] - from[i]) * e end
+	end
+end
+
+function theme.set(instant)
+	theme.to, theme.from, theme.k = theme.target(), {}, 0
+	for name in pairs(theme.to) do
+		local d = C[name]
+		theme.from[name] = { d[1], d[2], d[3], d[4] or 255 }
+	end
+	if instant then theme.tick(0.3) end
+end
+
+local function reset_settings()
+	local d = K.DEFAULTS
+	SET.blur, SET.blur_power, SET.opacity = d.blur, d.blur_power, d.opacity
+	SET.scale, SET.compact, SET.theme, SET.accent = d.scale, d.compact, d.theme, d.accent
+	save_settings()
+	theme.set()
+end
+
+load_settings()
+theme.set(true)
+
+----------------------------------------------------------------------
+-- Animation + hit-testing
+----------------------------------------------------------------------
+
+local anim = {}
+
+function anim.tween(key, target, time, curve)
+	local t = S.tweens[key]
+	if not t then
+		t = { from = target, to = target, v = target, k = 1 }
+		S.tweens[key] = t
+	end
+	if t.to ~= target then t.from, t.to, t.k = t.v, target, 0 end
+	if t.k < 1 then
+		t.k = math.min(1, t.k + S.dt / time)
+		t.v = t.from + (t.to - t.from) * (curve or ease_out)(t.k)
+	else
+		t.v = t.to
+	end
+	return t.v
+end
+
+local HOVER_KEY = setmetatable({}, { __index = function(t, id)
+	local v = "hv:" .. id
+	t[id] = v
+	return v
+end })
+
+function anim.hover(id, on)
+	return anim.tween(HOVER_KEY[id], on and 1 or 0, 0.12)
+end
+
+local hit = { list = {}, prev = {}, hover = nil, clip = nil }
+
+function hit.begin()
+	hit.prev, hit.list, hit.clip = hit.list, {}, nil
+	local mx, my = Input.GetCursorPos()
+	hit.hover = nil
+	for i = #hit.prev, 1, -1 do
+		local h = hit.prev[i]
+		if mx >= h[1] and mx < h[3] and my >= h[2] and my < h[4] then
+			hit.hover = h[5]
+			break
 		end
 	end
-	if current ~= "" and (not max_lines or #lines < max_lines) then
-		lines[#lines + 1] = current
+	if S.press and hit.hover ~= S.press.id then hit.hover = nil end
+end
+
+function hit.is(id) return hit.hover == id end
+
+function hit.at(mx, my)
+	for i = #hit.list, 1, -1 do
+		local h = hit.list[i]
+		if mx >= h[1] and mx < h[3] and my >= h[2] and my < h[4] then return h end
 	end
+	return nil
+end
+
+----------------------------------------------------------------------
+-- Fonts / drawing helpers
+----------------------------------------------------------------------
+
+local asset = { fonts = {}, sizes = {} }
+
+function asset.font(weight)
+	local f = asset.fonts[weight]
+	if not f then
+		f = Render.LoadFont("Inter", Enum.FontCreate.FONTFLAG_ANTIALIAS, weight)
+		asset.fonts[weight] = f
+	end
+	return f
+end
+
+function asset.icons()
+	if not asset.fonts.icon then
+		asset.fonts.icon = Render.LoadFont("FontAwesomeEx", Enum.FontCreate.FONTFLAG_ANTIALIAS, 400)
+	end
+	return asset.fonts.icon
+end
+
+function asset.size(font, px, str)
+	local by_font = asset.sizes[font]
+	if not by_font then
+		by_font = {}
+		asset.sizes[font] = by_font
+	end
+	local by_px = by_font[px]
+	if not by_px then
+		by_px = {}
+		by_font[px] = by_px
+	end
+	local v = by_px[str]
+	if not v then
+		v = Render.TextSize(font, px, str)
+		by_px[str] = v
+	end
+	return v
+end
+
+local function F(weight) return asset.font(weight) end
+
+local g = {
+	x = 0, y = 0, s = 1, a = 1, cmp = 0,
+	vcache = {}, vc_n = 0, ccache = {}, cc_n = 0,
+	fits = {}, fit_n = 0, wraps = {}, wrap_n = 0,
+}
+
+function hit.add(x, y, w, h, id, on)
+	local x1, y1, x2, y2 = g.x + x * g.s, g.y + y * g.s, g.x + (x + w) * g.s, g.y + (y + h) * g.s
+	if hit.clip then
+		x1, y1 = math.max(x1, hit.clip[1]), math.max(y1, hit.clip[2])
+		x2, y2 = math.min(x2, hit.clip[3]), math.min(y2, hit.clip[4])
+		if x2 <= x1 or y2 <= y1 then return end
+	end
+	hit.list[#hit.list + 1] = { x1, y1, x2, y2, id, on or {} }
+end
+
+function g.lay(n, c) return n + (c - n) * g.cmp end
+function g.px(x) return math.floor(g.x + x * g.s + 0.5) end
+function g.py(y) return math.floor(g.y + y * g.s + 0.5) end
+
+function g.pt(x, y)
+	local key = (x + 32768) * 65536 + y + 32768
+	local v = g.vcache[key]
+	if v then return v end
+	if g.vc_n >= 20000 then g.vcache, g.vc_n = {}, 0 end
+	v = Vec2(x, y)
+	g.vcache[key], g.vc_n = v, g.vc_n + 1
+	return v
+end
+
+function g.v(x, y) return g.pt(g.px(x), g.py(y)) end
+function g.size(x, y, w, h) return g.pt(g.px(x + w) - g.px(x), g.py(y + h) - g.py(y)) end
+function g.fs(size) return math.max(1, math.floor(size * g.s + 0.5)) end
+
+function g.col(c, a)
+	local r, gr, b = math.floor(c[1] + 0.5), math.floor(c[2] + 0.5), math.floor(c[3] + 0.5)
+	local al = clamp(math.floor((c[4] or 255) * (a or 1) * g.a + 0.5), 0, 255)
+	local key = ((r * 256 + gr) * 256 + b) * 256 + al
+	local v = g.ccache[key]
+	if v then return v end
+	if g.cc_n >= 8000 then g.ccache, g.cc_n = {}, 0 end
+	v = Color(clamp(r, 0, 255), clamp(gr, 0, 255), clamp(b, 0, 255), al)
+	g.ccache[key], g.cc_n = v, g.cc_n + 1
+	return v
+end
+
+function g.rect(x, y, w, h, c, r, a, flags)
+	Render.FilledRect(g.v(x, y), g.v(x + w, y + h), g.col(c, a), (r or 0) * g.s, flags or ROUND)
+end
+
+function g.frame(x, y, w, h, c, r, a, t)
+	Render.Rect(g.v(x, y), g.v(x + w, y + h), g.col(c, a), (r or 0) * g.s, ROUND, (t or 1) * g.s)
+end
+
+function g.glass(x, y, w, h, r)
+	local blur = SET.blur == 1
+	local power = SET.blur_power / 100
+	local k = g.a ^ 4
+	if blur and k > 0.01 then
+		Render.Blur(g.v(x, y), g.v(x + w, y + h), power * 2 * k, k, r * g.s, ROUND)
+	end
+	local alpha = SET.opacity / 100
+	if blur then alpha = alpha * (1 - 0.3 * power) end
+	g.rect(x, y, w, h, C.main, r, alpha)
+end
+
+function g.inset() return math.max(1, math.floor(2 * g.s + 0.5)) end
+
+function g.thumb(x, y, w, h, from, to, c, r, a)
+	local x1, y1, x2, y2, i = g.px(x), g.py(y), g.px(x + w), g.py(y + h), g.inset()
+	local l = x1 + i
+	local k = (x2 - i - l) / (w - 4)
+	Render.FilledRect(g.pt(l + math.floor(from * k + 0.5), y1 + i), g.pt(l + math.floor(to * k + 0.5), y2 - i),
+		g.col(c, a), r * g.s, ROUND)
+end
+
+function g.hair() return math.max(1, math.floor(g.s)) end
+
+function g.hl(x, y, w, c, a)
+	local y0 = g.py(y)
+	Render.FilledRect(g.pt(g.px(x), y0), g.pt(g.px(x + w), y0 + g.hair()), g.col(c, a))
+end
+
+function g.vl(x, y, h, c, a)
+	local x0 = g.px(x)
+	Render.FilledRect(g.pt(x0, g.py(y)), g.pt(x0 + g.hair(), g.py(y + h)), g.col(c, a))
+end
+
+function g.vr(x, cy, h, a) g.vl(x, cy - h / 2, h, C.sep, a) end
+
+function g.width(font, size, str)
+	return asset.size(font, g.fs(size), str).x / g.s
+end
+
+function g.text(font, size, str, x, cy, c, a, align)
+	local px = g.fs(size)
+	local ts = asset.size(font, px, str)
+	local tx = g.x + x * g.s
+	if align == "r" then tx = tx - ts.x elseif align == "c" then tx = tx - ts.x / 2 end
+	Render.Text(font, px, str, g.pt(math.floor(tx + 0.5), math.floor(g.y + cy * g.s - ts.y / 2 + 0.5)), g.col(c, a))
+	return ts.x / g.s
+end
+
+function g.glyph(name, size, x, cy, c, a, align)
+	return g.text(asset.icons(), size, K.GLYPH[name], x, cy, c, a, align or "c")
+end
+
+function g.clip(x, y, w, h) Render.PushClip(g.v(x, y), g.v(x + w, y + h), true) end
+function g.unclip() Render.PopClip() end
+
+function g.fit(weight, size, str, max_w)
+	local key = localization.GetLanguage() .. ":" .. weight .. ":" .. size .. ":" .. math.floor(max_w) .. ":" .. str
+	local out = g.fits[key]
+	if out then return out end
+	local font = F(weight)
+	out = str
+	if g.width(font, size, str) > max_w then
+		local chars = {}
+		for _, code in utf8.codes(str) do chars[#chars + 1] = utf8.char(code) end
+		out = "…"
+		for n = #chars - 1, 1, -1 do
+			local candidate = table.concat(chars, "", 1, n):gsub("%s+$", "") .. "…"
+			if g.width(font, size, candidate) <= max_w then
+				out = candidate
+				break
+			end
+		end
+	end
+	if g.fit_n >= 600 then g.fits, g.fit_n = {}, 0 end
+	g.fits[key], g.fit_n = out, g.fit_n + 1
+	return out
+end
+
+function g.wrap(weight, size, str, max_w, max_lines)
+	local key = localization.GetLanguage() .. ":" .. weight .. ":" .. size .. ":" .. math.floor(max_w) .. ":"
+		.. tostring(max_lines) .. ":" .. str
+	local out = g.wraps[key]
+	if out then return out end
+	local font = F(weight)
+	local words = {}
+	for word in str:gmatch("%S+") do words[#words + 1] = word end
+	local lines, current, i, cut = {}, "", 1, false
+	while i <= #words do
+		local word = words[i]
+		local candidate = current == "" and word or (current .. " " .. word)
+		if current ~= "" and g.width(font, size, candidate) > max_w then
+			lines[#lines + 1] = current
+			current = ""
+			if max_lines and #lines >= max_lines then
+				cut = true
+				break
+			end
+		else
+			current = candidate
+			i = i + 1
+		end
+	end
+	if not cut and current ~= "" then lines[#lines + 1] = current end
+	for n = 1, #lines do
+		local line = lines[n]
+		if cut and n == #lines then line = line .. "…" end
+		lines[n] = g.fit(weight, size, line, max_w)
+	end
+	if g.wrap_n >= 300 then g.wraps, g.wrap_n = {}, 0 end
+	g.wraps[key], g.wrap_n = lines, g.wrap_n + 1
 	return lines
 end
 
-local function point_in(x, y, x0, y0, x1, y1)
-	return x >= x0 and x <= x1 and y >= y0 and y <= y1
+----------------------------------------------------------------------
+-- Status helpers
+----------------------------------------------------------------------
+
+local STATUS_COLOR = { current = PAL.green, available = PAL.orange, manual = PAL.cyan, error = PAL.red }
+
+local function count_status(name)
+	local n = 0
+	for _, item in ipairs(items) do
+		local cached = cached_releases[item.id]
+		if cached and cached.status == name then n = n + 1 end
+	end
+	return n
 end
 
-local function panel_hit(kind, x0, y0, x1, y1, value)
-	if not panel.open or panel.visibility < 0.85 then return end
-	panel.hits[#panel.hits + 1] = {
-		kind = kind,
-		x0 = x0,
-		y0 = y0,
-		x1 = x1,
-		y1 = y1,
-		value = value,
-	}
+local function row_summary(item)
+	local cached = cached_releases[item.id]
+	if not cached then return L("sm_panel_state_unknown"), C.text3, PAL.gray end
+	if cached.status == "available" then
+		return string.format(L("sm_row_update"), cached.version), PAL.orange, PAL.orange
+	elseif cached.status == "current" then
+		return L("sm_panel_state_current"), C.text3, PAL.green
+	elseif cached.status == "manual" then
+		return L("sm_panel_state_manual"), C.text3, PAL.cyan
+	elseif cached.status == "error" then
+		return L("sm_panel_state_error"), PAL.red, PAL.red
+	end
+	return L("sm_panel_state_unknown"), C.text3, PAL.gray
 end
 
-local function panel_button(title, x, y, width, height, enabled, primary, mx, my)
-	local hover = enabled and point_in(mx, my, x, y, x + width, y + height)
-	local accent_ids = { "red", "teal", "blue", "purple", "orange", "green" }
-	local accent = ACCENT_COLORS[accent_ids[(tonumber(setting_value(appearance.accent, 1)) or 1) + 1]] or ACCENT_COLORS.teal
-	local fill = primary and Color(accent[1], accent[2], accent[3], enabled and (hover and 255 or 235) or 100)
-		or Color(34, 46, 59, enabled and (hover and 255 or 220) or 110)
-	if enabled and hover then
-		Render.FilledRect(Vec2(x - 2, y - 2), Vec2(x + width + 2, y + height + 2),
-			Color(accent[1], accent[2], accent[3], 30), 10)
-	end
-	Render.FilledRect(Vec2(x, y), Vec2(x + width, y + height), fill, 8)
-	if not primary then
-		Render.Rect(Vec2(x, y), Vec2(x + width, y + height),
-			Color(65, 80, 96, enabled and 220 or 110), 8)
-	end
-	local font = primary and panel_fonts.bold or panel_fonts.medium
-	local size = 14
-	local text_width = panel_measure(font, size, title)
-	local text_color = primary and Color(10, 29, 34, enabled and 255 or 120)
-		or Color(225, 232, 239, enabled and 255 or 120)
-	panel_text(font, size, title, x + math.max(8, (width - text_width) / 2),
-		y + (height - 17) / 2, text_color)
+local function badge_for(item, cached)
+	if working then return L("sm_panel_checking"), C.accent end
+	if cached and cached.status == "error" then return L("sm_panel_error_badge"), PAL.red end
+	if item.manual then return L("sm_panel_manual_badge"), PAL.yellow end
+	if can_install then return L("sm_panel_update_badge"), PAL.orange end
+	if cached and cached.status == "current" then return L("sm_panel_current_badge"), PAL.green end
+	if selected_release then return L("sm_panel_cached"), PAL.gray end
+	return L("sm_panel_not_checked"), PAL.gray
 end
 
 local function panel_status_text()
@@ -1163,370 +1535,728 @@ local function panel_status_text()
 	return message
 end
 
-local function draw_manager_panel()
-	if panel.visibility <= 0.01 then return end
-	ensure_panel_fonts()
-	local screen = Render.ScreenSize()
-	local width = math.min(panel.width, math.max(480, screen.x - 32))
-	local height = math.min(panel.height, math.max(420, screen.y - 32))
-	panel.width, panel.height = width, height
-	if panel.x == nil or panel.y == nil then
-		local saved_x = Config.ReadInt("script_manager", "panel_x", -1)
-		local saved_y = Config.ReadInt("script_manager", "panel_y", -1)
-		panel.x = saved_x >= 0 and saved_x or math.floor((screen.x - width) / 2)
-		panel.y = saved_y >= 0 and saved_y or math.floor((screen.y - height) / 2)
+local function activity_kind()
+	if working then return "work" end
+	local key = panel.status_key or ""
+	if key:find("error", 1, true) then return "error" end
+	if key == "sm_status_installed" or key == "sm_status_manual" or key == "sm_status_localizer_installed"
+		or key == "sm_status_localizer" or key == "sm_status_current" or key == "sm_status_cache_current"
+		or key == "sm_status_checked"
+	then
+		return "ok"
 	end
-	panel.x = math.max(16, math.min(panel.x, screen.x - width - 16))
-	panel.y = math.max(16, math.min(panel.y, screen.y - height - 16))
-	local visibility = panel.visibility
-	local opacity = math.max(0.45, math.min(1, (tonumber(setting_value(appearance.opacity, 92)) or 92) / 100))
-	local blur_enabled = setting_enabled(appearance.blur, true)
-	local blur_power = math.max(0.1, math.min(1, (tonumber(setting_value(appearance.blur_power, 70)) or 70) / 100))
-	local x, y, w, h = math.floor(panel.x), math.floor(panel.y - (1 - visibility) * 12), width, height
-	local mx, my = Input.GetCursorPos()
-	local theme_ids = { "graphite", "midnight", "warm", "purple", "red", "oled" }
-	local accent_ids = { "red", "teal", "blue", "purple", "orange", "green" }
-	local theme = THEME_COLORS[theme_ids[(tonumber(setting_value(appearance.theme, 0)) or 0) + 1]] or THEME_COLORS.graphite
-	local accent = ACCENT_COLORS[accent_ids[(tonumber(setting_value(appearance.accent, 1)) or 1) + 1]] or ACCENT_COLORS.teal
-	local edge = Color(theme.edge[1], theme.edge[2], theme.edge[3])
-	local text, muted = Color(232, 239, 246), Color(143, 159, 176)
-	local card = Color(theme.card[1], theme.card[2], theme.card[3])
-	local base = Color(theme.base[1], theme.base[2], theme.base[3])
-	local sidebar = Color(theme.sidebar[1], theme.sidebar[2], theme.sidebar[3])
-	local accent_color = Color(accent[1], accent[2], accent[3])
-	-- accent softness is derived per control
-	-- card lift is reserved for elevated detail blocks
-	local compact = setting_enabled(appearance.compact, false)
-	panel.hits = {}
-
-	Render.FilledRect(Vec2(0, 0), Vec2(screen.x, screen.y),
-		Color(3, 7, 12, math.floor(96 * visibility * opacity)))
-	if blur_enabled then
-		Render.Blur(Vec2(x, y), Vec2(x + w, y + h), blur_power * visibility, 1.0, 14)
-	end
-	Render.FilledRect(Vec2(x, y), Vec2(x + w, y + h),
-		Color(card.r, card.g, card.b, math.floor(255 * opacity * visibility)), 14)
-	Render.Rect(Vec2(x, y), Vec2(x + w, y + h), edge, 14)
-	Render.FilledRect(Vec2(x + 1, y + 1), Vec2(x + w - 1, y + 5), accent_color, 3)
-	Render.FilledRect(Vec2(x + 1, y + 6), Vec2(x + w - 1, y + 62), base, 0)
-	Render.Line(Vec2(x, y + 62), Vec2(x + w, y + 62), edge, 1)
-
-	Render.FilledCircle(Vec2(x + 30, y + 33), 11, accent_color)
-	Render.FilledCircle(Vec2(x + 30, y + 33), 5, card)
-	panel_text(panel_fonts.bold, 19, L("sm_panel_title"), x + 50, y + 14, text)
-	panel_text(panel_fonts.medium, 9, L("sm_panel_subtitle"), x + 51, y + 39, muted)
-
-	local gear_x, gear_y = x + w - 78, y + 16
-	local gear_hover = point_in(mx, my, gear_x, gear_y, gear_x + 26, gear_y + 26)
-	Render.FilledRect(Vec2(gear_x, gear_y), Vec2(gear_x + 26, gear_y + 26),
-		gear_hover and Color(55, 76, 94, 255) or Color(38, 53, 68, 220), 7)
-	panel_text(panel_fonts.medium, 16, "⚙", gear_x + 1, gear_y - 1, text)
-	panel_hit("settings", gear_x, gear_y, gear_x + 26, gear_y + 26)
-
-	local close_x, close_y = x + w - 42, y + 16
-	local close_hover = point_in(mx, my, close_x, close_y, close_x + 26, close_y + 26)
-	Render.FilledRect(Vec2(close_x, close_y), Vec2(close_x + 26, close_y + 26),
-		Color(47, 61, 76, close_hover and 255 or 190), 7)
-	panel_text(panel_fonts.medium, 16, "x", close_x + 9, close_y + 4, text)
-	panel_hit("close", close_x, close_y, close_x + 26, close_y + 26)
-	panel_hit("drag", x, y, x + w - 112, y + 62)
-
-	if panel.settings_open then
-		local sx, sy, sw = x + 34, y + 92, w - 68
-		local view_top, view_bottom = y + 84, y + h - 74
-		local content_h = 610
-		local max_scroll = math.max(0, content_h - (view_bottom - view_top))
-		panel.settings_scroll = math.max(0, math.min(max_scroll, panel.settings_scroll or 0))
-		local scroll_y = panel.settings_scroll
-		Render.PushClip(Vec2(x + 18, view_top), Vec2(x + w - 18, view_bottom), true)
-		sy = sy - scroll_y
-		panel_text(panel_fonts.bold, 10, L("sm_ui_group"), sx, sy, muted)
-		panel_text(panel_fonts.bold, 26, L("sm_ui_tab"), sx, sy + 28, text)
-		panel_text(panel_fonts.regular, 12, L("sm_ui_subtitle"), sx, sy + 58, muted)
-		local rows = {
-			{ "sm_ui_blur", "blur" },
-			{ "sm_ui_compact", "compact" },
-		}
-		local row_y = sy + 92
-		for _, row in ipairs(rows) do
-			local value = setting_enabled(appearance[row[2]], row[2] == "blur")
-			Render.FilledRect(Vec2(sx, row_y), Vec2(sx + sw, row_y + 48), base, 8)
-			panel_text(panel_fonts.medium, 13, L(row[1]), sx + 16, row_y + 9, text)
-			panel_text(panel_fonts.regular, 10,
-				value and L("sm_ui_enabled") or L("sm_ui_disabled"), sx + 16, row_y + 29, muted)
-			local tx = sx + sw - 55
-			Render.FilledRect(Vec2(tx, row_y + 12), Vec2(tx + 38, row_y + 34), value and accent_color or Color(59, 66, 76), 11)
-			Render.FilledCircle(Vec2(value and tx + 27 or tx + 11, row_y + 23), 8, Color(245, 248, 250))
-			panel_hit("setting_toggle", sx, row_y, sx + sw, row_y + 48, row[2])
-			row_y = row_y + 58
-		end
-		local themes = {
-			{ "sm_theme_graphite", "graphite" }, { "sm_theme_midnight", "midnight" },
-			{ "sm_theme_warm", "warm" }, { "sm_theme_purple", "purple" },
-			{ "sm_theme_red", "red" }, { "sm_theme_oled", "oled" },
-		}
-		local current_theme = Config.ReadString("script_manager", "theme", "graphite")
-		Render.FilledRect(Vec2(sx, row_y), Vec2(sx + sw, row_y + 76), base, 8)
-		panel_text(panel_fonts.medium, 13, L("sm_ui_theme"), sx + 16, row_y + 9, text)
-		local theme_x = sx + 16
-		for _, theme_item in ipairs(themes) do
-			local tw = 92
-			local selected_theme = current_theme == theme_item[2]
-			Render.FilledRect(Vec2(theme_x, row_y + 30), Vec2(theme_x + tw - 6, row_y + 58),
-				selected_theme and accent_color or Color(48, 57, 68), 6)
-			panel_text(panel_fonts.medium, 10, L(theme_item[1]), theme_x + 8, row_y + 37,
-				selected_theme and Color(8, 18, 24) or muted)
-			panel_hit("theme", theme_x, row_y + 25, theme_x + tw - 6, row_y + 64, theme_item[2])
-			theme_x = theme_x + tw
-		end
-		row_y = row_y + 86
-		local accents = {
-			{ "sm_accent_red", "red", {239,68,68} }, { "sm_accent_teal", "teal", {54,186,169} },
-			{ "sm_accent_blue", "blue", {56,141,255} }, { "sm_accent_purple", "purple", {183,92,242} },
-			{ "sm_accent_orange", "orange", {255,159,67} }, { "sm_accent_green", "green", {76,205,112} },
-		}
-		local current_accent = Config.ReadString("script_manager", "accent", "teal")
-		Render.FilledRect(Vec2(sx, row_y), Vec2(sx + sw, row_y + 62), base, 8)
-		panel_text(panel_fonts.medium, 13, L("sm_ui_accent"), sx + 16, row_y + 9, text)
-		for i, accent_item in ipairs(accents) do
-			local cx = sx + 30 + (i - 1) * 42
-			local selected_accent = current_accent == accent_item[2]
-			if selected_accent then Render.FilledCircle(Vec2(cx, row_y + 39), 13, Color(235, 240, 245, 220)) end
-			Render.FilledCircle(Vec2(cx, row_y + 39), 9, Color(accent_item[3][1], accent_item[3][2], accent_item[3][3]))
-			panel_hit("accent", cx - 14, row_y + 23, cx + 14, row_y + 53, accent_item[2])
-		end
-		row_y = row_y + 72
-		local sliders = {
-			{ "sm_ui_blur_power", "blur_power", 10, 100 },
-			{ "sm_ui_opacity", "opacity", 45, 100 },
-			{ "sm_ui_scale", "scale", 80, 120 },
-		}
-		for _, row in ipairs(sliders) do
-			local value = tonumber(setting_value(appearance[row[2]], row[3])) or row[3]
-			Render.FilledRect(Vec2(sx, row_y), Vec2(sx + sw, row_y + 58), base, 8)
-			panel_text(panel_fonts.medium, 13, L(row[1]), sx + 16, row_y + 9, text)
-			panel_text(panel_fonts.bold, 12, tostring(value) .. "%", sx + sw - 56, row_y + 9, accent_color)
-			local bar_x, bar_y, bar_w = sx + 16, row_y + 36, sw - 32
-			Render.FilledRect(Vec2(bar_x, bar_y), Vec2(bar_x + bar_w, bar_y + 4), Color(55, 67, 80), 2)
-			local k = math.max(0, math.min(1, (value - row[3]) / (row[4] - row[3])))
-			Render.FilledRect(Vec2(bar_x, bar_y), Vec2(bar_x + bar_w * k, bar_y + 4), accent_color, 2)
-			panel_hit("setting_slider", bar_x - 8, row_y, bar_x + bar_w + 8, row_y + 58, row)
-			row_y = row_y + 68
-		end
-		Render.PopClip()
-		local track_x = x + w - 12
-		local track_y, track_h = view_top + 8, view_bottom - view_top - 16
-		Render.FilledRect(Vec2(track_x, track_y), Vec2(track_x + 4, track_y + track_h), Color(48, 61, 75, 180), 2)
-		local thumb_h = math.max(38, track_h * (track_h / math.max(track_h, content_h)))
-		local thumb_y = track_y + (track_h - thumb_h) * (panel.settings_scroll / math.max(1, max_scroll))
-		Render.FilledRect(Vec2(track_x - 2, thumb_y), Vec2(track_x + 6, thumb_y + thumb_h), accent_color, 4)
-		panel_button(L("sm_ui_back"), sx, y + h - 62, 120, 36, true, false, mx, my)
-		panel_hit("settings_back", sx, y + h - 62, sx + 120, y + h - 26)
-		return
-	end
-
-	local main_x = x + 24
-	local footer_y = y + h - 62
-	do
-		local left_x, left_y = x + 12, y + 74
-		local left_w, left_h = 244, footer_y - left_y - 8
-		Render.FilledRect(Vec2(left_x + 3, left_y + 4), Vec2(left_x + left_w + 3, left_y + left_h + 4), Color(0, 0, 0, 45), 12)
-		Render.FilledRect(Vec2(left_x, left_y), Vec2(left_x + left_w, left_y + left_h), sidebar, 10)
-		Render.Rect(Vec2(left_x, left_y), Vec2(left_x + left_w, left_y + left_h), edge, 10)
-		panel_text(panel_fonts.bold, 10, L("sm_panel_scripts"), left_x + 14, left_y + 13, muted)
-		Render.Line(Vec2(left_x + 12, left_y + 35), Vec2(left_x + left_w - 12, left_y + 35), edge, 1)
-		local first_row_y = left_y + (compact and 38 or 43)
-		local row_step = math.max(compact and 19 or 22, math.min(compact and 34 or 42,
-			math.floor((footer_y - 8 - first_row_y) / #items)))
-		local row_h = math.max(compact and 17 or 20, row_step - 3)
-		for i, item in ipairs(items) do
-			local row_y = first_row_y + (i - 1) * row_step
-			local row_x = left_x + 8
-			local row_w = left_w - 16
-			local active = i == selected_index
-			local hover = point_in(mx, my, row_x, row_y, row_x + row_w, row_y + row_h)
-			local cached = cached_releases[item.id]
-			local dot_color = cached and cached.status == "current" and Color(91, 202, 155)
-				or cached and cached.status == "available" and Color(229, 161, 91)
-				or cached and cached.status == "manual" and Color(119, 168, 224)
-				or cached and cached.status == "error" and Color(224, 106, 105)
-				or Color(90, 109, 127)
-			if active then
-				Render.FilledRect(Vec2(row_x, row_y), Vec2(row_x + row_w, row_y + row_h),
-					Color(39, 62, 72), 7)
-				Render.FilledRect(Vec2(row_x, row_y + 6), Vec2(row_x + 3, row_y + row_h - 6),
-					accent_color, 2)
-			elseif hover then
-				Render.FilledRect(Vec2(row_x, row_y), Vec2(row_x + row_w, row_y + row_h),
-					Color(30, 42, 55), 7)
-			end
-			Render.FilledCircle(Vec2(row_x + 17, row_y + row_h / 2), 4, dot_color)
-			panel_text(active and panel_fonts.medium or panel_fonts.regular, 11, L(item.key),
-				row_x + 30, row_y + 3,
-				active and text or Color(185, 198, 211))
-			if row_h >= 37 then
-				local summary = cached and cached.status == "available" and ("v" .. cached.version)
-					or cached and cached.status == "current" and L("sm_panel_state_current")
-					or cached and cached.status == "manual" and L("sm_panel_state_manual")
-					or cached and cached.status == "error" and L("sm_panel_state_error")
-					or L("sm_panel_state_unknown")
-				panel_text(panel_fonts.regular, 8, summary, row_x + 30, row_y + 23, muted)
-			end
-			panel_hit("select", row_x, row_y, row_x + row_w, row_y + row_h, i)
-		end
-
-		local detail_x, detail_y = x + 274, y + 80
-		local detail_w = w - 298
-		local item = selected()
-		local title = item and L(item.key) or L("sm_panel_title")
-		local desc = item and L(item.description_key) or ""
-		Render.FilledRect(Vec2(detail_x - 14, detail_y - 12), Vec2(detail_x + detail_w, footer_y - 12), Color(8, 14, 22, 80), 12)
-		Render.Rect(Vec2(detail_x - 14, detail_y - 12), Vec2(detail_x + detail_w, footer_y - 12), Color(edge.r, edge.g, edge.b, 120), 12)
-		panel_text(panel_fonts.bold, 9, L("sm_panel_selected"), detail_x, detail_y, muted)
-		panel_text(panel_fonts.bold, 22, title, detail_x, detail_y + 21, text)
-		local lines = panel_wrap(desc, panel_fonts.regular, 13, detail_w - 8, 2)
-		for i, line in ipairs(lines) do
-			panel_text(panel_fonts.regular, 13, line, detail_x, detail_y + 53 + (i - 1) * 18, muted)
-		end
-		local checked_y = detail_y + (#lines > 1 and 92 or 82)
-		panel_text(panel_fonts.regular, 9, last_checked_text(), detail_x, checked_y, muted)
-
-		local badge_text, badge_color
-		local cached = item and cached_releases[item.id]
-		if working then
-			badge_text, badge_color = L("sm_panel_checking"), Color(208, 171, 89)
-		elseif cached and cached.status == "error" then
-			badge_text, badge_color = L("sm_panel_error_badge"), Color(224, 106, 105)
-		elseif item and item.manual then
-			badge_text, badge_color = L("sm_panel_manual_badge"), Color(208, 171, 89)
-		elseif can_install then
-			badge_text, badge_color = L("sm_panel_update_badge"), Color(229, 161, 91)
-		elseif cached and cached.status == "current" then
-			badge_text, badge_color = L("sm_panel_current_badge"), Color(91, 202, 155)
-		elseif selected_release then
-			badge_text, badge_color = L("sm_panel_cached"), muted
-		else
-			badge_text, badge_color = L("sm_panel_not_checked"), muted
-		end
-		local badge_w = panel_measure(panel_fonts.bold, 9, badge_text) + 18
-		local badge_y = checked_y + 19
-		Render.FilledRect(Vec2(detail_x, badge_y), Vec2(detail_x + badge_w, badge_y + 22),
-			Color(badge_color.r, badge_color.g, badge_color.b, 35), 6)
-		panel_text(panel_fonts.bold, 9, badge_text, detail_x + 9, badge_y + 6, badge_color)
-
-		local box_y = badge_y + 36
-		local box_gap = 10
-		local box_w = (detail_w - box_gap) / 2
-		local function version_box(box_x, heading, value)
-			Render.FilledRect(Vec2(box_x, box_y), Vec2(box_x + box_w, box_y + 64), base, 8)
-			Render.Rect(Vec2(box_x, box_y), Vec2(box_x + box_w, box_y + 64), edge, 8)
-			panel_text(panel_fonts.bold, 9, heading, box_x + 12, box_y + 10, muted)
-			panel_text(panel_fonts.bold, 18, value, box_x + 12, box_y + 31, text)
-		end
-		version_box(detail_x, L("sm_panel_installed"),
-			installed_version and ("v" .. installed_version) or L("sm_panel_not_detected"))
-		version_box(detail_x + box_w + box_gap, L("sm_panel_latest"),
-			selected_release and ("v" .. selected_release.version) or L("sm_panel_not_checked"))
-
-		local status_y = box_y + 75
-		Render.FilledRect(Vec2(detail_x, status_y), Vec2(detail_x + detail_w, status_y + 54), base, 8)
-		Render.FilledCircle(Vec2(detail_x + 15, status_y + 17), 4,
-			(cached and cached.status == "error") and Color(224, 106, 105) or Color(54, 186, 169))
-		panel_text(panel_fonts.bold, 9, L("sm_panel_status"), detail_x + 28, status_y + 9, muted)
-		local status_color = (cached and cached.status == "error") and Color(239, 152, 145) or text
-		local status_lines = panel_wrap(panel_status_text(), panel_fonts.regular, 11, detail_w - 24, 2)
-		for i, line in ipairs(status_lines) do
-			panel_text(panel_fonts.regular, 11, line, detail_x + 12, status_y + 25 + (i - 1) * 14, status_color)
-		end
-
-		local library_y = status_y + 64
-		Render.FilledRect(Vec2(detail_x, library_y), Vec2(detail_x + detail_w, library_y + 48), base, 8)
-		Render.FilledCircle(Vec2(detail_x + 17, library_y + 17), 4,
-			localizer_installed and Color(91, 202, 155) or Color(208, 171, 89))
-		panel_text(panel_fonts.medium, 11, L("sm_panel_localizer_title"), detail_x + 30, library_y + 7, text)
-		panel_text(panel_fonts.regular, 9, L("sm_panel_localizer_desc"), detail_x + 30, library_y + 26, muted)
-		local library_button_w = 156
-		local library_button_x = detail_x + detail_w - library_button_w - 10
-		local library_button_text = localizer_installed and L("sm_panel_localizer_ready")
-			or L("sm_panel_localizer_button")
-		panel_button(library_button_text, library_button_x, library_y + 7, library_button_w, 34,
-			not working and not localizer_installed, false, mx, my)
-		panel_hit("localizer", library_button_x, library_y + 7,
-			library_button_x + library_button_w, library_y + 41)
-	end
-
-	Render.Line(Vec2(x + 12, footer_y), Vec2(x + w - 12, footer_y), edge, 1)
-	local button_y, button_h = footer_y + 13, 36
-	local check_w, action_w, gap = 174, 174, 10
-	local item = selected()
-	local action_text = item and (item.manual and L("sm_panel_download_button")
-		or L("sm_panel_install_button")) or L("sm_panel_install_button")
-	local action_enabled = item and (item.manual and can_download
-		or (not item.manual and can_install)) or false
-	panel_button(L("sm_panel_check_button"), main_x, button_y, check_w, button_h,
-		not working, false, mx, my)
-	panel_hit("check", main_x, button_y, main_x + check_w, button_y + button_h)
-	local action_x = main_x + check_w + gap
-	panel_button(action_text, action_x, button_y, action_w, button_h,
-		action_enabled and not working, true, mx, my)
-	panel_hit(item and item.manual and "download" or "install", action_x, button_y,
-		action_x + action_w, button_y + button_h)
+	if key == "sm_status_available" or key == "sm_status_cache_available" then return "update" end
+	return "info"
 end
 
 local function select_panel_item(index)
 	if not items[index] or index == selected_index then return end
 	selected_index = index
 	Config.WriteInt("script_manager", "selected_index", selected_index)
+	S.detail_t = 0
 	selection_changed()
 end
 
-local function handle_panel_click(x, y)
-	for i = #panel.hits, 1, -1 do
-		local hit = panel.hits[i]
-		if point_in(x, y, hit.x0, hit.y0, hit.x1, hit.y1) then
-			if hit.kind == "close" then
-				panel.open, panel.dragging = false, false
-			elseif hit.kind == "settings" then
-					panel.settings_open = not panel.settings_open
-				elseif hit.kind == "settings_back" then
-					panel.settings_open = false
-				elseif hit.kind == "setting_toggle" then
-					local widget = appearance[hit.value]
-					if widget and type(widget.Set) == "function" then widget:Set(not setting_enabled(widget, false)); save_appearance() end
-				elseif hit.kind == "theme" then
-					local ids = { graphite = 0, midnight = 1, warm = 2, purple = 3, red = 4, oled = 5 }
-					if appearance.theme and type(appearance.theme.Set) == "function" then appearance.theme:Set(ids[hit.value] or 0) end
-					Config.WriteString("script_manager", "theme", hit.value)
-				elseif hit.kind == "accent" then
-					local ids = { red = 0, teal = 1, blue = 2, purple = 3, orange = 4, green = 5 }
-					if appearance.accent and type(appearance.accent.Set) == "function" then appearance.accent:Set(ids[hit.value] or 1) end
-					Config.WriteString("script_manager", "accent", hit.value)
-				elseif hit.kind == "setting_slider" then
-					panel.settings_drag = { row = hit.value, x0 = hit.x0, x1 = hit.x1 }
-				elseif hit.kind == "drag" then
-				panel.dragging = true
-				panel.drag_dx, panel.drag_dy = x - panel.x, y - panel.y
-			elseif hit.kind == "select" then
-				select_panel_item(hit.value)
-			elseif hit.kind == "check" then
-				if not working then update_check() end
-			elseif hit.kind == "install" then
-				if can_install and not working then install_selected() end
-			elseif hit.kind == "download" then
-				if can_download and not working then download_manual() end
-			elseif hit.kind == "localizer" then
+local view = {}
+
+local function hidden(y, h)
+	return S.vis_top ~= nil and (y + h < S.vis_top or y > S.vis_bottom)
+end
+
+function view.hint(id, text)
+	if hit.is(id) then S.tip = text end
+end
+
+----------------------------------------------------------------------
+-- Reusable widgets
+----------------------------------------------------------------------
+
+-- Right-aligned button. Returns the left edge so buttons can be chained.
+function view.button(id, label, glyph, right, y, h, kind, enabled, on_click)
+	local fw = F(500)
+	local tw = g.width(fw, 14, label)
+	local gw = glyph and 22 or 0
+	local w = tw + gw + 36
+	local x = right - w
+	local hot = enabled and hit.is(id)
+	local k = anim.hover(id, hot)
+	local base = kind == "primary" and C.accent or C.fill2
+	g.rect(x, y, w, h, base, 9, enabled and 1 or (kind == "primary" and 0.35 or 0.55))
+	if k > 0 then g.rect(x, y, w, h, C.glow, 9, k) end
+	if hot and S.press and S.press.id == id then g.rect(x, y, w, h, C.press, 9) end
+	local ta = enabled and 1 or 0.45
+	if glyph then g.glyph(glyph, 13, x + 18 + 4, y + h / 2, C.text, ta) end
+	g.text(fw, 14, label, x + 18 + gw, y + h / 2, C.text, ta)
+	if enabled then hit.add(x, y, w, h, id, { click = on_click }) end
+	return x
+end
+
+function view.chip(x, cy, glyph, label, color)
+	local fw = F(500)
+	local tw = g.width(fw, 12, label)
+	local gw = glyph and 18 or 0
+	local w = tw + gw + 20
+	g.rect(x, cy - 13, w, 26, C.fill4, 8)
+	if glyph then g.glyph(glyph, 11, x + 16, cy, color or C.text2) end
+	g.text(fw, 12, label, x + 10 + gw, cy, color or C.text2)
+	return w
+end
+
+function view.spinner(cx, cy, r, c, a)
+	Render.Circle(g.v(cx, cy), r * g.s, g.col(c, 0.3 * (a or 1)), 2 * g.s)
+	Render.Circle(g.v(cx, cy), r * g.s, g.col(c, a or 1), 2 * g.s, (S.now * 400) % 360, 0.25, true)
+end
+
+----------------------------------------------------------------------
+-- Title bar
+----------------------------------------------------------------------
+
+function view.icon_button(name, x, id, on_click, active, tip)
+	local k = anim.hover(id, hit.is(id) or active)
+	if k > 0 then g.rect(x, 12, 32, 28, active and C.fill3 or C.fill4, 6, k) end
+	g.glyph(name, 16, x + 16, 26, (hit.is(id) or active) and C.text or C.text2)
+	hit.add(x, 12, 32, 28, id, { click = on_click })
+	if tip then view.hint(id, tip) end
+end
+
+function view.status_pill(right)
+	local glyph, label, bg, fg
+	local spin = false
+	if working then
+		label, bg, fg, spin = L("sm_panel_checking"), C.accent_pill, C.text, true
+	else
+		local updates = count_status("available")
+		if updates > 0 then
+			glyph, label, bg, fg = "arrow_down", string.format(L("sm_pill_updates"), updates), C.accent, C.text
+		elseif count_status("error") > 0 then
+			glyph, label, bg, fg = "alert", L("sm_panel_error_badge"), PAL.red, PAL.red
+		elseif last_checked_at > 0 then
+			glyph, label, bg, fg = "check", L("sm_pill_current"), PAL.green, PAL.green
+		end
+	end
+	local shown = label ~= nil
+	if shown then
+		S.pill.glyph, S.pill.label, S.pill.bg, S.pill.fg, S.pill.spin = glyph, label, bg, fg, spin
+		S.pill.soft = bg == PAL.red or bg == PAL.green
+	end
+	local a = anim.tween("pill_a", shown and 1 or 0, 0.2)
+	local p = S.pill
+	if a <= 0.01 or not p.label then return right end
+	local fw = F(500)
+	local w = 11 + 18 + 7 + g.width(fw, 13, p.label) + 13
+	local x = right - 8 - w
+	g.rect(x, 12, w, 28, p.bg, 14, p.soft and 0.22 * a or a)
+	if p.spin then
+		view.spinner(x + 20, 26, 5.5, C.text, a)
+	elseif p.glyph then
+		g.glyph(p.glyph, 13, x + 20, 26, p.fg, a)
+	end
+	g.text(fw, 13, p.label, x + 36, 26, p.fg, a)
+	return x
+end
+
+function view.titlebar()
+	g.rect(0, 0, K.W, K.TB, C.bar, 16, 1, ROUND_TOP)
+	g.hl(0, K.TB - 1, K.W, C.black)
+	hit.add(0, 0, K.W, K.TB, "drag", { down = function(mx, my)
+		S.drag = { mx = mx, my = my, wx = S.wx, wy = S.wy }
+	end })
+
+	Render.FilledCircle(g.v(32, 26), 11 * g.s, g.col(C.accent))
+	Render.FilledCircle(g.v(32, 26), 5 * g.s, g.col(C.bar))
+	local x = 54
+	x = x + g.text(F(700), 16, L("sm_panel_title"), x, 26, C.text) + 14
+	g.vr(x, 26, 13)
+	g.text(F(500), 11, L("sm_panel_subtitle"), x + 13, 26, C.text2)
+
+	local right = K.W - K.P - 32
+	view.icon_button("close", right, "tb_close", function()
+		S.open, S.drag, S.slide, S.sb_drag = false, nil, nil, nil
+	end, false, L("sm_tip_close"))
+	right = right - 40
+	view.icon_button("gear", right, "tb_gear", function()
+		S.settings = not S.settings
+	end, S.settings, L(S.settings and "sm_tip_back" or "sm_tip_settings"))
+	view.status_pill(right)
+end
+
+----------------------------------------------------------------------
+-- Main view: sidebar + detail
+----------------------------------------------------------------------
+
+function view.sidebar(x, y, w, h)
+	g.rect(x, y, w, h, C.card, 14)
+	g.text(F(700), 11, L("sm_panel_scripts"), x + 18, y + 22, C.text3)
+	local count = tostring(#items)
+	local cw = g.width(F(600), 11, count) + 14
+	g.rect(x + w - 16 - cw, y + 13, cw, 18, C.fill3, 9)
+	g.text(F(600), 11, count, x + w - 16 - cw / 2, y + 22, C.text2, 1, "c")
+	g.hl(x + 16, y + 40, w - 32, C.sep2)
+
+	local rh, step = g.lay(46, 36), g.lay(50, 40)
+	step = math.min(step, math.floor((h - 52) / #items))
+	rh = math.min(rh, step - 2)
+	local ts = g.lay(32, 24)
+	for i, item in ipairs(items) do
+		local ry = y + 46 + (i - 1) * step
+		local id = "row" .. i
+		local rx, rw = x + 8, w - 16
+		local active = i == selected_index
+		local k = anim.hover(id, hit.is(id))
+		local sel = anim.tween(id .. "_sel", active and 1 or 0, 0.15)
+		if k > 0 and sel < 1 then g.rect(rx, ry, rw, rh, C.hover, 10, k * (1 - sel)) end
+		if sel > 0 then g.rect(rx, ry, rw, rh, C.select, 10, sel) end
+
+		local summary, summary_color, dot_color = row_summary(item)
+		g.rect(rx + 8, ry + (rh - ts) / 2, ts, ts, item.tile, 8)
+		g.glyph(item.glyph, g.lay(15, 12), rx + 8 + ts / 2, ry + rh / 2, C.text)
+
+		local tx = rx + 8 + ts + 11
+		local max_w = rw - (tx - rx) - 28
+		local name_cy = ry + rh / 2 - 8 * (1 - g.cmp)
+		g.text(F(active and 700 or 600), 13, g.fit(active and 700 or 600, 13, L(item.key), max_w), tx, name_cy,
+			active and C.text or { 235, 235, 245, 220 })
+		local sub_a = 1 - g.cmp
+		if sub_a > 0.02 then
+			g.text(F(400), 11, g.fit(400, 11, summary, max_w), tx, ry + rh / 2 + 9, summary_color, sub_a)
+		end
+		Render.FilledCircle(g.v(rx + rw - 14, ry + rh / 2), 4 * g.s, g.col(dot_color))
+		hit.add(rx, ry, rw, rh, id, { click = function() select_panel_item(i) end })
+	end
+end
+
+function view.hero(x, y, w, h, item, cached)
+	g.rect(x, y, w, h, C.card, 14)
+	local ts = 64
+	g.rect(x + 18, y + 18, ts, ts, item.tile, 16)
+	g.glyph(item.glyph, 26, x + 18 + ts / 2, y + 18 + ts / 2, C.text)
+	local tx = x + 18 + ts + 16
+
+	local badge_text, badge_color = badge_for(item, cached)
+	local bw = g.width(F(700), 11, badge_text) + 22
+	g.rect(x + w - 18 - bw, y + 22, bw, 24, badge_color, 12, 0.22)
+	g.text(F(700), 11, badge_text, x + w - 18 - bw / 2, y + 34, badge_color, 1, "c")
+
+	local title_w = w - (tx - x) - 18 - bw - 14
+	g.text(F(700), 22, g.fit(700, 22, L(item.key), title_w), tx, y + 34, C.text)
+	local lines = g.wrap(400, 13, L(item.description_key), w - (tx - x) - 18, 2)
+	for i, line in ipairs(lines) do
+		g.text(F(400), 13, line, tx, y + 62 + (i - 1) * 19, C.text2)
+	end
+
+	g.hl(x + 18, y + h - 52, w - 36, C.sep2)
+	local cx, cy = x + 18, y + h - 26
+	cx = cx + view.chip(cx, cy, nil, item.file) + 8
+	if item.manual then
+		cx = cx + view.chip(cx, cy, "arrow_down", L("sm_chip_zip")) + 8
+	end
+	if item.needs_localizer then
+		view.chip(cx, cy, "lang", L("sm_chip_localizer"), localizer_installed and PAL.green or PAL.orange)
+	end
+end
+
+function view.versions(x, y, w, h, item, cached)
+	local gap = 12
+	local cw = (w - gap) / 2
+	local function card(cx, label, value, color, outline)
+		g.rect(cx, y, cw, h, C.card, 14)
+		if outline then g.frame(cx, y, cw, h, outline, 14, 0.6, 1.5) end
+		g.text(F(700), 11, label, cx + 20, y + 28, C.text3)
+		if value:match("^v%d") then
+			g.text(F(700), 28, value, cx + 20, y + 64, color or C.text)
+		else
+			g.text(F(600), 17, g.fit(600, 17, value, cw - 40), cx + 20, y + 64, color or C.text2)
+		end
+	end
+	card(x, L("sm_panel_installed"), installed_version and ("v" .. installed_version) or L("sm_panel_not_detected"))
+	local latest_color = can_install and PAL.orange or ((cached and cached.status == "current") and PAL.green or nil)
+	card(x + cw + gap, L("sm_panel_latest"),
+		selected_release and ("v" .. selected_release.version) or L("sm_panel_not_checked"),
+		latest_color, can_install and PAL.orange or nil)
+	local mx, my = x + cw + gap / 2, y + h / 2
+	Render.FilledCircle(g.v(mx, my), 13 * g.s, g.col(C.raised))
+	Render.Circle(g.v(mx, my), 13 * g.s, g.col(C.outline), 1 * g.s)
+	g.glyph("chevron", 10, mx + 1, my, C.text2)
+end
+
+function view.activity(x, y, w, h)
+	g.rect(x, y, w, h, C.card, 14)
+	local kind = activity_kind()
+	local tile, glyph = PAL.blue, "info"
+	if kind == "error" then
+		tile, glyph = PAL.red, "alert"
+	elseif kind == "ok" then
+		tile, glyph = PAL.green, "check"
+	elseif kind == "update" then
+		tile, glyph = PAL.orange, "arrow_down"
+	elseif kind == "work" then
+		tile = C.accent
+	end
+	g.rect(x + 18, y + 18, 40, 40, tile, 12)
+	if kind == "work" then
+		view.spinner(x + 38, y + 38, 9, C.text)
+	else
+		g.glyph(glyph, 16, x + 38, y + 38, C.text)
+	end
+	local tx = x + 18 + 40 + 16
+	g.text(F(700), 11, L("sm_panel_status"), tx, y + 27, C.text3)
+	local lines = g.wrap(500, 14, panel_status_text(), w - (tx - x) - 20, 2)
+	for i, line in ipairs(lines) do
+		g.text(F(500), 14, line, tx, y + 51 + (i - 1) * 20, kind == "error" and PAL.red or C.text)
+	end
+	if kind == "work" then
+		local bx, bw = x + 18, w - 36
+		g.rect(bx, y + h - 20, bw, 4, C.fill2, 2)
+		local t = (S.now * 0.8) % 1
+		local seg = bw * 0.3
+		local sx = bx + (bw + seg) * t - seg
+		local x0, x1 = math.max(bx, sx), math.min(bx + bw, sx + seg)
+		if x1 > x0 then g.rect(x0, y + h - 20, x1 - x0, 4, C.accent, 2) end
+	end
+end
+
+function view.library(x, y, w, h)
+	g.rect(x, y, w, h, C.card, 14)
+	local ts = 40
+	g.rect(x + 18, y + (h - ts) / 2, ts, ts, localizer_installed and PAL.green or PAL.orange, 12)
+	g.glyph("lang", 17, x + 18 + ts / 2, y + h / 2, C.text)
+	local tx = x + 18 + ts + 14
+	local right = x + w - 18
+	local left_edge
+	if localizer_installed then
+		local label = L("sm_panel_localizer_ready")
+		local bw = g.width(F(600), 13, label) + 18 + 30
+		g.rect(right - bw, y + h / 2 - 16, bw, 32, PAL.green, 16, 0.2)
+		g.glyph("check", 12, right - bw + 20, y + h / 2, PAL.green)
+		g.text(F(600), 13, label, right - bw + 36, y + h / 2, PAL.green)
+		left_edge = right - bw
+	else
+		left_edge = view.button("localizer", L("sm_panel_localizer_button"), "arrow_down", right, y + h / 2 - 17, 34,
+			"secondary", not working, function()
 				if not localizer_installed and not working then install_localizer_button() end
+			end)
+	end
+	local text_w = left_edge - 14 - tx
+	g.text(F(600), 14, L("sm_panel_localizer_title"), tx, y + h / 2 - 10, C.text)
+	g.text(F(400), 12, g.fit(400, 12, L("sm_panel_localizer_desc"), text_w), tx, y + h / 2 + 11, C.text3)
+end
+
+function view.detail(x, y, w, h)
+	local item = selected()
+	if not item then return end
+	local cached = cached_releases[item.id]
+	local base = g.a
+	g.a = base * (0.4 + 0.6 * ease_out(S.detail_t))
+	local gap = 12
+	local hero_h, ver_h, lib_h = 164, 104, 76
+	local act_h = h - hero_h - ver_h - lib_h - gap * 3
+	local cy = y
+	view.hero(x, cy, w, hero_h, item, cached)
+	cy = cy + hero_h + gap
+	view.versions(x, cy, w, ver_h, item, cached)
+	cy = cy + ver_h + gap
+	view.activity(x, cy, w, act_h)
+	cy = cy + act_h + gap
+	view.library(x, cy, w, lib_h)
+	g.a = base
+end
+
+function view.main()
+	local P = K.P
+	local top = K.TB + P
+	local bottom = K.H - K.FT - 10
+	view.sidebar(P, top, K.SIDE, bottom - top)
+	local dx = P + K.SIDE + 12
+	view.detail(dx, top, K.W - dx - P, bottom - top)
+end
+
+----------------------------------------------------------------------
+-- Settings view
+----------------------------------------------------------------------
+
+function view.group_header(text, y, a)
+	local h = g.lay(38, 34)
+	if not hidden(y, h) then g.text(F(700), 17, text, K.P + 4, y + g.lay(16, 14), C.text, a) end
+	return h
+end
+
+function view.gap() return g.lay(22, 14) end
+
+function view.fold(key, on)
+	return anim.tween("fold_" .. key, on and 1 or 0, 0.26, ease_in_out)
+end
+
+function view.row_geom(sub)
+	local rh, ts = sub and g.lay(50, 46) or g.lay(50, 42), g.lay(30, 26)
+	return rh, ts, K.P + ts + 14
+end
+
+function view.setting_rows(rows, y, a)
+	local x, w = K.P, K.W - 2 * K.P
+	local _, ts, tx = view.row_geom()
+	local rhs, hs, total = {}, {}, 0
+	for n, row in ipairs(rows) do
+		rhs[n] = view.row_geom(row.sub)
+		hs[n] = math.floor(rhs[n] * (row.fold or 1) + 0.5)
+		total = total + hs[n]
+	end
+	if total <= 0 then return 0 end
+	if hidden(y, total) then return total end
+	g.rect(x, y, w, total, C.card, 12, a)
+	local ry = y
+	for n, row in ipairs(rows) do
+		local f, rh = row.fold or 1, rhs[n]
+		local cy = rh / 2
+		if hs[n] > 0 and not hidden(ry, hs[n]) then
+			local ra = a * f * f
+			if f < 1 then g.clip(x, ry, w, hs[n]) end
+			if n > 1 then g.hl(x + tx, ry, w - tx, C.sep2, ra) end
+			g.rect(x + K.P, ry + (rh - ts) / 2, ts, ts, row.tile, 8, ra)
+			g.glyph(row.glyph, g.lay(16, 14), x + K.P + ts / 2, ry + cy, C.text, ra)
+			if row.sub then
+				g.text(F(600), 14, row.title, x + tx, ry + cy - g.lay(8, 7), C.text, ra)
+				g.text(F(400), 12, row.sub, x + tx, ry + cy + g.lay(9, 8), C.text3, ra)
+			else
+				g.text(F(600), 14, row.title, x + tx, ry + cy, C.text, ra)
 			end
-			return
+			if row.control and f > 0.98 then
+				row.control(x + w - K.P, ry + cy, ra)
+			elseif row.control then
+				local hold = hit.list
+				hit.list = {}
+				row.control(x + w - K.P, ry + cy, ra)
+				hit.list = hold
+			end
+			if f < 1 then g.unclip() end
+		end
+		ry = ry + hs[n]
+	end
+	return total
+end
+
+function view.switch(key)
+	return function(right, cy, a)
+		local on = SET[key] == 1
+		local k = anim.tween("sw" .. key, on and 1 or 0, 0.25, ease_in_out)
+		local x = right - 42
+		local bg = { 120 + (48 - 120) * k, 120 + (209 - 120) * k, 128 + (88 - 128) * k, 82 + (255 - 82) * k }
+		g.rect(x, cy - 13, 42, 26, bg, 13, a)
+		local x1, y1, x2, y2 = g.px(x), g.py(cy - 13), g.px(x + 42), g.py(cy + 13)
+		local half = (y2 - y1) / 2
+		Render.FilledCircle(Vec2(x1 + half + (x2 - x1 - 2 * half) * k, y1 + half), half - g.inset(), g.col(C.text, a))
+		hit.add(x, cy - 13, 42, 26, "sw" .. key, { click = function()
+			SET[key] = on and 0 or 1
+			save_settings()
+		end })
+	end
+end
+
+function view.choice(id, options, current, on_pick)
+	return function(right, cy, a)
+		local widths, total = {}, 4
+		for i, o in ipairs(options) do
+			widths[i] = g.width(F(500), 12, o[2]) + 22
+			total = total + widths[i]
+		end
+		local x = right - total
+		g.rect(x, cy - 14, total, 28, C.fill3, 8, a)
+		local sel_x, sel_w, bx = 2, widths[1], 2
+		local found = false
+		for i, o in ipairs(options) do
+			if o[1] == current then sel_x, sel_w, found = bx, widths[i], true end
+			bx = bx + widths[i]
+		end
+		local tx = anim.tween(id .. "_x", sel_x, 0.28, ease_in_out)
+		local tw = anim.tween(id .. "_w", sel_w, 0.28, ease_in_out)
+		if found then g.thumb(x, cy - 14, total, 28, tx - 2, tx - 2 + tw, C.thumb, 6, a) end
+		bx = x + 2
+		for i, o in ipairs(options) do
+			local on = o[1] == current
+			g.text(F(500), 12, o[2], bx + widths[i] / 2, cy, on and C.text or C.text2, a, "c")
+			hit.add(bx, cy - 12, widths[i], 24, id .. i, { click = function() on_pick(o[1]) end })
+			bx = bx + widths[i]
 		end
 	end
 end
+
+function view.swatches(right, cy, a)
+	local step, r = 30, 9
+	local x0 = right - (#K.ACCENTS - 1) * step - r - 4
+	for i, acc in ipairs(K.ACCENTS) do
+		local cx, id = x0 + (i - 1) * step, "acc_" .. acc.id
+		local on = anim.tween(id, SET.accent == acc.id and 1 or 0, 0.2, ease_in_out)
+		local ring = math.max(on, anim.hover(id, hit.is(id)) * 0.35)
+		if ring > 0 then Render.Circle(g.v(cx, cy), (r + 4) * g.s, g.col(C.text, a * ring), 1.5 * g.s) end
+		Render.FilledCircle(g.v(cx, cy), r * g.s, g.col(acc.c, a))
+		hit.add(cx - 13, cy - 13, 26, 26, id, { click = function()
+			if SET.accent == acc.id then return end
+			SET.accent = acc.id
+			save_settings()
+			theme.set()
+		end })
+		view.hint(id, L("sm_accent_" .. acc.id))
+	end
+end
+
+function view.slide_to(mx)
+	local s = S.slide
+	local v = clamp((mx - s.x) / s.w, 0, 1)
+	SET[s.key] = s.min + math.floor((s.max - s.min) * v / 5 + 0.5) * 5
+end
+
+function view.slider(key, min, max)
+	return function(right, cy, a)
+		local tw = 180
+		local x = right - tw - 10
+		local v = (SET[key] - min) / (max - min)
+		local sx, sw = g.x + x * g.s, tw * g.s
+		local id = "sl_" .. key
+		local hot = hit.is(id) or (S.slide ~= nil and S.slide.key == key)
+		g.text(F(600), 13, SET[key] .. "%", x - 18, cy, C.text2, a, "r")
+		g.rect(x, cy - 2, tw, 4, C.fill2, 2, a)
+		g.rect(x, cy - 2, math.max(4, tw * v), 4, C.accent, 2, a)
+		Render.FilledCircle(g.v(x + tw * v, cy), (hot and 11 or 10) * g.s, g.col(C.text, a))
+		hit.add(x - 12, cy - 14, tw + 24, 28, id, { down = function(mx)
+			S.slide = { key = key, min = min, max = max, x = sx, w = sw }
+			view.slide_to(mx)
+		end })
+	end
+end
+
+function view.settings(y, a)
+	local h = 0
+	local theme_options, scale_options = {}, {}
+	for i, t in ipairs(K.THEMES) do theme_options[i] = { t.id, L("sm_theme_" .. t.id) } end
+	for i, v in ipairs(K.SCALES) do scale_options[i] = { v, v .. "%" } end
+
+	h = h + view.group_header(L("sm_ui_group"), y + h, a)
+	h = h + view.setting_rows({
+		{ tile = PAL.indigo, glyph = "moon", title = L("sm_ui_theme"), sub = L("sm_ui_theme_sub"),
+			control = view.choice("theme", theme_options, SET.theme, function(v)
+				if SET.theme == v then return end
+				SET.theme = v
+				save_settings()
+				theme.set()
+			end) },
+		{ tile = C.accent, glyph = "palette", title = L("sm_ui_accent"), sub = L("sm_ui_accent_sub"), control = view.swatches },
+		{ tile = PAL.teal, glyph = "compress", title = L("sm_ui_compact"), sub = L("sm_ui_compact_tip"), control = view.switch("compact") },
+	}, y + h, a) + view.gap()
+
+	h = h + view.group_header(L("sm_ui_window"), y + h, a)
+	h = h + view.setting_rows({
+		{ tile = PAL.blue, glyph = "blur", title = L("sm_ui_blur"), sub = L("sm_ui_blur_tip"), control = view.switch("blur") },
+		{ fold = view.fold("blur", SET.blur == 1), tile = PAL.indigo, glyph = "drop", title = L("sm_ui_blur_power"),
+			control = view.slider("blur_power", 10, 100) },
+		{ tile = PAL.purple, glyph = "eye", title = L("sm_ui_opacity"), sub = L("sm_ui_opacity_sub"),
+			control = view.slider("opacity", 45, 100) },
+		{ tile = PAL.orange, glyph = "expand", title = L("sm_ui_scale"), sub = L("sm_ui_scale_sub"),
+			control = view.choice("scale", scale_options, SET.scale, function(v)
+				SET.scale = v
+				save_settings()
+			end) },
+	}, y + h, a)
+	return h
+end
+
+function view.scrollbar(top, vh, max_scroll)
+	if max_scroll <= 0 then return end
+	local x, y, h = K.W - 24, top + 6, vh - 12
+	local th = math.max(32, h * h / S.content_h)
+	local ty = y + (h - th) * clamp(S.scroll / max_scroll, 0, 1)
+	local hover = hit.is("sb") or hit.is("sb_thumb") or S.sb_drag ~= nil
+	local k = anim.tween("sb", (hover or S.now < S.sb_until) and 1 or 0, 0.2)
+	local wide = anim.tween("sb_w", hover and 1 or 0, 0.15)
+	if k > 0 then
+		g.rect(x + 2, y, 8, h, { 255, 255, 255, 13 }, 4, k * wide)
+		local w = 6 + 2 * wide
+		g.rect(x + 10 - w, ty, w, th, hover and C.sb_hover or C.sb, w / 2, k)
+	end
+	hit.add(x, y, 12, h, "sb", { down = function(mx, my)
+		local rel = (my - g.y) / g.s - y - th / 2
+		S.scroll_to = clamp(rel / (h - th), 0, 1) * max_scroll
+	end })
+	hit.add(x, ty, 12, th, "sb_thumb", { down = function(mx, my)
+		S.sb_drag = { my = my, scroll = S.scroll, k = max_scroll / math.max(1, h - th) }
+	end })
+end
+
+function view.settings_content()
+	local top, bottom = K.TB, K.H - K.FT
+	local vh = bottom - top
+	S.view_h = vh
+	S.scroll = anim.tween("scroll", S.scroll_to, 0.24)
+	hit.add(0, top, K.W, vh, "content", { wheel = function(dir)
+		S.scroll_to = clamp(S.scroll_to + dir * K.WHEEL, 0, math.max(0, S.content_h - S.view_h))
+		S.sb_until = S.now + 1.2
+	end })
+	g.clip(0, top, K.W, vh)
+	hit.clip = { g.x, g.y + top * g.s, g.x + K.W * g.s, g.y + bottom * g.s }
+	local y = top + 8 - math.floor(S.scroll * g.s + 0.5) / g.s
+	S.vis_top, S.vis_bottom = top, bottom
+	local h = view.settings(y, 1)
+	S.vis_top, S.vis_bottom = nil, nil
+	hit.clip = nil
+	g.unclip()
+	S.content_h = h + 8 + 20
+	local max_scroll = math.max(0, S.content_h - vh)
+	S.scroll_to = clamp(S.scroll_to, 0, max_scroll)
+	view.scrollbar(top, vh, max_scroll)
+end
+
+----------------------------------------------------------------------
+-- Footer + tooltip + window
+----------------------------------------------------------------------
+
+function view.footer()
+	local top = K.H - K.FT
+	g.rect(0, top, K.W, K.FT, C.bar, 16, 1, ROUND_BOTTOM)
+	g.hl(0, top, K.W, C.black)
+	local by, bh = top + 14, 36
+	local right = K.W - 18
+	if S.settings then
+		g.text(F(400), 12, L("sm_ui_subtitle"), 22, top + K.FT / 2, C.text3)
+		local x = view.button("set_back", L("sm_ui_back"), nil, right, by, bh, "primary", true, function()
+			S.settings = false
+		end)
+		view.button("set_reset", L("sm_ui_defaults"), nil, x - 10, by, bh, "secondary", true, reset_settings)
+		return
+	end
+
+	g.text(F(400), 12, last_checked_text(), 22, top + K.FT / 2, C.text3)
+	local item = selected()
+	local is_manual = item and item.manual
+	local action_label = is_manual and L("sm_panel_download_button") or L("sm_panel_install_button")
+	local action_on = item ~= nil and not working and ((is_manual and can_download) or (not is_manual and can_install))
+	local x = view.button("act", action_label, "arrow_down", right, by, bh, "primary", action_on, function()
+		if working then return end
+		if is_manual then
+			if can_download then download_manual() end
+		elseif can_install then
+			install_selected()
+		end
+	end)
+	x = view.button("check", L("sm_panel_check_button"), "search", x - 10, by, bh, "secondary", not working, function()
+		if not working then update_check() end
+	end)
+	view.hint("check", L("sm_tip_check"))
+end
+
+function view.tip()
+	if S.tip ~= S.tip_shown then S.tip_shown, S.tip_since = S.tip, S.now end
+	if not S.tip then return end
+	local k = clamp((S.now - S.tip_since - K.TIP_DELAY) / 0.12, 0, 1)
+	if k <= 0 then return end
+	local mx, my = Input.GetCursorPos()
+	local cx, cy = (mx - g.x) / g.s, (my - g.y) / g.s
+	local w = g.width(F(600), 12, S.tip) + 20
+	local over = hit.at(mx, my)
+	local top = over and (over[2] - g.y) / g.s or cy
+	local bottom = over and (over[4] - g.y) / g.s or cy
+	local y = math.max(bottom + 6, cy + 24)
+	if y + 30 > K.H then y = math.min(top - 32, cy - 34) end
+	local x = clamp(cx - w / 2, 4, K.W - w - 4)
+	g.rect(x, y, w, 26, C.raised, 7, k)
+	g.frame(x, y, w, 26, C.outline, 7, k)
+	g.text(F(600), 12, S.tip, x + 10, y + 13, C.text, k)
+end
+
+function view.window()
+	local screen = Render.ScreenSize()
+	g.s = math.max(0.7, screen.y / 1080) * SET.scale / 100
+	if not S.wx then
+		S.wx = Config.ReadInt("script_manager", "panel_x", -1)
+		S.wy = Config.ReadInt("script_manager", "panel_y", -1)
+		if S.wx < 0 or S.wy < 0 then
+			S.wx = math.floor((screen.x - K.W * g.s) / 2)
+			S.wy = math.floor((screen.y - K.H * g.s) / 2)
+		end
+	end
+	S.wx = clamp(S.wx, 0, math.max(0, screen.x - K.W * g.s))
+	S.wy = clamp(S.wy, 0, math.max(0, screen.y - K.H * g.s))
+	g.x, g.a = S.wx, S.alpha
+	g.y = S.wy + (1 - S.alpha) * 10 * g.s
+	g.cmp = anim.tween("compact", SET.compact == 1 and 1 or 0, 0.25, ease_in_out)
+
+	if S.settings ~= S.last_settings then
+		S.last_settings, S.fade_t = S.settings, 0
+		S.scroll_to = 0
+		S.tweens.scroll = nil
+	end
+	S.fade_t = math.min(1, S.fade_t + S.dt / 0.2)
+	S.detail_t = math.min(1, S.detail_t + S.dt / 0.18)
+
+	hit.begin()
+	S.tip = nil
+
+	Render.FilledRect(Vec2(0, 0), Vec2(screen.x, screen.y), Color(3, 7, 12, math.floor(78 * S.alpha)))
+
+	hit.add(0, 0, K.W, K.H, "window", {})
+	g.glass(0, 0, K.W, K.H, 16)
+	view.titlebar()
+
+	local base = g.a
+	g.a = base * (0.35 + 0.65 * ease_out(S.fade_t))
+	if S.settings then
+		view.settings_content()
+	else
+		view.main()
+	end
+	g.a = base
+
+	view.footer()
+	view.tip()
+	g.frame(0, 0, K.W, K.H, C.border, 16)
+end
+
+----------------------------------------------------------------------
+-- Input
+----------------------------------------------------------------------
+
+local input = { held = {}, swallow = false }
+
+local function inside(mx, my)
+	return mx >= S.wx and my >= S.wy and mx < S.wx + K.W * g.s and my < S.wy + K.H * g.s
+end
+
+function input.press(mx, my, button)
+	if button ~= 1 then return end
+	local h = hit.at(mx, my)
+	local id, on = h and h[5], h and h[6] or {}
+	S.press = { id = id or false, on = on }
+	if on.down then on.down(mx, my) end
+end
+
+function input.release(mx, my)
+	local press = S.press
+	S.press = nil
+	if not press or not press.id then return end
+	local h = hit.at(mx, my)
+	if not h or h[5] ~= press.id then return end
+	if press.on.click then press.on.click(mx, my) end
+end
+
+function input.end_drag()
+	if S.drag and S.wx then
+		Config.WriteInt("script_manager", "panel_x", math.floor(S.wx))
+		Config.WriteInt("script_manager", "panel_y", math.floor(S.wy))
+	end
+	if S.slide then save_settings() end
+	S.drag, S.sb_drag, S.slide = nil, nil, nil
+end
+
+----------------------------------------------------------------------
+-- Init
+----------------------------------------------------------------------
 
 set_status("sm_status_idle")
 load_update_cache()
 show_cached_selection()
 local scripts_dir = scripts_path()
 localizer_installed = scripts_dir ~= nil and read_file(scripts_dir .. "!_qLocalizer.lua") ~= nil
+
+----------------------------------------------------------------------
+-- Callbacks
+----------------------------------------------------------------------
 
 function script.OnScriptsLoaded()
 	if ai_bridge and type(ai_bridge.mcp_log) == "function" then
@@ -1536,45 +2266,9 @@ function script.OnScriptsLoaded()
 end
 
 function script.OnUpdateEx()
-		if panel.settings_drag and Input.IsKeyDown(Enum.ButtonCode.KEY_MOUSE1, true) then
-			local drag = panel.settings_drag
-			local cursor_x = Input.GetCursorPos()
-			local row = drag and drag.row
-			if not row then return end
-			local x0 = drag and drag.x0 or 0
-			local x1 = drag and drag.x1 or 1
-			local ratio = math.max(0, math.min(1, (cursor_x - x0) / math.max(1, x1 - x0)))
-			local value = math.floor(row[3] + (row[4] - row[3]) * ratio + 0.5)
-			local widget = appearance[row[2]]
-			if widget and type(widget.Set) == "function" then widget:Set(value) end
-			save_appearance()
-		elseif panel.settings_drag then
-			panel.settings_drag = nil
-		end
 	if ui.open:IsPressed() and not Input.IsInputCaptured() then
-		panel.open = not panel.open
-		panel.dragging = false
-	end
-	local now = os.clock()
-	local elapsed = math.max(0, math.min(0.1, now - panel.animation_time))
-	panel.animation_time = now
-	local target_visibility = panel.open and 1 or 0
-	panel.visibility = panel.visibility
-		+ (target_visibility - panel.visibility) * (1 - math.exp(-elapsed * 14))
-	if math.abs(target_visibility - panel.visibility) < 0.005 then
-		panel.visibility = target_visibility
-	end
-	if panel.dragging then
-		if Input.IsKeyDown(Enum.ButtonCode.KEY_MOUSE1, true) then
-			local cursor_x, cursor_y = Input.GetCursorPos()
-			local screen = Render.ScreenSize()
-			panel.x = math.max(16, math.min(cursor_x - panel.drag_dx, screen.x - panel.width - 16))
-			panel.y = math.max(16, math.min(cursor_y - panel.drag_dy, screen.y - panel.height - 16))
-		else
-			panel.dragging = false
-			Config.WriteInt("script_manager", "panel_x", math.floor(panel.x))
-			Config.WriteInt("script_manager", "panel_y", math.floor(panel.y))
-		end
+		S.open = not S.open
+		S.drag, S.slide, S.sb_drag, S.press = nil, nil, nil, nil
 	end
 	if reload_at and os.clock() >= reload_at then
 		reload_at = nil
@@ -1583,64 +2277,97 @@ function script.OnUpdateEx()
 end
 
 function script.OnFrame()
-	draw_manager_panel()
+	local now = os.clock()
+	local frame = GlobalVars.GetAbsFrameTime()
+	S.dt = clamp(frame > 0 and frame or (now - S.now), 0, 0.1)
+	S.now = now
+	theme.tick(S.dt)
+	S.alpha = anim.tween("window", S.open and 1 or 0, 0.18)
+	if S.alpha <= 0 then return end
+
+	if S.press and not Input.IsKeyDown(Enum.ButtonCode.KEY_MOUSE1, true) then
+		input.end_drag()
+		S.press = nil
+	end
+	for key in pairs(input.held) do
+		if not Input.IsKeyDown(key, true) then input.held[key] = nil end
+	end
+
+	local mx, my = Input.GetCursorPos()
+	if S.drag then
+		S.wx, S.wy = S.drag.wx + mx - S.drag.mx, S.drag.wy + my - S.drag.my
+	end
+	if S.slide then view.slide_to(mx) end
+	if S.sb_drag then
+		S.scroll_to = clamp(S.sb_drag.scroll + (my - S.sb_drag.my) * S.sb_drag.k, 0, math.max(0, S.content_h - S.view_h))
+		S.tweens.scroll = nil
+		S.scroll = S.scroll_to
+		S.sb_until = S.now + 1.2
+	end
+	view.window()
 end
 
-function script.OnKeyEvent(data)
-	if not data then return true end
-	if data.key == Enum.ButtonCode.KEY_MOUSE1
-		and data.event == Enum.EKeyEvent.EKeyEvent_KEY_UP
-		and panel.mouse_captured
-	then
-		panel.mouse_captured = false
-		panel.settings_drag = nil
-		if panel.dragging then
-			panel.dragging = false
-			Config.WriteInt("script_manager", "panel_x", math.floor(panel.x))
-			Config.WriteInt("script_manager", "panel_y", math.floor(panel.y))
+function script.OnKeyEvent(e)
+	if not e then return true end
+	if S.alpha <= 0 or not S.wx then return true end
+	if not S.open then
+		if e.key == Enum.ButtonCode.KEY_MOUSE1 and e.event == Enum.EKeyEvent.EKeyEvent_KEY_UP then
+			input.held[e.key] = nil
+			input.end_drag()
+			S.press = nil
+			input.swallow = false
+		end
+		return true
+	end
+
+	if e.key == Enum.ButtonCode.KEY_ESCAPE and e.event == Enum.EKeyEvent.EKeyEvent_KEY_DOWN then
+		if S.settings then S.settings = false else S.open = false end
+		S.drag, S.slide, S.sb_drag, S.press = nil, nil, nil, nil
+		return false
+	end
+
+	local mx, my = Input.GetCursorPos()
+	if e.event == Enum.EKeyEvent.EKeyEvent_SCROLL_UP or e.event == Enum.EKeyEvent.EKeyEvent_SCROLL_DOWN then
+		if not inside(mx, my) then return true end
+		if S.settings then
+			local content
+			for i = #hit.list, 1, -1 do
+				if hit.list[i][5] == "content" then
+					content = hit.list[i]
+					break
+				end
+			end
+			if content and mx >= content[1] and mx < content[3] and my >= content[2] and my < content[4] then
+				content[6].wheel(e.event == Enum.EKeyEvent.EKeyEvent_SCROLL_DOWN and 1 or -1)
+			end
 		end
 		return false
 	end
-	if data.event == Enum.EKeyEvent.EKeyEvent_SCROLL_UP or data.event == Enum.EKeyEvent.EKeyEvent_SCROLL_DOWN then
-		if panel.settings_open then
-			local cursor_x, cursor_y = Input.GetCursorPos()
-			local panel_y = (panel.y or 0) - (1 - panel.visibility) * 12
-			if point_in(cursor_x, cursor_y, panel.x or 0, panel_y + 84,
-				(panel.x or 0) + panel.width, panel_y + panel.height - 74)
-			then
-				local direction = data.event == Enum.EKeyEvent.EKeyEvent_SCROLL_DOWN and 1 or -1
-				panel.settings_scroll = math.max(0,
-					math.min(300, (panel.settings_scroll or 0) + direction * 70))
+
+	if e.key == Enum.ButtonCode.KEY_MOUSE1 or e.key == Enum.ButtonCode.KEY_MOUSE2 then
+		local left = e.key == Enum.ButtonCode.KEY_MOUSE1
+		if e.event == Enum.EKeyEvent.EKeyEvent_KEY_DOWN then
+			if input.held[e.key] then return not input.swallow end
+			input.held[e.key] = true
+			if not inside(mx, my) then
+				if left then S.press = { id = false } end
+				return true
+			end
+			input.swallow = true
+			input.press(mx, my, left and 1 or 2)
+			return false
+		elseif e.event == Enum.EKeyEvent.EKeyEvent_KEY_UP then
+			input.held[e.key] = nil
+			if left then
+				input.end_drag()
+				input.release(mx, my)
+			end
+			if input.swallow then
+				input.swallow = false
 				return false
 			end
 		end
-	end
-	if not panel.open or panel.visibility < 0.85 then return true end
-	if data.key == Enum.ButtonCode.KEY_ESCAPE
-		and data.event == Enum.EKeyEvent.EKeyEvent_KEY_DOWN
-	then
-		panel.open, panel.dragging = false, false
-		return false
-	end
-	if Input.IsInputCaptured() then return true end
-	if data.key ~= Enum.ButtonCode.KEY_MOUSE1 then return true end
-	if data.event == Enum.EKeyEvent.EKeyEvent_KEY_DOWN then
-		local cursor_x, cursor_y = Input.GetCursorPos()
-		local panel_y = (panel.y or 0) - (1 - panel.visibility) * 12
-		local inside = point_in(cursor_x, cursor_y, panel.x or 0, panel_y,
-			(panel.x or 0) + panel.width, panel_y + panel.height)
-		if inside then
-			panel.mouse_captured = true
-			handle_panel_click(cursor_x, cursor_y)
-			return false
-		end
-	end
-	local cursor_x, cursor_y = Input.GetCursorPos()
-	local panel_y = (panel.y or 0) - (1 - panel.visibility) * 12
-	if point_in(cursor_x, cursor_y, panel.x or 0, panel_y,
-		(panel.x or 0) + panel.width, panel_y + panel.height)
-	then
-		return false
+		return true
 	end
 	return true
 end

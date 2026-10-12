@@ -24,6 +24,7 @@
 Менеджер скриптов Umbrella с перетаскиваемой панелью: автоматически проверяет весь каталог, сохраняет версии и время проверки и устанавливает обновления по запросу.
 
 - Проверяет доступные версии по кнопке
+- Показывает скрипты, версии и статусы обновлений в переработанной панели с карточками, анимациями и подсказками
 - Настраивает тему, акцентный цвет, размытие фона, прозрачность и масштаб интерфейса
 - Поддерживает компактное отображение списка скриптов
 - Устанавливает обновления отдельных Dota-скриптов и перезагружает Script System
@@ -41,6 +42,13 @@
 3. Откройте `Scripts → Scripts → Script Manager`, назначьте клавишу для `Open manager` (по умолчанию `Insert`), затем откройте панель и проверьте выбранный скрипт.
 
 ## Что нового
+
+**Обновление v1.4.0**
+
+- Полностью переработана панель Script Manager: интерфейс стал чище, а информация о скрипте, версиях и состоянии обновления — нагляднее.
+- Обновлены список скриптов и карточки: появились понятные значки, статусы, плавные анимации и подсказки.
+- Настройки внешнего вида собраны в отдельном разделе с прокруткой: темы, акцентные цвета, размытие и прозрачность фона, масштаб и компактный режим.
+- Существующий масштаб панели из настроек предыдущей версии сохраняется при обновлении.
 
 **Обновление v1.3.0**
 
@@ -69,6 +77,7 @@
 An Umbrella script manager with a draggable panel that checks the full catalog on startup, saves versions and check time, and installs updates on demand.
 
 - Checks for available versions on demand
+- Shows scripts, versions, and update status in a redesigned panel with detail cards, animations, and tooltips
 - Customizes the theme, accent color, background blur, opacity, and interface scale
 - Supports a compact script-list layout
 - Installs individual Dota script updates and reloads the Script System
@@ -86,6 +95,13 @@ An Umbrella script manager with a draggable panel that checks the full catalog o
 3. Open `Scripts → Scripts → Script Manager`, assign a key to `Open manager` (defaults to `Insert`), then open the panel and check the selected script.
 
 ## Changelog
+
+**Update v1.4.0**
+
+- Rebuilt the Script Manager panel with a cleaner layout and a clearer view of each script, its versions, and update status.
+- Refreshed the script list and detail cards with recognizable icons, status indicators, smooth animations, and tooltips.
+- Moved appearance controls into a dedicated, scrollable settings view with themes, accent colors, background blur and opacity, scaling, and compact mode.
+- Preserved the panel scale saved by the previous version.
 
 **Update v1.3.0**
 
