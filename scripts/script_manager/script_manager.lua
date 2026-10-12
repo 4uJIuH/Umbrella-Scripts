@@ -316,7 +316,7 @@ local qLocalization = (function()
 	return lib
 end)()
 
-local VERSION = "1.0.0"
+local VERSION = "1.0.1"
 
 local localization = qLocalization.new({
 	en = {
@@ -425,7 +425,7 @@ end
 local function set_status(key, value)
 	local text = L(key)
 	if value ~= nil then text = string.format(text, tostring(value)) end
-	ui.status:Name(text)
+	ui.status:ForceLocalization(text)
 end
 
 local function set_actions(can_install, can_download)
