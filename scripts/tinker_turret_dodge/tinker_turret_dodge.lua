@@ -1,4 +1,4 @@
-local VERSION = "1.1.3"
+local VERSION = "1.1.5"
 
 local localization = qLocalization.new({
     en = {
@@ -171,6 +171,7 @@ local THREAT_NAMES = {
     leshrac_split_earth = true,
     lina_light_strike_array = true,
     lion_impale = true,
+    monkey_king_boundless_strike = true,
     mars_spear = true,
     sven_storm_bolt = true,
     earthshaker_fissure = true,
@@ -188,6 +189,10 @@ local THREAT_NAMES = {
     witch_doctor_paralyzing_cask = true,
     beastmaster_primal_roar = true,
     pudge_dismember = true,
+    hoodwink_bushwhack = true,
+    marci_companion_run = true,
+    ogre_magi_fireblast = true,
+    riki_smoke_screen = true,
     tidehunter_ravage = true,
     disruptor_kinetic_field = true,
     disruptor_static_storm = true,
@@ -219,6 +224,10 @@ local STUN_NAMES = {
     lina_light_strike_array = true,
     leshrac_split_earth = true,
     lion_impale = true,
+    monkey_king_boundless_strike = true,
+    hoodwink_bushwhack = true,
+    marci_companion_run = true,
+    ogre_magi_fireblast = true,
     mars_spear = true,
     sven_storm_bolt = true,
     earthshaker_fissure = true,
@@ -284,6 +293,12 @@ local AREA_THREATS = {
     elder_titan_echo_stomp = {},
     disruptor_kinetic_field = { point = true },
     disruptor_static_storm = { point = true },
+    hoodwink_bushwhack = { point = true, specialValue = "trap_radius" },
+    marci_companion_run = { point = true, specialValue = "landing_radius" },
+    riki_smoke_screen = { point = true },
+}
+local LINE_THREATS = {
+    monkey_king_boundless_strike = "strike_radius",
 }
 local AREA_MARGIN = 50
 
@@ -413,10 +428,16 @@ local function beginRuntimeFrame(currentTime)
 end
 
 local function getAreaRadius(ability, threatName)
-    if not AREA_THREATS[threatName] then
+    local area = AREA_THREATS[threatName]
+    if not area then
         return nil
     end
-    local radius = ability and Ability.GetLevelSpecialValueFor(ability, "radius") or 0
+    local radius = ability
+        and Ability.GetLevelSpecialValueFor(
+            ability,
+            area.specialValue or "radius"
+        )
+        or 0
     if radius <= 0 then
         return 0
     end
@@ -464,6 +485,50 @@ local function threatAffectsHero(data, hero, caster, threatName)
     local heroPosition = Entity.GetAbsOrigin(hero)
     local casterPosition = Entity.GetAbsOrigin(caster)
     local casterDistance = distance2D(casterPosition, heroPosition)
+
+    local lineRadiusValue = LINE_THREATS[threatName]
+    if lineRadiusValue then
+        if not data.position then
+            return casterDistance <= TURRET_RADIUS
+        end
+
+        local directionX = data.position.x - casterPosition.x
+        local directionY = data.position.y - casterPosition.y
+        local directionLength = math.sqrt(
+            directionX * directionX + directionY * directionY
+        )
+        if directionLength < 0.001 then
+            return casterDistance <= TURRET_RADIUS
+        end
+
+        directionX = directionX / directionLength
+        directionY = directionY / directionLength
+        local alongLine = (
+            (heroPosition.x - casterPosition.x) * directionX
+            + (heroPosition.y - casterPosition.y) * directionY
+        )
+        local castRange = Ability.GetCastRange(data.ability)
+        if not castRange or castRange <= 0 then
+            castRange = directionLength
+        end
+        if alongLine < -AREA_MARGIN
+            or alongLine > castRange + AREA_MARGIN
+        then
+            return false
+        end
+
+        local closestPosition = Vector(
+            casterPosition.x + directionX * alongLine,
+            casterPosition.y + directionY * alongLine,
+            casterPosition.z
+        )
+        local lineRadius = Ability.GetLevelSpecialValueFor(
+            data.ability,
+            lineRadiusValue
+        )
+        return distance2D(heroPosition, closestPosition)
+            <= lineRadius + AREA_MARGIN
+    end
 
     local areaRadius = getAreaRadius(data.ability, threatName)
     if areaRadius then
@@ -1468,7 +1533,16 @@ handleThreat = function(data)
             destination or Entity.GetAbsOrigin(data.npc),
             SPECIAL_TURRET_OFFSET
         )
-    elseif STUN_NAMES[threatName] then
+    elseif threatName == "monkey_king_boundless_strike" then
+        targetPosition = getBlinkTurretPosition(
+            hero,
+            Entity.GetAbsOrigin(data.npc),
+            SPECIAL_TURRET_OFFSET
+        )
+    elseif STUN_NAMES[threatName]
+        or AREA_THREATS[threatName]
+        or LINE_THREATS[threatName]
+    then
         local threatCaster = getThreatCaster(data)
         if threatCaster and Entity.IsNPC(threatCaster) then
             local sourcePosition = Entity.GetAbsOrigin(threatCaster)
