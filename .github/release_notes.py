@@ -47,6 +47,13 @@ def manifest_path(script):
     return path if path.exists() else None
 
 
+def script_source_path(script):
+    script_dir = BASE / "scripts" / script["id"]
+    if "package" in script:
+        return script_dir / script["package"] / "Tinker.lua"
+    return script_dir / script["file"]
+
+
 def build_package(script):
     script_dir = BASE / "scripts" / script["id"]
     package_dir = script_dir / script["package"]
@@ -74,24 +81,58 @@ def build_package(script):
 
 
 def check_version(script, version):
-    text = (BASE / "scripts" / script["id"] / script["file"]).read_text(encoding="utf-8")
+    text = script_source_path(script).read_text(encoding="utf-8")
     m = re.search(r'VERSION = "([^"]+)"', text)
     if not m or m.group(1) != version:
         raise SystemExit("%s has VERSION %s, tag says %s"
-                         % (script["file"], m.group(1) if m else "none", version))
+                         % (script_source_path(script).name, m.group(1) if m else "none", version))
+
+
+def write_manager_catalog():
+    items = []
+    for script in CATALOG["scripts"]:
+        path = manifest_path(script)
+        if script.get("category") != "dota" or not path:
+            continue
+        version = json.loads(path.read_text(encoding="utf-8"))
+        items.append({
+            "id": script["id"],
+            "version": version["version"],
+            "url": version["url"],
+            "release": version.get("release"),
+            "manual": "package" in script,
+            "needs_q_localizer": script.get("needs_q_localizer", False),
+        })
+
+    dependency = next(script for script in CATALOG["scripts"] if script["id"] == "q_localizer")
+    feed = {
+        "schema": 1,
+        "q_localizer": {
+            "version": dependency["initial"]["version"],
+            "url": dependency["initial"]["url"],
+        },
+        "scripts": items,
+    }
+    path = BASE / "scripts" / "manager" / "catalog.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(feed, indent=2) + NL, encoding="utf-8", newline=NL)
+    print("%s updated (%d Dota entries)" % (path.relative_to(BASE).as_posix(), len(items)))
 
 
 def write_manifest(script, tag, sha):
     version = tag[len(script["tag"]) + 2:]
+    release_url = "https://github.com/%s/releases/download/%s/%s" % (REPO, tag, script["file"])
+    source_path = script_source_path(script).relative_to(BASE).as_posix()
     data = {
         "version": version,
-        "url": "https://raw.githubusercontent.com/%s/%s/scripts/%s/%s"
-               % (REPO, sha, script["id"], script["file"]),
-        "release": "https://github.com/%s/releases/download/%s/%s" % (REPO, tag, script["file"]),
+        "url": release_url if "package" in script else
+               "https://raw.githubusercontent.com/%s/%s/%s" % (REPO, sha, source_path),
+        "release": release_url,
     }
     path = manifest_path(script)
     path.write_text(json.dumps(data, indent=2) + NL, encoding="utf-8", newline=NL)
     print("%s -> %s" % (path.relative_to(BASE).as_posix(), version))
+    write_manager_catalog()
 
 
 def main():

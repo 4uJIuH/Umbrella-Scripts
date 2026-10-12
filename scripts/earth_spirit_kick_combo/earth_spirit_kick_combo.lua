@@ -1,3 +1,5 @@
+local VERSION = "1.0.0"
+
 local script = {}
 
 local localization = qLocalization.new({

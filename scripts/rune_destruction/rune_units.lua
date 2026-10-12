@@ -309,6 +309,8 @@ local qLocalization = (function()
 	return lib
 end)()
 
+local VERSION = "1.0.2"
+
 local localization = qLocalization.new({
 	en = {
 		ru_group_main = "Main", ru_group_runes = "Runes",

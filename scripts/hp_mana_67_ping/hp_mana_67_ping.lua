@@ -1,3 +1,5 @@
+local VERSION = "1.0.1"
+
 local script = {}
 
 local JSON = require("assets.JSON")

@@ -1,3 +1,5 @@
+local VERSION = "1.0.0"
+
 local bear_pull = {}
 
 local localization = qLocalization.new({

@@ -1,3 +1,5 @@
+local VERSION = "1.0.0"
+
 local localization = qLocalization.new({
 	en = {
 		aw_group_main = "Main",

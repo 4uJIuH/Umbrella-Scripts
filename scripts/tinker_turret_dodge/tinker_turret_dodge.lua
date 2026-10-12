@@ -1,3 +1,5 @@
+local VERSION = "1.1.3"
+
 local localization = qLocalization.new({
     en = {
         ttd_group = "Turret Dodger",
