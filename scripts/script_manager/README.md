@@ -3,10 +3,11 @@
 проверка и установка обновлений Dota-скриптов по кнопке / check and install Dota script updates on demand
 
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.1.0/script_manager.lua) — `script-manager-v1.1.0`, 2026-10-12
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.1.1/script_manager.lua) — `script-manager-v1.1.1`, 2026-10-12
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
+| [`script-manager-v1.1.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.1.1) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.1.1/script_manager.lua) | 0 |
 | [`script-manager-v1.1.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.1.0) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.1.0/script_manager.lua) | 0 |
 | [`script-manager-v1.0.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.0.1) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.0.1/script_manager.lua) | 1 |
 | [`script-manager-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.0.0) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.0.0/script_manager.lua) | 0 |
@@ -35,14 +36,8 @@
 
 **Обновление v1.1.1**
 
-- Менеджер больше не отображается в списке Dota-скриптов, которыми он управляет.
-- Исправлена ошибка `script not found in catalog` при выборе самого менеджера.
-
-**Обновление v1.1.0**
-
-- Полностью переработана панель Script Manager: теперь это отдельное перетаскиваемое окно со списком скриптов и версиями.
-- Добавлены понятные статусы проверки, установки и наличия локализатора.
-- Положение панели сохраняется между перезагрузками скрипта.
+- Убран Script Manager из списка управляемых Dota-скриптов: он не входит в каталог обновлений и не должен отображаться как доступный для проверки.
+- Устранена ошибка `script not found in catalog` при выборе самого менеджера.
 
 ---
 
@@ -69,11 +64,5 @@ A Dota script manager with a draggable panel that displays versions, checks GitH
 
 **Update v1.1.1**
 
-- The manager is no longer listed among the Dota scripts it manages.
-- Fixed the `script not found in catalog` error when selecting the manager itself.
-
-**Update v1.1.0**
-
-- Redesigned the Script Manager as a draggable panel with a script list and version details.
-- Added clear statuses for update checks, installations, and the localization library.
-- The panel position is saved between script reloads.
+- Removed Script Manager from the managed Dota scripts list because it is not part of the update catalog.
+- Fixed the `script not found in catalog` error caused by selecting the manager itself.
