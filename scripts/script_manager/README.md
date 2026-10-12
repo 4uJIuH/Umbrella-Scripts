@@ -33,6 +33,11 @@
 
 ## Что нового
 
+**Обновление v1.1.1**
+
+- Менеджер больше не отображается в списке Dota-скриптов, которыми он управляет.
+- Исправлена ошибка `script not found in catalog` при выборе самого менеджера.
+
 **Обновление v1.1.0**
 
 - Полностью переработана панель Script Manager: теперь это отдельное перетаскиваемое окно со списком скриптов и версиями.
@@ -61,6 +66,11 @@ A Dota script manager with a draggable panel that displays versions, checks GitH
 3. Open `Scripts → Scripts → Script Manager`, assign a key to `Open manager` (defaults to `Insert`), then open the panel and check the selected script.
 
 ## Changelog
+
+**Update v1.1.1**
+
+- The manager is no longer listed among the Dota scripts it manages.
+- Fixed the `script not found in catalog` error when selecting the manager itself.
 
 **Update v1.1.0**
 

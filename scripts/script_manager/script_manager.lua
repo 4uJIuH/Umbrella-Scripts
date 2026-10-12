@@ -316,7 +316,7 @@ local qLocalization = (function()
 	return lib
 end)()
 
-local VERSION = "1.1.0"
+local VERSION = "1.1.1"
 
 local localization = qLocalization.new({
 	en = {
@@ -360,7 +360,6 @@ local localization = qLocalization.new({
 		sm_item_earth = "Earth Spirit Kick Combo",
 		sm_item_hp = "HP/Mana 67 Ping",
 		sm_item_bear = "Spirit Bear Pull",
-		sm_item_manager = "Script Manager",
 		sm_desc_ttd = "Dodges dangerous abilities with Tinker turrets.",
 		sm_desc_farm = "Tinker Auto Farm package. ZIP installation is manual.",
 		sm_desc_shackleshot = "Automatically assists with Shackleshot.",
@@ -369,7 +368,6 @@ local localization = qLocalization.new({
 		sm_desc_earth = "Automates Earth Spirit's Blink and kick combo.",
 		sm_desc_hp = "Tracks HP and mana milestones and sends chat alerts.",
 		sm_desc_bear = "Uses Lone Druid's bear to pull a creep wave.",
-		sm_desc_manager = "Keeps supported Dota scripts up to date from GitHub.",
 	},
 	ru = {
 		sm_group_main = "Script Manager",
@@ -412,7 +410,6 @@ local localization = qLocalization.new({
 		sm_item_earth = "Earth Spirit Kick Combo",
 		sm_item_hp = "HP/Mana 67 Ping",
 		sm_item_bear = "Spirit Bear Pull",
-		sm_item_manager = "Script Manager",
 		sm_desc_ttd = "Уклоняется от опасных способностей с помощью турелей Тинкера.",
 		sm_desc_farm = "Пакет Tinker Auto Farm. ZIP нужно установить вручную.",
 		sm_desc_shackleshot = "Автоматизирует помощь с Shackleshot.",
@@ -421,7 +418,6 @@ local localization = qLocalization.new({
 		sm_desc_earth = "Автоматизирует Blink-комбо Earth Spirit с толчком.",
 		sm_desc_hp = "Следит за значениями HP и маны и отправляет сообщения в чат.",
 		sm_desc_bear = "Использует медведя Lone Druid для отвода волны крипов.",
-		sm_desc_manager = "Обновляет поддерживаемые Dota-скрипты напрямую с GitHub.",
 	},
 })
 
@@ -439,7 +435,6 @@ local items = {
 	{ id = "earth_spirit_kick_combo", key = "sm_item_earth", file = "earth_spirit_kick_combo.lua", needs_localizer = true },
 	{ id = "hp_mana_67_ping", key = "sm_item_hp", file = "hp_mana_67_ping.lua", needs_localizer = true },
 	{ id = "spirit_bear_pull", key = "sm_item_bear", file = "lone_druid_bear_pull.lua", needs_localizer = true },
-	{ id = "script_manager", key = "sm_item_manager", file = "script_manager.lua" },
 }
 local description_keys = {
 	tinker_turret_dodge = "sm_desc_ttd",
@@ -450,7 +445,6 @@ local description_keys = {
 	earth_spirit_kick_combo = "sm_desc_earth",
 	hp_mana_67_ping = "sm_desc_hp",
 	spirit_bear_pull = "sm_desc_bear",
-	script_manager = "sm_desc_manager",
 }
 
 local ui = {}

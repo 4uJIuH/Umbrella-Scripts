@@ -1,5 +1,4 @@
-**Update v1.1.0**
+**Update v1.1.1**
 
-- Redesigned the Script Manager as a draggable panel with a script list and version details.
-- Added clear statuses for update checks, installations, and the localization library.
-- The panel position is saved between script reloads.
+- Removed Script Manager from the managed Dota scripts list because it is not part of the update catalog.
+- Fixed the `script not found in catalog` error caused by selecting the manager itself.
