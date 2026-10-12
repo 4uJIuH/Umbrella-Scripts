@@ -589,7 +589,7 @@
       "tag": "script-manager",
       "title": "Script Manager",
       "kind": "lua",
-      "category": "dota",
+      "category": "auxiliary",
       "file": "script_manager.lua",
       "initial": {
         "version": "1.0.1",
