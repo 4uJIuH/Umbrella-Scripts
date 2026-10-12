@@ -1,7 +1,7 @@
-**Update v1.2.0**
+**Update v1.2.1**
 
-- Script Manager is back in the managed list and update catalog, and can update itself.
-- The manager checks the full catalog on load. Versions, statuses, and the last successful check time are saved across reloads.
-- The “Check all” button fetches a fresh catalog and replaces the cached results; installing an update still requires an explicit click.
-- Added an in-panel settings tab with toggles for startup checks and compact list layout.
-- Refined the panel structure, navigation, and script rows to show each script's version and update state.
+- Refreshed the panel UI with smooth open/close transitions and an animated backdrop.
+- Removed the settings tab; catalog checks at startup remain enabled.
+- Added short descriptions for every script.
+- Fixed the script list layout so names and statuses do not overlap and rows stay clear of the footer buttons.
+- Adapted the panel and its elements to the available screen height.

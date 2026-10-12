@@ -316,7 +316,7 @@ local qLocalization = (function()
 	return lib
 end)()
 
-local VERSION = "1.2.0"
+local VERSION = "1.2.1"
 
 local localization = qLocalization.new({
 	en = {
@@ -343,18 +343,8 @@ local localization = qLocalization.new({
 		sm_panel_install_button = "Install update",
 		sm_panel_download_button = "Download ZIP",
 		sm_panel_localizer_button = "Install qLocalization",
-		sm_panel_scripts_tab = "Scripts",
-		sm_panel_settings_tab = "Settings",
-		sm_panel_settings_heading = "Manager preferences",
-		sm_panel_settings_intro = "Choose how the update center behaves. Changes are saved automatically.",
 		sm_panel_last_checked = "Last checked: %s",
-		sm_panel_last_scan_heading = "LAST SUCCESSFUL CATALOG CHECK",
 		sm_panel_never_checked = "No successful checks yet",
-		sm_panel_auto_check_title = "Check on startup",
-		sm_panel_auto_check_desc = "Refresh script versions whenever Script Manager loads.",
-		sm_panel_compact_title = "Compact script list",
-		sm_panel_compact_desc = "Use tighter rows to show more scripts at once.",
-		sm_panel_settings_note = "The open hotkey is configured in the Script Manager menu.",
 		sm_panel_cached = "CACHED",
 		sm_panel_checking = "CHECKING",
 		sm_panel_error_badge = "CHECK FAILED",
@@ -386,15 +376,15 @@ local localization = qLocalization.new({
 		sm_item_hp = "HP/Mana 67 Ping",
 		sm_item_bear = "Spirit Bear Pull",
 		sm_item_manager = "Script Manager",
-		sm_desc_ttd = "Dodges dangerous abilities with Tinker turrets.",
-		sm_desc_farm = "Tinker Auto Farm package. ZIP installation is manual.",
-		sm_desc_shackleshot = "Automatically assists with Shackleshot.",
-		sm_desc_spark = "Automates Spark Wraith placement and targeting.",
-		sm_desc_runes = "Sends controlled units to collect or deny runes.",
+		sm_desc_ttd = "Uses Tinker's turrets to dodge dangerous enemy abilities.",
+		sm_desc_farm = "Tinker farming script distributed as a ZIP package.",
+		sm_desc_shackleshot = "Automatically aims and casts Windranger's Shackleshot.",
+		sm_desc_spark = "Automatically places and targets Arc Warden's Spark Wraiths.",
+		sm_desc_runes = "Sends controlled units to collect or destroy runes.",
 		sm_desc_earth = "Automates Earth Spirit's Blink and kick combo.",
-		sm_desc_hp = "Tracks HP and mana milestones and sends chat alerts.",
-		sm_desc_bear = "Uses Lone Druid's bear to pull a creep wave.",
-		sm_desc_manager = "Checks and installs updates for supported Umbrella scripts.",
+		sm_desc_hp = "Tracks HP and mana thresholds and sends chat alerts.",
+		sm_desc_bear = "Uses Lone Druid's Spirit Bear to pull a creep wave.",
+		sm_desc_manager = "Checks script versions and installs selected updates.",
 	},
 	ru = {
 		sm_group_main = "Script Manager",
@@ -420,18 +410,8 @@ local localization = qLocalization.new({
 		sm_panel_install_button = "Установить",
 		sm_panel_download_button = "Скачать ZIP",
 		sm_panel_localizer_button = "Установить qLocalization",
-		sm_panel_scripts_tab = "Скрипты",
-		sm_panel_settings_tab = "Настройки",
-		sm_panel_settings_heading = "Настройки менеджера",
-		sm_panel_settings_intro = "Настройте работу центра обновлений. Изменения сохраняются автоматически.",
 		sm_panel_last_checked = "Последняя проверка: %s",
-		sm_panel_last_scan_heading = "ПОСЛЕДНЯЯ УСПЕШНАЯ ПРОВЕРКА КАТАЛОГА",
 		sm_panel_never_checked = "Успешных проверок ещё не было",
-		sm_panel_auto_check_title = "Проверять при запуске",
-		sm_panel_auto_check_desc = "Обновлять версии скриптов при каждой загрузке Script Manager.",
-		sm_panel_compact_title = "Компактный список",
-		sm_panel_compact_desc = "Уменьшить высоту строк, чтобы видеть больше скриптов.",
-		sm_panel_settings_note = "Клавиша открытия настраивается в меню Script Manager.",
 		sm_panel_cached = "СОХРАНЕНО",
 		sm_panel_checking = "ПРОВЕРКА",
 		sm_panel_error_badge = "ОШИБКА",
@@ -463,15 +443,15 @@ local localization = qLocalization.new({
 		sm_item_hp = "HP/Mana 67 Ping",
 		sm_item_bear = "Spirit Bear Pull",
 		sm_item_manager = "Script Manager",
-		sm_desc_ttd = "Уклоняется от опасных способностей с помощью турелей Тинкера.",
-		sm_desc_farm = "Пакет Tinker Auto Farm. ZIP нужно установить вручную.",
-		sm_desc_shackleshot = "Автоматизирует помощь с Shackleshot.",
-		sm_desc_spark = "Автоматизирует размещение и выбор целей для Spark Wraith.",
-		sm_desc_runes = "Отправляет подконтрольных юнитов собирать или ломать руны.",
+		sm_desc_ttd = "Уклоняется от опасных способностей врагов с помощью турелей Тинкера.",
+		sm_desc_farm = "Скрипт для фарма за Тинкера. Распространяется ZIP-пакетом.",
+		sm_desc_shackleshot = "Автоматически наводит и применяет Shackleshot за Windranger.",
+		sm_desc_spark = "Автоматически устанавливает Spark Wraith и выбирает цели за Arc Warden.",
+		sm_desc_runes = "Отправляет подконтрольных юнитов собирать или уничтожать руны.",
 		sm_desc_earth = "Автоматизирует Blink-комбо Earth Spirit с толчком.",
-		sm_desc_hp = "Следит за значениями HP и маны и отправляет сообщения в чат.",
-		sm_desc_bear = "Использует медведя Lone Druid для отвода волны крипов.",
-		sm_desc_manager = "Проверяет и устанавливает обновления поддерживаемых скриптов Umbrella.",
+		sm_desc_hp = "Отслеживает пороги здоровья и маны и отправляет сообщения в чат.",
+		sm_desc_bear = "Использует Spirit Bear Lone Druid для отвода волны крипов.",
+		sm_desc_manager = "Проверяет версии скриптов и устанавливает выбранные обновления.",
 	},
 })
 
@@ -482,26 +462,15 @@ local JSON = require("assets.JSON")
 local CATALOG_URL = "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/manager/catalog.json"
 local catalog_request_count = 0
 local items = {
-	{ id = "tinker_turret_dodge", key = "sm_item_ttd", file = "tinker_turret_dodge.lua", needs_localizer = true },
-	{ id = "tinker_auto_farm", key = "sm_item_farm", file = "Tinker-Auto-Farm.zip", manual = true },
-	{ id = "auto_shackleshot", key = "sm_item_shackleshot", file = "Auto_Shackleshot.lua", needs_localizer = true },
-	{ id = "auto_spark", key = "sm_item_spark", file = "Auto_Spark.lua", needs_localizer = true },
-	{ id = "rune_destruction", key = "sm_item_runes", file = "rune_units.lua" },
-	{ id = "earth_spirit_kick_combo", key = "sm_item_earth", file = "earth_spirit_kick_combo.lua", needs_localizer = true },
-	{ id = "hp_mana_67_ping", key = "sm_item_hp", file = "hp_mana_67_ping.lua", needs_localizer = true },
-	{ id = "spirit_bear_pull", key = "sm_item_bear", file = "lone_druid_bear_pull.lua", needs_localizer = true },
-	{ id = "script_manager", key = "sm_item_manager", file = "script_manager.lua" },
-}
-local description_keys = {
-	tinker_turret_dodge = "sm_desc_ttd",
-	tinker_auto_farm = "sm_desc_farm",
-	auto_shackleshot = "sm_desc_shackleshot",
-	auto_spark = "sm_desc_spark",
-	rune_destruction = "sm_desc_runes",
-	earth_spirit_kick_combo = "sm_desc_earth",
-	hp_mana_67_ping = "sm_desc_hp",
-	spirit_bear_pull = "sm_desc_bear",
-	script_manager = "sm_desc_manager",
+	{ id = "tinker_turret_dodge", key = "sm_item_ttd", description_key = "sm_desc_ttd", file = "tinker_turret_dodge.lua", needs_localizer = true },
+	{ id = "tinker_auto_farm", key = "sm_item_farm", description_key = "sm_desc_farm", file = "Tinker-Auto-Farm.zip", manual = true },
+	{ id = "auto_shackleshot", key = "sm_item_shackleshot", description_key = "sm_desc_shackleshot", file = "Auto_Shackleshot.lua", needs_localizer = true },
+	{ id = "auto_spark", key = "sm_item_spark", description_key = "sm_desc_spark", file = "Auto_Spark.lua", needs_localizer = true },
+	{ id = "rune_destruction", key = "sm_item_runes", description_key = "sm_desc_runes", file = "rune_units.lua" },
+	{ id = "earth_spirit_kick_combo", key = "sm_item_earth", description_key = "sm_desc_earth", file = "earth_spirit_kick_combo.lua", needs_localizer = true },
+	{ id = "hp_mana_67_ping", key = "sm_item_hp", description_key = "sm_desc_hp", file = "hp_mana_67_ping.lua", needs_localizer = true },
+	{ id = "spirit_bear_pull", key = "sm_item_bear", description_key = "sm_desc_bear", file = "lone_druid_bear_pull.lua", needs_localizer = true },
+	{ id = "script_manager", key = "sm_item_manager", description_key = "sm_desc_manager", file = "script_manager.lua" },
 }
 
 local ui = {}
@@ -516,10 +485,10 @@ local can_download = false
 local localizer_installed = false
 local cached_releases = {}
 local last_checked_at = Config.ReadInt("script_manager", "last_checked_at", 0)
-local auto_check_enabled = Config.ReadInt("script_manager", "auto_check", 1) ~= 0
-local compact_rows = Config.ReadInt("script_manager", "compact_rows", 0) ~= 0
 local panel = {
 	open = false,
+	visibility = 0,
+	animation_time = os.clock(),
 	width = 820,
 	height = 520,
 	x = nil,
@@ -528,9 +497,7 @@ local panel = {
 	mouse_captured = false,
 	hits = {},
 	status_key = "sm_status_idle",
-	page = Config.ReadString("script_manager", "page", "scripts"),
 }
-if panel.page ~= "settings" then panel.page = "scripts" end
 
 do
 	local tab = UI.Create("Scripts", "Scripts", "Script Manager")
@@ -1011,6 +978,7 @@ local function point_in(x, y, x0, y0, x1, y1)
 end
 
 local function panel_hit(kind, x0, y0, x1, y1, value)
+	if not panel.open or panel.visibility < 0.85 then return end
 	panel.hits[#panel.hits + 1] = {
 		kind = kind,
 		x0 = x0,
@@ -1048,7 +1016,7 @@ local function panel_status_text()
 end
 
 local function draw_manager_panel()
-	if not panel.open then return end
+	if panel.visibility <= 0.01 then return end
 	ensure_panel_fonts()
 	local screen = Render.ScreenSize()
 	local width = math.min(panel.width, math.max(480, screen.x - 32))
@@ -1062,14 +1030,16 @@ local function draw_manager_panel()
 	end
 	panel.x = math.max(16, math.min(panel.x, screen.x - width - 16))
 	panel.y = math.max(16, math.min(panel.y, screen.y - height - 16))
-	local x, y, w, h = math.floor(panel.x), math.floor(panel.y), width, height
+	local visibility = panel.visibility
+	local x, y, w, h = math.floor(panel.x), math.floor(panel.y - (1 - visibility) * 12), width, height
 	local mx, my = Input.GetCursorPos()
 	local edge, text, muted = Color(48, 62, 78), Color(232, 239, 246), Color(143, 159, 176)
 	local card, base, sidebar = Color(16, 23, 32), Color(21, 30, 41), Color(19, 28, 39)
 	panel.hits = {}
 
-	Render.FilledRect(Vec2(0, 0), Vec2(screen.x, screen.y), Color(3, 7, 12, 96))
-	Render.Blur(Vec2(x, y), Vec2(x + w, y + h), 0.7, 0.9, 14)
+	Render.FilledRect(Vec2(0, 0), Vec2(screen.x, screen.y),
+		Color(3, 7, 12, math.floor(96 * visibility)))
+	Render.Blur(Vec2(x, y), Vec2(x + w, y + h), 0.7 * visibility, 0.9, 14)
 	Render.FilledRect(Vec2(x, y), Vec2(x + w, y + h), card, 14)
 	Render.Rect(Vec2(x, y), Vec2(x + w, y + h), edge, 14)
 	Render.FilledRect(Vec2(x + 1, y + 1), Vec2(x + w - 1, y + 5), Color(54, 186, 169), 3)
@@ -1081,23 +1051,6 @@ local function draw_manager_panel()
 	panel_text(panel_fonts.bold, 19, L("sm_panel_title"), x + 50, y + 14, text)
 	panel_text(panel_fonts.medium, 9, L("sm_panel_subtitle"), x + 51, y + 39, muted)
 
-	local scripts_tab_x, tabs_y = x + w - 220, y + 17
-	local function draw_tab(key, title, tab_x, active)
-		local tab_w = 84
-		local hover = point_in(mx, my, tab_x, tabs_y, tab_x + tab_w, tabs_y + 29)
-		Render.FilledRect(Vec2(tab_x, tabs_y), Vec2(tab_x + tab_w, tabs_y + 29),
-			active and Color(39, 62, 72) or Color(24, 34, 46, hover and 245 or 180), 7)
-		if active then
-			Render.FilledRect(Vec2(tab_x + 10, tabs_y + 26), Vec2(tab_x + tab_w - 10, tabs_y + 28),
-				Color(54, 186, 169), 1)
-		end
-		panel_text(panel_fonts.medium, 11, title, tab_x + 12, tabs_y + 8,
-			active and Color(115, 227, 199) or muted)
-		panel_hit(key, tab_x, tabs_y, tab_x + tab_w, tabs_y + 29)
-	end
-	draw_tab("scripts_tab", L("sm_panel_scripts_tab"), scripts_tab_x, panel.page == "scripts")
-	draw_tab("settings_tab", L("sm_panel_settings_tab"), scripts_tab_x + 90, panel.page == "settings")
-
 	local close_x, close_y = x + w - 42, y + 16
 	local close_hover = point_in(mx, my, close_x, close_y, close_x + 26, close_y + 26)
 	Render.FilledRect(Vec2(close_x, close_y), Vec2(close_x + 26, close_y + 26),
@@ -1106,51 +1059,22 @@ local function draw_manager_panel()
 	panel_hit("close", close_x, close_y, close_x + 26, close_y + 26)
 	panel_hit("drag", x, y, x + w - 48, y + 62)
 
-	local main_x, main_y, main_w = x + 24, y + 80, w - 48
-	if panel.page == "settings" then
-		panel_text(panel_fonts.bold, 9, L("sm_panel_settings_tab"):upper(), main_x, main_y, muted)
-		panel_text(panel_fonts.bold, 22, L("sm_panel_settings_heading"), main_x, main_y + 18, text)
-		panel_text(panel_fonts.regular, 12, L("sm_panel_settings_intro"), main_x, main_y + 49, muted)
-
-		local function settings_row(kind, title_key, desc_key, row_y, enabled)
-			local row_h = 72
-			Render.FilledRect(Vec2(main_x, row_y), Vec2(main_x + main_w, row_y + row_h), base, 9)
-			Render.FilledCircle(Vec2(main_x + 18, row_y + 23), 4,
-				enabled and Color(91, 202, 155) or Color(90, 109, 127))
-			panel_text(panel_fonts.medium, 13, L(title_key), main_x + 32, row_y + 14, text)
-			panel_text(panel_fonts.regular, 10, L(desc_key), main_x + 32, row_y + 39, muted)
-			local toggle_w, toggle_h = 48, 24
-			local toggle_x, toggle_y = main_x + main_w - toggle_w - 16, row_y + 24
-			local toggle_color = enabled and Color(54, 186, 169) or Color(49, 61, 75)
-			Render.FilledRect(Vec2(toggle_x, toggle_y), Vec2(toggle_x + toggle_w, toggle_y + toggle_h),
-				toggle_color, 12)
-			local knob_x = enabled and (toggle_x + toggle_w - 13) or (toggle_x + 13)
-			Render.FilledCircle(Vec2(knob_x, toggle_y + 12), 8, Color(238, 244, 248))
-			panel_hit(kind, toggle_x - 8, row_y, main_x + main_w - 8, row_y + row_h)
-		end
-
-		settings_row("toggle_auto", "sm_panel_auto_check_title", "sm_panel_auto_check_desc",
-			main_y + 75, auto_check_enabled)
-		settings_row("toggle_compact", "sm_panel_compact_title", "sm_panel_compact_desc",
-			main_y + 158, compact_rows)
-
-		local info_y = main_y + 243
-		Render.FilledRect(Vec2(main_x, info_y), Vec2(main_x + main_w, info_y + 72), sidebar, 9)
-		panel_text(panel_fonts.bold, 9, L("sm_panel_last_scan_heading"), main_x + 14, info_y + 12, muted)
-		panel_text(panel_fonts.medium, 13, last_checked_text(), main_x + 14, info_y + 34, text)
-		panel_text(panel_fonts.regular, 10, L("sm_panel_settings_note"),
-			main_x + 14, info_y + 55, muted)
-	else
+	local main_x = x + 24
+	local footer_y = y + h - 62
+	do
 		local left_x, left_y = x + 12, y + 74
-		local left_w, left_h = 220, h - 88
+		local left_w, left_h = 220, footer_y - left_y - 8
 		Render.FilledRect(Vec2(left_x, left_y), Vec2(left_x + left_w, left_y + left_h), sidebar, 10)
 		panel_text(panel_fonts.bold, 10, L("sm_panel_scripts"), left_x + 14, left_y + 13, muted)
 		Render.Line(Vec2(left_x + 12, left_y + 35), Vec2(left_x + left_w - 12, left_y + 35), edge, 1)
+		local first_row_y = left_y + 43
+		local row_step = math.max(22, math.min(42,
+			math.floor((footer_y - 8 - first_row_y) / #items)))
+		local row_h = math.max(20, row_step - 3)
 		for i, item in ipairs(items) do
-			local row_step = compact_rows and 33 or 42
-			local row_y = left_y + 43 + (i - 1) * row_step
+			local row_y = first_row_y + (i - 1) * row_step
 			local row_x = left_x + 8
-			local row_w, row_h = left_w - 16, compact_rows and 29 or 38
+			local row_w = left_w - 16
 			local active = i == selected_index
 			local hover = point_in(mx, my, row_x, row_y, row_x + row_w, row_y + row_h)
 			local cached = cached_releases[item.id]
@@ -1168,16 +1092,17 @@ local function draw_manager_panel()
 				Render.FilledRect(Vec2(row_x, row_y), Vec2(row_x + row_w, row_y + row_h),
 					Color(30, 42, 55), 7)
 			end
-			Render.FilledCircle(Vec2(row_x + 17, row_y + (compact_rows and 14 or 12)), 4, dot_color)
-			panel_text(active and panel_fonts.medium or panel_fonts.regular, 12, L(item.key),
-				row_x + 30, row_y + (compact_rows and 7 or 4), active and text or Color(185, 198, 211))
-			if not compact_rows then
+			Render.FilledCircle(Vec2(row_x + 17, row_y + row_h / 2), 4, dot_color)
+			panel_text(active and panel_fonts.medium or panel_fonts.regular, 11, L(item.key),
+				row_x + 30, row_y + 3,
+				active and text or Color(185, 198, 211))
+			if row_h >= 37 then
 				local summary = cached and cached.status == "available" and ("v" .. cached.version)
 					or cached and cached.status == "current" and L("sm_panel_state_current")
 					or cached and cached.status == "manual" and L("sm_panel_state_manual")
 					or cached and cached.status == "error" and L("sm_panel_state_error")
 					or L("sm_panel_state_unknown")
-				panel_text(panel_fonts.regular, 9, summary, row_x + 30, row_y + 21, muted)
+				panel_text(panel_fonts.regular, 8, summary, row_x + 30, row_y + 23, muted)
 			end
 			panel_hit("select", row_x, row_y, row_x + row_w, row_y + row_h, i)
 		end
@@ -1186,14 +1111,15 @@ local function draw_manager_panel()
 		local detail_w = w - 272
 		local item = selected()
 		local title = item and L(item.key) or L("sm_panel_title")
-		local desc = item and L(description_keys[item.id]) or ""
+		local desc = item and L(item.description_key) or ""
 		panel_text(panel_fonts.bold, 9, L("sm_panel_selected"), detail_x, detail_y, muted)
 		panel_text(panel_fonts.bold, 21, title, detail_x, detail_y + 21, text)
 		local lines = panel_wrap(desc, panel_fonts.regular, 13, detail_w - 8, 2)
 		for i, line in ipairs(lines) do
 			panel_text(panel_fonts.regular, 13, line, detail_x, detail_y + 53 + (i - 1) * 18, muted)
 		end
-		panel_text(panel_fonts.regular, 9, last_checked_text(), detail_x, detail_y + 82, muted)
+		local checked_y = detail_y + (#lines > 1 and 92 or 82)
+		panel_text(panel_fonts.regular, 9, last_checked_text(), detail_x, checked_y, muted)
 
 		local badge_text, badge_color
 		local cached = item and cached_releases[item.id]
@@ -1213,12 +1139,12 @@ local function draw_manager_panel()
 			badge_text, badge_color = L("sm_panel_not_checked"), muted
 		end
 		local badge_w = panel_measure(panel_fonts.bold, 9, badge_text) + 18
-		local badge_y = detail_y + 101
+		local badge_y = checked_y + 19
 		Render.FilledRect(Vec2(detail_x, badge_y), Vec2(detail_x + badge_w, badge_y + 22),
 			Color(badge_color.r, badge_color.g, badge_color.b, 35), 6)
 		panel_text(panel_fonts.bold, 9, badge_text, detail_x + 9, badge_y + 6, badge_color)
 
-		local box_y = detail_y + 137
+		local box_y = badge_y + 36
 		local box_gap = 10
 		local box_w = (detail_w - box_gap) / 2
 		local function version_box(box_x, heading, value)
@@ -1259,29 +1185,22 @@ local function draw_manager_panel()
 			library_button_x + library_button_w, library_y + 41)
 	end
 
-	local footer_y = y + h - 62
 	Render.Line(Vec2(x + 12, footer_y), Vec2(x + w - 12, footer_y), edge, 1)
 	local button_y, button_h = footer_y + 13, 36
 	local check_w, action_w, gap = 174, 174, 10
-	if panel.page == "scripts" then
-		local item = selected()
-		local action_text = item and (item.manual and L("sm_panel_download_button")
-			or L("sm_panel_install_button")) or L("sm_panel_install_button")
-		local action_enabled = item and (item.manual and can_download
-			or (not item.manual and can_install)) or false
-		panel_button(L("sm_panel_check_button"), main_x, button_y, check_w, button_h,
-			not working, false, mx, my)
-		panel_hit("check", main_x, button_y, main_x + check_w, button_y + button_h)
-		local action_x = main_x + check_w + gap
-		panel_button(action_text, action_x, button_y, action_w, button_h,
-			action_enabled and not working, true, mx, my)
-		panel_hit(item and item.manual and "download" or "install", action_x, button_y,
-			action_x + action_w, button_y + button_h)
-	else
-		panel_button(L("sm_panel_check_button"), main_x, button_y, check_w, button_h,
-			not working, true, mx, my)
-		panel_hit("check", main_x, button_y, main_x + check_w, button_y + button_h)
-	end
+	local item = selected()
+	local action_text = item and (item.manual and L("sm_panel_download_button")
+		or L("sm_panel_install_button")) or L("sm_panel_install_button")
+	local action_enabled = item and (item.manual and can_download
+		or (not item.manual and can_install)) or false
+	panel_button(L("sm_panel_check_button"), main_x, button_y, check_w, button_h,
+		not working, false, mx, my)
+	panel_hit("check", main_x, button_y, main_x + check_w, button_y + button_h)
+	local action_x = main_x + check_w + gap
+	panel_button(action_text, action_x, button_y, action_w, button_h,
+		action_enabled and not working, true, mx, my)
+	panel_hit(item and item.manual and "download" or "install", action_x, button_y,
+		action_x + action_w, button_y + button_h)
 end
 
 local function select_panel_item(index)
@@ -1297,18 +1216,9 @@ local function handle_panel_click(x, y)
 		if point_in(x, y, hit.x0, hit.y0, hit.x1, hit.y1) then
 			if hit.kind == "close" then
 				panel.open, panel.dragging = false, false
-			elseif hit.kind == "scripts_tab" or hit.kind == "settings_tab" then
-				panel.page = hit.kind == "settings_tab" and "settings" or "scripts"
-				Config.WriteString("script_manager", "page", panel.page)
 			elseif hit.kind == "drag" then
 				panel.dragging = true
 				panel.drag_dx, panel.drag_dy = x - panel.x, y - panel.y
-			elseif hit.kind == "toggle_auto" then
-				auto_check_enabled = not auto_check_enabled
-				Config.WriteInt("script_manager", "auto_check", auto_check_enabled and 1 or 0)
-			elseif hit.kind == "toggle_compact" then
-				compact_rows = not compact_rows
-				Config.WriteInt("script_manager", "compact_rows", compact_rows and 1 or 0)
 			elseif hit.kind == "select" then
 				select_panel_item(hit.value)
 			elseif hit.kind == "check" then
@@ -1335,13 +1245,22 @@ function script.OnScriptsLoaded()
 	if ai_bridge and type(ai_bridge.mcp_log) == "function" then
 		ai_bridge.mcp_log("info", "Script Manager loaded", { version = VERSION })
 	end
-	if auto_check_enabled then update_check() end
+	update_check()
 end
 
 function script.OnUpdateEx()
 	if ui.open:IsPressed() and not Input.IsInputCaptured() then
 		panel.open = not panel.open
 		panel.dragging = false
+	end
+	local now = os.clock()
+	local elapsed = math.max(0, math.min(0.1, now - panel.animation_time))
+	panel.animation_time = now
+	local target_visibility = panel.open and 1 or 0
+	panel.visibility = panel.visibility
+		+ (target_visibility - panel.visibility) * (1 - math.exp(-elapsed * 14))
+	if math.abs(target_visibility - panel.visibility) < 0.005 then
+		panel.visibility = target_visibility
 	end
 	if panel.dragging then
 		if Input.IsKeyDown(Enum.ButtonCode.KEY_MOUSE1, true) then
@@ -1379,7 +1298,7 @@ function script.OnKeyEvent(data)
 		end
 		return false
 	end
-	if not panel.open then return true end
+	if not panel.open or panel.visibility < 0.85 then return true end
 	if data.key == Enum.ButtonCode.KEY_ESCAPE
 		and data.event == Enum.EKeyEvent.EKeyEvent_KEY_DOWN
 	then
@@ -1390,8 +1309,9 @@ function script.OnKeyEvent(data)
 	if data.key ~= Enum.ButtonCode.KEY_MOUSE1 then return true end
 	if data.event == Enum.EKeyEvent.EKeyEvent_KEY_DOWN then
 		local cursor_x, cursor_y = Input.GetCursorPos()
-		local inside = point_in(cursor_x, cursor_y, panel.x or 0, panel.y or 0,
-			(panel.x or 0) + panel.width, (panel.y or 0) + panel.height)
+		local panel_y = (panel.y or 0) - (1 - panel.visibility) * 12
+		local inside = point_in(cursor_x, cursor_y, panel.x or 0, panel_y,
+			(panel.x or 0) + panel.width, panel_y + panel.height)
 		if inside then
 			panel.mouse_captured = true
 			handle_panel_click(cursor_x, cursor_y)
@@ -1399,8 +1319,9 @@ function script.OnKeyEvent(data)
 		end
 	end
 	local cursor_x, cursor_y = Input.GetCursorPos()
-	if point_in(cursor_x, cursor_y, panel.x or 0, panel.y or 0,
-		(panel.x or 0) + panel.width, (panel.y or 0) + panel.height)
+	local panel_y = (panel.y or 0) - (1 - panel.visibility) * 12
+	if point_in(cursor_x, cursor_y, panel.x or 0, panel_y,
+		(panel.x or 0) + panel.width, panel_y + panel.height)
 	then
 		return false
 	end
