@@ -192,6 +192,36 @@
       "author": "But3rflys"
     },
     {
+      "id": "custom_stats",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/custom-stats-v1.0.0/custom_stats.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/custom-stats-v1.0.0/custom_stats.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "qhols (Discord: ur2m)"
+    },
+    {
+      "id": "bloodrage_autocast",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/bloodrage-autocast-v1.0.0/bloodrage.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/bloodrage-autocast-v1.0.0/bloodrage.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "z\u0432e\u0437d\u044b \u0443na\u043bu v \u043b\u0443\u0436\u0443 (Discord: rarimember)",
+      "heroes": [
+        "bloodseeker"
+      ]
+    },
+    {
+      "id": "naga_pt_abuse",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/naga-pt-abuse-v1.0.0/nagapt.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/naga-pt-abuse-v1.0.0/nagapt.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "z\u0432e\u0437d\u044b \u0443na\u043bu v \u043b\u0443\u0436\u0443 (Discord: rarimember)"
+    },
+    {
       "id": "anti_rubick",
       "version": "1.0.0",
       "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/744ad15b02f3dd69410fd94ad60646ac39c15adb/scripts/anti_rubick/anti_rubick.lua",
