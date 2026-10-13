@@ -3,13 +3,9 @@
 защита выбранных способностей от кражи Рубиком / protect selected spells from Rubick's Spell Steal
 
 <!-- releases:start -->
-Скачать: [anti_rubick.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/anti-rubick-v1.0.0/anti_rubick.lua) — `anti-rubick-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `anti_rubick.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/anti_rubick/anti_rubick.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`anti-rubick-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/anti-rubick-v1.0.0) | 2026-10-13 | [anti_rubick.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/anti-rubick-v1.0.0/anti_rubick.lua) | 1 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=anti-rubick&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=anti-rubick&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -27,14 +23,6 @@ Anti-Rubick помогает защитить важные способност�
 1. Поместите `anti_rubick.lua` в `umbrella\scripts`.
 2. Перезагрузите Lua-скрипты.
 3. Откройте настройки `Scripts → General → Utility → Anti-Rubick → Spell Cover`.
-
-## Что нового
-
-# 1.0.0
-
-- Первый релиз Anti-Rubick Spell Cover.
-- Настройка защищаемых способностей, способностей-прикрытий, их приоритета и задержки отдельно для каждого героя.
-- Каналящиеся способности не защищаются.
 
 ---
 
@@ -55,11 +43,3 @@ Anti-Rubick helps protect important abilities from Rubick's Spell Steal. After a
 1. Place `anti_rubick.lua` in `umbrella\scripts`.
 2. Reload the Lua scripts.
 3. Open `Scripts → General → Utility → Anti-Rubick → Spell Cover`.
-
-## Changelog
-
-# 1.0.0
-
-- Initial release of Anti-Rubick Spell Cover.
-- Configure protected spells, cover abilities, their priority, and cast delay per hero.
-- Channeled abilities are not protected.

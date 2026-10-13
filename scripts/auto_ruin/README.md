@@ -3,9 +3,13 @@
 автоматически покупает расходники и выполняет действия у фонтана / automates consumable purchases and actions near the fountain
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `auto_ruin.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/auto_ruin/auto_ruin.lua)
+Скачать: [auto_ruin.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-ruin-v1.0.0/auto_ruin.lua) — `auto-ruin-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-ruin&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`auto-ruin-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/auto-ruin-v1.0.0) | 2026-10-13 | [auto_ruin.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-ruin-v1.0.0/auto_ruin.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-ruin&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

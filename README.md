@@ -380,7 +380,6 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
 | [Naga PT Abuse](scripts/naga_pt_abuse) | 1 | `naga-pt-abuse-v1.0.0` |
 | [Auto Aegis Mover](scripts/auto_aegis_mover) | 1 | `auto-aegis-mover-v1.0.0` |
-| [Anti-Rubick](scripts/anti_rubick) | 1 | `anti-rubick-v1.0.0` |
 | [Arc Warden Blocker](scripts/arc_warden_blocker) | 1 | `arc-warden-blocker-v1.0.0` |
 | [Invoker Combo Switcher](scripts/invoker_combo_switcher) | 1 | `invoker-combo-switcher-v1.0.0` |
 | [Magnus Skewer Ally](scripts/magnus_skewer_ally) | 1 | `magnus-skewer-ally-v1.0.0` |
@@ -466,6 +465,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Can Teleport Out](scripts/can_teleport_out) | 0 | `can-teleport-out-v1.0.0` |
 | [Auto Courier Gem](scripts/auto_courier_gem) | 0 | `auto-courier-gem-v1.0.0` |
 | [Camp Stacker](scripts/stacker) | 0 | `camp-stacker-v1.0.0` |
+| [Auto-Ruin](scripts/auto_ruin) | 0 | `auto-ruin-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
