@@ -1280,7 +1280,7 @@
     {
       "id": "dota_no_limit",
       "version": "1.0.0",
-      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/dota-no-limit-v1.0.0/dota_no_limit.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/aadc71ad845d52f266778d546c0aad1be1d05ac9/scripts/dota_no_limit/dota_no_limit.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/dota-no-limit-v1.0.0/dota_no_limit.lua",
       "manual": false,
       "needs_q_localizer": false,
