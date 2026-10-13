@@ -83,6 +83,16 @@
 - [Arc Warden Multi Stack](scripts/arc_warden_multi_stack) — автоматически стакует несколько лагерей на Arc Warden
 - [Map Chat Troll](scripts/maptroll) — рисует текст на миникарте вручную или по таймеру
 - [Creep Aggro](scripts/creep_aggro) — помогает переагривать крипов клавишей и подконтрольными юнитами
+- [Nyx Assassin Auto Burrow](scripts/nyx_auto_burrow) — автоматически закапывает Nyx Assassin в подходящий момент
+- [Dawnbreaker Solar Guardian Auto-Save Helper](scripts/dawnbreaker_solar_guardian) — автоматизирует Solar Guardian для сейва и контринициации
+- [Dota 1x6 Pack](scripts/dota1x6_pack) — собирает комбо для Dota 1x6 в одном Lua-файле
+- [Kez Raptor Dance Dispel](scripts/kez_raptor_dispel) — использует Kazurai Katana для частого диспела через Raptor Dance
+- [Huskar Life Break](scripts/huskar_life_break) — прерывает полёт Life Break, сохраняя попадание ульты
+- [Dragon Camp Pull](scripts/dragon_camp_pull) — отправляет пачки с линии в лес к приручённому дракону
+- [Shadow Demon Poison 5](scripts/sd_poison_5) — автоматически подрывает Shadow Poison при пяти и более стаках
+- [Techies Auto Miner](scripts/techies_auto_miner) — автоматически минирует выбранные зоны карты на Techies
+- [Broodmother Camp Blocker](scripts/brood_camp_blocker) — отправляет пауков Брудмазер блокировать спавн кемпов
+- [Hoodwink Blast Off Catch](scripts/hoodwink_bushwhack_techies) — ловит Techies способностью Bushwhack во время Blast Off
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -213,6 +223,16 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Arc Warden Multi Stack](scripts/arc_warden_multi_stack) — automatically stacks multiple camps with Arc Warden
 - [Map Chat Troll](scripts/maptroll) — draws text on the minimap manually or on a timer
 - [Creep Aggro](scripts/creep_aggro) — helps manipulate creep aggro with a key and controlled units
+- [Nyx Assassin Auto Burrow](scripts/nyx_auto_burrow) — automatically burrows Nyx Assassin at suitable times
+- [Dawnbreaker Solar Guardian Auto-Save Helper](scripts/dawnbreaker_solar_guardian) — automates Solar Guardian saves and counter-initiation
+- [Dota 1x6 Pack](scripts/dota1x6_pack) — packs Dota 1x6 hero combos into one Lua file
+- [Kez Raptor Dance Dispel](scripts/kez_raptor_dispel) — uses Kazurai Katana for repeated Raptor Dance dispels
+- [Huskar Life Break](scripts/huskar_life_break) — stops Life Break travel while preserving the ultimate hit
+- [Dragon Camp Pull](scripts/dragon_camp_pull) — pulls lane waves into the jungle for a controlled dragon to farm
+- [Shadow Demon Poison 5](scripts/sd_poison_5) — automatically releases Shadow Poison at five or more stacks
+- [Techies Auto Miner](scripts/techies_auto_miner) — automatically mines selected map zones as Techies
+- [Broodmother Camp Blocker](scripts/brood_camp_blocker) — sends Broodmother's spiders to block neutral camp spawns
+- [Hoodwink Blast Off Catch](scripts/hoodwink_bushwhack_techies) — catches Techies with Bushwhack during Blast Off
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -318,6 +338,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Arc Warden Multi Stack](scripts/arc_warden_multi_stack) | 0 | `arc-warden-multi-stack-v1.0.0` |
 | [Map Chat Troll](scripts/maptroll) | 0 | `maptroll-v1.0.0` |
 | [Creep Aggro](scripts/creep_aggro) | 0 | `creep-aggro-v1.0.0` |
+| [Nyx Assassin Auto Burrow](scripts/nyx_auto_burrow) | 0 | `nyx-auto-burrow-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
