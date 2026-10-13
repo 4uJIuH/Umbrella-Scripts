@@ -1,3 +1,11 @@
+# Update v2.0.1
+
+- Added But3rflys scripts and their latest releases, with author attribution in catalog cards.
+- Records the installed version of scripts without an embedded marker so available updates are detected correctly.
+- Hero filtering now uses only the explicit `heroes` field; general scripts are no longer matched to heroes from their descriptions.
+- Added RAR package downloads for manual installation.
+- Visual/UI authors: watahell / papagdetto.
+
 **Update v2.0.0**
 
 - Script Market is now the new Script Manager. The catalog ID, `script_manager.lua` filename, and `script-manager-v*` tag convention are retained so existing installs can update in place.

@@ -43,7 +43,12 @@
           "Reload the Lua scripts.",
           "Open settings: `General → Tinker Turret Dodge`."
         ]
-      }
+      },
+      "author": "4uJIuH",
+      "author_github": "4uJIuH",
+      "heroes": [
+        "tinker"
+      ]
     },
     {
       "id": "tinker_auto_farm",
@@ -95,7 +100,12 @@
           "Reload the Lua scripts.",
           "Open settings: `Scripts → Scripts → Tinker`."
         ]
-      }
+      },
+      "author": "4uJIuH",
+      "author_github": "4uJIuH",
+      "heroes": [
+        "tinker"
+      ]
     },
     {
       "id": "auto_shackleshot",
@@ -141,7 +151,12 @@
           "Reload the Lua scripts.",
           "Open settings: `Scripts → Scripts → Auto Shackleshot`."
         ]
-      }
+      },
+      "author": "4uJIuH",
+      "author_github": "4uJIuH",
+      "heroes": [
+        "windrunner"
+      ]
     },
     {
       "id": "auto_spark",
@@ -191,7 +206,12 @@
           "Reload the Lua scripts.",
           "Open settings: `Scripts → Scripts → Auto Spark`."
         ]
-      }
+      },
+      "author": "4uJIuH",
+      "author_github": "4uJIuH",
+      "heroes": [
+        "arc_warden"
+      ]
     },
     {
       "id": "rune_destruction",
@@ -238,7 +258,9 @@
           "Reload the Lua scripts.",
           "Open settings: `Scripts → Rune Units`."
         ]
-      }
+      },
+      "author": "4uJIuH",
+      "author_github": "4uJIuH"
     },
     {
       "id": "earth_spirit_kick_combo",
@@ -290,7 +312,12 @@
           "Reload the Lua scripts.",
           "Open settings: `General → Earth Spirit Kick Combo`."
         ]
-      }
+      },
+      "author": "4uJIuH",
+      "author_github": "4uJIuH",
+      "heroes": [
+        "earth_spirit"
+      ]
     },
     {
       "id": "hp_mana_67_ping",
@@ -340,7 +367,9 @@
           "Reload the Lua scripts.",
           "Open settings: `General → HP/Mana 67 Ping → Settings`."
         ]
-      }
+      },
+      "author": "4uJIuH",
+      "author_github": "4uJIuH"
     },
     {
       "id": "spirit_bear_pull",
@@ -390,7 +419,12 @@
           "Reload the Lua scripts.",
           "Open settings: `General → Spirit Bear Pull`."
         ]
-      }
+      },
+      "author": "4uJIuH",
+      "author_github": "4uJIuH",
+      "heroes": [
+        "lone_druid"
+      ]
     },
     {
       "id": "dorman_combo_assistant",
@@ -438,7 +472,9 @@
           "Reload the Lua scripts.",
           "Open settings: `Heroes → Hero List → The Dorman → Dorman`."
         ]
-      }
+      },
+      "author": "4uJIuH",
+      "author_github": "4uJIuH"
     },
     {
       "id": "rem_assistant",
@@ -496,7 +532,9 @@
           "Reload the Lua scripts.",
           "Open settings: `Heroes → Hero List → Rem → Rem Assistant`."
         ]
-      }
+      },
+      "author": "4uJIuH",
+      "author_github": "4uJIuH"
     },
     {
       "id": "vault_tunnel_esp",
@@ -535,7 +573,9 @@
           "Reload the Lua scripts.",
           "Open settings: `Visuals → World → Show Me More → Vault & Tunnel ESP`."
         ]
-      }
+      },
+      "author": "4uJIuH",
+      "author_github": "4uJIuH"
     },
     {
       "id": "q_localizer",
@@ -582,7 +622,9 @@
           "Place the file in the `scripts` folder alongside scripts that need localization.",
           "Reload the Lua scripts."
         ]
-      }
+      },
+      "author": "qfun",
+      "author_github": "qfun_g9s"
     },
     {
       "id": "script_manager",
@@ -591,15 +633,15 @@
       "kind": "lua",
       "category": "auxiliary",
       "file": "script_manager.lua",
-      "author": "watah3ll",
+      "author": "4uJIuH",
       "initial": {
-        "version": "2.0.0",
+        "version": "2.0.1",
         "date": "2026-10-13",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/script_manager/script_manager.lua"
       },
       "ru": {
         "tagline": "каталог скриптов Umbrella с установкой и обновлениями",
-        "about": "Script Manager объединяет каталог скриптов в отдельной настраиваемой панели: показывает описания, авторов и версии, поддерживает поиск, фильтры по героям и категориям, а также установку и удаление.",
+        "about": "Script Manager объединяет каталог скриптов в отдельной настраиваемой панели: показывает описания, авторов и версии, поддерживает поиск, фильтры по героям и категориям, а также установку и удаление. Визуальная/UI-часть: watahell / papagdetto.",
         "features": [
           "Загружает общий каталог с сайта и показывает скрипты по категориям, героям и статусу установки",
           "Отображает описания, возможности, автора, источник и доступную версию выбранного скрипта",
@@ -609,7 +651,8 @@
           "Устанавливает `!_qLocalizer.lua`, если он нужен выбранному скрипту и ещё не установлен",
           "Показывает ZIP-пакеты для скачивания и ручной распаковки",
           "Позволяет менять тему, акцентный цвет и поведение перезапуска после установки",
-          "Поддерживает собственное обновление под тем же именем `script_manager.lua`"
+          "Поддерживает собственное обновление под тем же именем `script_manager.lua`",
+          "Автор визуальной/UI-части: watahell / papagdetto"
         ],
         "install": [
           "Поместите `script_manager.lua` в `umbrella\\scripts`.",
@@ -620,7 +663,7 @@
       },
       "en": {
         "tagline": "an Umbrella script catalog with script installation and updates",
-        "about": "Script Manager brings the script catalog into a customizable panel. It shows descriptions, authors, and versions, supports search and hero/category filters, and installs or removes scripts.",
+        "about": "Script Manager brings the script catalog into a customizable panel. It shows descriptions, authors, and versions, supports search and hero/category filters, and installs or removes scripts. Visual/UI design: watahell / papagdetto.",
         "features": [
           "Loads the shared website catalog and groups scripts by category, hero, and installation status",
           "Shows a selected script's description, features, author, source, and available version",
@@ -630,7 +673,8 @@
           "Installs `!_qLocalizer.lua` when a selected script requires it and it is missing",
           "Lists ZIP packages for download and manual extraction",
           "Lets users change the theme, accent color, and post-install restart behavior",
-          "Supports self-updates while keeping the `script_manager.lua` filename"
+          "Supports self-updates while keeping the `script_manager.lua` filename",
+          "Visual/UI authors: watahell / papagdetto"
         ],
         "install": [
           "Place `script_manager.lua` in `umbrella\\scripts`.",
@@ -638,7 +682,10 @@
           "Reload the Lua scripts.",
           "Open `Scripts → Scripts → Script Manager`, enable it, and assign a key to open the panel."
         ]
-      }
+      },
+      "author_github": "4uJIuH",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/script_manager",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=script-manager&expanded=true"
     },
     {
       "id": "dynamic_island_dota",
@@ -737,6 +784,387 @@
           "Reload the Lua scripts.",
           "Open `Heroes → Hero List → Tinker → Smart Escape`.",
           "Enable the script, bind the escape key, and select the items you want to use."
+        ]
+      },
+      "heroes": [
+        "tinker"
+      ]
+    },
+    {
+      "id": "lane_pull",
+      "tag": "lane-pull",
+      "title": "Lane Pull",
+      "kind": "lua",
+      "category": "dota",
+      "file": "lane_pull.lua",
+      "author": "But3rflys",
+      "author_github": "But3rflys",
+      "website_url": "https://but3rflys.github.io/umbrella-work/#/s/lane_pull",
+      "source_url": "https://github.com/But3rflys/umbrella-work/tree/main/scripts/lane_pull",
+      "releases_url": "https://github.com/But3rflys/umbrella-work/releases?q=lane-pull&expanded=true",
+      "manager_catalog": true,
+      "version_marker": "NONE",
+      "needs_q_localizer": false,
+      "initial": {
+        "version": "1.0.4",
+        "date": "2026-09-20",
+        "url": "https://github.com/But3rflys/umbrella-work/releases/download/lane-pull-v1.0.4/lane_pull.lua",
+        "release": "https://github.com/But3rflys/umbrella-work/releases/download/lane-pull-v1.0.4/lane_pull.lua"
+      },
+      "ru": {
+        "tagline": "выпул вражеской волны крипом с Доминатора",
+        "about": "По клавише подконтрольный крип уходит за вражеской волной и ведет ее к герою.",
+        "features": [
+          "три режима выбора волны: к герою, к нашему крипу, у курсора",
+          "сам выбирает место встречи: перед вышкой, за вышкой или ближе к герою",
+          "не берет волну, которая вот-вот сойдется с нашими крипами",
+          "обходит нейтральные лагеря и вражеских героев",
+          "ждет волну в деревьях, меняет укрытие, если его увидели",
+          "работает на миде через реку и на хайграунде",
+          "отмена по HP, по второму нажатию и при герое вплотную",
+          "панель статуса и отладочный оверлей"
+        ],
+        "install": [
+          "Поместите `lane_pull.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты."
+        ]
+      },
+      "en": {
+        "tagline": "pull the enemy wave with your Dominator creep",
+        "about": "One key and your dominated creep goes for the enemy wave and drags it to you.",
+        "features": [
+          "three ways to pick a wave: closest to you, to your creep, or by cursor",
+          "picks the catch spot itself: in front of their tower, behind it, or closer to you",
+          "skips a wave that is about to meet your own creeps",
+          "walks around neutral camps and enemy heroes",
+          "waits in the trees, changes cover once spotted",
+          "works on mid across the river and on the high ground",
+          "aborts on low HP, on a second key press, and when a hero gets close",
+          "status bar and a debug overlay"
+        ],
+        "install": [
+          "Place `lane_pull.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts."
+        ]
+      }
+    },
+    {
+      "id": "ds_spot_block",
+      "tag": "ds-spot-block",
+      "title": "DS Spot Block",
+      "kind": "lua",
+      "category": "dota",
+      "file": "ds_spot_block.lua",
+      "heroes": [
+        "dark_seer"
+      ],
+      "author": "But3rflys",
+      "author_github": "But3rflys",
+      "website_url": "https://but3rflys.github.io/umbrella-work/#/s/ds_spot_block",
+      "source_url": "https://github.com/But3rflys/umbrella-work/tree/main/scripts/ds_spot_block",
+      "releases_url": "https://github.com/But3rflys/umbrella-work/releases?q=ds-spot-block&expanded=true",
+      "manager_catalog": true,
+      "version_marker": "NONE",
+      "needs_q_localizer": false,
+      "initial": {
+        "version": "1.0.1",
+        "date": "2026-09-20",
+        "url": "https://github.com/But3rflys/umbrella-work/releases/download/ds-spot-block-v1.0.1/ds_spot_block.lua",
+        "release": "https://github.com/But3rflys/umbrella-work/releases/download/ds-spot-block-v1.0.1/ds_spot_block.lua"
+      },
+      "ru": {
+        "tagline": "блок спота Вакуумом за Dark Seer",
+        "about": "Рисует лагеря, радиус Вакуума, точку каста и место героя. По клавише подходит и кастует.",
+        "features": [
+          "значки над кемпами и кольца на крипах",
+          "радиус Вакуума, точка каста и позиция героя на земле",
+          "условие каста: все крипы, сильнейший, любой или без условия",
+          "авто-подход перед кастом",
+          "агр крипов по клавише"
+        ],
+        "install": [
+          "Поместите `ds_spot_block.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты."
+        ]
+      },
+      "en": {
+        "tagline": "Vacuum spot block for Dark Seer",
+        "about": "Draws the camps, the Vacuum radius, the cast point and where to stand. One key walks in and casts.",
+        "features": [
+          "camp icons and rings on the creeps",
+          "Vacuum radius, cast point and hero position on the ground",
+          "cast condition: all creeps, the strongest, any creep, or none",
+          "auto approach before the cast",
+          "creep aggro on a key"
+        ],
+        "install": [
+          "Place `ds_spot_block.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts."
+        ]
+      }
+    },
+    {
+      "id": "custom_background",
+      "tag": "custom-background",
+      "title": "Custom Background",
+      "kind": "lua",
+      "category": "dota",
+      "file": "custom_background.lua",
+      "author": "But3rflys",
+      "author_github": "But3rflys",
+      "website_url": "https://but3rflys.github.io/umbrella-work/#/s/custom_background",
+      "source_url": "https://github.com/But3rflys/umbrella-work/tree/main/scripts/custom_background",
+      "releases_url": "https://github.com/But3rflys/umbrella-work/releases?q=custom-background&expanded=true",
+      "manager_catalog": true,
+      "version_marker": "NONE",
+      "needs_q_localizer": false,
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-09-20",
+        "url": "https://github.com/But3rflys/umbrella-work/releases/download/custom-background-v1.0.0/custom_background.lua",
+        "release": "https://github.com/But3rflys/umbrella-work/releases/download/custom-background-v1.0.0/custom_background.lua"
+      },
+      "ru": {
+        "tagline": "свои картинки на фоне меню",
+        "about": "До восьми картинок поверх игры, ссылкой или файлом рядом со скриптами.",
+        "features": [
+          "до восьми картинок, у каждой свои настройки",
+          "ссылка или файл рядом со скриптами",
+          "перетаскивание мышью и закрепление",
+          "размер, прозрачность, затемнение фона",
+          "только в меню или всегда"
+        ],
+        "install": [
+          "Поместите `custom_background.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты."
+        ]
+      },
+      "en": {
+        "tagline": "your own pictures behind the menu",
+        "about": "Up to eight pictures on top of the game, by link or by file next to your scripts.",
+        "features": [
+          "up to eight pictures, each with its own settings",
+          "a link or a file next to your scripts",
+          "drag with the mouse, lock in place",
+          "size, opacity, background dim",
+          "menu only or always visible"
+        ],
+        "install": [
+          "Place `custom_background.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts."
+        ]
+      }
+    },
+    {
+      "id": "auto_stack",
+      "tag": "auto-stack",
+      "title": "Auto Stack",
+      "kind": "lua",
+      "category": "dota",
+      "file": "auto_stack.lua",
+      "heroes": [
+        "kunkka",
+        "invoker"
+      ],
+      "author": "But3rflys",
+      "author_github": "But3rflys",
+      "website_url": "https://but3rflys.github.io/umbrella-work/#/s/auto_stack",
+      "source_url": "https://github.com/But3rflys/umbrella-work/tree/main/scripts/auto_stack",
+      "releases_url": "https://github.com/But3rflys/umbrella-work/releases?q=auto-stack&expanded=true",
+      "manager_catalog": true,
+      "version_marker": "NONE",
+      "needs_q_localizer": false,
+      "initial": {
+        "version": "1.1.0",
+        "date": "2026-09-28",
+        "url": "https://github.com/But3rflys/umbrella-work/releases/download/auto-stack-v1.1.0/auto_stack.lua",
+        "release": "https://github.com/But3rflys/umbrella-work/releases/download/auto-stack-v1.1.0/auto_stack.lua"
+      },
+      "ru": {
+        "tagline": "автостак кемпов за Кунку и Инвокера",
+        "about": "Стакает кемпы: Кунка через Torrent, Инвокер через Tornado.",
+        "features": [
+          "тайминг под каждый кемп с учётом пинга",
+          "бросок задевает всех крипов в кемпе",
+          "Инвокер сам создаёт Tornado перед броском",
+          "авто, по клавише или кемп под курсором",
+          "клик по кольцу над кемпом включает его",
+          "статус над кемпом: отсчёт, КД, итог"
+        ],
+        "install": [
+          "Поместите `auto_stack.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты."
+        ]
+      },
+      "en": {
+        "tagline": "camp stacking for Kunkka and Invoker",
+        "about": "Stacks camps: Kunkka with Torrent, Invoker with Tornado.",
+        "features": [
+          "timing tuned per camp, with ping",
+          "the throw hits every creep in the camp",
+          "Invoker invokes Tornado before the throw",
+          "auto, on a key or the camp under the cursor",
+          "click a camp ring to turn it on or off",
+          "status over the camp: countdown, cooldown, result"
+        ],
+        "install": [
+          "Place `auto_stack.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts."
+        ]
+      }
+    },
+    {
+      "id": "draft_helper",
+      "tag": "draft-helper",
+      "title": "Draft Helper",
+      "kind": "lua",
+      "category": "dota",
+      "file": "draft_helper.lua",
+      "author": "But3rflys",
+      "author_github": "But3rflys",
+      "website_url": "https://but3rflys.github.io/umbrella-work/#/s/draft_helper",
+      "source_url": "https://github.com/But3rflys/umbrella-work/tree/main/scripts/draft_helper",
+      "releases_url": "https://github.com/But3rflys/umbrella-work/releases?q=draft-helper&expanded=true",
+      "manager_catalog": true,
+      "version_marker": "VERSION",
+      "needs_q_localizer": false,
+      "initial": {
+        "version": "2.0.0-beta.20",
+        "date": "2026-10-13",
+        "url": "https://github.com/But3rflys/umbrella-work/releases/download/draft-helper-v2.0.0-beta.20/draft_helper.lua",
+        "release": "https://github.com/But3rflys/umbrella-work/releases/download/draft-helper-v2.0.0-beta.20/draft_helper.lua"
+      },
+      "ru": {
+        "tagline": "подсказки на драфте и сборка предметов",
+        "about": "Окно с героями под каждый ход драфта, шанс на победу по драфту и сборка под твою роль против их пиков.",
+        "features": [
+          "Captains Mode и All Pick: что пикнуть, что забанить, что могут взять враги",
+          "статистика OpenDota по рангам и матчи Captains Mode, обновляется раз в сутки",
+          "шанс на победу по драфту и таблица «Кто кого»",
+          "подбор героя на игру или на линию, фильтр по позиции",
+          "сборка под героя и роль по играм 7000+ MMR и ответы на их драфт",
+          "панель сборки у магазина: покупка и квикбай в один клик",
+          "пул своих героев и тренировочный драфт вне матча",
+          "обновляется сам из окна скрипта"
+        ],
+        "install": [
+          "Поместите `draft_helper.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты."
+        ]
+      },
+      "en": {
+        "tagline": "draft hints and item builds",
+        "about": "A window with heroes for every draft turn, the draft win chance and a build for your role against their picks.",
+        "features": [
+          "Captains Mode and All Pick: what to pick, what to ban, what the enemy may take",
+          "OpenDota stats by rank and Captains Mode matches, refreshed once a day",
+          "draft win chance and a Who beats who table",
+          "pick heroes for the game or for the lane, filter by position",
+          "a build for your hero and role from 7000+ MMR games and answers to their draft",
+          "build panel next to the shop: buy or pin to quick buy in one click",
+          "your own hero pool and a training draft outside a match",
+          "updates itself from the script window"
+        ],
+        "install": [
+          "Place `draft_helper.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts."
+        ]
+      }
+    },
+    {
+      "id": "musicui",
+      "tag": "musicui",
+      "title": "MusicUI",
+      "kind": "app",
+      "category": "auxiliary",
+      "file": "MusicUI.rar",
+      "author": "But3rflys",
+      "author_github": "But3rflys",
+      "website_url": "https://but3rflys.github.io/umbrella-work/#/s/musicui",
+      "source_url": "https://github.com/But3rflys/umbrella-work/tree/main/scripts/musicui",
+      "releases_url": "https://github.com/But3rflys/umbrella-work/releases?q=musicui&expanded=true",
+      "manager_catalog": true,
+      "manual": true,
+      "needs_q_localizer": false,
+      "initial": {
+        "version": "1.0.8",
+        "date": "2026-09-23",
+        "url": "https://github.com/But3rflys/umbrella-work/releases/download/musicui-v1.0.8/MusicUI.rar",
+        "release": "https://github.com/But3rflys/umbrella-work/releases/download/musicui-v1.0.8/MusicUI.rar"
+      },
+      "ru": {
+        "tagline": "оверлей плеера: трек, обложка, эквалайзер, текст",
+        "about": "Lua-оверлей и приложение MusicUI.exe: приложение берет данные у Spotify и системного плеера, оверлей рисует их в игре. Автор распространяет архив через свой сайт: <a href=\"https://but3rflys.github.io/umbrella-work/#/\" target=\"_blank\" rel=\"noopener\">Umbrella Work</a>.",
+        "features": [
+          "трек, обложка и прогресс в игре",
+          "эквалайзер по реальному звуку",
+          "текст песни с прокруткой",
+          "управление воспроизведением из оверлея",
+          "Spotify и системный плеер Windows"
+        ],
+        "install": [
+          "Скачай `MusicUI.rar` из последнего релиза и распакуй.",
+          "Положи `MusicUI.lua` в папку `scripts` рядом с читом.",
+          "Запусти `MusicUI.exe` и следуй подсказкам в консоли."
+        ]
+      },
+      "en": {
+        "tagline": "player overlay: track, cover, equalizer, lyrics",
+        "about": "A Lua overlay plus MusicUI.exe: the app reads Spotify and the Windows player, the overlay draws it in game. The author distributes releases on <a href=\"https://but3rflys.github.io/umbrella-work/#/\" target=\"_blank\" rel=\"noopener\">Umbrella Work</a>.",
+        "features": [
+          "track, cover art and progress in game",
+          "equalizer driven by the real audio",
+          "lyrics scrolling with the song",
+          "playback controls from the overlay",
+          "Spotify and the Windows system player"
+        ],
+        "install": [
+          "Download `MusicUI.rar` from the latest release and unzip it.",
+          "Put `MusicUI.lua` into the `scripts` folder next to your cheat.",
+          "Run `MusicUI.exe` and follow the prompts in the console."
+        ]
+      }
+    },
+    {
+      "id": "umbrella_lua",
+      "tag": "umbrella-lua",
+      "title": "Umbrella Lua Developer Skill",
+      "kind": "skill",
+      "category": "auxiliary",
+      "file": "umbrella-lua.zip",
+      "author": "But3rflys",
+      "author_github": "But3rflys",
+      "website_url": "https://but3rflys.github.io/umbrella-work/#/s/umbrella_lua",
+      "source_url": "https://github.com/But3rflys/umbrella-work/tree/main/skill",
+      "releases_url": "https://github.com/But3rflys/umbrella-work/releases?q=umbrella-lua&expanded=true",
+      "initial": {
+        "version": "1.0.4",
+        "date": "2026-09-27",
+        "url": "https://github.com/But3rflys/umbrella-work/releases/download/umbrella-lua-v1.0.4/umbrella-lua.zip",
+        "release": "https://github.com/But3rflys/umbrella-work/releases/download/umbrella-lua-v1.0.4/umbrella-lua.zip"
+      },
+      "ru": {
+        "tagline": "Навык разработчика для создания Lua-скриптов Umbrella",
+        "about": "Пакет с рекомендациями и справочными материалами для разработки Lua-скриптов Umbrella. Это инструмент для разработки, а не скрипт, загружаемый в игру.",
+        "features": [
+          "Содержит справочные материалы для разработки Lua-скриптов Umbrella",
+          "Не устанавливается в папку <code>umbrella\\scripts</code> и не загружается игрой"
+        ],
+        "install": [
+          "Скачайте архив из <a href=\"https://github.com/But3rflys/umbrella-work/releases/download/umbrella-lua-v1.0.4/umbrella-lua.zip\" target=\"_blank\" rel=\"noopener\">последнего релиза автора</a>.",
+          "Установите его в совместимый инструмент разработки согласно его инструкции."
+        ]
+      },
+      "en": {
+        "tagline": "Developer skill for creating Umbrella Lua scripts",
+        "about": "A package of guidance and reference material for developing Umbrella Lua scripts. This is a development tool, not a script loaded by the game.",
+        "features": [
+          "Provides reference material for developing Umbrella Lua scripts",
+          "It is not installed in <code>umbrella\\scripts</code> and is not loaded by the game"
+        ],
+        "install": [
+          "Download the archive from the author’s <a href=\"https://github.com/But3rflys/umbrella-work/releases/download/umbrella-lua-v1.0.4/umbrella-lua.zip\" target=\"_blank\" rel=\"noopener\">latest release</a>.",
+          "Install it in a compatible development tool using that tool’s instructions."
         ]
       }
     }

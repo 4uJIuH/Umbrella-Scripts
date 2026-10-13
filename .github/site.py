@@ -40,8 +40,11 @@ def entry(script, folder, kind):
     assets = [a for a in ROWS[-1]["assets"] if a["tag"].startswith(prefix)]
     versions = [{"v": a["tag"][len(prefix):], "date": a["date"], "dl": a["downloads"], "file": a.get("file") or script["file"]} for a in assets]
     versions.sort(key=lambda v: version_key(v["v"]), reverse=True)
-    if not versions and script.get("initial"):
-        initial = script["initial"]
+    initial = script.get("initial")
+    if initial and (
+        not versions
+        or version_key(initial["version"]) > version_key(versions[0]["v"])
+    ):
         versions.append({
             "v": initial["version"],
             "date": initial["date"],
@@ -49,6 +52,7 @@ def entry(script, folder, kind):
             "file": script["file"],
             "url": initial["url"],
         })
+        versions.sort(key=lambda v: version_key(v["v"]), reverse=True)
     preview = GH / "previews" / (script["id"] + ".png")
     return {
         "id": script["id"],
@@ -58,6 +62,7 @@ def entry(script, folder, kind):
         "needs_q_localizer": script.get("needs_q_localizer", False),
         "author": script.get("author"),
         "author_github": script.get("author_github"),
+        "website_url": script.get("website_url"),
         "source_url": script.get("source_url"),
         "releases_url": script.get("releases_url"),
         "file": versions[0]["file"] if versions else script["file"],

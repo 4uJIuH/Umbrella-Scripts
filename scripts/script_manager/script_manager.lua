@@ -1,5 +1,6 @@
 --[[
-     ~ author: watah3ll
+     ~ author: 4uJIuH
+     ~ UI author: watahell / papagdetto
 
      ~ qLocalization
      ~ automatic localization wrapper for Lua menu interfaces
@@ -396,7 +397,7 @@ local localization = qLocalization.new({
 		sm_err_t = "Something went wrong",
 		sm_ok = "Got it",
 		sm_manual_t = "Downloaded",
-		sm_manual_msg = "%s is in your scripts folder. Unpack it there and reload the scripts.",
+		sm_manual_msg = "%s was downloaded to your scripts folder. Follow the package's installation instructions.",
 
 		sm_e_dir = "Scripts folder is unavailable",
 		sm_e_url = "Address is not trusted",
@@ -512,7 +513,7 @@ local localization = qLocalization.new({
 		sm_err_t = "Что-то пошло не так",
 		sm_ok = "Понятно",
 		sm_manual_t = "Скачано",
-		sm_manual_msg = "%s лежит в папке скриптов. Распакуй его там и перезагрузи скрипты.",
+		sm_manual_msg = "%s скачан в папку скриптов. Следуй инструкции по установке из этого пакета.",
 
 		sm_e_dir = "Папка скриптов недоступна",
 		sm_e_url = "Адрес не из доверенных",
@@ -556,7 +557,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.0.0"
+local VERSION = "2.0.1"
 
 local K = {
 	CFG = "script_market",
@@ -706,19 +707,6 @@ for i, h in ipairs(HEROES) do
 	HERO_KEY[h[1]:gsub("[^%a%d]", "")] = h[1]
 	HERO_KEY[h[2]:lower():gsub("[^%a%d]", "")] = h[1]
 end
-
-local HERO_OF = {
-	tinker_turret_dodge = { "tinker" },
-	tinker_auto_farm = { "tinker" },
-	auto_shackleshot = { "windrunner" },
-	auto_spark = { "arc_warden" },
-	earth_spirit_kick_combo = { "earth_spirit" },
-	spirit_bear_pull = { "lone_druid" },
-	rune_destruction = {},
-	hp_mana_67_ping = {},
-	script_manager = {},
-	dynamic_island_dota = {},
-}
 
 local SORTS = {
 	{ id = "catalog", key = "sm_sort_catalog", cmp = function(a, b) return a.order < b.order end },
@@ -1292,20 +1280,16 @@ function market.scan()
 		if not s.manual then
 			local body = fs.read(dir .. s.file)
 			if body then
-				S.inst[s.id] = body:match(s.version_marker .. '%s*=%s*"([^"]+)"') or "0.0.0"
+				local version
+				if s.version_marker == "NONE" then
+					version = Config.ReadString(K.CFG, "installed_" .. s.id, "0.0.0")
+				else
+					version = body:match(s.version_marker .. '%s*=%s*"([^"]+)"')
+				end
+				S.inst[s.id] = ver.valid(version) and version or "0.0.0"
 			end
 		end
 	end
-end
-
-function market.detect_heroes(item)
-	local blob = item.title .. " " .. item.tag.en .. " " .. item.about.en
-	local out = {}
-	for _, h in ipairs(HEROES) do
-		local pattern = "%f[%w]" .. (h[2]:gsub("%p", "%%%0")) .. "%f[%W]"
-		if blob:find(pattern) then out[#out + 1] = h[1] end
-	end
-	return out
 end
 
 function market.parse_heroes(value)
@@ -1348,7 +1332,9 @@ function market.build(catalog, meta)
 	for i, e in ipairs(catalog.scripts) do
 		local file = type(e) == "table" and type(e.url) == "string" and e.url:match("([^/?]+)$") or ""
 		local ext = file:match("^[%w%._%- ]+%.(%a+)$")
-		if type(e) == "table" and type(e.id) == "string" and ver.valid(e.version) and web.trusted(e.url) and (ext == "lua" or ext == "zip") then
+		ext = type(ext) == "string" and ext:lower() or ""
+		if type(e) == "table" and type(e.id) == "string" and ver.valid(e.version) and web.trusted(e.url)
+			and (ext == "lua" or ext == "zip" or ext == "rar") then
 			local m = described[e.id] or {}
 			local ru, en = m.ru or {}, m.en or {}
 			local style = STYLE[e.id] or { "\u{f1c9}", PAL[PAL_ORDER[(i - 1) % #PAL_ORDER + 1]] }
@@ -1356,7 +1342,8 @@ function market.build(catalog, meta)
 				id = e.id, order = i, latest = e.version, url = e.url,
 				release = web.trusted(e.release) and e.release or nil,
 				manual = e.manual == true, nlz = e.needs_q_localizer == true,
-				version_marker = e.version_marker == "SCRIPT_VERSION" and "SCRIPT_VERSION" or "VERSION",
+				version_marker = e.version_marker == "SCRIPT_VERSION" and "SCRIPT_VERSION"
+					or e.version_marker == "NONE" and "NONE" or "VERSION",
 				title = type(m.title) == "string" and m.title or text.humanize(e.id),
 				file = file,
 				source = e.url:match("githubusercontent%.com/([^/]+/[^/]+)/") or e.url:match("github%.com/([^/]+/[^/]+)/"),
@@ -1367,7 +1354,7 @@ function market.build(catalog, meta)
 				about = { ru = text.clean(ru.about), en = text.clean(en.about) },
 				features = { ru = text.list(ru.features), en = text.list(en.features) },
 			}
-			item.heroes = market.parse_heroes(e.heroes or e.hero) or HERO_OF[e.id] or market.detect_heroes(item)
+			item.heroes = market.parse_heroes(e.heroes or e.hero) or {}
 			SCRIPTS[#SCRIPTS + 1] = item
 			BY_ID[item.id] = item
 		end
@@ -1497,9 +1484,13 @@ function market.download(s, done)
 			if body then
 				if s.manual then
 					valid = body:sub(1, 2) == "PK"
+						or body:sub(1, 7) == "Rar!\26\7\0"
+						or body:sub(1, 8) == "Rar!\26\7\1\0"
 				else
 					valid = #body > 100 and body:sub(1, 1) ~= "<"
-						and body:match(s.version_marker .. '%s*=%s*"([^"]+)"') == s.latest
+					if valid and s.version_marker ~= "NONE" then
+						valid = body:match(s.version_marker .. '%s*=%s*"([^"]+)"') == s.latest
+					end
 				end
 				if valid then return done(body) end
 				key, detail = "sm_e_valid", nil
@@ -1523,6 +1514,9 @@ function market.run(id)
 		market.download(s, function(body, key, detail)
 			if not body then return market.fail(s, key, detail) end
 			if not fs.save(dir .. s.file, body) then return market.fail(s, "sm_e_write") end
+			if not s.manual and s.version_marker == "NONE" then
+				Config.WriteString(K.CFG, "installed_" .. s.id, s.latest)
+			end
 			S.busy[id] = nil
 			market.scan()
 			if s.manual then

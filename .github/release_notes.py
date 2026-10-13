@@ -91,20 +91,33 @@ def check_version(script, version):
 def write_manager_catalog():
     items = []
     for script in CATALOG["scripts"]:
-        path = manifest_path(script)
-        if (script.get("category") != "dota" and script["id"] != "script_manager") or not path:
+        if (
+            script.get("category") != "dota"
+            and script["id"] != "script_manager"
+            and not script.get("manager_catalog")
+        ):
             continue
-        version = json.loads(path.read_text(encoding="utf-8"))
+        path = manifest_path(script)
+        if path:
+            version = json.loads(path.read_text(encoding="utf-8"))
+        elif script.get("initial"):
+            version = script["initial"]
+        else:
+            continue
+        manual = script.get("manual", "package" in script)
         item = {
             "id": script["id"],
             "version": version["version"],
             "url": version["url"],
-            "release": version.get("release"),
-            "manual": "package" in script,
+            "release": version.get("release", version["url"]),
+            "manual": manual,
             "needs_q_localizer": script.get("needs_q_localizer", False),
+            "author": script.get("author") or REPO.split("/", 1)[0],
         }
-        if script.get("version_marker") == "SCRIPT_VERSION":
-            item["version_marker"] = "SCRIPT_VERSION"
+        if script.get("heroes"):
+            item["heroes"] = script["heroes"]
+        if script.get("version_marker") in ("SCRIPT_VERSION", "NONE"):
+            item["version_marker"] = script["version_marker"]
         items.append(item)
 
     dependency = next(script for script in CATALOG["scripts"] if script["id"] == "q_localizer")

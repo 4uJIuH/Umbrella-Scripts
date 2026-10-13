@@ -11,7 +11,11 @@
       "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/a8231907e6454c22491dffd03333b0a6509be99e/scripts/tinker_turret_dodge/tinker_turret_dodge.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-turret-dodge-v1.1.5/tinker_turret_dodge.lua",
       "manual": false,
-      "needs_q_localizer": true
+      "needs_q_localizer": true,
+      "author": "4uJIuH",
+      "heroes": [
+        "tinker"
+      ]
     },
     {
       "id": "tinker_auto_farm",
@@ -19,7 +23,11 @@
       "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-auto-farm-v1.0.3/Tinker-Auto-Farm.zip",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-auto-farm-v1.0.3/Tinker-Auto-Farm.zip",
       "manual": true,
-      "needs_q_localizer": false
+      "needs_q_localizer": false,
+      "author": "4uJIuH",
+      "heroes": [
+        "tinker"
+      ]
     },
     {
       "id": "auto_shackleshot",
@@ -27,7 +35,11 @@
       "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/auto_shackleshot/Auto_Shackleshot.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-shackleshot-v1.0.0/Auto_Shackleshot.lua",
       "manual": false,
-      "needs_q_localizer": true
+      "needs_q_localizer": true,
+      "author": "4uJIuH",
+      "heroes": [
+        "windrunner"
+      ]
     },
     {
       "id": "auto_spark",
@@ -35,7 +47,11 @@
       "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/auto_spark/Auto_Spark.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-spark-v1.0.0/Auto_Spark.lua",
       "manual": false,
-      "needs_q_localizer": true
+      "needs_q_localizer": true,
+      "author": "4uJIuH",
+      "heroes": [
+        "arc_warden"
+      ]
     },
     {
       "id": "rune_destruction",
@@ -43,7 +59,8 @@
       "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/rune_destruction/rune_units.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/rune-destruction-v1.0.2/rune_units.lua",
       "manual": false,
-      "needs_q_localizer": false
+      "needs_q_localizer": false,
+      "author": "4uJIuH"
     },
     {
       "id": "earth_spirit_kick_combo",
@@ -51,7 +68,11 @@
       "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/earth_spirit_kick_combo/earth_spirit_kick_combo.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/earth-spirit-kick-combo-v1.0.0/earth_spirit_kick_combo.lua",
       "manual": false,
-      "needs_q_localizer": true
+      "needs_q_localizer": true,
+      "author": "4uJIuH",
+      "heroes": [
+        "earth_spirit"
+      ]
     },
     {
       "id": "hp_mana_67_ping",
@@ -59,7 +80,8 @@
       "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hp_mana_67_ping/hp_mana_67_ping.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua",
       "manual": false,
-      "needs_q_localizer": true
+      "needs_q_localizer": true,
+      "author": "4uJIuH"
     },
     {
       "id": "spirit_bear_pull",
@@ -67,15 +89,20 @@
       "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/spirit_bear_pull/lone_druid_bear_pull.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-bear-pull-v1.0.0/lone_druid_bear_pull.lua",
       "manual": false,
-      "needs_q_localizer": true
+      "needs_q_localizer": true,
+      "author": "4uJIuH",
+      "heroes": [
+        "lone_druid"
+      ]
     },
     {
       "id": "script_manager",
-      "version": "2.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/d137a172c463c2b7e1993f561485f4477a8b4666/scripts/script_manager/script_manager.lua",
-      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.0/script_manager.lua",
+      "version": "2.0.1",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/script_manager/script_manager.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.1/script_manager.lua",
       "manual": false,
-      "needs_q_localizer": false
+      "needs_q_localizer": false,
+      "author": "4uJIuH"
     },
     {
       "id": "dynamic_island_dota",
@@ -84,6 +111,7 @@
       "release": "https://github.com/qhols/DynamicIsland-Dota/releases/download/v2.5.3/dynamic_island.lua",
       "manual": false,
       "needs_q_localizer": false,
+      "author": "\"ur2m\"",
       "version_marker": "SCRIPT_VERSION"
     },
     {
@@ -92,7 +120,76 @@
       "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/caba051502757c0f62ce970a4a4ae8e5bae9a264/scripts/tinker_smart_escape/tinker_smart_escape.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-smart-escape-v1.0.0/tinker_smart_escape.lua",
       "manual": false,
-      "needs_q_localizer": false
+      "needs_q_localizer": false,
+      "author": "sataroz",
+      "heroes": [
+        "tinker"
+      ]
+    },
+    {
+      "id": "lane_pull",
+      "version": "1.0.4",
+      "url": "https://github.com/But3rflys/umbrella-work/releases/download/lane-pull-v1.0.4/lane_pull.lua",
+      "release": "https://github.com/But3rflys/umbrella-work/releases/download/lane-pull-v1.0.4/lane_pull.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "But3rflys",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "ds_spot_block",
+      "version": "1.0.1",
+      "url": "https://github.com/But3rflys/umbrella-work/releases/download/ds-spot-block-v1.0.1/ds_spot_block.lua",
+      "release": "https://github.com/But3rflys/umbrella-work/releases/download/ds-spot-block-v1.0.1/ds_spot_block.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "But3rflys",
+      "heroes": [
+        "dark_seer"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "custom_background",
+      "version": "1.0.0",
+      "url": "https://github.com/But3rflys/umbrella-work/releases/download/custom-background-v1.0.0/custom_background.lua",
+      "release": "https://github.com/But3rflys/umbrella-work/releases/download/custom-background-v1.0.0/custom_background.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "But3rflys",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "auto_stack",
+      "version": "1.1.0",
+      "url": "https://github.com/But3rflys/umbrella-work/releases/download/auto-stack-v1.1.0/auto_stack.lua",
+      "release": "https://github.com/But3rflys/umbrella-work/releases/download/auto-stack-v1.1.0/auto_stack.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "But3rflys",
+      "heroes": [
+        "kunkka",
+        "invoker"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "draft_helper",
+      "version": "2.0.0-beta.20",
+      "url": "https://github.com/But3rflys/umbrella-work/releases/download/draft-helper-v2.0.0-beta.20/draft_helper.lua",
+      "release": "https://github.com/But3rflys/umbrella-work/releases/download/draft-helper-v2.0.0-beta.20/draft_helper.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "But3rflys"
+    },
+    {
+      "id": "musicui",
+      "version": "1.0.8",
+      "url": "https://github.com/But3rflys/umbrella-work/releases/download/musicui-v1.0.8/MusicUI.rar",
+      "release": "https://github.com/But3rflys/umbrella-work/releases/download/musicui-v1.0.8/MusicUI.rar",
+      "manual": true,
+      "needs_q_localizer": false,
+      "author": "But3rflys"
     }
   ]
 }
