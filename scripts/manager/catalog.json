@@ -438,7 +438,7 @@
     {
       "id": "visage_familiar_tp",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/visage_familiar_tp/garguliatp.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/94093709f27eb4deabffe5699c7c190f66f0ae00/scripts/visage_familiar_tp/garguliatp.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/visage-familiar-tp-v1.0.0/garguliatp.lua",
       "manual": false,
       "needs_q_localizer": false,
