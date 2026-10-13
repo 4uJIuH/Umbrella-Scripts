@@ -3,13 +3,9 @@
 автоматический отвод крипов медведем Lone Druid / automatically pull a creep wave with Lone Druid's bear
 
 <!-- releases:start -->
-Скачать: [lone_druid_bear_pull.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-bear-pull-v1.0.0/lone_druid_bear_pull.lua) — `spirit-bear-pull-v1.0.0`, 2026-10-10
+Последняя версия: [`v1.0.0` — `lone_druid_bear_pull.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-bear-pull-v1.0.0/lone_druid_bear_pull.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`spirit-bear-pull-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/spirit-bear-pull-v1.0.0) | 2026-10-10 | [lone_druid_bear_pull.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-bear-pull-v1.0.0/lone_druid_bear_pull.lua) | 1 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=spirit-bear-pull&expanded=true)
+[Релизы на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=spirit-bear-pull&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

@@ -8,7 +8,6 @@
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
 | [`tinker-auto-farm-v1.0.4`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/tinker-auto-farm-v1.0.4) | 2026-10-13 | [Tinker-Auto-Farm.zip](https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-auto-farm-v1.0.4/Tinker-Auto-Farm.zip) | 1 |
-| [`tinker-auto-farm-v1.0.3`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/tinker-auto-farm-v1.0.3) | 2026-10-10 | [Tinker-Auto-Farm.zip](https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-auto-farm-v1.0.3/Tinker-Auto-Farm.zip) | 4 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=tinker-auto-farm&expanded=true)
 <!-- releases:end -->

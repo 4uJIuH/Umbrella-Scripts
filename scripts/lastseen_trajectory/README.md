@@ -3,9 +3,13 @@
 показывает последнее направление движения врага / shows the last known direction an enemy moved
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `lastseen_trajectory.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/lastseen-trajectory-v1.0.0/lastseen_trajectory.lua)
+Скачать: [lastseen_trajectory.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/lastseen-trajectory-v1.0.0/lastseen_trajectory.lua) — `lastseen-trajectory-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=lastseen-trajectory&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`lastseen-trajectory-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/lastseen-trajectory-v1.0.0) | 2026-10-13 | [lastseen_trajectory.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/lastseen-trajectory-v1.0.0/lastseen_trajectory.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=lastseen-trajectory&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

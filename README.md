@@ -341,10 +341,8 @@ This third-party library is by qfun (qfun_g9s), not my script.
 <!-- stats:start -->
 | script | downloads | latest |
 | --- | --- | --- |
-| [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 4 | `tinker-turret-dodge-v1.1.5` |
-| [Tinker Auto Farm](scripts/tinker_auto_farm) | 5 | `tinker-auto-farm-v1.0.4` |
-| [Spirit Bear Pull](scripts/spirit_bear_pull) | 1 | `spirit-bear-pull-v1.0.0` |
-| [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
+| [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 1 | `tinker-turret-dodge-v1.1.5` |
+| [Tinker Auto Farm](scripts/tinker_auto_farm) | 1 | `tinker-auto-farm-v1.0.4` |
 | [Script Manager](scripts/script_manager) | 17 | `script-manager-v2.0.5` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
@@ -421,6 +419,12 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Lycan Auto Control](scripts/lycan_auto_control) | 0 | `lycan-auto-control-v1.0.0` |
 | [Mute Voice Lines](scripts/mute_voice_lines) | 0 | `mute-voice-lines-v1.0.0` |
 | [Tinker Glimmer during Rearm](scripts/tinker_glimmer_rearm) | 0 | `tinker-glimmer-rearm-v1.3` |
+| [Dota No Limit](scripts/dota_no_limit) | 0 | `dota-no-limit-v1.0.0` |
+| [Team Maphack](scripts/team_maphack) | 0 | `team-maphack-v1.0.0` |
+| [Last Seen Trajectory](scripts/lastseen_trajectory) | 0 | `lastseen-trajectory-v1.0.0` |
+| [KOTL Auto Chakra](scripts/kotl_auto_chakra) | 0 | `kotl-auto-chakra-v1.0.0` |
+| [SF Feast of Souls Abuse](scripts/sf_feast_of_souls_abuse) | 0 | `sf-feast-of-souls-v4.0` |
+| [Block Creep Attack During Feast](scripts/sf_block_creep_attack) | 0 | `sf-block-creep-attack-v1.2` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

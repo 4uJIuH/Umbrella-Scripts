@@ -3,9 +3,13 @@
 отмечает события игры в чате и на миникарте / marks game events in chat and on the minimap
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `team_maphack.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/team-maphack-v1.0.0/team_maphack.lua)
+Скачать: [team_maphack.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/team-maphack-v1.0.0/team_maphack.lua) — `team-maphack-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=team-maphack&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`team-maphack-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/team-maphack-v1.0.0) | 2026-10-13 | [team_maphack.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/team-maphack-v1.0.0/team_maphack.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=team-maphack&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

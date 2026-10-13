@@ -3,9 +3,13 @@
 блокирует атаки по крипам во время Feast of Souls / blocks creep attacks during Feast of Souls
 
 <!-- releases:start -->
-Последняя версия: [`v1.2` — `sf_block_creep_attack.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-block-creep-attack-v1.2/sf_block_creep_attack.lua)
+Скачать: [sf_block_creep_attack.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-block-creep-attack-v1.2/sf_block_creep_attack.lua) — `sf-block-creep-attack-v1.2`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=sf-block-creep-attack&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`sf-block-creep-attack-v1.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/sf-block-creep-attack-v1.2) | 2026-10-13 | [sf_block_creep_attack.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-block-creep-attack-v1.2/sf_block_creep_attack.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=sf-block-creep-attack&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

@@ -3,9 +3,13 @@
 автоматизирует взаимодействие Feast of Souls с предметами и эффектами / automates Feast of Souls interactions with items and effects
 
 <!-- releases:start -->
-Последняя версия: [`v4.0` — `sf_feast_of_souls_abuse.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-feast-of-souls-v4.0/sf_feast_of_souls_abuse.lua)
+Скачать: [sf_feast_of_souls_abuse.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-feast-of-souls-v4.0/sf_feast_of_souls_abuse.lua) — `sf-feast-of-souls-v4.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=sf-feast-of-souls&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`sf-feast-of-souls-v4.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/sf-feast-of-souls-v4.0) | 2026-10-13 | [sf_feast_of_souls_abuse.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-feast-of-souls-v4.0/sf_feast_of_souls_abuse.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=sf-feast-of-souls&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
