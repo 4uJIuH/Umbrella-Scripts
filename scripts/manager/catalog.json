@@ -219,7 +219,19 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/naga-pt-abuse-v1.0.0/nagapt.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "z\u0432e\u0437d\u044b \u0443na\u043bu v \u043b\u0443\u0436\u0443 (Discord: rarimember)"
+      "author": "z\u0432e\u0437d\u044b \u0443na\u043bu v \u043b\u0443\u0436\u0443 (Discord: rarimember)",
+      "heroes": [
+        "naga"
+      ]
+    },
+    {
+      "id": "auto_aegis_mover",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/auto_aegis_mover/auto_aegis_mover.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-aegis-mover-v1.0.0/auto_aegis_mover.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "⚔LegaXye禪 (Discord: legaxye)"
     },
     {
       "id": "anti_rubick",
