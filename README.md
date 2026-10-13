@@ -123,6 +123,22 @@
 - [SF Feast of Souls Abuse](scripts/sf_feast_of_souls_abuse) — автоматизирует взаимодействие Feast of Souls с предметами и эффектами
 - [Block Creep Attack During Feast](scripts/sf_block_creep_attack) — блокирует атаки по крипам во время Feast of Souls
 - [Anti-Cyclone BKB](scripts/sf_anti_cyclone_bkb) — пытается использовать BKB перед вражеским циклоном
+- [Control Ally](scripts/control_ally) — комбо для союзного героя под совместным управлением
+- [Eul / Wind Waker Blink Helper](scripts/eul_wind_waker_blink_helper) — визуальные подсказки для Blink после Eul или Wind Waker
+- [Dark Carnival Path Tokens](scripts/dark_carnival_path_tokens) — показывает нужные токены и героев для Dark Carnival
+- [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) — автоматически управляет медведем Lone Druid
+- [Lina Hero Brain](scripts/lina_hero_brain) — мозг Lina в дополнение к встроенному скрипту UCZone
+- [Sniper Hero Brain](scripts/sniper_hero_brain) — дополнительный мозг для Sniper на UCZone
+- [Ward Triangulator](scripts/ward_triangulator) — находит вражеские сентри по наблюдениям и триангуляции
+- [Muerta Dead Shot](scripts/muerta_dead_shot) — подбирает траекторию Dead Shot с рикошетами и страхом к Muerta
+- [Enemy Cooldowns](scripts/enemy_cooldowns) — показывает перезарядку способностей и предметов врагов
+- [Can Teleport Out](scripts/can_teleport_out) — использует предметы на телепортирующемся герое
+- [Auto Courier Gem](scripts/auto_courier_gem) — отправляет курьера за выпавшим Gem и возвращает его в тайник
+- [Camp Stacker](scripts/stacker) — стак кемпов героями, иллюзиями и подконтрольными юнитами
+- [Auto-Ruin](scripts/auto_ruin) — автоматически покупает расходники и выполняет действия у фонтана
+- [Broodmother Helper](scripts/broodmother_helper) — автоконтроль, преследование и фарм пауков Broodmother
+- [Script Market](scripts/market) — устанавливает, удаляет и обновляет скрипты из ScriptIvMarket
+- [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) — панель ранга, прогресса MMR и статистики сессии
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -293,6 +309,22 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [SF Feast of Souls Abuse](scripts/sf_feast_of_souls_abuse) — automates Feast of Souls interactions with items and effects
 - [Block Creep Attack During Feast](scripts/sf_block_creep_attack) — blocks creep attacks during Feast of Souls
 - [Anti-Cyclone BKB](scripts/sf_anti_cyclone_bkb) — attempts to use BKB before an enemy cyclone
+- [Control Ally](scripts/control_ally) — combo control for a shared-control allied hero
+- [Eul / Wind Waker Blink Helper](scripts/eul_wind_waker_blink_helper) — visual Blink cues after Eul or Wind Waker
+- [Dark Carnival Path Tokens](scripts/dark_carnival_path_tokens) — shows the tokens and heroes needed for Dark Carnival
+- [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) — automatically controls Lone Druid's bear
+- [Lina Hero Brain](scripts/lina_hero_brain) — a Lina decision-making companion for UCZone's built-in script
+- [Sniper Hero Brain](scripts/sniper_hero_brain) — an additional Sniper brain for UCZone
+- [Ward Triangulator](scripts/ward_triangulator) — locates enemy sentries through visibility observations and triangulation
+- [Muerta Dead Shot](scripts/muerta_dead_shot) — plans Dead Shot ricochets and fears targets toward Muerta
+- [Enemy Cooldowns](scripts/enemy_cooldowns) — shows enemy ability and item cooldowns
+- [Can Teleport Out](scripts/can_teleport_out) — uses items on a hero while they are teleporting
+- [Auto Courier Gem](scripts/auto_courier_gem) — sends the courier to pick up a dropped Gem and return it to stash
+- [Camp Stacker](scripts/stacker) — stacks camps with heroes, illusions, and controlled units
+- [Auto-Ruin](scripts/auto_ruin) — automates consumable purchases and actions near the fountain
+- [Broodmother Helper](scripts/broodmother_helper) — Broodmother spider control, chasing, and farming
+- [Script Market](scripts/market) — installs, removes, and updates scripts from ScriptIvMarket
+- [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) — rank, MMR progress, and session-statistics panel
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.

@@ -25,3 +25,6 @@ Tag prefixes, package files, script categories (`dota`, `deadlock`, or `auxiliar
 configured in `catalog.json`.
 `readme.yml` updates the script pages and download statistics; `site.yml` builds and publishes
 the GitHub Pages site.
+
+Entries marked `external` link to releases maintained by another repository. They appear on the site but are
+excluded from this repository's release workflow and Script Manager feed.

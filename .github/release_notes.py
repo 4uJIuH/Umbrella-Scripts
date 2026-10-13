@@ -17,6 +17,8 @@ PACKAGE_FILE = re.compile(
 
 def find(tag):
     for script in CATALOG["scripts"]:
+        if script.get("external"):
+            continue
         if tag.startswith(script["tag"] + "-v"):
             return script
     return None
@@ -132,6 +134,8 @@ def check_version(script, version):
 def write_manager_catalog():
     items = []
     for script in CATALOG["scripts"]:
+        if script.get("external"):
+            continue
         if (
             script.get("category") != "dota"
             and script["id"] != "script_manager"

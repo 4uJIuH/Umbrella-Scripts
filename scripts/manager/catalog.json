@@ -1346,6 +1346,155 @@
       "needs_q_localizer": false,
       "author": "Snow Storm (Discord: devsnowy)",
       "version_marker": "NONE"
+    },
+    {
+      "id": "control_ally",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/control_ally/control_ally.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/control-ally-v1.0.0/control_ally.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u82b1\u66c7\u308a (Discord: euphoria2k)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "eul_wind_waker_blink_helper",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/eul_wind_waker_blink_helper/eul_wind_waker_blink_helper.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/eul-wind-waker-blink-helper-v1.0.0/eul_wind_waker_blink_helper.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "chizhak (Discord: stulipelky)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "dark_carnival_path_tokens",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dark_carnival_path_tokens/dark_carnival_path_tokens.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/dark-carnival-path-tokens-v1.0.0/dark_carnival_path_tokens.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "64qt (Discord: 32tq)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "lone_druid_bear_ai_deluxe",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/lone_druid_bear_ai_deluxe/lone_druid_bear_ai_deluxe.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/lone-druid-bear-ai-deluxe-v1.0.0/lone_druid_bear_ai_deluxe.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "CODEX (Discord: _codex_7)",
+      "heroes": [
+        "lone_druid"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "ward_triangulator",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/ward_triangulator/ward_triangulator.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/ward-triangulator-v1.0.0/ward_triangulator.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Sesh (Discord: seshidg)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "muerta_dead_shot",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/muerta_dead_shot/muerta_dead_shot.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/muerta-dead-shot-v1.0.0/muerta_dead_shot.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "cuter as a vampire (Discord: internetenemy)",
+      "heroes": [
+        "muerta"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "enemy_cooldowns",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/enemy_cooldowns/enemy_cooldowns.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/enemy-cooldowns-v1.0.0/enemy_cooldowns.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "64qt (Discord: 32tq)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "can_teleport_out",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/can_teleport_out/can_teleport_out.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/can-teleport-out-v1.0.0/can_teleport_out.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "love (Discord: etolove)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "auto_courier_gem",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/auto_courier_gem/auto_courier_gem.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-courier-gem-v1.0.0/auto_courier_gem.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "serioga5035; latest version by sh1shula",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "stacker",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/stacker/stacker.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/camp-stacker-v1.0.0/stacker.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Sancho (Discord: zpzq)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "auto_ruin",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/auto_ruin/auto_ruin.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-ruin-v1.0.0/auto_ruin.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "flatixxx (Discord: flatixxx)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "broodmother_helper",
+      "version": "2.1",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/broodmother_helper/broodmother_helper.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/broodmother-helper-v2.1/broodmother_helper.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "CODEX (Discord: _codex_7); base by Discord user 395477305830408192",
+      "heroes": [
+        "broodmother"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "market",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/market/market.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/market-v1.0.0/market.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u0420\u043e\u043c\u0431\u0438\u0442 (Discord: derevasha); upstream: madonchik123",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "mmr_tracker_ultimate",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mmr_tracker_ultimate/mmr_tracker_ultimate.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/mmr-tracker-ultimate-v1.0.0/mmr_tracker_ultimate.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u0420\u043e\u043c\u0431\u0438\u0442 (Discord: derevasha)",
+      "version_marker": "NONE"
     }
   ]
 }
