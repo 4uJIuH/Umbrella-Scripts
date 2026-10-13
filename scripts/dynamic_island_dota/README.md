@@ -3,9 +3,9 @@
 интерактивный островок с уведомлениями, таймерами и показателями матча / an interactive island for match stats, alerts, and timers
 
 <!-- releases:start -->
-Релизов пока нет. No releases yet.
+Последняя версия: [`v2.5.3` — `dynamic_island.lua`](https://github.com/qhols/DynamicIsland-Dota/releases/download/v2.5.3/dynamic_island.lua)
 
-[Релизы на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=dynamic-island-dota&expanded=true)
+[Релизы автора на GitHub](https://github.com/qhols/DynamicIsland-Dota/releases)
 <!-- releases:end -->
 
 ## Что умеет

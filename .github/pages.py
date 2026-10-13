@@ -63,15 +63,21 @@ def asset_of(rel, script):
 
 
 def all_link(script):
-    return "https://github.com/%s/releases?q=%s&expanded=true" % (REPO, script["tag"])
+    return script.get("releases_url") or "https://github.com/%s/releases?q=%s&expanded=true" % (REPO, script["tag"])
 
 
 def releases_block(script, mine):
     out = []
     if not mine:
-        out.append("Релизов пока нет. No releases yet.")
+        initial = script.get("initial")
+        if initial:
+            out.append("Последняя версия: [`v%s` — `%s`](%s)"
+                       % (initial["version"], script["file"], initial["url"]))
+        else:
+            out.append("Релизов пока нет. No releases yet.")
         out.append("")
-        out.append("[Релизы на GitHub](%s)" % all_link(script))
+        label = "Релизы автора на GitHub" if script.get("releases_url") else "Релизы на GitHub"
+        out.append("[%s](%s)" % (label, all_link(script)))
         return NL.join(out)
 
     top = mine[0]
