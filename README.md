@@ -460,6 +460,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Anti-Cyclone BKB](scripts/sf_anti_cyclone_bkb) | 0 | `sf-anti-cyclone-bkb-v2.0` |
 | [Control Ally](scripts/control_ally) | 0 | `control-ally-v1.0.0` |
 | [Eul / Wind Waker Blink Helper](scripts/eul_wind_waker_blink_helper) | 0 | `eul-wind-waker-blink-helper-v1.0.0` |
+| [Dark Carnival Path Tokens](scripts/dark_carnival_path_tokens) | 0 | `dark-carnival-path-tokens-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
