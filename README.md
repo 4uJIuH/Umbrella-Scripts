@@ -375,7 +375,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | --- | --- | --- |
 | [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 1 | `tinker-turret-dodge-v1.1.5` |
 | [Tinker Auto Farm](scripts/tinker_auto_farm) | 1 | `tinker-auto-farm-v1.0.4` |
-| [Script Manager](scripts/script_manager) | 15 | `script-manager-v2.0.5` |
+| [Script Manager](scripts/script_manager) | 14 | `script-manager-v2.0.5` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
@@ -434,13 +434,13 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Spirit Breaker Charge Combo](scripts/spirit_breaker_charge) | 0 | `spirit-breaker-charge-v1.0.0` |
 | [Ward Predictor](scripts/ward_predictor) | 0 | `ward-predictor-v1.0.0` |
 | [Invoker SS](scripts/invoker_ss) | 0 | `invoker-ss-v138` |
-| [Sentry](scripts/sentry) | 0 | `sentry-v1.0.0` |
+| [Sentry](scripts/sentry) | 1 | `sentry-v1.0.0` |
 | [Changer](scripts/changer) | 0 | `changer-v1.0.0` |
 | [Self Play](scripts/self_play_bot) | 1 | `self-play-v1.0.0` |
 | [Farm Pattern 2.5](scripts/farm_pattern) | 0 | `farm-pattern-v2.5` |
-| [Win Condition Engine](scripts/win_condition_engine) | 0 | `win-condition-engine-v1.0.0` |
+| [Win Condition Engine](scripts/win_condition_engine) | 1 | `win-condition-engine-v1.0.0` |
 | [Invoker (beta)](scripts/invoker_beta) | 0 | `invoker-beta-v1.0.0` |
-| [Kez Combo](scripts/kez_combo) | 0 | `kez-combo-v1.0.0` |
+| [Kez Combo](scripts/kez_combo) | 1 | `kez-combo-v1.0.0` |
 | [Techies Combo](scripts/techies_combo) | 0 | `techies-combo-v1.0.0` |
 | [Lone Druid Auto Farm](scripts/ld_farm) | 0 | `ld-farm-v1.7` |
 | [Unusual Effects](scripts/unusual_cosmetics) | 0 | `unusual-cosmetics-v1.0.0` |
@@ -465,6 +465,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Ward Triangulator](scripts/ward_triangulator) | 0 | `ward-triangulator-v1.0.0` |
 | [Muerta Dead Shot](scripts/muerta_dead_shot) | 0 | `muerta-dead-shot-v1.0.0` |
 | [Enemy Cooldowns](scripts/enemy_cooldowns) | 0 | `enemy-cooldowns-v1.0.0` |
+| [Can Teleport Out](scripts/can_teleport_out) | 0 | `can-teleport-out-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

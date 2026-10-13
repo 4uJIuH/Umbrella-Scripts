@@ -3,9 +3,13 @@
 использует предметы на телепортирующемся герое / uses items on a hero while they are teleporting
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `can_teleport_out.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/can_teleport_out/can_teleport_out.lua)
+Скачать: [can_teleport_out.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/can-teleport-out-v1.0.0/can_teleport_out.lua) — `can-teleport-out-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=can-teleport-out&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`can-teleport-out-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/can-teleport-out-v1.0.0) | 2026-10-13 | [can_teleport_out.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/can-teleport-out-v1.0.0/can_teleport_out.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=can-teleport-out&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
