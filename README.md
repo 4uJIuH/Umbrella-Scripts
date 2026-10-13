@@ -31,6 +31,7 @@
 - [Custom Stats](scripts/custom_stats) — настраиваемая панель статистики матча вместо панели Dota Plus
 - [Bloodrage AutoCast](scripts/bloodrage_autocast) — автоприменение Bloodrage у Bloodseeker по переключаемому бинду
 - [Naga PT Abuse](scripts/naga_pt_abuse) — переключение Power Treads при Mirror Image и Manta
+- [Auto Aegis Mover](scripts/auto_aegis_mover) — возвращает важные предметы из рюкзака после гибели с Эгидой
 - [Anti-Rubick](scripts/anti_rubick) — защита выбранных способностей от кражи Рубиком
 - [Arc Warden Blocker](scripts/arc_warden_blocker) — перехватывает хук Пуджа и перекат Earth Spirit копией Arc Warden
 - [Invoker Combo Switcher](scripts/invoker_combo_switcher) — переключает пресеты комбо Инвокера двумя клавишами
@@ -114,6 +115,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Custom Stats](scripts/custom_stats) — a customizable match-stats panel to replace Dota Plus stats
 - [Bloodrage AutoCast](scripts/bloodrage_autocast) — toggle-bind auto-cast for Bloodseeker's Bloodrage
 - [Naga PT Abuse](scripts/naga_pt_abuse) — Power Treads switching for Mirror Image and Manta
+- [Auto Aegis Mover](scripts/auto_aegis_mover) — moves a priority item from the backpack after dying with Aegis
 - [Anti-Rubick](scripts/anti_rubick) — protect selected spells from Rubick's Spell Steal
 - [Arc Warden Blocker](scripts/arc_warden_blocker) — uses Arc Warden's clone to intercept Pudge hooks and Earth Spirit rolls
 - [Invoker Combo Switcher](scripts/invoker_combo_switcher) — switches Invoker combo presets with two hotkeys
@@ -184,11 +186,12 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
 | [Naga PT Abuse](scripts/naga_pt_abuse) | 1 | `naga-pt-abuse-v1.0.0` |
+| [Auto Aegis Mover](scripts/auto_aegis_mover) | 0 | `auto-aegis-mover-v1.0.0` |
 | [Anti-Rubick](scripts/anti_rubick) | 1 | `anti-rubick-v1.0.0` |
-| [Arc Warden Blocker](scripts/arc_warden_blocker) | 0 | `arc-warden-blocker-v1.0.0` |
-| [Invoker Combo Switcher](scripts/invoker_combo_switcher) | 0 | `invoker-combo-switcher-v1.0.0` |
-| [Magnus Skewer Ally](scripts/magnus_skewer_ally) | 0 | `magnus-skewer-ally-v1.0.0` |
-| [Better Better Techies Combo](scripts/better_better_techies_combo) | 0 | `better-better-techies-combo-v1.0.0` |
+| [Arc Warden Blocker](scripts/arc_warden_blocker) | 1 | `arc-warden-blocker-v1.0.0` |
+| [Invoker Combo Switcher](scripts/invoker_combo_switcher) | 1 | `invoker-combo-switcher-v1.0.0` |
+| [Magnus Skewer Ally](scripts/magnus_skewer_ally) | 1 | `magnus-skewer-ally-v1.0.0` |
+| [Better Better Techies Combo](scripts/better_better_techies_combo) | 2 | `better-better-techies-combo-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

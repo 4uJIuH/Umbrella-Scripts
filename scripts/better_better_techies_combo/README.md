@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`better-better-techies-combo-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/better-better-techies-combo-v1.0.0) | 2026-10-13 | [better_better_techies_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/better-better-techies-combo-v1.0.0/better_better_techies_combo.lua) | 0 |
+| [`better-better-techies-combo-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/better-better-techies-combo-v1.0.0) | 2026-10-13 | [better_better_techies_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/better-better-techies-combo-v1.0.0/better_better_techies_combo.lua) | 2 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=better-better-techies-combo&expanded=true)
 <!-- releases:end -->
