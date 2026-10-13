@@ -1,4 +1,4 @@
---by m0rc1 and 
+--by m0rc1 and
 
 local VERSION = "1.0.0"
 local PhoenixCombo = {}
