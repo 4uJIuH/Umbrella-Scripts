@@ -150,6 +150,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 4 | `q-localizer-v1.0.0` |
 | [Script Manager](scripts/script_manager) | 3 | `script-manager-v1.6.0` |
+| [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
