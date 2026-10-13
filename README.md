@@ -37,6 +37,7 @@
 - [Invoker Combo Switcher](scripts/invoker_combo_switcher) — переключает пресеты комбо Инвокера двумя клавишами
 - [Magnus Skewer Ally](scripts/magnus_skewer_ally) — направляет Skewer в выбранного союзника во встроенном комбо
 - [Better Better Techies Combo](scripts/better_better_techies_combo) — комбо на Techies с двумя режимами и автоматическим отходом
+- [Chat Translator](scripts/chat_translator) — автоматически переводит игровой чат между английским и русским
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -121,6 +122,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Invoker Combo Switcher](scripts/invoker_combo_switcher) — switches Invoker combo presets with two hotkeys
 - [Magnus Skewer Ally](scripts/magnus_skewer_ally) — redirects the built-in Magnus combo's Skewer towards an ally
 - [Better Better Techies Combo](scripts/better_better_techies_combo) — a Techies combo with two modes and an automatic disengage
+- [Chat Translator](scripts/chat_translator) — automatically translates in-game chat between English and Russian
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -192,6 +194,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Invoker Combo Switcher](scripts/invoker_combo_switcher) | 1 | `invoker-combo-switcher-v1.0.0` |
 | [Magnus Skewer Ally](scripts/magnus_skewer_ally) | 1 | `magnus-skewer-ally-v1.0.0` |
 | [Better Better Techies Combo](scripts/better_better_techies_combo) | 2 | `better-better-techies-combo-v1.0.0` |
+| [Chat Translator](scripts/chat_translator) | 0 | `chat-translator-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
