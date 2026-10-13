@@ -3,9 +3,13 @@
 комбо на Techies с двумя режимами и автоматическим отходом / a Techies combo with two modes and an automatic disengage
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `better_better_techies_combo.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/better_better_techies_combo/better_better_techies_combo.lua)
+Скачать: [better_better_techies_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/better-better-techies-combo-v1.0.0/better_better_techies_combo.lua) — `better-better-techies-combo-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=better-better-techies-combo&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`better-better-techies-combo-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/better-better-techies-combo-v1.0.0) | 2026-10-13 | [better_better_techies_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/better-better-techies-combo-v1.0.0/better_better_techies_combo.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=better-better-techies-combo&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -23,6 +27,13 @@ Better Better Techies Combo начинает комбо с Blast Off и став
 2. Перезагрузите Lua-скрипты.
 3. Откройте `Heroes → Hero List → Techies → Better Better Techies Combo` и включите скрипт.
 4. Наведитесь на противника и зажмите настроенный бинд комбо.
+
+## Что нового
+
+# 1.0.0
+
+- Первый релиз Better Better Techies Combo.
+- Добавлены два режима комбо и выбор направления отхода после прокаста.
 
 ---
 
@@ -43,3 +54,10 @@ Better Better Techies Combo starts with Blast Off and places mines during flight
 2. Reload the Lua scripts.
 3. Open `Heroes → Hero List → Techies → Better Better Techies Combo` and enable it.
 4. Hover over an enemy and hold the configured combo bind.
+
+## Changelog
+
+# 1.0.0
+
+- Initial Better Better Techies Combo release.
+- Added two combo modes and a post-combo disengage destination.
