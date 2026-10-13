@@ -379,6 +379,13 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Ward Predictor](scripts/ward_predictor) | 0 | `ward-predictor-v1.0.0` |
 | [Invoker SS](scripts/invoker_ss) | 0 | `invoker-ss-v138` |
 | [Sentry](scripts/sentry) | 0 | `sentry-v1.0.0` |
+| [Changer](scripts/changer) | 0 | `changer-v1.0.0` |
+| [Self Play](scripts/self_play_bot) | 0 | `self-play-v1.0.0` |
+| [Farm Pattern 2.5](scripts/farm_pattern) | 0 | `farm-pattern-v2.5` |
+| [Win Condition Engine](scripts/win_condition_engine) | 0 | `win-condition-engine-v1.0.0` |
+| [Invoker (beta)](scripts/invoker_beta) | 0 | `invoker-beta-v1.0.0` |
+| [Kez Combo](scripts/kez_combo) | 0 | `kez-combo-v1.0.0` |
+| [Techies Combo](scripts/techies_combo) | 0 | `techies-combo-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

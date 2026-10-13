@@ -3,9 +3,13 @@
 подсказывает приоритетные действия по ситуации на карте / suggests priorities based on the current map situation
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `win_condition_engine.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/win-condition-engine-v1.0.0/win_condition_engine.lua)
+Скачать: [win_condition_engine.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/win-condition-engine-v1.0.0/win_condition_engine.lua) — `win-condition-engine-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=win-condition-engine&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`win-condition-engine-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/win-condition-engine-v1.0.0) | 2026-10-13 | [win_condition_engine.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/win-condition-engine-v1.0.0/win_condition_engine.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=win-condition-engine&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

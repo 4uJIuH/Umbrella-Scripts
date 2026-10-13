@@ -3,9 +3,13 @@
 автоматически управляет героем и выполняет игровые задачи / automatically controls a hero and handles in-game objectives
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `Self-Play.zip`](https://github.com/4uJIuH/umbrella-scripts/releases/download/self-play-v1.0.0/Self-Play.zip)
+Скачать: [Self-Play.zip](https://github.com/4uJIuH/umbrella-scripts/releases/download/self-play-v1.0.0/Self-Play.zip) — `self-play-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=self-play&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`self-play-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/self-play-v1.0.0) | 2026-10-13 | [Self-Play.zip](https://github.com/4uJIuH/umbrella-scripts/releases/download/self-play-v1.0.0/Self-Play.zip) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=self-play&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

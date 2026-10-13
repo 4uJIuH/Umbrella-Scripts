@@ -3,9 +3,13 @@
 комбо-скрипт Kez, сделанный для личного использования / Kez combo script built for personal use
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `kez_combo.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/kez-combo-v1.0.0/kez_combo.lua)
+Скачать: [kez_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/kez-combo-v1.0.0/kez_combo.lua) — `kez-combo-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=kez-combo&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`kez-combo-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/kez-combo-v1.0.0) | 2026-10-13 | [kez_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/kez-combo-v1.0.0/kez_combo.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=kez-combo&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

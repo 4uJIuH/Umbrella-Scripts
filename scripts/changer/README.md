@@ -3,9 +3,13 @@
 экспериментальный скрипт визуальных эффектов героя / experimental visual effects changer for your hero
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `changer.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/changer-v1.0.0/changer.lua)
+Скачать: [changer.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/changer-v1.0.0/changer.lua) — `changer-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=changer&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`changer-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/changer-v1.0.0) | 2026-10-13 | [changer.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/changer-v1.0.0/changer.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=changer&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

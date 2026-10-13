@@ -3,9 +3,13 @@
 комбо Techies с режимами агрессии и максимального урона / Techies combo with aggressive and maximum-damage modes
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `techies_combo.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-combo-v1.0.0/techies_combo.lua)
+Скачать: [techies_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-combo-v1.0.0/techies_combo.lua) — `techies-combo-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=techies-combo&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`techies-combo-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/techies-combo-v1.0.0) | 2026-10-13 | [techies_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-combo-v1.0.0/techies_combo.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=techies-combo&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
