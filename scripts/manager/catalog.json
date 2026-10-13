@@ -429,7 +429,7 @@
     {
       "id": "weather",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/weather/weather.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/fae4820c4e2988ca98c05e1469fb5eb959e3e62c/scripts/weather/weather.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/weather-v1.0.0/weather.lua",
       "manual": false,
       "needs_q_localizer": false,
