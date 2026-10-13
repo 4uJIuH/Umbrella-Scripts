@@ -93,6 +93,19 @@
 - [Techies Auto Miner](scripts/techies_auto_miner) — автоматически минирует выбранные зоны карты на Techies
 - [Broodmother Camp Blocker](scripts/brood_camp_blocker) — отправляет пауков Брудмазер блокировать спавн кемпов
 - [Hoodwink Blast Off Catch](scripts/hoodwink_bushwhack_techies) — ловит Techies способностью Bushwhack во время Blast Off
+- [Render Inspector](scripts/render_inspector) — веб-инструмент для исследования отрисованных элементов
+- [Ringmaster Eul Combo](scripts/ringmaster_eul_combo) — комбо Ринмастера через Eul, кнут и колесо
+- [Spirit Breaker Charge Combo](scripts/spirit_breaker_charge) — автоматические предметы и ускорения во время Charge of Darkness
+- [Ward Predictor](scripts/ward_predictor) — прогнозирует места установки вардов вражескими саппортами
+- [Invoker SS](scripts/invoker_ss) — отдельный модуль Sun Strike с prediction и ручным наведением
+- [Sentry](scripts/sentry) — экспериментальный анализ поведения и угроз на карте
+- [Changer](scripts/changer) — экспериментальный скрипт визуальных эффектов героя
+- [Self Play](scripts/self_play_bot) — автоматически управляет героем и выполняет игровые задачи
+- [Farm Pattern 2.5](scripts/farm_pattern) — строит и визуализирует маршруты фарма
+- [Win Condition Engine](scripts/win_condition_engine) — подсказывает приоритетные действия по ситуации на карте
+- [Invoker (beta)](scripts/invoker_beta) — переработанный скрипт Invoker с динамическим прокастом
+- [Kez Combo](scripts/kez_combo) — комбо-скрипт Kez, сделанный для личного использования
+- [Techies Combo](scripts/techies_combo) — комбо Techies с режимами агрессии и максимального урона
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -233,6 +246,19 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Techies Auto Miner](scripts/techies_auto_miner) — automatically mines selected map zones as Techies
 - [Broodmother Camp Blocker](scripts/brood_camp_blocker) — sends Broodmother's spiders to block neutral camp spawns
 - [Hoodwink Blast Off Catch](scripts/hoodwink_bushwhack_techies) — catches Techies with Bushwhack during Blast Off
+- [Render Inspector](scripts/render_inspector) — a web tool for inspecting rendered screen elements
+- [Ringmaster Eul Combo](scripts/ringmaster_eul_combo) — Ringmaster combo with Eul, the whip, and the wheel
+- [Spirit Breaker Charge Combo](scripts/spirit_breaker_charge) — automated items and speed boosts during Charge of Darkness
+- [Ward Predictor](scripts/ward_predictor) — predicts where enemy supports may place wards
+- [Invoker SS](scripts/invoker_ss) — standalone Sun Strike module with prediction and manual targeting
+- [Sentry](scripts/sentry) — experimental analysis of enemy behavior and map threats
+- [Changer](scripts/changer) — experimental visual effects changer for your hero
+- [Self Play](scripts/self_play_bot) — automatically controls a hero and handles in-game objectives
+- [Farm Pattern 2.5](scripts/farm_pattern) — plans and visualizes efficient farming routes
+- [Win Condition Engine](scripts/win_condition_engine) — suggests priorities based on the current map situation
+- [Invoker (beta)](scripts/invoker_beta) — reworked Invoker script with dynamic spell combos
+- [Kez Combo](scripts/kez_combo) — Kez combo script built for personal use
+- [Techies Combo](scripts/techies_combo) — Techies combo with aggressive and maximum-damage modes
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -293,7 +319,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 5 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 13 | `script-manager-v2.0.5` |
+| [Script Manager](scripts/script_manager) | 14 | `script-manager-v2.0.5` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
@@ -339,7 +365,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Map Chat Troll](scripts/maptroll) | 0 | `maptroll-v1.0.0` |
 | [Creep Aggro](scripts/creep_aggro) | 0 | `creep-aggro-v1.0.0` |
 | [Nyx Assassin Auto Burrow](scripts/nyx_auto_burrow) | 0 | `nyx-auto-burrow-v1.0.0` |
-| [Dawnbreaker Solar Guardian Auto-Save Helper](scripts/dawnbreaker_solar_guardian) | 0 | `dawnbreaker-solar-guardian-v1.0.0` |
+| [Dawnbreaker Solar Guardian Auto-Save Helper](scripts/dawnbreaker_solar_guardian) | 1 | `dawnbreaker-solar-guardian-v1.0.0` |
 | [Dota 1x6 Pack](scripts/dota1x6_pack) | 0 | `dota-1x6-pack-v1.0.0` |
 | [Kez Raptor Dance Dispel](scripts/kez_raptor_dispel) | 0 | `kez-raptor-dispel-v1.0.0` |
 | [Huskar Life Break](scripts/huskar_life_break) | 0 | `huskar-life-break-v1.0.0` |
@@ -348,6 +374,11 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Techies Auto Miner](scripts/techies_auto_miner) | 0 | `techies-auto-miner-v1.1` |
 | [Broodmother Camp Blocker](scripts/brood_camp_blocker) | 0 | `brood-camp-blocker-v1.6` |
 | [Hoodwink Blast Off Catch](scripts/hoodwink_bushwhack_techies) | 0 | `hoodwink-bushwhack-techies-v1.0.0` |
+| [Ringmaster Eul Combo](scripts/ringmaster_eul_combo) | 0 | `ringmaster-eul-combo-v1.0.0` |
+| [Spirit Breaker Charge Combo](scripts/spirit_breaker_charge) | 0 | `spirit-breaker-charge-v1.0.0` |
+| [Ward Predictor](scripts/ward_predictor) | 0 | `ward-predictor-v1.0.0` |
+| [Invoker SS](scripts/invoker_ss) | 0 | `invoker-ss-v138` |
+| [Sentry](scripts/sentry) | 0 | `sentry-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
