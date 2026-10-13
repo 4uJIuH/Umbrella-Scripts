@@ -401,6 +401,30 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0444\u0440\u0438\u0433\u0438\u0434\u043d\u044b\u0439 [\u0440\u0430\u0437\u0443\u043c] (Discord: .emocry)"
+    },
+    {
+      "id": "hero_grid",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hero_grid/hero_grid.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/hero-grid-v1.0.0/hero_grid.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "! M0RC1 (Discord: wh1teray)",
+      "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hero_grid/hero_grid.lua",
+      "files": [
+        {
+          "path": "code_geas.json",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hero_grid/code_geas.json"
+        },
+        {
+          "path": "shiffer.json",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hero_grid/shiffer.json"
+        },
+        {
+          "path": "shizuku.json",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hero_grid/shizuku.json"
+        }
+      ]
     }
   ]
 }

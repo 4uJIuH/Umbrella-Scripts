@@ -107,6 +107,11 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 
 ## Changelog
 
+# Update v2.0.4
+
+- Multi-file installs support additional JSON files alongside the Lua script without creating subfolders.
+- Hero Grid installs with three sample grids.
+
 # Update v2.0.3
 
 - Multi-file package installation now proceeds when the `lib` folder already exists, avoiding shell commands when the Lua runtime blocks them.

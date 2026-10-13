@@ -1680,6 +1680,61 @@
           "Choose a translation direction; customize colors in the gear menu. MyMemory is opt-in."
         ]
       }
+    },
+    {
+      "id": "hero_grid",
+      "tag": "hero-grid",
+      "title": "Hero Grid",
+      "kind": "lua",
+      "category": "auxiliary",
+      "file": "hero_grid.lua",
+      "author": "! M0RC1 (Discord: wh1teray)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/hero_grid",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=hero-grid&expanded=true",
+      "version_marker": "VERSION",
+      "needs_q_localizer": false,
+      "manager_catalog": true,
+      "package_files": [
+        "code_geas.json",
+        "shiffer.json",
+        "shizuku.json"
+      ],
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hero_grid/hero_grid.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/hero-grid-v1.0.0/hero_grid.lua"
+      },
+      "ru": {
+        "tagline": "загружает пользовательские сетки героев из JSON",
+        "about": "Hero Grid добавляет в меню Dota 2 загрузчик пользовательских сеток героев. Можно выбрать JSON-файл, создать конфигурацию сетки и сразу применить её. Автор: ! M0RC1 (Discord: wh1teray).",
+        "features": [
+          "Загружает сетку из JSON-файла и применяет её без перезапуска игры",
+          "В поставку включены три примера сеток: code_geas.json, shiffer.json и shizuku.json",
+          "Поддерживает пользовательские файлы в корне scripts, а также в папках hero-grid и hero_grid"
+        ],
+        "install": [
+          "Нажмите «Установить» в Script Manager: он загрузит `hero_grid.lua` и три JSON-примера непосредственно в `umbrella\\scripts` (без ZIP-архива).",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Changer → Main → Сетки`, укажите имя файла с расширением `.json` (например, `shiffer.json`) и нажмите «Загрузить сетку».",
+          "Другие сетки можно разместить в корне `scripts` или в папке `scripts\\hero-grid` и выбрать по имени."
+        ]
+      },
+      "en": {
+        "tagline": "loads custom hero grids from JSON files",
+        "about": "Hero Grid adds a Dota 2 menu for loading custom hero-grid configurations. Select a JSON file to create and apply its grid without restarting the game. Author: ! M0RC1 (Discord: wh1teray).",
+        "features": [
+          "Loads and applies a hero grid from a JSON file without restarting the game",
+          "Includes three sample grids: code_geas.json, shiffer.json, and shizuku.json",
+          "Supports custom files in the scripts root and in hero-grid or hero_grid folders"
+        ],
+        "install": [
+          "Click Install in Script Manager to download `hero_grid.lua` and three sample JSON files directly into `umbrella\\scripts` (no ZIP archive).",
+          "Reload the Lua scripts.",
+          "Open `Changer → Main → Сетки`, enter a filename including `.json` (for example, `shiffer.json`), and click `Загрузить сетку`.",
+          "Place other grids in the scripts root or `scripts\\hero-grid`, then select them by filename."
+        ]
+      }
     }
   ]
 }

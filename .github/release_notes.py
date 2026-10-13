@@ -168,6 +168,22 @@ def write_manifest(script, tag, sha):
             }
             for path in files
         ]
+    elif script.get("package_files"):
+        script_dir = BASE / "scripts" / script["id"]
+        raw_base = "https://raw.githubusercontent.com/%s/%s/" % (REPO, sha)
+        package_files = script["package_files"]
+        if not isinstance(package_files, list) or not package_files or len(package_files) > 64:
+            raise SystemExit("package_files must contain 1-64 files")
+        files = []
+        for name in package_files:
+            if not isinstance(name, str) or not re.fullmatch(r"[A-Za-z0-9_-][A-Za-z0-9_.-]*\.json", name):
+                raise SystemExit("unsupported package file name: %r" % name)
+            path = script_dir / name
+            if not path.is_file():
+                raise SystemExit("package file not found: %s" % path)
+            files.append({"path": name, "url": raw_base + path.relative_to(BASE).as_posix()})
+        data["install_url"] = raw_base + source_path
+        data["files"] = files
     path = manifest_path(script)
     path.write_text(json.dumps(data, indent=2) + NL, encoding="utf-8", newline=NL)
     print("%s -> %s" % (path.relative_to(BASE).as_posix(), version))

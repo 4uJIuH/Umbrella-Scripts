@@ -559,7 +559,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.0.3"
+local VERSION = "2.0.4"
 
 local K = {
 	CFG = "script_market",
@@ -1185,8 +1185,12 @@ function fs.save_package(dir, files)
 		end
 		if file.path:match("^lib/[%w_%-]+%.lua$") then
 			needs_lib = true
-		elseif file.path ~= file.name or type(file.name) ~= "string"
-			or not file.name:match("^[%w%._%- ]+%.lua$") then
+		elseif file.path:find("..", 1, true)
+			or not (file.path:match("^[%w_%-][%w%._%- ]*%.lua$")
+				or file.path:match("^[%w_%-][%w%._%- ]*%.json$")) then
+			return false, "sm_e_valid"
+		end
+		if file.name ~= nil and file.name ~= file.path then
 			return false, "sm_e_valid"
 		end
 	end
@@ -1368,7 +1372,9 @@ function market.hero_name(id)
 end
 
 function market.package_path(path)
-	return type(path) == "string" and path:match("^lib/[%w_%-]+%.lua$") ~= nil
+	return type(path) == "string" and (path:match("^lib/[%w_%-]+%.lua$") ~= nil
+		or (not path:find("..", 1, true) and (path:match("^[%w_%-][%w%._%- ]*%.lua$") ~= nil
+			or path:match("^[%w_%-][%w%._%- ]*%.json$") ~= nil)))
 end
 
 function market.build(catalog, meta)
@@ -1593,6 +1599,10 @@ function market.download_files(s, done)
 		web.get(file.url, function(body, key, detail)
 			if not body then return done(nil, key, detail) end
 			if #body < 100 or body:sub(1, 1) == "<" then return done(nil, "sm_e_valid") end
+			if file.path:match("%.json$") then
+				local ok, parsed = pcall(function() return JSON:decode(body) end)
+				if not ok or type(parsed) ~= "table" then return done(nil, "sm_e_valid") end
+			end
 			downloaded[#downloaded + 1] = { path = file.path, body = body }
 			next_file(index + 1)
 		end)
