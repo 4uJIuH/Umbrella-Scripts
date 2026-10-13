@@ -1330,7 +1330,7 @@
     {
       "id": "sf_block_creep_attack",
       "version": "1.2",
-      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-block-creep-attack-v1.2/sf_block_creep_attack.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/56c07695203c9915e6b82d07864149de5fcf3f7c/scripts/sf_block_creep_attack/sf_block_creep_attack.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-block-creep-attack-v1.2/sf_block_creep_attack.lua",
       "manual": false,
       "needs_q_localizer": false,
