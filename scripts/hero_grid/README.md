@@ -3,9 +3,13 @@
 загружает пользовательские сетки героев из JSON / loads custom hero grids from JSON files
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `hero_grid.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hero_grid/hero_grid.lua)
+Скачать: [hero_grid.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/hero-grid-v1.0.0/hero_grid.lua) — `hero-grid-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=hero-grid&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`hero-grid-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/hero-grid-v1.0.0) | 2026-10-13 | [hero_grid.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/hero-grid-v1.0.0/hero_grid.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=hero-grid&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -22,6 +26,14 @@ Hero Grid добавляет в меню Dota 2 загрузчик пользо�
 2. Перезагрузите Lua-скрипты.
 3. Откройте `Changer → Main → Сетки`, укажите имя файла с расширением `.json` (например, `shiffer.json`) и нажмите «Загрузить сетку».
 4. Другие сетки можно разместить в корне `scripts` или в папке `scripts\hero-grid` и выбрать по имени.
+
+## Что нового
+
+# 1.0.0
+
+- Initial release of Hero Grid.
+- Added direct Script Manager installation of the Lua script and three sample JSON grids.
+- Added loading JSON files from the scripts folder and `hero-grid` folders.
 
 ---
 
@@ -41,3 +53,11 @@ Hero Grid adds a Dota 2 menu for loading custom hero-grid configurations. Select
 2. Reload the Lua scripts.
 3. Open `Changer → Main → Сетки`, enter a filename including `.json` (for example, `shiffer.json`), and click `Загрузить сетку`.
 4. Place other grids in the scripts root or `scripts\hero-grid`, then select them by filename.
+
+## Changelog
+
+# 1.0.0
+
+- Initial release of Hero Grid.
+- Added direct Script Manager installation of the Lua script and three sample JSON grids.
+- Added loading JSON files from the scripts folder and `hero-grid` folders.

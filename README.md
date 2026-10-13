@@ -197,6 +197,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Magnus Skewer Ally](scripts/magnus_skewer_ally) | 1 | `magnus-skewer-ally-v1.0.0` |
 | [Better Better Techies Combo](scripts/better_better_techies_combo) | 2 | `better-better-techies-combo-v1.0.0` |
 | [Chat Translator](scripts/chat_translator) | 0 | `chat-translator-v1.0.0` |
+| [Hero Grid](scripts/hero_grid) | 0 | `hero-grid-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
