@@ -3,9 +3,13 @@
 игровая рулетка с выбором пуль / a game of roulette with configurable bullets
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `russian_roulette.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/russian_roulette/russian_roulette.lua)
+Скачать: [russian_roulette.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/russian-roulette-v1.0.0/russian_roulette.lua) — `russian-roulette-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=russian-roulette&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`russian-roulette-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/russian-roulette-v1.0.0) | 2026-10-13 | [russian_roulette.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/russian-roulette-v1.0.0/russian_roulette.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=russian-roulette&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
