@@ -19,6 +19,7 @@
 - [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — ESP для Souls Vault и Rem's Tunnel с таймером возрождения
 - [qLocalization](scripts/q_localizer) — вспомогательная библиотека для локализации Lua-интерфейсов
 - [Script Manager](scripts/script_manager) — проверка и установка обновлений Dota-скриптов по кнопке
+- [Dynamic Island](scripts/dynamic_island_dota) — интерактивный островок с уведомлениями, таймерами и показателями матча
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -85,6 +86,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — ESP for Souls Vault and Rem's Tunnel with respawn timers
 - [qLocalization](scripts/q_localizer) — a helper library for localizing Lua interfaces
 - [Script Manager](scripts/script_manager) — check and install Dota script updates on demand
+- [Dynamic Island](scripts/dynamic_island_dota) — an interactive island for match stats, alerts, and timers
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -145,12 +147,12 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 4 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 2 | `script-manager-v1.4.0` |
+| [Script Manager](scripts/script_manager) | 3 | `script-manager-v1.5.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
   <img alt="Downloads over time" src=".github/stats/stats-light.svg" width="840">
 </picture>
 
-2026-10-12
+2026-10-13
 <!-- stats:end -->

@@ -8,7 +8,7 @@
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
 | [`script-manager-v1.5.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.5.0) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.5.0/script_manager.lua) | 0 |
-| [`script-manager-v1.4.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.4.0) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.4.0/script_manager.lua) | 0 |
+| [`script-manager-v1.4.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.4.0) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.4.0/script_manager.lua) | 1 |
 | [`script-manager-v1.3.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.3.0) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.3.0/script_manager.lua) | 0 |
 | [`script-manager-v1.2.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.2.2) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.2.2/script_manager.lua) | 1 |
 | [`script-manager-v1.2.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.2.1) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.2.1/script_manager.lua) | 0 |
@@ -30,8 +30,6 @@
 - Настраивает тему, акцентный цвет, размытие фона, прозрачность и масштаб интерфейса
 - Поддерживает компактное отображение списка скриптов
 - Устанавливает обновления отдельных Dota-скриптов и перезагружает Script System
-- Поддерживает скрипты из GitHub-репозиториев авторов, не только из этого проекта
-- Определяет версии скриптов через маркер `SCRIPT_VERSION`
 - Сохраняет резервную копию заменяемого файла
 - Устанавливает обязательный `!_qLocalizer.lua`, если он требуется и отсутствует
 - Скачивает Tinker Auto Farm как ZIP для ручной распаковки
@@ -49,9 +47,9 @@
 
 **Обновление v1.5.0**
 
-- В каталог и Script Manager добавлен Dynamic Island v2.5.3 от автора "ur2m" (GitHub: @qhols).
-- Lua-файл скачивается напрямую из репозитория автора; музыка и звуки доступны при запущенном `media_bridge.exe`.
-- Добавлена поддержка внешних GitHub-релизов и определения версии через `SCRIPT_VERSION`.
+- Добавлен Dynamic Island от автора "ur2m" (GitHub: @qhols), версия 2.5.3.
+- Менеджер теперь принимает скрипты из GitHub-репозиториев авторов и проверяет версии, заданные через `SCRIPT_VERSION`.
+- Добавлены ссылка на исходный релиз и информация о дополнительном `media_bridge.exe`, необходимом для музыки и звуков.
 
 **Обновление v1.4.0**
 
@@ -91,8 +89,6 @@ An Umbrella script manager with a draggable panel that checks the full catalog o
 - Customizes the theme, accent color, background blur, opacity, and interface scale
 - Supports a compact script-list layout
 - Installs individual Dota script updates and reloads the Script System
-- Supports scripts hosted in approved GitHub repositories outside this project
-- Detects scripts that declare their version as `SCRIPT_VERSION`
 - Keeps a backup of any file it replaces
 - Installs the required `!_qLocalizer.lua` when needed and missing
 - Downloads Tinker Auto Farm as a ZIP for manual extraction
@@ -110,9 +106,9 @@ An Umbrella script manager with a draggable panel that checks the full catalog o
 
 **Update v1.5.0**
 
-- Added Dynamic Island v2.5.3 to the catalog and Script Manager by "ur2m" (GitHub: @qhols).
-- The Lua file is downloaded directly from the author's repository; music and sounds are available when `media_bridge.exe` is running.
-- Added support for external GitHub releases and `SCRIPT_VERSION` version markers.
+- Added Dynamic Island by "ur2m" (GitHub: @qhols), version 2.5.3.
+- The manager can now use scripts hosted in authors' GitHub repositories and validate versions declared as `SCRIPT_VERSION`.
+- Added a direct link to the author's release and information about the optional `media_bridge.exe` required for music and sounds.
 
 **Update v1.4.0**
 
