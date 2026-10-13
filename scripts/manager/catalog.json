@@ -1320,7 +1320,7 @@
     {
       "id": "sf_feast_of_souls_abuse",
       "version": "4.0",
-      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-feast-of-souls-v4.0/sf_feast_of_souls_abuse.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/56c07695203c9915e6b82d07864149de5fcf3f7c/scripts/sf_feast_of_souls_abuse/sf_feast_of_souls_abuse.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-feast-of-souls-v4.0/sf_feast_of_souls_abuse.lua",
       "manual": false,
       "needs_q_localizer": false,
