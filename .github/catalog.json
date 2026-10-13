@@ -2311,8 +2311,8 @@
       "initial": {
         "version": "1.0.0",
         "date": "2026-10-13",
-        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/lualingo-v1.0.0/lualingo.zip",
-        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/lualingo-v1.0.0/lualingo.zip"
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/lualingo/lualingo.zip",
+        "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/lualingo/lualingo.zip"
       },
       "ru": {
         "tagline": "ежедневные уроки Lua и API Umbrella",

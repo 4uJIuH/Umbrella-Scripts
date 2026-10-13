@@ -566,8 +566,8 @@
     {
       "id": "lualingo",
       "version": "1.0.0",
-      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/lualingo-v1.0.0/lualingo.zip",
-      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/lualingo-v1.0.0/lualingo.zip",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/lualingo/lualingo.zip",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/lualingo/lualingo.zip",
       "manual": true,
       "needs_q_localizer": false,
       "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)"
