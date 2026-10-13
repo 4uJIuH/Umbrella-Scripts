@@ -1446,7 +1446,7 @@
     {
       "id": "stacker",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/stacker/stacker.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/8aa6f45bcab8e48d646d84bafe2f75e5960338f5/scripts/stacker/stacker.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/camp-stacker-v1.0.0/stacker.lua",
       "manual": false,
       "needs_q_localizer": false,
