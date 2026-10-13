@@ -233,7 +233,7 @@
     {
       "id": "arc_warden_blocker",
       "version": "1.0.0",
-      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-blocker-v1.0.0/arc_warden_blocker.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/a3ca0b990cf724e40b8fca054f355b32975ac16a/scripts/arc_warden_blocker/arc_warden_blocker.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-blocker-v1.0.0/arc_warden_blocker.lua",
       "manual": false,
       "needs_q_localizer": false,
