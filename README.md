@@ -397,7 +397,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Russian Roulette](scripts/russian_roulette) | 0 | `russian-roulette-v1.0.0` |
 | [MoM Swapper](scripts/mom_swapper) | 0 | `mom-swapper-v1.0.0` |
 | [Botle Abuse](scripts/botle) | 0 | `botle-abuse-v1.0.0` |
-| [Action Recorder](scripts/action_recorder) | 0 | `action-recorder-v1.0.0` |
+| [Action Recorder](scripts/action_recorder) | 1 | `action-recorder-v1.0.0` |
 | [Io Overcharge](scripts/io_overcharge) | 0 | `io-overcharge-v1.0.0` |
 | [Arc Warden Utilities](scripts/arc_warden_utilities) | 0 | `arc-warden-utilities-v1.0.0` |
 | [Back Cast](scripts/backwards_cast) | 0 | `backwards-cast-v1.0.0` |
@@ -464,6 +464,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) | 0 | `lone-druid-bear-ai-deluxe-v1.0.0` |
 | [Ward Triangulator](scripts/ward_triangulator) | 0 | `ward-triangulator-v1.0.0` |
 | [Muerta Dead Shot](scripts/muerta_dead_shot) | 0 | `muerta-dead-shot-v1.0.0` |
+| [Enemy Cooldowns](scripts/enemy_cooldowns) | 0 | `enemy-cooldowns-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

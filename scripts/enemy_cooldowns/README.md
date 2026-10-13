@@ -3,9 +3,13 @@
 показывает перезарядку способностей и предметов врагов / shows enemy ability and item cooldowns
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `enemy_cooldowns.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/enemy_cooldowns/enemy_cooldowns.lua)
+Скачать: [enemy_cooldowns.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/enemy-cooldowns-v1.0.0/enemy_cooldowns.lua) — `enemy-cooldowns-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=enemy-cooldowns&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`enemy-cooldowns-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/enemy-cooldowns-v1.0.0) | 2026-10-13 | [enemy_cooldowns.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/enemy-cooldowns-v1.0.0/enemy_cooldowns.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=enemy-cooldowns&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
