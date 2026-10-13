@@ -44,6 +44,28 @@
 - [Grimstroke Helper](scripts/grimstroke_helper) — подбирает цели для Ink Swell и управляет Dark Portrait
 - [Phoenix SmartNova](scripts/phoenix_smartnova) — автоматизирует Fire Spirits и спасительную Supernova
 - [BehaviorScoreHelper](scripts/behavior_score_helper) — повышает порядочность: авто GG, авто репорт и авто лайк
+- [Отмазки](scripts/excuses) — готовые отмазки после смерти — с отправкой в чат
+- [Некрологи](scripts/creep_obituary) — имена и некрологи для крипов
+- [Wrapped](scripts/wrapped) — карточка итогов матча, ачивки и челленджи
+- [Arc Warden's Heist](scripts/arc_warden_heist) — сценарий с Arc Warden и Tempest Double
+- [Chen's Circus](scripts/chen_circus) — строи и фигуры для подконтрольных Chen юнитов
+- [Mana Void Killer](scripts/mana_void_killer) — расчёт летального Mana Void за Anti-Mage
+- [Lualingo](scripts/lualingo) — ежедневные уроки Lua и API Umbrella
+- [Disable Tracker](scripts/disable_tracker) — считает время под разными эффектами контроля
+- [Russian Roulette](scripts/russian_roulette) — игровая рулетка с выбором пуль
+- [MoM Swapper](scripts/mom_swapper) — автоматически или вручную меняет MoM на Echo Sabre или Specialist's Array
+- [Botle Abuse](scripts/botle) — автоматизирует перестановку предметов перед использованием Bottle
+- [Action Recorder](scripts/action_recorder) — записывает и воспроизводит действия игрока
+- [Io Overcharge](scripts/io_overcharge) — жмёт Overcharge, когда связанный союзник использует ультимейт
+- [Arc Warden Utilities](scripts/arc_warden_utilities) — набор утилит для Arc Warden и Tempest Double
+- [Back Cast](scripts/backwards_cast) — кастует направленные способности без разворота героя
+- [Forge Spirit Farm (Beta)](scripts/forge_spirit_farm_beta) — бета-автофарм и стаки на Forge Spirits
+- [Selection Camera](scripts/selection_camera) — переносит камеру к выбранному юниту или группе
+- [Spirit Breaker Combo & Ghoul 1000-7](scripts/spirit_breaker_bara) — комбо для Spirit Breaker с предметами и чат-отсчётом
+- [1000-7 Counter](scripts/ghoul_counter) — отправляет арифметический отсчёт в чат по бинду
+- [Invoker Jarvis](scripts/invoker_jarvis) — голосовой помощник для Invoker
+- [TikTok](scripts/umbrella_tiktok) — встроенный просмотрщик TikTok
+- [Invoker AutoStack](scripts/invoker_autostack) — автоматически стакает кемпы Tornado за Invoker
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -135,6 +157,28 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Grimstroke Helper](scripts/grimstroke_helper) — selects Ink Swell targets and controls Dark Portrait
 - [Phoenix SmartNova](scripts/phoenix_smartnova) — automates Fire Spirits and emergency Supernova
 - [BehaviorScoreHelper](scripts/behavior_score_helper) — raises your behavior score: auto GG, auto report, and auto like
+- [Отмазки](scripts/excuses) — ready-made excuses after a death, with chat sending
+- [Некрологи](scripts/creep_obituary) — names and obituaries for creeps
+- [Wrapped](scripts/wrapped) — match summary cards, achievements, and challenges
+- [Arc Warden's Heist](scripts/arc_warden_heist) — an Arc Warden and Tempest Double sequence
+- [Chen's Circus](scripts/chen_circus) — formations and patterns for Chen's controlled units
+- [Mana Void Killer](scripts/mana_void_killer) — calculates lethal Mana Void casts for Anti-Mage
+- [Lualingo](scripts/lualingo) — daily lessons in Lua and the Umbrella API
+- [Disable Tracker](scripts/disable_tracker) — tracks time spent under disabling effects
+- [Russian Roulette](scripts/russian_roulette) — a game of roulette with configurable bullets
+- [MoM Swapper](scripts/mom_swapper) — swaps MoM with Echo Sabre or Specialist's Array
+- [Botle Abuse](scripts/botle) — automates item rearrangement before using Bottle
+- [Action Recorder](scripts/action_recorder) — records and replays player actions
+- [Io Overcharge](scripts/io_overcharge) — casts Overcharge when the tethered ally uses an ultimate
+- [Arc Warden Utilities](scripts/arc_warden_utilities) — a set of utilities for Arc Warden and Tempest Double
+- [Back Cast](scripts/backwards_cast) — casts directional abilities without turning the hero
+- [Forge Spirit Farm (Beta)](scripts/forge_spirit_farm_beta) — beta Forge Spirit farming and camp stacking
+- [Selection Camera](scripts/selection_camera) — moves the camera to the selected unit or group
+- [Spirit Breaker Combo & Ghoul 1000-7](scripts/spirit_breaker_bara) — Spirit Breaker combo with items and a chat countdown
+- [1000-7 Counter](scripts/ghoul_counter) — sends a chat arithmetic countdown with a bind
+- [Invoker Jarvis](scripts/invoker_jarvis) — voice assistant for Invoker
+- [TikTok](scripts/umbrella_tiktok) — an embedded TikTok viewer
+- [Invoker AutoStack](scripts/invoker_autostack) — automatically stacks camps with Invoker's Tornado
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -194,8 +238,8 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Dorman Combo Assistant](scripts/dorman_combo_assistant) | 1 | `dorman-combo-assistant-v1.0.0` |
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
-| [qLocalization](scripts/q_localizer) | 4 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 5 | `script-manager-v2.0.5` |
+| [qLocalization](scripts/q_localizer) | 5 | `q-localizer-v1.0.0` |
+| [Script Manager](scripts/script_manager) | 10 | `script-manager-v2.0.5` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
@@ -213,6 +257,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Grimstroke Helper](scripts/grimstroke_helper) | 0 | `grimstroke-helper-v1.0.0` |
 | [Phoenix SmartNova](scripts/phoenix_smartnova) | 0 | `phoenix-smartnova-v1.0.0` |
 | [BehaviorScoreHelper](scripts/behavior_score_helper) | 0 | `behavior-score-helper-v1.0.0` |
+| [Disable Tracker](scripts/disable_tracker) | 0 | `disable-tracker-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`q-localizer-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/q-localizer-v1.0.0) | 2026-10-10 | [_qLocalizer.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua) | 4 |
+| [`q-localizer-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/q-localizer-v1.0.0) | 2026-10-10 | [_qLocalizer.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua) | 5 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=q-localizer&expanded=true)
 <!-- releases:end -->
