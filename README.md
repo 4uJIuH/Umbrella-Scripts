@@ -28,6 +28,9 @@
 - [Draft Helper](scripts/draft_helper) — подсказки на драфте и сборка предметов
 - [MusicUI](scripts/musicui) — оверлей плеера: трек, обложка, эквалайзер, текст
 - [Umbrella Lua Developer Skill](scripts/umbrella_lua) — Навык разработчика для создания Lua-скриптов Umbrella
+- [Custom Stats](scripts/custom_stats) — настраиваемая панель статистики матча вместо панели Dota Plus
+- [Bloodrage AutoCast](scripts/bloodrage_autocast) — автоприменение Bloodrage у Bloodseeker по переключаемому бинду
+- [Naga PT Abuse](scripts/naga_pt_abuse) — переключение Power Treads при Mirror Image и Manta
 - [Anti-Rubick](scripts/anti_rubick) — защита выбранных способностей от кражи Рубиком
 <!-- scripts:ru:end -->
 
@@ -104,6 +107,9 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Draft Helper](scripts/draft_helper) — draft hints and item builds
 - [MusicUI](scripts/musicui) — player overlay: track, cover, equalizer, lyrics
 - [Umbrella Lua Developer Skill](scripts/umbrella_lua) — Developer skill for creating Umbrella Lua scripts
+- [Custom Stats](scripts/custom_stats) — a customizable match-stats panel to replace Dota Plus stats
+- [Bloodrage AutoCast](scripts/bloodrage_autocast) — toggle-bind auto-cast for Bloodseeker's Bloodrage
+- [Naga PT Abuse](scripts/naga_pt_abuse) — Power Treads switching for Mirror Image and Manta
 - [Anti-Rubick](scripts/anti_rubick) — protect selected spells from Rubick's Spell Steal
 <!-- scripts:en:end -->
 
@@ -167,6 +173,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [qLocalization](scripts/q_localizer) | 4 | `q-localizer-v1.0.0` |
 | [Script Manager](scripts/script_manager) | 5 | `script-manager-v2.0.1` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
+| [Custom Stats](scripts/custom_stats) | 0 | `custom-stats-v1.0.0` |
 | [Anti-Rubick](scripts/anti_rubick) | 0 | `anti-rubick-v1.0.0` |
 
 <picture>
