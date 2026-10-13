@@ -1426,7 +1426,7 @@
     {
       "id": "can_teleport_out",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/can_teleport_out/can_teleport_out.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/2ae764909c416b2252f8314e4d05f4a24f82756d/scripts/can_teleport_out/can_teleport_out.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/can-teleport-out-v1.0.0/can_teleport_out.lua",
       "manual": false,
       "needs_q_localizer": false,
