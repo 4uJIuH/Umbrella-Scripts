@@ -462,6 +462,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Eul / Wind Waker Blink Helper](scripts/eul_wind_waker_blink_helper) | 0 | `eul-wind-waker-blink-helper-v1.0.0` |
 | [Dark Carnival Path Tokens](scripts/dark_carnival_path_tokens) | 0 | `dark-carnival-path-tokens-v1.0.0` |
 | [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) | 0 | `lone-druid-bear-ai-deluxe-v1.0.0` |
+| [Ward Triangulator](scripts/ward_triangulator) | 0 | `ward-triangulator-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

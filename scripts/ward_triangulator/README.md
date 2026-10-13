@@ -3,9 +3,13 @@
 находит вражеские сентри по наблюдениям и триангуляции / locates enemy sentries through visibility observations and triangulation
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `ward_triangulator.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/ward_triangulator/ward_triangulator.lua)
+Скачать: [ward_triangulator.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/ward-triangulator-v1.0.0/ward_triangulator.lua) — `ward-triangulator-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=ward-triangulator&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`ward-triangulator-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/ward-triangulator-v1.0.0) | 2026-10-13 | [ward_triangulator.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/ward-triangulator-v1.0.0/ward_triangulator.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=ward-triangulator&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
