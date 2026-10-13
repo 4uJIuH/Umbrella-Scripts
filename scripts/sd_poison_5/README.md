@@ -3,9 +3,13 @@
 автоматически подрывает Shadow Poison при пяти и более стаках / automatically releases Shadow Poison at five or more stacks
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `sd_poison_5.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/sd_poison_5/sd_poison_5.lua)
+Скачать: [sd_poison_5.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/sd-poison-5-v1.0.0/sd_poison_5.lua) — `sd-poison-5-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=sd-poison-5&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`sd-poison-5-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/sd-poison-5-v1.0.0) | 2026-10-13 | [sd_poison_5.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/sd-poison-5-v1.0.0/sd_poison_5.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=sd-poison-5&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

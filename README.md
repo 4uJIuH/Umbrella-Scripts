@@ -343,6 +343,9 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Dota 1x6 Pack](scripts/dota1x6_pack) | 0 | `dota-1x6-pack-v1.0.0` |
 | [Kez Raptor Dance Dispel](scripts/kez_raptor_dispel) | 0 | `kez-raptor-dispel-v1.0.0` |
 | [Huskar Life Break](scripts/huskar_life_break) | 0 | `huskar-life-break-v1.0.0` |
+| [Dragon Camp Pull](scripts/dragon_camp_pull) | 0 | `dragon-camp-pull-v1.0` |
+| [Shadow Demon Poison 5](scripts/sd_poison_5) | 0 | `sd-poison-5-v1.0.0` |
+| [Techies Auto Miner](scripts/techies_auto_miner) | 0 | `techies-auto-miner-v1.1` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

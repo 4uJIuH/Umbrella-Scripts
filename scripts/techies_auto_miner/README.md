@@ -3,9 +3,13 @@
 автоматически минирует выбранные зоны карты на Techies / automatically mines selected map zones as Techies
 
 <!-- releases:start -->
-Последняя версия: [`v1.1` — `techies_auto_miner.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/techies_auto_miner/techies_auto_miner.lua)
+Скачать: [techies_auto_miner.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-auto-miner-v1.1/techies_auto_miner.lua) — `techies-auto-miner-v1.1`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=techies-auto-miner&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`techies-auto-miner-v1.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/techies-auto-miner-v1.1) | 2026-10-13 | [techies_auto_miner.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-auto-miner-v1.1/techies_auto_miner.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=techies-auto-miner&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
