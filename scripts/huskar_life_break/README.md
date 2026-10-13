@@ -3,9 +3,13 @@
 прерывает полёт Life Break, сохраняя попадание ульты / stops Life Break travel while preserving the ultimate hit
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `huskar_life_break.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/huskar_life_break/huskar_life_break.lua)
+Скачать: [huskar_life_break.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/huskar-life-break-v1.0.0/huskar_life_break.lua) — `huskar-life-break-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=huskar-life-break&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`huskar-life-break-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/huskar-life-break-v1.0.0) | 2026-10-13 | [huskar_life_break.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/huskar-life-break-v1.0.0/huskar_life_break.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=huskar-life-break&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
