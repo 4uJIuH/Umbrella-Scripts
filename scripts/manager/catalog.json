@@ -1380,7 +1380,7 @@
     {
       "id": "lone_druid_bear_ai_deluxe",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/lone_druid_bear_ai_deluxe/lone_druid_bear_ai_deluxe.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/e55ee29d3066e12dd5f4292039dcdfeb035ae37c/scripts/lone_druid_bear_ai_deluxe/lone_druid_bear_ai_deluxe.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/lone-druid-bear-ai-deluxe-v1.0.0/lone_druid_bear_ai_deluxe.lua",
       "manual": false,
       "needs_q_localizer": false,
