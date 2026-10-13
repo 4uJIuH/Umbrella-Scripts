@@ -40,6 +40,9 @@
 - [Chat Translator](scripts/chat_translator) — автоматически переводит игровой чат между английским и русским
 - [Hero Grid](scripts/hero_grid) — загружает пользовательские сетки героев из JSON
 - [Weather](scripts/weather) — меняет визуальную погоду на карте
+- [Visage Familiar TP Helper](scripts/visage_familiar_tp) — синхронно отводит гаргулий Визажа и запускает Recall
+- [Grimstroke Helper](scripts/grimstroke_helper) — подбирает цели для Ink Swell и управляет Dark Portrait
+- [Phoenix SmartNova](scripts/phoenix_smartnova) — автоматизирует Fire Spirits и спасительную Supernova
 - [BehaviorScoreHelper](scripts/behavior_score_helper) — повышает порядочность: авто GG, авто репорт и авто лайк
 <!-- scripts:ru:end -->
 
@@ -128,6 +131,9 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Chat Translator](scripts/chat_translator) — automatically translates in-game chat between English and Russian
 - [Hero Grid](scripts/hero_grid) — loads custom hero grids from JSON files
 - [Weather](scripts/weather) — changes the visual map weather
+- [Visage Familiar TP Helper](scripts/visage_familiar_tp) — synchronizes Familiar Recall and retreats Visage's familiars
+- [Grimstroke Helper](scripts/grimstroke_helper) — selects Ink Swell targets and controls Dark Portrait
+- [Phoenix SmartNova](scripts/phoenix_smartnova) — automates Fire Spirits and emergency Supernova
 - [BehaviorScoreHelper](scripts/behavior_score_helper) — raises your behavior score: auto GG, auto report, and auto like
 <!-- scripts:en:end -->
 
@@ -203,6 +209,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Chat Translator](scripts/chat_translator) | 0 | `chat-translator-v1.0.0` |
 | [Hero Grid](scripts/hero_grid) | 0 | `hero-grid-v1.0.0` |
 | [Weather](scripts/weather) | 0 | `weather-v1.0.0` |
+| [Visage Familiar TP Helper](scripts/visage_familiar_tp) | 0 | `visage-familiar-tp-v1.0.0` |
 | [BehaviorScoreHelper](scripts/behavior_score_helper) | 0 | `behavior-score-helper-v1.0.0` |
 
 <picture>

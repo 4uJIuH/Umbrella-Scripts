@@ -1,35 +1,41 @@
 # Grimstroke Helper
 
-Автоматически выбирает союзника для Ink Swell и управляет иллюзией Dark Portrait: помогает фокусировать видимых героев с низким здоровьем и возвращает иллюзию к Гримстроуку, если противники пропали из видимости. Автор: ! M0RC1 (Discord: wh1teray).
+подбирает цели для Ink Swell и управляет Dark Portrait / selects Ink Swell targets and controls Dark Portrait
 
-## Возможности
+<!-- releases:start -->
+Последняя версия: [`v1.0.0` — `grimstroke_helper.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/grimstroke_helper/grimstroke_helper.lua)
 
-- Выбор союзника для Ink Swell по близости к врагу; можно настроить список разрешённых союзников и применение на себя.
-- Автоматическое управление Dark Portrait с приоритетом героев и целью по текущему или процентному здоровью.
-- Настраиваемое поведение иллюзии, если цели не видны.
-- Перетаскиваемая экранная панель для управления настройками союзников.
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=grimstroke-helper&expanded=true)
+<!-- releases:end -->
+
+## Что умеет
+
+Grimstroke Helper помогает автоматически выбирать союзника для Ink Swell и управлять иллюзией Dark Portrait. Автор: ! M0RC1 (Discord: wh1teray).
+
+- Выбирает союзника для Ink Swell по близости к врагу, с настройкой разрешённых целей и каста на себя
+- Управляет Dark Portrait и приоритизирует видимых вражеских героев с низким здоровьем
+- Настраивает поведение иллюзии, когда врагов не видно; панель целей можно перемещать
 
 ## Установка
 
-1. Нажмите «Установить» в Script Manager или поместите `grimstroke_helper.lua` в `umbrella\scripts`.
+1. Нажмите «Установить» в Script Manager или поместите grimstroke_helper.lua в umbrella\scripts.
 2. Перезагрузите Lua-скрипты.
-3. Откройте `Heroes → Hero List → Grimstroke → Helper`.
+3. Откройте Heroes → Hero List → Grimstroke → Helper.
 
 ---
 
 # Grimstroke Helper (English)
 
-Automatically selects an ally for Ink Swell and controls Dark Portrait: it prioritizes visible low-health heroes and can return the illusion to Grimstroke when enemies are no longer visible. Author: ! M0RC1 (Discord: wh1teray).
+## What it does
 
-## Features
+Grimstroke Helper automatically selects an ally for Ink Swell and controls the Dark Portrait illusion. Author: ! M0RC1 (Discord: wh1teray).
 
-- Selects an Ink Swell ally based on proximity to enemies; configure allowed allies and self-cast.
-- Automatically controls Dark Portrait, prioritizing heroes and selecting targets by current or percentage health.
-- Configure the illusion's behavior when targets are not visible.
-- Draggable on-screen panel for managing ally settings.
+- Selects an Ink Swell ally by proximity to enemies, with configurable allowed targets and self-cast
+- Controls Dark Portrait and prioritizes visible enemy heroes with low health
+- Configures illusion behavior when enemies are not visible; the target panel is draggable
 
-## Installation
+## Install
 
-1. Click Install in Script Manager or place `grimstroke_helper.lua` in `umbrella\scripts`.
+1. Click Install in Script Manager or place grimstroke_helper.lua in umbrella\scripts.
 2. Reload Lua scripts.
-3. Open `Heroes → Hero List → Grimstroke → Helper`.
+3. Open Heroes → Hero List → Grimstroke → Helper.

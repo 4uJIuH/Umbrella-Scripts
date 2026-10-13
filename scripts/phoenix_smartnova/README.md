@@ -1,35 +1,41 @@
 # Phoenix SmartNova
 
-Помогает Фениксу пережить опасный фокус: заранее подготавливает Fire Spirits, распределяет их по ближайшим врагам и автоматически применяет Supernova при критическом здоровье. Автор: ! M0RC1 (Discord: wh1teray).
+автоматизирует Fire Spirits и спасительную Supernova / automates Fire Spirits and emergency Supernova
 
-## Возможности
+<!-- releases:start -->
+Последняя версия: [`v1.0.0` — `smartnova.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/phoenix_smartnova/smartnova.lua)
 
-- Подготовка и распределение Fire Spirits по ближайшим противникам с учётом их скорости атаки.
-- Автоматическое применение Supernova при достижении настраиваемого порога здоровья.
-- Экстренное применение Supernova при высокой оценке входящего урона.
-- Необязательные отладочные метки на экране.
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=phoenix-smartnova&expanded=true)
+<!-- releases:end -->
+
+## Что умеет
+
+Phoenix SmartNova заранее подготавливает Fire Spirits и автоматически применяет Supernova, когда Фениксу угрожает критический урон. Автор: ! M0RC1 (Discord: wh1teray).
+
+- Оценивает угрозу и распределяет Fire Spirits между ближайшими врагами
+- Автоматически применяет Supernova при достижении настраиваемого порога здоровья
+- Поддерживает экстренный каст при высоком входящем уроне и необязательную отладочную информацию
 
 ## Установка
 
-1. Нажмите «Установить» в Script Manager или поместите `smartnova.lua` в `umbrella\scripts`.
+1. Нажмите «Установить» в Script Manager или поместите smartnova.lua в umbrella\scripts.
 2. Перезагрузите Lua-скрипты.
-3. Откройте `Heroes → Hero List → Phoenix → Супернова → Авто-Яйцо и Духи`.
+3. Откройте Heroes → Hero List → Phoenix → Супернова → Авто-Яйцо и Духи.
 
 ---
 
 # Phoenix SmartNova (English)
 
-Helps Phoenix survive a dangerous focus by preparing Fire Spirits, distributing them among nearby enemies, and automatically using Supernova at critical health. Author: ! M0RC1 (Discord: wh1teray).
+## What it does
 
-## Features
+Phoenix SmartNova prepares Fire Spirits in advance and automatically uses Supernova when Phoenix is in danger of critical damage. Author: ! M0RC1 (Discord: wh1teray).
 
-- Prepares and distributes Fire Spirits among nearby enemies, accounting for their attack speed.
-- Automatically uses Supernova at a configurable health threshold.
-- Uses Supernova immediately when estimated incoming damage is critical.
-- Optional on-screen debug information.
+- Estimates threats and distributes Fire Spirits among nearby enemies
+- Automatically uses Supernova at a configurable health threshold
+- Supports emergency casts under heavy incoming damage and optional debug information
 
-## Installation
+## Install
 
-1. Click Install in Script Manager or place `smartnova.lua` in `umbrella\scripts`.
+1. Click Install in Script Manager or place smartnova.lua in umbrella\scripts.
 2. Reload Lua scripts.
-3. Open `Heroes → Hero List → Phoenix → Супернова → Авто-Яйцо и Духи`.
+3. Open Heroes → Hero List → Phoenix → Супернова → Авто-Яйцо и Духи.
