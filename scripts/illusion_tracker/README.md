@@ -3,9 +3,13 @@
 отслеживает иллюзии и показывает назначенные им бинды / tracks illusions and displays their assigned control groups
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `IllusionTracker.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/illusion_tracker/IllusionTracker.lua)
+Скачать: [IllusionTracker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/illusion-tracker-v1.0.0/IllusionTracker.lua) — `illusion-tracker-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=illusion-tracker&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`illusion-tracker-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/illusion-tracker-v1.0.0) | 2026-10-13 | [IllusionTracker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/illusion-tracker-v1.0.0/IllusionTracker.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=illusion-tracker&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

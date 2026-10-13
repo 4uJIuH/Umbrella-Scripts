@@ -3,9 +3,13 @@
 возвращает старый вариант HUD до аспектов / restores a pre-aspect version of the HUD
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `old_hud.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/old_hud/old_hud.lua)
+Скачать: [old_hud.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/old-hud-v1.0.0/old_hud.lua) — `old-hud-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=old-hud&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`old-hud-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/old-hud-v1.0.0) | 2026-10-13 | [old_hud.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/old-hud-v1.0.0/old_hud.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=old-hud&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

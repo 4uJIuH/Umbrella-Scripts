@@ -312,6 +312,9 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Forge Spirit Helper](scripts/forge_spirit_helper) | 0 | `forge-spirit-helper-v1.0.0` |
 | [Gank Threat](scripts/gank_threat) | 0 | `gank-threat-v1.0.0` |
 | [Tinker Helper](scripts/tinker_helper) | 0 | `tinker-helper-v1.0.0` |
+| [Old HUD](scripts/old_hud) | 0 | `old-hud-v1.0.0` |
+| [Illusion Tracker](scripts/illusion_tracker) | 0 | `illusion-tracker-v1.0.0` |
+| [Arc Warden Clone Safe Me](scripts/arc_warden_clone_safe_me) | 0 | `arc-warden-clone-safe-me-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
