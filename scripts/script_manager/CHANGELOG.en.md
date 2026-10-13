@@ -1,3 +1,9 @@
+# Update v2.2.0
+
+- Added a pink theme.
+- Window settings now include background blur with adjustable strength and transparency.
+- Added a font selector for the interface.
+
 # Update v2.1.0
 
 - The scrollbar now responds to clicks and dragging: drag the thumb or click the track to jump to a position. It becomes wider and brighter on hover or while dragging, and stays highlighted while in use. Mouse-wheel scrolling is unchanged.

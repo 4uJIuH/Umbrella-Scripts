@@ -412,6 +412,10 @@ local localization = qLocalization.new({
 		sm_settings = "Settings",
 		sm_g_updates = "UPDATES",
 		sm_g_look = "APPEARANCE",
+		sm_g_window = "WINDOW",
+		sm_set_blur = "Background blur",
+		sm_set_blur_power = "Blur strength",
+		sm_set_transparency = "Transparency",
 		sm_set_check = "Check",
 		sm_check_start = "On launch",
 		sm_check_hour = "Every hour",
@@ -421,10 +425,17 @@ local localization = qLocalization.new({
 		sm_restart_now = "Right away",
 		sm_set_theme = "Theme",
 		sm_set_accent = "Accent",
+		sm_set_font = "Font",
+		sm_font_inter = "Inter",
+		sm_font_segoe = "Segoe UI",
+		sm_font_candara = "Candara",
+		sm_font_corbel = "Corbel",
+		sm_font_trebuchet = "Trebuchet",
 		sm_theme_graphite = "Graphite",
 		sm_theme_midnight = "Midnight",
 		sm_theme_warm = "Warm",
 		sm_theme_purple = "Purple",
+		sm_theme_pink = "Pink",
 		sm_theme_crimson = "Crimson",
 		sm_theme_forest = "Forest",
 		sm_theme_oled = "OLED",
@@ -529,6 +540,10 @@ local localization = qLocalization.new({
 		sm_settings = "Настройки",
 		sm_g_updates = "ОБНОВЛЕНИЯ",
 		sm_g_look = "ОФОРМЛЕНИЕ",
+		sm_g_window = "ОКНО",
+		sm_set_blur = "Размытие фона",
+		sm_set_blur_power = "Сила размытия",
+		sm_set_transparency = "Прозрачность",
 		sm_set_check = "Проверять",
 		sm_check_start = "При запуске",
 		sm_check_hour = "Каждый час",
@@ -538,10 +553,17 @@ local localization = qLocalization.new({
 		sm_restart_now = "Сразу",
 		sm_set_theme = "Тема",
 		sm_set_accent = "Акцент",
+		sm_set_font = "Шрифт",
+		sm_font_inter = "Inter",
+		sm_font_segoe = "Segoe UI",
+		sm_font_candara = "Candara",
+		sm_font_corbel = "Corbel",
+		sm_font_trebuchet = "Trebuchet",
 		sm_theme_graphite = "Графит",
 		sm_theme_midnight = "Полночь",
 		sm_theme_warm = "Теплая",
 		sm_theme_purple = "Фиолетовая",
+		sm_theme_pink = "Розовая",
 		sm_theme_crimson = "Бордовая",
 		sm_theme_forest = "Лесная",
 		sm_theme_oled = "OLED",
@@ -559,7 +581,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.1.0"
+local VERSION = "2.2.0"
 
 local K = {
 	CFG = "script_market",
@@ -606,13 +628,14 @@ local T = {
 	knob_off = { 142, 142, 147 },
 }
 
-local THEME_ORDER = { "graphite", "midnight", "warm", "purple", "crimson", "forest", "oled" }
+local THEME_ORDER = { "graphite", "midnight", "warm", "purple", "pink", "crimson", "forest", "oled" }
 
 local THEMES = {
 	graphite = { win = { 25, 25, 27 }, side = { 20, 20, 22 }, menu = { 38, 38, 41 }, card = { 32, 32, 35 }, dd = { 42, 42, 46 }, off = { 56, 56, 61 }, line = 18, field = 15 },
 	midnight = { win = { 17, 20, 31 }, side = { 13, 16, 26 }, menu = { 32, 38, 56 }, card = { 24, 29, 44 }, dd = { 37, 44, 65 }, off = { 52, 60, 84 }, line = 20, field = 16 },
 	warm = { win = { 26, 22, 19 }, side = { 21, 18, 15 }, menu = { 42, 36, 31 }, card = { 35, 30, 26 }, dd = { 47, 40, 34 }, off = { 64, 56, 48 }, line = 18, field = 15 },
 	purple = { win = { 22, 17, 32 }, side = { 17, 13, 26 }, menu = { 40, 31, 58 }, card = { 32, 25, 47 }, dd = { 46, 36, 67 }, off = { 62, 49, 88 }, line = 20, field = 16 },
+	pink = { win = { 62, 36, 48 }, side = { 51, 29, 40 }, menu = { 128, 78, 100 }, card = { 78, 46, 61 }, dd = { 108, 66, 85 }, off = { 138, 90, 112 }, line = 28, field = 22 },
 	crimson = { win = { 28, 16, 18 }, side = { 22, 12, 14 }, menu = { 46, 28, 31 }, card = { 38, 22, 25 }, dd = { 52, 32, 36 }, off = { 70, 44, 49 }, line = 20, field = 16 },
 	forest = { win = { 17, 25, 21 }, side = { 13, 20, 16 }, menu = { 32, 46, 39 }, card = { 24, 35, 29 }, dd = { 37, 52, 44 }, off = { 52, 70, 60 }, line = 20, field = 16 },
 	oled = { win = { 0, 0, 0 }, side = { 9, 9, 10 }, menu = { 26, 26, 28 }, card = { 15, 15, 17 }, dd = { 28, 28, 31 }, off = { 44, 44, 48 }, line = 23, field = 18 },
@@ -721,7 +744,10 @@ local SETS = {
 	restart = { "ask", "now" },
 	theme = THEME_ORDER,
 	accent = ACCENT_ORDER,
+	font = { "inter", "segoe", "candara", "corbel", "trebuchet" },
 }
+
+local FONT_NAMES = { inter = "Inter", segoe = "Segoe UI", candara = "Candara", corbel = "Corbel", trebuchet = "Trebuchet MS" }
 
 local S = {
 	open = true, alpha = 0, wx = nil, wy = nil, lang = "en",
@@ -741,6 +767,10 @@ local S = {
 		restart = Config.ReadString(K.CFG, "restart", "ask"),
 		theme = Config.ReadString(K.CFG, "theme", "graphite"),
 		accent = Config.ReadString(K.CFG, "accent", "blue"),
+		font = Config.ReadString(K.CFG, "font", "inter"),
+		blur = Config.ReadInt(K.CFG, "blur", 1) == 1,
+		blur_power = math.max(10, math.min(100, Config.ReadInt(K.CFG, "blur_power", 60))),
+		transparency = math.max(0, math.min(50, Config.ReadInt(K.CFG, "transparency", 10))),
 	},
 	scroll = 0, scroll_to = 0, scroll_t = -10, content_h = 0, view_h = 0, area = { 0, 0, 0, 0 }, page_key = "",
 	tweens = {}, swaps = {}, vers = {}, badges = {}, dt = 0, now = 0, press = nil, drag = nil, resize = nil,
@@ -762,7 +792,14 @@ do
 	S.scale = math.max(K.SCALE_MIN, math.min(K.SCALE_MAX, S.scale))
 end
 
-local C = THEMES[S.set.theme]
+local C = {}
+local function copy_theme(dst, src)
+	for name, v in pairs(src) do
+		if type(v) == "table" then dst[name] = { v[1], v[2], v[3] } else dst[name] = v end
+	end
+	return dst
+end
+copy_theme(C, THEMES[S.set.theme])
 
 local function apply_accent(id)
 	local a = ACCENTS[id]
@@ -800,6 +837,44 @@ local KEY = Enum.ButtonCode
 local function clamp(v, a, b) return v < a and a or (v > b and b or v) end
 local function ease_out(t) return 1 - (1 - t) * (1 - t) end
 local function ease_in_out(t) return t < 0.5 and 2 * t * t or 1 - (-2 * t + 2) ^ 2 / 2 end
+
+-- smooth theme / accent transitions
+local fade = { theme = { k = 1 }, accent = { k = 1 } }
+
+local function fade_theme(id)
+	fade.theme = { k = 0, from = copy_theme({}, C), to = THEMES[id] }
+end
+
+local function fade_accent(id)
+	local a = ACCENTS[id]
+	fade.accent = { k = 0, from = { K.ACCENT[1], K.ACCENT[2], K.ACCENT[3] }, to = a }
+end
+
+local function fade_tick(dt)
+	local t = fade.theme
+	if t.k < 1 then
+		t.k = math.min(1, t.k + dt / 0.32)
+		local e = ease_in_out(t.k)
+		for name, v in pairs(t.to) do
+			local f = t.from[name]
+			if type(v) == "table" then
+				for i = 1, 3 do C[name][i] = f[i] + (v[i] - f[i]) * e end
+			else
+				C[name] = f + (v - f) * e
+			end
+		end
+	end
+	local a = fade.accent
+	if a.k < 1 then
+		a.k = math.min(1, a.k + dt / 0.32)
+		local e = ease_in_out(a.k)
+		for i = 1, 3 do
+			local v = a.from[i] + (a.to[i] - a.from[i]) * e
+			K.ACCENT[i] = math.floor(v + 0.5)
+			K.ACCENT_TEXT[i] = math.floor(v + (255 - v) * 0.35 + 0.5)
+		end
+	end
+end
 local function tr(x) return x[S.lang] ~= "" and x[S.lang] or x.en end
 
 local function plural(n, base)
@@ -825,10 +900,11 @@ end
 local asset = { fonts = {}, sizes = {} }
 
 function asset.font(weight)
-	local f = asset.fonts[weight]
+	local key = S.set.font .. ":" .. weight
+	local f = asset.fonts[key]
 	if not f then
-		f = Render.LoadFont("Inter", Enum.FontCreate.FONTFLAG_ANTIALIAS, weight)
-		asset.fonts[weight] = f
+		f = Render.LoadFont(FONT_NAMES[S.set.font] or "Inter", Enum.FontCreate.FONTFLAG_ANTIALIAS, weight)
+		asset.fonts[key] = f
 	end
 	return f
 end
@@ -867,6 +943,12 @@ local g = { x = 0, y = 0, s = 1, a = 1, depth = 0, cache_s = 0, fits = {}, wraps
 function g.reset()
 	for _ = 1, g.depth do Render.PopClip() end
 	g.depth, g.clips, g.a = 0, {}, 1
+end
+
+function g.refont()
+	local icon = asset.fonts.icon
+	asset.fonts, asset.sizes = { icon = icon }, {}
+	g.fits, g.wraps = {}, {}
 end
 
 function g.rescale(s)
@@ -1737,13 +1819,13 @@ end
 
 function market.set_theme(id)
 	S.set.theme = id
-	C = THEMES[id]
+	fade_theme(id)
 	save("theme", id)
 end
 
 function market.set_accent(id)
 	S.set.accent = id
-	apply_accent(id)
+	fade_accent(id)
 	save("accent", id)
 end
 
@@ -1917,6 +1999,7 @@ function view.nav_item(x, y, w, id, label, glyph, count, badge)
 	local hv = anim.hover("nav:" .. id)
 	local ok = anim.tween("nav_on:" .. id, on and 1 or 0, 0.16)
 	g.rect(x, y, w, 34, T.white, 8, 0.09 * ok + 0.05 * hv * (1 - ok))
+	if ok > 0.01 then g.rect(x + 1, y + 9, 3, 16, K.ACCENT_TEXT, 2, ok) end
 	g.glyph(glyph, 13, x + 18, y + 17, anim.mix(T.t3, K.ACCENT_TEXT, ok))
 	g.text(500, 13, label, x + 36, y + 17, anim.mix(T.t2, T.t1, ok))
 	local bk = anim.tween("badge:" .. id, badge and 1 or 0, 0.2)
@@ -1966,7 +2049,7 @@ function view.pill(x, y, w, h, label, kind, id, click, size)
 end
 
 function view.sidebar()
-	g.rect(0, 0, K.SIDE, K.H, C.side, 16, 1, Enum.DrawFlags.RoundCornersLeft)
+	g.rect(0, 0, K.SIDE, K.H, C.side, 16, 1 - S.set.transparency / 100, Enum.DrawFlags.RoundCornersLeft)
 	g.vl(K.SIDE - 1, 0, K.H, T.white, C.line / 255)
 	hit.add(0, 0, K.SIDE, K.H, "drag", { down = view.start_drag })
 
@@ -2601,6 +2684,32 @@ function view.switch(x, y, on, id, click)
 	hit.add(x, y, 34, 20, id, { click = click })
 end
 
+function view.slide_to(mx)
+	local sl = S.slide
+	local v = clamp((mx - sl.x) / sl.w, 0, 1)
+	S.set[sl.key] = sl.min + math.floor((sl.max - sl.min) * v / 5 + 0.5) * 5
+end
+
+function view.slider(right, cy, key, min, max, enabled)
+	local tw = 170
+	local x = right - tw - 6
+	local val = S.set[key]
+	local v = clamp((val - min) / (max - min), 0, 1)
+	local id = "sl:" .. key
+	local a = enabled and 1 or 0.35
+	local hot = enabled and (hit.is(id) or (S.slide ~= nil and S.slide.key == key))
+	g.text(600, 12, val .. "%", x - 12, cy, T.t3, a, "r")
+	g.rect(x, cy - 2, tw, 4, C.off, 2, a)
+	if v > 0 then g.rect(x, cy - 2, tw * v, 4, K.ACCENT, 2, a) end
+	g.dot(x + tw * v, cy, hot and 8.5 or 7.5, T.white, a)
+	if enabled then
+		hit.add(x - 10, cy - 14, tw + 20, 28, id, { down = function(mx)
+			S.slide = { key = key, min = min, max = max, x = g.x + x * g.s, w = tw * g.s }
+			view.slide_to(mx)
+		end })
+	end
+end
+
 function view.dropdown(x, y, key, value, open)
 	local id = "dd:" .. key
 	local hv = anim.hover(id)
@@ -2711,12 +2820,29 @@ function view.settings()
 		{ label = "sm_set_accent", note = function() return L("sm_accent_" .. S.set.accent) end, draw = function(ry, right)
 			view.swatches(right, ry + 20, ACCENT_ORDER, S.set.accent, "ac:", function(id) return ACCENTS[id] end, market.set_accent)
 		end },
+		pick_row("font"),
+	})
+
+	card("sm_g_window", {
+		{ label = "sm_set_blur", draw = function(ry, right)
+			view.switch(right - 34, ry + 10, S.set.blur, "blur", function()
+				S.set.blur = not S.set.blur
+				save("blur", S.set.blur and 1 or 0)
+			end)
+		end },
+		{ label = "sm_set_blur_power", draw = function(ry, right)
+			view.slider(right, ry + 20, "blur_power", 10, 100, S.set.blur)
+		end },
+		{ label = "sm_set_transparency", draw = function(ry, right)
+			view.slider(right, ry + 20, "transparency", 0, 50, true)
+		end },
 	})
 
 	for _, m in ipairs(menus) do
 		view.dropdown_menu(m[1], m[2], m[3], SETS[m[3]], m[4], function(o)
 			S.set[m[3]] = o
 			save(m[3], o)
+			if m[3] == "font" then g.refont() end
 		end, m[5], m[6])
 	end
 end
@@ -2757,7 +2883,12 @@ function view.window()
 	hit.begin()
 
 	hit.add(0, 0, K.W, K.H, "win")
-	g.rect(0, 0, K.W, K.H, C.win, 16)
+	local opacity = 1 - S.set.transparency / 100
+	local blur_k = S.alpha ^ 4
+	if S.set.blur and S.set.transparency > 0 and blur_k > 0.01 then
+		Render.Blur(g.v(0, 0), g.v(K.W, K.H), S.set.blur_power / 100 * 2 * blur_k, blur_k, 16 * g.s, ROUND)
+	end
+	g.rect(0, 0, K.W, K.H, C.win, 16, opacity)
 	view.sidebar()
 
 	local key = S.view .. ":" .. S.nav .. ":" .. tostring(S.sel) .. ":" .. tostring(S.hero)
@@ -2785,6 +2916,7 @@ function view.window()
 	g.a = S.alpha
 
 	g.frame(0, 0, K.W, K.H, T.white, 16, 0.09)
+	g.hl(18, 0, K.W - 36, K.ACCENT_TEXT, 0.35 * S.alpha)
 	view.grip()
 end
 
@@ -2864,7 +2996,8 @@ function input.end_drag()
 		save("wy", math.floor(S.wy))
 	end
 	if S.resize then save("scale", S.scale) end
-	S.drag, S.resize, S.q_drag, S.sb_drag = nil, nil, false, nil
+	if S.slide then save(S.slide.key, S.set[S.slide.key]) end
+	S.drag, S.resize, S.q_drag, S.sb_drag, S.slide = nil, nil, false, nil, nil
 end
 
 function input.key(key)
@@ -2898,6 +3031,7 @@ function script.OnFrame()
 	local frame = GlobalVars.GetAbsFrameTime()
 	S.dt = clamp(frame > 0 and frame or (now - (S.now > 0 and S.now or now)), 0, 0.1)
 	S.now = now
+	fade_tick(S.dt)
 	S.lang = localization.GetLanguage() == "ru" and "ru" or "en"
 	market.tick()
 	S.alpha = anim.tween("window", S.open and 1 or 0, 0.18)
@@ -2917,6 +3051,7 @@ function script.OnFrame()
 		S.wx, S.wy = S.drag.wx + mx - S.drag.mx, S.drag.wy + my - S.drag.my
 	end
 	if S.q_drag then S.qc = edit.index_at(mx) end
+	if S.slide then view.slide_to(mx) end
 	if S.sb_drag then
 		local d = S.sb_drag
 		local v = clamp(d.scroll + (my - d.my) / g.s * d.k, 0, math.max(0, S.content_h - S.view_h))
