@@ -1200,7 +1200,7 @@
     {
       "id": "unusual_cosmetics",
       "version": "1.0.0",
-      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/unusual-cosmetics-v1.0.0/unusual_cosmetics.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/56c07695203c9915e6b82d07864149de5fcf3f7c/scripts/unusual_cosmetics/unusual_cosmetics.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/unusual-cosmetics-v1.0.0/unusual_cosmetics.lua",
       "manual": false,
       "needs_q_localizer": false,
