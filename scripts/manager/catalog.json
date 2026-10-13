@@ -1403,7 +1403,7 @@
     {
       "id": "muerta_dead_shot",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/muerta_dead_shot/muerta_dead_shot.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/9edabfe603e6bb5d52c455c5814fa736dcfb310d/scripts/muerta_dead_shot/muerta_dead_shot.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/muerta-dead-shot-v1.0.0/muerta_dead_shot.lua",
       "manual": false,
       "needs_q_localizer": false,
