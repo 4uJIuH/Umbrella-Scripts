@@ -31,7 +31,6 @@
 - Настраивает тему, акцентный цвет, размытие фона, прозрачность и масштаб интерфейса
 - Поддерживает компактное отображение списка скриптов
 - Устанавливает обновления отдельных Dota-скриптов и перезагружает Script System
-- Показывает и устанавливает Tinker Smart Escape от автора sataroz
 - Сохраняет резервную копию заменяемого файла
 - Устанавливает обязательный `!_qLocalizer.lua`, если он требуется и отсутствует
 - Скачивает Tinker Auto Farm как ZIP для ручной распаковки
@@ -49,7 +48,7 @@
 
 **Обновление v1.6.0**
 
-- Добавлен Tinker Smart Escape от автора sataroz в каталог Script Manager для установки и обновления.
+- Добавлен Tinker Smart Escape от автора sataroz с установкой и обновлением через Script Manager.
 
 **Обновление v1.5.0**
 
@@ -95,7 +94,6 @@ An Umbrella script manager with a draggable panel that checks the full catalog o
 - Customizes the theme, accent color, background blur, opacity, and interface scale
 - Supports a compact script-list layout
 - Installs individual Dota script updates and reloads the Script System
-- Lists and installs Tinker Smart Escape by sataroz
 - Keeps a backup of any file it replaces
 - Installs the required `!_qLocalizer.lua` when needed and missing
 - Downloads Tinker Auto Farm as a ZIP for manual extraction
@@ -113,7 +111,7 @@ An Umbrella script manager with a draggable panel that checks the full catalog o
 
 **Update v1.6.0**
 
-- Added Tinker Smart Escape by sataroz to the Script Manager catalog for installation and updates.
+- Added Tinker Smart Escape by sataroz to Script Manager for installation and updates.
 
 **Update v1.5.0**
 
