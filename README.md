@@ -187,7 +187,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 4 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 5 | `script-manager-v2.0.4` |
+| [Script Manager](scripts/script_manager) | 5 | `script-manager-v2.0.5` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
@@ -200,6 +200,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Better Better Techies Combo](scripts/better_better_techies_combo) | 2 | `better-better-techies-combo-v1.0.0` |
 | [Chat Translator](scripts/chat_translator) | 0 | `chat-translator-v1.0.0` |
 | [Hero Grid](scripts/hero_grid) | 0 | `hero-grid-v1.0.0` |
+| [BehaviorScoreHelper](scripts/behavior_score_helper) | 0 | `behavior-score-helper-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
