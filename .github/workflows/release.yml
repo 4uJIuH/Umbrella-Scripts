@@ -50,7 +50,17 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "${{ steps.notes.outputs.manifest }} ${TAG##*-v}: version manifest"
             git pull --rebase
-            git push origin main
+            for attempt in 1 2 3 4 5; do
+              if git push origin main; then
+                break
+              fi
+              if [ "$attempt" -eq 5 ]; then
+                echo "Failed to push version manifest after 5 attempts" >&2
+                exit 1
+              fi
+              sleep "$attempt"
+              git pull --rebase origin main
+            done
           fi
 
       - name: pages
