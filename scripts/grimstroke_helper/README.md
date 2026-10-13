@@ -3,9 +3,13 @@
 подбирает цели для Ink Swell и управляет Dark Portrait / selects Ink Swell targets and controls Dark Portrait
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `grimstroke_helper.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/grimstroke_helper/grimstroke_helper.lua)
+Скачать: [grimstroke_helper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/grimstroke-helper-v1.0.0/grimstroke_helper.lua) — `grimstroke-helper-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=grimstroke-helper&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`grimstroke-helper-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/grimstroke-helper-v1.0.0) | 2026-10-13 | [grimstroke_helper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/grimstroke-helper-v1.0.0/grimstroke_helper.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=grimstroke-helper&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -21,6 +25,12 @@ Grimstroke Helper помогает автоматически выбирать �
 1. Нажмите «Установить» в Script Manager или поместите grimstroke_helper.lua в umbrella\scripts.
 2. Перезагрузите Lua-скрипты.
 3. Откройте Heroes → Hero List → Grimstroke → Helper.
+
+## Что нового
+
+# Обновление 1.0.0
+
+- Первый выпуск помощника Grimstroke для Ink Swell и Dark Portrait.
 
 ---
 
@@ -39,3 +49,9 @@ Grimstroke Helper automatically selects an ally for Ink Swell and controls the D
 1. Click Install in Script Manager or place grimstroke_helper.lua in umbrella\scripts.
 2. Reload Lua scripts.
 3. Open Heroes → Hero List → Grimstroke → Helper.
+
+## Changelog
+
+# Update 1.0.0
+
+- Initial release of the Grimstroke Ink Swell and Dark Portrait helper.
