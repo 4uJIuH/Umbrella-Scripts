@@ -39,6 +39,7 @@
 - [Better Better Techies Combo](scripts/better_better_techies_combo) — комбо на Techies с двумя режимами и автоматическим отходом
 - [Chat Translator](scripts/chat_translator) — автоматически переводит игровой чат между английским и русским
 - [Hero Grid](scripts/hero_grid) — загружает пользовательские сетки героев из JSON
+- [Weather](scripts/weather) — меняет визуальную погоду на карте
 - [BehaviorScoreHelper](scripts/behavior_score_helper) — повышает порядочность: авто GG, авто репорт и авто лайк
 <!-- scripts:ru:end -->
 
@@ -126,6 +127,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Better Better Techies Combo](scripts/better_better_techies_combo) — a Techies combo with two modes and an automatic disengage
 - [Chat Translator](scripts/chat_translator) — automatically translates in-game chat between English and Russian
 - [Hero Grid](scripts/hero_grid) — loads custom hero grids from JSON files
+- [Weather](scripts/weather) — changes the visual map weather
 - [BehaviorScoreHelper](scripts/behavior_score_helper) — raises your behavior score: auto GG, auto report, and auto like
 <!-- scripts:en:end -->
 
@@ -200,6 +202,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Better Better Techies Combo](scripts/better_better_techies_combo) | 2 | `better-better-techies-combo-v1.0.0` |
 | [Chat Translator](scripts/chat_translator) | 0 | `chat-translator-v1.0.0` |
 | [Hero Grid](scripts/hero_grid) | 0 | `hero-grid-v1.0.0` |
+| [Weather](scripts/weather) | 0 | `weather-v1.0.0` |
 | [BehaviorScoreHelper](scripts/behavior_score_helper) | 0 | `behavior-score-helper-v1.0.0` |
 
 <picture>
