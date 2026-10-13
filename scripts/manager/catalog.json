@@ -916,6 +916,156 @@
       "needs_q_localizer": true,
       "author": "Wahha (Discord: wahha_)",
       "version_marker": "NONE"
+    },
+    {
+      "id": "nyx_auto_burrow",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/nyx_auto_burrow/nyx_auto_burrow.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/nyx-auto-burrow-v1.0.0/nyx_auto_burrow.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "! (Discord: so.cn)",
+      "heroes": [
+        "nyx_assassin"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "dawnbreaker_solar_guardian",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dawnbreaker_solar_guardian/dawnbreaker.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/dawnbreaker-solar-guardian-v1.0.0/dawnbreaker.lua",
+      "manual": false,
+      "needs_q_localizer": true,
+      "author": "! (Discord: so.cn)",
+      "heroes": [
+        "dawnbreaker"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "dota1x6_pack",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dota1x6_pack/dota1x6_pack.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/dota-1x6-pack-v1.0.0/dota1x6_pack.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Yerka (Discord: argenov)",
+      "heroes": [
+        "arc_warden",
+        "bane",
+        "ember_spirit",
+        "invoker",
+        "jakiro",
+        "kunkka",
+        "marci",
+        "morphling",
+        "muerta",
+        "shadow_fiend",
+        "skywrath_mage",
+        "tinker",
+        "void_spirit",
+        "alchemist",
+        "antimage",
+        "axe",
+        "crystal_maiden",
+        "hoodwink",
+        "huskar",
+        "night_stalker",
+        "nyx_assassin",
+        "pangolier",
+        "phantom_assassin",
+        "pudge"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "kez_raptor_dispel",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/kez_raptor_dispel/kez_raptor_dispel.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/kez-raptor-dispel-v1.0.0/kez_raptor_dispel.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Yerka (Discord: argenov)",
+      "heroes": [
+        "kez"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "huskar_life_break",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/huskar_life_break/huskar_life_break.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/huskar-life-break-v1.0.0/huskar_life_break.lua",
+      "manual": false,
+      "needs_q_localizer": true,
+      "author": "Yerka (Discord: argenov)",
+      "heroes": [
+        "huskar"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "dragon_camp_pull",
+      "version": "1.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dragon_camp_pull/dragon_camp_pull.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/dragon-camp-pull-v1.0/dragon_camp_pull.lua",
+      "manual": false,
+      "needs_q_localizer": true,
+      "author": "Yerka (Discord: argenov)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "sd_poison_5",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/sd_poison_5/sd_poison_5.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sd-poison-5-v1.0.0/sd_poison_5.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\ud81a\uddb9 kaLmar \ud81a\uddb9 (Discord: kalmar322)",
+      "heroes": [
+        "shadow_demon"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "techies_auto_miner",
+      "version": "1.1",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/techies_auto_miner/techies_auto_miner.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-auto-miner-v1.1/techies_auto_miner.lua",
+      "manual": false,
+      "needs_q_localizer": true,
+      "author": "guzlichenok (Discord attribution not provided)",
+      "heroes": [
+        "techies"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "brood_camp_blocker",
+      "version": "1.6",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/brood_camp_blocker/brood_camp_blocker.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/brood-camp-blocker-v1.6/brood_camp_blocker.lua",
+      "manual": false,
+      "needs_q_localizer": true,
+      "author": "guzlichenok (Discord attribution not provided)",
+      "heroes": [
+        "broodmother"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "hoodwink_bushwhack_techies",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hoodwink_bushwhack_techies/hoodwink_bushwhack_techies.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/hoodwink-bushwhack-techies-v1.0.0/hoodwink_bushwhack_techies.lua",
+      "manual": false,
+      "needs_q_localizer": true,
+      "author": "Yerka (Discord: argenov)",
+      "heroes": [
+        "hoodwink"
+      ],
+      "version_marker": "NONE"
     }
   ]
 }

@@ -3821,6 +3821,526 @@
           "Reload the Lua scripts. Menu: Creeps → Creep Agro."
         ]
       }
+    },
+    {
+      "id": "nyx_auto_burrow",
+      "tag": "nyx-auto-burrow",
+      "title": "Nyx Assassin Auto Burrow",
+      "kind": "lua",
+      "category": "dota",
+      "file": "nyx_auto_burrow.lua",
+      "version_marker": "NONE",
+      "heroes": [
+        "nyx_assassin"
+      ],
+      "author": "! (Discord: so.cn)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/nyx_auto_burrow",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=nyx-auto-burrow&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/nyx_auto_burrow/nyx_auto_burrow.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/nyx-auto-burrow-v1.0.0/nyx_auto_burrow.lua"
+      },
+      "ru": {
+        "tagline": "автоматически закапывает Nyx Assassin в подходящий момент",
+        "about": "Автоматически использует Burrow при простое, низком запасе здоровья или маны и в подходящем бою. Выкапывание остаётся ручным.",
+        "features": [
+          "Закапывается после настраиваемого простоя, если Nyx не атакует и рядом нет врагов",
+          "Может закапываться для восстановления при низком HP или мане",
+          "В бою использует Burrow для снижения получаемого урона, когда враги обездвижены",
+          "Ручное выкапывание, сохранение Vendetta и сброс таймера простоя при приказах игрока"
+        ],
+        "install": [
+          "Поместите `nyx_auto_burrow.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты и найдите настройки в разделе Nyx Assassin."
+        ]
+      },
+      "en": {
+        "tagline": "automatically burrows Nyx Assassin at suitable times",
+        "about": "Automatically uses Burrow while idle, at low health or mana, and in suitable fights. Unburrowing remains manual.",
+        "features": [
+          "Burrows after a configurable idle period when Nyx is not attacking and no enemies are nearby",
+          "Can burrow to regenerate at low health or mana",
+          "Uses Burrow in fights for damage reduction when nearby enemies are disabled",
+          "Manual unburrowing, preserves Vendetta, and resets the idle timer on player orders"
+        ],
+        "install": [
+          "Place `nyx_auto_burrow.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts and find the settings under Nyx Assassin."
+        ]
+      }
+    },
+    {
+      "id": "dawnbreaker_solar_guardian",
+      "tag": "dawnbreaker-solar-guardian",
+      "title": "Dawnbreaker Solar Guardian Auto-Save Helper",
+      "kind": "lua",
+      "category": "dota",
+      "file": "dawnbreaker.lua",
+      "version_marker": "NONE",
+      "needs_q_localizer": true,
+      "heroes": [
+        "dawnbreaker"
+      ],
+      "author": "! (Discord: so.cn)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/dawnbreaker_solar_guardian",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=dawnbreaker-solar-guardian&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dawnbreaker_solar_guardian/dawnbreaker.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/dawnbreaker-solar-guardian-v1.0.0/dawnbreaker.lua"
+      },
+      "ru": {
+        "tagline": "автоматизирует Solar Guardian для сейва и контринициации",
+        "about": "Тактический помощник Dawnbreaker для глобального спасения союзников и контринициации. Важно: локальный файл, предоставленный для каталога, не является последней версией; последняя версия указана в Discord.",
+        "features": [
+          "Проверяет, успеет ли союзник дожить до приземления ульты, и отменяет каст, если цель погибла",
+          "Не тратит ульту при низких HP/мане, на иллюзии, неуязвимых целях и союзниках с Aegis",
+          "Реагирует на ключевые станы и смещает высадку к краю Chronosphere / Black Hole",
+          "Поддерживает авто-BKB, тимфайт-ульт, перенаправление Aghanim и HUD с прогнозом лечения"
+        ],
+        "install": [
+          "Поместите `dawnbreaker.lua` в `umbrella\\scripts` и убедитесь, что установлен `!_qLocalizer.lua`.",
+          "Перезагрузите Lua-скрипты. Настройки находятся в разделе Dawnbreaker.",
+          "Последняя версия: <a href=\"https://discord.com/channels/408315082439917578/1556260601779724358/1556685245233758248\" target=\"_blank\" rel=\"noopener\">публикация автора в Discord</a>. Загружаемый здесь файл может быть устаревшим."
+        ]
+      },
+      "en": {
+        "tagline": "automates Solar Guardian saves and counter-initiation",
+        "about": "A tactical Dawnbreaker helper for global ally saves and counter-initiation. Note: the local file supplied for this catalog is not the latest version; the author links the latest version on Discord.",
+        "features": [
+          "Checks whether an ally can survive until the ultimate lands and cancels if the target dies",
+          "Avoids casting at low HP/mana, illusions, invulnerable targets, and allies with Aegis",
+          "Responds to key disables and shifts landing toward the edge of Chronosphere / Black Hole",
+          "Includes auto-BKB, teamfight casts, Aghanim repositioning, and a HUD with heal forecasts"
+        ],
+        "install": [
+          "Place `dawnbreaker.lua` in `umbrella\\scripts` and ensure `!_qLocalizer.lua` is installed.",
+          "Reload Lua scripts. Settings are under Dawnbreaker.",
+          "Latest version: <a href=\"https://discord.com/channels/408315082439917578/1556260601779724358/1556685245233758248\" target=\"_blank\" rel=\"noopener\">the author's Discord post</a>. The file hosted here may be outdated."
+        ]
+      }
+    },
+    {
+      "id": "dota1x6_pack",
+      "tag": "dota-1x6-pack",
+      "title": "Dota 1x6 Pack",
+      "kind": "lua",
+      "category": "dota",
+      "file": "dota1x6_pack.lua",
+      "version_marker": "NONE",
+      "heroes": [
+        "arc_warden",
+        "bane",
+        "ember_spirit",
+        "invoker",
+        "jakiro",
+        "kunkka",
+        "marci",
+        "morphling",
+        "muerta",
+        "shadow_fiend",
+        "skywrath_mage",
+        "tinker",
+        "void_spirit",
+        "alchemist",
+        "antimage",
+        "axe",
+        "crystal_maiden",
+        "hoodwink",
+        "huskar",
+        "night_stalker",
+        "nyx_assassin",
+        "pangolier",
+        "phantom_assassin",
+        "pudge"
+      ],
+      "author": "Yerka (Discord: argenov)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/dota1x6_pack",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=dota-1x6-pack&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dota1x6_pack/dota1x6_pack.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/dota-1x6-pack-v1.0.0/dota1x6_pack.lua"
+      },
+      "ru": {
+        "tagline": "собирает комбо для Dota 1x6 в одном Lua-файле",
+        "about": "Большой набор комбо для героев в кастомке 1x6. Библиотеки отдельно не требуются: qLocalization встроен в скрипт.",
+        "features": [
+          "Включает комбо Arc Warden, Invoker, Marci, Morphling, Muerta, Shadow Fiend и Tinker",
+          "По описанию автора, поддерживает Q/W/E/R-легендарки у 24 героев",
+          "Для Тинкера доступны Rearm Combo и Autofarm",
+          "Удалите отдельные 1x6-скрипты перед установкой, чтобы избежать двойного выполнения"
+        ],
+        "install": [
+          "Поместите `dota1x6_pack.lua` в `umbrella\\scripts`.",
+          "Удалите отдельные 1x6-скрипты, если они установлены, затем перезагрузите скрипты.",
+          "Меню зависит от героя; у Тинкера настройки находятся в Rearm Combo и Autofarm."
+        ]
+      },
+      "en": {
+        "tagline": "packs Dota 1x6 hero combos into one Lua file",
+        "about": "A large combo pack for heroes in the 1x6 custom game. No separate library files are needed; qLocalization is embedded.",
+        "features": [
+          "Includes combos for Arc Warden, Invoker, Marci, Morphling, Muerta, Shadow Fiend, and Tinker",
+          "The author describes Q/W/E/R legendary support for 24 heroes",
+          "Tinker has Rearm Combo and Autofarm sections",
+          "Remove separate 1x6 scripts before installing to avoid duplicate execution"
+        ],
+        "install": [
+          "Place `dota1x6_pack.lua` in `umbrella\\scripts`.",
+          "Remove separate 1x6 scripts if installed, then reload scripts.",
+          "Menus depend on the selected hero; Tinker's settings are under Rearm Combo and Autofarm."
+        ]
+      }
+    },
+    {
+      "id": "kez_raptor_dispel",
+      "tag": "kez-raptor-dispel",
+      "title": "Kez Raptor Dance Dispel",
+      "kind": "lua",
+      "category": "dota",
+      "file": "kez_raptor_dispel.lua",
+      "version_marker": "NONE",
+      "heroes": [
+        "kez"
+      ],
+      "author": "Yerka (Discord: argenov)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/kez_raptor_dispel",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=kez-raptor-dispel&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/kez_raptor_dispel/kez_raptor_dispel.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/kez-raptor-dispel-v1.0.0/kez_raptor_dispel.lua"
+      },
+      "ru": {
+        "tagline": "использует Kazurai Katana для частого диспела через Raptor Dance",
+        "about": "Небольшой Kez-скрипт для приёма с Kazurai Katana: нажмите предмет по врагу, пока переключение стойки доступно.",
+        "features": [
+          "Помогает выполнить серию диспелов с Kazurai Katana",
+          "Требует, чтобы смена стойки не находилась на перезарядке",
+          "Поставляется с локализацией меню"
+        ],
+        "install": [
+          "Поместите `kez_raptor_dispel.lua` в `umbrella\\scripts`.",
+          "Перезагрузите скрипты и откройте настройки Kez."
+        ]
+      },
+      "en": {
+        "tagline": "uses Kazurai Katana for repeated Raptor Dance dispels",
+        "about": "A small Kez helper for a Kazurai Katana interaction: use the item on an enemy while stance switching is available.",
+        "features": [
+          "Helps perform repeated dispels with Kazurai Katana",
+          "Requires stance switching to be off cooldown",
+          "Includes its own menu localization"
+        ],
+        "install": [
+          "Place `kez_raptor_dispel.lua` in `umbrella\\scripts`.",
+          "Reload scripts and open the Kez settings."
+        ]
+      }
+    },
+    {
+      "id": "huskar_life_break",
+      "tag": "huskar-life-break",
+      "title": "Huskar Life Break",
+      "kind": "lua",
+      "category": "dota",
+      "file": "huskar_life_break.lua",
+      "version_marker": "NONE",
+      "needs_q_localizer": true,
+      "heroes": [
+        "huskar"
+      ],
+      "author": "Yerka (Discord: argenov)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/huskar_life_break",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=huskar-life-break&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/huskar_life_break/huskar_life_break.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/huskar-life-break-v1.0.0/huskar_life_break.lua"
+      },
+      "ru": {
+        "tagline": "прерывает полёт Life Break, сохраняя попадание ульты",
+        "about": "Комбо для Хускара: прыжок ультой по цели, затем предметом остановить движение, пока снаряд Life Break продолжает полёт.",
+        "features": [
+          "Клавиша запускает Life Break по цели под курсором и предмет во время прыжка",
+          "Поддерживает Blink и Hurricane Pike; Blink направляется назад от цели или к курсору",
+          "Повторяет приказ предмета во время полёта и останавливает Хускара после попадания",
+          "Бинд по умолчанию — T"
+        ],
+        "install": [
+          "Поместите `huskar_life_break.lua` и `!_qLocalizer.lua` в `umbrella\\scripts`.",
+          "Перезагрузите скрипты. Меню: Heroes → Hero List → Huskar → Life Break."
+        ]
+      },
+      "en": {
+        "tagline": "stops Life Break travel while preserving the ultimate hit",
+        "about": "A Huskar combo that casts Life Break on the target, then uses an item to stop movement while the Life Break projectile continues.",
+        "features": [
+          "A hotkey casts Life Break on the target under the cursor, then uses an item during the leap",
+          "Supports Blink and Hurricane Pike; Blink can go behind the target or toward the cursor",
+          "Retries the item order during flight and stops Huskar after the hit",
+          "Default hotkey: T"
+        ],
+        "install": [
+          "Place `huskar_life_break.lua` and `!_qLocalizer.lua` in `umbrella\\scripts`.",
+          "Reload scripts. Menu: Heroes → Hero List → Huskar → Life Break."
+        ]
+      }
+    },
+    {
+      "id": "dragon_camp_pull",
+      "tag": "dragon-camp-pull",
+      "title": "Dragon Camp Pull",
+      "kind": "lua",
+      "category": "dota",
+      "file": "dragon_camp_pull.lua",
+      "version_marker": "NONE",
+      "needs_q_localizer": true,
+      "author": "Yerka (Discord: argenov)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/dragon_camp_pull",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=dragon-camp-pull&expanded=true",
+      "initial": {
+        "version": "1.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dragon_camp_pull/dragon_camp_pull.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/dragon-camp-pull-v1.0/dragon_camp_pull.lua"
+      },
+      "ru": {
+        "tagline": "отправляет пачки с линии в лес к приручённому дракону",
+        "about": "Автоматизация фарма линии и нейтрального лагеря с приручённым Чёрным драконом от Helm of the Overlord.",
+        "features": [
+          "Отводит вражескую волну к лесному лагерю без атак по пути",
+          "После столкновения крипов с нейтралами использует огненный шар и добивает пачку",
+          "Чередует ближайшие лагеря у крайних вышек и исключает зачищенный лагерь до респауна",
+          "Избегает вышек и вражеских героев, отступает при низком HP; приказ игрока ставит паузу"
+        ],
+        "install": [
+          "Поместите `dragon_camp_pull.lua` и `!_qLocalizer.lua` в `umbrella\\scripts`.",
+          "Для работы нужны Helm of the Overlord и приручённый Чёрный дракон. Перезагрузите Lua-скрипты."
+        ]
+      },
+      "en": {
+        "tagline": "pulls lane waves into the jungle for a controlled dragon to farm",
+        "about": "Automates lane and neutral-camp farming with a Black Dragon controlled through Helm of the Overlord.",
+        "features": [
+          "Leads an enemy wave to a jungle camp without attacking on the way",
+          "Uses Fireball and attacks after the wave engages the neutral camp",
+          "Alternates nearby camps by outer towers and skips cleared camps until they respawn",
+          "Avoids towers and enemy heroes, retreats at low HP, and pauses after a player order"
+        ],
+        "install": [
+          "Place `dragon_camp_pull.lua` and `!_qLocalizer.lua` in `umbrella\\scripts`.",
+          "Requires Helm of the Overlord and a controlled Black Dragon. Reload Lua scripts."
+        ]
+      }
+    },
+    {
+      "id": "sd_poison_5",
+      "tag": "sd-poison-5",
+      "title": "Shadow Demon Poison 5",
+      "kind": "lua",
+      "category": "dota",
+      "file": "sd_poison_5.lua",
+      "version_marker": "NONE",
+      "heroes": [
+        "shadow_demon"
+      ],
+      "author": "𖦹 kaLmar 𖦹 (Discord: kalmar322)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/sd_poison_5",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=sd-poison-5&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/sd_poison_5/sd_poison_5.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sd-poison-5-v1.0.0/sd_poison_5.lua"
+      },
+      "ru": {
+        "tagline": "автоматически подрывает Shadow Poison при пяти и более стаках",
+        "about": "Вспомогательный модуль только для Shadow Poison Release: не заменяет основной комбо-скрипт Shadow Demon.",
+        "features": [
+          "Подрывает ваши стаки на 5 и более, учитывая 25-й талант",
+          "Проверяет талант, владельца стаков и исключает иллюзии",
+          "Можно ограничить работу удержанием клавиши комбо",
+          "Не перебивает другой каст или канал; доступен debug log"
+        ],
+        "install": [
+          "Поместите `sd_poison_5.lua` в `%cheat_dir%\\scripts`.",
+          "Перезагрузите скрипты. Настройки: General → Main → SD Poison 5 → Main → Settings.",
+          "Помните: Release взрывает все ваши стаки на всех целях одновременно."
+        ]
+      },
+      "en": {
+        "tagline": "automatically releases Shadow Poison at five or more stacks",
+        "about": "A companion module for Shadow Poison Release only; it does not replace a Shadow Demon combo script.",
+        "features": [
+          "Releases your stacks at 5 or more, accounting for the level 25 talent",
+          "Checks the talent, stack ownership, and excludes illusions",
+          "Can be limited to while a combo key is held",
+          "Does not interrupt another cast or channel; includes a debug log option"
+        ],
+        "install": [
+          "Place `sd_poison_5.lua` in `%cheat_dir%\\scripts`.",
+          "Reload scripts. Settings: General → Main → SD Poison 5 → Main → Settings.",
+          "Note: Release detonates all your stacks on all targets at once."
+        ]
+      }
+    },
+    {
+      "id": "techies_auto_miner",
+      "tag": "techies-auto-miner",
+      "title": "Techies Auto Miner",
+      "kind": "lua",
+      "category": "dota",
+      "file": "techies_auto_miner.lua",
+      "version_marker": "NONE",
+      "needs_q_localizer": true,
+      "heroes": [
+        "techies"
+      ],
+      "author": "guzlichenok (Discord attribution not provided)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/techies_auto_miner",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=techies-auto-miner&expanded=true",
+      "initial": {
+        "version": "1.1",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/techies_auto_miner/techies_auto_miner.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-auto-miner-v1.1/techies_auto_miner.lua"
+      },
+      "ru": {
+        "tagline": "автоматически минирует выбранные зоны карты на Techies",
+        "about": "Автоматически обходит выбранные через интерактивную мини-карту зоны и закладывает Proximity Mines.",
+        "features": [
+          "Интерактивная панель карты с выбором зон, фильтрами и стартом/остановкой",
+          "Покрывает проходимые участки и показывает мины, точки, границы и текущую цель",
+          "Управляет маной: использует Arcane Boots, заряды, Mango и ждёт восстановления",
+          "Прерывает автоматизацию при ручном приказе игрока; требуется qLocalization"
+        ],
+        "install": [
+          "Поместите `techies_auto_miner.lua` и `!_qLocalizer.lua` в `umbrella\\scripts`.",
+          "Перезагрузите скрипты, выберите зоны на панели карты и запустите минирование."
+        ]
+      },
+      "en": {
+        "tagline": "automatically mines selected map zones as Techies",
+        "about": "Automatically traverses zones selected on an interactive minimap and plants Proximity Mines.",
+        "features": [
+          "Interactive map panel with zone selection, filters, and start/stop controls",
+          "Covers walkable areas and visualizes mines, points, zone boundaries, and the current target",
+          "Manages mana with Arcane Boots, charges, Mango, and regeneration waits",
+          "Stops automation on a manual player order; requires qLocalization"
+        ],
+        "install": [
+          "Place `techies_auto_miner.lua` and `!_qLocalizer.lua` in `umbrella\\scripts`.",
+          "Reload scripts, select zones on the map panel, and start mining."
+        ]
+      }
+    },
+    {
+      "id": "brood_camp_blocker",
+      "tag": "brood-camp-blocker",
+      "title": "Broodmother Camp Blocker",
+      "kind": "lua",
+      "category": "dota",
+      "file": "brood_camp_blocker.lua",
+      "version_marker": "NONE",
+      "needs_q_localizer": true,
+      "heroes": [
+        "broodmother"
+      ],
+      "author": "guzlichenok (Discord attribution not provided)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/brood_camp_blocker",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=brood-camp-blocker&expanded=true",
+      "initial": {
+        "version": "1.6",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/brood_camp_blocker/brood_camp_blocker.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/brood-camp-blocker-v1.6/brood_camp_blocker.lua"
+      },
+      "ru": {
+        "tagline": "отправляет пауков Брудмазер блокировать спавн кемпов",
+        "about": "Автоматически назначает пауков на выбранные лагеря нейтралов в момент минутного респауна.",
+        "features": [
+          "Интерактивная карта кемпов открывается по F6; есть фильтры по стороне и древним",
+          "Рассчитывает момент отправки так, чтобы паук пришёл к спавн-боксу к :00",
+          "Выбирает живучего паука, после проверки респауна возвращает его к героине",
+          "Автономные пауки не перехватывают выделение и команды; визуалы показывают кемпы и маршруты"
+        ],
+        "install": [
+          "Поместите `brood_camp_blocker.lua` и `!_qLocalizer.lua` в `umbrella\\scripts`.",
+          "Перезагрузите скрипты, настройте кемпы и включите блокировку в меню Broodmother."
+        ]
+      },
+      "en": {
+        "tagline": "sends Broodmother's spiders to block neutral camp spawns",
+        "about": "Automatically assigns spiderlings to selected neutral camps at the minute spawn check.",
+        "features": [
+          "Camp selection map opens with F6 and includes side and Ancient filters",
+          "Times dispatch so a spider reaches the camp spawn box at :00",
+          "Selects a durable spider and returns it after the spawn check",
+          "Managed spiders ignore selection and move commands; visuals show camps and routes"
+        ],
+        "install": [
+          "Place `brood_camp_blocker.lua` and `!_qLocalizer.lua` in `umbrella\\scripts`.",
+          "Reload scripts, configure camps, and enable blocking in the Broodmother menu."
+        ]
+      }
+    },
+    {
+      "id": "hoodwink_bushwhack_techies",
+      "tag": "hoodwink-bushwhack-techies",
+      "title": "Hoodwink Blast Off Catch",
+      "kind": "lua",
+      "category": "dota",
+      "file": "hoodwink_bushwhack_techies.lua",
+      "version_marker": "NONE",
+      "needs_q_localizer": true,
+      "heroes": [
+        "hoodwink"
+      ],
+      "author": "Yerka (Discord: argenov)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/hoodwink_bushwhack_techies",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=hoodwink-bushwhack-techies&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hoodwink_bushwhack_techies/hoodwink_bushwhack_techies.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/hoodwink-bushwhack-techies-v1.0.0/hoodwink_bushwhack_techies.lua"
+      },
+      "ru": {
+        "tagline": "ловит Techies способностью Bushwhack во время Blast Off",
+        "about": "Вспомогательный скрипт Hoodwink, который старается поймать Techies сетью в полёте после Blast Off.",
+        "features": [
+          "Отслеживает Blast Off после ухода способности на перезарядку и траты маны",
+          "Смещает Bushwhack к ближайшему дереву, чтобы связать Techies",
+          "Опционально может посадить Iron Branch",
+          "Для меню требуется qLocalization; автор отмечает, что скрипт сделан для личного использования"
+        ],
+        "install": [
+          "Поместите `hoodwink_bushwhack_techies.lua` и `!_qLocalizer.lua` в `umbrella\\scripts`.",
+          "Перезагрузите скрипты. Меню: Hoodwink → Blast Off Catch."
+        ]
+      },
+      "en": {
+        "tagline": "catches Techies with Bushwhack during Blast Off",
+        "about": "A Hoodwink helper that attempts to catch Techies in midair with a net after Blast Off.",
+        "features": [
+          "Tracks Blast Off after it goes on cooldown and consumes mana",
+          "Shifts Bushwhack toward the nearest tree to catch Techies",
+          "Can optionally plant an Iron Branch",
+          "Requires qLocalization for its menu; the author says the script was made for personal use"
+        ],
+        "install": [
+          "Place `hoodwink_bushwhack_techies.lua` and `!_qLocalizer.lua` in `umbrella\\scripts`.",
+          "Reload scripts. Menu: Hoodwink → Blast Off Catch."
+        ]
+      }
     }
   ]
 }
