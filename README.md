@@ -186,6 +186,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Naga PT Abuse](scripts/naga_pt_abuse) | 1 | `naga-pt-abuse-v1.0.0` |
 | [Anti-Rubick](scripts/anti_rubick) | 1 | `anti-rubick-v1.0.0` |
 | [Arc Warden Blocker](scripts/arc_warden_blocker) | 0 | `arc-warden-blocker-v1.0.0` |
+| [Invoker Combo Switcher](scripts/invoker_combo_switcher) | 0 | `invoker-combo-switcher-v1.0.0` |
 | [Better Better Techies Combo](scripts/better_better_techies_combo) | 0 | `better-better-techies-combo-v1.0.0` |
 
 <picture>

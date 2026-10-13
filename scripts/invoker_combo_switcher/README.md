@@ -3,9 +3,13 @@
 переключает пресеты комбо Инвокера двумя клавишами / switches Invoker combo presets with two hotkeys
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `invoker_combo_switcher.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_combo_switcher/invoker_combo_switcher.lua)
+Скачать: [invoker_combo_switcher.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-combo-switcher-v1.0.0/invoker_combo_switcher.lua) — `invoker-combo-switcher-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=invoker-combo-switcher&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`invoker-combo-switcher-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/invoker-combo-switcher-v1.0.0) | 2026-10-13 | [invoker_combo_switcher.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-combo-switcher-v1.0.0/invoker_combo_switcher.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=invoker-combo-switcher&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -22,6 +26,13 @@
 2. Перезагрузите скрипты клавишей F7.
 3. Откройте `Heroes → Hero List → Invoker → Panels Settings → Combo Switch Binds`.
 4. Назначьте клавиши Next Combo Key и Prev Combo Key.
+
+## Что нового
+
+# 1.0.0
+
+- Первый релиз Invoker Combo Switcher.
+- Добавлено переключение пресетов комбо, автоповтор при удержании и зацикливание списка.
 
 ---
 
@@ -41,3 +52,10 @@ Scrolls through Invoker Combo Builder slots with Next and Previous keys, without
 2. Reload scripts with F7.
 3. Open `Heroes → Hero List → Invoker → Panels Settings → Combo Switch Binds`.
 4. Set the Next Combo Key and Prev Combo Key.
+
+## Changelog
+
+# 1.0.0
+
+- Initial Invoker Combo Switcher release.
+- Added combo preset navigation, hold-to-scroll, and list looping.
