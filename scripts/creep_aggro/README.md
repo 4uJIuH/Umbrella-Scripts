@@ -3,9 +3,13 @@
 помогает переагривать крипов клавишей и подконтрольными юнитами / helps manipulate creep aggro with a key and controlled units
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `creep_aggro.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/creep_aggro/creep_aggro.lua)
+Скачать: [creep_aggro.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/creep-aggro-v1.0.0/creep_aggro.lua) — `creep-aggro-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=creep-aggro&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`creep-aggro-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/creep-aggro-v1.0.0) | 2026-10-13 | [creep_aggro.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/creep-aggro-v1.0.0/creep_aggro.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=creep-aggro&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

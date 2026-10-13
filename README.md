@@ -317,6 +317,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Arc Warden Clone Safe Me](scripts/arc_warden_clone_safe_me) | 0 | `arc-warden-clone-safe-me-v1.0.0` |
 | [Arc Warden Multi Stack](scripts/arc_warden_multi_stack) | 0 | `arc-warden-multi-stack-v1.0.0` |
 | [Map Chat Troll](scripts/maptroll) | 0 | `maptroll-v1.0.0` |
+| [Creep Aggro](scripts/creep_aggro) | 0 | `creep-aggro-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
