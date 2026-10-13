@@ -450,7 +450,7 @@
     {
       "id": "grimstroke_helper",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/grimstroke_helper/grimstroke_helper.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/94093709f27eb4deabffe5699c7c190f66f0ae00/scripts/grimstroke_helper/grimstroke_helper.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/grimstroke-helper-v1.0.0/grimstroke_helper.lua",
       "manual": false,
       "needs_q_localizer": false,
