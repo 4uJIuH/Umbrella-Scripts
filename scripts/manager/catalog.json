@@ -392,6 +392,15 @@
       "heroes": [
         "techies"
       ]
+    },
+    {
+      "id": "chat_translator",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/chat_translator/chat_translator.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/chat-translator-v1.0.0/chat_translator.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u0444\u0440\u0438\u0433\u0438\u0434\u043d\u044b\u0439 [\u0440\u0430\u0437\u0443\u043c] (Discord: .emocry)"
     }
   ]
 }

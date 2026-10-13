@@ -1621,6 +1621,65 @@
           "Hover over an enemy and hold the configured combo bind."
         ]
       }
+    },
+    {
+      "id": "chat_translator",
+      "tag": "chat-translator",
+      "title": "Chat Translator",
+      "kind": "lua",
+      "category": "dota",
+      "file": "chat_translator.lua",
+      "author": "фригидный [разум] (Discord: .emocry)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/chat_translator",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=chat-translator&expanded=true",
+      "version_marker": "VERSION",
+      "needs_q_localizer": false,
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/chat_translator/chat_translator.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/chat-translator-v1.0.0/chat_translator.lua"
+      },
+      "ru": {
+        "tagline": "автоматически переводит игровой чат между английским и русским",
+        "about": "Chat Translator переводит сообщения игроков с выбором направления: английский → русский, русский → английский или в обе стороны. По желанию переводит ваши русские сообщения перед отправкой. Автор: фригидный [разум] (Discord: .emocry). Текст отправляется внешним сервисам перевода; MyMemory выключен по умолчанию.",
+        "features": [
+          "Выбор направления: английский → русский, русский → английский или в обе стороны",
+          "Опция пропуска собственных входящих сообщений",
+          "Пропускает игровые сокращения и фразы вроде gg, wp, ez, ty, gl hf и nt",
+          "Может переводить собственные русские сообщения на английский перед отправкой; строки, начинающиеся с дефиса, пропускаются",
+          "Кэширует переводы и пробует Google, Yandex, Microsoft Edge и Lingva по очереди",
+          "MyMemory — необязательный резервный сервис; отдельные слова может переводить неточно",
+          "При ошибке временно пропускает сервис перевода",
+          "Настраиваемые цвета ника и перевода; показывает имя игрока или название героя"
+        ],
+        "install": [
+          "Поместите `chat_translator.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Scripts → Scripts → Chat Translator` и включите скрипт.",
+          "Выберите направление перевода; цвета настраиваются в шестерёнке. MyMemory включается отдельно."
+        ]
+      },
+      "en": {
+        "tagline": "automatically translates in-game chat between English and Russian",
+        "about": "Chat Translator translates players' messages in a selected direction: English to Russian, Russian to English, or both. It can optionally translate your own Russian messages before sending. Author: фригидный [разум] (Discord: .emocry). Chat text is sent to external translation services; MyMemory is off by default.",
+        "features": [
+          "Choose English to Russian, Russian to English, or both directions",
+          "Optionally skip your own incoming messages",
+          "Skips common gaming abbreviations and phrases such as gg, wp, ez, ty, gl hf, and nt",
+          "Can translate your own Russian messages into English before sending; messages beginning with a hyphen are skipped",
+          "Caches translations and tries Google, Yandex, Microsoft Edge, and Lingva in sequence",
+          "MyMemory is an optional fallback service and may translate individual words inaccurately",
+          "Temporarily skips a translation service after an error",
+          "Configurable nickname and translation colors; displays the player name or hero name"
+        ],
+        "install": [
+          "Place `chat_translator.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Scripts → Scripts → Chat Translator` and enable the script.",
+          "Choose a translation direction; customize colors in the gear menu. MyMemory is opt-in."
+        ]
+      }
     }
   ]
 }
