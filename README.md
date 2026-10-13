@@ -396,7 +396,6 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Russian Roulette](scripts/russian_roulette) | 0 | `russian-roulette-v1.0.0` |
 | [MoM Swapper](scripts/mom_swapper) | 0 | `mom-swapper-v1.0.0` |
 | [Botle Abuse](scripts/botle) | 0 | `botle-abuse-v1.0.0` |
-| [Action Recorder](scripts/action_recorder) | 1 | `action-recorder-v1.0.0` |
 | [Io Overcharge](scripts/io_overcharge) | 0 | `io-overcharge-v1.0.0` |
 | [Arc Warden Utilities](scripts/arc_warden_utilities) | 0 | `arc-warden-utilities-v1.0.0` |
 | [Back Cast](scripts/backwards_cast) | 0 | `backwards-cast-v1.0.0` |
@@ -466,6 +465,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Enemy Cooldowns](scripts/enemy_cooldowns) | 0 | `enemy-cooldowns-v1.0.0` |
 | [Can Teleport Out](scripts/can_teleport_out) | 0 | `can-teleport-out-v1.0.0` |
 | [Auto Courier Gem](scripts/auto_courier_gem) | 0 | `auto-courier-gem-v1.0.0` |
+| [Camp Stacker](scripts/stacker) | 0 | `camp-stacker-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

@@ -3,9 +3,13 @@
 стак кемпов героями, иллюзиями и подконтрольными юнитами / stacks camps with heroes, illusions, and controlled units
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `stacker.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/stacker/stacker.lua)
+Скачать: [stacker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/camp-stacker-v1.0.0/stacker.lua) — `camp-stacker-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=camp-stacker&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`camp-stacker-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/camp-stacker-v1.0.0) | 2026-10-13 | [stacker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/camp-stacker-v1.0.0/stacker.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=camp-stacker&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

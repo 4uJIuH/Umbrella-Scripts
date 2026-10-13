@@ -3,13 +3,9 @@
 записывает и воспроизводит действия игрока / records and replays player actions
 
 <!-- releases:start -->
-Скачать: [action_recorder.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/action-recorder-v1.0.0/action_recorder.lua) — `action-recorder-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `action_recorder.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/action_recorder/action_recorder.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`action-recorder-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/action-recorder-v1.0.0) | 2026-10-13 | [action_recorder.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/action-recorder-v1.0.0/action_recorder.lua) | 1 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=action-recorder&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=action-recorder&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
