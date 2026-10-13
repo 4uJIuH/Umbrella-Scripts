@@ -3,10 +3,11 @@
 каталог скриптов Umbrella с установкой и обновлениями / an Umbrella script catalog with script installation and updates
 
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.2/script_manager.lua) — `script-manager-v2.0.2`, 2026-10-13
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.3/script_manager.lua) — `script-manager-v2.0.3`, 2026-10-13
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
+| [`script-manager-v2.0.3`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.3) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.3/script_manager.lua) | 0 |
 | [`script-manager-v2.0.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.2) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.2/script_manager.lua) | 0 |
 | [`script-manager-v2.0.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.1) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.1/script_manager.lua) | 0 |
 | [`script-manager-v2.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.0) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.0/script_manager.lua) | 2 |
@@ -49,6 +50,10 @@ Script Manager объединяет каталог скриптов в отде�
 4. Откройте `Scripts → Scripts → Script Manager`, включите его и назначьте клавишу для открытия панели.
 
 ## Что нового
+
+# Обновление v2.0.3
+
+- Установка многофайловых пакетов теперь продолжает работу, если папка `lib` уже создана; это позволяет обойти запрет запуска shell-команд в Lua-рантайме.
 
 # Обновление v2.0.2
 

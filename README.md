@@ -183,7 +183,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 4 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 5 | `script-manager-v2.0.2` |
+| [Script Manager](scripts/script_manager) | 5 | `script-manager-v2.0.3` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
