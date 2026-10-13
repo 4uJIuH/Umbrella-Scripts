@@ -559,7 +559,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.0.5"
+local VERSION = "2.1.0"
 
 local K = {
 	CFG = "script_market",
@@ -1894,11 +1894,22 @@ end
 
 local view = {}
 
+local function list_key()
+	return tostring(S.nav) .. ":" .. tostring(S.hero) .. ":" .. tostring(S.query)
+end
+
 function view.go(name, sel)
+	if S.view == "list" and name == "detail" then
+		S.back_scroll = { key = list_key(), y = S.scroll_to }
+	end
+	local restore = 0
+	if name == "list" and S.view == "detail" and S.back_scroll and S.back_scroll.key == list_key() then
+		restore = S.back_scroll.y
+	end
 	S.view, S.sel, S.confirm, S.sort_open, S.menu = name, sel or S.sel, nil, false, nil
 	S.rows = {}
-	S.scroll, S.scroll_to = 0, 0
-	anim.snap("scroll", 0)
+	S.scroll, S.scroll_to = restore, restore
+	anim.snap("scroll", restore)
 end
 
 function view.nav_item(x, y, w, id, label, glyph, count, badge)
@@ -2056,9 +2067,28 @@ function view.end_scroll(content_h)
 	local ax, ay, aw, ah = S.area[1], S.area[2], S.area[3], S.area[4]
 	local track = ah - 36
 	local thumb = math.max(32, track * S.view_h / content_h)
-	local top = ay + 8 + (track - thumb) * clamp(S.scroll / max_scroll, 0, 1)
-	local sa = anim.tween("scrollbar", S.now - S.scroll_t < 0.9 and 1 or 0, 0.2)
-	if sa > 0.01 then g.rect(ax + aw - 8, top, 4, thumb, T.white, 2, 0.22 * sa) end
+	local span = math.max(1, track - thumb)
+	local top = ay + 8 + span * clamp(S.scroll / max_scroll, 0, 1)
+	local hot = hit.is("sb") or hit.is("sb_thumb") or S.sb_drag ~= nil
+	local sa = anim.tween("scrollbar", (hot or S.now - S.scroll_t < 0.9) and 1 or 0, 0.2)
+	local wide = anim.tween("scrollbar_w", hot and 1 or 0, 0.15)
+	if sa > 0.01 then
+		g.rect(ax + aw - 12, ay + 8, 10, track, T.white, 5, 0.06 * wide * sa)
+		local bw = 4 + 2 * wide
+		g.rect(ax + aw - 4 - bw, top, bw, thumb, T.white, bw / 2, (0.22 + 0.2 * wide) * sa)
+	end
+	hit.add(ax + aw - 16, ay + 8, 16, track, "sb", { down = function(mx, my)
+		local rel = (my - g.y) / g.s - ay - 8 - thumb / 2
+		local v = clamp(rel / span, 0, 1) * max_scroll
+		S.scroll_to = v
+		anim.snap("scroll", v)
+		S.sb_drag = { my = my, scroll = v, k = max_scroll / span }
+		S.scroll_t = S.now
+	end })
+	hit.add(ax + aw - 16, top, 16, thumb, "sb_thumb", { down = function(mx, my)
+		S.sb_drag = { my = my, scroll = S.scroll, k = max_scroll / span }
+		S.scroll_t = S.now
+	end })
 end
 
 function view.search(x, y, w)
@@ -2834,7 +2864,7 @@ function input.end_drag()
 		save("wy", math.floor(S.wy))
 	end
 	if S.resize then save("scale", S.scale) end
-	S.drag, S.resize, S.q_drag = nil, nil, false
+	S.drag, S.resize, S.q_drag, S.sb_drag = nil, nil, false, nil
 end
 
 function input.key(key)
@@ -2887,6 +2917,13 @@ function script.OnFrame()
 		S.wx, S.wy = S.drag.wx + mx - S.drag.mx, S.drag.wy + my - S.drag.my
 	end
 	if S.q_drag then S.qc = edit.index_at(mx) end
+	if S.sb_drag then
+		local d = S.sb_drag
+		local v = clamp(d.scroll + (my - d.my) / g.s * d.k, 0, math.max(0, S.content_h - S.view_h))
+		S.scroll_to = v
+		anim.snap("scroll", v)
+		S.scroll_t = S.now
+	end
 	if S.resize then
 		local r = S.resize
 		S.scale = clamp(math.floor(r.scale * (r.w + mx - r.mx) / r.w + 0.5), K.SCALE_MIN, K.SCALE_MAX)

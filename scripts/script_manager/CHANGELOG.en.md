@@ -1,3 +1,8 @@
+# Update v2.1.0
+
+- The scrollbar now responds to clicks and dragging: drag the thumb or click the track to jump to a position. It becomes wider and brighter on hover or while dragging, and stays highlighted while in use. Mouse-wheel scrolling is unchanged.
+- Opening a script card now saves the list position. Back and Esc restore it; positions are kept separately for each category, selected hero, and search query. Opening a different category or hero starts at the top.
+
 # Update v2.0.5
 
 - Multi-file installs support `filters/filter_*_cached.txt` filter files and create the `scripts/filters` folder.
