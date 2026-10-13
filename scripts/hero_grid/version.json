@@ -1,20 +1,20 @@
 {
   "version": "1.0.0",
-  "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hero_grid/hero_grid.lua",
+  "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/61bc57ec3cdac7700297e93cdc0bdce3fa04ef2d/scripts/hero_grid/hero_grid.lua",
   "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/hero-grid-v1.0.0/hero_grid.lua",
-  "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hero_grid/hero_grid.lua",
+  "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/61bc57ec3cdac7700297e93cdc0bdce3fa04ef2d/scripts/hero_grid/hero_grid.lua",
   "files": [
     {
       "path": "code_geas.json",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hero_grid/code_geas.json"
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/61bc57ec3cdac7700297e93cdc0bdce3fa04ef2d/scripts/hero_grid/code_geas.json"
     },
     {
       "path": "shiffer.json",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hero_grid/shiffer.json"
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/61bc57ec3cdac7700297e93cdc0bdce3fa04ef2d/scripts/hero_grid/shiffer.json"
     },
     {
       "path": "shizuku.json",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hero_grid/shizuku.json"
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/61bc57ec3cdac7700297e93cdc0bdce3fa04ef2d/scripts/hero_grid/shizuku.json"
     }
   ]
 }
