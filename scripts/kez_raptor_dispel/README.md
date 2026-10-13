@@ -3,9 +3,13 @@
 использует Kazurai Katana для частого диспела через Raptor Dance / uses Kazurai Katana for repeated Raptor Dance dispels
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `kez_raptor_dispel.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/kez_raptor_dispel/kez_raptor_dispel.lua)
+Скачать: [kez_raptor_dispel.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/kez-raptor-dispel-v1.0.0/kez_raptor_dispel.lua) — `kez-raptor-dispel-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=kez-raptor-dispel&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`kez-raptor-dispel-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/kez-raptor-dispel-v1.0.0) | 2026-10-13 | [kez_raptor_dispel.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/kez-raptor-dispel-v1.0.0/kez_raptor_dispel.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=kez-raptor-dispel&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

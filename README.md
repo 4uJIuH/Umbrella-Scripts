@@ -341,6 +341,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Nyx Assassin Auto Burrow](scripts/nyx_auto_burrow) | 0 | `nyx-auto-burrow-v1.0.0` |
 | [Dawnbreaker Solar Guardian Auto-Save Helper](scripts/dawnbreaker_solar_guardian) | 0 | `dawnbreaker-solar-guardian-v1.0.0` |
 | [Dota 1x6 Pack](scripts/dota1x6_pack) | 0 | `dota-1x6-pack-v1.0.0` |
+| [Kez Raptor Dance Dispel](scripts/kez_raptor_dispel) | 0 | `kez-raptor-dispel-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
