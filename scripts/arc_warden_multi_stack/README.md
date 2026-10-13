@@ -3,13 +3,9 @@
 автоматически стакует несколько лагерей на Arc Warden / automatically stacks multiple camps with Arc Warden
 
 <!-- releases:start -->
-Скачать: [arc_warden_multi_stack.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-multi-stack-v1.0.0/arc_warden_multi_stack.lua) — `arc-warden-multi-stack-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `arc_warden_multi_stack.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_multi_stack/arc_warden_multi_stack.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`arc-warden-multi-stack-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/arc-warden-multi-stack-v1.0.0) | 2026-10-13 | [arc_warden_multi_stack.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-multi-stack-v1.0.0/arc_warden_multi_stack.lua) | 0 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-multi-stack&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-multi-stack&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

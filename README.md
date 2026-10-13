@@ -412,7 +412,6 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Tinker Helper](scripts/tinker_helper) | 0 | `tinker-helper-v1.0.0` |
 | [Old HUD](scripts/old_hud) | 0 | `old-hud-v1.0.0` |
 | [Illusion Tracker](scripts/illusion_tracker) | 0 | `illusion-tracker-v1.0.0` |
-| [Arc Warden Multi Stack](scripts/arc_warden_multi_stack) | 0 | `arc-warden-multi-stack-v1.0.0` |
 | [Map Chat Troll](scripts/maptroll) | 0 | `maptroll-v1.0.0` |
 | [Creep Aggro](scripts/creep_aggro) | 0 | `creep-aggro-v1.0.0` |
 | [Nyx Assassin Auto Burrow](scripts/nyx_auto_burrow) | 0 | `nyx-auto-burrow-v1.0.0` |
@@ -466,6 +465,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Auto-Ruin](scripts/auto_ruin) | 0 | `auto-ruin-v1.0.0` |
 | [Broodmother Helper](scripts/broodmother_helper) | 0 | `broodmother-helper-v2.1` |
 | [Script Market](scripts/market) | 0 | `market-v1.0.0` |
+| [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) | 0 | `mmr-tracker-ultimate-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
