@@ -265,6 +265,9 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Io Overcharge](scripts/io_overcharge) | 0 | `io-overcharge-v1.0.0` |
 | [Arc Warden Utilities](scripts/arc_warden_utilities) | 0 | `arc-warden-utilities-v1.0.0` |
 | [Back Cast](scripts/backwards_cast) | 0 | `backwards-cast-v1.0.0` |
+| [Forge Spirit Farm (Beta)](scripts/forge_spirit_farm_beta) | 0 | `forge-spirit-farm-beta-v0.1.0-beta.1` |
+| [Selection Camera](scripts/selection_camera) | 0 | `selection-camera-v1.1.0` |
+| [Spirit Breaker Combo & Ghoul 1000-7](scripts/spirit_breaker_bara) | 0 | `spirit-breaker-bara-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

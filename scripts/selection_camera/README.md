@@ -3,9 +3,13 @@
 переносит камеру к выбранному юниту или группе / moves the camera to the selected unit or group
 
 <!-- releases:start -->
-Последняя версия: [`v1.1.0` — `selection_camera.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/selection_camera/selection_camera.lua)
+Скачать: [selection_camera.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/selection-camera-v1.1.0/selection_camera.lua) — `selection-camera-v1.1.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=selection-camera&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`selection-camera-v1.1.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/selection-camera-v1.1.0) | 2026-10-13 | [selection_camera.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/selection-camera-v1.1.0/selection_camera.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=selection-camera&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

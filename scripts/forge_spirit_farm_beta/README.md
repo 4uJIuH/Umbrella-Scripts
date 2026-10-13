@@ -3,9 +3,13 @@
 бета-автофарм и стаки на Forge Spirits / beta Forge Spirit farming and camp stacking
 
 <!-- releases:start -->
-Последняя версия: [`v0.1.0-beta.1` — `forge_spirit_farm.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/forge_spirit_farm_beta/forge_spirit_farm.lua)
+Скачать: [forge_spirit_farm.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/forge-spirit-farm-beta-v0.1.0-beta.1/forge_spirit_farm.lua) — `forge-spirit-farm-beta-v0.1.0-beta.1`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=forge-spirit-farm-beta&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`forge-spirit-farm-beta-v0.1.0-beta.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/forge-spirit-farm-beta-v0.1.0-beta.1) | 2026-10-13 | [forge_spirit_farm.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/forge-spirit-farm-beta-v0.1.0-beta.1/forge_spirit_farm.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=forge-spirit-farm-beta&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
