@@ -1,0 +1,85 @@
+name: discord-sync
+
+on:
+  schedule:
+    - cron: "*/20 * * * *"
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Optional configured script ID, for example tinker_turret_dodge"
+        required: false
+        type: string
+      dry_run:
+        description: "Show proposed updates without creating PRs or saving state"
+        required: false
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pull-requests: write
+  models: read
+
+concurrency:
+  group: discord-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scan Discord topics
+        id: scan
+        continue-on-error: true
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
+          ONLY: ${{ inputs.only }}
+          DRY_RUN: ${{ inputs.dry_run || false }}
+        run: |
+          args=()
+          if [ -n "$ONLY" ]; then args+=(--only "$ONLY"); fi
+          if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          python .github/discord_sync.py "${args[@]}"
+
+      - name: Save sync baseline
+        if: always() && (github.event_name != 'workflow_dispatch' || inputs.dry_run != true)
+        env:
+          DRY_RUN: ${{ inputs.dry_run || false }}
+        run: |
+          if [ ! -f .github/sync_state.json ]; then
+            echo "No sync baseline to save."
+            exit 0
+          fi
+          git add .github/sync_state.json
+          if ! git diff --cached --quiet -- .github/sync_state.json; then
+            git config user.name umbrella-sync
+            git config user.email sync@users.noreply.github.com
+            git commit -m "sync: update Discord topic baselines"
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then
+                break
+              fi
+              if [ "$attempt" -eq 5 ]; then
+                echo "Failed to push sync state after 5 attempts" >&2
+                exit 1
+              fi
+              sleep "$attempt"
+            done
+          fi
+
+      - name: Report scan errors
+        if: steps.scan.outcome == 'failure'
+        run: |
+          echo "Discord sync encountered errors; see the scan logs above." >&2
+          exit 1

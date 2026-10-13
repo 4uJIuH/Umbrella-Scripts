@@ -435,6 +435,7 @@
       "kind": "lua",
       "category": "deadlock",
       "file": "Dorman.lua",
+      "version_marker": "NONE",
       "needs_q_localizer": true,
       "initial": {
         "version": "1.0.0",
@@ -485,6 +486,7 @@
       "kind": "lua",
       "category": "deadlock",
       "file": "Rem_Assistant.lua",
+      "version_marker": "NONE",
       "needs_q_localizer": true,
       "initial": {
         "version": "1.0.0",
@@ -545,6 +547,7 @@
       "kind": "lua",
       "category": "deadlock",
       "file": "VaultTunnelESP.lua",
+      "version_marker": "NONE",
       "initial": {
         "version": "1.0.0",
         "date": "2026-10-11",
@@ -586,6 +589,7 @@
       "kind": "lua",
       "category": "auxiliary",
       "file": "!_qLocalizer.lua",
+      "version_marker": "NONE",
       "initial": {
         "version": "1.0.0",
         "date": "2026-10-11",
