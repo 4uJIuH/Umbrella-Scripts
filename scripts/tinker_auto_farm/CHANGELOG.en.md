@@ -1,3 +1,7 @@
+**update v1.0.4**
+
+- Script Manager now installs `Tinker.lua` and the files in `lib` automatically; manual installation from the ZIP remains available.
+
 **update v1.0.3**
 
 - Added a 3-second window after respawn: the camp is not declared empty due to a check at the exact moment the creeps spawn. Waiting at the safe spot ends at the nearest check after respawn.

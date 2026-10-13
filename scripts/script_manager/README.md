@@ -33,6 +33,7 @@ Script Manager объединяет каталог скриптов в отде�
 - Ищет скрипты и сортирует каталог, установленные файлы и доступные обновления
 - Автоматически проверяет каталог при запуске; проверку можно повторить вручную или настроить периодичность
 - Устанавливает и обновляет отдельные скрипты, создавая резервную копию заменяемого файла
+- Устанавливает многофайловые Lua-пакеты и создает необходимые подпапки
 - Устанавливает `!_qLocalizer.lua`, если он нужен выбранному скрипту и ещё не установлен
 - Показывает ZIP-пакеты для скачивания и ручной распаковки
 - Позволяет менять тему, акцентный цвет и поведение перезапуска после установки
@@ -47,6 +48,11 @@ Script Manager объединяет каталог скриптов в отде�
 4. Откройте `Scripts → Scripts → Script Manager`, включите его и назначьте клавишу для открытия панели.
 
 ## Что нового
+
+# Обновление v2.0.2
+
+- Добавлена установка многофайловых Lua-пакетов; Tinker Auto Farm устанавливается кнопкой вместе с папкой `lib`.
+- Ссылки на ZIP сохранены для обратной совместимости со старыми версиями менеджера.
 
 # Обновление v2.0.1
 
@@ -78,6 +84,7 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 - Searches and sorts the catalog, installed files, and available updates
 - Checks the catalog on startup, with manual refresh and configurable recheck intervals
 - Installs and updates individual scripts while keeping a backup of replaced files
+- Installs multi-file Lua packages and creates their required subfolders
 - Installs `!_qLocalizer.lua` when a selected script requires it and it is missing
 - Lists ZIP packages for download and manual extraction
 - Lets users change the theme, accent color, and post-install restart behavior
@@ -92,6 +99,11 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 4. Open `Scripts → Scripts → Script Manager`, enable it, and assign a key to open the panel.
 
 ## Changelog
+
+# Update v2.0.2
+
+- Added multi-file Lua package installation; Tinker Auto Farm is installed with its `lib` folder using the Install button.
+- ZIP links remain available for compatibility with older manager versions.
 
 # Update v2.0.1
 

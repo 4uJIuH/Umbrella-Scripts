@@ -26,10 +26,9 @@
 
 ## Установка
 
-1. Скачайте и распакуйте `Tinker-Auto-Farm.zip`.
-2. Поместите `Tinker.lua` и папку `lib` в `umbrella\scripts`.
-3. Перезагрузите Lua-скрипты.
-4. Откройте настройки: `Scripts → Scripts → Tinker`.
+**Через Script Manager 2.0.2 и новее:** нажмите «Установить» — `Tinker.lua` и все файлы из `lib` будут установлены автоматически.
+
+**Вручную:** скачайте и распакуйте `Tinker-Auto-Farm.zip`, поместите `Tinker.lua` и папку `lib` в `umbrella\scripts`, затем перезагрузите Lua-скрипты и откройте настройки `Scripts → Scripts → Tinker`.
 
 ## Что нового
 
@@ -60,10 +59,9 @@ A script for automatic farming on Tinker. Supports jungle, lane, and safe-lane-u
 
 ## Install
 
-1. Download and extract `Tinker-Auto-Farm.zip`.
-2. Place `Tinker.lua` and the `lib` folder in `umbrella\scripts`.
-3. Reload the Lua scripts.
-4. Open settings: `Scripts → Scripts → Tinker`.
+**With Script Manager 2.0.2 or newer:** click Install; `Tinker.lua` and every file in `lib` are installed automatically.
+
+**Manually:** download and extract `Tinker-Auto-Farm.zip`, place `Tinker.lua` and the `lib` folder in `umbrella\scripts`, then reload the Lua scripts and open `Scripts → Scripts → Tinker`.
 
 ## Changelog
 

@@ -399,7 +399,7 @@ end
 local function logline() end
 local function tlog() end
 
-local VERSION = "1.0.3"
+local VERSION = "1.0.4"
 
 local K = {
     MARCH_LEN       = 1800, MARCH_HALFWIDTH = 900, MARCH_CAST_RANGE = 300,

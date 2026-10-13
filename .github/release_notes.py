@@ -114,6 +114,9 @@ def write_manager_catalog():
             "needs_q_localizer": script.get("needs_q_localizer", False),
             "author": script.get("author") or REPO.split("/", 1)[0],
         }
+        if version.get("install_url") and version.get("files"):
+            item["install_url"] = version["install_url"]
+            item["files"] = version["files"]
         if script.get("heroes"):
             item["heroes"] = script["heroes"]
         if script.get("version_marker") in ("SCRIPT_VERSION", "NONE"):
@@ -145,6 +148,26 @@ def write_manifest(script, tag, sha):
                "https://raw.githubusercontent.com/%s/%s/%s" % (REPO, sha, source_path),
         "release": release_url,
     }
+    if "package" in script:
+        package_dir = BASE / "scripts" / script["id"] / script["package"]
+        raw_base = "https://raw.githubusercontent.com/%s/%s/" % (REPO, sha)
+        data["install_url"] = raw_base + source_path
+        files = sorted(path for path in (package_dir / "lib").glob("*.lua") if path.is_file())
+        if not files:
+            raise SystemExit("package has no Lua files in lib: %s" % package_dir)
+        if len(files) > 64 or any(
+            not re.fullmatch(r"lib/[A-Za-z0-9_-]+\.lua",
+                             path.relative_to(package_dir).as_posix())
+            for path in files
+        ):
+            raise SystemExit("package contains unsupported library paths: %s" % package_dir)
+        data["files"] = [
+            {
+                "path": path.relative_to(package_dir).as_posix(),
+                "url": raw_base + path.relative_to(BASE).as_posix(),
+            }
+            for path in files
+        ]
     path = manifest_path(script)
     path.write_text(json.dumps(data, indent=2) + NL, encoding="utf-8", newline=NL)
     print("%s -> %s" % (path.relative_to(BASE).as_posix(), version))

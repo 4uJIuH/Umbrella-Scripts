@@ -1,3 +1,9 @@
+# Update v2.0.2
+
+- Added multi-file Lua package installation; Tinker Auto Farm is installed with its `lib` folder using the Install button.
+- The catalog retains its ZIP URL for older manager versions while updated managers use direct package file URLs.
+- Failed downloads do not install partial packages; files are restored if writing the package fails.
+
 # Update v2.0.1
 
 - Added But3rflys scripts and their latest releases, with author attribution in catalog cards.

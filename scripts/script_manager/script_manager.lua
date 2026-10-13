@@ -403,6 +403,7 @@ local localization = qLocalization.new({
 		sm_e_url = "Address is not trusted",
 		sm_e_valid = "Downloaded file failed validation",
 		sm_e_write = "Could not write the file",
+		sm_e_folder = "Could not create the package folder",
 		sm_e_nlz = "qLocalization is missing in the catalog",
 		sm_e_net = "No answer from the server",
 		sm_e_parse = "Catalog could not be read",
@@ -519,6 +520,7 @@ local localization = qLocalization.new({
 		sm_e_url = "Адрес не из доверенных",
 		sm_e_valid = "Скачанный файл не прошел проверку",
 		sm_e_write = "Не удалось записать файл",
+		sm_e_folder = "Не удалось создать папку пакета",
 		sm_e_nlz = "В каталоге нет qLocalization",
 		sm_e_net = "Сервер не ответил",
 		sm_e_parse = "Не удалось прочитать каталог",
@@ -557,7 +559,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.0.1"
+local VERSION = "2.0.2"
 
 local K = {
 	CFG = "script_market",
@@ -1150,6 +1152,16 @@ function fs.write(path, text)
 	return ok ~= nil and closed ~= nil
 end
 
+function fs.ensure_dir(path)
+	if type(path) ~= "string" or type(os.execute) ~= "function"
+		or path:find('[%%!%^&|<>"]') or path:find("[%z\r\n]") then
+		return false
+	end
+	local command = 'if not exist "' .. path .. '\\." mkdir "' .. path .. '" >nul 2>nul'
+	local called, result, reason, code = pcall(os.execute, command)
+	return called and (result == true or result == 0 or (reason == "exit" and code == 0))
+end
+
 function fs.save(path, text)
 	local old = fs.read(path)
 	local backup = path .. ".script-manager.bak"
@@ -1161,6 +1173,45 @@ function fs.save(path, text)
 	os.remove(temp)
 	if old then fs.write(path, old) end
 	return false
+end
+
+function fs.save_package(dir, files)
+	local previous = {}
+	local needs_lib = false
+	for _, file in ipairs(files) do
+		if type(file) ~= "table" or type(file.path) ~= "string" or type(file.body) ~= "string" then
+			return false, "sm_e_valid"
+		end
+		if file.path:match("^lib/[%w_%-]+%.lua$") then
+			needs_lib = true
+		elseif file.path ~= file.name or type(file.name) ~= "string"
+			or not file.name:match("^[%w%._%- ]+%.lua$") then
+			return false, "sm_e_valid"
+		end
+	end
+	if needs_lib and not fs.ensure_dir(dir .. "lib") then return false, "sm_e_folder" end
+	for _, file in ipairs(files) do
+		previous[file.path] = fs.read(dir .. file.path:gsub("/", "\\"))
+	end
+
+	local saved = {}
+	for _, file in ipairs(files) do
+		local path = dir .. file.path:gsub("/", "\\")
+		if not fs.save(path, file.body) then
+			for i = #saved, 1, -1 do
+				local saved_file = saved[i]
+				local saved_path = dir .. saved_file.path:gsub("/", "\\")
+				if previous[saved_file.path] then
+					fs.write(saved_path, previous[saved_file.path])
+				else
+					os.remove(saved_path)
+				end
+			end
+			return false, "sm_e_write"
+		end
+		saved[#saved + 1] = file
+	end
+	return true
 end
 
 local web = {}
@@ -1315,6 +1366,10 @@ function market.hero_name(id)
 	return name
 end
 
+function market.package_path(path)
+	return type(path) == "string" and path:match("^lib/[%w_%-]+%.lua$") ~= nil
+end
+
 function market.build(catalog, meta)
 	local described = {}
 	if meta and type(meta.scripts) == "table" then
@@ -1330,18 +1385,42 @@ function market.build(catalog, meta)
 	for id in pairs(BY_ID) do BY_ID[id] = nil end
 
 	for i, e in ipairs(catalog.scripts) do
-		local file = type(e) == "table" and type(e.url) == "string" and e.url:match("([^/?]+)$") or ""
+		local package_files, package_valid = {}, true
+		local package_seen = {}
+		if type(e) == "table" and e.files ~= nil then
+			if type(e.files) ~= "table" or #e.files == 0 or #e.files > 64 then
+				package_valid = false
+			else
+				for _, entry in ipairs(e.files) do
+					if type(entry) ~= "table" or not market.package_path(entry.path)
+						or not web.trusted(entry.url) or package_seen[entry.path] then
+						package_valid = false
+						break
+					end
+					package_seen[entry.path] = true
+					package_files[#package_files + 1] = { path = entry.path, url = entry.url }
+				end
+			end
+		end
+		local package_file = type(e) == "table" and type(e.install_url) == "string"
+			and e.install_url:match("([^/?]+)$") or ""
+		local package_install = type(e) == "table" and package_valid and #package_files > 0
+			and package_file:match("%.lua$") ~= nil and web.trusted(e.install_url)
+		if not package_install then package_files = {} end
+		local install_url = package_install and e.install_url or type(e) == "table" and e.url or nil
+		local file = type(install_url) == "string" and install_url:match("([^/?]+)$") or ""
 		local ext = file:match("^[%w%._%- ]+%.(%a+)$")
 		ext = type(ext) == "string" and ext:lower() or ""
-		if type(e) == "table" and type(e.id) == "string" and ver.valid(e.version) and web.trusted(e.url)
+		if type(e) == "table" and type(e.id) == "string" and ver.valid(e.version) and web.trusted(install_url)
 			and (ext == "lua" or ext == "zip" or ext == "rar") then
 			local m = described[e.id] or {}
 			local ru, en = m.ru or {}, m.en or {}
 			local style = STYLE[e.id] or { "\u{f1c9}", PAL[PAL_ORDER[(i - 1) % #PAL_ORDER + 1]] }
 			local item = {
-				id = e.id, order = i, latest = e.version, url = e.url,
+				id = e.id, order = i, latest = e.version, url = install_url,
 				release = web.trusted(e.release) and e.release or nil,
-				manual = e.manual == true, nlz = e.needs_q_localizer == true,
+				manual = e.manual == true and #package_files == 0, files = package_files,
+				nlz = e.needs_q_localizer == true,
 				version_marker = e.version_marker == "SCRIPT_VERSION" and "SCRIPT_VERSION"
 					or e.version_marker == "NONE" and "NONE" or "VERSION",
 				title = type(m.title) == "string" and m.title or text.humanize(e.id),
@@ -1475,7 +1554,7 @@ end
 
 function market.download(s, done)
 	local urls = { s.url }
-	if s.release and s.release ~= s.url then urls[2] = s.release end
+	if #s.files == 0 and s.release and s.release ~= s.url then urls[2] = s.release end
 
 	local function try(i, prev_key, prev_detail)
 		if not urls[i] then return done(nil, prev_key or "sm_e_net", prev_detail) end
@@ -1502,6 +1581,24 @@ function market.download(s, done)
 	try(1)
 end
 
+function market.download_files(s, done)
+	local downloaded = {}
+	local function next_file(index)
+		if index > #s.files then return done(downloaded) end
+		local file = s.files[index]
+		if not web.trusted(file.url) or not market.package_path(file.path) then
+			return done(nil, "sm_e_valid")
+		end
+		web.get(file.url, function(body, key, detail)
+			if not body then return done(nil, key, detail) end
+			if #body < 100 or body:sub(1, 1) == "<" then return done(nil, "sm_e_valid") end
+			downloaded[#downloaded + 1] = { path = file.path, body = body }
+			next_file(index + 1)
+		end)
+	end
+	next_file(1)
+end
+
 function market.run(id)
 	local s = BY_ID[id]
 	if not s or S.busy[id] then return end
@@ -1513,17 +1610,32 @@ function market.run(id)
 	local function fetch()
 		market.download(s, function(body, key, detail)
 			if not body then return market.fail(s, key, detail) end
-			if not fs.save(dir .. s.file, body) then return market.fail(s, "sm_e_write") end
-			if not s.manual and s.version_marker == "NONE" then
-				Config.WriteString(K.CFG, "installed_" .. s.id, s.latest)
+			local function finish(files, file_key, file_detail)
+				if not files then return market.fail(s, file_key or "sm_e_net", file_detail) end
+				local function complete()
+					if not s.manual and s.version_marker == "NONE" then
+						Config.WriteString(K.CFG, "installed_" .. s.id, s.latest)
+					end
+					S.busy[id] = nil
+					market.scan()
+					if s.manual then
+						market.note("sm_manual_t", string.format(L("sm_manual_msg"), s.file))
+					else
+						market.applied(s.title)
+					end
+				end
+				if #s.files == 0 then
+					if not fs.save(dir .. s.file, body) then return market.fail(s, "sm_e_write") end
+					return complete()
+				end
+				local package = { { path = s.file, name = s.file, body = body } }
+				for _, file in ipairs(files) do package[#package + 1] = file end
+				local saved, err = fs.save_package(dir, package)
+				if not saved then return market.fail(s, err or "sm_e_write") end
+				return complete()
 			end
-			S.busy[id] = nil
-			market.scan()
-			if s.manual then
-				market.note("sm_manual_t", string.format(L("sm_manual_msg"), s.file))
-			else
-				market.applied(s.title)
-			end
+			if #s.files == 0 then return finish({}) end
+			market.download_files(s, finish)
 		end)
 	end
 
