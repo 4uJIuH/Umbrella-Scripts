@@ -1361,6 +1361,212 @@
           "Open `Scripts → General → Utility → Anti-Rubick → Spell Cover`."
         ]
       }
+    },
+    {
+      "id": "arc_warden_blocker",
+      "tag": "arc-warden-blocker",
+      "title": "Arc Warden Blocker",
+      "kind": "lua",
+      "category": "dota",
+      "file": "arc_warden_blocker.lua",
+      "author": "sataroz (Discord: sataroz)",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-blocker&expanded=true",
+      "heroes": [
+        "arc_warden"
+      ],
+      "needs_q_localizer": false,
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_blocker/arc_warden_blocker.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-blocker-v1.0.0/arc_warden_blocker.lua"
+      },
+      "ru": {
+        "tagline": "перехватывает хук Пуджа и перекат Earth Spirit копией Arc Warden",
+        "about": "Arc Warden Blocker использует Tempest Double, чтобы перехватить хук Пуджа, летящий в вас или союзника, а также перекат Earth Spirit. Скрипт активен только при игре на Arc Warden и наличии соответствующего героя у противника. Автор скрипта: sataroz (Discord: sataroz). Встроенная библиотека qLocalization: qfun (qfun_g9s).",
+        "features": [
+          "Перехватывает хуки Пуджа копией на траектории или перемещением уже призванного клона",
+          "Позволяет включить спасение союзников и выбрать приоритет цели",
+          "Настраивает реакцию на перекат Earth Spirit: перехват, уклонение или оба варианта",
+          "Отключает фоновые проверки, если вы не играете на Arc Warden или у противника нет Pudge/Earth Spirit"
+        ],
+        "install": [
+          "Поместите `arc_warden_blocker.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Heroes → Hero List → Arc Warden → Анти-Хук и Анти-Ролл`."
+        ]
+      },
+      "en": {
+        "tagline": "uses Arc Warden's clone to intercept Pudge hooks and Earth Spirit rolls",
+        "about": "Arc Warden Blocker uses Tempest Double to intercept Pudge hooks aimed at you or an ally, as well as Earth Spirit rolls. It is active only when you are playing Arc Warden and the relevant enemy hero is present. Script author: sataroz (Discord: sataroz). Bundled qLocalization library by qfun (qfun_g9s).",
+        "features": [
+          "Intercepts Pudge hooks by placing a clone on their path or moving an existing clone",
+          "Can intercept hooks aimed at allies and lets you configure target priority",
+          "Configures the response to Earth Spirit's roll: intercept, evade, or both",
+          "Skips background checks unless you are Arc Warden and the enemy has Pudge or Earth Spirit"
+        ],
+        "install": [
+          "Place `arc_warden_blocker.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Heroes → Hero List → Arc Warden → Anti-Hook and Anti-Roll`."
+        ]
+      }
+    },
+    {
+      "id": "invoker_combo_switcher",
+      "tag": "invoker-combo-switcher",
+      "title": "Invoker Combo Switcher",
+      "kind": "lua",
+      "category": "dota",
+      "file": "invoker_combo_switcher.lua",
+      "author": "sataroz (Discord: sataroz)",
+      "source_url": "https://discord.com/channels/408315082439917578/1552723029195231313/1553726296117346374",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=invoker-combo-switcher&expanded=true",
+      "heroes": [
+        "invoker"
+      ],
+      "needs_q_localizer": false,
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_combo_switcher/invoker_combo_switcher.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-combo-switcher-v1.0.0/invoker_combo_switcher.lua"
+      },
+      "ru": {
+        "tagline": "переключает пресеты комбо Инвокера двумя клавишами",
+        "about": "Позволяет листать слоты комбо-билдера Инвокера клавишами «Вперёд» и «Назад», без кликов по панели и отдельных кнопок для каждого слота. Автор: sataroz (Discord: sataroz).",
+        "features": [
+          "Переключение слотов вперёд и назад; по умолчанию назначены стрелки вправо и влево",
+          "Автоповтор при удержании с настраиваемыми задержкой и скоростью",
+          "Зацикливание списка между последним слотом и Dynamic (D)"
+        ],
+        "install": [
+          "Поместите `invoker_combo_switcher.lua` в `umbrella\\scripts`.",
+          "Перезагрузите скрипты клавишей F7.",
+          "Откройте `Heroes → Hero List → Invoker → Panels Settings → Combo Switch Binds`.",
+          "Назначьте клавиши Next Combo Key и Prev Combo Key."
+        ]
+      },
+      "en": {
+        "tagline": "switches Invoker combo presets with two hotkeys",
+        "about": "Scrolls through Invoker Combo Builder slots with Next and Previous keys, without clicking the panel or assigning a separate key to every slot. Author: sataroz (Discord: sataroz).",
+        "features": [
+          "Moves forward and backward through slots; Right and Left Arrow are the defaults",
+          "Supports hold-to-scroll with configurable start delay and repeat speed",
+          "Can loop between the last slot and Dynamic (D)"
+        ],
+        "install": [
+          "Place `invoker_combo_switcher.lua` in `umbrella\\scripts`.",
+          "Reload scripts with F7.",
+          "Open `Heroes → Hero List → Invoker → Panels Settings → Combo Switch Binds`.",
+          "Set the Next Combo Key and Prev Combo Key."
+        ]
+      }
+    },
+    {
+      "id": "magnus_skewer_ally",
+      "tag": "magnus-skewer-ally",
+      "title": "Magnus Skewer Ally",
+      "kind": "lua",
+      "category": "dota",
+      "file": "magnus_skewer_ally.lua",
+      "author": "sataroz (Discord: sataroz)",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=magnus-skewer-ally&expanded=true",
+      "heroes": [
+        "magnataur"
+      ],
+      "needs_q_localizer": false,
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/magnus_skewer_ally/magnus_skewer_ally.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/magnus-skewer-ally-v1.0.0/magnus_skewer_ally.lua"
+      },
+      "ru": {
+        "tagline": "направляет Skewer в выбранного союзника во встроенном комбо",
+        "about": "Перехватывает Skewer во встроенном комбо Магнуса и направляет врага к выбранному союзнику. Если союзник погибает, комбо может вернуться к стандартному направлению на базу. Автор скрипта: sataroz (Discord: sataroz). Встроенная библиотека qLocalization: qfun (qfun_g9s).",
+        "features": [
+          "Выбор союзника из списка или фиксация цели биндом Lock Ally",
+          "Линия и статус дальности Skewer при наведении на врага",
+          "Показывает, хватает ли дальности, и сообщает недостающее расстояние",
+          "Может переключиться на стандартное комбо, если выбранный союзник погиб"
+        ],
+        "install": [
+          "Поместите `magnus_skewer_ally.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Heroes → Magnus → Main Settings → Skewer Combo Settings`.",
+          "Включите Skewer To Ally и выберите союзника."
+        ]
+      },
+      "en": {
+        "tagline": "redirects the built-in Magnus combo's Skewer towards an ally",
+        "about": "Intercepts Skewer in Magnus's built-in combo and sends the enemy towards a selected ally. If that ally dies, the combo can fall back to its default direction towards base. Script author: sataroz (Discord: sataroz). Bundled qLocalization library by qfun (qfun_g9s).",
+        "features": [
+          "Select an ally from the list or lock one with the Lock Ally bind",
+          "Draws a line and range status while hovering over an enemy",
+          "Shows whether Skewer is in range and how much distance is missing",
+          "Can fall back to the standard combo if the selected ally dies"
+        ],
+        "install": [
+          "Place `magnus_skewer_ally.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Heroes → Magnus → Main Settings → Skewer Combo Settings`.",
+          "Enable Skewer To Ally and select an ally."
+        ]
+      }
+    },
+    {
+      "id": "better_better_techies_combo",
+      "tag": "better-better-techies-combo",
+      "title": "Better Better Techies Combo",
+      "kind": "lua",
+      "category": "dota",
+      "file": "better_better_techies_combo.lua",
+      "author": "sataroz (Discord: sataroz)",
+      "source_url": "https://discord.com/users/875683534147321858",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=better-better-techies-combo&expanded=true",
+      "heroes": [
+        "techies"
+      ],
+      "needs_q_localizer": false,
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/better_better_techies_combo/better_better_techies_combo.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/better-better-techies-combo-v1.0.0/better_better_techies_combo.lua"
+      },
+      "ru": {
+        "tagline": "комбо на Techies с двумя режимами и автоматическим отходом",
+        "about": "Better Better Techies Combo начинает комбо с Blast Off и ставит мины в полёте; автор рекомендует нажимать Blast Off вручную. Скрипт проверяет препятствия, включая деревья и Sprout, предлагает режимы «Агрессивный» и «Макс. урон», а после завершения комбо может блинкануться на фонтан или к союзнику. Бета-версия, функциональность может меняться. Основа скрипта другого автора (Discord ID 875683534147321858) переработана sataroz и публикуется с разрешения. Встроенная библиотека qLocalization: qfun (qfun_g9s).",
+        "features": [
+          "Начинает комбо с Blast Off и ставит мины во время полёта",
+          "Проверяет деревья и Sprout, чтобы избежать постановки мин в препятствия",
+          "Режим «Агрессивный» использует Hex раньше; «Макс. урон» продлевает контроль после стана",
+          "После нанесения урона может переместиться на фонтан или к выбранному союзнику"
+        ],
+        "install": [
+          "Поместите `better_better_techies_combo.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Heroes → Hero List → Techies → Better Better Techies Combo` и включите скрипт.",
+          "Наведитесь на противника и зажмите настроенный бинд комбо."
+        ]
+      },
+      "en": {
+        "tagline": "a Techies combo with two modes and an automatic disengage",
+        "about": "Better Better Techies Combo starts with Blast Off and places mines during flight; the author recommends casting Blast Off manually. It checks obstacles, including trees and Sprout, offers Aggressive and Max Damage modes, and can Blink to the fountain or an ally after the combo. Beta software; behavior may change. The script is based on another author's work (Discord ID 875683534147321858), revised by sataroz and published with permission. Bundled qLocalization library by qfun (qfun_g9s).",
+        "features": [
+          "Starts the combo with Blast Off and places mines while in flight",
+          "Checks trees and Sprout to avoid placing mines into obstacles",
+          "Aggressive mode uses Hex earlier; Max Damage extends control after the stun",
+          "After dealing damage, can move to the fountain or a selected ally"
+        ],
+        "install": [
+          "Place `better_better_techies_combo.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Heroes → Hero List → Techies → Better Better Techies Combo` and enable it.",
+          "Hover over an enemy and hold the configured combo bind."
+        ]
+      }
     }
   ]
 }

@@ -229,6 +229,54 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u2694LegaXye\u79aa (Discord: legaxye)"
+    },
+    {
+      "id": "arc_warden_blocker",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-blocker-v1.0.0/arc_warden_blocker.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-blocker-v1.0.0/arc_warden_blocker.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "sataroz (Discord: sataroz)",
+      "heroes": [
+        "arc_warden"
+      ]
+    },
+    {
+      "id": "invoker_combo_switcher",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-combo-switcher-v1.0.0/invoker_combo_switcher.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-combo-switcher-v1.0.0/invoker_combo_switcher.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "sataroz (Discord: sataroz)",
+      "heroes": [
+        "invoker"
+      ]
+    },
+    {
+      "id": "magnus_skewer_ally",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/magnus-skewer-ally-v1.0.0/magnus_skewer_ally.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/magnus-skewer-ally-v1.0.0/magnus_skewer_ally.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "sataroz (Discord: sataroz)",
+      "heroes": [
+        "magnataur"
+      ]
+    },
+    {
+      "id": "better_better_techies_combo",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/better-better-techies-combo-v1.0.0/better_better_techies_combo.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/better-better-techies-combo-v1.0.0/better_better_techies_combo.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "sataroz (Discord: sataroz)",
+      "heroes": [
+        "techies"
+      ]
     }
   ]
 }
