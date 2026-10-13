@@ -462,7 +462,7 @@
     {
       "id": "phoenix_smartnova",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/phoenix_smartnova/smartnova.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/94093709f27eb4deabffe5699c7c190f66f0ae00/scripts/phoenix_smartnova/smartnova.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/phoenix-smartnova-v1.0.0/smartnova.lua",
       "manual": false,
       "needs_q_localizer": false,
