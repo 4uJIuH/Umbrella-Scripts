@@ -203,7 +203,7 @@
     {
       "id": "bloodrage_autocast",
       "version": "1.0.0",
-      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/bloodrage-autocast-v1.0.0/bloodrage.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/38d4dee7eb3659ff605ac7525a6fdbec59d951a8/scripts/bloodrage_autocast/bloodrage.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/bloodrage-autocast-v1.0.0/bloodrage.lua",
       "manual": false,
       "needs_q_localizer": false,
