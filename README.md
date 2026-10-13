@@ -305,6 +305,8 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [1000-7 Counter](scripts/ghoul_counter) | 0 | `ghoul-counter-v1.0.0` |
 | [Old Last Match](scripts/old_last_match) | 0 | `old-last-match-v1.0.0` |
 | [Unusual Secret](scripts/unusual_secret) | 0 | `unusual-secret-v2.1.0` |
+| [Atmospheric Fog Restorer](scripts/atmospheric_fog) | 0 | `atmospheric-fog-v1.0.0` |
+| [Windranger Powershot Killsteal](scripts/windranger_powershot) | 0 | `windranger-powershot-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

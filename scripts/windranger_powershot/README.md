@@ -3,9 +3,13 @@
 автоматически добивает врагов Powershot, когда урона достаточно / automatically kill secures with Powershot when its damage is lethal
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `Windranger.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_powershot/Windranger.lua)
+Скачать: [Windranger.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/windranger-powershot-v1.0.0/Windranger.lua) — `windranger-powershot-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=windranger-powershot&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`windranger-powershot-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/windranger-powershot-v1.0.0) | 2026-10-13 | [Windranger.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/windranger-powershot-v1.0.0/Windranger.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=windranger-powershot&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
