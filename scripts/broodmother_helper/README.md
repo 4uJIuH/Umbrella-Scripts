@@ -3,9 +3,13 @@
 автоконтроль, преследование и фарм пауков Broodmother / Broodmother spider control, chasing, and farming
 
 <!-- releases:start -->
-Последняя версия: [`v2.1` — `broodmother_helper.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/broodmother_helper/broodmother_helper.lua)
+Скачать: [broodmother_helper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/broodmother-helper-v2.1/broodmother_helper.lua) — `broodmother-helper-v2.1`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=broodmother-helper&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`broodmother-helper-v2.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/broodmother-helper-v2.1) | 2026-10-13 | [broodmother_helper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/broodmother-helper-v2.1/broodmother_helper.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=broodmother-helper&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

@@ -3,13 +3,9 @@
 перехватывает хук Пуджа и перекат Earth Spirit копией Arc Warden / uses Arc Warden's clone to intercept Pudge hooks and Earth Spirit rolls
 
 <!-- releases:start -->
-Скачать: [arc_warden_blocker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-blocker-v1.0.0/arc_warden_blocker.lua) — `arc-warden-blocker-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `arc_warden_blocker.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_blocker/arc_warden_blocker.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`arc-warden-blocker-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/arc-warden-blocker-v1.0.0) | 2026-10-13 | [arc_warden_blocker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-blocker-v1.0.0/arc_warden_blocker.lua) | 1 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-blocker&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-blocker&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -26,13 +22,6 @@ Arc Warden Blocker использует Tempest Double, чтобы перехв�
 1. Поместите `arc_warden_blocker.lua` в `umbrella\scripts`.
 2. Перезагрузите Lua-скрипты.
 3. Откройте `Heroes → Hero List → Arc Warden → Анти-Хук и Анти-Ролл`.
-
-## Что нового
-
-# 1.0.0
-
-- Первый релиз Arc Warden Blocker.
-- Добавлена защита от хуков Пуджа и переката Earth Spirit с помощью Tempest Double.
 
 ---
 
@@ -52,10 +41,3 @@ Arc Warden Blocker uses Tempest Double to intercept Pudge hooks aimed at you or 
 1. Place `arc_warden_blocker.lua` in `umbrella\scripts`.
 2. Reload the Lua scripts.
 3. Open `Heroes → Hero List → Arc Warden → Anti-Hook and Anti-Roll`.
-
-## Changelog
-
-# 1.0.0
-
-- Initial Arc Warden Blocker release.
-- Added Tempest Double interception for Pudge hooks and Earth Spirit rolls.
