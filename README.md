@@ -66,6 +66,23 @@
 - [Invoker Jarvis](scripts/invoker_jarvis) — голосовой помощник для Invoker
 - [TikTok](scripts/umbrella_tiktok) — встроенный просмотрщик TikTok
 - [Invoker AutoStack](scripts/invoker_autostack) — автоматически стакает кемпы Tornado за Invoker
+- [Old Last Match](scripts/old_last_match) — возвращает старый экран последнего матча в главное меню
+- [Achievements](scripts/achievements) — достижения и прогресс по истории матчей и событиям игры
+- [Unusual Secret](scripts/unusual_secret) — позволяет применять эффекты к разным частям модели героя
+- [Atmospheric Fog Restorer](scripts/atmospheric_fog) — возвращает атмосферный туман в игре
+- [Windranger Powershot Killsteal](scripts/windranger_powershot) — автоматически добивает врагов Powershot, когда урона достаточно
+- [MoM Sabre Abuse](scripts/mom_sabre_abuse) — автоматизирует ручной или автоматический абуз MoM и Sabre
+- [Tinker 1x6 Farm](scripts/tinker_1x6_farm) — автофарм кемпов и волн крипов с подбором сфер
+- [Forge Spirit Helper](scripts/forge_spirit_helper) — автоматически вызывает форжей и помогает пережить опасные ситуации
+- [Gank Threat](scripts/gank_threat) — оценивает угрозу ганка и время подхода врагов
+- [Tinker Helper](scripts/tinker_helper) — набор функций для фарма и автоматизации на Тинкере
+- [Counter Items](scripts/counter_items) — подсказывает контр-предметы против героев и их покупок
+- [Old HUD](scripts/old_hud) — возвращает старый вариант HUD до аспектов
+- [Illusion Tracker](scripts/illusion_tracker) — отслеживает иллюзии и показывает назначенные им бинды
+- [Arc Warden Clone Safe Me](scripts/arc_warden_clone_safe_me) — командует клону Arc Warden спасать настоящего героя
+- [Arc Warden Multi Stack](scripts/arc_warden_multi_stack) — автоматически стакует несколько лагерей на Arc Warden
+- [Map Chat Troll](scripts/maptroll) — рисует текст на миникарте вручную или по таймеру
+- [Creep Aggro](scripts/creep_aggro) — помогает переагривать крипов клавишей и подконтрольными юнитами
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -179,6 +196,23 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Invoker Jarvis](scripts/invoker_jarvis) — voice assistant for Invoker
 - [TikTok](scripts/umbrella_tiktok) — an embedded TikTok viewer
 - [Invoker AutoStack](scripts/invoker_autostack) — automatically stacks camps with Invoker's Tornado
+- [Old Last Match](scripts/old_last_match) — restores the old last-match screen in the main menu
+- [Achievements](scripts/achievements) — achievements and progress from match history and live game events
+- [Unusual Secret](scripts/unusual_secret) — attaches selected effects to different parts of a hero model
+- [Atmospheric Fog Restorer](scripts/atmospheric_fog) — restores atmospheric fog in the game
+- [Windranger Powershot Killsteal](scripts/windranger_powershot) — automatically kill secures with Powershot when its damage is lethal
+- [MoM Sabre Abuse](scripts/mom_sabre_abuse) — automates manual or automatic Mask of Madness and Echo Sabre abuse
+- [Tinker 1x6 Farm](scripts/tinker_1x6_farm) — farms camps and creep waves while collecting upgrade orbs
+- [Forge Spirit Helper](scripts/forge_spirit_helper) — automatically summons Forge Spirits and reacts to selected threats
+- [Gank Threat](scripts/gank_threat) — estimates gank danger and enemy arrival times
+- [Tinker Helper](scripts/tinker_helper) — a collection of farming and automation features for Tinker
+- [Counter Items](scripts/counter_items) — recommends counter-items against enemy heroes and their purchases
+- [Old HUD](scripts/old_hud) — restores a pre-aspect version of the HUD
+- [Illusion Tracker](scripts/illusion_tracker) — tracks illusions and displays their assigned control groups
+- [Arc Warden Clone Safe Me](scripts/arc_warden_clone_safe_me) — orders Arc Warden's clone to save the real hero
+- [Arc Warden Multi Stack](scripts/arc_warden_multi_stack) — automatically stacks multiple camps with Arc Warden
+- [Map Chat Troll](scripts/maptroll) — draws text on the minimap manually or on a timer
+- [Creep Aggro](scripts/creep_aggro) — helps manipulate creep aggro with a key and controlled units
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -239,7 +273,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 5 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 10 | `script-manager-v2.0.5` |
+| [Script Manager](scripts/script_manager) | 13 | `script-manager-v2.0.5` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
@@ -269,6 +303,8 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Selection Camera](scripts/selection_camera) | 0 | `selection-camera-v1.1.0` |
 | [Spirit Breaker Combo & Ghoul 1000-7](scripts/spirit_breaker_bara) | 0 | `spirit-breaker-bara-v1.0.0` |
 | [1000-7 Counter](scripts/ghoul_counter) | 0 | `ghoul-counter-v1.0.0` |
+| [Old Last Match](scripts/old_last_match) | 0 | `old-last-match-v1.0.0` |
+| [Unusual Secret](scripts/unusual_secret) | 0 | `unusual-secret-v2.1.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
