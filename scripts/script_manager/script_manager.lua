@@ -559,7 +559,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.0.2"
+local VERSION = "2.0.3"
 
 local K = {
 	CFG = "script_market",
@@ -1153,10 +1153,11 @@ function fs.write(path, text)
 end
 
 function fs.ensure_dir(path)
-	if type(path) ~= "string" or type(os.execute) ~= "function"
-		or path:find('[%%!%^&|<>"]') or path:find("[%z\r\n]") then
+	if type(path) ~= "string" or path:find('[%%!%^&|<>"]') or path:find("[%z\r\n]") then
 		return false
 	end
+	if os.rename(path, path) then return true end
+	if type(os.execute) ~= "function" then return false end
 	local command = 'if not exist "' .. path .. '\\." mkdir "' .. path .. '" >nul 2>nul'
 	local called, result, reason, code = pcall(os.execute, command)
 	return called and (result == true or result == 0 or (reason == "exit" and code == 0))

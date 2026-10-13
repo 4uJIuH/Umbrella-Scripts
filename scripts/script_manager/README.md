@@ -102,6 +102,10 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 
 ## Changelog
 
+# Update v2.0.3
+
+- Multi-file package installation now proceeds when the `lib` folder already exists, avoiding shell commands when the Lua runtime blocks them.
+
 # Update v2.0.2
 
 - Added multi-file Lua package installation; Tinker Auto Farm is installed with its `lib` folder using the Install button.
