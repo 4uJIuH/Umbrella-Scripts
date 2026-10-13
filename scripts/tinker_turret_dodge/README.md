@@ -3,13 +3,9 @@
 автоматический додж опасных способностей турелями Тинкера / automatically dodges dangerous abilities with Tinker turrets
 
 <!-- releases:start -->
-Скачать: [tinker_turret_dodge.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-turret-dodge-v1.1.5/tinker_turret_dodge.lua) — `tinker-turret-dodge-v1.1.5`, 2026-10-12
+Последняя версия: [`v1.1.3` — `tinker_turret_dodge.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_dodge/tinker_turret_dodge.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`tinker-turret-dodge-v1.1.5`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/tinker-turret-dodge-v1.1.5) | 2026-10-12 | [tinker_turret_dodge.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-turret-dodge-v1.1.5/tinker_turret_dodge.lua) | 1 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=tinker-turret-dodge&expanded=true)
+[Релизы на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=tinker-turret-dodge&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -28,16 +24,6 @@ Lua-скрипт для автоматической постановки тур
 4. Откройте настройки: `General → Tinker Turret Dodge`.
 
 Примечание: GitHub скачивает библиотеку как `_qLocalizer.lua`; переименуй её в `!_qLocalizer.lua` перед загрузкой Lua-скриптов.
-
-## Что нового
-
-**Обновление v1.1.5**
-
-- Добавлен додж способности Monkey King `Boundless Strike` с проверкой пересечения линии удара с героем.
-- Добавлен додж способности Hoodwink `Bushwhack`.
-- Добавлен додж второго навыка Marci (`marci_companion_run`; название подтверждено игровыми данными).
-- Добавлен додж способности Ogre Magi `Fireblast`.
-- Добавлен додж способности Riki `Smoke Screen`.
 
 ---
 
@@ -59,13 +45,3 @@ Tinker Turret Dodge is a Lua script for automatically placing Tinker turrets aga
 4. Open settings: `General → Tinker Turret Dodge`.
 
 Note: GitHub downloads the library as `_qLocalizer.lua`; rename it to `!_qLocalizer.lua` before loading Lua scripts.
-
-## Changelog
-
-**Update v1.1.5**
-
-- Added dodge support for Monkey King's `Boundless Strike`, including a check that the strike line intersects the hero.
-- Added dodge support for Hoodwink's `Bushwhack`.
-- Added dodge support for Marci's second ability (`marci_companion_run`; the name was confirmed using in-game data).
-- Added dodge support for Ogre Magi's `Fireblast`.
-- Added dodge support for Riki's `Smoke Screen`.
