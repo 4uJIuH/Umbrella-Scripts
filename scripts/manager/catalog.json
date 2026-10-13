@@ -1350,7 +1350,7 @@
     {
       "id": "control_ally",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/control_ally/control_ally.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/36f1fb66d0168cd17cc480fca62b5dbc52a8aac5/scripts/control_ally/control_ally.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/control-ally-v1.0.0/control_ally.lua",
       "manual": false,
       "needs_q_localizer": false,
