@@ -1466,7 +1466,7 @@
     {
       "id": "broodmother_helper",
       "version": "2.1",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/broodmother_helper/broodmother_helper.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/154c85c8354fcda176c23ac75a30a68ea6752fc8/scripts/broodmother_helper/broodmother_helper.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/broodmother-helper-v2.1/broodmother_helper.lua",
       "manual": false,
       "needs_q_localizer": false,
