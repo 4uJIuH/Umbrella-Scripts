@@ -1479,7 +1479,7 @@
     {
       "id": "market",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/market/market.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/d7fd962276224563dcb3be5fc764a1cb6b7396c6/scripts/market/market.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/market-v1.0.0/market.lua",
       "manual": false,
       "needs_q_localizer": false,
