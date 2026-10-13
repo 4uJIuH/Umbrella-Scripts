@@ -3,13 +3,9 @@
 возвращает атмосферный туман в игре / restores atmospheric fog in the game
 
 <!-- releases:start -->
-Скачать: [atmospheric_fog.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/atmospheric-fog-v1.0.0/atmospheric_fog.lua) — `atmospheric-fog-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `atmospheric_fog.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/atmospheric_fog/atmospheric_fog.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`atmospheric-fog-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/atmospheric-fog-v1.0.0) | 2026-10-13 | [atmospheric_fog.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/atmospheric-fog-v1.0.0/atmospheric_fog.lua) | 0 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=atmospheric-fog&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=atmospheric-fog&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
