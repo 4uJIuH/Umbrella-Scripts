@@ -1456,7 +1456,7 @@
     {
       "id": "auto_ruin",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/auto_ruin/auto_ruin.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/2b476b340e4a12d0f7b1df7cca41094c4a572990/scripts/auto_ruin/auto_ruin.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-ruin-v1.0.0/auto_ruin.lua",
       "manual": false,
       "needs_q_localizer": false,
