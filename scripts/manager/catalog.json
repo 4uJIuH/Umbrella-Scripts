@@ -1290,7 +1290,7 @@
     {
       "id": "team_maphack",
       "version": "1.0.0",
-      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/team-maphack-v1.0.0/team_maphack.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/56c07695203c9915e6b82d07864149de5fcf3f7c/scripts/team_maphack/team_maphack.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/team-maphack-v1.0.0/team_maphack.lua",
       "manual": false,
       "needs_q_localizer": false,
