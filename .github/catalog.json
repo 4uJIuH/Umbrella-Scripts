@@ -3058,6 +3058,769 @@
           "Configure the controls under Invoker."
         ]
       }
+    },
+    {
+      "id": "old_last_match",
+      "tag": "old-last-match",
+      "title": "Old Last Match",
+      "kind": "lua",
+      "category": "dota",
+      "file": "old_match.lua",
+      "author": "Axis (Discord: ykromanka2)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/old_last_match",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=old-last-match&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/old_last_match/old_match.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/old-last-match-v1.0.0/old_match.lua"
+      },
+      "ru": {
+        "tagline": "возвращает старый экран последнего матча в главное меню",
+        "about": "Меняет фон главного меню с текущего события на экран последнего матча.",
+        "features": [
+          "Включается в General → Visuals → Old Last Match",
+          "Не требует дополнительных библиотек"
+        ],
+        "install": [
+          "Поместите `old_match.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Включите настройку в General → Visuals → Old Last Match."
+        ]
+      },
+      "en": {
+        "tagline": "restores the old last-match screen in the main menu",
+        "about": "Replaces the current event background on the main menu with the last-match screen.",
+        "features": [
+          "Toggle it under General → Visuals → Old Last Match",
+          "No additional libraries required"
+        ],
+        "install": [
+          "Place `old_match.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Enable General → Visuals → Old Last Match."
+        ]
+      }
+    },
+    {
+      "id": "achievements",
+      "tag": "achievements",
+      "title": "Achievements",
+      "kind": "lua",
+      "category": "dota",
+      "file": "achievements.lua",
+      "author": "! 666 (Discord: isee2p)",
+      "author_github": "iseetwop",
+      "source_url": "https://github.com/iseetwop/achievements",
+      "version_marker": "NONE",
+      "manual": true,
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/iseetwop/achievements/92655a35189923606ef3485a113f04bcd20fd3b1/scripts/achievements.lua",
+        "release": "https://github.com/iseetwop/achievements"
+      },
+      "ru": {
+        "tagline": "достижения и прогресс по истории матчей и событиям игры",
+        "about": "Бета-скрипт с достижениями в стиле Steam. Авторский репозиторий содержит актуальный исходник и обязательную библиотеку `ulib`.",
+        "features": [
+          "65 достижений и 143 ступени прогресса",
+          "Загружает историю матчей через OpenDota и следит за событиями текущей игры",
+          "Хранит отдельный прогресс для каждого аккаунта"
+        ],
+        "install": [
+          "Скачайте `scripts/achievements.lua` и папку `ulib` из <a href=\"https://github.com/iseetwop/achievements\" target=\"_blank\" rel=\"noopener\">репозитория автора</a>.",
+          "Поместите Lua-файл в `umbrella\\scripts`, а содержимое `ulib` — в `umbrella\\scripts\\ulib`.",
+          "Откройте данные матчей Dota и перезагрузите Lua-скрипты.",
+          "Настройки: General → Achievements. Для некоторых игровых событий нужны небезопасные функции чита."
+        ]
+      },
+      "en": {
+        "tagline": "achievements and progress from match history and live game events",
+        "about": "A beta Steam-style achievement tracker. The author's repository provides the current source and the required `ulib` library.",
+        "features": [
+          "65 achievements with 143 progression stages",
+          "Loads match history through OpenDota and tracks events during live games",
+          "Keeps separate progress for each account"
+        ],
+        "install": [
+          "Download `scripts/achievements.lua` and the `ulib` folder from the <a href=\"https://github.com/iseetwop/achievements\" target=\"_blank\" rel=\"noopener\">author's repository</a>.",
+          "Place the Lua file in `umbrella\\scripts` and `ulib` in `umbrella\\scripts\\ulib`.",
+          "Enable public Dota match data and reload the Lua scripts.",
+          "Settings: General → Achievements. Some game events require unsafe cheat functions."
+        ]
+      }
+    },
+    {
+      "id": "unusual_secret",
+      "tag": "unusual-secret",
+      "title": "Unusual Secret",
+      "kind": "lua",
+      "category": "dota",
+      "file": "Unusual_Secret.lua",
+      "author": "мяучу одной (Discord: psyterror.ru)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/unusual_secret",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=unusual-secret&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "2.1.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/unusual_secret/Unusual_Secret.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/unusual-secret-v2.1.0/Unusual_Secret.lua"
+      },
+      "ru": {
+        "tagline": "позволяет применять эффекты к разным частям модели героя",
+        "about": "Меняет точку привязки некоторых эффектов на части тела героя. Это косметический скрипт; список поддерживаемых эффектов задаётся исходником.",
+        "features": [
+          "Выбор эффекта и части модели",
+          "Версия исходника содержит собственное меню настроек"
+        ],
+        "install": [
+          "Поместите `Unusual_Secret.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты и найдите настройки в разделе визуальных скриптов."
+        ]
+      },
+      "en": {
+        "tagline": "attaches selected effects to different parts of a hero model",
+        "about": "Changes the attachment point of supported effects to parts of a hero model. This is a cosmetic script; the supported effects are defined in its source.",
+        "features": [
+          "Select an effect and a model attachment point",
+          "The source includes its own settings menu"
+        ],
+        "install": [
+          "Place `Unusual_Secret.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts and find its settings under visual scripts."
+        ]
+      }
+    },
+    {
+      "id": "atmospheric_fog",
+      "tag": "atmospheric-fog",
+      "title": "Atmospheric Fog Restorer",
+      "kind": "lua",
+      "category": "dota",
+      "file": "atmospheric_fog.lua",
+      "author": "Голодаю день 1 (Discord: nworddestroyer)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/atmospheric_fog",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=atmospheric-fog&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/atmospheric_fog/atmospheric_fog.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/atmospheric-fog-v1.0.0/atmospheric_fog.lua"
+      },
+      "ru": {
+        "tagline": "возвращает атмосферный туман в игре",
+        "about": "Повторно применяет настройки атмосферного тумана, отключённого Umbrella.",
+        "features": [
+          "Автоматически восстанавливает туман с заданным интервалом",
+          "Не требует дополнительных библиотек"
+        ],
+        "install": [
+          "Поместите `atmospheric_fog.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты."
+        ]
+      },
+      "en": {
+        "tagline": "restores atmospheric fog in the game",
+        "about": "Reapplies atmospheric fog settings that were disabled by Umbrella.",
+        "features": [
+          "Automatically restores fog at a configured interval",
+          "No additional libraries required"
+        ],
+        "install": [
+          "Place `atmospheric_fog.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts."
+        ]
+      }
+    },
+    {
+      "id": "windranger_powershot",
+      "tag": "windranger-powershot",
+      "title": "Windranger Powershot Killsteal",
+      "kind": "lua",
+      "category": "dota",
+      "file": "Windranger.lua",
+      "heroes": [
+        "windrunner"
+      ],
+      "author": "𝒀𝒆𝒍t (Discord: yelt_ls)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/windranger_powershot",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=windranger-powershot&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_powershot/Windranger.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/windranger-powershot-v1.0.0/Windranger.lua"
+      },
+      "ru": {
+        "tagline": "автоматически добивает врагов Powershot, когда урона достаточно",
+        "about": "Рассчитывает урон второго умения Windranger и запускает Powershot по цели, если прогнозируемого урона хватает для убийства.",
+        "features": [
+          "Учитывает сопротивления, броню, регенерацию, юнитов на линии выстрела и время полёта",
+          "Предсказывает движение цели и пропускает ряд защитных эффектов"
+        ],
+        "install": [
+          "Поместите `Windranger.lua` в `umbrella\\scripts` и перезагрузите Lua-скрипты.",
+          "Настройки находятся во вкладке Windranger."
+        ]
+      },
+      "en": {
+        "tagline": "automatically kill secures with Powershot when its damage is lethal",
+        "about": "Calculates Windranger's second ability damage and casts Powershot when its predicted damage is sufficient to kill the target.",
+        "features": [
+          "Accounts for resistance, armor, regeneration, units in the shot path, and projectile travel time",
+          "Predicts target movement and avoids several protective effects"
+        ],
+        "install": [
+          "Place `Windranger.lua` in `umbrella\\scripts` and reload the Lua scripts.",
+          "Settings are in the Windranger tab."
+        ]
+      }
+    },
+    {
+      "id": "mom_sabre_abuse",
+      "tag": "mom-sabre-abuse",
+      "title": "MoM Sabre Abuse",
+      "kind": "lua",
+      "category": "dota",
+      "file": "mom_sabre_abuse.lua",
+      "author": "cucumberr (Discord: cucumberro)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/mom_sabre_abuse",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=mom-sabre-abuse&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "2.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mom_sabre_abuse/mom_sabre_abuse.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/mom-sabre-abuse-v2.0.0/mom_sabre_abuse.lua"
+      },
+      "ru": {
+        "tagline": "автоматизирует ручной или автоматический абуз MoM и Sabre",
+        "about": "Скрипт для последовательного использования Mask of Madness и Echo Sabre; в описании автора отмечены Muerta и Sven.",
+        "features": [
+          "Ручной и автоматический режимы",
+          "Настройки и бинды находятся в меню скрипта"
+        ],
+        "install": [
+          "Поместите `mom_sabre_abuse.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты и настройте режим в меню скрипта."
+        ]
+      },
+      "en": {
+        "tagline": "automates manual or automatic Mask of Madness and Echo Sabre abuse",
+        "about": "Sequences Mask of Madness and Echo Sabre usage; the author's description mentions Muerta and Sven.",
+        "features": [
+          "Manual and automatic modes",
+          "Configure its options and binds in the script menu"
+        ],
+        "install": [
+          "Place `mom_sabre_abuse.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts and configure the mode in its menu."
+        ]
+      }
+    },
+    {
+      "id": "tinker_1x6_farm",
+      "tag": "tinker-1x6-farm",
+      "title": "Tinker 1x6 Farm",
+      "kind": "lua",
+      "category": "dota",
+      "file": "tinker_1x6_farm.lua",
+      "heroes": [
+        "tinker"
+      ],
+      "author": "креветка (Discord: krevetych_)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/tinker_1x6_farm",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=tinker-1x6-farm&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_1x6_farm/tinker_1x6_farm.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-1x6-farm-v1.0.0/tinker_1x6_farm.lua"
+      },
+      "ru": {
+        "tagline": "автофарм кемпов и волн крипов с подбором сфер",
+        "about": "Автоматизирует фарм на Тинкере: перемещение между точками, фарм лагерей и волн, а также подбор сфер улучшений.",
+        "features": [
+          "Позиции кемпов заданы заранее; пустые лагеря пропускаются",
+          "Учитывает маршрут, препятствия и угрозы от врагов",
+          "Настройки находятся в Heroes → Hero List → Tinker → 1x6 Farm"
+        ],
+        "install": [
+          "Поместите `tinker_1x6_farm.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты и откройте Heroes → Hero List → Tinker → 1x6 Farm."
+        ]
+      },
+      "en": {
+        "tagline": "farms camps and creep waves while collecting upgrade orbs",
+        "about": "Automates Tinker farming with movement between locations, camp and lane farming, and upgrade-orb pickup.",
+        "features": [
+          "Uses predefined camp locations and skips empty camps",
+          "Accounts for routes, obstacles, and nearby enemy threats",
+          "Settings are under Heroes → Hero List → Tinker → 1x6 Farm"
+        ],
+        "install": [
+          "Place `tinker_1x6_farm.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts and open Heroes → Hero List → Tinker → 1x6 Farm."
+        ]
+      }
+    },
+    {
+      "id": "forge_spirit_helper",
+      "tag": "forge-spirit-helper",
+      "title": "Forge Spirit Helper",
+      "kind": "lua",
+      "category": "dota",
+      "file": "ForgeSpiritHelper.lua",
+      "author": "russia.mvd (Discord: russia.mvd)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/forge_spirit_helper",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=forge-spirit-helper&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/forge_spirit_helper/ForgeSpiritHelper.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/forge-spirit-helper-v1.0.0/ForgeSpiritHelper.lua"
+      },
+      "ru": {
+        "tagline": "автоматически вызывает форжей и помогает пережить опасные ситуации",
+        "about": "Помогает с вызовом Forge Spirits и использует подконтрольных юнитов для реакции на отдельные угрозы.",
+        "features": [
+          "Настройки уровня вызова и порога здоровья",
+          "Отдельные переключатели для Bane, Arc Warden и Techies",
+          "Автор предупреждает, что реакция на Techies может работать нестабильно"
+        ],
+        "install": [
+          "Поместите `ForgeSpiritHelper.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты и проверьте настройки перед использованием."
+        ]
+      },
+      "en": {
+        "tagline": "automatically summons Forge Spirits and reacts to selected threats",
+        "about": "Assists with Forge Spirit summoning and uses controlled units to respond to certain threats.",
+        "features": [
+          "Configurable summon level and health threshold",
+          "Separate toggles for Bane, Arc Warden, and Techies",
+          "The author warns that Techies reactions may be unreliable"
+        ],
+        "install": [
+          "Place `ForgeSpiritHelper.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts and review its settings before use."
+        ]
+      }
+    },
+    {
+      "id": "gank_threat",
+      "tag": "gank-threat",
+      "title": "Gank Threat",
+      "kind": "lua",
+      "category": "dota",
+      "file": "gank_threat.lua",
+      "source_file": "gank_threat.lua",
+      "author": "! 666 (Discord: isee2p)",
+      "author_github": "iseetwop",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/gank_threat",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=gank-threat&expanded=true",
+      "version_marker": "NONE",
+      "manual": true,
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/gank_threat/gank_threat.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/gank-threat-v1.0.0/gank_threat.lua"
+      },
+      "ru": {
+        "tagline": "оценивает угрозу ганка и время подхода врагов",
+        "about": "Показывает врагов, которые могут добраться до героя, и примерное время их прибытия. Для работы нужны файлы `ulib`.",
+        "features": [
+          "Предупреждает о телепортации к герою, в том числе из тумана войны",
+          "Показывает ближайших и скрытых врагов с оценкой маршрута и времени",
+          "Файлы `ulib` доступны отдельно в исходниках; сам скрипт скачивается как Lua-файл, не ZIP"
+        ],
+        "install": [
+          "Скачайте `gank_threat.lua` и поместите его в `umbrella\\scripts`.",
+          "Скопируйте папку `ulib` из <a href=\"https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/gank_threat/ulib\" target=\"_blank\" rel=\"noopener\">исходников</a> в `umbrella\\scripts\\ulib`.",
+          "Перезагрузите Lua-скрипты. Настройки: General → Gank Threat."
+        ]
+      },
+      "en": {
+        "tagline": "estimates gank danger and enemy arrival times",
+        "about": "Shows enemies who may reach the hero and estimates how long they could take. The `ulib` files are required.",
+        "features": [
+          "Warns about incoming teleports, including those hidden by fog of war",
+          "Tracks nearby and unseen enemies with route and arrival estimates",
+          "The `ulib` files are linked separately; the script downloads as a Lua file, not a ZIP"
+        ],
+        "install": [
+          "Download `gank_threat.lua` and place it in `umbrella\\scripts`.",
+          "Copy the `ulib` folder from the <a href=\"https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/gank_threat/ulib\" target=\"_blank\" rel=\"noopener\">source files</a> into `umbrella\\scripts\\ulib`.",
+          "Reload the Lua scripts. Settings: General → Gank Threat."
+        ]
+      }
+    },
+    {
+      "id": "tinker_helper",
+      "tag": "tinker-helper",
+      "title": "Tinker Helper",
+      "kind": "lua",
+      "category": "dota",
+      "file": "tinker_helper.lua",
+      "heroes": [
+        "tinker"
+      ],
+      "author": "ебашу в доту (Discord: trikossik)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/tinker_helper",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=tinker-helper&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_helper/tinker_helper.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-helper-v1.0.0/tinker_helper.lua"
+      },
+      "ru": {
+        "tagline": "набор функций для фарма и автоматизации на Тинкере",
+        "about": "Сборный скрипт с автофармом, глиммером, подбором алтаря мудрости и уклонением турелями.",
+        "features": [
+          "Автофарм лесных и линейных крипов",
+          "Автоматические действия с Glimmer Cape и алтарём мудрости",
+          "Включает додж турелями и конфликтует с Tinker Turret Dodge — не используйте их одновременно"
+        ],
+        "install": [
+          "Поместите `tinker_helper.lua` в `umbrella\\scripts` и перезагрузите Lua-скрипты.",
+          "Настройки: Герои → Tinker → Tinker Helper."
+        ]
+      },
+      "en": {
+        "tagline": "a collection of farming and automation features for Tinker",
+        "about": "A bundled script with automatic farming, Glimmer usage, Wisdom Rune pickup, and turret dodging.",
+        "features": [
+          "Automatic jungle and lane creep farming",
+          "Automates selected Glimmer Cape and Wisdom Rune actions",
+          "Includes turret dodging and conflicts with Tinker Turret Dodge; do not run both together"
+        ],
+        "install": [
+          "Place `tinker_helper.lua` in `umbrella\\scripts` and reload the Lua scripts.",
+          "Settings: Heroes → Tinker → Tinker Helper."
+        ]
+      }
+    },
+    {
+      "id": "counter_items",
+      "tag": "counter-items",
+      "title": "Counter Items",
+      "kind": "lua",
+      "category": "dota",
+      "file": "counter_items.lua",
+      "author": "! 666 (Discord: isee2p)",
+      "author_github": "iseetwop",
+      "source_url": "https://github.com/iseetwop/counteritems",
+      "version_marker": "NONE",
+      "manual": true,
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/scripts/counter_items.lua",
+        "release": "https://github.com/iseetwop/counteritems"
+      },
+      "ru": {
+        "tagline": "подсказывает контр-предметы против героев и их покупок",
+        "about": "Анализирует состав и предметы противников и рекомендует контр-предметы. Это неофициальный снимок проекта; за актуальными файлами и библиотекой `ulib` обращайтесь к авторскому репозиторию.",
+        "features": [
+          "Учитывает способности, покупки врагов, героя игрока и предметы союзников",
+          "Советы подстраиваются под роль и статистику OpenDota",
+          "Для установки нужны `scripts/counter_items.lua` и папка `ulib` из репозитория автора"
+        ],
+        "install": [
+          "Скачайте `scripts/counter_items.lua` и `ulib` из <a href=\"https://github.com/iseetwop/counteritems\" target=\"_blank\" rel=\"noopener\">репозитория автора</a>.",
+          "Поместите Lua-файл в `umbrella\\scripts`, а папку `ulib` — в `umbrella\\scripts\\ulib`.",
+          "Перезагрузите Lua-скрипты. Настройки: General → Counter Items."
+        ]
+      },
+      "en": {
+        "tagline": "recommends counter-items against enemy heroes and their purchases",
+        "about": "Analyzes enemy picks and items to suggest counters. This is an unversioned project snapshot; use the author's repository for current files and the required `ulib` library.",
+        "features": [
+          "Considers abilities, enemy purchases, your hero, and allied items",
+          "Adapts recommendations to role and OpenDota statistics",
+          "Installation requires `scripts/counter_items.lua` and the author's `ulib` folder"
+        ],
+        "install": [
+          "Download `scripts/counter_items.lua` and `ulib` from the <a href=\"https://github.com/iseetwop/counteritems\" target=\"_blank\" rel=\"noopener\">author's repository</a>.",
+          "Place the Lua file in `umbrella\\scripts` and `ulib` in `umbrella\\scripts\\ulib`.",
+          "Reload the Lua scripts. Settings: General → Counter Items."
+        ]
+      }
+    },
+    {
+      "id": "old_hud",
+      "tag": "old-hud",
+      "title": "Old HUD",
+      "kind": "lua",
+      "category": "dota",
+      "file": "old_hud.lua",
+      "author": "noptemis (Discord: xxinxiv)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/old_hud",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=old-hud&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/old_hud/old_hud.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/old-hud-v1.0.0/old_hud.lua"
+      },
+      "ru": {
+        "tagline": "возвращает старый вариант HUD до аспектов",
+        "about": "Визуальный скрипт для старого оформления интерфейса игры.",
+        "features": [
+          "Настраивается через вкладку General → Main",
+          "Может отличаться от текущего интерфейса после обновлений Dota"
+        ],
+        "install": [
+          "Поместите `old_hud.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты и проверьте настройки в General → Main."
+        ]
+      },
+      "en": {
+        "tagline": "restores a pre-aspect version of the HUD",
+        "about": "A visual script for an older version of the game's interface.",
+        "features": [
+          "Configured under General → Main",
+          "May differ from the current interface after Dota updates"
+        ],
+        "install": [
+          "Place `old_hud.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts and review its settings under General → Main."
+        ]
+      }
+    },
+    {
+      "id": "illusion_tracker",
+      "tag": "illusion-tracker",
+      "title": "Illusion Tracker",
+      "kind": "lua",
+      "category": "dota",
+      "file": "IllusionTracker.lua",
+      "author": "447 | dasty4ek (Discord: tontotonoki)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/illusion_tracker",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=illusion-tracker&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/illusion_tracker/IllusionTracker.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/illusion-tracker-v1.0.0/IllusionTracker.lua"
+      },
+      "ru": {
+        "tagline": "отслеживает иллюзии и показывает назначенные им бинды",
+        "about": "Определяет появление копий, связывает отдельные иллюзии с группами по выбранным клавишам и рисует метки.",
+        "features": [
+          "Отслеживает появление иллюзий от Manta Style и других источников",
+          "Показывает цветные круги и клавиши групп над юнитами",
+          "Автор предупреждает, что одна настройка в меню не работает"
+        ],
+        "install": [
+          "Поместите `IllusionTracker.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты. Настройки: Основное → IllusionTracker."
+        ]
+      },
+      "en": {
+        "tagline": "tracks illusions and displays their assigned control groups",
+        "about": "Detects spawned copies, associates individual illusions with chosen key groups, and draws indicators.",
+        "features": [
+          "Tracks illusions created by Manta Style and other sources",
+          "Displays colored circles and group keys above units",
+          "The author notes that one menu option does not work"
+        ],
+        "install": [
+          "Place `IllusionTracker.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts. Settings: Main → IllusionTracker."
+        ]
+      }
+    },
+    {
+      "id": "arc_warden_clone_safe_me",
+      "tag": "arc-warden-clone-safe-me",
+      "title": "Arc Warden Clone Safe Me",
+      "kind": "lua",
+      "category": "dota",
+      "file": "arc_warden_clone_safe_me.lua",
+      "heroes": [
+        "arc_warden"
+      ],
+      "author": "Nev1r0Psixx0z (Discord: nev1r0psixx0z)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/arc_warden_clone_safe_me",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-clone-safe-me&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_clone_safe_me/arc_warden_clone_safe_me.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-clone-safe-me-v1.0.0/arc_warden_clone_safe_me.lua"
+      },
+      "ru": {
+        "tagline": "командует клону Arc Warden спасать настоящего героя",
+        "about": "Автоматически использует доступные сейв-предметы клона на основном герое в опасной ситуации. Пока заявлена реакция только на Black Hole.",
+        "features": [
+          "Проверяет предметы клона и применяет доступные способы спасения",
+          "Автор предупреждает о поддержке только Black Hole"
+        ],
+        "install": [
+          "Поместите `arc_warden_clone_safe_me.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты и настройте скрипт в меню."
+        ]
+      },
+      "en": {
+        "tagline": "orders Arc Warden's clone to save the real hero",
+        "about": "Automatically uses the clone's available save items on the main hero in danger. Black Hole is the only threat currently claimed as supported.",
+        "features": [
+          "Checks the clone's items and uses available save options",
+          "The author warns that only Black Hole is supported"
+        ],
+        "install": [
+          "Place `arc_warden_clone_safe_me.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts and configure the script in its menu."
+        ]
+      }
+    },
+    {
+      "id": "arc_warden_multi_stack",
+      "tag": "arc-warden-multi-stack",
+      "title": "Arc Warden Multi Stack",
+      "kind": "lua",
+      "category": "dota",
+      "file": "arc_warden_multi_stack.lua",
+      "heroes": [
+        "arc_warden"
+      ],
+      "author": "Nev1r0Psixx0z (Discord: nev1r0psixx0z)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/arc_warden_multi_stack",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-multi-stack&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_multi_stack/arc_warden_multi_stack.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-multi-stack-v1.0.0/arc_warden_multi_stack.lua"
+      },
+      "ru": {
+        "tagline": "автоматически стакует несколько лагерей на Arc Warden",
+        "about": "Пытается одновременно стаковать несколько кемпов с помощью основного героя и клона.",
+        "features": [
+          "Автор сообщает о стабильной работе на стороне сил Света",
+          "Для запуска нужно нажать клавишу старта три раза",
+          "На стороне сил Тьмы поведение не работает надёжно"
+        ],
+        "install": [
+          "Поместите `arc_warden_multi_stack.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты и изучите бинды перед использованием."
+        ]
+      },
+      "en": {
+        "tagline": "automatically stacks multiple camps with Arc Warden",
+        "about": "Attempts to stack several camps using the main hero and the clone.",
+        "features": [
+          "The author reports reliable behavior on the Radiant side",
+          "Press the start key three times to begin",
+          "Dire-side behavior is reported as unreliable"
+        ],
+        "install": [
+          "Place `arc_warden_multi_stack.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts and review the binds before use."
+        ]
+      }
+    },
+    {
+      "id": "maptroll",
+      "tag": "maptroll",
+      "title": "Map Chat Troll",
+      "kind": "lua",
+      "category": "dota",
+      "file": "maptroll.lua",
+      "author": "kaoru (Discord: hatred_0; attribution unverified)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/maptroll",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=maptroll&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/maptroll/maptroll.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/maptroll-v1.0.0/maptroll.lua"
+      },
+      "ru": {
+        "tagline": "рисует текст на миникарте вручную или по таймеру",
+        "about": "Утилита для отображения текста на миникарте с настраиваемым положением, размером и интервалом.",
+        "features": [
+          "Ручной режим и автоматическая отрисовка рядом с выбранными союзниками",
+          "Настройки размера, координат, задержки и длины сообщения"
+        ],
+        "install": [
+          "Поместите `maptroll.lua` в `umbrella\\scripts` и перезагрузите Lua-скрипты.",
+          "Откройте Scripts → Other → Map Chat Troll."
+        ]
+      },
+      "en": {
+        "tagline": "draws text on the minimap manually or on a timer",
+        "about": "A utility for displaying text on the minimap with configurable position, size, and interval.",
+        "features": [
+          "Manual mode and automatic drawing near selected allies",
+          "Adjustable size, coordinates, delay, and message length"
+        ],
+        "install": [
+          "Place `maptroll.lua` in `umbrella\\scripts` and reload the Lua scripts.",
+          "Open Scripts → Other → Map Chat Troll."
+        ]
+      }
+    },
+    {
+      "id": "creep_aggro",
+      "tag": "creep-aggro",
+      "title": "Creep Aggro",
+      "kind": "lua",
+      "category": "dota",
+      "file": "creep_aggro.lua",
+      "needs_q_localizer": true,
+      "author": "Wahha (Discord: wahha_)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/creep_aggro",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=creep-aggro&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/creep_aggro/creep_aggro.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/creep-aggro-v1.0.0/creep_aggro.lua"
+      },
+      "ru": {
+        "tagline": "помогает переагривать крипов клавишей и подконтрольными юнитами",
+        "about": "Скрипт для управления агром крипов с визуальными индикаторами.",
+        "features": [
+          "Переагр по клавише и через подконтрольных существ",
+          "Настраиваемые радиус, партиклы и индикатор перезарядки",
+          "Поддержка контролируемых юнитов и визуалов ограничена радиусом 3000 от героя"
+        ],
+        "install": [
+          "Поместите `creep_aggro.lua` и <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты. Меню: Creeps / Крипы → Creep Agro."
+        ]
+      },
+      "en": {
+        "tagline": "helps manipulate creep aggro with a key and controlled units",
+        "about": "A creep-aggro helper with visual indicators.",
+        "features": [
+          "Re-aggro with a key or through controlled units",
+          "Configurable radius, particles, and aggro cooldown indicator",
+          "Controlled-unit actions and visuals are limited to 3000 range from the hero"
+        ],
+        "install": [
+          "Place `creep_aggro.lua` and <a href=\"https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua\" target=\"_blank\" rel=\"noopener\"><code>!_qLocalizer.lua</code></a> in `umbrella\\scripts`.",
+          "Reload the Lua scripts. Menu: Creeps → Creep Agro."
+        ]
+      }
     }
   ]
 }

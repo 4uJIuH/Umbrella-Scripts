@@ -731,6 +731,191 @@
         "invoker"
       ],
       "version_marker": "NONE"
+    },
+    {
+      "id": "old_last_match",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/old_last_match/old_match.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/old-last-match-v1.0.0/old_match.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Axis (Discord: ykromanka2)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "achievements",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/iseetwop/achievements/92655a35189923606ef3485a113f04bcd20fd3b1/scripts/achievements.lua",
+      "release": "https://github.com/iseetwop/achievements",
+      "manual": true,
+      "needs_q_localizer": false,
+      "author": "! 666 (Discord: isee2p)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "unusual_secret",
+      "version": "2.1.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/unusual_secret/Unusual_Secret.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/unusual-secret-v2.1.0/Unusual_Secret.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u043c\u044f\u0443\u0447\u0443 \u043e\u0434\u043d\u043e\u0439 (Discord: psyterror.ru)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "atmospheric_fog",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/atmospheric_fog/atmospheric_fog.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/atmospheric-fog-v1.0.0/atmospheric_fog.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u0413\u043e\u043b\u043e\u0434\u0430\u044e \u0434\u0435\u043d\u044c 1 (Discord: nworddestroyer)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "windranger_powershot",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_powershot/Windranger.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/windranger-powershot-v1.0.0/Windranger.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\ud835\udc80\ud835\udc86\ud835\udc8dt (Discord: yelt_ls)",
+      "heroes": [
+        "windrunner"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "mom_sabre_abuse",
+      "version": "2.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mom_sabre_abuse/mom_sabre_abuse.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/mom-sabre-abuse-v2.0.0/mom_sabre_abuse.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "cucumberr (Discord: cucumberro)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "tinker_1x6_farm",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_1x6_farm/tinker_1x6_farm.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-1x6-farm-v1.0.0/tinker_1x6_farm.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u043a\u0440\u0435\u0432\u0435\u0442\u043a\u0430 (Discord: krevetych_)",
+      "heroes": [
+        "tinker"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "forge_spirit_helper",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/forge_spirit_helper/ForgeSpiritHelper.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/forge-spirit-helper-v1.0.0/ForgeSpiritHelper.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "russia.mvd (Discord: russia.mvd)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "gank_threat",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/gank_threat/gank_threat.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/gank-threat-v1.0.0/gank_threat.lua",
+      "manual": true,
+      "needs_q_localizer": false,
+      "author": "! 666 (Discord: isee2p)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "tinker_helper",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_helper/tinker_helper.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-helper-v1.0.0/tinker_helper.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u0435\u0431\u0430\u0448\u0443 \u0432 \u0434\u043e\u0442\u0443 (Discord: trikossik)",
+      "heroes": [
+        "tinker"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "counter_items",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/scripts/counter_items.lua",
+      "release": "https://github.com/iseetwop/counteritems",
+      "manual": true,
+      "needs_q_localizer": false,
+      "author": "! 666 (Discord: isee2p)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "old_hud",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/old_hud/old_hud.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/old-hud-v1.0.0/old_hud.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "noptemis (Discord: xxinxiv)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "illusion_tracker",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/illusion_tracker/IllusionTracker.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/illusion-tracker-v1.0.0/IllusionTracker.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "447 | dasty4ek (Discord: tontotonoki)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "arc_warden_clone_safe_me",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_clone_safe_me/arc_warden_clone_safe_me.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-clone-safe-me-v1.0.0/arc_warden_clone_safe_me.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Nev1r0Psixx0z (Discord: nev1r0psixx0z)",
+      "heroes": [
+        "arc_warden"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "arc_warden_multi_stack",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_multi_stack/arc_warden_multi_stack.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-multi-stack-v1.0.0/arc_warden_multi_stack.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Nev1r0Psixx0z (Discord: nev1r0psixx0z)",
+      "heroes": [
+        "arc_warden"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "maptroll",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/maptroll/maptroll.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/maptroll-v1.0.0/maptroll.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "kaoru (Discord: hatred_0; attribution unverified)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "creep_aggro",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/creep_aggro/creep_aggro.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/creep-aggro-v1.0.0/creep_aggro.lua",
+      "manual": false,
+      "needs_q_localizer": true,
+      "author": "Wahha (Discord: wahha_)",
+      "version_marker": "NONE"
     }
   ]
 }
