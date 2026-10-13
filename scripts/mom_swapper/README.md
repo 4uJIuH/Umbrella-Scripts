@@ -3,9 +3,13 @@
 автоматически или вручную меняет MoM на Echo Sabre или Specialist's Array / swaps MoM with Echo Sabre or Specialist's Array
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `mom_swapper.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mom_swapper/mom_swapper.lua)
+Скачать: [mom_swapper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/mom-swapper-v1.0.0/mom_swapper.lua) — `mom-swapper-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=mom-swapper&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`mom-swapper-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/mom-swapper-v1.0.0) | 2026-10-13 | [mom_swapper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/mom-swapper-v1.0.0/mom_swapper.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=mom-swapper&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

@@ -259,6 +259,8 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [BehaviorScoreHelper](scripts/behavior_score_helper) | 0 | `behavior-score-helper-v1.0.0` |
 | [Disable Tracker](scripts/disable_tracker) | 0 | `disable-tracker-v1.0.0` |
 | [Russian Roulette](scripts/russian_roulette) | 0 | `russian-roulette-v1.0.0` |
+| [MoM Swapper](scripts/mom_swapper) | 0 | `mom-swapper-v1.0.0` |
+| [Botle Abuse](scripts/botle) | 0 | `botle-abuse-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
