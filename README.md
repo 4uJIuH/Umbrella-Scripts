@@ -261,6 +261,8 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Russian Roulette](scripts/russian_roulette) | 0 | `russian-roulette-v1.0.0` |
 | [MoM Swapper](scripts/mom_swapper) | 0 | `mom-swapper-v1.0.0` |
 | [Botle Abuse](scripts/botle) | 0 | `botle-abuse-v1.0.0` |
+| [Action Recorder](scripts/action_recorder) | 0 | `action-recorder-v1.0.0` |
+| [Io Overcharge](scripts/io_overcharge) | 0 | `io-overcharge-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

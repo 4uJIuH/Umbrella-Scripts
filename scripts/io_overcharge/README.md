@@ -3,9 +3,13 @@
 жмёт Overcharge, когда связанный союзник использует ультимейт / casts Overcharge when the tethered ally uses an ultimate
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `io_overcharge.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/io_overcharge/io_overcharge.lua)
+Скачать: [io_overcharge.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/io-overcharge-v1.0.0/io_overcharge.lua) — `io-overcharge-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=io-overcharge&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`io-overcharge-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/io-overcharge-v1.0.0) | 2026-10-13 | [io_overcharge.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/io-overcharge-v1.0.0/io_overcharge.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=io-overcharge&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
