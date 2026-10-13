@@ -559,7 +559,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.0.4"
+local VERSION = "2.0.5"
 
 local K = {
 	CFG = "script_market",
@@ -648,6 +648,7 @@ local STYLE = {
 	hp_mana_67_ping = { "\u{f295}", PAL.red },
 	spirit_bear_pull = { "\u{f0c0}", PAL.cyan },
 	script_manager = { "\u{f0ad}", PAL.gray },
+	behavior_score_helper = { "\u{f164}", PAL.green },
 }
 
 local CAT_ORDER = { "dota", "deadlock", "auxiliary" }
@@ -1179,12 +1180,15 @@ end
 function fs.save_package(dir, files)
 	local previous = {}
 	local needs_lib = false
+	local needs_filters = false
 	for _, file in ipairs(files) do
 		if type(file) ~= "table" or type(file.path) ~= "string" or type(file.body) ~= "string" then
 			return false, "sm_e_valid"
 		end
 		if file.path:match("^lib/[%w_%-]+%.lua$") then
 			needs_lib = true
+		elseif file.path:match("^filters/filter_[%w_%-]+_cached%.txt$") then
+			needs_filters = true
 		elseif file.path:find("..", 1, true)
 			or not (file.path:match("^[%w_%-][%w%._%- ]*%.lua$")
 				or file.path:match("^[%w_%-][%w%._%- ]*%.json$")) then
@@ -1195,6 +1199,7 @@ function fs.save_package(dir, files)
 		end
 	end
 	if needs_lib and not fs.ensure_dir(dir .. "lib") then return false, "sm_e_folder" end
+	if needs_filters and not fs.ensure_dir(dir .. "filters") then return false, "sm_e_folder" end
 	for _, file in ipairs(files) do
 		previous[file.path] = fs.read(dir .. file.path:gsub("/", "\\"))
 	end
@@ -1374,7 +1379,8 @@ end
 function market.package_path(path)
 	return type(path) == "string" and (path:match("^lib/[%w_%-]+%.lua$") ~= nil
 		or (not path:find("..", 1, true) and (path:match("^[%w_%-][%w%._%- ]*%.lua$") ~= nil
-			or path:match("^[%w_%-][%w%._%- ]*%.json$") ~= nil)))
+			or path:match("^[%w_%-][%w%._%- ]*%.json$") ~= nil
+			or path:match("^filters/filter_[%w_%-]+_cached%.txt$") ~= nil)))
 end
 
 function market.build(catalog, meta)

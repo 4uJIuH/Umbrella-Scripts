@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/behavior_score_helper/BehaviorScoreHelper.lua",
+  "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/behavior-score-helper-v1.0.0/BehaviorScoreHelper.lua",
+  "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/behavior_score_helper/BehaviorScoreHelper.lua",
+  "files": [
+    {
+      "path": "filters/filter_profanity_english_cached.txt",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/behavior_score_helper/filters/filter_profanity_english_cached.txt"
+    },
+    {
+      "path": "filters/filter_profanity_russian_cached.txt",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/behavior_score_helper/filters/filter_profanity_russian_cached.txt"
+    },
+    {
+      "path": "filters/filter_banned_english_cached.txt",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/behavior_score_helper/filters/filter_banned_english_cached.txt"
+    },
+    {
+      "path": "filters/filter_banned_russian_cached.txt",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/behavior_score_helper/filters/filter_banned_russian_cached.txt"
+    }
+  ]
+}

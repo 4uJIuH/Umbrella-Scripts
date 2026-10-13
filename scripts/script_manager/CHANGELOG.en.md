@@ -1,3 +1,8 @@
+# Update v2.0.5
+
+- Multi-file installs support `filters/filter_*_cached.txt` filter files and create the `scripts/filters` folder.
+- Added BehaviorScoreHelper: auto GG, auto report, and auto like.
+
 # Update v2.0.4
 
 - Multi-file installs support additional JSON files alongside the Lua script without creating subfolders.

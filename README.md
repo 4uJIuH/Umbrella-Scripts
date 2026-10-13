@@ -39,6 +39,7 @@
 - [Better Better Techies Combo](scripts/better_better_techies_combo) — комбо на Techies с двумя режимами и автоматическим отходом
 - [Chat Translator](scripts/chat_translator) — автоматически переводит игровой чат между английским и русским
 - [Hero Grid](scripts/hero_grid) — загружает пользовательские сетки героев из JSON
+- [BehaviorScoreHelper](scripts/behavior_score_helper) — повышает порядочность: авто GG, авто репорт и авто лайк
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -125,6 +126,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Better Better Techies Combo](scripts/better_better_techies_combo) — a Techies combo with two modes and an automatic disengage
 - [Chat Translator](scripts/chat_translator) — automatically translates in-game chat between English and Russian
 - [Hero Grid](scripts/hero_grid) — loads custom hero grids from JSON files
+- [BehaviorScoreHelper](scripts/behavior_score_helper) — raises your behavior score: auto GG, auto report, and auto like
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.

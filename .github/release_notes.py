@@ -10,6 +10,9 @@ GH = BASE / ".github"
 CATALOG = json.loads((GH / "catalog.json").read_text(encoding="utf-8"))
 REPO = CATALOG["repo"]
 NL = chr(10)
+PACKAGE_FILE = re.compile(
+    r"[A-Za-z0-9_-][A-Za-z0-9_.-]*\.json|filters/filter_[A-Za-z0-9_-]+_cached\.txt"
+)
 
 
 def find(tag):
@@ -176,7 +179,7 @@ def write_manifest(script, tag, sha):
             raise SystemExit("package_files must contain 1-64 files")
         files = []
         for name in package_files:
-            if not isinstance(name, str) or not re.fullmatch(r"[A-Za-z0-9_-][A-Za-z0-9_.-]*\.json", name):
+            if not isinstance(name, str) or not PACKAGE_FILE.fullmatch(name):
                 raise SystemExit("unsupported package file name: %r" % name)
             path = script_dir / name
             if not path.is_file():
