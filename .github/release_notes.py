@@ -243,8 +243,10 @@ def main():
     lines = []
     if script:
         (BASE / "body.md").write_text(body(script, tag), encoding="utf-8", newline=NL)
-        if manifest_path(script):
+        path = manifest_path(script)
+        if path:
             check_version(script, tag[len(script["tag"]) + 2:])
+        if script["kind"] == "lua":
             lines += ["manifest=%s" % script["id"].replace("_", " ")]
         path = ""
         if "package" in script:

@@ -47,9 +47,11 @@ jobs:
           git config user.name github-actions
           git config user.email actions@github.com
           git add scripts
-          git commit -m "${{ steps.notes.outputs.manifest }} ${TAG##*-v}: version manifest"
-          git pull --rebase
-          git push origin main
+          if ! git diff --cached --quiet; then
+            git commit -m "${{ steps.notes.outputs.manifest }} ${TAG##*-v}: version manifest"
+            git pull --rebase
+            git push origin main
+          fi
 
       - name: pages
         if: steps.notes.outputs.found == 'true'

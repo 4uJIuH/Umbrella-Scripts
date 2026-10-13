@@ -106,6 +106,23 @@
 - [Invoker (beta)](scripts/invoker_beta) — переработанный скрипт Invoker с динамическим прокастом
 - [Kez Combo](scripts/kez_combo) — комбо-скрипт Kez, сделанный для личного использования
 - [Techies Combo](scripts/techies_combo) — комбо Techies с режимами агрессии и максимального урона
+- [Lone Druid Auto Farm](scripts/ld_farm) — отправляет Lone Druid безопасно фармить лес, пока вы управляете медведем
+- [Unusual Effects](scripts/unusual_cosmetics) — меняет необычные эффекты предметов
+- [Techies Tazer Dispel](scripts/techies_tazer_dispel) — автоматически снимает некоторые эффекты Reactive Tazer
+- [SteamSync](scripts/steam_sync) — переносит конфиги Dota 2 между Steam-аккаунтами
+- [Techies Brain Combo](scripts/techies_brain) — комбо Techies от Hex до детонации мин
+- [Creep Control](scripts/creep_control) — управляет подконтрольными существами для фарма и пуша
+- [KOTL Illuminate Pro](scripts/kotl_illuminate_pro) — рассчитывает летальный урон Illuminate и отпускает луч вовремя
+- [Lycan Auto Control](scripts/lycan_auto_control) — отправляет волков пушить, а подконтрольных юнитов — фармить лес
+- [Mute Voice Lines](scripts/mute_voice_lines) — приглушает выбранные фразы из колеса чата
+- [Tinker Glimmer during Rearm](scripts/tinker_glimmer_rearm) — использует Glimmer Cape во время Rearm
+- [Dota No Limit](scripts/dota_no_limit) — добавляет выбор и автоматическое использование предметов для поедания
+- [Team Maphack](scripts/team_maphack) — отмечает события игры в чате и на миникарте
+- [Last Seen Trajectory](scripts/lastseen_trajectory) — показывает последнее направление движения врага
+- [KOTL Auto Chakra](scripts/kotl_auto_chakra) — дополнительные автоматизации для Keeper of the Light
+- [SF Feast of Souls Abuse](scripts/sf_feast_of_souls_abuse) — автоматизирует взаимодействие Feast of Souls с предметами и эффектами
+- [Block Creep Attack During Feast](scripts/sf_block_creep_attack) — блокирует атаки по крипам во время Feast of Souls
+- [Anti-Cyclone BKB](scripts/sf_anti_cyclone_bkb) — пытается использовать BKB перед вражеским циклоном
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -259,6 +276,23 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Invoker (beta)](scripts/invoker_beta) — reworked Invoker script with dynamic spell combos
 - [Kez Combo](scripts/kez_combo) — Kez combo script built for personal use
 - [Techies Combo](scripts/techies_combo) — Techies combo with aggressive and maximum-damage modes
+- [Lone Druid Auto Farm](scripts/ld_farm) — farms the jungle with Lone Druid while you control the bear
+- [Unusual Effects](scripts/unusual_cosmetics) — changes unusual item effects
+- [Techies Tazer Dispel](scripts/techies_tazer_dispel) — automatically dispels selected effects with Reactive Tazer
+- [SteamSync](scripts/steam_sync) — transfers Dota 2 configuration between Steam accounts
+- [Techies Brain Combo](scripts/techies_brain) — Techies combo from Hex through mine detonation
+- [Creep Control](scripts/creep_control) — controls summoned and dominated units for farming and pushing
+- [KOTL Illuminate Pro](scripts/kotl_illuminate_pro) — calculates lethal Illuminate damage and releases the beam at the right time
+- [Lycan Auto Control](scripts/lycan_auto_control) — sends wolves to push and dominated units to farm the jungle
+- [Mute Voice Lines](scripts/mute_voice_lines) — mutes selected chat-wheel voice lines
+- [Tinker Glimmer during Rearm](scripts/tinker_glimmer_rearm) — uses Glimmer Cape during Rearm
+- [Dota No Limit](scripts/dota_no_limit) — adds selection and automatic use of supported consumable items
+- [Team Maphack](scripts/team_maphack) — marks game events in chat and on the minimap
+- [Last Seen Trajectory](scripts/lastseen_trajectory) — shows the last known direction an enemy moved
+- [KOTL Auto Chakra](scripts/kotl_auto_chakra) — additional Keeper of the Light automation
+- [SF Feast of Souls Abuse](scripts/sf_feast_of_souls_abuse) — automates Feast of Souls interactions with items and effects
+- [Block Creep Attack During Feast](scripts/sf_block_creep_attack) — blocks creep attacks during Feast of Souls
+- [Anti-Cyclone BKB](scripts/sf_anti_cyclone_bkb) — attempts to use BKB before an enemy cyclone
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.

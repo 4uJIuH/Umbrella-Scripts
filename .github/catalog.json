@@ -4922,6 +4922,730 @@
           "Reload Lua scripts."
         ]
       }
+    },
+    {
+      "id": "ld_farm",
+      "tag": "ld-farm",
+      "title": "Lone Druid Auto Farm",
+      "kind": "lua",
+      "category": "dota",
+      "file": "ld_farm.lua",
+      "author": "sediksss (Discord)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/ld_farm",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=ld-farm&expanded=true",
+      "needs_q_localizer": true,
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.7",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/ld-farm-v1.7/ld_farm.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/ld-farm-v1.7/ld_farm.lua"
+      },
+      "ru": {
+        "tagline": "отправляет Lone Druid безопасно фармить лес, пока вы управляете медведем",
+        "about": "Автоматически выбирает ближайший доступный лагерь и фармит героем, не перехватывая управление Spirit Bear. Учитывает состояние карты, здоровье, респавн кемпов и угрозы.",
+        "features": [
+          "оценивает безопасность маршрута по вышкам и продвижению линии",
+          "предупреждает о видимых врагах и отводит героя на базу или включает True Form",
+          "учитывает восстановление здоровья, стаки и время респавна лагерей"
+        ],
+        "install": [
+          "Поместите `ld_farm.lua` и `!_qLocalizer.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите скрипты и откройте `Heroes → Hero List → Lone Druid → ~Auto-LD`."
+        ]
+      },
+      "en": {
+        "tagline": "farms the jungle with Lone Druid while you control the bear",
+        "about": "Automatically selects the nearest available camp and farms with the hero without taking control of Spirit Bear. It considers map state, health, camp respawns, and threats.",
+        "features": [
+          "estimates route safety from tower status and lane pressure",
+          "alerts on visible enemies and retreats to base or activates True Form",
+          "accounts for health recovery, stacking, and camp respawn timing"
+        ],
+        "install": [
+          "Place `ld_farm.lua` and `!_qLocalizer.lua` in `Umbrella\\scripts`.",
+          "Reload scripts and open `Heroes → Hero List → Lone Druid → ~Auto-LD`."
+        ]
+      }
+    },
+    {
+      "id": "unusual_cosmetics",
+      "tag": "unusual-cosmetics",
+      "title": "Unusual Effects",
+      "kind": "lua",
+      "category": "dota",
+      "file": "unusual_cosmetics.lua",
+      "author": "flatixxx (Discord: flatixxx)",
+      "source_url": "https://discord.com/channels/408315082439917578/1541557832485314651/1552091644495405177",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=unusual-cosmetics&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/unusual-cosmetics-v1.0.0/unusual_cosmetics.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/unusual-cosmetics-v1.0.0/unusual_cosmetics.lua"
+      },
+      "ru": {
+        "tagline": "меняет необычные эффекты предметов",
+        "about": "Позволяет выбрать героя и предмет, а затем изменить его эффект в матче. Автор предупреждает о возможных сбросах эффектов.",
+        "features": [
+          "выбор героя и предмета из меню",
+          "изменение необычного эффекта предмета во время матча"
+        ],
+        "install": [
+          "Поместите `unusual_cosmetics.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты. Если эффекты сбрасываются или работают неправильно, сообщите об этом автору."
+        ]
+      },
+      "en": {
+        "tagline": "changes unusual item effects",
+        "about": "Select a hero and item, then change its effect in a match. The author notes that effects may reset unexpectedly.",
+        "features": [
+          "select a hero and item from the menu",
+          "change an item's unusual effect in a match"
+        ],
+        "install": [
+          "Place `unusual_cosmetics.lua` in `Umbrella\\scripts`.",
+          "Reload Lua scripts. Report any effects that reset or behave incorrectly to the author."
+        ]
+      }
+    },
+    {
+      "id": "techies_tazer_dispel",
+      "tag": "techies-tazer-dispel",
+      "title": "Techies Tazer Dispel",
+      "kind": "lua",
+      "category": "dota",
+      "file": "techies_tazer_dispel.lua",
+      "author": "Yerka (Discord: argenov); base script by @1006597751640969267",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/techies_tazer_dispel",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=techies-tazer-dispel&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-tazer-dispel-v1.0.0/techies_tazer_dispel.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-tazer-dispel-v1.0.0/techies_tazer_dispel.lua"
+      },
+      "ru": {
+        "tagline": "автоматически снимает некоторые эффекты Reactive Tazer",
+        "about": "Дополнение для Techies, которое использует взрыв Reactive Tazer для автоматического диспела. Основа скрипта написана по просьбе Yerka, который доработал её и поделился скриптом.",
+        "features": [
+          "отслеживает подходящий момент для взрыва Reactive Tazer",
+          "автоматически применяет диспел по условиям скрипта"
+        ],
+        "install": [
+          "Поместите `techies_tazer_dispel.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты и проверьте настройки Techies."
+        ]
+      },
+      "en": {
+        "tagline": "automatically dispels selected effects with Reactive Tazer",
+        "about": "A Techies utility that uses Reactive Tazer's explosion to automatically dispel. The base script was written at Yerka's request, then extended and shared by him.",
+        "features": [
+          "tracks when Reactive Tazer should be detonated",
+          "automatically applies a dispel when the script's conditions are met"
+        ],
+        "install": [
+          "Place `techies_tazer_dispel.lua` in `Umbrella\\scripts`.",
+          "Reload Lua scripts and check the Techies settings."
+        ]
+      }
+    },
+    {
+      "id": "steam_sync",
+      "tag": "steam-sync",
+      "title": "SteamSync",
+      "kind": "app",
+      "category": "auxiliary",
+      "file": "SteamSync.1.0.1.exe",
+      "author": "fastdebug (Discord: ! x64dbg)",
+      "source_url": "https://github.com/freakks/sync",
+      "releases_url": "https://github.com/freakks/sync/releases",
+      "initial": {
+        "version": "1.0.1",
+        "date": "2026-08-11",
+        "url": "https://github.com/freakks/sync/releases/download/v1.0.1/SteamSync.1.0.1.exe",
+        "release": "https://github.com/freakks/sync/releases/tag/v1.0.1"
+      },
+      "ru": {
+        "tagline": "переносит конфиги Dota 2 между Steam-аккаунтами",
+        "about": "Открытое приложение с графическим интерфейсом для переноса настроек Dota 2 между аккаунтами Steam. Перед переносом проверяет исходный аккаунт и может перезапустить Steam или Umbrella.",
+        "features": [
+          "находит Steam-аккаунты и проверяет наличие данных Dota 2",
+          "позволяет выбрать исходный и целевой аккаунты",
+          "исходный код и готовая сборка доступны в репозитории автора"
+        ],
+        "install": [
+          "Скачайте Windows-приложение или исходный код из репозитория автора.",
+          "Проверьте источник и настройки перед переносом файлов аккаунта."
+        ]
+      },
+      "en": {
+        "tagline": "transfers Dota 2 configuration between Steam accounts",
+        "about": "An open-source GUI application for transferring Dota 2 settings between Steam accounts. It checks the source account before transfer and can restart Steam or Umbrella.",
+        "features": [
+          "discovers Steam accounts and checks for Dota 2 data",
+          "lets you choose source and target accounts",
+          "source code and a prebuilt application are available from the author's repository"
+        ],
+        "install": [
+          "Download the Windows application or source code from the author's repository.",
+          "Verify the source and transfer settings before moving account files."
+        ]
+      }
+    },
+    {
+      "id": "techies_brain",
+      "tag": "techies-brain",
+      "title": "Techies Brain Combo",
+      "kind": "lua",
+      "category": "dota",
+      "file": "techies_brain.lua",
+      "author": "wolf.xyz (Discord)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/techies_brain",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=techies-brain&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "0.2.6",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-brain-v0.2.6/techies_brain.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-brain-v0.2.6/techies_brain.lua"
+      },
+      "ru": {
+        "tagline": "комбо Techies от Hex до детонации мин",
+        "about": "Единый контроллер комбо: Hex, Sticky Bomb, Tazer, Ethereal Blade, Blast Off, мины и детонация. Автор рекомендует не запускать одновременно другой скрипт комбо Techies.",
+        "features": [
+          "выполняет последовательность способностей и предметов",
+          "настраивается через меню `Heroes → Hero List → Techies → Brain`"
+        ],
+        "install": [
+          "Поместите `techies_brain.lua` в `Umbrella\\scripts` и перезагрузите скрипты.",
+          "Отключите или отвяжите другой скрипт комбо Techies и задайте Combo Key в `Heroes → Hero List → Techies → Brain`."
+        ]
+      },
+      "en": {
+        "tagline": "Techies combo from Hex through mine detonation",
+        "about": "A unified combo controller for Hex, Sticky Bomb, Tazer, Ethereal Blade, Blast Off, mines, and detonation. The author recommends not running another Techies combo script at the same time.",
+        "features": [
+          "executes a sequence of abilities and items",
+          "configured under `Heroes → Hero List → Techies → Brain`"
+        ],
+        "install": [
+          "Place `techies_brain.lua` in `Umbrella\\scripts` and reload scripts.",
+          "Disable or unbind any other Techies combo script and set the Combo Key under `Heroes → Hero List → Techies → Brain`."
+        ]
+      }
+    },
+    {
+      "id": "creep_control",
+      "tag": "creep-control",
+      "title": "Creep Control",
+      "kind": "lua",
+      "category": "dota",
+      "file": "creep_control.lua",
+      "author": "punkproof (Discord: punkproof)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/creep_control",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=creep-control&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/creep-control-v1.0.0/creep_control.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/creep-control-v1.0.0/creep_control.lua"
+      },
+      "ru": {
+        "tagline": "управляет подконтрольными существами для фарма и пуша",
+        "about": "Разделяет подконтрольных юнитов на фармящих лес и тех, кто продвигает линии и атакует вышки. Учитывает угрозы, здоровье и доступность нейтральных лагерей.",
+        "features": [
+          "выбирает свободный лагерь, ждёт респавна и может пропускать ancient",
+          "кастит способности по нейтралам и отходит от врагов или вышек",
+          "юниты для пуша не атакуют вражескую вышку без союзных крипов"
+        ],
+        "install": [
+          "Поместите `creep_control.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты и настройте фильтры подконтрольных юнитов."
+        ]
+      },
+      "en": {
+        "tagline": "controls summoned and dominated units for farming and pushing",
+        "about": "Assigns controlled units to jungle farming or to pushing lanes and attacking towers. It considers threats, health, and neutral camp availability.",
+        "features": [
+          "selects free camps, waits for respawns, and can skip ancient camps",
+          "casts abilities on neutrals and retreats from enemies or towers",
+          "push units do not attack enemy towers without allied creeps"
+        ],
+        "install": [
+          "Place `creep_control.lua` in `Umbrella\\scripts`.",
+          "Reload Lua scripts and configure the controlled-unit filters."
+        ]
+      }
+    },
+    {
+      "id": "kotl_illuminate_pro",
+      "tag": "kotl-illuminate-pro",
+      "title": "KOTL Illuminate Pro",
+      "kind": "lua",
+      "category": "dota",
+      "file": "kotl_illuminate_pro.lua",
+      "author": "макаки (Discord: mamkaki)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/kotl_illuminate_pro",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=kotl-illuminate-pro&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/kotl-illuminate-pro-v1.0.0/kotl_illuminate_pro.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/kotl-illuminate-pro-v1.0.0/kotl_illuminate_pro.lua"
+      },
+      "ru": {
+        "tagline": "рассчитывает летальный урон Illuminate и отпускает луч вовремя",
+        "about": "Оценивает урон Illuminate с учётом сопротивления, барьеров, регенерации, spell amp, задержки и скорости волны. Перед выстрелом может применить выбранные предметы, а после — завершить комбо.",
+        "features": [
+          "рассчитывает урон по движущейся цели и отображает прогноз HP",
+          "подготавливает Ethereal Blade, Vessel, Solar Bind и другие предметы",
+          "подбирает точку Blinding Light, чтобы направить цель под луч"
+        ],
+        "install": [
+          "Поместите `kotl_illuminate_pro.lua` в `Umbrella\\scripts`.",
+          "В меню `General → Utility → KOTL Illuminate` настройте предметы и клавишу Illuminate."
+        ]
+      },
+      "en": {
+        "tagline": "calculates lethal Illuminate damage and releases the beam at the right time",
+        "about": "Estimates Illuminate damage using resistance, barriers, regeneration, spell amp, latency, and wave speed. It can prepare selected items before the shot and finish the combo afterward.",
+        "features": [
+          "predicts damage against moving targets and displays projected HP",
+          "can prepare Ethereal Blade, Vessel, Solar Bind, and other items",
+          "finds a Blinding Light position to push a target into the beam"
+        ],
+        "install": [
+          "Place `kotl_illuminate_pro.lua` in `Umbrella\\scripts`.",
+          "Configure items and the Illuminate key under `General → Utility → KOTL Illuminate`."
+        ]
+      }
+    },
+    {
+      "id": "lycan_auto_control",
+      "tag": "lycan-auto-control",
+      "title": "Lycan Auto Control",
+      "kind": "lua",
+      "category": "dota",
+      "file": "lycan_auto_control.lua",
+      "author": "花曇り hanagumori (Discord: euphoria2k)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/lycan_auto_control",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=lycan-auto-control&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/lycan-auto-control-v1.0.0/lycan_auto_control.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/lycan-auto-control-v1.0.0/lycan_auto_control.lua"
+      },
+      "ru": {
+        "tagline": "отправляет волков пушить, а подконтрольных юнитов — фармить лес",
+        "about": "Автоматически распределяет волков Lycan для продвижения по линии, а юнитов под контролем через Dominator — для фарма леса и использования способностей.",
+        "features": [
+          "волки продвигают ближайшую линию",
+          "подконтрольные через Dominator существа фармят лес и используют способности"
+        ],
+        "install": [
+          "Поместите `lycan_auto_control.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите скрипты и настройте поведение подконтрольных юнитов."
+        ]
+      },
+      "en": {
+        "tagline": "sends wolves to push and dominated units to farm the jungle",
+        "about": "Automatically assigns Lycan's wolves to push a lane and units controlled with Dominator to farm the jungle and use their abilities.",
+        "features": [
+          "wolves push the nearest lane",
+          "units controlled through Dominator farm the jungle and cast abilities"
+        ],
+        "install": [
+          "Place `lycan_auto_control.lua` in `Umbrella\\scripts`.",
+          "Reload scripts and configure controlled-unit behavior."
+        ]
+      }
+    },
+    {
+      "id": "mute_voice_lines",
+      "tag": "mute-voice-lines",
+      "title": "Mute Voice Lines",
+      "kind": "lua",
+      "category": "dota",
+      "file": "mute_voice_lines.lua",
+      "author": "OutByte@archik in ~/bio (Discord: outbytenochek)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/mute_voice_lines",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=mute-voice-lines&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/mute-voice-lines-v1.0.0/mute_voice_lines.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/mute-voice-lines-v1.0.0/mute_voice_lines.lua"
+      },
+      "ru": {
+        "tagline": "приглушает выбранные фразы из колеса чата",
+        "about": "Отключает воспроизведение указанных голосовых фраз, отправленных через колесо чата. Список блокируемых ID задаётся в скрипте.",
+        "features": [
+          "приглушает выбранные voice lines",
+          "позволяет добавлять нужные ID фраз в список"
+        ],
+        "install": [
+          "Поместите `mute_voice_lines.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты и добавьте ID нужных фраз в список скрипта."
+        ]
+      },
+      "en": {
+        "tagline": "mutes selected chat-wheel voice lines",
+        "about": "Suppresses playback of selected voice lines sent through the chat wheel. The blocked IDs are configured in the script.",
+        "features": [
+          "mutes selected voice lines",
+          "lets you add voice-line IDs to the block list"
+        ],
+        "install": [
+          "Place `mute_voice_lines.lua` in `Umbrella\\scripts`.",
+          "Reload Lua scripts and add the desired voice-line IDs to the script's list."
+        ]
+      }
+    },
+    {
+      "id": "tinker_glimmer_rearm",
+      "tag": "tinker-glimmer-rearm",
+      "title": "Tinker Glimmer during Rearm",
+      "kind": "lua",
+      "category": "dota",
+      "file": "tinker_glimmer_rearm.lua",
+      "author": "MorFix (Discord: morfix_kid)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/tinker_glimmer_rearm",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=tinker-glimmer-rearm&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.3",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-glimmer-rearm-v1.3/tinker_glimmer_rearm.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-glimmer-rearm-v1.3/tinker_glimmer_rearm.lua"
+      },
+      "ru": {
+        "tagline": "использует Glimmer Cape во время Rearm",
+        "about": "Небольшой скрипт для Tinker, который применяет Glimmer Cape в выбранный момент применения Rearm.",
+        "features": [
+          "использует Glimmer Cape во время Rearm",
+          "находится во вкладке настроек героя"
+        ],
+        "install": [
+          "Поместите `tinker_glimmer_rearm.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите скрипты и настройте его во вкладке Tinker."
+        ]
+      },
+      "en": {
+        "tagline": "uses Glimmer Cape during Rearm",
+        "about": "A small Tinker utility that activates Glimmer Cape at the selected point during Rearm.",
+        "features": [
+          "uses Glimmer Cape while Rearm is active",
+          "available in the hero settings"
+        ],
+        "install": [
+          "Place `tinker_glimmer_rearm.lua` in `Umbrella\\scripts`.",
+          "Reload scripts and configure it under Tinker."
+        ]
+      }
+    },
+    {
+      "id": "dota_no_limit",
+      "tag": "dota-no-limit",
+      "title": "Dota No Limit",
+      "kind": "lua",
+      "category": "dota",
+      "file": "dota_no_limit.lua",
+      "author": "kkk (Discord: skibidisigma8261451)",
+      "source_url": "https://canary.discord.com/channels/408315082439917578/1530866882742063144/1530866948794220636",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=dota-no-limit&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/dota-no-limit-v1.0.0/dota_no_limit.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/dota-no-limit-v1.0.0/dota_no_limit.lua"
+      },
+      "ru": {
+        "tagline": "добавляет выбор и автоматическое использование предметов для поедания",
+        "about": "Скрипт Item Eater позволяет выбирать и автоматически использовать поддерживаемые предметы. В загруженном файле находится Lua-скрипт; отдельный деобфусцированный VPK в каталог не включён.",
+        "features": [
+          "выбор предметов в меню и автоматическое поедание",
+          "последняя версия и список доступных фраз опубликованы автором в Discord"
+        ],
+        "install": [
+          "Поместите `dota_no_limit.lua` в `Umbrella\\scripts` и перезагрузите скрипты.",
+          "Для обновлений и руководства откройте <a href=\"https://canary.discord.com/channels/408315082439917578/1530866882742063144/1530866948794220636\" target=\"_blank\" rel=\"noopener\">публикацию автора в Discord</a> и <a href=\"https://umbrella-scripts.gitbook.io/tutorial/how-to-buy#ustanovka-polzovatelskikh-skriptov\" target=\"_blank\" rel=\"noopener\">руководство по установке</a>."
+        ]
+      },
+      "en": {
+        "tagline": "adds selection and automatic use of supported consumable items",
+        "about": "The Item Eater script lets you select and automatically use supported items. The supplied file is a Lua script; no separate deobfuscated VPK is included in this catalog.",
+        "features": [
+          "select items in the menu and enable automatic consumption",
+          "the author posts the latest version and additional voice-line IDs on Discord"
+        ],
+        "install": [
+          "Place `dota_no_limit.lua` in `Umbrella\\scripts` and reload scripts.",
+          "For updates and a guide, see the <a href=\"https://canary.discord.com/channels/408315082439917578/1530866882742063144/1530866948794220636\" target=\"_blank\" rel=\"noopener\">author's Discord post</a> and the <a href=\"https://umbrella-scripts.gitbook.io/tutorial/how-to-buy#ustanovka-polzovatelskikh-skriptov\" target=\"_blank\" rel=\"noopener\">custom-script installation guide</a>."
+        ]
+      }
+    },
+    {
+      "id": "team_maphack",
+      "tag": "team-maphack",
+      "title": "Team Maphack",
+      "kind": "lua",
+      "category": "dota",
+      "file": "team_maphack.lua",
+      "author": "1 вовчик (Discord: shukuchhi)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/team_maphack",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=team-maphack&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/team-maphack-v1.0.0/team_maphack.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/team-maphack-v1.0.0/team_maphack.lua"
+      },
+      "ru": {
+        "tagline": "отмечает события игры в чате и на миникарте",
+        "about": "Показывает и отправляет сигналы о телепортах, смоках, сканах, рунах, Roshan, Tormentor и лесных событиях. Использование может раскрывать команде игровую информацию.",
+        "features": [
+          "уведомления и отметки на миникарте для перечисленных событий",
+          "включает отображение лесной информации"
+        ],
+        "install": [
+          "Поместите `team_maphack.lua` в `Umbrella\\scripts` и перезагрузите скрипты.",
+          "Проверьте, что выбранные уведомления соответствуют правилам игры и платформы."
+        ]
+      },
+      "en": {
+        "tagline": "marks game events in chat and on the minimap",
+        "about": "Displays and sends signals about teleports, smokes, scans, runes, Roshan, Tormentor, and jungle events. Its use can reveal gameplay information to the team.",
+        "features": [
+          "chat notifications and minimap markers for the listed events",
+          "includes jungle information overlays"
+        ],
+        "install": [
+          "Place `team_maphack.lua` in `Umbrella\\scripts` and reload scripts.",
+          "Check that selected notifications comply with the game and platform rules."
+        ]
+      }
+    },
+    {
+      "id": "lastseen_trajectory",
+      "tag": "lastseen-trajectory",
+      "title": "Last Seen Trajectory",
+      "kind": "lua",
+      "category": "dota",
+      "file": "lastseen_trajectory.lua",
+      "author": "1 вовчик (Discord: shukuchhi)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/lastseen_trajectory",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=lastseen-trajectory&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/lastseen-trajectory-v1.0.0/lastseen_trajectory.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/lastseen-trajectory-v1.0.0/lastseen_trajectory.lua"
+      },
+      "ru": {
+        "tagline": "показывает последнее направление движения врага",
+        "about": "Отображает направление, в котором противник двигался в последний раз, в игровом мире и на карте. Использует параметры цвета, длительности и размера из настроек серверного скрипта.",
+        "features": [
+          "рисует направление последнего перемещения в мире и на миникарте",
+          "поддерживает настройки цвета, времени отображения и размера"
+        ],
+        "install": [
+          "Поместите `lastseen_trajectory.lua` в `Umbrella\\scripts` и перезагрузите скрипты.",
+          "Настройка находится в `Информация → Мапхак → Показывать направление`."
+        ]
+      },
+      "en": {
+        "tagline": "shows the last known direction an enemy moved",
+        "about": "Displays the direction in which an enemy was last moving in the game world and on the map. It uses the server script's color, duration, and size settings.",
+        "features": [
+          "draws the last movement direction in-world and on the minimap",
+          "supports color, display duration, and size settings"
+        ],
+        "install": [
+          "Place `lastseen_trajectory.lua` in `Umbrella\\scripts` and reload scripts.",
+          "Find the option under `Information → Maphack → Show direction`."
+        ]
+      }
+    },
+    {
+      "id": "kotl_auto_chakra",
+      "tag": "kotl-auto-chakra",
+      "title": "KOTL Auto Chakra",
+      "kind": "lua",
+      "category": "dota",
+      "file": "kotl_auto_chakra.lua",
+      "author": "just hate me (Discord: loneuway)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/kotl_auto_chakra",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=kotl-auto-chakra&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/kotl-auto-chakra-v1.0.0/kotl_auto_chakra.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/kotl-auto-chakra-v1.0.0/kotl_auto_chakra.lua"
+      },
+      "ru": {
+        "tagline": "дополнительные автоматизации для Keeper of the Light",
+        "about": "Перезалив скрипта Keeper of the Light с Auto Chakra и дополнительными функциями. Тема исходной публикации удалена.",
+        "features": [
+          "автоматически применяет Chakra Magic при подходящей цели поблизости",
+          "содержит дополнительные функции для Keeper of the Light"
+        ],
+        "install": [
+          "Поместите `kotl_auto_chakra.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите скрипты и откройте меню Keeper of the Light."
+        ]
+      },
+      "en": {
+        "tagline": "additional Keeper of the Light automation",
+        "about": "A re-upload of a Keeper of the Light script with Auto Chakra and additional features. The original topic is no longer available.",
+        "features": [
+          "automatically uses Chakra Magic when a suitable target is nearby",
+          "includes additional Keeper of the Light utilities"
+        ],
+        "install": [
+          "Place `kotl_auto_chakra.lua` in `Umbrella\\scripts`.",
+          "Reload scripts and open the Keeper of the Light menu."
+        ]
+      }
+    },
+    {
+      "id": "sf_feast_of_souls_abuse",
+      "tag": "sf-feast-of-souls",
+      "title": "SF Feast of Souls Abuse",
+      "kind": "lua",
+      "category": "dota",
+      "file": "sf_feast_of_souls_abuse.lua",
+      "author": "Snow Storm (Discord: devsnowy)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/sf_feast_of_souls_abuse",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=sf-feast-of-souls&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "4.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-feast-of-souls-v4.0/sf_feast_of_souls_abuse.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-feast-of-souls-v4.0/sf_feast_of_souls_abuse.lua"
+      },
+      "ru": {
+        "tagline": "автоматизирует взаимодействие Feast of Souls с предметами и эффектами",
+        "about": "Версия скрипта для Shadow Fiend с дополнительными настройками KOTL и Octarine, а также защитой накопленных душ при использовании предметов и телепортации.",
+        "features": [
+          "использует способность с учётом остаточного времени эффекта",
+          "блокирует некоторые действия, которые могут сбросить души",
+          "содержит настройки связки с Keeper of the Light"
+        ],
+        "install": [
+          "Поместите `sf_feast_of_souls_abuse.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты и настройте раздел `Heroes → Shadow Fiend → Feast of Souls Abuse`."
+        ]
+      },
+      "en": {
+        "tagline": "automates Feast of Souls interactions with items and effects",
+        "about": "A Shadow Fiend script with KOTL and Octarine options and protections for stored souls when using items or teleporting.",
+        "features": [
+          "uses the ability based on the remaining effect duration",
+          "blocks selected actions that could remove stored souls",
+          "includes Keeper of the Light synergy settings"
+        ],
+        "install": [
+          "Place `sf_feast_of_souls_abuse.lua` in `Umbrella\\scripts`.",
+          "Reload scripts and configure `Heroes → Shadow Fiend → Feast of Souls Abuse`."
+        ]
+      }
+    },
+    {
+      "id": "sf_block_creep_attack",
+      "tag": "sf-block-creep-attack",
+      "title": "Block Creep Attack During Feast",
+      "kind": "lua",
+      "category": "dota",
+      "file": "sf_block_creep_attack.lua",
+      "author": "Snow Storm (Discord: devsnowy)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/sf_block_creep_attack",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=sf-block-creep-attack&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.2",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-block-creep-attack-v1.2/sf_block_creep_attack.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-block-creep-attack-v1.2/sf_block_creep_attack.lua"
+      },
+      "ru": {
+        "tagline": "блокирует атаки по крипам во время Feast of Souls",
+        "about": "Вспомогательный скрипт для Shadow Fiend, который блокирует приказы атаковать крипов во время сбора душ и позволяет выбирать целями героев и строения.",
+        "features": [
+          "подавляет атаки по крипам во время активного эффекта",
+          "позволяет продолжать атаковать героев и здания"
+        ],
+        "install": [
+          "Поместите `sf_block_creep_attack.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите скрипты; настройки находятся в меню `Feast of Souls Abuse`."
+        ]
+      },
+      "en": {
+        "tagline": "blocks creep attacks during Feast of Souls",
+        "about": "A Shadow Fiend helper that blocks attack orders on creeps while collecting souls and lets you target heroes and buildings.",
+        "features": [
+          "suppresses attacks on creeps while the effect is active",
+          "still allows attacks on heroes and buildings"
+        ],
+        "install": [
+          "Place `sf_block_creep_attack.lua` in `Umbrella\\scripts`.",
+          "Reload scripts; settings are under `Feast of Souls Abuse`."
+        ]
+      }
+    },
+    {
+      "id": "sf_anti_cyclone_bkb",
+      "tag": "sf-anti-cyclone-bkb",
+      "title": "Anti-Cyclone BKB",
+      "kind": "lua",
+      "category": "dota",
+      "file": "sf_anti_cyclone_bkb.lua",
+      "author": "Snow Storm (Discord: devsnowy)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/sf_anti_cyclone_bkb",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=sf-anti-cyclone-bkb&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "2.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-anti-cyclone-bkb-v2.0/sf_anti_cyclone_bkb.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-anti-cyclone-bkb-v2.0/sf_anti_cyclone_bkb.lua"
+      },
+      "ru": {
+        "tagline": "пытается использовать BKB перед вражеским циклоном",
+        "about": "Скрипт для Shadow Fiend отслеживает подготовку Eul's Scepter или Wind Waker, направленных на вашего героя, и пытается применить BKB до циклона.",
+        "features": [
+          "отслеживает вражеские Eul's Scepter и Wind Waker",
+          "автоматически применяет BKB перед циклоном при выполнении условий"
+        ],
+        "install": [
+          "Поместите `sf_anti_cyclone_bkb.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите скрипты и настройте раздел `Anti-Cyclone BKB`."
+        ]
+      },
+      "en": {
+        "tagline": "attempts to use BKB before an enemy cyclone",
+        "about": "A Shadow Fiend script that watches for an enemy Eul's Scepter or Wind Waker targeting your hero and attempts to use BKB before the cyclone.",
+        "features": [
+          "tracks enemy Eul's Scepter and Wind Waker",
+          "automatically uses BKB before a cyclone when conditions are met"
+        ],
+        "install": [
+          "Place `sf_anti_cyclone_bkb.lua` in `Umbrella\\scripts`.",
+          "Reload scripts and configure the `Anti-Cyclone BKB` section."
+        ]
+      }
     }
   ]
 }

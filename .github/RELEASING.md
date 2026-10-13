@@ -1,6 +1,9 @@
 # Script releases
 
 The release workflow creates a GitHub release from the matching tag and changelogs.
+For Lua entries, it also writes or updates the Script Manager version manifest,
+including on the first release. If that manifest already matches the release,
+the workflow skips the empty commit.
 Tinker Auto Farm is packaged from `scripts/tinker_auto_farm/package` as
 `Tinker-Auto-Farm.zip`. Self Play is packaged from
 `scripts/self_play_bot/package` as `Self-Play.zip`; this bundle is extracted
