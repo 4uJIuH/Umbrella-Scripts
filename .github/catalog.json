@@ -1996,6 +1996,358 @@
       },
       "author": "4uJIuH",
       "author_github": "4uJIuH"
+    },
+    {
+      "id": "excuses",
+      "tag": "excuses",
+      "title": "Отмазки",
+      "kind": "lua",
+      "category": "dota",
+      "file": "excuses.lua",
+      "author": "Леха, Ваня и Виталик (Discord: mikropabalo)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/excuses",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=excuses&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/excuses/excuses.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/excuses-v1.0.0/excuses.lua"
+      },
+      "ru": {
+        "tagline": "готовые отмазки после смерти — с отправкой в чат",
+        "about": "После смерти показывает отмазку, подходящую под ситуацию, и кнопку отправки в чат. Можно выбрать другую фразу и посмотреть счётчик отправленных сообщений.",
+        "features": [
+          "Случайные и зависящие от причины смерти фразы",
+          "Отправка выбранной фразы в командный или общий чат",
+          "Счётчики отправленных отмазок за игру и за всё время",
+          "Отправка мышью или назначенным биндом"
+        ],
+        "install": [
+          "Поместите `excuses.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Scripts → Utility → Отмазки`."
+        ]
+      },
+      "en": {
+        "tagline": "ready-made excuses after a death, with chat sending",
+        "about": "Shows a context-aware excuse after a death and a button to send it to chat. Choose another line and track how many messages were sent.",
+        "features": [
+          "Random lines and lines tailored to the cause of death",
+          "Send a selected line to team or all chat",
+          "Per-match and lifetime sent-message counters",
+          "Send with the mouse or an assigned bind"
+        ],
+        "install": [
+          "Place `excuses.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Scripts → Utility → Отмазки`."
+        ]
+      }
+    },
+    {
+      "id": "creep_obituary",
+      "tag": "creep-obituary",
+      "title": "Некрологи",
+      "kind": "lua",
+      "category": "dota",
+      "file": "creep_obituary.lua",
+      "author": "Леха, Ваня и Виталик (Discord: mikropabalo)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/creep_obituary",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=creep-obituary&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/creep_obituary/creep_obituary.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/creep-obituary-v1.0.0/creep_obituary.lua"
+      },
+      "ru": {
+        "tagline": "имена и некрологи для крипов",
+        "about": "Даёт крипам имена и возраст, показывает короткий некролог после добивания и считает погибших за игру.",
+        "features": [
+          "Имена и возраст над крипами",
+          "Отдельные сообщения для добитых, заденаенных и нейтральных крипов",
+          "Некрологи только за ваши добивания",
+          "Независимые переключатели имён, некрологов и счётчика"
+        ],
+        "install": [
+          "Поместите `creep_obituary.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Scripts → Utility → Некрологи`."
+        ]
+      },
+      "en": {
+        "tagline": "names and obituaries for creeps",
+        "about": "Gives creeps names and ages, shows a short obituary after a last hit, and counts deaths during the match.",
+        "features": [
+          "Names and ages above creeps",
+          "Separate messages for last hits, denies, and neutral creeps",
+          "Obituaries only for your last hits",
+          "Independent toggles for names, obituaries, and the counter"
+        ],
+        "install": [
+          "Place `creep_obituary.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Scripts → Utility → Некрологи`."
+        ]
+      }
+    },
+    {
+      "id": "wrapped",
+      "tag": "wrapped",
+      "title": "Wrapped",
+      "kind": "lua",
+      "category": "dota",
+      "file": "wrapped.lua",
+      "author": "Леха, Ваня и Виталик (Discord: mikropabalo)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/wrapped",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=wrapped&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/wrapped/wrapped.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/wrapped-v1.0.0/wrapped.lua"
+      },
+      "ru": {
+        "tagline": "карточка итогов матча, ачивки и челленджи",
+        "about": "Собирает игровую статистику и показывает персональную карточку после матча. Также включает достижения между играми и испытания с оценкой.",
+        "features": [
+          "Итоги матча: K/D/A, титул и подборка игровых фактов",
+          "Статистика главных обидчиков, выживаний, перемещений, смертей и приказов",
+          "Достижения, сохраняемые между матчами",
+          "Челленджи с отслеживанием нарушений и оценкой от S до F",
+          "Карточку можно открыть во время игры по бинду и посмотреть прошлый матч из меню"
+        ],
+        "install": [
+          "Поместите `wrapped.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Scripts → Utility → Wrapped`."
+        ]
+      },
+      "en": {
+        "tagline": "match summary cards, achievements, and challenges",
+        "about": "Collects match statistics and shows a personal summary card after the game. It also includes persistent achievements and scored challenges.",
+        "features": [
+          "Match summary with K/D/A, a title, and selected gameplay facts",
+          "Tracks nemeses, close escapes, movement, deaths, and orders",
+          "Achievements persist between matches",
+          "Challenges track violations and receive a grade from S to F",
+          "Open the card mid-game with a bind or view the previous match from the menu"
+        ],
+        "install": [
+          "Place `wrapped.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Scripts → Utility → Wrapped`."
+        ]
+      }
+    },
+    {
+      "id": "arc_warden_heist",
+      "tag": "arc-warden-heist",
+      "title": "Arc Warden's Heist",
+      "kind": "lua",
+      "category": "dota",
+      "file": "arc_warden_heist.lua",
+      "heroes": [
+        "arc_warden"
+      ],
+      "author": "Леха, Ваня и Виталик (Discord: mikropabalo)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/arc_warden_heist",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-heist&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_heist/arc_warden_heist.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-heist-v1.0.0/arc_warden_heist.lua"
+      },
+      "ru": {
+        "tagline": "сценарий с Arc Warden и Tempest Double",
+        "about": "Запускает последовательность действий с предметом на земле и Tempest Double. В описании автора отмечены возможные ошибки; не рекомендуется для рейтинговых игр.",
+        "features": [
+          "Запуск сценария по бинду на выбранную цель",
+          "Управляет оригиналом Arc Warden и Tempest Double по заданным фазам",
+          "Показывает состояние, предмет и счётчики в оверлее",
+          "Включает аварийную команду для подбора предмета"
+        ],
+        "install": [
+          "Поместите `arc_warden_heist.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Включайте сценарий только после ознакомления с настройками и предупреждением автора."
+        ]
+      },
+      "en": {
+        "tagline": "an Arc Warden and Tempest Double sequence",
+        "about": "Runs a sequence involving an item on the ground and Tempest Double. The author warns that bugs may occur and advises against ranked games.",
+        "features": [
+          "Start the sequence with a bind on the selected target",
+          "Controls Arc Warden and Tempest Double through its phases",
+          "Displays phase, item, and counters in an overlay",
+          "Includes an emergency item-pickup command"
+        ],
+        "install": [
+          "Place `arc_warden_heist.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Read the settings and the author's warning before enabling the sequence."
+        ]
+      }
+    },
+    {
+      "id": "chen_circus",
+      "tag": "chen-circus",
+      "title": "Chen's Circus",
+      "kind": "lua",
+      "category": "dota",
+      "file": "chen_circus.lua",
+      "heroes": [
+        "chen"
+      ],
+      "author": "Леха, Ваня и Виталик (Discord: mikropabalo)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/chen_circus",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=chen-circus&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/chen_circus/chen_circus.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/chen-circus-v1.0.0/chen_circus.lua"
+      },
+      "ru": {
+        "tagline": "строи и фигуры для подконтрольных Chen юнитов",
+        "about": "Организует подконтрольных Chen юнитов в строи и фигуры, которые запускаются и останавливаются одной клавишей.",
+        "features": [
+          "Четыре режима: линия, хоровод, восьмёрка и пульс",
+          "Юниты занимают слоты перед началом движения",
+          "Темп фигуры ограничивается самым медленным юнитом",
+          "Оверлей показывает заказанные слоты и поводки к ним",
+          "Настраиваемые интервалы, радиус, скорость и темп приказов"
+        ],
+        "install": [
+          "Поместите `chen_circus.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Выберите режим и назначьте клавишу запуска."
+        ]
+      },
+      "en": {
+        "tagline": "formations and patterns for Chen's controlled units",
+        "about": "Arranges Chen's controlled units into formations and patterns that can be started and stopped with one key.",
+        "features": [
+          "Four modes: Line, Follow-the-Leader, Figure Eight, and Pulse",
+          "Units take their slots before movement begins",
+          "Pattern speed is limited by the slowest unit",
+          "Overlay shows the ordered slots and links to each unit",
+          "Configurable spacing, radius, speed, and order rate"
+        ],
+        "install": [
+          "Place `chen_circus.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Choose a mode and assign a start key."
+        ]
+      }
+    },
+    {
+      "id": "mana_void_killer",
+      "tag": "mana-void-killer",
+      "title": "Mana Void Killer",
+      "kind": "lua",
+      "category": "dota",
+      "file": "antimage_mana_void_en.lua",
+      "heroes": [
+        "antimage"
+      ],
+      "author": "Леха, Ваня и Виталик (Discord: mikropabalo)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/mana_void_killer",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=mana-void-killer&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mana_void_killer/antimage_mana_void_en.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/mana-void-killer-v1.0.0/antimage_mana_void_en.lua"
+      },
+      "ru": {
+        "tagline": "расчёт летального Mana Void за Anti-Mage",
+        "about": "Оценивает нехватку маны, автоатаки и выживаемость целей, чтобы выбирать момент применения Mana Void в режимах SOLO и COMBO.",
+        "features": [
+          "Симулирует автоатаки с учётом Mana Break и защиты цели",
+          "Оценивает потенциальные убийства от взрыва по области",
+          "Учитывает некоторые эффекты неуязвимости и спасения",
+          "Показывает над врагами оценку урона, число атак и прогноз убийства"
+        ],
+        "install": [
+          "Поместите `antimage_mana_void_en.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Настройки скрипта находятся в меню Anti-Mage."
+        ]
+      },
+      "en": {
+        "tagline": "calculates lethal Mana Void casts for Anti-Mage",
+        "about": "Estimates mana deficit, attack count, and target survivability to choose when to cast Mana Void in SOLO and COMBO modes.",
+        "features": [
+          "Simulates attacks with Mana Break and target defenses taken into account",
+          "Estimates potential kills from the area explosion",
+          "Accounts for selected invulnerability and save effects",
+          "Displays estimated damage, attacks required, and kill prediction above enemies"
+        ],
+        "install": [
+          "Place `antimage_mana_void_en.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Find the script settings in the Anti-Mage menu."
+        ]
+      }
+    },
+    {
+      "id": "lualingo",
+      "tag": "lualingo",
+      "title": "Lualingo",
+      "kind": "lua",
+      "category": "dota",
+      "file": "lualingo.zip",
+      "source_file": "lualingo.lua",
+      "archive_files": [
+        "lualingo.lua",
+        "lualingo/tasks.lua"
+      ],
+      "manual": true,
+      "author": "Леха, Ваня и Виталик (Discord: mikropabalo)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/lualingo",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=lualingo&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/lualingo-v1.0.0/lualingo.zip",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/lualingo-v1.0.0/lualingo.zip"
+      },
+      "ru": {
+        "tagline": "ежедневные уроки Lua и API Umbrella",
+        "about": "Тренажёр с ежедневными уроками, заданиями, стриком, опытом и адаптивной сложностью. Для синхронизации стрика требуется интернет.",
+        "features": [
+          "10 заданий в ежедневном уроке; ошибки возвращают задание в конец",
+          "Стрик по московскому времени, серверная синхронизация и до двух заморозок",
+          "12 юнитов обучения и шесть типов заданий",
+          "Опыт, уровни, календарь, адаптивная сложность и тренировка",
+          "Окно можно открыть из меню Scripts → Utility → Lualingo"
+        ],
+        "install": [
+          "Скачайте и распакуйте `lualingo.zip` в `umbrella\\scripts`.",
+          "Убедитесь, что после распаковки доступны `lualingo.lua` и `lualingo\\tasks.lua`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Scripts → Utility → Lualingo` и выберите «Открыть Lualingo»."
+        ]
+      },
+      "en": {
+        "tagline": "daily lessons in Lua and the Umbrella API",
+        "about": "A practice tool with daily lessons, exercises, streaks, experience, and adaptive difficulty. Internet access is required to sync the streak.",
+        "features": [
+          "10 tasks in a daily lesson; missed answers return to the end",
+          "Moscow-time streak, server synchronization, and up to two freezes",
+          "12 learning units and six exercise types",
+          "Experience, levels, calendar, adaptive difficulty, and practice",
+          "Open the window from Scripts → Utility → Lualingo"
+        ],
+        "install": [
+          "Download and extract `lualingo.zip` into `umbrella\\scripts`.",
+          "Make sure the extracted `lualingo.lua` and `lualingo\\tasks.lua` are both present.",
+          "Reload the Lua scripts.",
+          "Open `Scripts → Utility → Lualingo` and select Open Lualingo."
+        ]
+      }
     }
   ]
 }

@@ -499,6 +499,78 @@
         }
       ],
       "version_marker": "SCRIPT_VERSION"
+    },
+    {
+      "id": "excuses",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/excuses/excuses.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/excuses-v1.0.0/excuses.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)"
+    },
+    {
+      "id": "creep_obituary",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/creep_obituary/creep_obituary.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/creep-obituary-v1.0.0/creep_obituary.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)"
+    },
+    {
+      "id": "wrapped",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/wrapped/wrapped.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/wrapped-v1.0.0/wrapped.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)"
+    },
+    {
+      "id": "arc_warden_heist",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_heist/arc_warden_heist.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-heist-v1.0.0/arc_warden_heist.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "heroes": [
+        "arc_warden"
+      ]
+    },
+    {
+      "id": "chen_circus",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/chen_circus/chen_circus.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/chen-circus-v1.0.0/chen_circus.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "heroes": [
+        "chen"
+      ]
+    },
+    {
+      "id": "mana_void_killer",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mana_void_killer/antimage_mana_void_en.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/mana-void-killer-v1.0.0/antimage_mana_void_en.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "heroes": [
+        "antimage"
+      ]
+    },
+    {
+      "id": "lualingo",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/lualingo-v1.0.0/lualingo.zip",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/lualingo-v1.0.0/lualingo.zip",
+      "manual": true,
+      "needs_q_localizer": false,
+      "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)"
     }
   ]
 }

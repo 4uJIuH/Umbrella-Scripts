@@ -54,6 +54,8 @@ def script_source_path(script):
     script_dir = BASE / "scripts" / script["id"]
     if "package" in script:
         return script_dir / script["package"] / "Tinker.lua"
+    if "source_file" in script:
+        return script_dir / script["source_file"]
     return script_dir / script["file"]
 
 
@@ -80,6 +82,40 @@ def build_package(script):
     with zipfile.ZipFile(output, "w", zipfile.ZIP_DEFLATED) as archive:
         for path in files:
             archive.write(path, path.relative_to(package_dir).as_posix())
+    return output.relative_to(BASE).as_posix()
+
+
+def build_archive(script):
+    script_dir = BASE / "scripts" / script["id"]
+    filename = Path(script["file"])
+    if filename.name != script["file"] or filename.suffix.lower() != ".zip":
+        raise SystemExit("archive file must be a .zip filename")
+
+    names = script["archive_files"]
+    if not isinstance(names, list) or not names or len(names) > 64:
+        raise SystemExit("archive_files must contain 1-64 files")
+
+    files = []
+    for name in names:
+        if not isinstance(name, str) or "\\" in name:
+            raise SystemExit("unsupported archive file path: %r" % name)
+        relative = Path(name)
+        if relative.is_absolute() or any(part in ("", ".", "..") for part in relative.parts):
+            raise SystemExit("unsupported archive file path: %r" % name)
+        path = script_dir / relative
+        try:
+            path.resolve().relative_to(script_dir.resolve())
+        except ValueError:
+            raise SystemExit("archive file must stay inside %s" % script["id"])
+        if not path.is_file():
+            raise SystemExit("archive file not found: %s" % path)
+        files.append((name, path))
+
+    output = BASE / "dist" / filename.name
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(output, "w", zipfile.ZIP_DEFLATED) as archive:
+        for name, path in sorted(files):
+            archive.write(path, name)
     return output.relative_to(BASE).as_posix()
 
 
@@ -147,7 +183,7 @@ def write_manifest(script, tag, sha):
     source_path = script_source_path(script).relative_to(BASE).as_posix()
     data = {
         "version": version,
-        "url": release_url if "package" in script else
+        "url": release_url if "package" in script or "archive_files" in script else
                "https://raw.githubusercontent.com/%s/%s/%s" % (REPO, sha, source_path),
         "release": release_url,
     }
@@ -209,6 +245,8 @@ def main():
         path = ""
         if "package" in script:
             path = build_package(script)
+        elif "archive_files" in script:
+            path = build_archive(script)
         elif script["kind"] == "lua":
             path = "scripts/%s/%s" % (script["id"], script["file"])
         lines += ["found=true", "path=%s" % path, "title=%s" % script["title"],
