@@ -3,9 +3,13 @@
 автоматизирует ручной или автоматический абуз MoM и Sabre / automates manual or automatic Mask of Madness and Echo Sabre abuse
 
 <!-- releases:start -->
-Последняя версия: [`v2.0.0` — `mom_sabre_abuse.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mom_sabre_abuse/mom_sabre_abuse.lua)
+Скачать: [mom_sabre_abuse.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/mom-sabre-abuse-v2.0.0/mom_sabre_abuse.lua) — `mom-sabre-abuse-v2.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=mom-sabre-abuse&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`mom-sabre-abuse-v2.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/mom-sabre-abuse-v2.0.0) | 2026-10-13 | [mom_sabre_abuse.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/mom-sabre-abuse-v2.0.0/mom_sabre_abuse.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=mom-sabre-abuse&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
