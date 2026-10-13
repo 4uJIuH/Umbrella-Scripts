@@ -310,6 +310,8 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [MoM Sabre Abuse](scripts/mom_sabre_abuse) | 0 | `mom-sabre-abuse-v2.0.0` |
 | [Tinker 1x6 Farm](scripts/tinker_1x6_farm) | 0 | `tinker-1x6-farm-v1.0.0` |
 | [Forge Spirit Helper](scripts/forge_spirit_helper) | 0 | `forge-spirit-helper-v1.0.0` |
+| [Gank Threat](scripts/gank_threat) | 0 | `gank-threat-v1.0.0` |
+| [Tinker Helper](scripts/tinker_helper) | 0 | `tinker-helper-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

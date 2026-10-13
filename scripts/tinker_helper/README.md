@@ -3,9 +3,13 @@
 набор функций для фарма и автоматизации на Тинкере / a collection of farming and automation features for Tinker
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `tinker_helper.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_helper/tinker_helper.lua)
+Скачать: [tinker_helper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-helper-v1.0.0/tinker_helper.lua) — `tinker-helper-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=tinker-helper&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`tinker-helper-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/tinker-helper-v1.0.0) | 2026-10-13 | [tinker_helper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-helper-v1.0.0/tinker_helper.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=tinker-helper&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
