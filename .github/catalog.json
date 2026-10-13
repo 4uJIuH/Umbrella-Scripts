@@ -592,7 +592,7 @@
       "category": "auxiliary",
       "file": "script_manager.lua",
       "initial": {
-        "version": "1.5.0",
+        "version": "1.6.0",
         "date": "2026-10-13",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/script_manager/script_manager.lua"
       },
@@ -687,6 +687,56 @@
           "Reload the Lua scripts and enable it under `General → Dynamic Island`.",
           "The island also works without the companion app. For music and sounds, download <a href=\"https://github.com/qhols/DynamicIsland-Dota/releases/download/v2.5.3/media_bridge.exe\" target=\"_blank\" rel=\"noopener\"><code>media_bridge.exe</code></a> from the author's release and run it with Dota 2.",
           "See the author's <a href=\"https://github.com/qhols/DynamicIsland-Dota/blob/main/docs/autostart.md\" target=\"_blank\" rel=\"noopener\">bridge auto-start guide</a>."
+        ]
+      }
+    },
+    {
+      "id": "tinker_smart_escape",
+      "tag": "tinker-smart-escape",
+      "title": "Tinker Smart Escape",
+      "kind": "lua",
+      "category": "dota",
+      "file": "tinker_smart_escape.lua",
+      "author": "sataroz",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_smart_escape/tinker_smart_escape.lua"
+      },
+      "ru": {
+        "tagline": "побег Тинкера к курсору по одной клавише",
+        "about": "Tinker Smart Escape — скрипт для побега на Тинкере. Удерживайте клавишу, и герой будет двигаться к курсору, автоматически используя выбранные предметы и способности. Автор: sataroz. Сделано с помощью Antigravity.",
+        "features": [
+          "Движение к курсору с автоматическим применением доступных предметов и способностей",
+          "Поддержка Blink, Wind Waker, Glimmer Cape, Ethereal Blade, Crellas Crozier, Ghost, Eul's, Force Staff и Phase Boots",
+          "Smart Blink во время Wind Waker или перед окончанием невидимости Glimmer Cape",
+          "Постановка турелей позади Тинкера для толчка вперёд",
+          "Защита Ghost, Ethereal Blade или Crellas Crozier с учётом физических и магических угроз",
+          "Визуализация текущего действия, направления побега и радиуса Blink"
+        ],
+        "install": [
+          "Поместите `tinker_smart_escape.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Heroes → Hero List → Tinker → Smart Escape`.",
+          "Включите скрипт, назначьте клавишу побега и выберите предметы."
+        ]
+      },
+      "en": {
+        "tagline": "escape towards the cursor with a single key",
+        "about": "Tinker Smart Escape is an escape script for Tinker. Hold a key and the hero moves towards the cursor while automatically using selected items and abilities. Author: sataroz. Made with Antigravity.",
+        "features": [
+          "Moves towards the cursor and automatically uses available items and abilities",
+          "Supports Blink, Wind Waker, Glimmer Cape, Ethereal Blade, Crellas Crozier, Ghost, Eul's, Force Staff, and Phase Boots",
+          "Smart Blink during Wind Waker or just before Glimmer Cape invisibility ends",
+          "Places turrets behind Tinker to push him forward",
+          "Uses Ghost, Ethereal Blade, or Crellas Crozier for protection while accounting for physical and magical threats",
+          "Displays the current action, escape direction, and Blink range"
+        ],
+        "install": [
+          "Place `tinker_smart_escape.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Heroes → Hero List → Tinker → Smart Escape`.",
+          "Enable the script, bind the escape key, and select the items you want to use."
         ]
       }
     }

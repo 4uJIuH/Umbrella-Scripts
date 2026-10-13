@@ -71,9 +71,9 @@
     },
     {
       "id": "script_manager",
-      "version": "1.5.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/bf23bc87dfe853dfb377ce0a4f6b18f8051b7479/scripts/script_manager/script_manager.lua",
-      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.5.0/script_manager.lua",
+      "version": "1.6.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/script_manager/script_manager.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.6.0/script_manager.lua",
       "manual": false,
       "needs_q_localizer": false
     },
@@ -82,6 +82,14 @@
       "version": "2.5.3",
       "url": "https://raw.githubusercontent.com/qhols/DynamicIsland-Dota/v2.5.3/dynamic_island.lua",
       "release": "https://github.com/qhols/DynamicIsland-Dota/releases/download/v2.5.3/dynamic_island.lua",
+      "manual": false,
+      "needs_q_localizer": false
+    },
+    {
+      "id": "tinker_smart_escape",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_smart_escape/tinker_smart_escape.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-smart-escape-v1.0.0/tinker_smart_escape.lua",
       "manual": false,
       "needs_q_localizer": false
     }

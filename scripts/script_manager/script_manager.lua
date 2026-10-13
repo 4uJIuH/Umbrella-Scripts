@@ -316,7 +316,7 @@ local qLocalization = (function()
 	return lib
 end)()
 
-local VERSION = "1.5.0"
+local VERSION = "1.6.0"
 
 local localization = qLocalization.new({
 	en = {
@@ -404,6 +404,7 @@ local localization = qLocalization.new({
 		sm_item_bear = "Spirit Bear Pull",
 		sm_item_manager = "Script Manager",
 		sm_item_dynamic_island = "Dynamic Island",
+		sm_item_tinker_escape = "Tinker Smart Escape",
 		sm_desc_ttd = "Uses Tinker's turrets to dodge dangerous enemy abilities.",
 		sm_desc_farm = "Tinker farming script distributed as a ZIP package.",
 		sm_desc_shackleshot = "Automatically aims and casts Windranger's Shackleshot.",
@@ -414,6 +415,7 @@ local localization = qLocalization.new({
 		sm_desc_bear = "Uses Lone Druid's Spirit Bear to pull a creep wave.",
 		sm_desc_manager = "Checks script versions and installs selected updates.",
 		sm_desc_dynamic_island = "By \"ur2m\" (@qhols). The Lua script works alone; music and sounds need the optional media bridge.",
+		sm_desc_tinker_escape = "By sataroz. Hold one key to escape towards the cursor using Tinker abilities and items.",
 		sm_tip_settings = "Appearance",
 		sm_tip_back = "Back to scripts",
 		sm_tip_close = "Close",
@@ -515,6 +517,7 @@ local localization = qLocalization.new({
 		sm_item_bear = "Spirit Bear Pull",
 		sm_item_manager = "Script Manager",
 		sm_item_dynamic_island = "Dynamic Island",
+		sm_item_tinker_escape = "Tinker Smart Escape",
 		sm_desc_ttd = "Уклоняется от опасных способностей врагов с помощью турелей Тинкера.",
 		sm_desc_farm = "Скрипт для фарма за Тинкера. Распространяется ZIP-пакетом.",
 		sm_desc_shackleshot = "Автоматически наводит и применяет Shackleshot за Windranger.",
@@ -525,6 +528,7 @@ local localization = qLocalization.new({
 		sm_desc_bear = "Использует Spirit Bear Lone Druid для отвода волны крипов.",
 		sm_desc_manager = "Проверяет версии скриптов и устанавливает выбранные обновления.",
 		sm_desc_dynamic_island = "Автор: \"ur2m\" (GitHub: @qhols). Lua-скрипт работает отдельно; для музыки и звуков нужен дополнительный media bridge.",
+		sm_desc_tinker_escape = "Автор: sataroz. Побег Тинкера к курсору с использованием предметов и способностей по одной клавише.",
 		sm_tip_settings = "Оформление",
 		sm_tip_back = "Назад к скриптам",
 		sm_tip_close = "Закрыть",
@@ -566,6 +570,7 @@ local items = {
 	{ id = "spirit_bear_pull", key = "sm_item_bear", description_key = "sm_desc_bear", file = "lone_druid_bear_pull.lua", needs_localizer = true },
 	{ id = "script_manager", key = "sm_item_manager", description_key = "sm_desc_manager", file = "script_manager.lua" },
 	{ id = "dynamic_island_dota", key = "sm_item_dynamic_island", description_key = "sm_desc_dynamic_island", file = "dynamic_island.lua", version_marker = "SCRIPT_VERSION" },
+	{ id = "tinker_smart_escape", key = "sm_item_tinker_escape", description_key = "sm_desc_tinker_escape", file = "tinker_smart_escape.lua" },
 }
 
 local ITEM_STYLE = {
@@ -579,6 +584,7 @@ local ITEM_STYLE = {
 	spirit_bear_pull = { "users", PAL.purple },
 	script_manager = { "wrench", PAL.gray },
 	dynamic_island_dota = { "bolt", PAL.cyan },
+	tinker_smart_escape = { "arrow_right", PAL.orange },
 }
 for _, entry in ipairs(items) do
 	local style = ITEM_STYLE[entry.id]

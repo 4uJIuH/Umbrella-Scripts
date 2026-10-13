@@ -1,3 +1,7 @@
+**Обновление v1.6.0**
+
+- Добавлен Tinker Smart Escape от автора sataroz с установкой и обновлением через Script Manager.
+
 **Обновление v1.5.0**
 
 - Добавлен Dynamic Island от автора "ur2m" (GitHub: @qhols), версия 2.5.3.

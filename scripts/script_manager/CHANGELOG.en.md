@@ -1,3 +1,7 @@
+**Update v1.6.0**
+
+- Added Tinker Smart Escape by sataroz to Script Manager for installation and updates.
+
 **Update v1.5.0**
 
 - Added Dynamic Island by "ur2m" (GitHub: @qhols), version 2.5.3.
