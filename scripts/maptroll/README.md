@@ -3,9 +3,13 @@
 рисует текст на миникарте вручную или по таймеру / draws text on the minimap manually or on a timer
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `maptroll.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/maptroll/maptroll.lua)
+Скачать: [maptroll.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/maptroll-v1.0.0/maptroll.lua) — `maptroll-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=maptroll&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`maptroll-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/maptroll-v1.0.0) | 2026-10-13 | [maptroll.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/maptroll-v1.0.0/maptroll.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=maptroll&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
