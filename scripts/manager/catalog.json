@@ -1035,7 +1035,7 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-auto-miner-v1.1/techies_auto_miner.lua",
       "manual": false,
       "needs_q_localizer": true,
-      "author": "guzlichenok (Discord attribution not provided)",
+      "author": "Discord: guzlichenok",
       "heroes": [
         "techies"
       ],
@@ -1048,7 +1048,7 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/brood-camp-blocker-v1.6/brood_camp_blocker.lua",
       "manual": false,
       "needs_q_localizer": true,
-      "author": "guzlichenok (Discord attribution not provided)",
+      "author": "Discord: guzlichenok",
       "heroes": [
         "broodmother"
       ],
