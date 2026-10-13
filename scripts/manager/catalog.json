@@ -88,7 +88,7 @@
     {
       "id": "tinker_smart_escape",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_smart_escape/tinker_smart_escape.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/caba051502757c0f62ce970a4a4ae8e5bae9a264/scripts/tinker_smart_escape/tinker_smart_escape.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-smart-escape-v1.0.0/tinker_smart_escape.lua",
       "manual": false,
       "needs_q_localizer": false
