@@ -1066,6 +1066,126 @@
         "hoodwink"
       ],
       "version_marker": "NONE"
+    },
+    {
+      "id": "ringmaster_eul_combo",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/ringmaster-eul-combo-v1.0.0/ringmaster_eul_combo.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/ringmaster-eul-combo-v1.0.0/ringmaster_eul_combo.lua",
+      "manual": false,
+      "needs_q_localizer": true,
+      "author": "Yerka (Discord: argenov)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "spirit_breaker_charge",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-breaker-charge-v1.0.0/spirit_breaker_charge.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-breaker-charge-v1.0.0/spirit_breaker_charge.lua",
+      "manual": false,
+      "needs_q_localizer": true,
+      "author": "Yerka (Discord: argenov)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "ward_predictor",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/ward-predictor-v1.0.0/ward_predictor.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/ward-predictor-v1.0.0/ward_predictor.lua",
+      "manual": false,
+      "needs_q_localizer": true,
+      "author": "Yerka (Discord: argenov)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "invoker_ss",
+      "version": "138",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-ss-v138/invoker_ss.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-ss-v138/invoker_ss.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "L1 (Discord: rapses8); continuation: knoticoooo (Discord: knoticoooo_69011)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "sentry",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sentry-v1.0.0/sentry.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sentry-v1.0.0/sentry.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "okea (Discord: okea)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "changer",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/changer-v1.0.0/changer.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/changer-v1.0.0/changer.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Yerka (Discord: argenov)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "self_play_bot",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/self-play-v1.0.0/Self-Play.zip",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/self-play-v1.0.0/Self-Play.zip",
+      "manual": true,
+      "needs_q_localizer": false,
+      "author": "64qt (Discord: 32tq); latest update: zurux (Discord: zurux1337)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "farm_pattern",
+      "version": "2.5",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/farm-pattern-v2.5/farm_pattern_2_5.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/farm-pattern-v2.5/farm_pattern_2_5.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "kael'thas' (Discord: feit._)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "win_condition_engine",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/win-condition-engine-v1.0.0/win_condition_engine.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/win-condition-engine-v1.0.0/win_condition_engine.lua",
+      "manual": false,
+      "needs_q_localizer": true,
+      "author": "Yerka (Discord: argenov)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "invoker_beta",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-beta-v1.0.0/invoker.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-beta-v1.0.0/invoker.lua",
+      "manual": false,
+      "needs_q_localizer": true,
+      "author": "64qt (Discord: 32tq)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "kez_combo",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/kez-combo-v1.0.0/kez_combo.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/kez-combo-v1.0.0/kez_combo.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Forever (Discord: hideshot)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "techies_combo",
+      "version": "1.0.0",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-combo-v1.0.0/techies_combo.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-combo-v1.0.0/techies_combo.lua",
+      "manual": false,
+      "needs_q_localizer": true,
+      "author": "flatixxx (Discord: flatixxx)",
+      "version_marker": "NONE"
     }
   ]
 }

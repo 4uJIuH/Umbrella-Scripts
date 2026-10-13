@@ -52,10 +52,10 @@ def manifest_path(script):
 
 def script_source_path(script):
     script_dir = BASE / "scripts" / script["id"]
-    if "package" in script:
-        return script_dir / script["package"] / "Tinker.lua"
     if "source_file" in script:
         return script_dir / script["source_file"]
+    if "package" in script:
+        return script_dir / script["package"] / "Tinker.lua"
     return script_dir / script["file"]
 
 
@@ -120,6 +120,8 @@ def build_archive(script):
 
 
 def check_version(script, version):
+    if script.get("version_marker") == "NONE":
+        return
     text = script_source_path(script).read_text(encoding="utf-8")
     m = re.search(r'VERSION = "([^"]+)"', text)
     if not m or m.group(1) != version:
@@ -189,24 +191,26 @@ def write_manifest(script, tag, sha):
     }
     if "package" in script:
         package_dir = BASE / "scripts" / script["id"] / script["package"]
-        raw_base = "https://raw.githubusercontent.com/%s/%s/" % (REPO, sha)
-        data["install_url"] = raw_base + source_path
-        files = sorted(path for path in (package_dir / "lib").glob("*.lua") if path.is_file())
-        if not files:
-            raise SystemExit("package has no Lua files in lib: %s" % package_dir)
-        if len(files) > 64 or any(
-            not re.fullmatch(r"lib/[A-Za-z0-9_-]+\.lua",
-                             path.relative_to(package_dir).as_posix())
-            for path in files
-        ):
-            raise SystemExit("package contains unsupported library paths: %s" % package_dir)
-        data["files"] = [
-            {
-                "path": path.relative_to(package_dir).as_posix(),
-                "url": raw_base + path.relative_to(BASE).as_posix(),
-            }
-            for path in files
-        ]
+        lib_dir = package_dir / "lib"
+        if lib_dir.is_dir():
+            raw_base = "https://raw.githubusercontent.com/%s/%s/" % (REPO, sha)
+            data["install_url"] = raw_base + source_path
+            files = sorted(path for path in lib_dir.glob("*.lua") if path.is_file())
+            if not files:
+                raise SystemExit("package has no Lua files in lib: %s" % package_dir)
+            if len(files) > 64 or any(
+                not re.fullmatch(r"lib/[A-Za-z0-9_-]+\.lua",
+                                 path.relative_to(package_dir).as_posix())
+                for path in files
+            ):
+                raise SystemExit("package contains unsupported library paths: %s" % package_dir)
+            data["files"] = [
+                {
+                    "path": path.relative_to(package_dir).as_posix(),
+                    "url": raw_base + path.relative_to(BASE).as_posix(),
+                }
+                for path in files
+            ]
     elif script.get("package_files"):
         script_dir = BASE / "scripts" / script["id"]
         raw_base = "https://raw.githubusercontent.com/%s/%s/" % (REPO, sha)
@@ -223,7 +227,7 @@ def write_manifest(script, tag, sha):
             files.append({"path": name, "url": raw_base + path.relative_to(BASE).as_posix()})
         data["install_url"] = raw_base + source_path
         data["files"] = files
-    path = manifest_path(script)
+    path = BASE / "scripts" / script["id"] / "version.json"
     path.write_text(json.dumps(data, indent=2) + NL, encoding="utf-8", newline=NL)
     print("%s -> %s" % (path.relative_to(BASE).as_posix(), version))
     write_manager_catalog()

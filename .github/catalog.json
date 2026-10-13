@@ -4341,6 +4341,587 @@
           "Reload scripts. Menu: Hoodwink → Blast Off Catch."
         ]
       }
+    },
+    {
+      "id": "render_inspector",
+      "tag": "render-inspector",
+      "title": "Render Inspector",
+      "kind": "app",
+      "category": "auxiliary",
+      "file": "Render Inspector web tool",
+      "author": "64qt (Discord: 32tq)",
+      "source_url": "https://github.com/madonchik123/render-inspector",
+      "releases_url": "https://github.com/madonchik123/render-inspector/releases",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://madonchik123.github.io/render-inspector/",
+        "release": "https://github.com/madonchik123/render-inspector"
+      },
+      "ru": {
+        "tagline": "веб-инструмент для исследования отрисованных элементов",
+        "about": "Инструмент для скриптеров Umbrella: помогает исследовать содержимое экрана, в том числе элементы Render Target и Arc Panel. Исходники и веб-версия доступны в репозитории автора.",
+        "features": [
+          "просмотр элементов, которые рендерятся на экране",
+          "помогает разбирать Render Target",
+          "можно исследовать панели, включая Arc Panel"
+        ],
+        "install": [
+          "Нажмите «Скачать», чтобы открыть веб-инструмент.",
+          "Исходный код проекта доступен по ссылке GitHub."
+        ]
+      },
+      "en": {
+        "tagline": "a web tool for inspecting rendered screen elements",
+        "about": "A tool for Umbrella scripters to inspect what is rendered on screen, including Render Target elements and Arc Panel. The author's repository contains the source and web version.",
+        "features": [
+          "inspect elements rendered on screen",
+          "helps investigate Render Target output",
+          "explore panels such as Arc Panel"
+        ],
+        "install": [
+          "Click Download to open the web tool.",
+          "The project source is available from the GitHub link."
+        ]
+      }
+    },
+    {
+      "id": "ringmaster_eul_combo",
+      "tag": "ringmaster-eul-combo",
+      "title": "Ringmaster Eul Combo",
+      "kind": "lua",
+      "category": "dota",
+      "file": "ringmaster_eul_combo.lua",
+      "author": "Yerka (Discord: argenov)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/ringmaster_eul_combo",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=ringmaster-eul-combo&expanded=true",
+      "needs_q_localizer": true,
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/ringmaster-eul-combo-v1.0.0/ringmaster_eul_combo.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/ringmaster-eul-combo-v1.0.0/ringmaster_eul_combo.lua"
+      },
+      "ru": {
+        "tagline": "комбо Ринмастера через Eul, кнут и колесо",
+        "about": "Запускает прокаст по врагу у курсора: при необходимости врывается с Blink, поднимает цель в Eul, заряжает кнут к приземлению, затем отправляет колесо за спину и продолжает контроль предметами.",
+        "features": [
+          "рассчитывает заряд кнута по времени падения из Eul и пингу",
+          "после страха направляет колесо за спину цели",
+          "использует предметы и Hex для продолжения контроля"
+        ],
+        "install": [
+          "Поместите `ringmaster_eul_combo.lua` и `!_qLocalizer.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите скрипты и откройте настройки Ringmaster → Eul Combo."
+        ]
+      },
+      "en": {
+        "tagline": "Ringmaster combo with Eul, the whip, and the wheel",
+        "about": "Runs a combo on the enemy near the cursor: blinks in when needed, lifts the target with Eul, times a fully charged whip for landing, then sends the wheel behind the target and extends control with items.",
+        "features": [
+          "times whip charge using Eul landing time and ping",
+          "sends the wheel behind the target after the fear",
+          "uses items and Hex to extend control"
+        ],
+        "install": [
+          "Place `ringmaster_eul_combo.lua` and `!_qLocalizer.lua` in `Umbrella\\scripts`.",
+          "Reload scripts and open Ringmaster → Eul Combo settings."
+        ]
+      }
+    },
+    {
+      "id": "spirit_breaker_charge",
+      "tag": "spirit-breaker-charge",
+      "title": "Spirit Breaker Charge Combo",
+      "kind": "lua",
+      "category": "dota",
+      "file": "spirit_breaker_charge.lua",
+      "author": "Yerka (Discord: argenov)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/spirit_breaker_charge",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=spirit-breaker-charge&expanded=true",
+      "needs_q_localizer": true,
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-breaker-charge-v1.0.0/spirit_breaker_charge.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-breaker-charge-v1.0.0/spirit_breaker_charge.lua"
+      },
+      "ru": {
+        "tagline": "автоматические предметы и ускорения во время Charge of Darkness",
+        "about": "Подбирает тайминги предметов и способностей для разгона Spirit Breaker, сохраняя нужные баффы к столкновению.",
+        "features": [
+          "может применить Swift Blink перед Charge",
+          "использует ускорения во время разгона и защитные предметы перед ударом",
+          "показывает примерное время до столкновения"
+        ],
+        "install": [
+          "Поместите `spirit_breaker_charge.lua` и `!_qLocalizer.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите скрипты и откройте Spirit Breaker → Charge Combo."
+        ]
+      },
+      "en": {
+        "tagline": "automated items and speed boosts during Charge of Darkness",
+        "about": "Times Spirit Breaker's items and abilities during the charge, preserving selected buffs for the collision.",
+        "features": [
+          "can use Swift Blink before Charge",
+          "uses speed boosts during the charge and defensive items before impact",
+          "shows an estimated time until collision"
+        ],
+        "install": [
+          "Place `spirit_breaker_charge.lua` and `!_qLocalizer.lua` in `Umbrella\\scripts`.",
+          "Reload scripts and open Spirit Breaker → Charge Combo."
+        ]
+      }
+    },
+    {
+      "id": "ward_predictor",
+      "tag": "ward-predictor",
+      "title": "Ward Predictor",
+      "kind": "lua",
+      "category": "dota",
+      "file": "ward_predictor.lua",
+      "author": "Yerka (Discord: argenov)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/ward_predictor",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=ward-predictor&expanded=true",
+      "needs_q_localizer": true,
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/ward-predictor-v1.0.0/ward_predictor.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/ward-predictor-v1.0.0/ward_predictor.lua"
+      },
+      "ru": {
+        "tagline": "прогнозирует места установки вардов вражескими саппортами",
+        "about": "Использует историю матчей OpenDota и текущую ситуацию, чтобы оценить вероятные места для observer и sentry. Это прогноз, а не гарантия: доступность истории зависит от открытого профиля и разобранных матчей.",
+        "features": [
+          "сам находит вражеских саппортов или использует выбор из меню",
+          "учитывает сторону, время игры, роль и недавние матчи",
+          "показывает метки на земле и миникарте, а также статистику попаданий"
+        ],
+        "install": [
+          "Поместите `ward_predictor.lua` и `!_qLocalizer.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите скрипты и откройте General → Main → Ward Predictor."
+        ]
+      },
+      "en": {
+        "tagline": "predicts where enemy supports may place wards",
+        "about": "Uses OpenDota match history and the current game state to estimate likely observer and sentry locations. This is a prediction, not a guarantee; history availability depends on public profiles and parsed matches.",
+        "features": [
+          "finds enemy supports automatically or lets you select them",
+          "considers side, game time, role, and recent matches",
+          "draws ground and minimap markers and reports prediction accuracy"
+        ],
+        "install": [
+          "Place `ward_predictor.lua` and `!_qLocalizer.lua` in `Umbrella\\scripts`.",
+          "Reload scripts and open General → Main → Ward Predictor."
+        ]
+      }
+    },
+    {
+      "id": "invoker_ss",
+      "tag": "invoker-ss",
+      "title": "Invoker SS",
+      "kind": "lua",
+      "category": "dota",
+      "file": "invoker_ss.lua",
+      "author": "L1 (Discord: rapses8); continuation: knoticoooo (Discord: knoticoooo_69011)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/invoker_ss",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=invoker-ss&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "138",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-ss-v138/invoker_ss.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-ss-v138/invoker_ss.lua"
+      },
+      "ru": {
+        "tagline": "отдельный модуль Sun Strike с prediction и ручным наведением",
+        "about": "Standalone-модуль на базе архитектуры Invoker от Discord ID 393059037652058112. Модуль Sun Strike переработан автором Discord ID 316490958562787331; также указана помощь ChatGPT / OpenAI. Включает выбор цели, prediction, работу в тумане войны, Anti-Zigzag, ручной Sun под портретами и диагностику. Это не заявление о написании исходного каркаса с нуля.",
+        "features": [
+          "автоматический Sun Strike с выбором цели и prediction",
+          "ручной Sun Strike под портретами и обработка Fog of War",
+          "поддержка landing shots, краж Roshan/Tormentor и Cataclysm"
+        ],
+        "install": [
+          "Поместите `invoker_ss.lua` в `Umbrella\\scripts` и перезагрузите Lua-скрипты.",
+          "Не включайте одновременно другой скрипт, который управляет Sun Strike или Invoker."
+        ]
+      },
+      "en": {
+        "tagline": "standalone Sun Strike module with prediction and manual targeting",
+        "about": "A standalone module based on the Invoker framework by Discord user ID 393059037652058112. Its Sun Strike module was reworked by Discord user ID 316490958562787331; ChatGPT / OpenAI assistance is also credited. It includes target selection, prediction, Fog of War handling, Anti-Zigzag, portrait shots, and diagnostics. This is not a claim that the original framework was written from scratch.",
+        "features": [
+          "automatic Sun Strike with target selection and prediction",
+          "manual portrait shots and Fog of War handling",
+          "landing shots, Roshan/Tormentor steals, and Cataclysm support"
+        ],
+        "install": [
+          "Place `invoker_ss.lua` in `Umbrella\\scripts` and reload Lua scripts.",
+          "Do not enable another script that also controls Invoker or Sun Strike."
+        ]
+      }
+    },
+    {
+      "id": "sentry",
+      "tag": "sentry",
+      "title": "Sentry",
+      "kind": "lua",
+      "category": "dota",
+      "file": "sentry.lua",
+      "author": "okea (Discord: okea)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/sentry",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=sentry&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sentry-v1.0.0/sentry.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/sentry-v1.0.0/sentry.lua"
+      },
+      "ru": {
+        "tagline": "экспериментальный анализ поведения и угроз на карте",
+        "about": "Экспериментальный скрипт, который анализирует направление взгляда и движение врагов для оценки угроз. Автор делал его для себя; оценки эвристические и могут ошибаться.",
+        "features": [
+          "оценивает направление и перемещение противников",
+          "помогает наблюдать за потенциальными угрозами",
+          "результаты анализа следует считать экспериментальными"
+        ],
+        "install": [
+          "Поместите `sentry.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты."
+        ]
+      },
+      "en": {
+        "tagline": "experimental analysis of enemy behavior and map threats",
+        "about": "An experimental script that analyzes enemy facing and movement to estimate threats. The author built it for personal use; its heuristic assessments can be wrong.",
+        "features": [
+          "estimates enemy facing direction and movement",
+          "helps observe potential threats",
+          "treat the analysis as experimental"
+        ],
+        "install": [
+          "Place `sentry.lua` in `Umbrella\\scripts`.",
+          "Reload Lua scripts."
+        ]
+      }
+    },
+    {
+      "id": "changer",
+      "tag": "changer",
+      "title": "Changer",
+      "kind": "lua",
+      "category": "dota",
+      "file": "changer.lua",
+      "author": "Yerka (Discord: argenov)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/changer",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=changer&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/changer-v1.0.0/changer.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/changer-v1.0.0/changer.lua"
+      },
+      "ru": {
+        "tagline": "экспериментальный скрипт визуальных эффектов героя",
+        "about": "Применяет выбранные particle-эффекты к герою. Это экспериментальный визуальный changer, а не гарантированная замена предметов или косметики.",
+        "features": [
+          "содержит набор эффектов частиц",
+          "может накладывать выбранный эффект на героя",
+          "визуальный результат зависит от доступности эффекта в игре"
+        ],
+        "install": [
+          "Поместите `changer.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты."
+        ]
+      },
+      "en": {
+        "tagline": "experimental visual effects changer for your hero",
+        "about": "Applies selected particle effects to your hero. This is an experimental visual changer, not a guaranteed replacement for items or cosmetics.",
+        "features": [
+          "includes a selection of particle effects",
+          "can apply a chosen effect to your hero",
+          "visual results depend on effect availability in the game"
+        ],
+        "install": [
+          "Place `changer.lua` in `Umbrella\\scripts`.",
+          "Reload Lua scripts."
+        ]
+      }
+    },
+    {
+      "id": "self_play_bot",
+      "tag": "self-play",
+      "title": "Self Play",
+      "kind": "lua",
+      "category": "dota",
+      "file": "Self-Play.zip",
+      "package": "package",
+      "source_file": "package/Self Play.lua",
+      "author": "64qt (Discord: 32tq); latest update: zurux (Discord: zurux1337)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/self_play_bot",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=self-play&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/self-play-v1.0.0/Self-Play.zip",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/self-play-v1.0.0/Self-Play.zip"
+      },
+      "ru": {
+        "tagline": "автоматически управляет героем и выполняет игровые задачи",
+        "about": "Полноценный self-play-скрипт: действует вместе с командой, может искать Roshan и руны, выбирает роль и линию и использует сборки. Автор предупреждает, что скрипт не проверен на всех героях и может содержать ошибки.",
+        "features": [
+          "командные действия, Roshan и руны",
+          "выбор роли, линии и сборки для героя",
+          "архив включает главный файл, модули, данные и необходимые библиотеки"
+        ],
+        "install": [
+          "Распакуйте `Self-Play.zip` в папку `Umbrella\\scripts`, сохранив структуру файлов.",
+          "Перезагрузите скрипты. Меню: Scripts → Self Play → Main."
+        ]
+      },
+      "en": {
+        "tagline": "automatically controls a hero and handles in-game objectives",
+        "about": "A full self-play script that coordinates with the team, can pursue Roshan and runes, selects a role and lane, and uses builds. The author notes it has not been tested on every hero and may contain bugs.",
+        "features": [
+          "team play, Roshan, and rune objectives",
+          "selects a role, lane, and hero build",
+          "archive includes the main file, modules, data, and bundled libraries"
+        ],
+        "install": [
+          "Extract `Self-Play.zip` into `Umbrella\\scripts`, preserving its folder structure.",
+          "Reload scripts. Menu: Scripts → Self Play → Main."
+        ]
+      }
+    },
+    {
+      "id": "farm_pattern",
+      "tag": "farm-pattern",
+      "title": "Farm Pattern 2.5",
+      "kind": "lua",
+      "category": "dota",
+      "file": "farm_pattern_2_5.lua",
+      "author": "kael'thas' (Discord: feit._)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/farm_pattern",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=farm-pattern&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "2.5",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/farm-pattern-v2.5/farm_pattern_2_5.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/farm-pattern-v2.5/farm_pattern_2_5.lua"
+      },
+      "ru": {
+        "tagline": "строит и визуализирует маршруты фарма",
+        "about": "Считает выгодный маршрут по лесным лагерям и волнам крипов с учётом награды, времени перемещения и скорости зачистки.",
+        "features": [
+          "Greedy, DFS Optimal и Beam Search",
+          "учёт тумана войны, респауна лагерей, AoE и таймингов стакания",
+          "HUD с эффективностью, таймлайном и маршрутом на карте",
+          "импорт и экспорт настроек"
+        ],
+        "install": [
+          "Поместите `farm_pattern_2_5.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты."
+        ]
+      },
+      "en": {
+        "tagline": "plans and visualizes efficient farming routes",
+        "about": "Calculates routes through jungle camps and creep waves using rewards, travel time, and estimated clear speed.",
+        "features": [
+          "Greedy, DFS Optimal, and Beam Search algorithms",
+          "accounts for fog of war, camp respawns, AoE, and stack timing",
+          "HUD with efficiency, timeline, and map route",
+          "imports and exports settings"
+        ],
+        "install": [
+          "Place `farm_pattern_2_5.lua` in `Umbrella\\scripts`.",
+          "Reload Lua scripts."
+        ]
+      }
+    },
+    {
+      "id": "win_condition_engine",
+      "tag": "win-condition-engine",
+      "title": "Win Condition Engine",
+      "kind": "lua",
+      "category": "dota",
+      "file": "win_condition_engine.lua",
+      "author": "Yerka (Discord: argenov)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/win_condition_engine",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=win-condition-engine&expanded=true",
+      "needs_q_localizer": true,
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/win-condition-engine-v1.0.0/win_condition_engine.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/win-condition-engine-v1.0.0/win_condition_engine.lua"
+      },
+      "ru": {
+        "tagline": "подсказывает приоритетные действия по ситуации на карте",
+        "about": "Первая версия помощника, который оценивает ситуацию и предлагает направление действий: фарм, Roshan, поиск одиночной цели и другие варианты.",
+        "features": [
+          "оценивает текущую ситуацию на карте",
+          "сравнивает несколько возможных целей",
+          "ранняя версия; автор просит сообщать об ошибках"
+        ],
+        "install": [
+          "Поместите `win_condition_engine.lua` и `!_qLocalizer.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты."
+        ]
+      },
+      "en": {
+        "tagline": "suggests priorities based on the current map situation",
+        "about": "An early assistant that evaluates the game state and suggests options such as farming, Roshan, or finding an isolated target.",
+        "features": [
+          "evaluates the current map situation",
+          "compares several possible objectives",
+          "early version; the author welcomes bug reports"
+        ],
+        "install": [
+          "Place `win_condition_engine.lua` and `!_qLocalizer.lua` in `Umbrella\\scripts`.",
+          "Reload Lua scripts."
+        ]
+      }
+    },
+    {
+      "id": "invoker_beta",
+      "tag": "invoker-beta",
+      "title": "Invoker (beta)",
+      "kind": "lua",
+      "category": "dota",
+      "file": "invoker.lua",
+      "author": "64qt (Discord: 32tq)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/invoker_beta",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=invoker-beta&expanded=true",
+      "needs_q_localizer": true,
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-beta-v1.0.0/invoker.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-beta-v1.0.0/invoker.lua"
+      },
+      "ru": {
+        "tagline": "переработанный скрипт Invoker с динамическим прокастом",
+        "about": "Бета-версия с автоматическим подбором комбинаций, улучшенным Auto Sunstrike, Auto Sphere и дополнительными игровыми функциями. Автор отмечает, что скрипт ещё не полностью протестирован.",
+        "features": [
+          "динамически подбирает прокаст под ситуацию",
+          "Auto Sunstrike, Auto Sphere и быстрый Sun Strike под портретом",
+          "есть экспериментальные кражи Roshan и Tormentor"
+        ],
+        "install": [
+          "Поместите `invoker.lua` и `!_qLocalizer.lua` в `Umbrella\\scripts`.",
+          "Отключите стандартный скрипт Invoker, чтобы избежать конфликтов."
+        ]
+      },
+      "en": {
+        "tagline": "reworked Invoker script with dynamic spell combos",
+        "about": "A beta with automatic combo selection, improved Auto Sunstrike, Auto Sphere, and additional gameplay features. The author notes the script has not been fully tested.",
+        "features": [
+          "selects a combo dynamically for the current situation",
+          "Auto Sunstrike, Auto Sphere, and a quick portrait Sun Strike",
+          "experimental Roshan and Tormentor steals"
+        ],
+        "install": [
+          "Place `invoker.lua` and `!_qLocalizer.lua` in `Umbrella\\scripts`.",
+          "Disable the standard Invoker script to avoid conflicts."
+        ]
+      }
+    },
+    {
+      "id": "kez_combo",
+      "tag": "kez-combo",
+      "title": "Kez Combo",
+      "kind": "lua",
+      "category": "dota",
+      "file": "kez_combo.lua",
+      "author": "Forever (Discord: hideshot)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/kez_combo",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=kez-combo&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/kez-combo-v1.0.0/kez_combo.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/kez-combo-v1.0.0/kez_combo.lua"
+      },
+      "ru": {
+        "tagline": "комбо-скрипт Kez, сделанный для личного использования",
+        "about": "Дополнительный комбо-скрипт Kez. Автор предупреждает, что код экспериментальный и может требовать доработки.",
+        "features": [
+          "автоматизирует комбинации способностей Kez",
+          "экспериментальная версия",
+          "основное комбо Umbrella отключать не нужно"
+        ],
+        "install": [
+          "Поместите `kez_combo.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты; основное комбо Umbrella оставьте включённым."
+        ]
+      },
+      "en": {
+        "tagline": "Kez combo script built for personal use",
+        "about": "An additional Kez combo script. The author notes that the code is experimental and may need further work.",
+        "features": [
+          "automates Kez ability combos",
+          "experimental version",
+          "you do not need to disable Umbrella's main combo"
+        ],
+        "install": [
+          "Place `kez_combo.lua` in `Umbrella\\scripts`.",
+          "Reload scripts; keep Umbrella's main combo enabled."
+        ]
+      }
+    },
+    {
+      "id": "techies_combo",
+      "tag": "techies-combo",
+      "title": "Techies Combo",
+      "kind": "lua",
+      "category": "dota",
+      "file": "techies_combo.lua",
+      "author": "flatixxx (Discord: flatixxx)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/techies_combo",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=techies-combo&expanded=true",
+      "needs_q_localizer": true,
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-combo-v1.0.0/techies_combo.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-combo-v1.0.0/techies_combo.lua"
+      },
+      "ru": {
+        "tagline": "комбо Techies с режимами агрессии и максимального урона",
+        "about": "Улучшенное комбо Techies с возможностью блинкнуть из боя после завершения последовательности.",
+        "features": [
+          "агрессивный режим быстрее использует Hex, сокращая окно для доджа",
+          "режим максимального урона старается применить больше способностей и предметов",
+          "опциональный выход Blink после комбо"
+        ],
+        "install": [
+          "Поместите `techies_combo.lua` и `!_qLocalizer.lua` в `Umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты."
+        ]
+      },
+      "en": {
+        "tagline": "Techies combo with aggressive and maximum-damage modes",
+        "about": "An improved Techies combo with an optional Blink escape after the sequence finishes.",
+        "features": [
+          "aggressive mode uses Hex sooner, reducing the dodge window",
+          "maximum-damage mode tries to use more abilities and items",
+          "optional Blink-out after the combo"
+        ],
+        "install": [
+          "Place `techies_combo.lua` and `!_qLocalizer.lua` in `Umbrella\\scripts`.",
+          "Reload Lua scripts."
+        ]
+      }
     }
   ]
 }
