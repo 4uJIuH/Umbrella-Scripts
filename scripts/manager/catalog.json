@@ -19,12 +19,115 @@
     },
     {
       "id": "tinker_auto_farm",
-      "version": "1.0.3",
-      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-auto-farm-v1.0.3/Tinker-Auto-Farm.zip",
-      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-auto-farm-v1.0.3/Tinker-Auto-Farm.zip",
+      "version": "1.0.4",
+      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-auto-farm-v1.0.4/Tinker-Auto-Farm.zip",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-auto-farm-v1.0.4/Tinker-Auto-Farm.zip",
       "manual": true,
       "needs_q_localizer": false,
       "author": "4uJIuH",
+      "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/Tinker.lua",
+      "files": [
+        {
+          "path": "lib/ability_data.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/ability_data.lua"
+        },
+        {
+          "path": "lib/anim.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/anim.lua"
+        },
+        {
+          "path": "lib/channel_gate.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/channel_gate.lua"
+        },
+        {
+          "path": "lib/damage.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/damage.lua"
+        },
+        {
+          "path": "lib/dedup.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/dedup.lua"
+        },
+        {
+          "path": "lib/defense.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/defense.lua"
+        },
+        {
+          "path": "lib/draw.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/draw.lua"
+        },
+        {
+          "path": "lib/escape.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/escape.lua"
+        },
+        {
+          "path": "lib/farm.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/farm.lua"
+        },
+        {
+          "path": "lib/geometry.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/geometry.lua"
+        },
+        {
+          "path": "lib/hero_data.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/hero_data.lua"
+        },
+        {
+          "path": "lib/hero_value.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/hero_value.lua"
+        },
+        {
+          "path": "lib/item_data.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/item_data.lua"
+        },
+        {
+          "path": "lib/item_saves.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/item_saves.lua"
+        },
+        {
+          "path": "lib/lane.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/lane.lua"
+        },
+        {
+          "path": "lib/map.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/map.lua"
+        },
+        {
+          "path": "lib/map_data.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/map_data.lua"
+        },
+        {
+          "path": "lib/march_sim.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/march_sim.lua"
+        },
+        {
+          "path": "lib/native.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/native.lua"
+        },
+        {
+          "path": "lib/npc.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/npc.lua"
+        },
+        {
+          "path": "lib/order.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/order.lua"
+        },
+        {
+          "path": "lib/signal.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/signal.lua"
+        },
+        {
+          "path": "lib/target.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/target.lua"
+        },
+        {
+          "path": "lib/threat_data.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/threat_data.lua"
+        },
+        {
+          "path": "lib/timing.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/lib/timing.lua"
+        }
+      ],
       "heroes": [
         "tinker"
       ]
