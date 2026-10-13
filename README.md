@@ -374,7 +374,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | script | downloads | latest |
 | --- | --- | --- |
 | [Tinker Auto Farm](scripts/tinker_auto_farm) | 1 | `tinker-auto-farm-v1.0.4` |
-| [Script Manager](scripts/script_manager) | 14 | `script-manager-v2.2.0` |
+| [Script Manager](scripts/script_manager) | 19 | `script-manager-v2.2.0` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
@@ -431,7 +431,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Self Play](scripts/self_play_bot) | 1 | `self-play-v1.0.0` |
 | [Farm Pattern 2.5](scripts/farm_pattern) | 0 | `farm-pattern-v2.5` |
 | [Win Condition Engine](scripts/win_condition_engine) | 1 | `win-condition-engine-v1.0.0` |
-| [Invoker (beta)](scripts/invoker_beta) | 0 | `invoker-beta-v1.0.0` |
+| [Invoker (beta)](scripts/invoker_beta) | 1 | `invoker-beta-v1.0.0` |
 | [Kez Combo](scripts/kez_combo) | 1 | `kez-combo-v1.0.0` |
 | [Techies Combo](scripts/techies_combo) | 0 | `techies-combo-v1.0.0` |
 | [Lone Druid Auto Farm](scripts/ld_farm) | 0 | `ld-farm-v1.7` |
