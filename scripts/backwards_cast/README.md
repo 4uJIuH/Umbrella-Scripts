@@ -3,9 +3,13 @@
 кастует направленные способности без разворота героя / casts directional abilities without turning the hero
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `backwards_cast.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/backwards_cast/backwards_cast.lua)
+Скачать: [backwards_cast.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/backwards-cast-v1.0.0/backwards_cast.lua) — `backwards-cast-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=backwards-cast&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`backwards-cast-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/backwards-cast-v1.0.0) | 2026-10-13 | [backwards_cast.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/backwards-cast-v1.0.0/backwards_cast.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=backwards-cast&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

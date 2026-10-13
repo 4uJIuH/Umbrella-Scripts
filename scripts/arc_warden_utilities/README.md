@@ -3,9 +3,13 @@
 набор утилит для Arc Warden и Tempest Double / a set of utilities for Arc Warden and Tempest Double
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `arc_warden_utilities.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_utilities/arc_warden_utilities.lua)
+Скачать: [arc_warden_utilities.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-utilities-v1.0.0/arc_warden_utilities.lua) — `arc-warden-utilities-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-utilities&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`arc-warden-utilities-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/arc-warden-utilities-v1.0.0) | 2026-10-13 | [arc_warden_utilities.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-utilities-v1.0.0/arc_warden_utilities.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-utilities&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

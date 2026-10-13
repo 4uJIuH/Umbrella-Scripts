@@ -263,6 +263,8 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Botle Abuse](scripts/botle) | 0 | `botle-abuse-v1.0.0` |
 | [Action Recorder](scripts/action_recorder) | 0 | `action-recorder-v1.0.0` |
 | [Io Overcharge](scripts/io_overcharge) | 0 | `io-overcharge-v1.0.0` |
+| [Arc Warden Utilities](scripts/arc_warden_utilities) | 0 | `arc-warden-utilities-v1.0.0` |
+| [Back Cast](scripts/backwards_cast) | 0 | `backwards-cast-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
