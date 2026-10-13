@@ -1,12 +1,20 @@
 # Invoker Combo Switcher
 
-Переключает пресеты комбо в Combo Builder Инвокера двумя клавишами, без кликов по панели и назначения отдельной клавиши на каждый слот.
+переключает пресеты комбо Инвокера двумя клавишами / switches Invoker combo presets with two hotkeys
 
-- Переход к следующему и предыдущему слоту; по умолчанию используются стрелки вправо и влево
-- Автопрокрутка при удержании клавиши с настраиваемой задержкой и скоростью
+<!-- releases:start -->
+Последняя версия: [`v1.0.0` — `invoker_combo_switcher.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_combo_switcher/invoker_combo_switcher.lua)
+
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=invoker-combo-switcher&expanded=true)
+<!-- releases:end -->
+
+## Что умеет
+
+Позволяет листать слоты комбо-билдера Инвокера клавишами «Вперёд» и «Назад», без кликов по панели и отдельных кнопок для каждого слота. Автор: sataroz (Discord: sataroz).
+
+- Переключение слотов вперёд и назад; по умолчанию назначены стрелки вправо и влево
+- Автоповтор при удержании с настраиваемыми задержкой и скоростью
 - Зацикливание списка между последним слотом и Dynamic (D)
-
-Автор: sataroz (Discord: sataroz). Версия исходного скрипта указана в сообщении автора: [последняя версия](https://discord.com/channels/408315082439917578/1552723029195231313/1553726296117346374).
 
 ## Установка
 
@@ -19,15 +27,15 @@
 
 # Invoker Combo Switcher (English)
 
-Switches Invoker Combo Builder presets with two keys, without clicking the panel or assigning a separate key to every slot.
+## What it does
 
-- Move to the next or previous slot; Right and Left Arrow are the defaults
-- Hold-to-scroll with configurable start delay and repeat speed
-- Loop between the last slot and Dynamic (D)
+Scrolls through Invoker Combo Builder slots with Next and Previous keys, without clicking the panel or assigning a separate key to every slot. Author: sataroz (Discord: sataroz).
 
-Author: sataroz (Discord: sataroz). The source script was provided with the author's [latest-version post](https://discord.com/channels/408315082439917578/1552723029195231313/1553726296117346374).
+- Moves forward and backward through slots; Right and Left Arrow are the defaults
+- Supports hold-to-scroll with configurable start delay and repeat speed
+- Can loop between the last slot and Dynamic (D)
 
-## Installation
+## Install
 
 1. Place `invoker_combo_switcher.lua` in `umbrella\scripts`.
 2. Reload scripts with F7.

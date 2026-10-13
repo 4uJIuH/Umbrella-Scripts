@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`bloodrage-autocast-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/bloodrage-autocast-v1.0.0) | 2026-10-13 | [bloodrage.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/bloodrage-autocast-v1.0.0/bloodrage.lua) | 0 |
+| [`bloodrage-autocast-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/bloodrage-autocast-v1.0.0) | 2026-10-13 | [bloodrage.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/bloodrage-autocast-v1.0.0/bloodrage.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=bloodrage-autocast&expanded=true)
 <!-- releases:end -->

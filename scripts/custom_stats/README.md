@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`custom-stats-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/custom-stats-v1.0.0) | 2026-10-13 | [custom_stats.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/custom-stats-v1.0.0/custom_stats.lua) | 0 |
+| [`custom-stats-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/custom-stats-v1.0.0) | 2026-10-13 | [custom_stats.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/custom-stats-v1.0.0/custom_stats.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=custom-stats&expanded=true)
 <!-- releases:end -->

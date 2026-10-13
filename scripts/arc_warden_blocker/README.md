@@ -1,13 +1,25 @@
 # Arc Warden Blocker
 
-Перехватывает хуки Пуджа и перекаты Earth Spirit с помощью Tempest Double. Может поставить копию на траекторию хука, летящего в вас или союзника, либо переместить уже призванного клона. Реакция на перекат Earth Spirit настраивается отдельно. Скрипт работает только на Arc Warden и при наличии Pudge или Earth Spirit во вражеской команде.
+перехватывает хук Пуджа и перекат Earth Spirit копией Arc Warden / uses Arc Warden's clone to intercept Pudge hooks and Earth Spirit rolls
 
-- Перехват хуков, направленных на вас или союзников
-- Настраиваемый приоритет спасения себя или союзника
-- Настройки перехвата и уклонения от переката Earth Spirit
-- Отображение траектории хука
+<!-- releases:start -->
+Скачать: [arc_warden_blocker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-blocker-v1.0.0/arc_warden_blocker.lua) — `arc-warden-blocker-v1.0.0`, 2026-10-13
 
-Автор скрипта: sataroz (Discord: sataroz). Встроенная библиотека qLocalization: qfun (qfun_g9s).
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`arc-warden-blocker-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/arc-warden-blocker-v1.0.0) | 2026-10-13 | [arc_warden_blocker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-blocker-v1.0.0/arc_warden_blocker.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-blocker&expanded=true)
+<!-- releases:end -->
+
+## Что умеет
+
+Arc Warden Blocker использует Tempest Double, чтобы перехватить хук Пуджа, летящий в вас или союзника, а также перекат Earth Spirit. Скрипт активен только при игре на Arc Warden и наличии соответствующего героя у противника. Автор скрипта: sataroz (Discord: sataroz). Встроенная библиотека qLocalization: qfun (qfun_g9s).
+
+- Перехватывает хуки Пуджа копией на траектории или перемещением уже призванного клона
+- Позволяет включить спасение союзников и выбрать приоритет цели
+- Настраивает реакцию на перекат Earth Spirit: перехват, уклонение или оба варианта
+- Отключает фоновые проверки, если вы не играете на Arc Warden или у противника нет Pudge/Earth Spirit
 
 ## Установка
 
@@ -15,21 +27,35 @@
 2. Перезагрузите Lua-скрипты.
 3. Откройте `Heroes → Hero List → Arc Warden → Анти-Хук и Анти-Ролл`.
 
+## Что нового
+
+# 1.0.0
+
+- Первый релиз Arc Warden Blocker.
+- Добавлена защита от хуков Пуджа и переката Earth Spirit с помощью Tempest Double.
+
 ---
 
 # Arc Warden Blocker (English)
 
-Uses Tempest Double to intercept Pudge hooks and Earth Spirit rolls. It can place a clone on the path of a hook aimed at you or an ally, or move an existing clone into its path. The response to Earth Spirit's roll is configurable. The script only runs when you are playing Arc Warden and the enemy team has Pudge or Earth Spirit.
+## What it does
 
-- Intercepts hooks aimed at you or your allies
-- Configurable priority between saving yourself and an ally
-- Configurable interception and evasion behavior for Earth Spirit rolls
-- Displays the hook trajectory
+Arc Warden Blocker uses Tempest Double to intercept Pudge hooks aimed at you or an ally, as well as Earth Spirit rolls. It is active only when you are playing Arc Warden and the relevant enemy hero is present. Script author: sataroz (Discord: sataroz). Bundled qLocalization library by qfun (qfun_g9s).
 
-Script author: sataroz (Discord: sataroz). Bundled qLocalization library by qfun (qfun_g9s).
+- Intercepts Pudge hooks by placing a clone on their path or moving an existing clone
+- Can intercept hooks aimed at allies and lets you configure target priority
+- Configures the response to Earth Spirit's roll: intercept, evade, or both
+- Skips background checks unless you are Arc Warden and the enemy has Pudge or Earth Spirit
 
-## Installation
+## Install
 
 1. Place `arc_warden_blocker.lua` in `umbrella\scripts`.
 2. Reload the Lua scripts.
 3. Open `Heroes → Hero List → Arc Warden → Anti-Hook and Anti-Roll`.
+
+## Changelog
+
+# 1.0.0
+
+- Initial Arc Warden Blocker release.
+- Added Tempest Double interception for Pudge hooks and Earth Spirit rolls.

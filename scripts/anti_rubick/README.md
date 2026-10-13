@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`anti-rubick-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/anti-rubick-v1.0.0) | 2026-10-13 | [anti_rubick.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/anti-rubick-v1.0.0/anti_rubick.lua) | 0 |
+| [`anti-rubick-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/anti-rubick-v1.0.0) | 2026-10-13 | [anti_rubick.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/anti-rubick-v1.0.0/anti_rubick.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=anti-rubick&expanded=true)
 <!-- releases:end -->

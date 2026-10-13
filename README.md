@@ -32,6 +32,10 @@
 - [Bloodrage AutoCast](scripts/bloodrage_autocast) — автоприменение Bloodrage у Bloodseeker по переключаемому бинду
 - [Naga PT Abuse](scripts/naga_pt_abuse) — переключение Power Treads при Mirror Image и Manta
 - [Anti-Rubick](scripts/anti_rubick) — защита выбранных способностей от кражи Рубиком
+- [Arc Warden Blocker](scripts/arc_warden_blocker) — перехватывает хук Пуджа и перекат Earth Spirit копией Arc Warden
+- [Invoker Combo Switcher](scripts/invoker_combo_switcher) — переключает пресеты комбо Инвокера двумя клавишами
+- [Magnus Skewer Ally](scripts/magnus_skewer_ally) — направляет Skewer в выбранного союзника во встроенном комбо
+- [Better Better Techies Combo](scripts/better_better_techies_combo) — комбо на Techies с двумя режимами и автоматическим отходом
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -111,6 +115,10 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Bloodrage AutoCast](scripts/bloodrage_autocast) — toggle-bind auto-cast for Bloodseeker's Bloodrage
 - [Naga PT Abuse](scripts/naga_pt_abuse) — Power Treads switching for Mirror Image and Manta
 - [Anti-Rubick](scripts/anti_rubick) — protect selected spells from Rubick's Spell Steal
+- [Arc Warden Blocker](scripts/arc_warden_blocker) — uses Arc Warden's clone to intercept Pudge hooks and Earth Spirit rolls
+- [Invoker Combo Switcher](scripts/invoker_combo_switcher) — switches Invoker combo presets with two hotkeys
+- [Magnus Skewer Ally](scripts/magnus_skewer_ally) — redirects the built-in Magnus combo's Skewer towards an ally
+- [Better Better Techies Combo](scripts/better_better_techies_combo) — a Techies combo with two modes and an automatic disengage
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -173,10 +181,11 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [qLocalization](scripts/q_localizer) | 4 | `q-localizer-v1.0.0` |
 | [Script Manager](scripts/script_manager) | 5 | `script-manager-v2.0.1` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
-| [Custom Stats](scripts/custom_stats) | 0 | `custom-stats-v1.0.0` |
-| [Bloodrage AutoCast](scripts/bloodrage_autocast) | 0 | `bloodrage-autocast-v1.0.0` |
-| [Naga PT Abuse](scripts/naga_pt_abuse) | 0 | `naga-pt-abuse-v1.0.0` |
-| [Anti-Rubick](scripts/anti_rubick) | 0 | `anti-rubick-v1.0.0` |
+| [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
+| [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
+| [Naga PT Abuse](scripts/naga_pt_abuse) | 1 | `naga-pt-abuse-v1.0.0` |
+| [Anti-Rubick](scripts/anti_rubick) | 1 | `anti-rubick-v1.0.0` |
+| [Arc Warden Blocker](scripts/arc_warden_blocker) | 0 | `arc-warden-blocker-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
