@@ -83,7 +83,8 @@
       "url": "https://raw.githubusercontent.com/qhols/DynamicIsland-Dota/v2.5.3/dynamic_island.lua",
       "release": "https://github.com/qhols/DynamicIsland-Dota/releases/download/v2.5.3/dynamic_island.lua",
       "manual": false,
-      "needs_q_localizer": false
+      "needs_q_localizer": false,
+      "version_marker": "SCRIPT_VERSION"
     },
     {
       "id": "tinker_smart_escape",

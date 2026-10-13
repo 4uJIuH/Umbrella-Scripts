@@ -95,14 +95,17 @@ def write_manager_catalog():
         if (script.get("category") != "dota" and script["id"] != "script_manager") or not path:
             continue
         version = json.loads(path.read_text(encoding="utf-8"))
-        items.append({
+        item = {
             "id": script["id"],
             "version": version["version"],
             "url": version["url"],
             "release": version.get("release"),
             "manual": "package" in script,
             "needs_q_localizer": script.get("needs_q_localizer", False),
-        })
+        }
+        if script.get("version_marker") == "SCRIPT_VERSION":
+            item["version_marker"] = "SCRIPT_VERSION"
+        items.append(item)
 
     dependency = next(script for script in CATALOG["scripts"] if script["id"] == "q_localizer")
     feed = {

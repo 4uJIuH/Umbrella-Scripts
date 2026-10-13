@@ -591,53 +591,52 @@
       "kind": "lua",
       "category": "auxiliary",
       "file": "script_manager.lua",
+      "author": "watah3ll",
       "initial": {
-        "version": "1.6.0",
+        "version": "2.0.0",
         "date": "2026-10-13",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/script_manager/script_manager.lua"
       },
       "ru": {
-        "tagline": "проверка и установка обновлений Dota-скриптов по кнопке",
-        "about": "Менеджер скриптов Umbrella с перетаскиваемой панелью: автоматически проверяет весь каталог, сохраняет версии и время проверки и устанавливает обновления по запросу.",
+        "tagline": "каталог скриптов Umbrella с установкой и обновлениями",
+        "about": "Script Manager объединяет каталог скриптов в отдельной настраиваемой панели: показывает описания, авторов и версии, поддерживает поиск, фильтры по героям и категориям, а также установку и удаление.",
         "features": [
-          "Проверяет доступные версии по кнопке",
-          "Показывает скрипты, версии и статусы обновлений в переработанной панели с карточками, анимациями и подсказками",
-          "Настраивает тему, акцентный цвет, размытие фона, прозрачность и масштаб интерфейса",
-          "Поддерживает компактное отображение списка скриптов",
-          "Устанавливает обновления отдельных Dota-скриптов и перезагружает Script System",
-          "Сохраняет резервную копию заменяемого файла",
-          "Устанавливает обязательный `!_qLocalizer.lua`, если он требуется и отсутствует",
-          "Скачивает Tinker Auto Farm как ZIP для ручной распаковки",
-          "Показывает список скриптов, установленную и последнюю версии в отдельной панели",
-          "Автоматически проверяет каталог при запуске, сохраняет результаты и время последней проверки",
-          "Может обновлять собственную версию из каталога"
+          "Загружает общий каталог с сайта и показывает скрипты по категориям, героям и статусу установки",
+          "Отображает описания, возможности, автора, источник и доступную версию выбранного скрипта",
+          "Ищет скрипты и сортирует каталог, установленные файлы и доступные обновления",
+          "Автоматически проверяет каталог при запуске; проверку можно повторить вручную или настроить периодичность",
+          "Устанавливает и обновляет отдельные скрипты, создавая резервную копию заменяемого файла",
+          "Устанавливает `!_qLocalizer.lua`, если он нужен выбранному скрипту и ещё не установлен",
+          "Показывает ZIP-пакеты для скачивания и ручной распаковки",
+          "Позволяет менять тему, акцентный цвет и поведение перезапуска после установки",
+          "Поддерживает собственное обновление под тем же именем `script_manager.lua`"
         ],
         "install": [
           "Поместите `script_manager.lua` в `umbrella\\scripts`.",
+          "Если у вас отдельно установлен `script_market.lua`, удалите его, чтобы не запускать два каталога одновременно.",
           "Перезагрузите Lua-скрипты.",
-          "Откройте `Scripts → Scripts → Script Manager`, назначьте клавишу для `Open manager` (по умолчанию `Insert`), затем откройте панель и проверьте выбранный скрипт."
+          "Откройте `Scripts → Scripts → Script Manager`, включите его и назначьте клавишу для открытия панели."
         ]
       },
       "en": {
-        "tagline": "check and install Dota script updates on demand",
-        "about": "An Umbrella script manager with a draggable panel that checks the full catalog on startup, saves versions and check time, and installs updates on demand.",
+        "tagline": "an Umbrella script catalog with script installation and updates",
+        "about": "Script Manager brings the script catalog into a customizable panel. It shows descriptions, authors, and versions, supports search and hero/category filters, and installs or removes scripts.",
         "features": [
-          "Checks for available versions on demand",
-          "Shows scripts, versions, and update status in a redesigned panel with detail cards, animations, and tooltips",
-          "Customizes the theme, accent color, background blur, opacity, and interface scale",
-          "Supports a compact script-list layout",
-          "Installs individual Dota script updates and reloads the Script System",
-          "Keeps a backup of any file it replaces",
-          "Installs the required `!_qLocalizer.lua` when needed and missing",
-          "Downloads Tinker Auto Farm as a ZIP for manual extraction",
-          "Shows the script list and installed/latest versions in a dedicated panel",
-          "Checks the catalog on startup and saves results and the last check time",
-          "Can update itself from the catalog"
+          "Loads the shared website catalog and groups scripts by category, hero, and installation status",
+          "Shows a selected script's description, features, author, source, and available version",
+          "Searches and sorts the catalog, installed files, and available updates",
+          "Checks the catalog on startup, with manual refresh and configurable recheck intervals",
+          "Installs and updates individual scripts while keeping a backup of replaced files",
+          "Installs `!_qLocalizer.lua` when a selected script requires it and it is missing",
+          "Lists ZIP packages for download and manual extraction",
+          "Lets users change the theme, accent color, and post-install restart behavior",
+          "Supports self-updates while keeping the `script_manager.lua` filename"
         ],
         "install": [
           "Place `script_manager.lua` in `umbrella\\scripts`.",
+          "If `script_market.lua` is installed separately, remove it so two catalog windows do not run at once.",
           "Reload the Lua scripts.",
-          "Open `Scripts → Scripts → Script Manager`, assign a key to `Open manager` (defaults to `Insert`), then open the panel and check the selected script."
+          "Open `Scripts → Scripts → Script Manager`, enable it, and assign a key to open the panel."
         ]
       }
     },
@@ -648,6 +647,7 @@
       "kind": "lua",
       "category": "dota",
       "file": "dynamic_island.lua",
+      "version_marker": "SCRIPT_VERSION",
       "author": "\"ur2m\"",
       "author_github": "qhols",
       "source_url": "https://github.com/qhols/DynamicIsland-Dota",

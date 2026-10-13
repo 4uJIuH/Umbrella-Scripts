@@ -1,4 +1,6 @@
 --[[
+     ~ author: watah3ll
+
      ~ qLocalization
      ~ automatic localization wrapper for Lua menu interfaces
 
@@ -315,235 +317,238 @@ local qLocalization = (function()
 
 	return lib
 end)()
-
-local VERSION = "1.6.0"
-
 local localization = qLocalization.new({
 	en = {
 		sm_group_main = "Script Manager",
-		sm_open = "Open manager",
-		sm_open_tip = "Opens the Script Manager panel",
-		sm_ui_tab = "Script Manager Visuals",
-		sm_ui_group = "Interface",
-		sm_ui_subtitle = "Settings are saved automatically and applied to the panel",
-		sm_ui_enabled = "Enabled",
-		sm_ui_disabled = "Disabled",
-		sm_ui_back = "Back",
-		sm_ui_blur = "Background blur",
-		sm_ui_blur_tip = "Blur the game behind the manager",
-		sm_ui_blur_power = "Blur strength",
-		sm_ui_opacity = "Panel opacity",
-		sm_ui_scale = "Panel scale",
-		sm_ui_theme = "Theme",
-		sm_ui_accent = "Accent color",
-		sm_ui_compact = "Compact mode",
-		sm_ui_compact_tip = "Use tighter spacing in the script list",
+		sm_enable = "Enable",
+		sm_enable_tip = "Shows the Script Manager window",
+		sm_key = "Manager window",
+		sm_key_tip = "Opens and closes Script Manager",
+		sm_bind_name = "Script Manager",
+		sm_open = "Open or close the window",
+
+		sm_nav_all = "All",
+		sm_nav_installed = "Installed",
+		sm_nav_updates = "Updates",
+		sm_nav_heroes = "Heroes",
+		sm_heroes_with = "With scripts",
+		sm_heroes_all = "All heroes",
+		sm_empty_hero = "No scripts yet",
+		sm_empty_hero_d = "Nobody has made one for this hero",
+		sm_cats = "Categories",
+		sm_cat_dota = "Dota 2",
+		sm_cat_deadlock = "Deadlock",
+		sm_cat_auxiliary = "Tools",
+
+		sm_search = "Search",
+		sm_sort_catalog = "Catalog order",
+		sm_sort_name = "By name",
+		sm_sort_inst = "Installed first",
+
+		sm_upd_one = "%d update available",
+		sm_upd_few = "%d updates available",
+		sm_upd_many = "%d updates available",
+		sm_update_all = "Update all",
+
+		sm_install = "Install",
+		sm_installing = "Installing",
+		sm_download = "Download",
+		sm_update = "Update",
+		sm_installed = "Installed",
+		sm_remove = "Remove",
+		sm_remove_confirm = "Remove the file?",
+
+		sm_empty_search = "Nothing found",
+		sm_empty_search_d = "Try another name",
+		sm_empty_upd = "No updates",
+		sm_empty_upd_d = "Everything installed is up to date",
+		sm_empty = "Empty",
+		sm_empty_d = "Nothing here yet",
+		sm_loading = "Loading the catalog",
+		sm_loading_d = "One moment",
+		sm_err_catalog = "Catalog is unavailable",
+		sm_err_catalog_d = "Check the connection and press refresh",
+
+		sm_st_version = "Version",
+		sm_st_installed = "Installed",
+		sm_st_available = "Available",
+		sm_st_category = "Category",
+		sm_st_library = "Library",
+		sm_source = "Source",
+		sm_author = "Author",
+		sm_lib_nlz = "qLocalization",
+		sm_lib_none = "Not needed",
+		sm_about = "About",
+		sm_features = "Features",
+
+		sm_restart_t = "Restart needed",
+		sm_restart_one = "Changes in %s apply after a restart.",
+		sm_restart_n_one = "Changes in %d script apply after a restart.",
+		sm_restart_n_few = "Changes in %d scripts apply after a restart.",
+		sm_restart_n_many = "Changes in %d scripts apply after a restart.",
+		sm_restart_btn = "Restart scripts",
+		sm_later = "Later",
+		sm_restarted = "Restarting scripts",
+		sm_checked = "Checked at %s",
+		sm_checking = "Checking",
+		sm_check_failed = "Check failed",
+		sm_unchecked = "Not checked yet",
+		sm_err_t = "Something went wrong",
+		sm_ok = "Got it",
+		sm_manual_t = "Downloaded",
+		sm_manual_msg = "%s is in your scripts folder. Unpack it there and reload the scripts.",
+
+		sm_e_dir = "Scripts folder is unavailable",
+		sm_e_url = "Address is not trusted",
+		sm_e_valid = "Downloaded file failed validation",
+		sm_e_write = "Could not write the file",
+		sm_e_nlz = "qLocalization is missing in the catalog",
+		sm_e_net = "No answer from the server",
+		sm_e_parse = "Catalog could not be read",
+		sm_e_remove = "Could not remove the file",
+
+		sm_settings = "Settings",
+		sm_g_updates = "UPDATES",
+		sm_g_look = "APPEARANCE",
+		sm_set_check = "Check",
+		sm_check_start = "On launch",
+		sm_check_hour = "Every hour",
+		sm_set_beta = "Beta versions",
+		sm_set_restart = "Restart",
+		sm_restart_ask = "Ask",
+		sm_restart_now = "Right away",
+		sm_set_theme = "Theme",
+		sm_set_accent = "Accent",
 		sm_theme_graphite = "Graphite",
 		sm_theme_midnight = "Midnight",
 		sm_theme_warm = "Warm",
 		sm_theme_purple = "Purple",
-		sm_theme_red = "Red",
+		sm_theme_crimson = "Crimson",
+		sm_theme_forest = "Forest",
 		sm_theme_oled = "OLED",
-		sm_accent_red = "Red",
-		sm_accent_teal = "Teal",
 		sm_accent_blue = "Blue",
+		sm_accent_teal = "Teal",
+		sm_accent_green = "Green",
 		sm_accent_purple = "Purple",
 		sm_accent_orange = "Orange",
-		sm_accent_green = "Green",
-		sm_panel_title = "Script Manager",
-		sm_panel_subtitle = "UMBRELLA UPDATE CENTER",
-		sm_panel_scripts = "DOTA SCRIPTS",
-		sm_panel_selected = "SELECTED SCRIPT",
-		sm_panel_installed = "INSTALLED",
-		sm_panel_latest = "LATEST",
-		sm_panel_status = "ACTIVITY",
-		sm_panel_localizer_title = "qLocalization",
-		sm_panel_localizer_desc = "Author: qfun (qfun_g9s) · installed as !_qLocalizer.lua",
-		sm_panel_localizer_ready = "Installed",
-		sm_panel_not_detected = "Not detected",
-		sm_panel_not_checked = "Not checked",
-		sm_panel_current_badge = "UP TO DATE",
-		sm_panel_update_badge = "UPDATE",
-		sm_panel_manual_badge = "MANUAL ZIP",
-		sm_panel_installing_badge = "WORKING",
-		sm_panel_check_button = "Check all",
-		sm_panel_install_button = "Install update",
-		sm_panel_download_button = "Download ZIP",
-		sm_panel_localizer_button = "Install qLocalization",
-		sm_panel_last_checked = "Last checked: %s",
-		sm_panel_never_checked = "No successful checks yet",
-		sm_panel_cached = "CACHED",
-		sm_panel_checking = "CHECKING",
-		sm_panel_error_badge = "CHECK FAILED",
-		sm_panel_state_current = "UP TO DATE",
-		sm_panel_state_available = "UPDATE AVAILABLE",
-		sm_panel_state_manual = "PACKAGE",
-		sm_panel_state_error = "CHECK FAILED",
-		sm_panel_state_unknown = "NOT CHECKED",
-		sm_status_idle = "Select a script to see its saved update status",
-		sm_status_fetching = "Refreshing all script versions from GitHub...",
-		sm_status_checked = "Check complete (successful / failed): %s",
-		sm_status_cache_current = "Saved result: up to date at v%s",
-		sm_status_cache_available = "Saved update available: v%s",
-		sm_status_cache_manual = "Saved package version: v%s",
-		sm_status_cache_error = "Last check failed: %s",
-		sm_status_current = "Already up to date: %s",
-		sm_status_available = "Update available: %s",
-		sm_status_installed = "Installed %s. Reloading scripts...",
-		sm_status_manual = "ZIP is ready to download: %s",
-		sm_status_localizer = "qLocalization is already installed",
-		sm_status_localizer_installed = "qLocalization installed. Reloading scripts...",
-		sm_status_error = "Error: %s",
-		sm_item_ttd = "Tinker Turret Dodge",
-		sm_item_farm = "Tinker Auto Farm",
-		sm_item_shackleshot = "Auto Shackleshot",
-		sm_item_spark = "Auto Spark",
-		sm_item_runes = "Rune Destruction",
-		sm_item_earth = "Earth Spirit Kick Combo",
-		sm_item_hp = "HP/Mana 67 Ping",
-		sm_item_bear = "Spirit Bear Pull",
-		sm_item_manager = "Script Manager",
-		sm_item_dynamic_island = "Dynamic Island",
-		sm_item_tinker_escape = "Tinker Smart Escape",
-		sm_desc_ttd = "Uses Tinker's turrets to dodge dangerous enemy abilities.",
-		sm_desc_farm = "Tinker farming script distributed as a ZIP package.",
-		sm_desc_shackleshot = "Automatically aims and casts Windranger's Shackleshot.",
-		sm_desc_spark = "Automatically places and targets Arc Warden's Spark Wraiths.",
-		sm_desc_runes = "Sends controlled units to collect or destroy runes.",
-		sm_desc_earth = "Automates Earth Spirit's Blink and kick combo.",
-		sm_desc_hp = "Tracks HP and mana thresholds and sends chat alerts.",
-		sm_desc_bear = "Uses Lone Druid's Spirit Bear to pull a creep wave.",
-		sm_desc_manager = "Checks script versions and installs selected updates.",
-		sm_desc_dynamic_island = "By \"ur2m\" (@qhols). The Lua script works alone; music and sounds need the optional media bridge.",
-		sm_desc_tinker_escape = "By sataroz. Hold one key to escape towards the cursor using Tinker abilities and items.",
-		sm_tip_settings = "Appearance",
-		sm_tip_back = "Back to scripts",
-		sm_tip_close = "Close",
-		sm_tip_check = "Check every script for updates",
-		sm_ui_theme_sub = "Color scheme of the panel",
-		sm_ui_accent_sub = "Buttons, highlights and active items",
-		sm_ui_window = "Window",
-		sm_ui_defaults = "Reset",
-		sm_ui_scale_sub = "Size of the whole panel",
-		sm_ui_opacity_sub = "How see-through the panel is",
-		sm_row_update = "Update v%s",
-		sm_pill_updates = "%d updates",
-		sm_pill_current = "All up to date",
-		sm_chip_zip = "ZIP package",
-		sm_chip_localizer = "Needs qLocalization",
+		sm_accent_red = "Red",
+		sm_accent_pink = "Pink",
 	},
 	ru = {
 		sm_group_main = "Script Manager",
-		sm_open = "Открыть менеджер",
-		sm_open_tip = "Открывает панель Script Manager",
-		sm_ui_tab = "Визуал Script Manager",
-		sm_ui_group = "Внешний вид",
-		sm_ui_subtitle = "Настройки сохраняются автоматически и сразу применяются к панели",
-		sm_ui_enabled = "Включено",
-		sm_ui_disabled = "Выключено",
-		sm_ui_back = "Назад",
-		sm_ui_blur = "Размытие фона",
-		sm_ui_blur_tip = "Размывает игру за окном менеджера",
-		sm_ui_blur_power = "Сила размытия",
-		sm_ui_opacity = "Прозрачность панели",
-		sm_ui_scale = "Масштаб панели",
-		sm_ui_theme = "Тема",
-		sm_ui_accent = "Акцентный цвет",
-		sm_ui_compact = "Компактный режим",
-		sm_ui_compact_tip = "Уменьшает интервалы в списке скриптов",
+		sm_enable = "Включить",
+		sm_enable_tip = "Показывает окно Script Manager",
+		sm_key = "Окно менеджера",
+		sm_key_tip = "Открывает и закрывает Script Manager",
+		sm_bind_name = "Script Manager",
+		sm_open = "Открыть или закрыть окно",
+
+		sm_nav_all = "Все",
+		sm_nav_installed = "Установленные",
+		sm_nav_updates = "Обновления",
+		sm_nav_heroes = "Герои",
+		sm_heroes_with = "Со скриптами",
+		sm_heroes_all = "Все герои",
+		sm_empty_hero = "Скриптов пока нет",
+		sm_empty_hero_d = "Для этого героя еще никто не сделал",
+		sm_cats = "Категории",
+		sm_cat_dota = "Dota 2",
+		sm_cat_deadlock = "Deadlock",
+		sm_cat_auxiliary = "Инструменты",
+
+		sm_search = "Поиск",
+		sm_sort_catalog = "Как в каталоге",
+		sm_sort_name = "По названию",
+		sm_sort_inst = "Установленные сверху",
+
+		sm_upd_one = "Доступно %d обновление",
+		sm_upd_few = "Доступно %d обновления",
+		sm_upd_many = "Доступно %d обновлений",
+		sm_update_all = "Обновить все",
+
+		sm_install = "Установить",
+		sm_installing = "Установка",
+		sm_download = "Скачать",
+		sm_update = "Обновить",
+		sm_installed = "Установлен",
+		sm_remove = "Удалить",
+		sm_remove_confirm = "Удалить файл?",
+
+		sm_empty_search = "Ничего не найдено",
+		sm_empty_search_d = "Попробуй другое название",
+		sm_empty_upd = "Обновлений нет",
+		sm_empty_upd_d = "Все установленные скрипты последней версии",
+		sm_empty = "Пусто",
+		sm_empty_d = "Здесь пока ничего нет",
+		sm_loading = "Загружаю каталог",
+		sm_loading_d = "Секунду",
+		sm_err_catalog = "Каталог недоступен",
+		sm_err_catalog_d = "Проверь соединение и нажми обновить",
+
+		sm_st_version = "Версия",
+		sm_st_installed = "Установлена",
+		sm_st_available = "Доступна",
+		sm_st_category = "Категория",
+		sm_st_library = "Библиотека",
+		sm_source = "Источник",
+		sm_author = "Автор",
+		sm_lib_nlz = "qLocalization",
+		sm_lib_none = "Не нужна",
+		sm_about = "Описание",
+		sm_features = "Возможности",
+
+		sm_restart_t = "Нужен перезапуск",
+		sm_restart_one = "Изменения в %s вступят в силу после перезапуска.",
+		sm_restart_n_one = "Изменения в %d скрипте вступят в силу после перезапуска.",
+		sm_restart_n_few = "Изменения в %d скриптах вступят в силу после перезапуска.",
+		sm_restart_n_many = "Изменения в %d скриптах вступят в силу после перезапуска.",
+		sm_restart_btn = "Перезапустить скрипты",
+		sm_later = "Позже",
+		sm_restarted = "Перезапуск скриптов",
+		sm_checked = "Проверено в %s",
+		sm_checking = "Проверка",
+		sm_check_failed = "Не удалось проверить",
+		sm_unchecked = "Еще не проверялось",
+		sm_err_t = "Что-то пошло не так",
+		sm_ok = "Понятно",
+		sm_manual_t = "Скачано",
+		sm_manual_msg = "%s лежит в папке скриптов. Распакуй его там и перезагрузи скрипты.",
+
+		sm_e_dir = "Папка скриптов недоступна",
+		sm_e_url = "Адрес не из доверенных",
+		sm_e_valid = "Скачанный файл не прошел проверку",
+		sm_e_write = "Не удалось записать файл",
+		sm_e_nlz = "В каталоге нет qLocalization",
+		sm_e_net = "Сервер не ответил",
+		sm_e_parse = "Не удалось прочитать каталог",
+		sm_e_remove = "Не удалось удалить файл",
+
+		sm_settings = "Настройки",
+		sm_g_updates = "ОБНОВЛЕНИЯ",
+		sm_g_look = "ОФОРМЛЕНИЕ",
+		sm_set_check = "Проверять",
+		sm_check_start = "При запуске",
+		sm_check_hour = "Каждый час",
+		sm_set_beta = "Бета-версии",
+		sm_set_restart = "Перезапуск",
+		sm_restart_ask = "Спрашивать",
+		sm_restart_now = "Сразу",
+		sm_set_theme = "Тема",
+		sm_set_accent = "Акцент",
 		sm_theme_graphite = "Графит",
 		sm_theme_midnight = "Полночь",
-		sm_theme_warm = "Тёплая",
+		sm_theme_warm = "Теплая",
 		sm_theme_purple = "Фиолетовая",
-		sm_theme_red = "Красная",
+		sm_theme_crimson = "Бордовая",
+		sm_theme_forest = "Лесная",
 		sm_theme_oled = "OLED",
-		sm_accent_red = "Красный",
-		sm_accent_teal = "Бирюзовый",
 		sm_accent_blue = "Синий",
+		sm_accent_teal = "Бирюзовый",
+		sm_accent_green = "Зеленый",
 		sm_accent_purple = "Фиолетовый",
 		sm_accent_orange = "Оранжевый",
-		sm_accent_green = "Зелёный",
-		sm_panel_title = "Script Manager",
-		sm_panel_subtitle = "ЦЕНТР ОБНОВЛЕНИЙ UMBRELLA",
-		sm_panel_scripts = "СКРИПТЫ DOTA",
-		sm_panel_selected = "ВЫБРАННЫЙ СКРИПТ",
-		sm_panel_installed = "УСТАНОВЛЕНА",
-		sm_panel_latest = "ПОСЛЕДНЯЯ",
-		sm_panel_status = "СОСТОЯНИЕ",
-		sm_panel_localizer_title = "qLocalization",
-		sm_panel_localizer_desc = "Автор: qfun (qfun_g9s) · устанавливается как !_qLocalizer.lua",
-		sm_panel_localizer_ready = "Установлена",
-		sm_panel_not_detected = "Не обнаружена",
-		sm_panel_not_checked = "Не проверена",
-		sm_panel_current_badge = "АКТУАЛЬНА",
-		sm_panel_update_badge = "ОБНОВЛЕНИЕ",
-		sm_panel_manual_badge = "ZIP ВРУЧНУЮ",
-		sm_panel_installing_badge = "РАБОТАЕТ",
-		sm_panel_check_button = "Проверить все",
-		sm_panel_install_button = "Установить",
-		sm_panel_download_button = "Скачать ZIP",
-		sm_panel_localizer_button = "Установить qLocalization",
-		sm_panel_last_checked = "Последняя проверка: %s",
-		sm_panel_never_checked = "Успешных проверок ещё не было",
-		sm_panel_cached = "СОХРАНЕНО",
-		sm_panel_checking = "ПРОВЕРКА",
-		sm_panel_error_badge = "ОШИБКА",
-		sm_panel_state_current = "АКТУАЛЕН",
-		sm_panel_state_available = "ЕСТЬ ОБНОВЛЕНИЕ",
-		sm_panel_state_manual = "ZIP-ПАКЕТ",
-		sm_panel_state_error = "ОШИБКА",
-		sm_panel_state_unknown = "НЕ ПРОВЕРЕН",
-		sm_status_idle = "Выберите скрипт, чтобы увидеть сохранённый статус обновления",
-		sm_status_fetching = "Обновление версий всех скриптов с GitHub...",
-		sm_status_checked = "Проверка завершена (успешно / с ошибкой): %s",
-		sm_status_cache_current = "Сохранённый результат: актуальная версия v%s",
-		sm_status_cache_available = "Доступно обновление: v%s (сохранённый результат)",
-		sm_status_cache_manual = "Сохранённая версия пакета: v%s",
-		sm_status_cache_error = "Последняя проверка завершилась ошибкой: %s",
-		sm_status_current = "Установлена последняя версия: %s",
-		sm_status_available = "Доступно обновление: %s",
-		sm_status_installed = "Установлена версия %s. Перезагрузка скриптов...",
-		sm_status_manual = "ZIP готов к скачиванию: %s",
-		sm_status_localizer = "qLocalization уже установлен",
-		sm_status_localizer_installed = "qLocalization установлен. Перезагрузка скриптов...",
-		sm_status_error = "Ошибка: %s",
-		sm_item_ttd = "Tinker Turret Dodge",
-		sm_item_farm = "Tinker Auto Farm",
-		sm_item_shackleshot = "Auto Shackleshot",
-		sm_item_spark = "Auto Spark",
-		sm_item_runes = "Rune Destruction",
-		sm_item_earth = "Earth Spirit Kick Combo",
-		sm_item_hp = "HP/Mana 67 Ping",
-		sm_item_bear = "Spirit Bear Pull",
-		sm_item_manager = "Script Manager",
-		sm_item_dynamic_island = "Dynamic Island",
-		sm_item_tinker_escape = "Tinker Smart Escape",
-		sm_desc_ttd = "Уклоняется от опасных способностей врагов с помощью турелей Тинкера.",
-		sm_desc_farm = "Скрипт для фарма за Тинкера. Распространяется ZIP-пакетом.",
-		sm_desc_shackleshot = "Автоматически наводит и применяет Shackleshot за Windranger.",
-		sm_desc_spark = "Автоматически устанавливает Spark Wraith и выбирает цели за Arc Warden.",
-		sm_desc_runes = "Отправляет подконтрольных юнитов собирать или уничтожать руны.",
-		sm_desc_earth = "Автоматизирует Blink-комбо Earth Spirit с толчком.",
-		sm_desc_hp = "Отслеживает пороги здоровья и маны и отправляет сообщения в чат.",
-		sm_desc_bear = "Использует Spirit Bear Lone Druid для отвода волны крипов.",
-		sm_desc_manager = "Проверяет версии скриптов и устанавливает выбранные обновления.",
-		sm_desc_dynamic_island = "Автор: \"ur2m\" (GitHub: @qhols). Lua-скрипт работает отдельно; для музыки и звуков нужен дополнительный media bridge.",
-		sm_desc_tinker_escape = "Автор: sataroz. Побег Тинкера к курсору с использованием предметов и способностей по одной клавише.",
-		sm_tip_settings = "Оформление",
-		sm_tip_back = "Назад к скриптам",
-		sm_tip_close = "Закрыть",
-		sm_tip_check = "Проверить обновления всех скриптов",
-		sm_ui_theme_sub = "Цветовая схема панели",
-		sm_ui_accent_sub = "Кнопки, выделение и активные элементы",
-		sm_ui_window = "Окно",
-		sm_ui_defaults = "Сбросить",
-		sm_ui_scale_sub = "Размер всей панели",
-		sm_ui_opacity_sub = "Насколько прозрачна панель",
-		sm_row_update = "Обновление v%s",
-		sm_pill_updates = "Обновлений: %d",
-		sm_pill_current = "Всё актуально",
-		sm_chip_zip = "ZIP-пакет",
-		sm_chip_localizer = "Нужна qLocalization",
+		sm_accent_red = "Красный",
+		sm_accent_pink = "Розовый",
 	},
 })
 
@@ -551,753 +556,280 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local CATALOG_URL = "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/manager/catalog.json"
-local catalog_request_count = 0
+local VERSION = "2.0.0"
+
+local K = {
+	CFG = "script_market",
+	CATALOG = "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/manager/catalog.json",
+	META = "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/.github/catalog.json",
+	TRUST = {
+		"^https://raw%.githubusercontent%.com/[%w%-_%.]+/[%w%-_%.]+/",
+		"^https://github%.com/[%w%-_%.]+/[%w%-_%.]+/releases/download/",
+	},
+	NLZ_FILE = "!_qLocalizer.lua",
+	RECHECK = 3600,
+	RELOAD_DELAY = 0.6,
+	W = 920,
+	H = 640,
+	SIDE = 220,
+	TOP = 68,
+	SCALE_MIN = 70,
+	SCALE_MAX = 160,
+	WHEEL = 72,
+	QUERY_MAX = 32,
+	SINK_ALIVE = 0.4,
+	SINK_TIMEOUT = 1500,
+	ACCENT = { 76, 130, 247 },
+	ACCENT_TEXT = { 127, 166, 255 },
+	G = {
+		all = "\u{f03a}", installed = "\u{f058}", updates = "\u{f358}", heroes = "\u{f007}",
+		dota = "\u{f11b}", deadlock = "\u{f06d}", auxiliary = "\u{f0ad}",
+		search = "\u{f002}", clear = "\u{f057}", sort = "\u{f160}", refresh = "\u{f2f9}", sliders = "\u{f1de}",
+		back = "\u{f053}", down = "\u{f078}", up = "\u{f077}", check = "\u{f00c}", store = "\u{f54e}",
+	},
+}
+
+local T = {
+	t1 = { 245, 245, 247 },
+	t2 = { 199, 199, 204 },
+	t3 = { 154, 154, 160 },
+	t4 = { 124, 124, 130 },
+	t5 = { 229, 229, 234 },
+	white = { 255, 255, 255 },
+	pill = { 242, 242, 245 },
+	dark = { 17, 17, 19 },
+	red = { 255, 122, 114 },
+	red_bg = { 255, 92, 82, 41 },
+	knob_off = { 142, 142, 147 },
+}
+
+local THEME_ORDER = { "graphite", "midnight", "warm", "purple", "crimson", "forest", "oled" }
+
+local THEMES = {
+	graphite = { win = { 25, 25, 27 }, side = { 20, 20, 22 }, menu = { 38, 38, 41 }, card = { 32, 32, 35 }, dd = { 42, 42, 46 }, off = { 56, 56, 61 }, line = 18, field = 15 },
+	midnight = { win = { 17, 20, 31 }, side = { 13, 16, 26 }, menu = { 32, 38, 56 }, card = { 24, 29, 44 }, dd = { 37, 44, 65 }, off = { 52, 60, 84 }, line = 20, field = 16 },
+	warm = { win = { 26, 22, 19 }, side = { 21, 18, 15 }, menu = { 42, 36, 31 }, card = { 35, 30, 26 }, dd = { 47, 40, 34 }, off = { 64, 56, 48 }, line = 18, field = 15 },
+	purple = { win = { 22, 17, 32 }, side = { 17, 13, 26 }, menu = { 40, 31, 58 }, card = { 32, 25, 47 }, dd = { 46, 36, 67 }, off = { 62, 49, 88 }, line = 20, field = 16 },
+	crimson = { win = { 28, 16, 18 }, side = { 22, 12, 14 }, menu = { 46, 28, 31 }, card = { 38, 22, 25 }, dd = { 52, 32, 36 }, off = { 70, 44, 49 }, line = 20, field = 16 },
+	forest = { win = { 17, 25, 21 }, side = { 13, 20, 16 }, menu = { 32, 46, 39 }, card = { 24, 35, 29 }, dd = { 37, 52, 44 }, off = { 52, 70, 60 }, line = 20, field = 16 },
+	oled = { win = { 0, 0, 0 }, side = { 9, 9, 10 }, menu = { 26, 26, 28 }, card = { 15, 15, 17 }, dd = { 28, 28, 31 }, off = { 44, 44, 48 }, line = 23, field = 18 },
+}
+
+local ACCENT_ORDER = { "blue", "teal", "green", "purple", "orange", "red", "pink" }
+
+local ACCENTS = {
+	blue = { 76, 130, 247 },
+	teal = { 38, 166, 154 },
+	green = { 52, 168, 83 },
+	purple = { 138, 99, 210 },
+	orange = { 240, 140, 40 },
+	red = { 226, 75, 75 },
+	pink = { 232, 90, 150 },
+}
+
 local PAL = {
-	blue = { 10, 132, 255 }, indigo = { 94, 92, 230 }, orange = { 255, 159, 10 }, green = { 48, 209, 88 },
-	purple = { 191, 90, 242 }, teal = { 48, 176, 199 }, red = { 255, 69, 58 }, gray = { 142, 142, 147 },
-	cyan = { 100, 210, 255 }, yellow = { 255, 214, 10 }, pink = { 255, 55, 95 },
+	blue = { 90, 162, 255 }, green = { 92, 203, 114 }, orange = { 245, 164, 66 }, pink = { 255, 107, 138 },
+	purple = { 180, 140, 255 }, cyan = { 79, 203, 224 }, teal = { 48, 176, 199 }, red = { 255, 122, 114 },
+	gray = { 142, 142, 147 }, yellow = { 255, 214, 10 },
 }
 
-local items = {
-	{ id = "tinker_turret_dodge", key = "sm_item_ttd", description_key = "sm_desc_ttd", file = "tinker_turret_dodge.lua", needs_localizer = true },
-	{ id = "tinker_auto_farm", key = "sm_item_farm", description_key = "sm_desc_farm", file = "Tinker-Auto-Farm.zip", manual = true },
-	{ id = "auto_shackleshot", key = "sm_item_shackleshot", description_key = "sm_desc_shackleshot", file = "Auto_Shackleshot.lua", needs_localizer = true },
-	{ id = "auto_spark", key = "sm_item_spark", description_key = "sm_desc_spark", file = "Auto_Spark.lua", needs_localizer = true },
-	{ id = "rune_destruction", key = "sm_item_runes", description_key = "sm_desc_runes", file = "rune_units.lua" },
-	{ id = "earth_spirit_kick_combo", key = "sm_item_earth", description_key = "sm_desc_earth", file = "earth_spirit_kick_combo.lua", needs_localizer = true },
-	{ id = "hp_mana_67_ping", key = "sm_item_hp", description_key = "sm_desc_hp", file = "hp_mana_67_ping.lua", needs_localizer = true },
-	{ id = "spirit_bear_pull", key = "sm_item_bear", description_key = "sm_desc_bear", file = "lone_druid_bear_pull.lua", needs_localizer = true },
-	{ id = "script_manager", key = "sm_item_manager", description_key = "sm_desc_manager", file = "script_manager.lua" },
-	{ id = "dynamic_island_dota", key = "sm_item_dynamic_island", description_key = "sm_desc_dynamic_island", file = "dynamic_island.lua", version_marker = "SCRIPT_VERSION" },
-	{ id = "tinker_smart_escape", key = "sm_item_tinker_escape", description_key = "sm_desc_tinker_escape", file = "tinker_smart_escape.lua" },
+local PAL_ORDER = { "blue", "green", "orange", "pink", "purple", "cyan", "teal", "red", "yellow" }
+
+local STYLE = {
+	tinker_turret_dodge = { "\u{f3ed}", PAL.blue },
+	tinker_auto_farm = { "\u{f290}", PAL.orange },
+	auto_shackleshot = { "\u{f245}", PAL.teal },
+	auto_spark = { "\u{f0e7}", PAL.purple },
+	rune_destruction = { "\u{f06b}", PAL.pink },
+	earth_spirit_kick_combo = { "\u{f25a}", PAL.green },
+	hp_mana_67_ping = { "\u{f295}", PAL.red },
+	spirit_bear_pull = { "\u{f0c0}", PAL.cyan },
+	script_manager = { "\u{f0ad}", PAL.gray },
 }
 
-local ITEM_STYLE = {
-	tinker_turret_dodge = { "shield", PAL.blue },
-	tinker_auto_farm = { "bag", PAL.orange },
-	auto_shackleshot = { "pointer", PAL.teal },
-	auto_spark = { "bolt", PAL.indigo },
-	rune_destruction = { "gift", PAL.pink },
-	earth_spirit_kick_combo = { "hand", PAL.green },
-	hp_mana_67_ping = { "percent", PAL.red },
-	spirit_bear_pull = { "users", PAL.purple },
-	script_manager = { "wrench", PAL.gray },
-	dynamic_island_dota = { "bolt", PAL.cyan },
-	tinker_smart_escape = { "arrow_right", PAL.orange },
+local CAT_ORDER = { "dota", "deadlock", "auxiliary" }
+
+local SCRIPTS = {}
+local BY_ID = {}
+local CATS = {}
+
+local HEROES = {
+	{ "abaddon", "Abaddon" }, { "alchemist", "Alchemist" }, { "ancient_apparition", "Ancient Apparition" },
+	{ "antimage", "Anti-Mage" }, { "arc_warden", "Arc Warden" }, { "axe", "Axe" },
+	{ "bane", "Bane" }, { "batrider", "Batrider" }, { "beastmaster", "Beastmaster" },
+	{ "bloodseeker", "Bloodseeker" }, { "bounty_hunter", "Bounty Hunter" }, { "brewmaster", "Brewmaster" },
+	{ "bristleback", "Bristleback" }, { "broodmother", "Broodmother" }, { "centaur", "Centaur Warrunner" },
+	{ "chaos_knight", "Chaos Knight" }, { "chen", "Chen" }, { "clinkz", "Clinkz" },
+	{ "rattletrap", "Clockwerk" }, { "crystal_maiden", "Crystal Maiden" }, { "dark_seer", "Dark Seer" },
+	{ "dark_willow", "Dark Willow" }, { "dawnbreaker", "Dawnbreaker" }, { "dazzle", "Dazzle" },
+	{ "death_prophet", "Death Prophet" }, { "disruptor", "Disruptor" }, { "doom_bringer", "Doom" },
+	{ "dragon_knight", "Dragon Knight" }, { "drow_ranger", "Drow Ranger" }, { "earth_spirit", "Earth Spirit" },
+	{ "earthshaker", "Earthshaker" }, { "elder_titan", "Elder Titan" }, { "ember_spirit", "Ember Spirit" },
+	{ "enchantress", "Enchantress" }, { "enigma", "Enigma" }, { "faceless_void", "Faceless Void" },
+	{ "grimstroke", "Grimstroke" }, { "gyrocopter", "Gyrocopter" }, { "hoodwink", "Hoodwink" },
+	{ "huskar", "Huskar" }, { "invoker", "Invoker" }, { "wisp", "Io" },
+	{ "jakiro", "Jakiro" }, { "juggernaut", "Juggernaut" }, { "keeper_of_the_light", "Keeper of the Light" },
+	{ "kez", "Kez" }, { "kunkka", "Kunkka" }, { "largo", "Largo" },
+	{ "legion_commander", "Legion Commander" }, { "leshrac", "Leshrac" }, { "lich", "Lich" },
+	{ "life_stealer", "Lifestealer" }, { "lina", "Lina" }, { "lion", "Lion" },
+	{ "lone_druid", "Lone Druid" }, { "luna", "Luna" }, { "lycan", "Lycan" },
+	{ "magnataur", "Magnus" }, { "marci", "Marci" }, { "mars", "Mars" },
+	{ "medusa", "Medusa" }, { "meepo", "Meepo" }, { "mirana", "Mirana" },
+	{ "monkey_king", "Monkey King" }, { "morphling", "Morphling" }, { "muerta", "Muerta" },
+	{ "naga_siren", "Naga Siren" }, { "furion", "Nature's Prophet" }, { "necrolyte", "Necrophos" },
+	{ "night_stalker", "Night Stalker" }, { "nyx_assassin", "Nyx Assassin" }, { "ogre_magi", "Ogre Magi" },
+	{ "omniknight", "Omniknight" }, { "oracle", "Oracle" }, { "obsidian_destroyer", "Outworld Devourer" },
+	{ "pangolier", "Pangolier" }, { "phantom_assassin", "Phantom Assassin" }, { "phantom_lancer", "Phantom Lancer" },
+	{ "phoenix", "Phoenix" }, { "primal_beast", "Primal Beast" }, { "puck", "Puck" },
+	{ "pudge", "Pudge" }, { "pugna", "Pugna" }, { "queenofpain", "Queen of Pain" },
+	{ "razor", "Razor" }, { "riki", "Riki" }, { "ringmaster", "Ring Master" },
+	{ "rubick", "Rubick" }, { "sand_king", "Sand King" }, { "shadow_demon", "Shadow Demon" },
+	{ "nevermore", "Shadow Fiend" }, { "shadow_shaman", "Shadow Shaman" }, { "silencer", "Silencer" },
+	{ "skywrath_mage", "Skywrath Mage" }, { "slardar", "Slardar" }, { "slark", "Slark" },
+	{ "snapfire", "Snapfire" }, { "sniper", "Sniper" }, { "spectre", "Spectre" },
+	{ "spirit_breaker", "Spirit Breaker" }, { "storm_spirit", "Storm Spirit" }, { "sven", "Sven" },
+	{ "techies", "Techies" }, { "templar_assassin", "Templar Assassin" }, { "terrorblade", "Terrorblade" },
+	{ "tidehunter", "Tidehunter" }, { "shredder", "Timbersaw" }, { "tinker", "Tinker" },
+	{ "tiny", "Tiny" }, { "treant", "Treant Protector" }, { "troll_warlord", "Troll Warlord" },
+	{ "tusk", "Tusk" }, { "abyssal_underlord", "Underlord" }, { "undying", "Undying" },
+	{ "ursa", "Ursa" }, { "vengefulspirit", "Vengeful Spirit" }, { "venomancer", "Venomancer" },
+	{ "viper", "Viper" }, { "visage", "Visage" }, { "void_spirit", "Void Spirit" },
+	{ "warlock", "Warlock" }, { "weaver", "Weaver" }, { "windrunner", "Windranger" },
+	{ "winter_wyvern", "Winter Wyvern" }, { "witch_doctor", "Witch Doctor" }, { "skeleton_king", "Wraith King" },
+	{ "zuus", "Zeus" },
 }
-for _, entry in ipairs(items) do
-	local style = ITEM_STYLE[entry.id]
-	entry.glyph = style and style[1] or "bolt"
-	entry.tile = style and style[2] or PAL.gray
+
+local HERO_BY_ID = {}
+local HERO_KEY = {}
+for i, h in ipairs(HEROES) do
+	HERO_BY_ID[h[1]] = { id = h[1], name = h[2], order = i }
+	HERO_KEY[h[1]:gsub("[^%a%d]", "")] = h[1]
+	HERO_KEY[h[2]:lower():gsub("[^%a%d]", "")] = h[1]
 end
 
+local HERO_OF = {
+	tinker_turret_dodge = { "tinker" },
+	tinker_auto_farm = { "tinker" },
+	auto_shackleshot = { "windrunner" },
+	auto_spark = { "arc_warden" },
+	earth_spirit_kick_combo = { "earth_spirit" },
+	spirit_bear_pull = { "lone_druid" },
+	rune_destruction = {},
+	hp_mana_67_ping = {},
+	script_manager = {},
+	dynamic_island_dota = {},
+}
+
+local SORTS = {
+	{ id = "catalog", key = "sm_sort_catalog", cmp = function(a, b) return a.order < b.order end },
+	{ id = "name", key = "sm_sort_name", cmp = function(a, b) return a.title:lower() < b.title:lower() end },
+}
+
+local SETS = {
+	check = { "start", "hour" },
+	restart = { "ask", "now" },
+	theme = THEME_ORDER,
+	accent = ACCENT_ORDER,
+}
+
+local S = {
+	open = true, alpha = 0, wx = nil, wy = nil, lang = "en",
+	scale = Config.ReadInt(K.CFG, "scale", 100),
+	nav = "all", view = "list", sel = nil, hero = nil, hero_n = {}, hero_total = 0, hero_names = {}, images = {},
+	sort = Config.ReadString(K.CFG, "sort", "catalog"),
+	inst_first = Config.ReadInt(K.CFG, "inst_first", 0) == 1,
+	sort_open = false, menu = nil,
+	rows = {}, banner_n = 0,
+	query = "", focus = false, confirm = nil, qc = 0, qa = nil, q_off = 0, q_drag = false, q_click = 0, q_blink = 0,
+	foot = "idle", foot_until = 0, changed = {}, note = nil, reload_at = nil,
+	net = { state = "idle", at = 0, stamp = 0, err = nil, loaded = false },
+	inst = {}, busy = {}, nlz = nil, nlz_wait = nil, dir = nil,
+	set = {
+		check = Config.ReadString(K.CFG, "check", "start"),
+		beta = Config.ReadInt(K.CFG, "beta", 0) == 1,
+		restart = Config.ReadString(K.CFG, "restart", "ask"),
+		theme = Config.ReadString(K.CFG, "theme", "graphite"),
+		accent = Config.ReadString(K.CFG, "accent", "blue"),
+	},
+	scroll = 0, scroll_to = 0, scroll_t = -10, content_h = 0, view_h = 0, area = { 0, 0, 0, 0 }, page_key = "",
+	tweens = {}, swaps = {}, vers = {}, badges = {}, dt = 0, now = 0, press = nil, drag = nil, resize = nil,
+}
+
+do
+	local function valid(list, v, default)
+		for _, o in ipairs(list) do
+			if o == v then return v end
+		end
+		return default
+	end
+	for name, list in pairs(SETS) do
+		S.set[name] = valid(list, S.set[name], list[1])
+	end
+	local ids = {}
+	for i, o in ipairs(SORTS) do ids[i] = o.id end
+	S.sort = valid(ids, S.sort, SORTS[1].id)
+	S.scale = math.max(K.SCALE_MIN, math.min(K.SCALE_MAX, S.scale))
+end
+
+local C = THEMES[S.set.theme]
+
+local function apply_accent(id)
+	local a = ACCENTS[id]
+	for i = 1, 3 do
+		K.ACCENT[i] = a[i]
+		K.ACCENT_TEXT[i] = math.floor(a[i] + (255 - a[i]) * 0.35 + 0.5)
+	end
+end
+
+apply_accent(S.set.accent)
+
 local ui = {}
-local selected_index = math.max(1, math.min(#items,
-	Config.ReadInt("script_manager", "selected_index", 1)))
-local selected_release
-local installed_version
-local working = false
-local reload_at
-local can_install = false
-local can_download = false
-local localizer_installed = false
-local cached_releases = {}
-local last_checked_at = Config.ReadInt("script_manager", "last_checked_at", 0)
-local panel = { status_key = "sm_status_idle" }
 
 do
 	local tab = UI.Create("Scripts", "Scripts", "Script Manager")
-	tab:Icon("\u{f013}")
+	tab:Icon(K.G.store)
 
 	local page = tab:Create("Settings")
 	local g_main = page:Create("sm_group_main", Enum.GroupSide.Left)
-	ui.open = g_main:Bind("sm_open", Enum.ButtonCode.KEY_INSERT)
-	ui.open:ToolTip("sm_open_tip")
+
+	ui.enable = g_main:Switch("sm_enable", true, "\u{f011}")
+	ui.enable:ToolTip("sm_enable_tip")
+
+	ui.key = g_main:Bind("sm_key", Enum.ButtonCode.KEY_NONE, "\u{f11c}")
+	ui.key:ToolTip("sm_key_tip")
+	ui.key:Properties(L("sm_bind_name"))
+
+	ui.open = g_main:Button("sm_open", function() S.open = not S.open end)
+	ui.open:Icon("\u{f2d0}")
 end
-
-
-local function set_status(key, value)
-	panel.status_key = key
-	panel.status_value = value
-end
-
-local function set_actions(allow_install, allow_download)
-	can_install = allow_install == true
-	can_download = allow_download == true
-end
-
-local function scripts_path()
-	local dir = Engine.GetCheatDirectory()
-	if type(dir) ~= "string" or dir == "" then return nil end
-	if not dir:match("[\\/]$") then dir = dir .. "\\" end
-	return dir .. "scripts\\"
-end
-
-local function read_file(path)
-	local file = io.open(path, "rb")
-	if not file then return nil end
-	local text = file:read("a")
-	file:close()
-	return text
-end
-
-local function write_file(path, text)
-	local file, err = io.open(path, "wb")
-	if not file then return false, err end
-	local ok, write_err = file:write(text)
-	local closed, close_err = file:close()
-	if not ok then return false, write_err end
-	if not closed then return false, close_err end
-	return true
-end
-
-local function write_download(path, text)
-	local old_text = read_file(path)
-	local backup_path = path .. ".script-manager.bak"
-
-	if old_text and not read_file(backup_path) then
-		local backed_up, backup_error = write_file(backup_path, old_text)
-		if not backed_up then return false, backup_error or "could not create backup" end
-	end
-
-	local temp_path = path .. ".script-manager.tmp"
-	local saved, save_error = write_file(temp_path, text)
-	if not saved then return false, save_error or "could not write temporary file" end
-
-	if old_text then os.remove(path) end
-	local renamed, rename_error = os.rename(temp_path, path)
-	if not renamed then
-		os.remove(temp_path)
-		if old_text then write_file(path, old_text) end
-		return false, rename_error or "could not replace target file"
-	end
-	return true
-end
-
-local function trusted_url(url)
-	if type(url) ~= "string" then return false end
-	return url:match("^https://raw%.githubusercontent%.com/[%w%-_%.]+/[%w%-_%.]+/") ~= nil
-		or url:match("^https://github%.com/[%w%-_%.]+/[%w%-_%.]+/releases/download/") ~= nil
-end
-
-local function valid_version(version)
-	return type(version) == "string" and version:match("^%d+%.%d+%.%d+[%w%._%-]*$") ~= nil
-end
-
-local function compare_versions(left, right)
-	local la, lb, lc, ls = left:match("^(%d+)%.(%d+)%.(%d+)(.*)$")
-	local ra, rb, rc, rs = right:match("^(%d+)%.(%d+)%.(%d+)(.*)$")
-	if not la or not ra then return nil end
-	local lparts = { tonumber(la), tonumber(lb), tonumber(lc) }
-	local rparts = { tonumber(ra), tonumber(rb), tonumber(rc) }
-	for i = 1, 3 do
-		if lparts[i] < rparts[i] then return -1 end
-		if lparts[i] > rparts[i] then return 1 end
-	end
-	if ls == rs then return 0 end
-	if ls == "" then return 1 end
-	if rs == "" then return -1 end
-	if ls < rs then return -1 end
-	return 1
-end
-
-local function selected()
-	return items[selected_index]
-end
-
-local function selected_manifest(manifest, item)
-	if type(manifest) ~= "table" or manifest.schema ~= 1 or type(manifest.scripts) ~= "table" then
-		return nil, "invalid catalog format"
-	end
-	for _, entry in ipairs(manifest.scripts) do
-		if type(entry) == "table" and entry.id == item.id then
-			if not valid_version(entry.version) or not trusted_url(entry.url) then
-				return nil, "invalid release entry"
-			end
-			if entry.release ~= nil and not trusted_url(entry.release) then
-				return nil, "invalid fallback URL"
-			end
-			return entry
-		end
-	end
-	return nil, "script not found in catalog"
-end
-
-local function fetch(url, done)
-	local sent = HTTP.Request("GET", url, { timeout = 20 }, function(response)
-		local code = tonumber(response.code) or 0
-		if code == 200 and type(response.response) == "string" and #response.response > 0 then
-			done(response.response)
-		else
-			local detail = type(response.error_message) == "string" and response.error_message ~= ""
-				and response.error_message or ("HTTP " .. tostring(code))
-			done(nil, detail)
-		end
-	end, "script_manager")
-	if not sent then done(nil, "request was not sent") end
-end
-
-local function load_catalog(done)
-	catalog_request_count = catalog_request_count + 1
-	set_status("sm_status_fetching")
-	fetch(CATALOG_URL .. "?_=" .. tostring(os.time()) .. "-" .. tostring(catalog_request_count), function(text, err)
-		if not text then return done(nil, err) end
-		local ok, manifest = pcall(function() return JSON:decode(text) end)
-		if not ok or type(manifest) ~= "table" then return done(nil, "catalog could not be parsed") end
-		done(manifest)
-	end)
-end
-
-local function script_version(text, marker)
-	local pattern = marker == "SCRIPT_VERSION"
-		and 'SCRIPT_VERSION%s*=%s*"([^"]+)"'
-		or 'VERSION%s*=%s*"([^"]+)"'
-	return text and text:match(pattern) or nil
-end
-
-local function validate_script(text, version, marker)
-	if type(text) ~= "string" or #text < 100 or text:sub(1, 1) == "<" then return false end
-	return script_version(text, marker) == version
-end
-
-local function selected_path(item)
-	local dir = scripts_path()
-	if not dir then return nil end
-	return dir .. item.file
-end
-
-local function installed_script_version(item)
-	if item.manual then return nil end
-	local path = selected_path(item)
-	local text = path and read_file(path)
-	return script_version(text, item.version_marker)
-end
-
-local function cache_key(suffix, item)
-	return suffix .. "_" .. item.id
-end
-
-local function load_update_cache()
-	last_checked_at = math.max(0, Config.ReadInt("script_manager", "last_checked_at", 0))
-	for _, item in ipairs(items) do
-		local version = Config.ReadString("script_manager", cache_key("latest", item), "")
-		local url = Config.ReadString("script_manager", cache_key("url", item), "")
-		local release_url = Config.ReadString("script_manager", cache_key("release", item), "")
-		if valid_version(version) and trusted_url(url)
-			and (release_url == "" or trusted_url(release_url))
-		then
-			cached_releases[item.id] = {
-				version = version,
-				url = url,
-				release = release_url ~= "" and release_url or nil,
-				manual = item.manual == true,
-				status = Config.ReadString("script_manager", cache_key("status", item), ""),
-				error = Config.ReadString("script_manager", cache_key("error", item), ""),
-			}
-		end
-	end
-end
-
-local function save_cached_release(item, release, status, err)
-	local cached = {
-		version = release and release.version or nil,
-		url = release and release.url or nil,
-		release = release and release.release or nil,
-		manual = item.manual == true,
-		status = status,
-		error = err or "",
-	}
-	cached_releases[item.id] = cached
-	if release then
-		Config.WriteString("script_manager", cache_key("latest", item), release.version)
-		Config.WriteString("script_manager", cache_key("url", item), release.url)
-		Config.WriteString("script_manager", cache_key("release", item), release.release or "")
-	end
-	Config.WriteString("script_manager", cache_key("status", item), status)
-	Config.WriteString("script_manager", cache_key("error", item), cached.error)
-end
-
-local function last_checked_text()
-	if last_checked_at <= 0 then return L("sm_panel_never_checked") end
-	return string.format(L("sm_panel_last_checked"), os.date("%Y-%m-%d %H:%M", last_checked_at))
-end
-
-local function show_cached_selection()
-	local item = selected()
-	selected_release = item and cached_releases[item.id] or nil
-	installed_version = item and installed_script_version(item) or nil
-	set_actions(false, false)
-
-	local cached = selected_release
-	if not cached then
-		return set_status("sm_status_idle")
-	elseif cached.status == "error" then
-		return set_status("sm_status_cache_error", cached.error)
-	elseif item.manual then
-		set_actions(false, true)
-		return set_status("sm_status_cache_manual", cached.version)
-	end
-
-	local comparison = installed_version and compare_versions(installed_version, cached.version) or nil
-	if comparison == 0 or (comparison and comparison > 0) then
-		return set_status("sm_status_cache_current", comparison > 0 and installed_version or cached.version)
-	end
-	set_actions(true, false)
-	set_status("sm_status_cache_available", cached.version)
-end
-
-local function update_check()
-	if working then return end
-	working = true
-	set_actions(false, false)
-	load_catalog(function(manifest, err)
-		working = false
-		if not manifest then return set_status("sm_status_error", err) end
-
-		local checked_count, errors = 0, 0
-		for _, item in ipairs(items) do
-			local release, release_error = selected_manifest(manifest, item)
-			if release then
-				local state = "available"
-				if item.manual then
-					state = "manual"
-				else
-					local local_version = installed_script_version(item)
-					local comparison = local_version and compare_versions(local_version, release.version) or nil
-					if comparison == 0 or (comparison and comparison > 0) then
-						state = "current"
-					end
-				end
-				save_cached_release(item, release, state)
-				checked_count = checked_count + 1
-			else
-				local cached = cached_releases[item.id]
-				save_cached_release(item, cached, "error", release_error)
-				errors = errors + 1
-			end
-		end
-
-		last_checked_at = os.time()
-		Config.WriteInt("script_manager", "last_checked_at", last_checked_at)
-		show_cached_selection()
-		set_status("sm_status_checked", string.format("%d / %d", checked_count, errors))
-	end)
-end
-
-local function install_localizer(manifest, done)
-	local dir = scripts_path()
-	if not dir then return done(false, "cheat directory is unavailable") end
-	local path = dir .. "!_qLocalizer.lua"
-	if read_file(path) then return done(true) end
-
-	local dependency = manifest.q_localizer
-	if type(dependency) ~= "table" or not valid_version(dependency.version) or not trusted_url(dependency.url) then
-		return done(false, "qLocalization release is missing from catalog")
-	end
-	fetch(dependency.url, function(text, err)
-		if not text then return done(false, err) end
-		if #text < 1000 or not text:find("qLocalization", 1, true) then
-			return done(false, "downloaded qLocalization file failed validation")
-		end
-		local saved, save_error = write_download(path, text)
-		if not saved then return done(false, save_error) end
-		done(true, nil, true)
-	end)
-end
-
-local function fetch_release(item, release, done)
-	local urls = { release.url }
-	if release.release and release.release ~= release.url then
-		urls[#urls + 1] = release.release
-	end
-
-	local function try_url(index, previous_error)
-		if not urls[index] then return done(nil, previous_error or "download failed") end
-		fetch(urls[index], function(text, err)
-			local valid
-			if item.manual then
-				valid = text and text:sub(1, 2) == "PK"
-			else
-				valid = validate_script(text, release.version, item.version_marker)
-			end
-			if valid then return done(text) end
-			try_url(index + 1, err or "downloaded file failed validation")
-		end)
-	end
-
-	try_url(1)
-end
-
-local function install_selected()
-	local requested_item = selected()
-	if working or not requested_item or not selected_release then return end
-	if requested_item.manual then return set_status("sm_status_error", "use the ZIP download button") end
-	working = true
-	set_actions(false, false)
-	local dependency_installed = false
-	load_catalog(function(manifest, err)
-		if not manifest then
-			working = false
-			set_actions(true, false)
-			return set_status("sm_status_error", err)
-		end
-		if selected() ~= requested_item then
-			working = false
-			return
-		end
-		local release, release_error = selected_manifest(manifest, requested_item)
-		if not release then
-			working = false
-			set_actions(true, false)
-			return set_status("sm_status_error", release_error)
-		end
-		local function after_dependency(ok, dependency_error, installed_dependency)
-			if not ok then
-				working = false
-				set_actions(true, false)
-				return set_status("sm_status_error", dependency_error)
-			end
-			dependency_installed = installed_dependency == true
-			if requested_item.needs_localizer then
-				localizer_installed = true
-			end
-			fetch_release(requested_item, release, function(text, fetch_error)
-				if not text then
-					working = false
-					set_actions(true, false)
-					if dependency_installed then reload_at = os.clock() + 1.0 end
-					return set_status("sm_status_error", fetch_error)
-				end
-				local path = selected_path(requested_item)
-				if not path then
-					working = false
-					if dependency_installed then reload_at = os.clock() + 1.0 end
-					return set_status("sm_status_error", "cheat directory is unavailable")
-				end
-				local saved, save_error = write_download(path, text)
-				working = false
-				if not saved then
-					set_actions(true, false)
-					if dependency_installed then reload_at = os.clock() + 1.0 end
-					return set_status("sm_status_error", save_error)
-				end
-				set_status("sm_status_installed", release.version)
-				reload_at = os.clock() + 1.0
-			end)
-		end
-		if requested_item.needs_localizer then
-			install_localizer(manifest, after_dependency)
-		else
-			after_dependency(true)
-		end
-	end)
-end
-
-local function download_manual()
-	local requested_item = selected()
-	if working or not requested_item or not requested_item.manual or not selected_release then return end
-	local release = selected_release
-	working = true
-	set_actions(false, false)
-	fetch_release(requested_item, release, function(text, err)
-		if not text then
-			working = false
-			set_actions(false, true)
-			return set_status("sm_status_error", err)
-		end
-		local path = selected_path(requested_item)
-		if not path then
-			working = false
-			return set_status("sm_status_error", "cheat directory is unavailable")
-		end
-		local saved, save_error = write_download(path, text)
-		working = false
-		if not saved then
-			set_actions(false, true)
-			return set_status("sm_status_error", save_error)
-		end
-		set_status("sm_status_manual", release.version)
-	end)
-end
-
-local function install_localizer_button()
-	if working then return end
-	working = true
-	set_actions(false, false)
-	load_catalog(function(manifest, err)
-		if not manifest then
-			working = false
-			return set_status("sm_status_error", err)
-		end
-		install_localizer(manifest, function(ok, dependency_error, installed_dependency)
-			working = false
-			if not ok then return set_status("sm_status_error", dependency_error) end
-			if installed_dependency then
-				localizer_installed = true
-				set_status("sm_status_localizer_installed")
-				reload_at = os.clock() + 1.0
-			else
-				localizer_installed = true
-				set_status("sm_status_localizer")
-			end
-		end)
-	end)
-end
-
-local function selection_changed()
-	show_cached_selection()
-end
-
-local script = {}
-
-----------------------------------------------------------------------
--- Visual layer
-----------------------------------------------------------------------
 
 local ROUND = Enum.DrawFlags.RoundCornersAll
-local ROUND_TOP = Enum.DrawFlags.RoundCornersTop
-local ROUND_BOTTOM = Enum.DrawFlags.RoundCornersBottom
-local ROUND_NONE = Enum.DrawFlags.RoundCornersNone
-
-local K = {
-	W = 960,
-	H = 640,
-	TB = 52,
-	FT = 64,
-	P = 14,
-	SIDE = 292,
-	WHEEL = 80,
-	TIP_DELAY = 0.35,
-	SCALES = { 80, 90, 100, 110, 125, 150 },
-	GLYPH = {
-		gear = "\u{f013}", close = "\u{f00d}", check = "\u{f00c}", arrow_down = "\u{f063}",
-		alert = "\u{f06a}", info = "\u{f05a}", palette = "\u{f53f}", moon = "\u{f186}",
-		compress = "\u{f066}", blur = "\u{f042}", drop = "\u{f043}", eye = "\u{f06e}",
-		expand = "\u{f424}", shield = "\u{f3ed}", bag = "\u{f290}", pointer = "\u{f245}",
-		bolt = "\u{f0e7}", gift = "\u{f06b}", hand = "\u{f25a}", percent = "\u{f295}",
-		users = "\u{f0c0}", wrench = "\u{f0ad}", lang = "\u{f1ab}", chevron = "\u{f054}",
-		search = "\u{f002}",
-	},
-	THEMES = {
-		{ id = "graphite", main = { 15, 15, 16 }, side = { 22, 22, 24 }, bar = { 26, 26, 28 }, card = { 28, 28, 30 }, raised = { 44, 44, 46 }, pill = { 58, 58, 60 }, thumb = { 99, 99, 102 } },
-		{ id = "midnight", main = { 11, 14, 24 }, side = { 16, 20, 33 }, bar = { 20, 25, 40 }, card = { 22, 27, 43 }, raised = { 36, 44, 66 }, pill = { 49, 58, 84 }, thumb = { 84, 96, 130 } },
-		{ id = "warm", main = { 19, 16, 14 }, side = { 27, 23, 20 }, bar = { 31, 27, 23 }, card = { 34, 29, 25 }, raised = { 52, 45, 39 }, pill = { 66, 58, 51 }, thumb = { 108, 97, 88 } },
-		{ id = "purple", main = { 16, 12, 24 }, side = { 23, 17, 34 }, bar = { 27, 20, 40 }, card = { 30, 22, 44 }, raised = { 48, 36, 68 }, pill = { 62, 48, 86 }, thumb = { 104, 86, 136 } },
-		{ id = "red", main = { 22, 11, 13 }, side = { 31, 16, 18 }, bar = { 36, 19, 22 }, card = { 40, 21, 24 }, raised = { 60, 34, 38 }, pill = { 76, 45, 50 }, thumb = { 124, 84, 90 } },
-		{ id = "oled", main = { 0, 0, 0 }, side = { 8, 8, 9 }, bar = { 12, 12, 13 }, card = { 17, 17, 18 }, raised = { 34, 34, 36 }, pill = { 48, 48, 50 }, thumb = { 92, 92, 96 } },
-	},
-	ACCENTS = {
-		{ id = "red", c = PAL.red },
-		{ id = "teal", c = PAL.teal },
-		{ id = "blue", c = PAL.blue },
-		{ id = "purple", c = PAL.purple },
-		{ id = "orange", c = PAL.orange },
-		{ id = "green", c = PAL.green },
-	},
-	ACCENT_ALPHA = { accent = 255, select = 51, accent_soft = 36, accent_pill = 90 },
-	DEFAULTS = { blur = 1, blur_power = 70, opacity = 92, scale = 100, compact = 0, theme = "graphite", accent = "teal" },
-}
-
-local C = {
-	main = { 15, 15, 16 }, side = { 22, 22, 24 }, bar = { 26, 26, 28 }, card = { 28, 28, 30 },
-	raised = { 44, 44, 46 }, pill = { 58, 58, 60 }, thumb = { 99, 99, 102 },
-	text = { 255, 255, 255 }, text2 = { 235, 235, 245, 153 }, text3 = { 235, 235, 245, 77 }, text4 = { 235, 235, 245, 46 },
-	sep = { 84, 84, 88, 153 }, sep2 = { 84, 84, 88, 87 },
-	fill2 = { 120, 120, 128, 82 }, fill3 = { 118, 118, 128, 61 }, fill4 = { 118, 118, 128, 46 },
-	hover = { 255, 255, 255, 9 }, glow = { 255, 255, 255, 28 }, press = { 0, 0, 0, 46 },
-	border = { 255, 255, 255, 20 }, outline = { 255, 255, 255, 26 }, black = { 0, 0, 0 },
-	sb = { 235, 235, 245, 77 }, sb_hover = { 235, 235, 245, 140 },
-	accent = { 54, 186, 169 }, accent_soft = { 54, 186, 169, 36 }, accent_pill = { 54, 186, 169, 90 }, select = { 54, 186, 169, 51 },
-}
+local KEY = Enum.ButtonCode
 
 local function clamp(v, a, b) return v < a and a or (v > b and b or v) end
 local function ease_out(t) return 1 - (1 - t) * (1 - t) end
-local function ease_in_out(t)
-	if t < 0.5 then return 2 * t * t end
-	return 1 - ((-2 * t + 2) ^ 2) / 2
+local function ease_in_out(t) return t < 0.5 and 2 * t * t or 1 - (-2 * t + 2) ^ 2 / 2 end
+local function tr(x) return x[S.lang] ~= "" and x[S.lang] or x.en end
+
+local function plural(n, base)
+	if S.lang ~= "ru" then return L(base .. (n == 1 and "_one" or "_many")) end
+	local m10, m100 = n % 10, n % 100
+	if m10 == 1 and m100 ~= 11 then return L(base .. "_one") end
+	if m10 >= 2 and m10 <= 4 and (m100 < 12 or m100 > 14) then return L(base .. "_few") end
+	return L(base .. "_many")
 end
 
-local S = {
-	open = false,
-	alpha = 0,
-	now = os.clock(),
-	dt = 0.016,
-	tweens = {},
-	settings = false,
-	last_settings = false,
-	fade_t = 1,
-	detail_t = 1,
-	wx = nil,
-	wy = nil,
-	press = nil,
-	drag = nil,
-	slide = nil,
-	sb_drag = nil,
-	scroll = 0,
-	scroll_to = 0,
-	content_h = 0,
-	view_h = 0,
-	sb_until = 0,
-	tip = nil,
-	tip_shown = nil,
-	tip_since = 0,
-	pill = {},
-}
-
-----------------------------------------------------------------------
--- Settings (persisted in Config, same keys as before)
-----------------------------------------------------------------------
-
-local SET = {}
-
-local function find_id(list, id)
-	for _, entry in ipairs(list) do
-		if entry.id == id then return entry end
-	end
-	return list[1]
+local function short_ver(v)
+	return v:match("beta%.%d+$") or v:match("alpha%.%d+$") or v
 end
 
-local function nearest_scale(value)
-	local best = K.SCALES[1]
-	for _, option in ipairs(K.SCALES) do
-		if math.abs(option - value) < math.abs(best - value) then best = option end
-	end
-	return best
-end
-
-local function load_settings()
-	local d = K.DEFAULTS
-	SET.blur = Config.ReadInt("script_manager", "blur", d.blur) ~= 0 and 1 or 0
-	SET.blur_power = clamp(Config.ReadInt("script_manager", "blur_power", d.blur_power), 10, 100)
-	SET.opacity = clamp(Config.ReadInt("script_manager", "opacity", d.opacity), 45, 100)
-	SET.scale = nearest_scale(Config.ReadInt("script_manager", "ui_scale",
-		Config.ReadInt("script_manager", "scale", d.scale)))
-	SET.compact = Config.ReadInt("script_manager", "compact", d.compact) ~= 0 and 1 or 0
-	SET.theme = find_id(K.THEMES, Config.ReadString("script_manager", "theme", d.theme)).id
-	SET.accent = find_id(K.ACCENTS, Config.ReadString("script_manager", "accent", d.accent)).id
-end
-
-local function save_settings()
-	Config.WriteInt("script_manager", "blur", SET.blur)
-	Config.WriteInt("script_manager", "blur_power", SET.blur_power)
-	Config.WriteInt("script_manager", "opacity", SET.opacity)
-	Config.WriteInt("script_manager", "ui_scale", SET.scale)
-	Config.WriteInt("script_manager", "compact", SET.compact)
-	Config.WriteString("script_manager", "theme", SET.theme)
-	Config.WriteString("script_manager", "accent", SET.accent)
-end
-
-----------------------------------------------------------------------
--- Theme (animated palette transitions)
-----------------------------------------------------------------------
-
-local theme = { from = {}, to = {}, k = 1 }
-
-function theme.target()
-	local base = find_id(K.THEMES, SET.theme)
-	local pick = find_id(K.ACCENTS, SET.accent)
-	local out = {}
-	for name, c in pairs(base) do
-		if name ~= "id" then out[name] = { c[1], c[2], c[3], c[4] or 255 } end
-	end
-	for name, alpha in pairs(K.ACCENT_ALPHA) do
-		out[name] = { pick.c[1], pick.c[2], pick.c[3], alpha }
-	end
-	return out
-end
-
-function theme.tick(dt)
-	if theme.k >= 1 then return end
-	theme.k = math.min(1, theme.k + dt / 0.3)
-	local e = ease_in_out(theme.k)
-	for name, c in pairs(theme.to) do
-		local from, dest = theme.from[name], C[name]
-		for i = 1, 4 do dest[i] = from[i] + (c[i] - from[i]) * e end
-	end
-end
-
-function theme.set(instant)
-	theme.to, theme.from, theme.k = theme.target(), {}, 0
-	for name in pairs(theme.to) do
-		local d = C[name]
-		theme.from[name] = { d[1], d[2], d[3], d[4] or 255 }
-	end
-	if instant then theme.tick(0.3) end
-end
-
-local function reset_settings()
-	local d = K.DEFAULTS
-	SET.blur, SET.blur_power, SET.opacity = d.blur, d.blur_power, d.opacity
-	SET.scale, SET.compact, SET.theme, SET.accent = d.scale, d.compact, d.theme, d.accent
-	save_settings()
-	theme.set()
-end
-
-load_settings()
-theme.set(true)
-
-----------------------------------------------------------------------
--- Animation + hit-testing
-----------------------------------------------------------------------
-
-local anim = {}
-
-function anim.tween(key, target, time, curve)
-	local t = S.tweens[key]
-	if not t then
-		t = { from = target, to = target, v = target, k = 1 }
-		S.tweens[key] = t
-	end
-	if t.to ~= target then t.from, t.to, t.k = t.v, target, 0 end
-	if t.k < 1 then
-		t.k = math.min(1, t.k + S.dt / time)
-		t.v = t.from + (t.to - t.from) * (curve or ease_out)(t.k)
+local function save(key, value)
+	if type(value) == "number" then
+		Config.WriteInt(K.CFG, key, value)
 	else
-		t.v = t.to
+		Config.WriteString(K.CFG, key, value)
 	end
-	return t.v
 end
-
-local HOVER_KEY = setmetatable({}, { __index = function(t, id)
-	local v = "hv:" .. id
-	t[id] = v
-	return v
-end })
-
-function anim.hover(id, on)
-	return anim.tween(HOVER_KEY[id], on and 1 or 0, 0.12)
-end
-
-local hit = { list = {}, prev = {}, hover = nil, clip = nil }
-
-function hit.begin()
-	hit.prev, hit.list, hit.clip = hit.list, {}, nil
-	local mx, my = Input.GetCursorPos()
-	hit.hover = nil
-	for i = #hit.prev, 1, -1 do
-		local h = hit.prev[i]
-		if mx >= h[1] and mx < h[3] and my >= h[2] and my < h[4] then
-			hit.hover = h[5]
-			break
-		end
-	end
-	if S.press and hit.hover ~= S.press.id then hit.hover = nil end
-end
-
-function hit.is(id) return hit.hover == id end
-
-function hit.at(mx, my)
-	for i = #hit.list, 1, -1 do
-		local h = hit.list[i]
-		if mx >= h[1] and mx < h[3] and my >= h[2] and my < h[4] then return h end
-	end
-	return nil
-end
-
-----------------------------------------------------------------------
--- Fonts / drawing helpers
-----------------------------------------------------------------------
 
 local asset = { fonts = {}, sizes = {} }
 
@@ -1311,38 +843,204 @@ function asset.font(weight)
 end
 
 function asset.icons()
-	if not asset.fonts.icon then
-		asset.fonts.icon = Render.LoadFont("FontAwesomeEx", Enum.FontCreate.FONTFLAG_ANTIALIAS, 400)
+	local f = asset.fonts.icon
+	if not f then
+		f = Render.LoadFont("FontAwesomeEx", Enum.FontCreate.FONTFLAG_ANTIALIAS, 400)
+		asset.fonts.icon = f
 	end
-	return asset.fonts.icon
+	return f
+end
+
+function asset.hero(id)
+	local img = S.images[id]
+	if img == nil then
+		img = Render.LoadImage("panorama/images/heroes/icons/npc_dota_hero_" .. id .. "_png.vtex_c")
+		if type(img) ~= "number" or img == 0 then img = false end
+		S.images[id] = img
+	end
+	return img
 end
 
 function asset.size(font, px, str)
-	local by_font = asset.sizes[font]
-	if not by_font then
-		by_font = {}
-		asset.sizes[font] = by_font
-	end
-	local by_px = by_font[px]
-	if not by_px then
-		by_px = {}
-		by_font[px] = by_px
-	end
-	local v = by_px[str]
+	local key = font .. ":" .. px .. ":" .. str
+	local v = asset.sizes[key]
 	if not v then
 		v = Render.TextSize(font, px, str)
-		by_px[str] = v
+		asset.sizes[key] = v
 	end
 	return v
 end
 
-local function F(weight) return asset.font(weight) end
+local g = { x = 0, y = 0, s = 1, a = 1, depth = 0, cache_s = 0, fits = {}, wraps = {}, clips = {} }
 
-local g = {
-	x = 0, y = 0, s = 1, a = 1, cmp = 0,
-	vcache = {}, vc_n = 0, ccache = {}, cc_n = 0,
-	fits = {}, fit_n = 0, wraps = {}, wrap_n = 0,
-}
+function g.reset()
+	for _ = 1, g.depth do Render.PopClip() end
+	g.depth, g.clips, g.a = 0, {}, 1
+end
+
+function g.rescale(s)
+	if g.cache_s == s then return end
+	g.cache_s, g.fits, g.wraps = s, {}, {}
+end
+
+function g.px(x) return math.floor(g.x + x * g.s + 0.5) end
+function g.py(y) return math.floor(g.y + y * g.s + 0.5) end
+function g.v(x, y) return Vec2(g.px(x), g.py(y)) end
+function g.fs(size) return math.max(1, math.floor(size * g.s + 0.5)) end
+function g.hair() return math.max(1, math.floor(g.s)) end
+
+function g.col(c, a)
+	return Color(math.floor(c[1] + 0.5), math.floor(c[2] + 0.5), math.floor(c[3] + 0.5), math.floor(clamp((c[4] or 255) * (a or 1) * g.a, 0, 255) + 0.5))
+end
+
+function g.white(a) return g.col(T.white, a) end
+
+function g.rect(x, y, w, h, c, r, a, flags)
+	Render.FilledRect(g.v(x, y), g.v(x + w, y + h), g.col(c, a), (r or 0) * g.s, flags or ROUND)
+end
+
+function g.frame(x, y, w, h, c, r, a, t)
+	Render.Rect(g.v(x, y), g.v(x + w, y + h), g.col(c, a), (r or 0) * g.s, ROUND, (t or 1) * g.s)
+end
+
+function g.hl(x, y, w, c, a)
+	local y0 = g.py(y)
+	Render.FilledRect(Vec2(g.px(x), y0), Vec2(g.px(x + w), y0 + g.hair()), g.col(c, a))
+end
+
+function g.vl(x, y, h, c, a)
+	local x0 = g.px(x)
+	Render.FilledRect(Vec2(x0, g.py(y)), Vec2(x0 + g.hair(), g.py(y + h)), g.col(c, a))
+end
+
+function g.line(x1, y1, x2, y2, c, a, t)
+	Render.Line(Vec2(g.x + x1 * g.s, g.y + y1 * g.s), Vec2(g.x + x2 * g.s, g.y + y2 * g.s), g.col(c, a), (t or 1) * g.s)
+end
+
+function g.width(weight, size, str)
+	return asset.size(asset.font(weight), g.fs(size), str).x / g.s
+end
+
+function g.text(weight, size, str, x, cy, c, a, align)
+	local font, px = asset.font(weight), g.fs(size)
+	local ts = asset.size(font, px, str)
+	local tx = g.x + x * g.s
+	if align == "r" then tx = tx - ts.x elseif align == "c" then tx = tx - ts.x / 2 end
+	Render.Text(font, px, str, Vec2(math.floor(tx + 0.5), math.floor(g.y + cy * g.s - ts.y / 2 + 0.5)), g.col(c, a))
+	return ts.x / g.s
+end
+
+function g.glyph(glyph, size, x, cy, c, a, align)
+	local font, px = asset.icons(), g.fs(size)
+	local ts = asset.size(font, px, glyph)
+	local tx = g.x + x * g.s
+	if align == "r" then tx = tx - ts.x elseif align ~= "l" then tx = tx - ts.x / 2 end
+	Render.Text(font, px, glyph, Vec2(math.floor(tx + 0.5), math.floor(g.y + cy * g.s - ts.y / 2 + 0.5)), g.col(c, a))
+end
+
+function g.hero(id, x, y, size, a, r)
+	local img = asset.hero(id)
+	if img then
+		local dim = Render.ImageSize(img)
+		local u0, v0, u1, v1 = 0, 0, 1, 1
+		if dim.x > dim.y and dim.y > 0 then
+			local d = (1 - dim.y / dim.x) / 2
+			u0, u1 = d, 1 - d
+		elseif dim.y > dim.x and dim.x > 0 then
+			local d = (1 - dim.x / dim.y) / 2
+			v0, v1 = d, 1 - d
+		end
+		Render.Image(img, g.v(x, y), Vec2(size * g.s, size * g.s), g.col(T.white, a), r * g.s, ROUND, Vec2(u0, v0), Vec2(u1, v1))
+	else
+		g.rect(x, y, size, size, T.white, r, 0.08 * (a or 1))
+	end
+end
+
+function g.chars(str)
+	local out = {}
+	for _, c in utf8.codes(str) do out[#out + 1] = utf8.char(c) end
+	return out
+end
+
+function g.fit(weight, size, str, max_w)
+	local key = weight .. ":" .. size .. ":" .. math.floor(max_w) .. ":" .. g.s .. ":" .. str
+	local out = g.fits[key]
+	if out then return out end
+	out = str
+	if g.width(weight, size, str) > max_w then
+		local chars = g.chars(str)
+		out = "…"
+		for n = #chars - 1, 1, -1 do
+			local s = table.concat(chars, "", 1, n):gsub("%s+$", "") .. "…"
+			if g.width(weight, size, s) <= max_w then
+				out = s
+				break
+			end
+		end
+	end
+	g.fits[key] = out
+	return out
+end
+
+function g.wrap(weight, size, str, max_w)
+	local key = weight .. ":" .. size .. ":" .. math.floor(max_w) .. ":" .. g.s .. ":" .. str
+	local out = g.wraps[key]
+	if out then return out end
+	out = {}
+	local line = ""
+	for word in str:gmatch("%S+") do
+		local next_line = line == "" and word or line .. " " .. word
+		if line ~= "" and g.width(weight, size, next_line) > max_w then
+			out[#out + 1] = line
+			line = word
+		else
+			line = next_line
+		end
+	end
+	if line ~= "" then out[#out + 1] = line end
+	g.wraps[key] = out
+	return out
+end
+
+function g.ring(cx, cy, r, c, a, t, start, pct)
+	local full = (pct or 1) >= 1
+	Render.Circle(Vec2(g.x + cx * g.s, g.y + cy * g.s), r * g.s, g.col(c, a), t * g.s, start or 270, pct or 1, not full, 64)
+end
+
+function g.dot(cx, cy, r, c, a)
+	Render.FilledCircle(Vec2(g.x + cx * g.s, g.y + cy * g.s), r * g.s, g.col(c, a), 0, 1, 24)
+end
+
+local hit = { list = {}, prev = {}, hover = nil, clip = nil }
+
+function g.clip(x, y, w, h)
+	Render.PushClip(g.v(x, y), g.v(x + w, y + h), true)
+	g.depth = g.depth + 1
+	g.clips[#g.clips + 1] = hit.clip
+	hit.clip = { g.x + x * g.s, g.y + y * g.s, g.x + (x + w) * g.s, g.y + (y + h) * g.s }
+end
+
+function g.unclip()
+	Render.PopClip()
+	g.depth = g.depth - 1
+	hit.clip = g.clips[#g.clips]
+	g.clips[#g.clips] = nil
+end
+
+function hit.begin()
+	hit.prev, hit.list, hit.clip = hit.list, {}, nil
+	local mx, my = Input.GetCursorPos()
+	hit.hover = nil
+	for i = #hit.prev, 1, -1 do
+		local h = hit.prev[i]
+		if mx >= h[1] and mx < h[3] and my >= h[2] and my < h[4] then
+			hit.hover = h[5]
+			break
+		end
+	end
+	if S.press and S.press.id and hit.hover ~= S.press.id then hit.hover = nil end
+	if S.drag or S.resize then hit.hover = nil end
+end
 
 function hit.add(x, y, w, h, id, on)
 	local x1, y1, x2, y2 = g.x + x * g.s, g.y + y * g.s, g.x + (x + w) * g.s, g.y + (y + h) * g.s
@@ -1354,893 +1052,1646 @@ function hit.add(x, y, w, h, id, on)
 	hit.list[#hit.list + 1] = { x1, y1, x2, y2, id, on or {} }
 end
 
-function g.lay(n, c) return n + (c - n) * g.cmp end
-function g.px(x) return math.floor(g.x + x * g.s + 0.5) end
-function g.py(y) return math.floor(g.y + y * g.s + 0.5) end
+function hit.is(id) return hit.hover == id end
 
-function g.pt(x, y)
-	local key = (x + 32768) * 65536 + y + 32768
-	local v = g.vcache[key]
-	if v then return v end
-	if g.vc_n >= 20000 then g.vcache, g.vc_n = {}, 0 end
-	v = Vec2(x, y)
-	g.vcache[key], g.vc_n = v, g.vc_n + 1
-	return v
-end
-
-function g.v(x, y) return g.pt(g.px(x), g.py(y)) end
-function g.size(x, y, w, h) return g.pt(g.px(x + w) - g.px(x), g.py(y + h) - g.py(y)) end
-function g.fs(size) return math.max(1, math.floor(size * g.s + 0.5)) end
-
-function g.col(c, a)
-	local r, gr, b = math.floor(c[1] + 0.5), math.floor(c[2] + 0.5), math.floor(c[3] + 0.5)
-	local al = clamp(math.floor((c[4] or 255) * (a or 1) * g.a + 0.5), 0, 255)
-	local key = ((r * 256 + gr) * 256 + b) * 256 + al
-	local v = g.ccache[key]
-	if v then return v end
-	if g.cc_n >= 8000 then g.ccache, g.cc_n = {}, 0 end
-	v = Color(clamp(r, 0, 255), clamp(gr, 0, 255), clamp(b, 0, 255), al)
-	g.ccache[key], g.cc_n = v, g.cc_n + 1
-	return v
-end
-
-function g.rect(x, y, w, h, c, r, a, flags)
-	Render.FilledRect(g.v(x, y), g.v(x + w, y + h), g.col(c, a), (r or 0) * g.s, flags or ROUND)
-end
-
-function g.frame(x, y, w, h, c, r, a, t)
-	Render.Rect(g.v(x, y), g.v(x + w, y + h), g.col(c, a), (r or 0) * g.s, ROUND, (t or 1) * g.s)
-end
-
-function g.glass(x, y, w, h, r)
-	local blur = SET.blur == 1
-	local power = SET.blur_power / 100
-	local k = g.a ^ 4
-	if blur and k > 0.01 then
-		Render.Blur(g.v(x, y), g.v(x + w, y + h), power * 2 * k, k, r * g.s, ROUND)
+function hit.at(mx, my)
+	for i = #hit.list, 1, -1 do
+		local h = hit.list[i]
+		if mx >= h[1] and mx < h[3] and my >= h[2] and my < h[4] then return h end
 	end
-	local alpha = SET.opacity / 100
-	if blur then alpha = alpha * (1 - 0.3 * power) end
-	g.rect(x, y, w, h, C.main, r, alpha)
+	return nil
 end
 
-function g.inset() return math.max(1, math.floor(2 * g.s + 0.5)) end
+local anim = {}
 
-function g.thumb(x, y, w, h, from, to, c, r, a)
-	local x1, y1, x2, y2, i = g.px(x), g.py(y), g.px(x + w), g.py(y + h), g.inset()
-	local l = x1 + i
-	local k = (x2 - i - l) / (w - 4)
-	Render.FilledRect(g.pt(l + math.floor(from * k + 0.5), y1 + i), g.pt(l + math.floor(to * k + 0.5), y2 - i),
-		g.col(c, a), r * g.s, ROUND)
+function anim.tween(key, target, time, curve)
+	local t = S.tweens[key]
+	if not t or (t.seen and S.now - t.seen > 0.1) then
+		t = { from = target, to = target, v = target, k = 1 }
+		S.tweens[key] = t
+	end
+	t.seen = S.now
+	if t.to ~= target then t.from, t.to, t.k = t.v, target, 0 end
+	if t.k < 1 then
+		t.k = math.min(1, t.k + S.dt / time)
+		t.v = t.from + (t.to - t.from) * (curve or ease_out)(t.k)
+	else
+		t.v = t.to
+	end
+	return t.v
 end
 
-function g.hair() return math.max(1, math.floor(g.s)) end
-
-function g.hl(x, y, w, c, a)
-	local y0 = g.py(y)
-	Render.FilledRect(g.pt(g.px(x), y0), g.pt(g.px(x + w), y0 + g.hair()), g.col(c, a))
+function anim.snap(key, value)
+	S.tweens[key] = { from = value, to = value, v = value, k = 1 }
 end
 
-function g.vl(x, y, h, c, a)
-	local x0 = g.px(x)
-	Render.FilledRect(g.pt(x0, g.py(y)), g.pt(x0 + g.hair(), g.py(y + h)), g.col(c, a))
+function anim.hover(id)
+	return anim.tween("hv:" .. id, hit.hover == id and 1 or 0, 0.12)
 end
 
-function g.vr(x, cy, h, a) g.vl(x, cy - h / 2, h, C.sep, a) end
-
-function g.width(font, size, str)
-	return asset.size(font, g.fs(size), str).x / g.s
+function anim.swap(key, state, time)
+	local w = S.swaps[key]
+	if not w or S.now - w.t > 0.1 then
+		w = { cur = state, k = 1 }
+		S.swaps[key] = w
+	end
+	w.t = S.now
+	if w.cur ~= state then w.prev, w.cur, w.k = w.cur, state, 0 end
+	if w.k < 1 then w.k = math.min(1, w.k + S.dt / (time or 0.2)) end
+	if w.k >= 1 then w.prev = nil end
+	return w.cur, w.prev, ease_out(w.k)
 end
 
-function g.text(font, size, str, x, cy, c, a, align)
-	local px = g.fs(size)
-	local ts = asset.size(font, px, str)
-	local tx = g.x + x * g.s
-	if align == "r" then tx = tx - ts.x elseif align == "c" then tx = tx - ts.x / 2 end
-	Render.Text(font, px, str, g.pt(math.floor(tx + 0.5), math.floor(g.y + cy * g.s - ts.y / 2 + 0.5)), g.col(c, a))
-	return ts.x / g.s
+function anim.cross(key, state, draw, time)
+	local cur, prev, k = anim.swap(key, state, time)
+	local base = g.a
+	if prev ~= nil then
+		g.a = base * (1 - k)
+		draw(prev, false, 1 - k)
+	end
+	g.a = base * (prev ~= nil and k or 1)
+	draw(cur, true, prev ~= nil and k or 1)
+	g.a = base
 end
 
-function g.glyph(name, size, x, cy, c, a, align)
-	return g.text(asset.icons(), size, K.GLYPH[name], x, cy, c, a, align or "c")
+function anim.mix(a, b, k)
+	return { a[1] + (b[1] - a[1]) * k, a[2] + (b[2] - a[2]) * k, a[3] + (b[3] - a[3]) * k }
 end
 
-function g.clip(x, y, w, h) Render.PushClip(g.v(x, y), g.v(x + w, y + h), true) end
-function g.unclip() Render.PopClip() end
+function anim.menu(key, open)
+	return anim.tween("mn:" .. key, open and 1 or 0, open and 0.16 or 0.12, ease_out)
+end
 
-function g.fit(weight, size, str, max_w)
-	local key = localization.GetLanguage() .. ":" .. weight .. ":" .. size .. ":" .. math.floor(max_w) .. ":" .. str
-	local out = g.fits[key]
-	if out then return out end
-	local font = F(weight)
-	out = str
-	if g.width(font, size, str) > max_w then
-		local chars = {}
-		for _, code in utf8.codes(str) do chars[#chars + 1] = utf8.char(code) end
-		out = "…"
-		for n = #chars - 1, 1, -1 do
-			local candidate = table.concat(chars, "", 1, n):gsub("%s+$", "") .. "…"
-			if g.width(font, size, candidate) <= max_w then
-				out = candidate
-				break
-			end
+function anim.menu_begin(x, y, w, h, k)
+	local a = g.a
+	g.a = a * k
+	local dy = -6 * (1 - k)
+	g.clip(x - 2, y + dy - 2, w + 4, (h + 4) * (0.35 + 0.65 * k))
+	return a, y + dy
+end
+
+function anim.menu_end(a)
+	g.unclip()
+	g.a = a
+end
+
+local fs = {}
+
+function fs.dir()
+	if S.dir then return S.dir end
+	local base = Engine.GetCheatDirectory()
+	if type(base) ~= "string" or base == "" then return nil end
+	if not base:match("[\\/]$") then base = base .. "\\" end
+	S.dir = base .. "scripts\\"
+	return S.dir
+end
+
+function fs.read(path)
+	local file = io.open(path, "rb")
+	if not file then return nil end
+	local text = file:read("a")
+	file:close()
+	return text
+end
+
+function fs.write(path, text)
+	local file = io.open(path, "wb")
+	if not file then return false end
+	local ok = file:write(text)
+	local closed = file:close()
+	return ok ~= nil and closed ~= nil
+end
+
+function fs.save(path, text)
+	local old = fs.read(path)
+	local backup = path .. ".script-manager.bak"
+	if old and not fs.read(backup) and not fs.write(backup, old) then return false end
+	local temp = path .. ".script-manager.tmp"
+	if not fs.write(temp, text) then return false end
+	if old then os.remove(path) end
+	if os.rename(temp, path) then return true end
+	os.remove(temp)
+	if old then fs.write(path, old) end
+	return false
+end
+
+local web = {}
+
+function web.trusted(url)
+	if type(url) ~= "string" then return false end
+	for _, pattern in ipairs(K.TRUST) do
+		if url:match(pattern) then return true end
+	end
+	return false
+end
+
+function web.get(url, done)
+	local sent = HTTP.Request("GET", url, { timeout = 20 }, function(response)
+		local code = tonumber(response.code) or 0
+		if code == 200 and type(response.response) == "string" and #response.response > 0 then
+			done(response.response)
+			return
 		end
+		local msg = response.error_message
+		done(nil, "sm_e_net", code ~= 0 and ("HTTP " .. code) or (type(msg) == "string" and msg ~= "" and msg or nil))
+	end, "script_manager")
+	if not sent then done(nil, "sm_e_net") end
+end
+
+local ver = {}
+
+function ver.valid(v)
+	return type(v) == "string" and v:match("^%d+%.%d+%.%d+[%w%._%-]*$") ~= nil
+end
+
+function ver.pre(v)
+	return v:match("^%d+%.%d+%.%d+%-") ~= nil
+end
+
+function ver.cmp(a, b)
+	local a1, a2, a3, as = a:match("^(%d+)%.(%d+)%.(%d+)(.*)$")
+	local b1, b2, b3, bs = b:match("^(%d+)%.(%d+)%.(%d+)(.*)$")
+	if not a1 or not b1 then return a == b and 0 or -1 end
+	local x = { tonumber(a1), tonumber(a2), tonumber(a3) }
+	local y = { tonumber(b1), tonumber(b2), tonumber(b3) }
+	for i = 1, 3 do
+		if x[i] ~= y[i] then return x[i] < y[i] and -1 or 1 end
 	end
-	if g.fit_n >= 600 then g.fits, g.fit_n = {}, 0 end
-	g.fits[key], g.fit_n = out, g.fit_n + 1
+	if as == bs then return 0 end
+	if as == "" then return 1 end
+	if bs == "" then return -1 end
+	local an, bn = tonumber(as:match("(%d+)$")), tonumber(bs:match("(%d+)$"))
+	if an and bn and as:gsub("%d+$", "") == bs:gsub("%d+$", "") then return an < bn and -1 or (an > bn and 1 or 0) end
+	return as < bs and -1 or 1
+end
+
+local text = {}
+
+function text.clean(str)
+	if type(str) ~= "string" then return "" end
+	str = str:gsub("<[^>]*>", ""):gsub("&amp;", "&"):gsub("&lt;", "<"):gsub("&gt;", ">"):gsub("&quot;", '"'):gsub("`", "")
+	return (str:gsub("%s+", " "):gsub("^ ", ""):gsub(" $", ""))
+end
+
+function text.cap(str)
+	if str == "" then return str end
+	local cp = utf8.codepoint(str, 1)
+	local len = #utf8.char(cp)
+	if cp >= 0x61 and cp <= 0x7A then cp = cp - 32
+	elseif cp >= 0x430 and cp <= 0x44F then cp = cp - 32
+	elseif cp >= 0x450 and cp <= 0x45F then cp = cp - 80
+	else return str end
+	return utf8.char(cp) .. str:sub(len + 1)
+end
+
+function text.list(items)
+	local out = {}
+	if type(items) ~= "table" then return out end
+	for _, item in ipairs(items) do
+		local str = text.clean(item)
+		if str ~= "" then out[#out + 1] = str end
+	end
 	return out
 end
 
-function g.wrap(weight, size, str, max_w, max_lines)
-	local key = localization.GetLanguage() .. ":" .. weight .. ":" .. size .. ":" .. math.floor(max_w) .. ":"
-		.. tostring(max_lines) .. ":" .. str
-	local out = g.wraps[key]
-	if out then return out end
-	local font = F(weight)
-	local words = {}
-	for word in str:gmatch("%S+") do words[#words + 1] = word end
-	local lines, current, i, cut = {}, "", 1, false
-	while i <= #words do
-		local word = words[i]
-		local candidate = current == "" and word or (current .. " " .. word)
-		if current ~= "" and g.width(font, size, candidate) > max_w then
-			lines[#lines + 1] = current
-			current = ""
-			if max_lines and #lines >= max_lines then
-				cut = true
-				break
-			end
-		else
-			current = candidate
-			i = i + 1
-		end
-	end
-	if not cut and current ~= "" then lines[#lines + 1] = current end
-	for n = 1, #lines do
-		local line = lines[n]
-		if cut and n == #lines then line = line .. "…" end
-		lines[n] = g.fit(weight, size, line, max_w)
-	end
-	if g.wrap_n >= 300 then g.wraps, g.wrap_n = {}, 0 end
-	g.wraps[key], g.wrap_n = lines, g.wrap_n + 1
-	return lines
+function text.humanize(id)
+	return (id:gsub("_", " "):gsub("(%a)([%w]*)", function(a, b) return a:upper() .. b end))
 end
 
-----------------------------------------------------------------------
--- Status helpers
-----------------------------------------------------------------------
+local market = {}
 
-local STATUS_COLOR = { current = PAL.green, available = PAL.orange, manual = PAL.cyan, error = PAL.red }
+function market.status(s)
+	if S.busy[s.id] then return "busy" end
+	if s.manual then return "manual" end
+	local v = S.inst[s.id]
+	if not v then return "none" end
+	return ver.cmp(v, s.latest) < 0 and "update" or "current"
+end
 
-local function count_status(name)
+function market.updates()
+	local out = {}
+	for _, s in ipairs(SCRIPTS) do
+		if market.status(s) == "update" then out[#out + 1] = s end
+	end
+	return out
+end
+
+function market.installed_count()
 	local n = 0
-	for _, item in ipairs(items) do
-		local cached = cached_releases[item.id]
-		if cached and cached.status == name then n = n + 1 end
+	for _, s in ipairs(SCRIPTS) do
+		if S.inst[s.id] then n = n + 1 end
 	end
 	return n
 end
 
-local function row_summary(item)
-	local cached = cached_releases[item.id]
-	if not cached then return L("sm_panel_state_unknown"), C.text3, PAL.gray end
-	if cached.status == "available" then
-		return string.format(L("sm_row_update"), cached.version), PAL.orange, PAL.orange
-	elseif cached.status == "current" then
-		return L("sm_panel_state_current"), C.text3, PAL.green
-	elseif cached.status == "manual" then
-		return L("sm_panel_state_manual"), C.text3, PAL.cyan
-	elseif cached.status == "error" then
-		return L("sm_panel_state_error"), PAL.red, PAL.red
+function market.scan()
+	local dir = fs.dir()
+	S.inst = {}
+	if not dir then return end
+	for _, s in ipairs(SCRIPTS) do
+		if not s.manual then
+			local body = fs.read(dir .. s.file)
+			if body then
+				S.inst[s.id] = body:match(s.version_marker .. '%s*=%s*"([^"]+)"') or "0.0.0"
+			end
+		end
 	end
-	return L("sm_panel_state_unknown"), C.text3, PAL.gray
 end
 
-local function badge_for(item, cached)
-	if working then return L("sm_panel_checking"), C.accent end
-	if cached and cached.status == "error" then return L("sm_panel_error_badge"), PAL.red end
-	if item.manual then return L("sm_panel_manual_badge"), PAL.yellow end
-	if can_install then return L("sm_panel_update_badge"), PAL.orange end
-	if cached and cached.status == "current" then return L("sm_panel_current_badge"), PAL.green end
-	if selected_release then return L("sm_panel_cached"), PAL.gray end
-	return L("sm_panel_not_checked"), PAL.gray
-end
-
-local function panel_status_text()
-	local message = L(panel.status_key or "sm_status_idle")
-	if panel.status_value ~= nil then
-		message = string.format(message, tostring(panel.status_value))
+function market.detect_heroes(item)
+	local blob = item.title .. " " .. item.tag.en .. " " .. item.about.en
+	local out = {}
+	for _, h in ipairs(HEROES) do
+		local pattern = "%f[%w]" .. (h[2]:gsub("%p", "%%%0")) .. "%f[%W]"
+		if blob:find(pattern) then out[#out + 1] = h[1] end
 	end
-	return message
+	return out
 end
 
-local function activity_kind()
-	if working then return "work" end
-	local key = panel.status_key or ""
-	if key:find("error", 1, true) then return "error" end
-	if key == "sm_status_installed" or key == "sm_status_manual" or key == "sm_status_localizer_installed"
-		or key == "sm_status_localizer" or key == "sm_status_current" or key == "sm_status_cache_current"
-		or key == "sm_status_checked"
-	then
-		return "ok"
+function market.parse_heroes(value)
+	local names = type(value) == "string" and { value } or value
+	if type(names) ~= "table" then return nil end
+	local out = {}
+	for _, name in ipairs(names) do
+		if type(name) == "string" then
+			local key = name:lower():gsub("^npc_dota_hero_", ""):gsub("[^%a%d]", "")
+			local id = HERO_KEY[key]
+			if id then out[#out + 1] = id end
+		end
 	end
-	if key == "sm_status_available" or key == "sm_status_cache_available" then return "update" end
-	return "info"
+	return out
 end
 
-local function select_panel_item(index)
-	if not items[index] or index == selected_index then return end
-	selected_index = index
-	Config.WriteInt("script_manager", "selected_index", selected_index)
-	S.detail_t = 0
-	selection_changed()
+function market.hero_name(id)
+	local name = S.hero_names[id]
+	if name then return name end
+	local _, loc = pcall(GameLocalizer.FindNPC, "npc_dota_hero_" .. id)
+	name = type(loc) == "string" and loc ~= "" and loc or HERO_BY_ID[id].name
+	S.hero_names[id] = name
+	return name
+end
+
+function market.build(catalog, meta)
+	local described = {}
+	if meta and type(meta.scripts) == "table" then
+		for _, m in ipairs(meta.scripts) do
+			if type(m) == "table" and type(m.id) == "string" then described[m.id] = m end
+		end
+	end
+
+	local cat_set = {}
+	for _, c in ipairs(CAT_ORDER) do cat_set[c] = true end
+
+	for i = #SCRIPTS, 1, -1 do SCRIPTS[i] = nil end
+	for id in pairs(BY_ID) do BY_ID[id] = nil end
+
+	for i, e in ipairs(catalog.scripts) do
+		local file = type(e) == "table" and type(e.url) == "string" and e.url:match("([^/?]+)$") or ""
+		local ext = file:match("^[%w%._%- ]+%.(%a+)$")
+		if type(e) == "table" and type(e.id) == "string" and ver.valid(e.version) and web.trusted(e.url) and (ext == "lua" or ext == "zip") then
+			local m = described[e.id] or {}
+			local ru, en = m.ru or {}, m.en or {}
+			local style = STYLE[e.id] or { "\u{f1c9}", PAL[PAL_ORDER[(i - 1) % #PAL_ORDER + 1]] }
+			local item = {
+				id = e.id, order = i, latest = e.version, url = e.url,
+				release = web.trusted(e.release) and e.release or nil,
+				manual = e.manual == true, nlz = e.needs_q_localizer == true,
+				version_marker = e.version_marker == "SCRIPT_VERSION" and "SCRIPT_VERSION" or "VERSION",
+				title = type(m.title) == "string" and m.title or text.humanize(e.id),
+				file = file,
+				source = e.url:match("githubusercontent%.com/([^/]+/[^/]+)/") or e.url:match("github%.com/([^/]+/[^/]+)/"),
+				author = text.clean(e.author) ~= "" and text.clean(e.author) or (type(m.author) == "string" and text.clean(m.author) ~= "" and text.clean(m.author) or nil),
+				cat = cat_set[m.category] and m.category or "auxiliary",
+				glyph = style[1], color = style[2],
+				tag = { ru = text.cap(text.clean(ru.tagline)), en = text.cap(text.clean(en.tagline)) },
+				about = { ru = text.clean(ru.about), en = text.clean(en.about) },
+				features = { ru = text.list(ru.features), en = text.list(en.features) },
+			}
+			item.heroes = market.parse_heroes(e.heroes or e.hero) or HERO_OF[e.id] or market.detect_heroes(item)
+			SCRIPTS[#SCRIPTS + 1] = item
+			BY_ID[item.id] = item
+		end
+	end
+
+	S.hero_n, S.hero_total = {}, 0
+	for _, s in ipairs(SCRIPTS) do
+		for _, hid in ipairs(s.heroes) do
+			if not S.hero_n[hid] then S.hero_total = S.hero_total + 1 end
+			S.hero_n[hid] = (S.hero_n[hid] or 0) + 1
+		end
+	end
+
+	local present = {}
+	for _, s in ipairs(SCRIPTS) do present[s.cat] = true end
+	for i = #CATS, 1, -1 do CATS[i] = nil end
+	for _, c in ipairs(CAT_ORDER) do
+		if present[c] then CATS[#CATS + 1] = c end
+	end
+
+	local lib = catalog.q_localizer
+	S.nlz_src = type(lib) == "table" and ver.valid(lib.version) and web.trusted(lib.url) and lib or nil
+
+	local nav_ok = S.nav == "all" or S.nav == "installed" or S.nav == "updates" or S.nav == "heroes" or present[S.nav]
+	if not nav_ok then S.nav = "all" end
+	if S.view == "detail" and not BY_ID[S.sel] then S.view = "list" end
+	market.scan()
+end
+
+function market.finish(ok, err)
+	local st = S.net
+	st.state, st.err, st.at = ok and "ok" or "error", err, os.time()
+	st.next = S.now + (ok and K.RECHECK or 60)
+	st.loaded = st.loaded or ok
+end
+
+function market.load()
+	local st = S.net
+	if st.state == "loading" then return end
+	st.state, st.err, st.stamp = "loading", nil, st.stamp + 1
+	local stamp = os.time() .. "-" .. st.stamp
+
+	web.get(K.CATALOG .. "?_=" .. stamp, function(body, key, detail)
+		if not body then return market.finish(false, L(key) .. (detail and (": " .. detail) or "")) end
+		local ok, catalog = pcall(function() return JSON:decode(body) end)
+		if not ok or type(catalog) ~= "table" or catalog.schema ~= 1 or type(catalog.scripts) ~= "table" then
+			return market.finish(false, L("sm_e_parse"))
+		end
+		web.get(K.META .. "?_=" .. stamp, function(meta_body)
+			local meta
+			if meta_body then
+				local meta_ok, parsed = pcall(function() return JSON:decode(meta_body) end)
+				if meta_ok and type(parsed) == "table" then meta = parsed end
+			end
+			local built, err = pcall(market.build, catalog, meta)
+			market.finish(built, not built and tostring(err) or nil)
+		end)
+	end)
+end
+
+function market.note(title, body)
+	S.note = { title = title, text = body }
+	S.foot = "note"
+end
+
+function market.fail(s, key, detail)
+	S.busy[s.id] = nil
+	market.note("sm_err_t", s.title .. ". " .. L(key) .. (detail and (": " .. detail) or ""))
+end
+
+function market.dismiss()
+	S.foot = #S.changed > 0 and "pending" or "idle"
+end
+
+function market.applied(title)
+	if S.set.restart == "now" then
+		market.restart()
+		return
+	end
+	S.foot = "pending"
+	for _, t in ipairs(S.changed) do
+		if t == title then return end
+	end
+	S.changed[#S.changed + 1] = title
+end
+
+function market.restart()
+	S.foot, S.foot_until, S.changed = "done", S.now + 2.2, {}
+	S.reload_at = S.now + K.RELOAD_DELAY
+end
+
+function market.ensure_nlz(done)
+	local dir = fs.dir()
+	if not dir then return done(false, "sm_e_dir") end
+	if fs.read(dir .. K.NLZ_FILE) then return done(true) end
+	if S.nlz_wait then
+		S.nlz_wait[#S.nlz_wait + 1] = done
+		return
+	end
+	if not S.nlz_src then return done(false, "sm_e_nlz") end
+	S.nlz_wait = { done }
+	web.get(S.nlz_src.url, function(body, key, detail)
+		local ok = false
+		if body then
+			if #body < 1000 or not body:find("qLocalization", 1, true) then
+				key = "sm_e_valid"
+			elseif fs.save(dir .. K.NLZ_FILE, body) then
+				ok, key = true, nil
+			else
+				key = "sm_e_write"
+			end
+		end
+		local waiting = S.nlz_wait
+		S.nlz_wait = nil
+		for _, cb in ipairs(waiting) do cb(ok, key, detail) end
+	end)
+end
+
+function market.download(s, done)
+	local urls = { s.url }
+	if s.release and s.release ~= s.url then urls[2] = s.release end
+
+	local function try(i, prev_key, prev_detail)
+		if not urls[i] then return done(nil, prev_key or "sm_e_net", prev_detail) end
+		web.get(urls[i], function(body, key, detail)
+			local valid = false
+			if body then
+				if s.manual then
+					valid = body:sub(1, 2) == "PK"
+				else
+					valid = #body > 100 and body:sub(1, 1) ~= "<"
+						and body:match(s.version_marker .. '%s*=%s*"([^"]+)"') == s.latest
+				end
+				if valid then return done(body) end
+				key, detail = "sm_e_valid", nil
+			end
+			try(i + 1, key, detail)
+		end)
+	end
+
+	try(1)
+end
+
+function market.run(id)
+	local s = BY_ID[id]
+	if not s or S.busy[id] then return end
+	S.busy[id], S.confirm = 0, nil
+
+	local dir = fs.dir()
+	if not dir then return market.fail(s, "sm_e_dir") end
+
+	local function fetch()
+		market.download(s, function(body, key, detail)
+			if not body then return market.fail(s, key, detail) end
+			if not fs.save(dir .. s.file, body) then return market.fail(s, "sm_e_write") end
+			S.busy[id] = nil
+			market.scan()
+			if s.manual then
+				market.note("sm_manual_t", string.format(L("sm_manual_msg"), s.file))
+			else
+				market.applied(s.title)
+			end
+		end)
+	end
+
+	if not s.nlz then return fetch() end
+	market.ensure_nlz(function(ok, key, detail)
+		if not ok then return market.fail(s, key, detail) end
+		fetch()
+	end)
+end
+
+function market.remove(id)
+	if S.confirm ~= id then
+		S.confirm = id
+		return
+	end
+	S.confirm = nil
+	local s, dir = BY_ID[id], fs.dir()
+	if not s or not dir or not os.remove(dir .. s.file) then
+		if s then market.fail(s, "sm_e_remove") end
+		return
+	end
+	market.scan()
+	market.applied(s.title)
+end
+
+function market.tick()
+	local st = S.net
+	if st.state == "idle" then
+		market.load()
+	elseif st.state ~= "loading" and S.set.check == "hour" and S.now >= st.next then
+		market.load()
+	end
+	if S.foot == "done" and S.now > S.foot_until then S.foot = "idle" end
+	if S.reload_at and S.now >= S.reload_at then
+		S.reload_at = nil
+		Engine.ReloadScriptSystem()
+	end
+end
+
+function market.has_hero(s, id)
+	for _, hid in ipairs(s.heroes) do
+		if hid == id then return true end
+	end
+	return false
+end
+
+function market.hidden(s)
+	return not S.set.beta and ver.pre(s.latest) and not S.inst[s.id]
+end
+
+function market.list()
+	local q = S.query:lower()
+	local in_cat = S.nav ~= "all" and S.nav ~= "installed" and S.nav ~= "updates" and S.nav ~= "heroes"
+	local out = {}
+	for _, s in ipairs(SCRIPTS) do
+		local k = market.status(s)
+		local ok = not market.hidden(s)
+		if S.nav == "heroes" and S.hero then
+			ok = ok and market.has_hero(s, S.hero)
+		end
+		if S.nav == "installed" and not S.inst[s.id] then ok = false end
+		if S.nav == "updates" and k ~= "update" and not (k == "busy" and S.inst[s.id]) then ok = false end
+		if in_cat and s.cat ~= S.nav then ok = false end
+		if ok and q ~= "" then
+			ok = s.title:lower():find(q, 1, true) ~= nil or tr(s.tag):lower():find(q, 1, true) ~= nil
+		end
+		if ok then out[#out + 1] = s end
+	end
+	local cmp = SORTS[1].cmp
+	for _, o in ipairs(SORTS) do
+		if o.id == S.sort then cmp = o.cmp end
+	end
+	table.sort(out, function(a, b)
+		if S.inst_first then
+			local ia, ib = S.inst[a.id] ~= nil, S.inst[b.id] ~= nil
+			if ia ~= ib then return ia end
+		end
+		return cmp(a, b)
+	end)
+	return out
+end
+
+function market.set_theme(id)
+	S.set.theme = id
+	C = THEMES[id]
+	save("theme", id)
+end
+
+function market.set_accent(id)
+	S.set.accent = id
+	apply_accent(id)
+	save("accent", id)
+end
+
+local CHARS = {}
+for i = 0, 25 do
+	local letter = string.char(65 + i)
+	CHARS[KEY["KEY_" .. letter]] = letter:lower()
+end
+for i = 0, 9 do CHARS[KEY["KEY_" .. i]] = tostring(i) end
+CHARS[KEY.KEY_SPACE] = " "
+CHARS[KEY.KEY_MINUS] = "-"
+
+local edit = { box = nil }
+
+function edit.chars() return g.chars(S.query) end
+
+function edit.range()
+	if S.qa and S.qa ~= S.qc then return math.min(S.qa, S.qc), math.max(S.qa, S.qc) end
+	return nil
+end
+
+function edit.put(chars, caret)
+	S.query = table.concat(chars)
+	S.qc, S.qa = caret, nil
+end
+
+function edit.cut(chars)
+	local lo, hi = edit.range()
+	if not lo then return chars, S.qc end
+	local out = {}
+	for i = 1, lo do out[#out + 1] = chars[i] end
+	for i = hi + 1, #chars do out[#out + 1] = chars[i] end
+	return out, lo
+end
+
+function edit.insert(str)
+	local chars, caret = edit.cut(edit.chars())
+	if #chars >= K.QUERY_MAX then return end
+	table.insert(chars, caret + 1, str)
+	edit.put(chars, caret + 1)
+end
+
+function edit.word_left(chars, i)
+	while i > 0 and chars[i] == " " do i = i - 1 end
+	while i > 0 and chars[i] ~= " " do i = i - 1 end
+	return i
+end
+
+function edit.word_right(chars, i)
+	local n = #chars
+	while i < n and chars[i + 1] == " " do i = i + 1 end
+	while i < n and chars[i + 1] ~= " " do i = i + 1 end
+	return i
+end
+
+function edit.erase(forward, word)
+	local chars = edit.chars()
+	if not edit.range() then
+		local a, b = S.qc, S.qc
+		if forward then
+			b = word and edit.word_right(chars, S.qc) or math.min(#chars, S.qc + 1)
+		else
+			a = word and edit.word_left(chars, S.qc) or math.max(0, S.qc - 1)
+		end
+		if a == b then return end
+		S.qa, S.qc = a, b
+	end
+	edit.put(edit.cut(chars))
+end
+
+function edit.move(to, shift)
+	if shift then
+		S.qa = S.qa or S.qc
+	else
+		S.qa = nil
+	end
+	S.qc = to
+end
+
+function edit.key(key, ctrl, shift)
+	local chars = edit.chars()
+	local n = #chars
+	local lo, hi = edit.range()
+	if ctrl and key == KEY.KEY_A then
+		S.qa, S.qc = 0, n
+	elseif key == KEY.KEY_LEFT then
+		if lo and not shift then
+			edit.move(lo, false)
+		else
+			edit.move(ctrl and edit.word_left(chars, S.qc) or math.max(0, S.qc - 1), shift)
+		end
+	elseif key == KEY.KEY_RIGHT then
+		if hi and not shift then
+			edit.move(hi, false)
+		else
+			edit.move(ctrl and edit.word_right(chars, S.qc) or math.min(n, S.qc + 1), shift)
+		end
+	elseif key == KEY.KEY_HOME or key == KEY.KEY_UP then
+		edit.move(0, shift)
+	elseif key == KEY.KEY_END or key == KEY.KEY_DOWN then
+		edit.move(n, shift)
+	elseif key == KEY.KEY_BACKSPACE then
+		edit.erase(false, ctrl)
+	elseif key == KEY.KEY_DELETE then
+		edit.erase(true, ctrl)
+	elseif key == KEY.KEY_ESCAPE then
+		if lo then S.qa = nil else S.focus = false end
+	elseif key == KEY.KEY_ENTER or key == KEY.KEY_PAD_ENTER then
+		S.focus = false
+	elseif not ctrl and CHARS[key] then
+		edit.insert(shift and CHARS[key]:upper() or CHARS[key])
+	end
+	S.q_blink = S.now
+end
+
+function edit.index_at(mx)
+	local box = edit.box
+	if not box then return S.qc end
+	local lx = (mx - g.x) / g.s - box.tx + S.q_off
+	local chars = edit.chars()
+	local prev = 0
+	for i = 1, #chars do
+		local w = g.width(400, 14, table.concat(chars, "", 1, i))
+		if lx < (prev + w) / 2 then return i - 1 end
+		prev = w
+	end
+	return #chars
+end
+
+function edit.click(mx)
+	local i = edit.index_at(mx)
+	S.q_blink = S.now
+	if S.focus and S.now - S.q_click < 0.35 then
+		local chars = edit.chars()
+		S.qa, S.qc, S.q_click = edit.word_left(chars, i), edit.word_right(chars, i), 0
+		return
+	end
+	S.q_click = S.now
+	local shift = Input.IsKeyDown(KEY.KEY_LSHIFT) or Input.IsKeyDown(KEY.KEY_RSHIFT)
+	if shift and S.focus then
+		S.qa = S.qa or S.qc
+	else
+		S.qa = i
+	end
+	S.qc = i
+	S.focus, S.q_drag = true, true
 end
 
 local view = {}
 
-local function hidden(y, h)
-	return S.vis_top ~= nil and (y + h < S.vis_top or y > S.vis_bottom)
+function view.go(name, sel)
+	S.view, S.sel, S.confirm, S.sort_open, S.menu = name, sel or S.sel, nil, false, nil
+	S.rows = {}
+	S.scroll, S.scroll_to = 0, 0
+	anim.snap("scroll", 0)
 end
 
-function view.hint(id, text)
-	if hit.is(id) then S.tip = text end
-end
-
-----------------------------------------------------------------------
--- Reusable widgets
-----------------------------------------------------------------------
-
--- Right-aligned button. Returns the left edge so buttons can be chained.
-function view.button(id, label, glyph, right, y, h, kind, enabled, on_click)
-	local fw = F(500)
-	local tw = g.width(fw, 14, label)
-	local gw = glyph and 22 or 0
-	local w = tw + gw + 36
-	local x = right - w
-	local hot = enabled and hit.is(id)
-	local k = anim.hover(id, hot)
-	local base = kind == "primary" and C.accent or C.fill2
-	g.rect(x, y, w, h, base, 9, enabled and 1 or (kind == "primary" and 0.35 or 0.55))
-	if k > 0 then g.rect(x, y, w, h, C.glow, 9, k) end
-	if hot and S.press and S.press.id == id then g.rect(x, y, w, h, C.press, 9) end
-	local ta = enabled and 1 or 0.45
-	if glyph then g.glyph(glyph, 13, x + 18 + 4, y + h / 2, C.text, ta) end
-	g.text(fw, 14, label, x + 18 + gw, y + h / 2, C.text, ta)
-	if enabled then hit.add(x, y, w, h, id, { click = on_click }) end
-	return x
-end
-
-function view.chip(x, cy, glyph, label, color)
-	local fw = F(500)
-	local tw = g.width(fw, 12, label)
-	local gw = glyph and 18 or 0
-	local w = tw + gw + 20
-	g.rect(x, cy - 13, w, 26, C.fill4, 8)
-	if glyph then g.glyph(glyph, 11, x + 16, cy, color or C.text2) end
-	g.text(fw, 12, label, x + 10 + gw, cy, color or C.text2)
-	return w
-end
-
-function view.spinner(cx, cy, r, c, a)
-	Render.Circle(g.v(cx, cy), r * g.s, g.col(c, 0.3 * (a or 1)), 2 * g.s)
-	Render.Circle(g.v(cx, cy), r * g.s, g.col(c, a or 1), 2 * g.s, (S.now * 400) % 360, 0.25, true)
-end
-
-----------------------------------------------------------------------
--- Title bar
-----------------------------------------------------------------------
-
-function view.icon_button(name, x, id, on_click, active, tip)
-	local k = anim.hover(id, hit.is(id) or active)
-	if k > 0 then g.rect(x, 12, 32, 28, active and C.fill3 or C.fill4, 6, k) end
-	g.glyph(name, 16, x + 16, 26, (hit.is(id) or active) and C.text or C.text2)
-	hit.add(x, 12, 32, 28, id, { click = on_click })
-	if tip then view.hint(id, tip) end
-end
-
-function view.status_pill(right)
-	local glyph, label, bg, fg
-	local spin = false
-	if working then
-		label, bg, fg, spin = L("sm_panel_checking"), C.accent_pill, C.text, true
-	else
-		local updates = count_status("available")
-		if updates > 0 then
-			glyph, label, bg, fg = "arrow_down", string.format(L("sm_pill_updates"), updates), C.accent, C.text
-		elseif count_status("error") > 0 then
-			glyph, label, bg, fg = "alert", L("sm_panel_error_badge"), PAL.red, PAL.red
-		elseif last_checked_at > 0 then
-			glyph, label, bg, fg = "check", L("sm_pill_current"), PAL.green, PAL.green
-		end
+function view.nav_item(x, y, w, id, label, glyph, count, badge)
+	local on = S.nav == id and S.view ~= "settings"
+	local hv = anim.hover("nav:" .. id)
+	local ok = anim.tween("nav_on:" .. id, on and 1 or 0, 0.16)
+	g.rect(x, y, w, 34, T.white, 8, 0.09 * ok + 0.05 * hv * (1 - ok))
+	g.glyph(glyph, 13, x + 18, y + 17, anim.mix(T.t3, K.ACCENT_TEXT, ok))
+	g.text(500, 13, label, x + 36, y + 17, anim.mix(T.t2, T.t1, ok))
+	local bk = anim.tween("badge:" .. id, badge and 1 or 0, 0.2)
+	if badge then S.badges[id] = count end
+	if bk > 0.01 then
+		local str = tostring(S.badges[id] or count)
+		local bw = math.max(20, g.width(700, 11, str) + 12)
+		local sc = 0.7 + 0.3 * bk
+		local bcx = x + w - 10 - bw / 2
+		g.rect(bcx - bw * sc / 2, y + 17 - 9 * sc, bw * sc, 18 * sc, T.pill, 9 * sc, bk)
+		g.text(700, 11, str, bcx, y + 17, T.dark, bk, "c")
 	end
-	local shown = label ~= nil
-	if shown then
-		S.pill.glyph, S.pill.label, S.pill.bg, S.pill.fg, S.pill.spin = glyph, label, bg, fg, spin
-		S.pill.soft = bg == PAL.red or bg == PAL.green
+	if bk < 0.99 then
+		g.text(400, 12, tostring(count), x + w - 10, y + 17, T.t4, 1 - bk, "r")
 	end
-	local a = anim.tween("pill_a", shown and 1 or 0, 0.2)
-	local p = S.pill
-	if a <= 0.01 or not p.label then return right end
-	local fw = F(500)
-	local w = 11 + 18 + 7 + g.width(fw, 13, p.label) + 13
-	local x = right - 8 - w
-	g.rect(x, 12, w, 28, p.bg, 14, p.soft and 0.22 * a or a)
-	if p.spin then
-		view.spinner(x + 20, 26, 5.5, C.text, a)
-	elseif p.glyph then
-		g.glyph(p.glyph, 13, x + 20, 26, p.fg, a)
-	end
-	g.text(fw, 13, p.label, x + 36, 26, p.fg, a)
-	return x
-end
-
-function view.titlebar()
-	g.rect(0, 0, K.W, K.TB, C.bar, 16, 1, ROUND_TOP)
-	g.hl(0, K.TB - 1, K.W, C.black)
-	hit.add(0, 0, K.W, K.TB, "drag", { down = function(mx, my)
-		S.drag = { mx = mx, my = my, wx = S.wx, wy = S.wy }
-	end })
-
-	Render.FilledCircle(g.v(32, 26), 11 * g.s, g.col(C.accent))
-	Render.FilledCircle(g.v(32, 26), 5 * g.s, g.col(C.bar))
-	local x = 54
-	x = x + g.text(F(700), 16, L("sm_panel_title"), x, 26, C.text) + 14
-	g.vr(x, 26, 13)
-	g.text(F(500), 11, L("sm_panel_subtitle"), x + 13, 26, C.text2)
-
-	local right = K.W - K.P - 32
-	view.icon_button("close", right, "tb_close", function()
-		S.open, S.drag, S.slide, S.sb_drag = false, nil, nil, nil
-	end, false, L("sm_tip_close"))
-	right = right - 40
-	view.icon_button("gear", right, "tb_gear", function()
-		S.settings = not S.settings
-	end, S.settings, L(S.settings and "sm_tip_back" or "sm_tip_settings"))
-	view.status_pill(right)
-end
-
-----------------------------------------------------------------------
--- Main view: sidebar + detail
-----------------------------------------------------------------------
-
-function view.sidebar(x, y, w, h)
-	g.rect(x, y, w, h, C.card, 14)
-	g.text(F(700), 11, L("sm_panel_scripts"), x + 18, y + 22, C.text3)
-	local count = tostring(#items)
-	local cw = g.width(F(600), 11, count) + 14
-	g.rect(x + w - 16 - cw, y + 13, cw, 18, C.fill3, 9)
-	g.text(F(600), 11, count, x + w - 16 - cw / 2, y + 22, C.text2, 1, "c")
-	g.hl(x + 16, y + 40, w - 32, C.sep2)
-
-	local rh, step = g.lay(46, 36), g.lay(50, 40)
-	step = math.min(step, math.floor((h - 52) / #items))
-	rh = math.min(rh, step - 2)
-	local ts = g.lay(32, 24)
-	for i, item in ipairs(items) do
-		local ry = y + 46 + (i - 1) * step
-		local id = "row" .. i
-		local rx, rw = x + 8, w - 16
-		local active = i == selected_index
-		local k = anim.hover(id, hit.is(id))
-		local sel = anim.tween(id .. "_sel", active and 1 or 0, 0.15)
-		if k > 0 and sel < 1 then g.rect(rx, ry, rw, rh, C.hover, 10, k * (1 - sel)) end
-		if sel > 0 then g.rect(rx, ry, rw, rh, C.select, 10, sel) end
-
-		local summary, summary_color, dot_color = row_summary(item)
-		g.rect(rx + 8, ry + (rh - ts) / 2, ts, ts, item.tile, 8)
-		g.glyph(item.glyph, g.lay(15, 12), rx + 8 + ts / 2, ry + rh / 2, C.text)
-
-		local tx = rx + 8 + ts + 11
-		local max_w = rw - (tx - rx) - 28
-		local name_cy = ry + rh / 2 - 8 * (1 - g.cmp)
-		g.text(F(active and 700 or 600), 13, g.fit(active and 700 or 600, 13, L(item.key), max_w), tx, name_cy,
-			active and C.text or { 235, 235, 245, 220 })
-		local sub_a = 1 - g.cmp
-		if sub_a > 0.02 then
-			g.text(F(400), 11, g.fit(400, 11, summary, max_w), tx, ry + rh / 2 + 9, summary_color, sub_a)
-		end
-		Render.FilledCircle(g.v(rx + rw - 14, ry + rh / 2), 4 * g.s, g.col(dot_color))
-		hit.add(rx, ry, rw, rh, id, { click = function() select_panel_item(i) end })
-	end
-end
-
-function view.hero(x, y, w, h, item, cached)
-	g.rect(x, y, w, h, C.card, 14)
-	local ts = 64
-	g.rect(x + 18, y + 18, ts, ts, item.tile, 16)
-	g.glyph(item.glyph, 26, x + 18 + ts / 2, y + 18 + ts / 2, C.text)
-	local tx = x + 18 + ts + 16
-
-	local badge_text, badge_color = badge_for(item, cached)
-	local bw = g.width(F(700), 11, badge_text) + 22
-	g.rect(x + w - 18 - bw, y + 22, bw, 24, badge_color, 12, 0.22)
-	g.text(F(700), 11, badge_text, x + w - 18 - bw / 2, y + 34, badge_color, 1, "c")
-
-	local title_w = w - (tx - x) - 18 - bw - 14
-	g.text(F(700), 22, g.fit(700, 22, L(item.key), title_w), tx, y + 34, C.text)
-	local lines = g.wrap(400, 13, L(item.description_key), w - (tx - x) - 18, 2)
-	for i, line in ipairs(lines) do
-		g.text(F(400), 13, line, tx, y + 62 + (i - 1) * 19, C.text2)
-	end
-
-	g.hl(x + 18, y + h - 52, w - 36, C.sep2)
-	local cx, cy = x + 18, y + h - 26
-	cx = cx + view.chip(cx, cy, nil, item.file) + 8
-	if item.manual then
-		cx = cx + view.chip(cx, cy, "arrow_down", L("sm_chip_zip")) + 8
-	end
-	if item.needs_localizer then
-		view.chip(cx, cy, "lang", L("sm_chip_localizer"), localizer_installed and PAL.green or PAL.orange)
-	end
-end
-
-function view.versions(x, y, w, h, item, cached)
-	local gap = 12
-	local cw = (w - gap) / 2
-	local function card(cx, label, value, color, outline)
-		g.rect(cx, y, cw, h, C.card, 14)
-		if outline then g.frame(cx, y, cw, h, outline, 14, 0.6, 1.5) end
-		g.text(F(700), 11, label, cx + 20, y + 28, C.text3)
-		if value:match("^v%d") then
-			g.text(F(700), 28, value, cx + 20, y + 64, color or C.text)
-		else
-			g.text(F(600), 17, g.fit(600, 17, value, cw - 40), cx + 20, y + 64, color or C.text2)
-		end
-	end
-	card(x, L("sm_panel_installed"), installed_version and ("v" .. installed_version) or L("sm_panel_not_detected"))
-	local latest_color = can_install and PAL.orange or ((cached and cached.status == "current") and PAL.green or nil)
-	card(x + cw + gap, L("sm_panel_latest"),
-		selected_release and ("v" .. selected_release.version) or L("sm_panel_not_checked"),
-		latest_color, can_install and PAL.orange or nil)
-	local mx, my = x + cw + gap / 2, y + h / 2
-	Render.FilledCircle(g.v(mx, my), 13 * g.s, g.col(C.raised))
-	Render.Circle(g.v(mx, my), 13 * g.s, g.col(C.outline), 1 * g.s)
-	g.glyph("chevron", 10, mx + 1, my, C.text2)
-end
-
-function view.activity(x, y, w, h)
-	g.rect(x, y, w, h, C.card, 14)
-	local kind = activity_kind()
-	local tile, glyph = PAL.blue, "info"
-	if kind == "error" then
-		tile, glyph = PAL.red, "alert"
-	elseif kind == "ok" then
-		tile, glyph = PAL.green, "check"
-	elseif kind == "update" then
-		tile, glyph = PAL.orange, "arrow_down"
-	elseif kind == "work" then
-		tile = C.accent
-	end
-	g.rect(x + 18, y + 18, 40, 40, tile, 12)
-	if kind == "work" then
-		view.spinner(x + 38, y + 38, 9, C.text)
-	else
-		g.glyph(glyph, 16, x + 38, y + 38, C.text)
-	end
-	local tx = x + 18 + 40 + 16
-	g.text(F(700), 11, L("sm_panel_status"), tx, y + 27, C.text3)
-	local lines = g.wrap(500, 14, panel_status_text(), w - (tx - x) - 20, 2)
-	for i, line in ipairs(lines) do
-		g.text(F(500), 14, line, tx, y + 51 + (i - 1) * 20, kind == "error" and PAL.red or C.text)
-	end
-	if kind == "work" then
-		local bx, bw = x + 18, w - 36
-		g.rect(bx, y + h - 20, bw, 4, C.fill2, 2)
-		local t = (S.now * 0.8) % 1
-		local seg = bw * 0.3
-		local sx = bx + (bw + seg) * t - seg
-		local x0, x1 = math.max(bx, sx), math.min(bx + bw, sx + seg)
-		if x1 > x0 then g.rect(x0, y + h - 20, x1 - x0, 4, C.accent, 2) end
-	end
-end
-
-function view.library(x, y, w, h)
-	g.rect(x, y, w, h, C.card, 14)
-	local ts = 40
-	g.rect(x + 18, y + (h - ts) / 2, ts, ts, localizer_installed and PAL.green or PAL.orange, 12)
-	g.glyph("lang", 17, x + 18 + ts / 2, y + h / 2, C.text)
-	local tx = x + 18 + ts + 14
-	local right = x + w - 18
-	local left_edge
-	if localizer_installed then
-		local label = L("sm_panel_localizer_ready")
-		local bw = g.width(F(600), 13, label) + 18 + 30
-		g.rect(right - bw, y + h / 2 - 16, bw, 32, PAL.green, 16, 0.2)
-		g.glyph("check", 12, right - bw + 20, y + h / 2, PAL.green)
-		g.text(F(600), 13, label, right - bw + 36, y + h / 2, PAL.green)
-		left_edge = right - bw
-	else
-		left_edge = view.button("localizer", L("sm_panel_localizer_button"), "arrow_down", right, y + h / 2 - 17, 34,
-			"secondary", not working, function()
-				if not localizer_installed and not working then install_localizer_button() end
-			end)
-	end
-	local text_w = left_edge - 14 - tx
-	g.text(F(600), 14, L("sm_panel_localizer_title"), tx, y + h / 2 - 10, C.text)
-	g.text(F(400), 12, g.fit(400, 12, L("sm_panel_localizer_desc"), text_w), tx, y + h / 2 + 11, C.text3)
-end
-
-function view.detail(x, y, w, h)
-	local item = selected()
-	if not item then return end
-	local cached = cached_releases[item.id]
-	local base = g.a
-	g.a = base * (0.4 + 0.6 * ease_out(S.detail_t))
-	local gap = 12
-	local hero_h, ver_h, lib_h = 164, 104, 76
-	local act_h = h - hero_h - ver_h - lib_h - gap * 3
-	local cy = y
-	view.hero(x, cy, w, hero_h, item, cached)
-	cy = cy + hero_h + gap
-	view.versions(x, cy, w, ver_h, item, cached)
-	cy = cy + ver_h + gap
-	view.activity(x, cy, w, act_h)
-	cy = cy + act_h + gap
-	view.library(x, cy, w, lib_h)
-	g.a = base
-end
-
-function view.main()
-	local P = K.P
-	local top = K.TB + P
-	local bottom = K.H - K.FT - 10
-	view.sidebar(P, top, K.SIDE, bottom - top)
-	local dx = P + K.SIDE + 12
-	view.detail(dx, top, K.W - dx - P, bottom - top)
-end
-
-----------------------------------------------------------------------
--- Settings view
-----------------------------------------------------------------------
-
-function view.group_header(text, y, a)
-	local h = g.lay(38, 34)
-	if not hidden(y, h) then g.text(F(700), 17, text, K.P + 4, y + g.lay(16, 14), C.text, a) end
-	return h
-end
-
-function view.gap() return g.lay(22, 14) end
-
-function view.fold(key, on)
-	return anim.tween("fold_" .. key, on and 1 or 0, 0.26, ease_in_out)
-end
-
-function view.row_geom(sub)
-	local rh, ts = sub and g.lay(50, 46) or g.lay(50, 42), g.lay(30, 26)
-	return rh, ts, K.P + ts + 14
-end
-
-function view.setting_rows(rows, y, a)
-	local x, w = K.P, K.W - 2 * K.P
-	local _, ts, tx = view.row_geom()
-	local rhs, hs, total = {}, {}, 0
-	for n, row in ipairs(rows) do
-		rhs[n] = view.row_geom(row.sub)
-		hs[n] = math.floor(rhs[n] * (row.fold or 1) + 0.5)
-		total = total + hs[n]
-	end
-	if total <= 0 then return 0 end
-	if hidden(y, total) then return total end
-	g.rect(x, y, w, total, C.card, 12, a)
-	local ry = y
-	for n, row in ipairs(rows) do
-		local f, rh = row.fold or 1, rhs[n]
-		local cy = rh / 2
-		if hs[n] > 0 and not hidden(ry, hs[n]) then
-			local ra = a * f * f
-			if f < 1 then g.clip(x, ry, w, hs[n]) end
-			if n > 1 then g.hl(x + tx, ry, w - tx, C.sep2, ra) end
-			g.rect(x + K.P, ry + (rh - ts) / 2, ts, ts, row.tile, 8, ra)
-			g.glyph(row.glyph, g.lay(16, 14), x + K.P + ts / 2, ry + cy, C.text, ra)
-			if row.sub then
-				g.text(F(600), 14, row.title, x + tx, ry + cy - g.lay(8, 7), C.text, ra)
-				g.text(F(400), 12, row.sub, x + tx, ry + cy + g.lay(9, 8), C.text3, ra)
-			else
-				g.text(F(600), 14, row.title, x + tx, ry + cy, C.text, ra)
-			end
-			if row.control and f > 0.98 then
-				row.control(x + w - K.P, ry + cy, ra)
-			elseif row.control then
-				local hold = hit.list
-				hit.list = {}
-				row.control(x + w - K.P, ry + cy, ra)
-				hit.list = hold
-			end
-			if f < 1 then g.unclip() end
-		end
-		ry = ry + hs[n]
-	end
-	return total
-end
-
-function view.switch(key)
-	return function(right, cy, a)
-		local on = SET[key] == 1
-		local k = anim.tween("sw" .. key, on and 1 or 0, 0.25, ease_in_out)
-		local x = right - 42
-		local bg = { 120 + (48 - 120) * k, 120 + (209 - 120) * k, 128 + (88 - 128) * k, 82 + (255 - 82) * k }
-		g.rect(x, cy - 13, 42, 26, bg, 13, a)
-		local x1, y1, x2, y2 = g.px(x), g.py(cy - 13), g.px(x + 42), g.py(cy + 13)
-		local half = (y2 - y1) / 2
-		Render.FilledCircle(Vec2(x1 + half + (x2 - x1 - 2 * half) * k, y1 + half), half - g.inset(), g.col(C.text, a))
-		hit.add(x, cy - 13, 42, 26, "sw" .. key, { click = function()
-			SET[key] = on and 0 or 1
-			save_settings()
-		end })
-	end
-end
-
-function view.choice(id, options, current, on_pick)
-	return function(right, cy, a)
-		local widths, total = {}, 4
-		for i, o in ipairs(options) do
-			widths[i] = g.width(F(500), 12, o[2]) + 22
-			total = total + widths[i]
-		end
-		local x = right - total
-		g.rect(x, cy - 14, total, 28, C.fill3, 8, a)
-		local sel_x, sel_w, bx = 2, widths[1], 2
-		local found = false
-		for i, o in ipairs(options) do
-			if o[1] == current then sel_x, sel_w, found = bx, widths[i], true end
-			bx = bx + widths[i]
-		end
-		local tx = anim.tween(id .. "_x", sel_x, 0.28, ease_in_out)
-		local tw = anim.tween(id .. "_w", sel_w, 0.28, ease_in_out)
-		if found then g.thumb(x, cy - 14, total, 28, tx - 2, tx - 2 + tw, C.thumb, 6, a) end
-		bx = x + 2
-		for i, o in ipairs(options) do
-			local on = o[1] == current
-			g.text(F(500), 12, o[2], bx + widths[i] / 2, cy, on and C.text or C.text2, a, "c")
-			hit.add(bx, cy - 12, widths[i], 24, id .. i, { click = function() on_pick(o[1]) end })
-			bx = bx + widths[i]
-		end
-	end
-end
-
-function view.swatches(right, cy, a)
-	local step, r = 30, 9
-	local x0 = right - (#K.ACCENTS - 1) * step - r - 4
-	for i, acc in ipairs(K.ACCENTS) do
-		local cx, id = x0 + (i - 1) * step, "acc_" .. acc.id
-		local on = anim.tween(id, SET.accent == acc.id and 1 or 0, 0.2, ease_in_out)
-		local ring = math.max(on, anim.hover(id, hit.is(id)) * 0.35)
-		if ring > 0 then Render.Circle(g.v(cx, cy), (r + 4) * g.s, g.col(C.text, a * ring), 1.5 * g.s) end
-		Render.FilledCircle(g.v(cx, cy), r * g.s, g.col(acc.c, a))
-		hit.add(cx - 13, cy - 13, 26, 26, id, { click = function()
-			if SET.accent == acc.id then return end
-			SET.accent = acc.id
-			save_settings()
-			theme.set()
-		end })
-		view.hint(id, L("sm_accent_" .. acc.id))
-	end
-end
-
-function view.slide_to(mx)
-	local s = S.slide
-	local v = clamp((mx - s.x) / s.w, 0, 1)
-	SET[s.key] = s.min + math.floor((s.max - s.min) * v / 5 + 0.5) * 5
-end
-
-function view.slider(key, min, max)
-	return function(right, cy, a)
-		local tw = 180
-		local x = right - tw - 10
-		local v = (SET[key] - min) / (max - min)
-		local sx, sw = g.x + x * g.s, tw * g.s
-		local id = "sl_" .. key
-		local hot = hit.is(id) or (S.slide ~= nil and S.slide.key == key)
-		g.text(F(600), 13, SET[key] .. "%", x - 18, cy, C.text2, a, "r")
-		g.rect(x, cy - 2, tw, 4, C.fill2, 2, a)
-		g.rect(x, cy - 2, math.max(4, tw * v), 4, C.accent, 2, a)
-		Render.FilledCircle(g.v(x + tw * v, cy), (hot and 11 or 10) * g.s, g.col(C.text, a))
-		hit.add(x - 12, cy - 14, tw + 24, 28, id, { down = function(mx)
-			S.slide = { key = key, min = min, max = max, x = sx, w = sw }
-			view.slide_to(mx)
-		end })
-	end
-end
-
-function view.settings(y, a)
-	local h = 0
-	local theme_options, scale_options = {}, {}
-	for i, t in ipairs(K.THEMES) do theme_options[i] = { t.id, L("sm_theme_" .. t.id) } end
-	for i, v in ipairs(K.SCALES) do scale_options[i] = { v, v .. "%" } end
-
-	h = h + view.group_header(L("sm_ui_group"), y + h, a)
-	h = h + view.setting_rows({
-		{ tile = PAL.indigo, glyph = "moon", title = L("sm_ui_theme"), sub = L("sm_ui_theme_sub"),
-			control = view.choice("theme", theme_options, SET.theme, function(v)
-				if SET.theme == v then return end
-				SET.theme = v
-				save_settings()
-				theme.set()
-			end) },
-		{ tile = C.accent, glyph = "palette", title = L("sm_ui_accent"), sub = L("sm_ui_accent_sub"), control = view.swatches },
-		{ tile = PAL.teal, glyph = "compress", title = L("sm_ui_compact"), sub = L("sm_ui_compact_tip"), control = view.switch("compact") },
-	}, y + h, a) + view.gap()
-
-	h = h + view.group_header(L("sm_ui_window"), y + h, a)
-	h = h + view.setting_rows({
-		{ tile = PAL.blue, glyph = "blur", title = L("sm_ui_blur"), sub = L("sm_ui_blur_tip"), control = view.switch("blur") },
-		{ fold = view.fold("blur", SET.blur == 1), tile = PAL.indigo, glyph = "drop", title = L("sm_ui_blur_power"),
-			control = view.slider("blur_power", 10, 100) },
-		{ tile = PAL.purple, glyph = "eye", title = L("sm_ui_opacity"), sub = L("sm_ui_opacity_sub"),
-			control = view.slider("opacity", 45, 100) },
-		{ tile = PAL.orange, glyph = "expand", title = L("sm_ui_scale"), sub = L("sm_ui_scale_sub"),
-			control = view.choice("scale", scale_options, SET.scale, function(v)
-				SET.scale = v
-				save_settings()
-			end) },
-	}, y + h, a)
-	return h
-end
-
-function view.scrollbar(top, vh, max_scroll)
-	if max_scroll <= 0 then return end
-	local x, y, h = K.W - 24, top + 6, vh - 12
-	local th = math.max(32, h * h / S.content_h)
-	local ty = y + (h - th) * clamp(S.scroll / max_scroll, 0, 1)
-	local hover = hit.is("sb") or hit.is("sb_thumb") or S.sb_drag ~= nil
-	local k = anim.tween("sb", (hover or S.now < S.sb_until) and 1 or 0, 0.2)
-	local wide = anim.tween("sb_w", hover and 1 or 0, 0.15)
-	if k > 0 then
-		g.rect(x + 2, y, 8, h, { 255, 255, 255, 13 }, 4, k * wide)
-		local w = 6 + 2 * wide
-		g.rect(x + 10 - w, ty, w, th, hover and C.sb_hover or C.sb, w / 2, k)
-	end
-	hit.add(x, y, 12, h, "sb", { down = function(mx, my)
-		local rel = (my - g.y) / g.s - y - th / 2
-		S.scroll_to = clamp(rel / (h - th), 0, 1) * max_scroll
-	end })
-	hit.add(x, ty, 12, th, "sb_thumb", { down = function(mx, my)
-		S.sb_drag = { my = my, scroll = S.scroll, k = max_scroll / math.max(1, h - th) }
+	hit.add(x, y, w, 34, "nav:" .. id, { click = function()
+		S.nav, S.hero = id, nil
+		view.go("list")
 	end })
 end
 
-function view.settings_content()
-	local top, bottom = K.TB, K.H - K.FT
-	local vh = bottom - top
-	S.view_h = vh
+function view.icon_button(x, y, size, glyph, gsize, id, active, click)
+	local hv = anim.hover(id)
+	local ak = anim.tween("ib_on:" .. id, active and 1 or 0, 0.16)
+	g.rect(x, y, size, size, T.white, 8, 0.09 * ak + 0.08 * hv * (1 - ak))
+	g.glyph(glyph, gsize, x + size / 2, y + size / 2, anim.mix(T.t3, T.t1, ak))
+	hit.add(x, y, size, size, id, { click = click })
+end
+
+function view.pill(x, y, w, h, label, kind, id, click, size)
+	local hv = id and anim.hover(id) or 0
+	size = size or 12
+	if kind == "white" then
+		g.rect(x, y, w, h, T.pill, h / 2, 1 - 0.08 * hv)
+		g.text(600, size, label, x + w / 2, y + h / 2, T.dark, 1, "c")
+	elseif kind == "soft" then
+		g.rect(x, y, w, h, T.white, h / 2, 0.1 + 0.05 * hv)
+		g.text(600, size, label, x + w / 2, y + h / 2, T.t1, 1, "c")
+	elseif kind == "red" then
+		g.rect(x, y, w, h, T.red_bg, h / 2, 1 + 0.3 * hv)
+		g.text(600, size, label, x + w / 2, y + h / 2, T.red, 1, "c")
+	else
+		g.rect(x, y, w, h, T.white, h / 2, 0.08 * hv)
+		g.text(500, size, label, x + w / 2, y + h / 2, T.t3, 1, "c")
+	end
+	if id then hit.add(x, y, w, h, id, { click = click }) end
+end
+
+function view.sidebar()
+	g.rect(0, 0, K.SIDE, K.H, C.side, 16, 1, Enum.DrawFlags.RoundCornersLeft)
+	g.vl(K.SIDE - 1, 0, K.H, T.white, C.line / 255)
+	hit.add(0, 0, K.SIDE, K.H, "drag", { down = view.start_drag })
+
+	local updates = #market.updates()
+	local y = 18
+	view.nav_item(12, y, 196, "all", L("sm_nav_all"), K.G.all, #SCRIPTS)
+	y = y + 36
+	view.nav_item(12, y, 196, "installed", L("sm_nav_installed"), K.G.installed, market.installed_count())
+	y = y + 36
+	view.nav_item(12, y, 196, "updates", L("sm_nav_updates"), K.G.updates, updates, updates > 0)
+	y = y + 34 + 22
+	g.text(600, 12, L("sm_cats"), 22, y + 7, T.t4)
+	y = y + 20
+	view.nav_item(12, y, 196, "heroes", L("sm_nav_heroes"), K.G.heroes, S.hero_total)
+	y = y + 36
+	for _, cat in ipairs(CATS) do
+		local n = 0
+		for _, s in ipairs(SCRIPTS) do
+			if s.cat == cat then n = n + 1 end
+		end
+		view.nav_item(12, y, 196, cat, L("sm_cat_" .. cat), K.G[cat], n)
+		y = y + 36
+	end
+
+	local by = K.H - 14 - 36
+	local in_settings = S.view == "settings"
+	view.icon_button(K.SIDE - 12 - 30, by + 3, 30, K.G.sliders, 13, "gear", in_settings, function()
+		if in_settings then view.go("list") else view.go("settings") end
+	end)
+	view.icon_button(K.SIDE - 12 - 62, by + 3, 30, K.G.refresh, 12, "refresh", S.net.state == "loading", market.load)
+	anim.cross("chk", S.net.state, function(st, _, a)
+		local label = L("sm_unchecked")
+		if st == "loading" then
+			label = L("sm_checking")
+		elseif st == "error" then
+			label = L("sm_check_failed")
+		elseif st == "ok" then
+			label = string.format(L("sm_checked"), os.date("%H:%M", S.net.at))
+		end
+		g.text(400, 12, g.fit(400, 12, label, K.SIDE - 22 - 80), 22, by + 18 + 4 * (1 - a), T.t4)
+	end, 0.18)
+
+	if S.foot == "pending" then
+		S.foot_text = #S.changed == 1 and string.format(L("sm_restart_one"), S.changed[1]) or string.format(plural(#S.changed, "sm_restart_n"), #S.changed)
+	end
+	local function box(title, body, dy, primary, secondary)
+		local lines = g.wrap(400, 12, body, 196 - 28)
+		local h = 14 + 18 + 4 + #lines * 17 + 10 + (secondary and 58 or 30) + 8
+		local cy = by - 8 - h + dy
+		g.rect(12, cy, 196, h, T.white, 12, 0.05)
+		g.frame(12, cy, 196, h, T.white, 12, C.line / 255)
+		g.text(600, 13, title, 26, cy + 14 + 9, T.t1)
+		local ty = cy + 14 + 18 + 4
+		for i, line in ipairs(lines) do g.text(400, 12, line, 26, ty + (i - 1) * 17 + 8, T.t3) end
+		local bty = ty + #lines * 17 + 10
+		view.pill(26, bty, 168, 30, primary[1], primary[2], primary[3], primary[4])
+		if secondary then view.pill(26, bty + 30, 168, 28, secondary[1], "ghost", secondary[2], secondary[3]) end
+	end
+	anim.cross("foot", S.foot, function(st, live, a)
+		local dy = 8 * (1 - a)
+		if st == "pending" then
+			box(L("sm_restart_t"), S.foot_text or "", dy,
+				{ L("sm_restart_btn"), "white", live and "restart" or nil, market.restart },
+				{ L("sm_later"), live and "later" or nil, function() S.foot, S.changed = "idle", {} end })
+		elseif st == "note" and S.note then
+			box(L(S.note.title), S.note.text, dy, { L("sm_ok"), "soft", live and "note_ok" or nil, market.dismiss })
+		elseif st == "done" then
+			g.glyph(K.G.check, 11 * (0.6 + 0.4 * a), 29, by - 8 - 18 + dy, T.t2)
+			g.text(400, 12, L("sm_restarted"), 42, by - 8 - 18 + dy, T.t2)
+		end
+	end, 0.22)
+end
+
+function view.start_drag(mx, my)
+	S.drag = { mx = mx, my = my, wx = S.wx, wy = S.wy }
+end
+
+function view.scroll_area(x, y, w, h)
+	S.view_h, S.area = h, { x, y, w, h }
 	S.scroll = anim.tween("scroll", S.scroll_to, 0.24)
-	hit.add(0, top, K.W, vh, "content", { wheel = function(dir)
+	hit.add(x, y, w, h, "content", { wheel = function(dir)
 		S.scroll_to = clamp(S.scroll_to + dir * K.WHEEL, 0, math.max(0, S.content_h - S.view_h))
-		S.sb_until = S.now + 1.2
+		S.scroll_t = S.now
 	end })
-	g.clip(0, top, K.W, vh)
-	hit.clip = { g.x, g.y + top * g.s, g.x + K.W * g.s, g.y + bottom * g.s }
-	local y = top + 8 - math.floor(S.scroll * g.s + 0.5) / g.s
-	S.vis_top, S.vis_bottom = top, bottom
-	local h = view.settings(y, 1)
-	S.vis_top, S.vis_bottom = nil, nil
-	hit.clip = nil
-	g.unclip()
-	S.content_h = h + 8 + 20
-	local max_scroll = math.max(0, S.content_h - vh)
-	S.scroll_to = clamp(S.scroll_to, 0, max_scroll)
-	view.scrollbar(top, vh, max_scroll)
+	g.clip(x, y, w, h)
 end
 
-----------------------------------------------------------------------
--- Footer + tooltip + window
-----------------------------------------------------------------------
-
-function view.footer()
-	local top = K.H - K.FT
-	g.rect(0, top, K.W, K.FT, C.bar, 16, 1, ROUND_BOTTOM)
-	g.hl(0, top, K.W, C.black)
-	local by, bh = top + 14, 36
-	local right = K.W - 18
-	if S.settings then
-		g.text(F(400), 12, L("sm_ui_subtitle"), 22, top + K.FT / 2, C.text3)
-		local x = view.button("set_back", L("sm_ui_back"), nil, right, by, bh, "primary", true, function()
-			S.settings = false
-		end)
-		view.button("set_reset", L("sm_ui_defaults"), nil, x - 10, by, bh, "secondary", true, reset_settings)
-		return
+function view.end_scroll(content_h)
+	g.unclip()
+	S.content_h = content_h
+	local max_scroll = math.max(0, content_h - S.view_h)
+	if S.scroll_to > max_scroll then
+		S.scroll_to = max_scroll
+		anim.snap("scroll", max_scroll)
 	end
+	if max_scroll <= 0 then return end
 
-	g.text(F(400), 12, last_checked_text(), 22, top + K.FT / 2, C.text3)
-	local item = selected()
-	local is_manual = item and item.manual
-	local action_label = is_manual and L("sm_panel_download_button") or L("sm_panel_install_button")
-	local action_on = item ~= nil and not working and ((is_manual and can_download) or (not is_manual and can_install))
-	local x = view.button("act", action_label, "arrow_down", right, by, bh, "primary", action_on, function()
-		if working then return end
-		if is_manual then
-			if can_download then download_manual() end
-		elseif can_install then
-			install_selected()
+	local ax, ay, aw, ah = S.area[1], S.area[2], S.area[3], S.area[4]
+	local track = ah - 36
+	local thumb = math.max(32, track * S.view_h / content_h)
+	local top = ay + 8 + (track - thumb) * clamp(S.scroll / max_scroll, 0, 1)
+	local sa = anim.tween("scrollbar", S.now - S.scroll_t < 0.9 and 1 or 0, 0.2)
+	if sa > 0.01 then g.rect(ax + aw - 8, top, 4, thumb, T.white, 2, 0.22 * sa) end
+end
+
+function view.search(x, y, w)
+	local h = 36
+	local has = S.query ~= ""
+	local fa = anim.tween("sf_focus", S.focus and 1 or 0, 0.16)
+	local pa = anim.tween("sf_hint", has and 0 or 1, 0.14)
+	local ca = anim.tween("sf_clear", has and 1 or 0, 0.14)
+	hit.add(x, y, w, h, "search", { down = edit.click })
+	g.rect(x, y, w, h, T.white, 10, C.field / 255 + 0.03 * fa)
+	if fa > 0.01 then g.frame(x, y, w, h, K.ACCENT_TEXT, 10, 0.55 * fa) end
+	local gc = { T.t3[1] + (T.t1[1] - T.t3[1]) * fa, T.t3[2] + (T.t1[2] - T.t3[2]) * fa, T.t3[3] + (T.t1[3] - T.t3[3]) * fa }
+	g.glyph(K.G.search, 13, x + 19, y + h / 2, gc)
+	local tx = x + 36
+	local maxw = w - 36 - 34
+	edit.box = { tx = tx, maxw = maxw }
+	if pa > 0.01 then g.text(400, 14, L("sm_search"), tx, y + h / 2, T.t4, pa) end
+
+	local chars = edit.chars()
+	local widths = { [0] = 0 }
+	for i = 1, #chars do widths[i] = g.width(400, 14, table.concat(chars, "", 1, i)) end
+	local caret_x = widths[S.qc] or widths[#chars]
+	if caret_x - S.q_off > maxw then
+		S.q_off = caret_x - maxw
+	elseif caret_x < S.q_off then
+		S.q_off = caret_x
+	end
+	S.q_off = clamp(S.q_off, 0, math.max(0, widths[#chars] - maxw))
+	local off = anim.tween("sf_off", S.q_off, 0.12, ease_in_out)
+
+	g.clip(tx - 2, y, maxw + 4, h)
+	local lo, hi = edit.range()
+	local sel_on = lo ~= nil and S.focus
+	if sel_on then S.sel_box = { widths[lo], widths[hi] - widths[lo] } end
+	local sa = anim.tween("sf_sel", sel_on and 1 or 0, 0.12)
+	if sa > 0.01 and S.sel_box then
+		local sx = anim.tween("sf_sel_x", S.sel_box[1], 0.1, ease_out)
+		local sw = anim.tween("sf_sel_w", S.sel_box[2], 0.1, ease_out)
+		g.rect(tx + sx - off, y + 9, sw, 18, K.ACCENT, 3, 0.45 * sa)
+	elseif sa <= 0.01 then
+		S.sel_box = nil
+		anim.snap("sf_sel_x", widths[S.qc] or 0)
+		anim.snap("sf_sel_w", 0)
+	end
+	if has then g.text(400, 14, S.query, tx - off, y + h / 2, T.t1) end
+	local cx = anim.tween("sf_caret", caret_x, 0.09, ease_out)
+	local t = S.now - S.q_blink
+	local blink = t < 0.5 and 1 or (math.cos((t - 0.5) * math.pi * 2) + 1) / 2
+	local caret_a = fa * blink * (1 - sa)
+	if caret_a > 0.01 then g.rect(tx + cx - off, y + 10, 1.5, 16, T.t1, 0, caret_a) end
+	g.unclip()
+
+	if ca > 0.01 then
+		local base = g.a
+		g.a = base * ca
+		if has then
+			view.icon_button(x + w - 30, y + 6, 24, K.G.clear, 13, "search_clear", false, function()
+				S.query, S.qc, S.qa, S.q_off = "", 0, nil, 0
+				S.focus, S.q_blink = true, S.now
+			end)
+		else
+			g.glyph(K.G.clear, 13, x + w - 18, y + h / 2, T.t3)
+		end
+		g.a = base
+	end
+end
+
+function view.sort_button(right, y)
+	local label = nil
+	for _, o in ipairs(SORTS) do
+		if o.id == S.sort then label = L(o.key) end
+	end
+	label = label or L(SORTS[1].key)
+	local w = anim.tween("sort_w", 12 + 15 + 8 + g.width(500, 13, label) + 12, 0.2, ease_in_out)
+	local x = right - w
+	local hv = anim.hover("sort")
+	local ok = anim.tween("sort_on", S.sort_open and 1 or 0, 0.16)
+	local idle = C.field / 255 + 0.04 * hv
+	g.rect(x, y, w, 36, T.white, 10, idle + (0.12 - idle) * ok)
+	g.glyph(K.G.sort, 13, x + 12 + 7, y + 18, anim.mix(T.t3, T.t1, ok))
+	g.clip(x, y, w, 36)
+	anim.cross("sort_l", label, function(str)
+		g.text(500, 13, str, x + 35, y + 18, T.t5)
+	end, 0.18)
+	g.unclip()
+	hit.add(x, y, w, 36, "sort", { click = function() S.sort_open = not S.sort_open end })
+	return x
+end
+
+function view.sort_menu(right, y, k, live)
+	local w, h = 240, 5 + #SORTS * 32 + 11 + 32 + 5
+	local x = right - w
+	local add = live and hit.add or function() end
+	local a
+	a, y = anim.menu_begin(x, y, w, h, k)
+	g.rect(x, y, w, h, C.menu, 12)
+	g.frame(x, y, w, h, T.white, 12, 0.12)
+	add(x, y, w, h, "menu:sort_bg")
+	local iy = y + 5
+	local function item(id, label, on, click)
+		local hv = anim.hover(id)
+		g.rect(x + 5, iy, w - 10, 32, T.white, 7, 0.08 * hv)
+		if on then g.glyph(K.G.check, 11, x + 5 + 15, iy + 16, T.t1) end
+		g.text(400, 13, label, x + 5 + 30, iy + 16, T.t1)
+		add(x + 5, iy, w - 10, 32, id, { click = click })
+		iy = iy + 32
+	end
+	for _, o in ipairs(SORTS) do
+		item("menu:sort_" .. o.id, L(o.key), S.sort == o.id, function()
+			S.sort, S.sort_open = o.id, false
+			save("sort", o.id)
+		end)
+	end
+	g.hl(x + 13, iy + 5, w - 26, T.white, 0.1)
+	iy = iy + 11
+	item("menu:sort_inst", L("sm_sort_inst"), S.inst_first, function()
+		S.inst_first, S.sort_open = not S.inst_first, false
+		save("inst_first", S.inst_first and 1 or 0)
+	end)
+	anim.menu_end(a)
+end
+
+function view.action(s, right, cy)
+	anim.cross("act:" .. s.id, market.status(s), function(k, live, a)
+		local id = live and "act:" .. s.id or nil
+		if k == "none" or k == "update" or k == "manual" then
+			local label = L(k == "none" and "sm_install" or (k == "update" and "sm_update" or "sm_download"))
+			local w = g.width(600, 12, label) + 28
+			view.pill(right - w, cy - 14, w, 28, label, k == "update" and "white" or "soft", id, function() market.run(s.id) end)
+		elseif k == "busy" then
+			local cx = right - 14 - 14
+			local r = 11 * (0.8 + 0.2 * a)
+			g.ring(cx, cy, r, T.white, 0.14, 2.5, 0, 1)
+			g.ring(cx, cy, r, T.pill, 1, 2.5, (S.now * 360) % 360, 0.28)
+		else
+			local tw = g.width(500, 12, L("sm_installed"))
+			local dx = 6 * (1 - a)
+			g.text(500, 12, L("sm_installed"), right - 2 + dx, cy, T.t4, 1, "r")
+			g.glyph(K.G.check, 9, right - 2 - tw - 9 + dx, cy, T.t4)
 		end
 	end)
-	x = view.button("check", L("sm_panel_check_button"), "search", x - 10, by, bh, "secondary", not working, function()
-		if not working then update_check() end
-	end)
-	view.hint("check", L("sm_tip_check"))
 end
 
-function view.tip()
-	if S.tip ~= S.tip_shown then S.tip_shown, S.tip_since = S.tip, S.now end
-	if not S.tip then return end
-	local k = clamp((S.now - S.tip_since - K.TIP_DELAY) / 0.12, 0, 1)
-	if k <= 0 then return end
-	local mx, my = Input.GetCursorPos()
-	local cx, cy = (mx - g.x) / g.s, (my - g.y) / g.s
-	local w = g.width(F(600), 12, S.tip) + 20
-	local over = hit.at(mx, my)
-	local top = over and (over[2] - g.y) / g.s or cy
-	local bottom = over and (over[4] - g.y) / g.s or cy
-	local y = math.max(bottom + 6, cy + 24)
-	if y + 30 > K.H then y = math.min(top - 32, cy - 34) end
-	local x = clamp(cx - w / 2, 4, K.W - w - 4)
-	g.rect(x, y, w, 26, C.raised, 7, k)
-	g.frame(x, y, w, 26, C.outline, 7, k)
-	g.text(F(600), 12, S.tip, x + 10, y + 13, C.text, k)
+function view.row(s, rx, y, rw, interactive, sep)
+	local id = "row:" .. s.id
+	local hv = interactive and anim.hover(id) or 0
+	g.rect(rx, y, rw, 72, T.white, 12, 0.04 * hv)
+	if interactive then hit.add(rx, y, rw - 136, 72, id, { click = function() view.go("detail", s.id) end }) end
+	g.rect(rx + 12, y + 14, 44, 44, s.color, 12, 0.15)
+	g.glyph(s.glyph, 18, rx + 34, y + 36, s.color)
+	local tx = rx + 70
+	local tw = g.text(600, 14, s.title, tx, y + 27, T.t1)
+	local st = market.status(s)
+	if st == "update" then
+		S.vers[s.id] = short_ver(S.inst[s.id]) .. " → " .. short_ver(s.latest)
+	elseif st == "none" then
+		S.vers[s.id] = nil
+	end
+	local va = anim.tween("rv:" .. s.id, (st == "update" or st == "busy") and 1 or 0, 0.2)
+	if va > 0.01 and S.vers[s.id] then
+		g.text(400, 12, S.vers[s.id], tx + tw + 8, y + 28, T.t3, va)
+	end
+	g.text(400, 13, g.fit(400, 13, tr(s.tag), rw - 70 - 136 - 12), tx, y + 47, T.t3)
+	if interactive then view.action(s, rx + rw - 12, y + 36) end
+	if sep then g.hl(rx + 70, y + 72, rw - 70 - 12, T.white, C.line / 255) end
+end
+
+function view.list()
+	local x0, w0 = K.SIDE, K.W - K.SIDE
+	hit.add(x0, 0, w0, K.TOP, "drag", { down = view.start_drag })
+	local sort_x = view.sort_button(K.W - 24, 16)
+	view.search(x0 + 24, 16, sort_x - 10 - (x0 + 24))
+
+	local list = market.list()
+	local updates = market.updates()
+	view.scroll_area(x0, K.TOP, w0, K.H - K.TOP)
+	local y = K.TOP - S.scroll
+	local rx, rw = x0 + 12, w0 - 24
+
+	local show_banner = #updates > 0 and (S.nav == "all" or S.nav == "updates") and S.query == ""
+	if show_banner then S.banner_n = #updates end
+	local ba = anim.tween("banner", show_banner and 1 or 0, show_banner and 0.2 or 0.16)
+	if ba > 0.01 then
+		local base = g.a
+		g.a = base * ba
+		local bx, bw = rx + 12, rw - 24
+		g.frame(bx, y, bw, 52, T.white, 12, C.line / 255)
+		g.text(400, 13, string.format(plural(S.banner_n, "sm_upd"), S.banner_n), bx + 16, y + 26, T.t2)
+		local pw = g.width(600, 12, L("sm_update_all")) + 28
+		if show_banner then
+			view.pill(bx + bw - 10 - pw, y + 11, pw, 30, L("sm_update_all"), "white", "update_all", function()
+				for _, u in ipairs(updates) do market.run(u.id) end
+			end)
+		else
+			view.pill(bx + bw - 10 - pw, y + 11, pw, 30, L("sm_update_all"), "white")
+		end
+		g.a = base
+	end
+
+	local head = S.nav == "heroes" and S.hero
+	if head then
+		local hv = anim.hover("hero_back")
+		g.rect(rx, y + 4, rw, 44, T.white, 12, 0.05 * hv)
+		g.glyph(K.G.back, 12, rx + 24, y + 26, T.t3)
+		g.hero(S.hero, rx + 42, y + 12, 28, 1, 8)
+		local name_w = g.text(600, 15, market.hero_name(S.hero), rx + 82, y + 26, T.t1)
+		g.text(400, 12, tostring(#list), rx + 82 + name_w + 10, y + 27, T.t4)
+		hit.add(rx, y + 4, rw, 44, "hero_back", { click = function()
+			S.hero = nil
+			view.go("list")
+		end })
+	end
+
+	local live = {}
+	local cursor = (show_banner and 62 or 0) + (head and 52 or 0)
+	for _, s in ipairs(list) do
+		local r = S.rows[s.id]
+		if not r then
+			r = {}
+			S.rows[s.id] = r
+			anim.snap("ry:" .. s.id, cursor)
+			anim.snap("ra:" .. s.id, 0)
+		end
+		r.ty, r.live, r.s = cursor, true, s
+		live[s.id] = true
+		cursor = cursor + 73
+	end
+	local base = g.a
+	for id, r in pairs(S.rows) do
+		if not live[id] then
+			r.live = false
+			local a = anim.tween("ra:" .. id, 0, 0.16)
+			if a <= 0.01 then
+				S.rows[id] = nil
+			else
+				g.a = base * a
+				view.row(r.s, rx, y + anim.tween("ry:" .. id, r.ty, 0.26, ease_in_out), rw, false, false)
+			end
+		end
+	end
+	for i, s in ipairs(list) do
+		local r = S.rows[s.id]
+		g.a = base * anim.tween("ra:" .. s.id, 1, 0.2)
+		view.row(s, rx, y + anim.tween("ry:" .. s.id, r.ty, 0.26, ease_in_out), rw, true, i < #list)
+	end
+	g.a = base
+	y = y + cursor
+
+	local ea = anim.tween("empty", #list == 0 and 1 or 0, #list == 0 and 0.2 or 0.1)
+	if ea > 0.01 then
+		local t, d = "sm_empty", "sm_empty_d"
+		if #SCRIPTS == 0 and S.net.state == "error" then
+			t, d = "sm_err_catalog", "sm_err_catalog_d"
+		elseif #SCRIPTS == 0 and S.net.state ~= "ok" then
+			t, d = "sm_loading", "sm_loading_d"
+		elseif S.query ~= "" then
+			t, d = "sm_empty_search", "sm_empty_search_d"
+		elseif S.nav == "heroes" and S.hero then
+			t, d = "sm_empty_hero", "sm_empty_hero_d"
+		elseif S.nav == "updates" then
+			t, d = "sm_empty_upd", "sm_empty_upd_d"
+		end
+		local cx, cy = x0 + w0 / 2, K.TOP + (K.H - K.TOP) / 2 - 20
+		g.text(600, 15, L(t), cx, cy, T.t2, ea, "c")
+		g.text(400, 13, L(d), cx, cy + 24, T.t4, ea, "c")
+	end
+	view.end_scroll(y + S.scroll - K.TOP + 16)
+end
+
+function view.pick_hero(id)
+	S.hero = id
+	S.query, S.qc, S.qa, S.q_off, S.focus = "", 0, nil, 0, false
+	view.go("list")
+end
+
+function view.heroes()
+	local x0, w0 = K.SIDE, K.W - K.SIDE
+	hit.add(x0, 0, w0, K.TOP, "drag", { down = view.start_drag })
+	view.search(x0 + 24, 16, w0 - 48)
+
+	local q = S.query:lower()
+	local with, rest = {}, {}
+	for _, h in ipairs(HEROES) do
+		local found = q == "" or h[2]:lower():find(q, 1, true) ~= nil or market.hero_name(h[1]):lower():find(q, 1, true) ~= nil
+		if found then
+			local list = (S.hero_n[h[1]] or 0) > 0 and with or rest
+			list[#list + 1] = h[1]
+		end
+	end
+
+	view.scroll_area(x0, K.TOP, w0, K.H - K.TOP)
+	local cx, cw = x0 + 24, w0 - 48
+	local cols, gap, th = 4, 8, 46
+	local tw = (cw - gap * (cols - 1)) / cols
+	local y = K.TOP - S.scroll + 4
+
+	local function tile(id, tx, ty)
+		if ty + th < K.TOP - 4 or ty > K.H then return end
+		local key = "hero:" .. id
+		local n = S.hero_n[id] or 0
+		g.rect(tx, ty, tw, th, T.white, 10, 0.04 + 0.05 * anim.hover(key))
+		g.hero(id, tx + 9, ty + 9, 28, n > 0 and 1 or 0.45, 8)
+		local count_w = 0
+		if n > 0 then
+			local str = tostring(n)
+			count_w = math.max(20, g.width(700, 11, str) + 12)
+			g.rect(tx + tw - 10 - count_w, ty + th / 2 - 9, count_w, 18, K.ACCENT, 9, 0.28)
+			g.text(700, 11, str, tx + tw - 10 - count_w / 2, ty + th / 2, K.ACCENT_TEXT, 1, "c")
+		end
+		local room = tw - 46 - 10 - (count_w > 0 and count_w + 6 or 0)
+		g.text(500, 13, g.fit(500, 13, market.hero_name(id), room), tx + 46, ty + th / 2, n > 0 and T.t1 or T.t3)
+		hit.add(tx, ty, tw, th, key, { click = function() view.pick_hero(id) end })
+	end
+
+	local function section(title, list)
+		if #list == 0 then return end
+		g.text(600, 11, string.format("%s (%d)", L(title), #list), cx + 4, y + 7, T.t4)
+		y = y + 24
+		for i, id in ipairs(list) do
+			local col, row = (i - 1) % cols, math.floor((i - 1) / cols)
+			tile(id, cx + col * (tw + gap), y + row * (th + gap))
+		end
+		y = y + math.ceil(#list / cols) * (th + gap) + 14
+	end
+
+	section("sm_heroes_with", with)
+	section("sm_heroes_all", rest)
+
+	if #with + #rest == 0 then
+		g.text(600, 15, L("sm_empty_search"), x0 + w0 / 2, K.TOP + 140, T.t2, 1, "c")
+		g.text(400, 13, L("sm_empty_search_d"), x0 + w0 / 2, K.TOP + 164, T.t4, 1, "c")
+	end
+	view.end_scroll(y + S.scroll - K.TOP + 12)
+end
+
+function view.detail()
+	local s = BY_ID[S.sel]
+	local x0, w0 = K.SIDE, K.W - K.SIDE
+	hit.add(x0, 0, w0, K.TOP, "drag", { down = view.start_drag })
+
+	local back_keys = { all = "sm_nav_all", installed = "sm_nav_installed", updates = "sm_nav_updates", heroes = "sm_nav_heroes" }
+	local back = L(back_keys[S.nav] or ("sm_cat_" .. S.nav))
+	if S.nav == "heroes" and S.hero then back = market.hero_name(S.hero) end
+	local bw = 6 + 18 + 4 + g.width(500, 13, back) + 12
+	local hv = anim.hover("back")
+	g.rect(x0 + 16, 17, bw, 34, T.white, 9, 0.08 * hv)
+	g.glyph(K.G.back, 12, x0 + 16 + 15, 34, T.t5)
+	g.text(500, 13, back, x0 + 16 + 28, 34, T.t5)
+	hit.add(x0 + 16, 17, bw, 34, "back", { click = function() view.go("list") end })
+
+	view.scroll_area(x0, K.TOP, w0, K.H - K.TOP)
+	local cx, cw = x0 + 40, w0 - 80
+	local y = K.TOP + 4 - S.scroll
+	local k, v = market.status(s), S.inst[s.id]
+
+	local right = cx + cw
+	local act_key = { none = "sm_install", update = "sm_update", manual = "sm_download" }
+	local function act_w(st)
+		if st == "none" or st == "update" or st == "manual" then return g.width(600, 13, L(act_key[st])) + 40 end
+		if st == "busy" then return 14 + g.width(500, 13, L("sm_installing")) + 10 + 24 + 6 end
+		return 16 + 13 + 7 + g.width(500, 13, L("sm_installed")) + 16
+	end
+	local aw = anim.tween("d_aw:" .. s.id, act_w(k), 0.22, ease_in_out)
+	local ax = right - aw
+	local white_k = anim.tween("d_wh:" .. s.id, act_key[k] and 1 or 0, 0.2)
+	local bg_a = 0.06 + (k == "busy" and 0.02 or 0)
+	g.rect(ax, y + 23, aw, 34, anim.mix(T.white, T.pill, white_k), 17, bg_a + (1 - bg_a) * white_k)
+	local hv = anim.hover("d_act")
+	if white_k > 0.5 then g.rect(ax, y + 23, aw, 34, T.dark, 17, 0.08 * hv * white_k) end
+	g.clip(ax, y + 23, aw, 34)
+	anim.cross("d_act:" .. s.id, k, function(st, live, a)
+		local dy = 5 * (1 - a)
+		if act_key[st] then
+			g.text(600, 13, L(act_key[st]), ax + aw / 2, y + 40 + dy, T.dark, 1, "c")
+			if live then hit.add(ax, y + 23, aw, 34, "d_act", { click = function() market.run(s.id) end }) end
+		elseif st == "busy" then
+			g.text(500, 13, L("sm_installing"), right - 6 - 24 - 10, y + 40 + dy, T.t2, 1, "r")
+			g.ring(right - 6 - 12, y + 40, 9.5 * (0.8 + 0.2 * a), T.white, 0.14, 2.5, 0, 1)
+			g.ring(right - 6 - 12, y + 40, 9.5 * (0.8 + 0.2 * a), T.pill, 1, 2.5, (S.now * 360) % 360, 0.28)
+		else
+			local tw = 13 + 7 + g.width(500, 13, L("sm_installed"))
+			local lx = ax + (aw - tw) / 2
+			g.glyph(K.G.check, 10 * (0.6 + 0.4 * a), lx + 6, y + 40, T.t3)
+			g.text(500, 13, L("sm_installed"), lx + 20, y + 40 + dy, T.t3)
+		end
+	end, 0.22)
+	g.unclip()
+	right = ax
+
+	local show_rm = v ~= nil and k ~= "busy"
+	local ra = anim.tween("d_rm:" .. s.id, show_rm and 1 or 0, show_rm and 0.2 or 0.12)
+	if ra > 0.01 then
+		local confirm = S.confirm == s.id and show_rm
+		local rk = anim.tween("d_rc:" .. s.id, confirm and 1 or 0, 0.18, ease_in_out)
+		local w_off = g.width(500, 13, L("sm_remove")) + 32
+		local w_on = g.width(600, 13, L("sm_remove_confirm")) + 32
+		local w = w_off + (w_on - w_off) * rk
+		local rx = right - 8 - w
+		local rhv = anim.hover("d_remove")
+		local base = g.a
+		g.a = base * ra
+		g.rect(rx, y + 23, w, 34, T.white, 17, 0.08 * rhv * (1 - rk))
+		g.rect(rx, y + 23, w, 34, T.red_bg, 17, rk * (1 + 0.3 * rhv))
+		g.clip(rx, y + 23, w, 34)
+		if rk < 0.99 then g.text(500, 13, L("sm_remove"), rx + w / 2, y + 40, T.t3, 1 - rk, "c") end
+		if rk > 0.01 then g.text(600, 13, L("sm_remove_confirm"), rx + w / 2, y + 40, T.red, rk, "c") end
+		g.unclip()
+		g.a = base
+		if show_rm then hit.add(rx, y + 23, w, 34, "d_remove", { click = function() market.remove(s.id) end }) end
+		right = right - (8 + w) * ra
+	end
+
+	g.rect(cx, y, 80, 80, s.color, 20, 0.15)
+	g.glyph(s.glyph, 32, cx + 40, y + 40, s.color)
+	local title_w = right - 16 - (cx + 100)
+	g.text(700, 26, g.fit(700, 26, s.title, title_w), cx + 100, y + 27, T.t1)
+	g.text(400, 14, g.fit(400, 14, tr(s.tag), title_w), cx + 100, y + 56, T.t3)
+	y = y + 80 + 28
+
+	local stats
+	if k == "update" then
+		stats = { { "sm_st_installed", v }, { "sm_st_available", s.latest } }
+	else
+		stats = { { "sm_st_version", s.latest }, { "sm_st_installed", v or "-" } }
+	end
+	stats[3] = { "sm_st_category", L("sm_cat_" .. s.cat) }
+	stats[4] = { "sm_st_library", s.nlz and L("sm_lib_nlz") or L("sm_lib_none") }
+	g.hl(cx, y, cw, T.white, C.line / 255)
+	local colw = cw / 4
+	for i, st in ipairs(stats) do
+		local sx = cx + (i - 1) * colw
+		if i > 1 then g.vl(sx, y + 14, 40, T.white, C.line / 255) end
+		g.text(400, 12, L(st[1]), sx + 16, y + 14 + 8, T.t4)
+		g.text(600, 16, g.fit(600, 16, st[2], colw - 32), sx + 16, y + 14 + 31, T.t1)
+	end
+	y = y + 68
+	g.hl(cx, y, cw, T.white, C.line / 255)
+	y = y + 28
+
+	if #s.heroes > 0 then
+		local hx = cx
+		for _, hid in ipairs(s.heroes) do
+			local name = market.hero_name(hid)
+			local w = 6 + 18 + 7 + g.width(500, 12, name) + 12
+			local chip = "chip:" .. hid
+			g.frame(hx, y, w, 26, T.white, 13, 0.12 + 0.1 * anim.hover(chip))
+			g.hero(hid, hx + 6, y + 4, 18, 1, 9)
+			g.text(500, 12, name, hx + 6 + 18 + 7, y + 13, T.t2)
+			hit.add(hx, y, w, 26, chip, { click = function()
+				S.nav, S.hero = "heroes", hid
+				view.go("list")
+			end })
+			hx = hx + w + 6
+		end
+		y = y + 26 + 18
+	end
+
+	if s.author or s.source then
+		local x = cx
+		if s.author then
+			local label = g.fit(500, 12, L("sm_author") .. ": " .. s.author, cw / 2)
+			x = x + g.text(500, 12, label, x, y + 6, T.t3) + 20
+		end
+		if s.source then g.text(400, 12, L("sm_source") .. ": " .. s.source, x, y + 6, T.t4) end
+		y = y + 28
+	end
+
+	local about_text = tr(s.about)
+	if about_text ~= "" then
+		g.text(700, 17, L("sm_about"), cx, y + 11, T.t1)
+		y = y + 22 + 12
+		local about = g.wrap(400, 14, about_text, cw)
+		for i, line in ipairs(about) do g.text(400, 14, line, cx, y + (i - 1) * 22 + 11, T.t2) end
+		y = y + #about * 22 + 28
+	end
+
+	local features = s.features[S.lang]
+	if #features == 0 then features = s.features.en end
+	if #features > 0 then
+		g.text(700, 17, L("sm_features"), cx, y + 11, T.t1)
+		y = y + 22 + 12
+	end
+	local fw = (cw - 28) / 2
+	local i = 1
+	while i <= #features do
+		local row_h = 0
+		for c = 0, 1 do
+			local f = features[i + c]
+			if f then
+				local fx = cx + c * (fw + 28)
+				local lines = g.wrap(400, 13, f, fw - 14)
+				g.dot(fx + 2, y + 10, 2, s.color)
+				for li, line in ipairs(lines) do g.text(400, 13, line, fx + 14, y + (li - 1) * 19.5 + 10, T.t2) end
+				row_h = math.max(row_h, #lines * 19.5)
+			end
+		end
+		y = y + row_h + 10
+		i = i + 2
+	end
+	view.end_scroll(y + S.scroll - K.TOP + 26)
+end
+
+function view.switch(x, y, on, id, click)
+	local k = anim.tween("sw:" .. id, on and 1 or 0, 0.18, ease_in_out)
+	local off, acc = C.off, K.ACCENT
+	local track = { off[1] + (acc[1] - off[1]) * k, off[2] + (acc[2] - off[2]) * k, off[3] + (acc[3] - off[3]) * k }
+	g.rect(x, y, 34, 20, track, 10)
+	local kc = { T.knob_off[1] + (255 - T.knob_off[1]) * k, T.knob_off[2] + (255 - T.knob_off[2]) * k, T.knob_off[3] + (255 - T.knob_off[3]) * k }
+	g.dot(x + 10 + 14 * k, y + 10, 8, kc)
+	hit.add(x, y, 34, 20, id, { click = click })
+end
+
+function view.dropdown(x, y, key, value, open)
+	local id = "dd:" .. key
+	local hv = anim.hover(id)
+	local ok = anim.tween("dd_on:" .. key, open and 1 or 0, 0.16)
+	g.rect(x, y, 132, 28, C.dd, 7)
+	local fa = 0.14 * hv + (0.18 - 0.14 * hv) * ok
+	if fa > 0.005 then g.frame(x, y, 132, 28, T.white, 7, fa) end
+	g.clip(x, y, 132 - 26, 28)
+	anim.cross("dd_v:" .. key, value, function(str, _, a)
+		g.text(500, 12, str, x + 10, y + 14 + 4 * (1 - a), T.t5)
+	end, 0.18)
+	g.unclip()
+	if ok < 0.99 then g.glyph(K.G.down, 9, x + 132 - 15, y + 14 + 2 * ok, T.t3, 1 - ok) end
+	if ok > 0.01 then g.glyph(K.G.up, 9, x + 132 - 15, y + 14 - 2 * (1 - ok), T.t3, ok) end
+	hit.add(x, y, 132, 28, id, { click = function()
+		if open then S.menu = nil else S.menu = key end
+	end })
+end
+
+function view.dropdown_menu(x, y, key, opts, cur, pick, k, live)
+	local h = 8 + #opts * 28
+	local add = live and hit.add or function() end
+	local a
+	a, y = anim.menu_begin(x, y, 132, h, k)
+	g.rect(x, y, 132, h, C.menu, 8)
+	g.frame(x, y, 132, h, T.white, 8, 0.1)
+	add(x, y, 132, h, "menu:" .. key .. "_bg")
+	for i, o in ipairs(opts) do
+		local id = "menu:" .. key .. "_" .. o
+		local iy = y + 4 + (i - 1) * 28
+		local hv = anim.hover(id)
+		g.rect(x + 4, iy, 124, 28, T.white, 5, 0.08 * hv)
+		local on = o == cur
+		g.text(on and 600 or 500, 12, L("sm_" .. key .. "_" .. o), x + 12, iy + 14, on and K.ACCENT_TEXT or T.t5)
+		add(x + 4, iy, 124, 28, id, { click = function()
+			pick(o)
+			S.menu = nil
+		end })
+	end
+	anim.menu_end(a)
+end
+
+function view.swatches(right, cy, order, cur, prefix, color, pick)
+	local size, gap = 20, 8
+	local x = right - (#order * size + (#order - 1) * gap)
+	for i, id in ipairs(order) do
+		local key = prefix .. id
+		local hv = anim.hover(key)
+		local on = anim.tween("sw_on:" .. key, cur == id and 1 or 0, 0.16)
+		local sx = x + (i - 1) * (size + gap) + size / 2
+		g.dot(sx, cy, size / 2 - 1 + 0.8 * hv, color(id))
+		g.ring(sx, cy, size / 2 - 1, T.white, 0.14, 1, 0, 1)
+		if on > 0.01 then g.ring(sx, cy, size / 2 + 3.5, T.white, 0.85 * on, 1.5, 0, 1) end
+		hit.add(sx - size / 2 - gap / 2, cy - size / 2 - 4, size + gap, size + 8, key, { click = function() pick(id) end })
+	end
+end
+
+function view.settings()
+	local x0, w0 = K.SIDE, K.W - K.SIDE
+	hit.add(x0, 0, w0, K.H, "drag", { down = view.start_drag })
+	local cx, cw = x0 + 24, w0 - 48
+	local y = 24
+	g.text(700, 20, L("sm_settings"), cx + 4, y + 12, T.t1)
+	y = y + 24 + 18
+
+	local menus = {}
+
+	local function pick_row(key)
+		return { label = "sm_set_" .. key, draw = function(ry, right)
+			local open = S.menu == key
+			local dx = right - 132
+			view.dropdown(dx, ry + 6, key, L("sm_" .. key .. "_" .. S.set[key]), open)
+			local mk = anim.menu(key, open)
+			if mk > 0.005 then menus[#menus + 1] = { dx, ry + 6 + 32, key, S.set[key], mk, open } end
+		end }
+	end
+
+	local function card(title, rows)
+		g.text(600, 11, L(title), cx + 4, y + 7, T.t4)
+		y = y + 22
+		g.rect(cx, y, cw, 8 + #rows * 40, C.card, 10)
+		for i, row in ipairs(rows) do
+			local ry = y + 4 + (i - 1) * 40
+			g.text(400, 13, L(row.label), cx + 14, ry + 20, T.t5)
+			if row.note then
+				g.text(400, 12, row.note(), cx + 14 + g.width(400, 13, L(row.label)) + 10, ry + 20, T.t4)
+			end
+			row.draw(ry, cx + cw - 12)
+		end
+		y = y + 8 + #rows * 40 + 20
+	end
+
+	card("sm_g_updates", {
+		pick_row("check"),
+		{ label = "sm_set_beta", draw = function(ry, right)
+			view.switch(right - 34, ry + 10, S.set.beta, "beta", function()
+				S.set.beta = not S.set.beta
+				save("beta", S.set.beta and 1 or 0)
+			end)
+		end },
+		pick_row("restart"),
+	})
+
+	card("sm_g_look", {
+		{ label = "sm_set_theme", note = function() return L("sm_theme_" .. S.set.theme) end, draw = function(ry, right)
+			view.swatches(right, ry + 20, THEME_ORDER, S.set.theme, "th:", function(id) return THEMES[id].menu end, market.set_theme)
+		end },
+		{ label = "sm_set_accent", note = function() return L("sm_accent_" .. S.set.accent) end, draw = function(ry, right)
+			view.swatches(right, ry + 20, ACCENT_ORDER, S.set.accent, "ac:", function(id) return ACCENTS[id] end, market.set_accent)
+		end },
+	})
+
+	for _, m in ipairs(menus) do
+		view.dropdown_menu(m[1], m[2], m[3], SETS[m[3]], m[4], function(o)
+			S.set[m[3]] = o
+			save(m[3], o)
+		end, m[5], m[6])
+	end
+end
+
+function view.grip()
+	local id = "grip"
+	local on = hit.is(id) or S.resize ~= nil
+	local c = on and T.t2 or { 110, 110, 115 }
+	g.line(K.W - 6, K.H - 14, K.W - 14, K.H - 6, c, 1, 1.5)
+	g.line(K.W - 6, K.H - 9, K.W - 9, K.H - 6, c, 1, 1.5)
+	hit.add(K.W - 20, K.H - 20, 20, 20, id, { down = function(mx)
+		S.resize = { mx = mx, w = K.W * g.s, scale = S.scale }
+	end })
+	if S.resize then
+		local label = S.scale .. "%"
+		local w = g.width(600, 11, label) + 16
+		g.rect(K.W - 26 - w, K.H - 8 - 22, w, 22, C.menu, 11)
+		g.frame(K.W - 26 - w, K.H - 8 - 22, w, 22, T.white, 11, 0.12)
+		g.text(600, 11, label, K.W - 26 - w / 2, K.H - 8 - 11, T.t5, 1, "c")
+	end
 end
 
 function view.window()
 	local screen = Render.ScreenSize()
-	g.s = math.max(0.7, screen.y / 1080) * SET.scale / 100
+	g.s = math.max(0.7, screen.y / 1080) * S.scale / 100
+	g.rescale(g.s)
 	if not S.wx then
-		S.wx = Config.ReadInt("script_manager", "panel_x", -1)
-		S.wy = Config.ReadInt("script_manager", "panel_y", -1)
-		if S.wx < 0 or S.wy < 0 then
+		S.wx = Config.ReadInt(K.CFG, "wx", -1)
+		S.wy = Config.ReadInt(K.CFG, "wy", -1)
+		if S.wx < 0 then
 			S.wx = math.floor((screen.x - K.W * g.s) / 2)
 			S.wy = math.floor((screen.y - K.H * g.s) / 2)
 		end
 	end
 	S.wx = clamp(S.wx, 0, math.max(0, screen.x - K.W * g.s))
 	S.wy = clamp(S.wy, 0, math.max(0, screen.y - K.H * g.s))
-	g.x, g.a = S.wx, S.alpha
-	g.y = S.wy + (1 - S.alpha) * 10 * g.s
-	g.cmp = anim.tween("compact", SET.compact == 1 and 1 or 0, 0.25, ease_in_out)
-
-	if S.settings ~= S.last_settings then
-		S.last_settings, S.fade_t = S.settings, 0
-		S.scroll_to = 0
-		S.tweens.scroll = nil
-	end
-	S.fade_t = math.min(1, S.fade_t + S.dt / 0.2)
-	S.detail_t = math.min(1, S.detail_t + S.dt / 0.18)
-
+	g.x, g.y, g.a = S.wx, S.wy, S.alpha
 	hit.begin()
-	S.tip = nil
 
-	Render.FilledRect(Vec2(0, 0), Vec2(screen.x, screen.y), Color(3, 7, 12, math.floor(78 * S.alpha)))
+	hit.add(0, 0, K.W, K.H, "win")
+	g.rect(0, 0, K.W, K.H, C.win, 16)
+	view.sidebar()
 
-	hit.add(0, 0, K.W, K.H, "window", {})
-	g.glass(0, 0, K.W, K.H, 16)
-	view.titlebar()
-
-	local base = g.a
-	g.a = base * (0.35 + 0.65 * ease_out(S.fade_t))
-	if S.settings then
-		view.settings_content()
-	else
-		view.main()
+	local key = S.view .. ":" .. S.nav .. ":" .. tostring(S.sel) .. ":" .. tostring(S.hero)
+	if key ~= S.page_key then
+		S.page_key = key
+		anim.snap("page", 0)
+		for name in pairs(S.tweens) do
+			if name:sub(1, 3) == "mn:" then S.tweens[name] = nil end
+		end
 	end
-	g.a = base
+	local pa = anim.tween("page", 1, 0.18)
+	g.a = S.alpha * pa
+	if S.view == "detail" and BY_ID[S.sel] then
+		view.detail()
+	elseif S.view == "settings" then
+		view.settings()
+	elseif S.nav == "heroes" and not S.hero then
+		S.sort_open = false
+		view.heroes()
+	else
+		view.list()
+		local mk = anim.menu("sort", S.sort_open)
+		if mk > 0.005 then view.sort_menu(K.W - 24, 16 + 36 + 6, mk, S.sort_open) end
+	end
+	g.a = S.alpha
 
-	view.footer()
-	view.tip()
-	g.frame(0, 0, K.W, K.H, C.border, 16)
+	g.frame(0, 0, K.W, K.H, T.white, 16, 0.09)
+	view.grip()
 end
 
-----------------------------------------------------------------------
--- Input
-----------------------------------------------------------------------
+local JS_SINK = [[
+(function () {
+	let root = $.GetContextPanel();
+	while (root.GetParent()) root = root.GetParent();
+	let sink = root.FindChild('ScriptManagerInput');
+	const drop = () => {
+		sink.text = '';
+		sink.DeleteAsync(0);
+	};
+	if (%s) {
+		if (!sink) {
+			sink = $.CreatePanel('TextEntry', root, 'ScriptManagerInput');
+			sink.style.width = '1px';
+			sink.style.height = '1px';
+			sink.style.opacity = '0';
+			sink.hittest = false;
+			const watch = () => {
+				if (!sink.IsValid()) return;
+				if (Date.now() - Number(sink.GetAttributeString('alive', '0')) > %d) return drop();
+				$.Schedule(0.25, watch);
+			};
+			$.Schedule(0.25, watch);
+		}
+		sink.SetAttributeString('alive', String(Date.now()));
+		sink.text = '';
+		sink.SetFocus();
+	} else if (sink) {
+		drop();
+	}
+})();
+]]
 
-local input = { held = {}, swallow = false }
+local input = { swallow = false, held = {}, sink_on = false, sink_at = 0 }
+
+function input.sink(on, force)
+	local now = os.clock()
+	if input.sink_on == on and not force and not (on and now >= input.sink_at) then return end
+	input.sink_on, input.sink_at = on, now + K.SINK_ALIVE
+	Engine.RunScript(JS_SINK:format(on and "true" or "false", K.SINK_TIMEOUT))
+end
+
+Engine.RunScript(JS_SINK:format("false", K.SINK_TIMEOUT))
 
 local function inside(mx, my)
-	return mx >= S.wx and my >= S.wy and mx < S.wx + K.W * g.s and my < S.wy + K.H * g.s
+	return S.wx and mx >= S.wx and my >= S.wy and mx < S.wx + K.W * g.s and my < S.wy + K.H * g.s
 end
 
-function input.press(mx, my, button)
-	if button ~= 1 then return end
+function input.press(mx, my)
 	local h = hit.at(mx, my)
 	local id, on = h and h[5], h and h[6] or {}
+	if (S.sort_open or S.menu) and not (id and (id:sub(1, 5) == "menu:" or id == "sort" or id:sub(1, 3) == "dd:")) then
+		S.sort_open, S.menu = false, nil
+		S.press = { id = false }
+		return
+	end
+	if id ~= "search" and id ~= "search_clear" then S.focus = false end
+	if id ~= "d_remove" then S.confirm = nil end
 	S.press = { id = id or false, on = on }
 	if on.down then on.down(mx, my) end
 end
@@ -2255,125 +2706,106 @@ function input.release(mx, my)
 end
 
 function input.end_drag()
-	if S.drag and S.wx then
-		Config.WriteInt("script_manager", "panel_x", math.floor(S.wx))
-		Config.WriteInt("script_manager", "panel_y", math.floor(S.wy))
+	if S.drag then
+		save("wx", math.floor(S.wx))
+		save("wy", math.floor(S.wy))
 	end
-	if S.slide then save_settings() end
-	S.drag, S.sb_drag, S.slide = nil, nil, nil
+	if S.resize then save("scale", S.scale) end
+	S.drag, S.resize, S.q_drag = nil, nil, false
 end
 
-----------------------------------------------------------------------
--- Init
-----------------------------------------------------------------------
-
-set_status("sm_status_idle")
-load_update_cache()
-show_cached_selection()
-local scripts_dir = scripts_path()
-localizer_installed = scripts_dir ~= nil and read_file(scripts_dir .. "!_qLocalizer.lua") ~= nil
-
-----------------------------------------------------------------------
--- Callbacks
-----------------------------------------------------------------------
-
-function script.OnScriptsLoaded()
-	if ai_bridge and type(ai_bridge.mcp_log) == "function" then
-		ai_bridge.mcp_log("info", "Script Manager loaded", { version = VERSION })
+function input.key(key)
+	if S.focus then
+		local ctrl = Input.IsKeyDown(KEY.KEY_LCONTROL) or Input.IsKeyDown(KEY.KEY_RCONTROL)
+		local shift = Input.IsKeyDown(KEY.KEY_LSHIFT) or Input.IsKeyDown(KEY.KEY_RSHIFT)
+		edit.key(key, ctrl, shift)
+		return
 	end
-	update_check()
+	if key == KEY.KEY_ESCAPE then
+		if S.sort_open or S.menu then
+			S.sort_open, S.menu = false, nil
+		elseif S.view ~= "list" then
+			view.go("list")
+		else
+			S.open = false
+		end
+	end
 end
+
+local script = {}
 
 function script.OnUpdateEx()
-	if ui.open:IsPressed() and not Input.IsInputCaptured() then
-		S.open = not S.open
-		S.drag, S.slide, S.sb_drag, S.press = nil, nil, nil, nil
-	end
-	if reload_at and os.clock() >= reload_at then
-		reload_at = nil
-		Engine.ReloadScriptSystem()
-	end
+	if not ui.enable:Get() then return end
+	if ui.key:IsPressed() and not Input.IsInputCaptured() and not S.focus then S.open = not S.open end
 end
 
 function script.OnFrame()
+	if not ui.enable:Get() then return end
 	local now = os.clock()
 	local frame = GlobalVars.GetAbsFrameTime()
-	S.dt = clamp(frame > 0 and frame or (now - S.now), 0, 0.1)
+	S.dt = clamp(frame > 0 and frame or (now - (S.now > 0 and S.now or now)), 0, 0.1)
 	S.now = now
-	theme.tick(S.dt)
+	S.lang = localization.GetLanguage() == "ru" and "ru" or "en"
+	market.tick()
 	S.alpha = anim.tween("window", S.open and 1 or 0, 0.18)
+	if not S.open then S.focus = false end
+	input.sink(S.focus and S.open)
 	if S.alpha <= 0 then return end
 
-	if S.press and not Input.IsKeyDown(Enum.ButtonCode.KEY_MOUSE1, true) then
+	if S.press and not Input.IsKeyDown(KEY.KEY_MOUSE1, true) then
 		input.end_drag()
 		S.press = nil
 	end
 	for key in pairs(input.held) do
 		if not Input.IsKeyDown(key, true) then input.held[key] = nil end
 	end
-
 	local mx, my = Input.GetCursorPos()
 	if S.drag then
 		S.wx, S.wy = S.drag.wx + mx - S.drag.mx, S.drag.wy + my - S.drag.my
 	end
-	if S.slide then view.slide_to(mx) end
-	if S.sb_drag then
-		S.scroll_to = clamp(S.sb_drag.scroll + (my - S.sb_drag.my) * S.sb_drag.k, 0, math.max(0, S.content_h - S.view_h))
-		S.tweens.scroll = nil
-		S.scroll = S.scroll_to
-		S.sb_until = S.now + 1.2
+	if S.q_drag then S.qc = edit.index_at(mx) end
+	if S.resize then
+		local r = S.resize
+		S.scale = clamp(math.floor(r.scale * (r.w + mx - r.mx) / r.w + 0.5), K.SCALE_MIN, K.SCALE_MAX)
 	end
-	view.window()
+	local ok, err = pcall(view.window)
+	if ok then return end
+	g.reset()
+	hit.clip = nil
+	if err ~= S.draw_error then
+		S.draw_error = err
+		Log.Write("[Script Manager] draw: " .. tostring(err))
+	end
 end
 
 function script.OnKeyEvent(e)
-	if not e then return true end
-	if S.alpha <= 0 or not S.wx then return true end
-	if not S.open then
-		if e.key == Enum.ButtonCode.KEY_MOUSE1 and e.event == Enum.EKeyEvent.EKeyEvent_KEY_UP then
-			input.held[e.key] = nil
-			input.end_drag()
-			S.press = nil
-			input.swallow = false
-		end
-		return true
-	end
-
-	if e.key == Enum.ButtonCode.KEY_ESCAPE and e.event == Enum.EKeyEvent.EKeyEvent_KEY_DOWN then
-		if S.settings then S.settings = false else S.open = false end
-		S.drag, S.slide, S.sb_drag, S.press = nil, nil, nil, nil
-		return false
-	end
-
+	if not ui.enable:Get() or S.alpha <= 0 or not S.open then return true end
 	local mx, my = Input.GetCursorPos()
+	local over = inside(mx, my)
 	if e.event == Enum.EKeyEvent.EKeyEvent_SCROLL_UP or e.event == Enum.EKeyEvent.EKeyEvent_SCROLL_DOWN then
-		if not inside(mx, my) then return true end
-		if S.settings then
-			local content
-			for i = #hit.list, 1, -1 do
-				if hit.list[i][5] == "content" then
-					content = hit.list[i]
-					break
-				end
-			end
-			if content and mx >= content[1] and mx < content[3] and my >= content[2] and my < content[4] then
-				content[6].wheel(e.event == Enum.EKeyEvent.EKeyEvent_SCROLL_DOWN and 1 or -1)
+		if not over then return true end
+		for i = #hit.list, 1, -1 do
+			local h = hit.list[i]
+			if h[5] == "content" and mx >= h[1] and mx < h[3] and my >= h[2] and my < h[4] then
+				h[6].wheel(e.event == Enum.EKeyEvent.EKeyEvent_SCROLL_DOWN and 1 or -1)
+				break
 			end
 		end
 		return false
 	end
-
-	if e.key == Enum.ButtonCode.KEY_MOUSE1 or e.key == Enum.ButtonCode.KEY_MOUSE2 then
-		local left = e.key == Enum.ButtonCode.KEY_MOUSE1
+	if e.key == KEY.KEY_MOUSE1 or e.key == KEY.KEY_MOUSE2 then
+		local left = e.key == KEY.KEY_MOUSE1
 		if e.event == Enum.EKeyEvent.EKeyEvent_KEY_DOWN then
 			if input.held[e.key] then return not input.swallow end
 			input.held[e.key] = true
-			if not inside(mx, my) then
+			if not over then
+				S.focus = false
+				S.sort_open, S.menu = false, nil
 				if left then S.press = { id = false } end
 				return true
 			end
 			input.swallow = true
-			input.press(mx, my, left and 1 or 2)
+			if left then input.press(mx, my) end
 			return false
 		elseif e.event == Enum.EKeyEvent.EKeyEvent_KEY_UP then
 			input.held[e.key] = nil
@@ -2388,7 +2820,28 @@ function script.OnKeyEvent(e)
 		end
 		return true
 	end
+	if S.focus then
+		if e.event == Enum.EKeyEvent.EKeyEvent_KEY_DOWN then
+			input.sink(true, true)
+			input.key(e.key)
+		end
+		return false
+	end
+	if e.event == Enum.EKeyEvent.EKeyEvent_KEY_DOWN and e.key == KEY.KEY_ESCAPE and over and not Input.IsInputCaptured() then
+		input.key(e.key)
+		return false
+	end
 	return true
 end
+
+ui.enable:SetCallback(function()
+	local on = ui.enable:Get()
+	ui.key:Disabled(not on)
+	ui.open:Disabled(not on)
+	if not on then
+		S.focus = false
+		input.sink(false)
+	end
+end, true)
 
 return script

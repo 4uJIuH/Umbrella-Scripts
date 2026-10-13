@@ -1,6 +1,6 @@
 # Script Manager
 
-проверка и установка обновлений Dota-скриптов по кнопке / check and install Dota script updates on demand
+каталог скриптов Umbrella с установкой и обновлениями / an Umbrella script catalog with script installation and updates
 
 <!-- releases:start -->
 Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.6.0/script_manager.lua) — `script-manager-v1.6.0`, 2026-10-13
@@ -24,27 +24,32 @@
 
 ## Что умеет
 
-Менеджер скриптов Umbrella с перетаскиваемой панелью: автоматически проверяет весь каталог, сохраняет версии и время проверки и устанавливает обновления по запросу.
+Script Manager открывает общий каталог скриптов Umbrella в отдельной настраиваемой панели.
 
-- Проверяет доступные версии по кнопке
-- Показывает скрипты, версии и статусы обновлений в переработанной панели с карточками, анимациями и подсказками
-- Настраивает тему, акцентный цвет, размытие фона, прозрачность и масштаб интерфейса
-- Поддерживает компактное отображение списка скриптов
-- Устанавливает обновления отдельных Dota-скриптов и перезагружает Script System
-- Сохраняет резервную копию заменяемого файла
-- Устанавливает обязательный `!_qLocalizer.lua`, если он требуется и отсутствует
-- Скачивает Tinker Auto Farm как ZIP для ручной распаковки
-- Показывает список скриптов, установленную и последнюю версии в отдельной панели
-- Автоматически проверяет каталог при запуске, сохраняет результаты и время последней проверки
-- Может обновлять собственную версию из каталога
+- Фильтры по категориям, героям и состоянию установки; поиск и сортировка
+- Подробные карточки с описаниями, возможностями, авторами, источниками и версиями
+- Автоматическая проверка каталога при запуске, ручное обновление и настраиваемая периодичность
+- Установка, обновление и удаление скриптов с резервным копированием заменяемых файлов
+- Автоматическая установка `!_qLocalizer.lua`, если библиотека требуется и отсутствует
+- Отдельная отметка ZIP-пакетов для скачивания и ручной распаковки
+- Настройки темы, акцентного цвета и поведения перезапуска
+- Самообновление под прежним именем `script_manager.lua`
 
 ## Установка
 
 1. Поместите `script_manager.lua` в `umbrella\scripts`.
-2. Перезагрузите Lua-скрипты.
-3. Откройте `Scripts → Scripts → Script Manager`, назначьте клавишу для `Open manager` (по умолчанию `Insert`), затем откройте панель и проверьте выбранный скрипт.
+2. Если у вас отдельно установлен `script_market.lua`, удалите его, чтобы не запускать два каталога одновременно.
+3. Перезагрузите Lua-скрипты.
+4. Откройте `Scripts → Scripts → Script Manager`, включите его и назначьте клавишу для открытия панели.
 
 ## Что нового
+
+**Обновление v2.0.0**
+
+- Script Market стал новой версией Script Manager с каталогом, поиском, фильтрами по героям и категориям и управлением установленными скриптами.
+- Сохранены имя файла и схема релизов, поэтому менеджер обновляется поверх предыдущего Script Manager.
+- Исправлена поддержка `SCRIPT_VERSION` и самообновление Script Manager.
+- Отдельный `script_market.lua` нужно удалить, чтобы два каталога не запускались одновременно.
 
 **Обновление v1.6.0**
 
@@ -87,27 +92,32 @@
 
 ## What it does
 
-An Umbrella script manager with a draggable panel that checks the full catalog on startup, saves versions and check time, and installs updates on demand.
+Script Manager displays the shared Umbrella script catalog in a customizable panel.
 
-- Checks for available versions on demand
-- Shows scripts, versions, and update status in a redesigned panel with detail cards, animations, and tooltips
-- Customizes the theme, accent color, background blur, opacity, and interface scale
-- Supports a compact script-list layout
-- Installs individual Dota script updates and reloads the Script System
-- Keeps a backup of any file it replaces
-- Installs the required `!_qLocalizer.lua` when needed and missing
-- Downloads Tinker Auto Farm as a ZIP for manual extraction
-- Shows the script list and installed/latest versions in a dedicated panel
-- Checks the catalog on startup and saves results and the last check time
-- Can update itself from the catalog
+- Filters by category, hero, and installation status; supports search and sorting
+- Shows script descriptions, features, authors, sources, and versions in detailed cards
+- Checks the catalog on startup, with manual refresh and configurable recheck intervals
+- Installs, updates, and removes scripts while backing up replaced files
+- Installs `!_qLocalizer.lua` when required and missing
+- Clearly marks ZIP packages for manual extraction
+- Provides theme, accent-color, and post-install restart settings
+- Supports self-updates under the existing `script_manager.lua` filename
 
 ## Install
 
 1. Place `script_manager.lua` in `umbrella\scripts`.
-2. Reload the Lua scripts.
-3. Open `Scripts → Scripts → Script Manager`, assign a key to `Open manager` (defaults to `Insert`), then open the panel and check the selected script.
+2. If a separate `script_market.lua` is installed, remove it to avoid running two catalog windows.
+3. Reload the Lua scripts.
+4. Open `Scripts → Scripts → Script Manager`, enable it, and assign a key to open the panel.
 
 ## Changelog
+
+**Update v2.0.0**
+
+- Script Market is now the new Script Manager, with a catalog, search, hero/category filters, and installed-script management.
+- Preserved the filename and release convention so existing installs can update in place.
+- Fixed `SCRIPT_VERSION` support and Script Manager self-updates.
+- Remove a separate `script_market.lua` installation to avoid running both catalog windows.
 
 **Update v1.6.0**
 
