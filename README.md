@@ -425,6 +425,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [KOTL Auto Chakra](scripts/kotl_auto_chakra) | 0 | `kotl-auto-chakra-v1.0.0` |
 | [SF Feast of Souls Abuse](scripts/sf_feast_of_souls_abuse) | 0 | `sf-feast-of-souls-v4.0` |
 | [Block Creep Attack During Feast](scripts/sf_block_creep_attack) | 0 | `sf-block-creep-attack-v1.2` |
+| [Anti-Cyclone BKB](scripts/sf_anti_cyclone_bkb) | 0 | `sf-anti-cyclone-bkb-v2.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

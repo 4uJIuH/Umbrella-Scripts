@@ -3,9 +3,13 @@
 пытается использовать BKB перед вражеским циклоном / attempts to use BKB before an enemy cyclone
 
 <!-- releases:start -->
-Последняя версия: [`v2.0` — `sf_anti_cyclone_bkb.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-anti-cyclone-bkb-v2.0/sf_anti_cyclone_bkb.lua)
+Скачать: [sf_anti_cyclone_bkb.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-anti-cyclone-bkb-v2.0/sf_anti_cyclone_bkb.lua) — `sf-anti-cyclone-bkb-v2.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=sf-anti-cyclone-bkb&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`sf-anti-cyclone-bkb-v2.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/sf-anti-cyclone-bkb-v2.0) | 2026-10-13 | [sf_anti_cyclone_bkb.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/sf-anti-cyclone-bkb-v2.0/sf_anti_cyclone_bkb.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=sf-anti-cyclone-bkb&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
