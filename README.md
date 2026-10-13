@@ -18,7 +18,7 @@
 - [Rem Assistant](scripts/rem_assistant) — ассистент способностей и лечения для Rem в Deadlock
 - [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — ESP для Souls Vault и Rem's Tunnel с таймером возрождения
 - [qLocalization](scripts/q_localizer) — вспомогательная библиотека для локализации Lua-интерфейсов
-- [Script Manager](scripts/script_manager) — проверка и установка обновлений Dota-скриптов по кнопке
+- [Script Manager](scripts/script_manager) — каталог скриптов Umbrella с установкой и обновлениями
 - [Dynamic Island](scripts/dynamic_island_dota) — интерактивный островок с уведомлениями, таймерами и показателями матча
 - [Tinker Smart Escape](scripts/tinker_smart_escape) — побег Тинкера к курсору по одной клавише
 <!-- scripts:ru:end -->
@@ -86,7 +86,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Rem Assistant](scripts/rem_assistant) — ability and healing assistant for Rem in Deadlock
 - [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) — ESP for Souls Vault and Rem's Tunnel with respawn timers
 - [qLocalization](scripts/q_localizer) — a helper library for localizing Lua interfaces
-- [Script Manager](scripts/script_manager) — check and install Dota script updates on demand
+- [Script Manager](scripts/script_manager) — an Umbrella script catalog with script installation and updates
 - [Dynamic Island](scripts/dynamic_island_dota) — an interactive island for match stats, alerts, and timers
 - [Tinker Smart Escape](scripts/tinker_smart_escape) — escape towards the cursor with a single key
 <!-- scripts:en:end -->
@@ -149,7 +149,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 4 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 3 | `script-manager-v1.6.0` |
+| [Script Manager](scripts/script_manager) | 3 | `script-manager-v2.0.0` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 
 <picture>
