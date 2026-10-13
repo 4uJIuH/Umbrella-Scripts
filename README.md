@@ -170,7 +170,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | script | downloads | latest |
 | --- | --- | --- |
 | [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 4 | `tinker-turret-dodge-v1.1.5` |
-| [Tinker Auto Farm](scripts/tinker_auto_farm) | 4 | `tinker-auto-farm-v1.0.3` |
+| [Tinker Auto Farm](scripts/tinker_auto_farm) | 4 | `tinker-auto-farm-v1.0.4` |
 | [Auto Shackleshot](scripts/auto_shackleshot) | 2 | `auto-shackleshot-v1.0.0` |
 | [Auto Spark](scripts/auto_spark) | 1 | `auto-spark-v1.0.0` |
 | [Rune Destruction](scripts/rune_destruction) | 1 | `rune-destruction-v1.0.2` |
