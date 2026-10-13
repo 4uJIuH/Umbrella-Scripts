@@ -374,7 +374,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | script | downloads | latest |
 | --- | --- | --- |
 | [Tinker Auto Farm](scripts/tinker_auto_farm) | 1 | `tinker-auto-farm-v1.0.4` |
-| [Script Manager](scripts/script_manager) | 14 | `script-manager-v2.0.5` |
+| [Script Manager](scripts/script_manager) | 14 | `script-manager-v2.1.0` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
@@ -395,7 +395,6 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [MoM Swapper](scripts/mom_swapper) | 0 | `mom-swapper-v1.0.0` |
 | [Botle Abuse](scripts/botle) | 0 | `botle-abuse-v1.0.0` |
 | [Io Overcharge](scripts/io_overcharge) | 0 | `io-overcharge-v1.0.0` |
-| [Arc Warden Utilities](scripts/arc_warden_utilities) | 0 | `arc-warden-utilities-v1.0.0` |
 | [Back Cast](scripts/backwards_cast) | 0 | `backwards-cast-v1.0.0` |
 | [Forge Spirit Farm (Beta)](scripts/forge_spirit_farm_beta) | 0 | `forge-spirit-farm-beta-v0.1.0-beta.1` |
 | [Selection Camera](scripts/selection_camera) | 0 | `selection-camera-v1.1.0` |

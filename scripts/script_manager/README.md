@@ -3,10 +3,11 @@
 каталог скриптов Umbrella с установкой и обновлениями / an Umbrella script catalog with script installation and updates
 
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.5/script_manager.lua) — `script-manager-v2.0.5`, 2026-10-13
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.1.0/script_manager.lua) — `script-manager-v2.1.0`, 2026-10-13
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
+| [`script-manager-v2.1.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.1.0) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.1.0/script_manager.lua) | 0 |
 | [`script-manager-v2.0.5`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.5) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.5/script_manager.lua) | 11 |
 | [`script-manager-v2.0.4`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.4) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.4/script_manager.lua) | 0 |
 | [`script-manager-v2.0.3`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.3) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.3/script_manager.lua) | 0 |
@@ -43,6 +44,11 @@ Script Manager объединяет каталог скриптов в отде�
 4. Откройте `Scripts → Scripts → Script Manager`, включите его и назначьте клавишу для открытия панели.
 
 ## Что нового
+
+# Обновление v2.1.0
+
+- Ползунок прокрутки теперь реагирует на клики и перетаскивание: можно тянуть бегунок или щёлкнуть по полосе, чтобы перейти к нужному месту. При наведении или перетаскивании он становится шире и ярче и остаётся подсвеченным, пока вы им пользуетесь. Колесо мыши работает как прежде.
+- При открытии карточки скрипта запоминается позиция списка. Кнопка «Назад» и Esc возвращают к ней; позиция хранится отдельно для категории, выбранного героя и поискового запроса. При переходе к другой категории или герою список открывается сверху.
 
 # Обновление v2.0.5
 
@@ -109,6 +115,11 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 4. Open `Scripts → Scripts → Script Manager`, enable it, and assign a key to open the panel.
 
 ## Changelog
+
+# Update v2.1.0
+
+- The scrollbar now responds to clicks and dragging: drag the thumb or click the track to jump to a position. It becomes wider and brighter on hover or while dragging, and stays highlighted while in use. Mouse-wheel scrolling is unchanged.
+- Opening a script card now saves the list position. Back and Esc restore it; positions are kept separately for each category, selected hero, and search query. Opening a different category or hero starts at the top.
 
 # Update v2.0.5
 
