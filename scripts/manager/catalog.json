@@ -1489,7 +1489,7 @@
     {
       "id": "mmr_tracker_ultimate",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mmr_tracker_ultimate/mmr_tracker_ultimate.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/348d53117aeb5c7d42bb57fd9aea8d6a239665fd/scripts/mmr_tracker_ultimate/mmr_tracker_ultimate.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/mmr-tracker-ultimate-v1.0.0/mmr_tracker_ultimate.lua",
       "manual": false,
       "needs_q_localizer": false,
