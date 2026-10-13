@@ -3,9 +3,13 @@
 направляет Skewer в выбранного союзника во встроенном комбо / redirects the built-in Magnus combo's Skewer towards an ally
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `magnus_skewer_ally.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/magnus_skewer_ally/magnus_skewer_ally.lua)
+Скачать: [magnus_skewer_ally.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/magnus-skewer-ally-v1.0.0/magnus_skewer_ally.lua) — `magnus-skewer-ally-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=magnus-skewer-ally&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`magnus-skewer-ally-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/magnus-skewer-ally-v1.0.0) | 2026-10-13 | [magnus_skewer_ally.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/magnus-skewer-ally-v1.0.0/magnus_skewer_ally.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=magnus-skewer-ally&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -23,6 +27,13 @@
 2. Перезагрузите Lua-скрипты.
 3. Откройте `Heroes → Magnus → Main Settings → Skewer Combo Settings`.
 4. Включите Skewer To Ally и выберите союзника.
+
+## Что нового
+
+# 1.0.0
+
+- Первый релиз Magnus Skewer Ally.
+- Добавлено направление Skewer к выбранному союзнику из встроенного комбо.
 
 ---
 
@@ -43,3 +54,10 @@ Intercepts Skewer in Magnus's built-in combo and sends the enemy towards a selec
 2. Reload the Lua scripts.
 3. Open `Heroes → Magnus → Main Settings → Skewer Combo Settings`.
 4. Enable Skewer To Ally and select an ally.
+
+## Changelog
+
+# 1.0.0
+
+- Initial Magnus Skewer Ally release.
+- Added ally targeting for Skewer from the built-in combo.
