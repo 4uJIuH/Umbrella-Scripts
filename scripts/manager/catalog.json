@@ -1240,7 +1240,7 @@
     {
       "id": "kotl_illuminate_pro",
       "version": "1.0.0",
-      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/kotl-illuminate-pro-v1.0.0/kotl_illuminate_pro.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/56c07695203c9915e6b82d07864149de5fcf3f7c/scripts/kotl_illuminate_pro/kotl_illuminate_pro.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/kotl-illuminate-pro-v1.0.0/kotl_illuminate_pro.lua",
       "manual": false,
       "needs_q_localizer": false,
