@@ -227,11 +227,11 @@
     {
       "id": "auto_aegis_mover",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/auto_aegis_mover/auto_aegis_mover.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c78fa06a476a3d1c4a75fbbadc9a2b128b71a344/scripts/auto_aegis_mover/auto_aegis_mover.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-aegis-mover-v1.0.0/auto_aegis_mover.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "⚔LegaXye禪 (Discord: legaxye)"
+      "author": "\u2694LegaXye\u79aa (Discord: legaxye)"
     },
     {
       "id": "anti_rubick",
