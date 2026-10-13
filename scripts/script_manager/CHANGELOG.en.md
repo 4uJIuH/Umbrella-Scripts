@@ -1,3 +1,9 @@
+**Update v1.5.0**
+
+- Added Dynamic Island by "ur2m" (GitHub: @qhols), version 2.5.3.
+- The manager can now use scripts hosted in authors' GitHub repositories and validate versions declared as `SCRIPT_VERSION`.
+- Added a direct link to the author's release and information about the optional `media_bridge.exe` required for music and sounds.
+
 **Update v1.4.0**
 
 - Rebuilt the Script Manager panel with a cleaner layout and a clearer view of each script, its versions, and update status.

@@ -3,10 +3,11 @@
 проверка и установка обновлений Dota-скриптов по кнопке / check and install Dota script updates on demand
 
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.4.0/script_manager.lua) — `script-manager-v1.4.0`, 2026-10-12
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.5.0/script_manager.lua) — `script-manager-v1.5.0`, 2026-10-13
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
+| [`script-manager-v1.5.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.5.0) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.5.0/script_manager.lua) | 0 |
 | [`script-manager-v1.4.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.4.0) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.4.0/script_manager.lua) | 0 |
 | [`script-manager-v1.3.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.3.0) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.3.0/script_manager.lua) | 0 |
 | [`script-manager-v1.2.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.2.2) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.2.2/script_manager.lua) | 1 |
@@ -29,6 +30,8 @@
 - Настраивает тему, акцентный цвет, размытие фона, прозрачность и масштаб интерфейса
 - Поддерживает компактное отображение списка скриптов
 - Устанавливает обновления отдельных Dota-скриптов и перезагружает Script System
+- Поддерживает скрипты из GitHub-репозиториев авторов, не только из этого проекта
+- Определяет версии скриптов через маркер `SCRIPT_VERSION`
 - Сохраняет резервную копию заменяемого файла
 - Устанавливает обязательный `!_qLocalizer.lua`, если он требуется и отсутствует
 - Скачивает Tinker Auto Farm как ZIP для ручной распаковки
@@ -43,6 +46,12 @@
 3. Откройте `Scripts → Scripts → Script Manager`, назначьте клавишу для `Open manager` (по умолчанию `Insert`), затем откройте панель и проверьте выбранный скрипт.
 
 ## Что нового
+
+**Обновление v1.5.0**
+
+- В каталог и Script Manager добавлен Dynamic Island v2.5.3 от автора "ur2m" (GitHub: @qhols).
+- Lua-файл скачивается напрямую из репозитория автора; музыка и звуки доступны при запущенном `media_bridge.exe`.
+- Добавлена поддержка внешних GitHub-релизов и определения версии через `SCRIPT_VERSION`.
 
 **Обновление v1.4.0**
 
@@ -82,6 +91,8 @@ An Umbrella script manager with a draggable panel that checks the full catalog o
 - Customizes the theme, accent color, background blur, opacity, and interface scale
 - Supports a compact script-list layout
 - Installs individual Dota script updates and reloads the Script System
+- Supports scripts hosted in approved GitHub repositories outside this project
+- Detects scripts that declare their version as `SCRIPT_VERSION`
 - Keeps a backup of any file it replaces
 - Installs the required `!_qLocalizer.lua` when needed and missing
 - Downloads Tinker Auto Farm as a ZIP for manual extraction
@@ -96,6 +107,12 @@ An Umbrella script manager with a draggable panel that checks the full catalog o
 3. Open `Scripts → Scripts → Script Manager`, assign a key to `Open manager` (defaults to `Insert`), then open the panel and check the selected script.
 
 ## Changelog
+
+**Update v1.5.0**
+
+- Added Dynamic Island v2.5.3 to the catalog and Script Manager by "ur2m" (GitHub: @qhols).
+- The Lua file is downloaded directly from the author's repository; music and sounds are available when `media_bridge.exe` is running.
+- Added support for external GitHub releases and `SCRIPT_VERSION` version markers.
 
 **Update v1.4.0**
 

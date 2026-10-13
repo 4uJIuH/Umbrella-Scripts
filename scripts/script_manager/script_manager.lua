@@ -316,7 +316,7 @@ local qLocalization = (function()
 	return lib
 end)()
 
-local VERSION = "1.4.0"
+local VERSION = "1.5.0"
 
 local localization = qLocalization.new({
 	en = {
@@ -403,6 +403,7 @@ local localization = qLocalization.new({
 		sm_item_hp = "HP/Mana 67 Ping",
 		sm_item_bear = "Spirit Bear Pull",
 		sm_item_manager = "Script Manager",
+		sm_item_dynamic_island = "Dynamic Island",
 		sm_desc_ttd = "Uses Tinker's turrets to dodge dangerous enemy abilities.",
 		sm_desc_farm = "Tinker farming script distributed as a ZIP package.",
 		sm_desc_shackleshot = "Automatically aims and casts Windranger's Shackleshot.",
@@ -412,6 +413,7 @@ local localization = qLocalization.new({
 		sm_desc_hp = "Tracks HP and mana thresholds and sends chat alerts.",
 		sm_desc_bear = "Uses Lone Druid's Spirit Bear to pull a creep wave.",
 		sm_desc_manager = "Checks script versions and installs selected updates.",
+		sm_desc_dynamic_island = "By \"ur2m\" (@qhols). The Lua script works alone; music and sounds need the optional media bridge.",
 		sm_tip_settings = "Appearance",
 		sm_tip_back = "Back to scripts",
 		sm_tip_close = "Close",
@@ -512,6 +514,7 @@ local localization = qLocalization.new({
 		sm_item_hp = "HP/Mana 67 Ping",
 		sm_item_bear = "Spirit Bear Pull",
 		sm_item_manager = "Script Manager",
+		sm_item_dynamic_island = "Dynamic Island",
 		sm_desc_ttd = "Уклоняется от опасных способностей врагов с помощью турелей Тинкера.",
 		sm_desc_farm = "Скрипт для фарма за Тинкера. Распространяется ZIP-пакетом.",
 		sm_desc_shackleshot = "Автоматически наводит и применяет Shackleshot за Windranger.",
@@ -521,6 +524,7 @@ local localization = qLocalization.new({
 		sm_desc_hp = "Отслеживает пороги здоровья и маны и отправляет сообщения в чат.",
 		sm_desc_bear = "Использует Spirit Bear Lone Druid для отвода волны крипов.",
 		sm_desc_manager = "Проверяет версии скриптов и устанавливает выбранные обновления.",
+		sm_desc_dynamic_island = "Автор: \"ur2m\" (GitHub: @qhols). Lua-скрипт работает отдельно; для музыки и звуков нужен дополнительный media bridge.",
 		sm_tip_settings = "Оформление",
 		sm_tip_back = "Назад к скриптам",
 		sm_tip_close = "Закрыть",
@@ -561,6 +565,7 @@ local items = {
 	{ id = "hp_mana_67_ping", key = "sm_item_hp", description_key = "sm_desc_hp", file = "hp_mana_67_ping.lua", needs_localizer = true },
 	{ id = "spirit_bear_pull", key = "sm_item_bear", description_key = "sm_desc_bear", file = "lone_druid_bear_pull.lua", needs_localizer = true },
 	{ id = "script_manager", key = "sm_item_manager", description_key = "sm_desc_manager", file = "script_manager.lua" },
+	{ id = "dynamic_island_dota", key = "sm_item_dynamic_island", description_key = "sm_desc_dynamic_island", file = "dynamic_island.lua", version_marker = "SCRIPT_VERSION" },
 }
 
 local ITEM_STYLE = {
@@ -573,6 +578,7 @@ local ITEM_STYLE = {
 	hp_mana_67_ping = { "percent", PAL.red },
 	spirit_bear_pull = { "users", PAL.purple },
 	script_manager = { "wrench", PAL.gray },
+	dynamic_island_dota = { "bolt", PAL.cyan },
 }
 for _, entry in ipairs(items) do
 	local style = ITEM_STYLE[entry.id]
@@ -665,8 +671,8 @@ end
 
 local function trusted_url(url)
 	if type(url) ~= "string" then return false end
-	return url:match("^https://raw%.githubusercontent%.com/4uJIuH/umbrella%-scripts/") ~= nil
-		or url:match("^https://github%.com/4uJIuH/umbrella%-scripts/releases/download/") ~= nil
+	return url:match("^https://raw%.githubusercontent%.com/[%w%-_%.]+/[%w%-_%.]+/") ~= nil
+		or url:match("^https://github%.com/[%w%-_%.]+/[%w%-_%.]+/releases/download/") ~= nil
 end
 
 local function valid_version(version)
@@ -737,9 +743,16 @@ local function load_catalog(done)
 	end)
 end
 
-local function validate_script(text, version)
+local function script_version(text, marker)
+	local pattern = marker == "SCRIPT_VERSION"
+		and 'SCRIPT_VERSION%s*=%s*"([^"]+)"'
+		or 'VERSION%s*=%s*"([^"]+)"'
+	return text and text:match(pattern) or nil
+end
+
+local function validate_script(text, version, marker)
 	if type(text) ~= "string" or #text < 100 or text:sub(1, 1) == "<" then return false end
-	return text:match('VERSION%s*=%s*"([^"]+)"') == version
+	return script_version(text, marker) == version
 end
 
 local function selected_path(item)
@@ -752,7 +765,7 @@ local function installed_script_version(item)
 	if item.manual then return nil end
 	local path = selected_path(item)
 	local text = path and read_file(path)
-	return text and text:match('VERSION%s*=%s*"([^"]+)"') or nil
+	return script_version(text, item.version_marker)
 end
 
 local function cache_key(suffix, item)
@@ -900,7 +913,7 @@ local function fetch_release(item, release, done)
 			if item.manual then
 				valid = text and text:sub(1, 2) == "PK"
 			else
-				valid = validate_script(text, release.version)
+				valid = validate_script(text, release.version, item.version_marker)
 			end
 			if valid then return done(text) end
 			try_url(index + 1, err or "downloaded file failed validation")

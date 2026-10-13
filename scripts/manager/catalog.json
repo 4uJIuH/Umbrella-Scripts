@@ -76,6 +76,14 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.4.0/script_manager.lua",
       "manual": false,
       "needs_q_localizer": false
+    },
+    {
+      "id": "dynamic_island_dota",
+      "version": "2.5.3",
+      "url": "https://raw.githubusercontent.com/qhols/DynamicIsland-Dota/v2.5.3/dynamic_island.lua",
+      "release": "https://github.com/qhols/DynamicIsland-Dota/releases/download/v2.5.3/dynamic_island.lua",
+      "manual": false,
+      "needs_q_localizer": false
     }
   ]
 }
