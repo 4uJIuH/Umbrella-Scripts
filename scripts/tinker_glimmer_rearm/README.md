@@ -3,9 +3,13 @@
 использует Glimmer Cape во время Rearm / uses Glimmer Cape during Rearm
 
 <!-- releases:start -->
-Последняя версия: [`v1.3` — `tinker_glimmer_rearm.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-glimmer-rearm-v1.3/tinker_glimmer_rearm.lua)
+Скачать: [tinker_glimmer_rearm.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-glimmer-rearm-v1.3/tinker_glimmer_rearm.lua) — `tinker-glimmer-rearm-v1.3`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=tinker-glimmer-rearm&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`tinker-glimmer-rearm-v1.3`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/tinker-glimmer-rearm-v1.3) | 2026-10-13 | [tinker_glimmer_rearm.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-glimmer-rearm-v1.3/tinker_glimmer_rearm.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=tinker-glimmer-rearm&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

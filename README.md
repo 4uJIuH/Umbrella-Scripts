@@ -343,17 +343,9 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | --- | --- | --- |
 | [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 4 | `tinker-turret-dodge-v1.1.5` |
 | [Tinker Auto Farm](scripts/tinker_auto_farm) | 5 | `tinker-auto-farm-v1.0.4` |
-| [Auto Shackleshot](scripts/auto_shackleshot) | 2 | `auto-shackleshot-v1.0.0` |
-| [Auto Spark](scripts/auto_spark) | 1 | `auto-spark-v1.0.0` |
-| [Rune Destruction](scripts/rune_destruction) | 1 | `rune-destruction-v1.0.2` |
-| [Earth Spirit Kick Combo](scripts/earth_spirit_kick_combo) | 1 | `earth-spirit-kick-combo-v1.0.0` |
-| [HP/Mana 67 Ping](scripts/hp_mana_67_ping) | 1 | `hp-mana-67-ping-v1.0.1` |
 | [Spirit Bear Pull](scripts/spirit_bear_pull) | 1 | `spirit-bear-pull-v1.0.0` |
-| [Dorman Combo Assistant](scripts/dorman_combo_assistant) | 1 | `dorman-combo-assistant-v1.0.0` |
-| [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
-| [qLocalization](scripts/q_localizer) | 5 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 14 | `script-manager-v2.0.5` |
+| [Script Manager](scripts/script_manager) | 17 | `script-manager-v2.0.5` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
@@ -414,12 +406,21 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Invoker SS](scripts/invoker_ss) | 0 | `invoker-ss-v138` |
 | [Sentry](scripts/sentry) | 0 | `sentry-v1.0.0` |
 | [Changer](scripts/changer) | 0 | `changer-v1.0.0` |
-| [Self Play](scripts/self_play_bot) | 0 | `self-play-v1.0.0` |
+| [Self Play](scripts/self_play_bot) | 1 | `self-play-v1.0.0` |
 | [Farm Pattern 2.5](scripts/farm_pattern) | 0 | `farm-pattern-v2.5` |
 | [Win Condition Engine](scripts/win_condition_engine) | 0 | `win-condition-engine-v1.0.0` |
 | [Invoker (beta)](scripts/invoker_beta) | 0 | `invoker-beta-v1.0.0` |
 | [Kez Combo](scripts/kez_combo) | 0 | `kez-combo-v1.0.0` |
 | [Techies Combo](scripts/techies_combo) | 0 | `techies-combo-v1.0.0` |
+| [Lone Druid Auto Farm](scripts/ld_farm) | 0 | `ld-farm-v1.7` |
+| [Unusual Effects](scripts/unusual_cosmetics) | 0 | `unusual-cosmetics-v1.0.0` |
+| [Techies Tazer Dispel](scripts/techies_tazer_dispel) | 0 | `techies-tazer-dispel-v1.0.0` |
+| [Techies Brain Combo](scripts/techies_brain) | 0 | `techies-brain-v0.2.6` |
+| [Creep Control](scripts/creep_control) | 0 | `creep-control-v1.0.0` |
+| [KOTL Illuminate Pro](scripts/kotl_illuminate_pro) | 0 | `kotl-illuminate-pro-v1.0.0` |
+| [Lycan Auto Control](scripts/lycan_auto_control) | 0 | `lycan-auto-control-v1.0.0` |
+| [Mute Voice Lines](scripts/mute_voice_lines) | 0 | `mute-voice-lines-v1.0.0` |
+| [Tinker Glimmer during Rearm](scripts/tinker_glimmer_rearm) | 0 | `tinker-glimmer-rearm-v1.3` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

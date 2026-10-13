@@ -3,13 +3,9 @@
 ассистент способностей и лечения для Rem в Deadlock / ability and healing assistant for Rem in Deadlock
 
 <!-- releases:start -->
-Скачать: [Rem_Assistant.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/rem-assistant-v1.0.0/Rem_Assistant.lua) — `rem-assistant-v1.0.0`, 2026-10-10
+Последняя версия: [`v1.0.0` — `Rem_Assistant.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/rem-assistant-v1.0.0/Rem_Assistant.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`rem-assistant-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/rem-assistant-v1.0.0) | 2026-10-10 | [Rem_Assistant.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/rem-assistant-v1.0.0/Rem_Assistant.lua) | 1 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=rem-assistant&expanded=true)
+[Релизы на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=rem-assistant&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -35,19 +31,6 @@
 4. Откройте настройки: `Heroes → Hero List → Rem → Rem Assistant`.
 
 Примечание: GitHub скачивает библиотеку как `_qLocalizer.lua`; переименуй её в `!_qLocalizer.lua` перед загрузкой Lua-скриптов.
-
-## Что нового
-
-**Версия 1.0.0**
-
-- Повышена точность первого скилла; проверка видимости теперь использует реальную дистанцию до цели.
-- Скрипт стал самодостаточным: aim.lua, prediction.lua, utils.lua и ally_manager.lua больше не нужны.
-- Трекинг скорости врагов обновляется каждый тик и не сбрасывается при повторных вызовах в одном кадре.
-- Финальная точка Magic Bullet согласована с точкой поиска обхода.
-- Исправлена блокировка каста второго скилла и устранено залипание при выборе цели.
-- Повышена производительность и FPS.
-- Доработана логика второго скилла; исправлено применение первого без включённого переключателя.
-- Добавлены английский перевод, режим выстрела при удержании клавиши первого скилла и корректная работа переключателей, слайдеров, биндов и выбора целей через qLocalization.
 
 ---
 
@@ -76,16 +59,3 @@ A script for Rem in Deadlock that automates abilities and ally healing, predicts
 4. Open settings: `Heroes → Hero List → Rem → Rem Assistant`.
 
 Note: GitHub downloads the library as `_qLocalizer.lua`; rename it to `!_qLocalizer.lua` before loading Lua scripts.
-
-## Changelog
-
-**Version 1.0.0**
-
-- Improved Skill 1 accuracy; visibility checks now use the real distance to the target.
-- Made the script standalone: aim.lua, prediction.lua, utils.lua, and ally_manager.lua are no longer required.
-- Enemy speed tracking now warms up every tick and is not reset by repeated calls in the same frame.
-- Aligned the final Magic Bullet point with the obstacle-bypass search point.
-- Fixed Skill 2 cast blocking and target-selection lockups.
-- Improved performance and FPS.
-- Improved Skill 2 logic and fixed Skill 1 being used automatically while its switch is disabled.
-- Added English translation, hold-to-shoot for Skill 1, and correct qLocalization handling for switches, sliders, binds, and target selection.

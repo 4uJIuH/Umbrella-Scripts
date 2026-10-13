@@ -3,9 +3,13 @@
 автоматически снимает некоторые эффекты Reactive Tazer / automatically dispels selected effects with Reactive Tazer
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `techies_tazer_dispel.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-tazer-dispel-v1.0.0/techies_tazer_dispel.lua)
+Скачать: [techies_tazer_dispel.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-tazer-dispel-v1.0.0/techies_tazer_dispel.lua) — `techies-tazer-dispel-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=techies-tazer-dispel&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`techies-tazer-dispel-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/techies-tazer-dispel-v1.0.0) | 2026-10-13 | [techies_tazer_dispel.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-tazer-dispel-v1.0.0/techies_tazer_dispel.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=techies-tazer-dispel&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

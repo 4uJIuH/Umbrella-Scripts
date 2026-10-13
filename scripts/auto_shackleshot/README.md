@@ -3,13 +3,9 @@
 автоматическое применение Shackleshot за Windranger / automatic Shackleshot on Windranger
 
 <!-- releases:start -->
-Скачать: [Auto_Shackleshot.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-shackleshot-v1.0.0/Auto_Shackleshot.lua) — `auto-shackleshot-v1.0.0`, 2026-10-10
+Последняя версия: [`v1.0.0` — `Auto_Shackleshot.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-shackleshot-v1.0.0/Auto_Shackleshot.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`auto-shackleshot-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/auto-shackleshot-v1.0.0) | 2026-10-10 | [Auto_Shackleshot.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-shackleshot-v1.0.0/Auto_Shackleshot.lua) | 2 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-shackleshot&expanded=true)
+[Релизы на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-shackleshot&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

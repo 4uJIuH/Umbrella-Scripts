@@ -3,9 +3,13 @@
 комбо Techies от Hex до детонации мин / Techies combo from Hex through mine detonation
 
 <!-- releases:start -->
-Последняя версия: [`v0.2.6` — `techies_brain.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-brain-v0.2.6/techies_brain.lua)
+Скачать: [techies_brain.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-brain-v0.2.6/techies_brain.lua) — `techies-brain-v0.2.6`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=techies-brain&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`techies-brain-v0.2.6`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/techies-brain-v0.2.6) | 2026-10-13 | [techies_brain.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-brain-v0.2.6/techies_brain.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=techies-brain&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

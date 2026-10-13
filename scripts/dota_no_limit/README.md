@@ -3,9 +3,13 @@
 добавляет выбор и автоматическое использование предметов для поедания / adds selection and automatic use of supported consumable items
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `dota_no_limit.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/dota-no-limit-v1.0.0/dota_no_limit.lua)
+Скачать: [dota_no_limit.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dota-no-limit-v1.0.0/dota_no_limit.lua) — `dota-no-limit-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=dota-no-limit&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`dota-no-limit-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/dota-no-limit-v1.0.0) | 2026-10-13 | [dota_no_limit.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dota-no-limit-v1.0.0/dota_no_limit.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=dota-no-limit&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

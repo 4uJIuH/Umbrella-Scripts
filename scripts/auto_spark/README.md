@@ -3,13 +3,9 @@
 автоматическое использование спарков на линии / automatic Spark Wraith usage on the lane
 
 <!-- releases:start -->
-Скачать: [Auto_Spark.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-spark-v1.0.0/Auto_Spark.lua) — `auto-spark-v1.0.0`, 2026-10-10
+Последняя версия: [`v1.0.0` — `Auto_Spark.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-spark-v1.0.0/Auto_Spark.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`auto-spark-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/auto-spark-v1.0.0) | 2026-10-10 | [Auto_Spark.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-spark-v1.0.0/Auto_Spark.lua) | 1 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-spark&expanded=true)
+[Релизы на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-spark&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -31,15 +27,6 @@
 4. Откройте настройки: `Скрипты → Скрипты → Auto Spark`.
 
 Примечание: GitHub скачивает библиотеку как `_qLocalizer.lua`; переименуй её в `!_qLocalizer.lua` перед загрузкой Lua-скриптов.
-
-## Что нового
-
-**Обновление**
-
-- Добавлены два режима работы: автоматический и механический.
-- Добавлена настройка клавиши каста для механического режима.
-- В автоматическом режиме Spark Wraith применяется до заданной минуты игры.
-- В механическом режиме Spark Wraith применяется только при удержании клавиши.
 
 ---
 
@@ -64,12 +51,3 @@ A script for automatically using Spark Wraith on the lane.
 4. Open settings: `Scripts → Scripts → Auto Spark`.
 
 Note: GitHub downloads the library as `_qLocalizer.lua`; rename it to `!_qLocalizer.lua` before loading Lua scripts.
-
-## Changelog
-
-**Script Update**
-
-- Added two operating modes: Automatic and Manual.
-- Added a cast-key bind setting for the Manual mode.
-- In Automatic mode, Spark Wraith is cast until the configured game minute.
-- In Manual mode, Spark Wraith is cast only while the key is held.

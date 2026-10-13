@@ -3,13 +3,9 @@
 отправка подконтрольных юнитов к рунам / send controlled units to runes
 
 <!-- releases:start -->
-Скачать: [rune_units.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/rune-destruction-v1.0.2/rune_units.lua) — `rune-destruction-v1.0.2`, 2026-10-10
+Последняя версия: [`v1.0.2` — `rune_units.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/rune-destruction-v1.0.2/rune_units.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`rune-destruction-v1.0.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/rune-destruction-v1.0.2) | 2026-10-10 | [rune_units.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/rune-destruction-v1.0.2/rune_units.lua) | 1 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=rune-destruction&expanded=true)
+[Релизы на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=rune-destruction&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -28,15 +24,6 @@ Lua-скрипт для отправки подконтрольных юнито
 1. Поместите <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/rune-destruction-v1.0.2/rune_units.lua" target="_blank" rel="noopener"><code>rune_units.lua</code></a> в `umbrella\scripts`.
 2. Перезагрузите Lua-скрипты.
 3. Откройте настройки: `Scripts → Rune Units`.
-
-## Что нового
-
-**Rune Destruction v1.0.2**
-
-- Удалены отладочные логи.
-- Добавлены настройки радиуса поиска врагов и союзников (значения по умолчанию: союзники — 2000, враги — 1000).
-- Добавлена настройка «Всегда ломать руну».
-- Добавлена поддержка любых подконтрольных иллюзий.
 
 ---
 
@@ -58,12 +45,3 @@ A Lua script for sending controlled units to runes in Dota 2.
 1. Place <a href="https://github.com/4uJIuH/umbrella-scripts/releases/download/rune-destruction-v1.0.2/rune_units.lua" target="_blank" rel="noopener"><code>rune_units.lua</code></a> in `umbrella\scripts`.
 2. Reload the Lua scripts.
 3. Open settings: `Scripts → Rune Units`.
-
-## Changelog
-
-**Rune Destruction v1.0.2**
-
-- Removed debug logs.
-- Added enemy and ally search radius settings (defaults: allies — 2000, enemies — 1000).
-- Added the "Always break rune" setting.
-- Added support for any controllable illusions.

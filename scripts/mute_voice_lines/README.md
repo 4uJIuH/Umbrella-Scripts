@@ -3,9 +3,13 @@
 приглушает выбранные фразы из колеса чата / mutes selected chat-wheel voice lines
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `mute_voice_lines.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/mute-voice-lines-v1.0.0/mute_voice_lines.lua)
+Скачать: [mute_voice_lines.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/mute-voice-lines-v1.0.0/mute_voice_lines.lua) — `mute-voice-lines-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=mute-voice-lines&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`mute-voice-lines-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/mute-voice-lines-v1.0.0) | 2026-10-13 | [mute_voice_lines.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/mute-voice-lines-v1.0.0/mute_voice_lines.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=mute-voice-lines&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

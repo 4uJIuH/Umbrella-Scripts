@@ -3,9 +3,13 @@
 рассчитывает летальный урон Illuminate и отпускает луч вовремя / calculates lethal Illuminate damage and releases the beam at the right time
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `kotl_illuminate_pro.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/kotl-illuminate-pro-v1.0.0/kotl_illuminate_pro.lua)
+Скачать: [kotl_illuminate_pro.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/kotl-illuminate-pro-v1.0.0/kotl_illuminate_pro.lua) — `kotl-illuminate-pro-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=kotl-illuminate-pro&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`kotl-illuminate-pro-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/kotl-illuminate-pro-v1.0.0) | 2026-10-13 | [kotl_illuminate_pro.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/kotl-illuminate-pro-v1.0.0/kotl_illuminate_pro.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=kotl-illuminate-pro&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

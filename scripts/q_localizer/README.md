@@ -3,13 +3,9 @@
 вспомогательная библиотека для локализации Lua-интерфейсов / a helper library for localizing Lua interfaces
 
 <!-- releases:start -->
-Скачать: [_qLocalizer.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua) — `q-localizer-v1.0.0`, 2026-10-10
+Последняя версия: [`v1.0.0` — `!_qLocalizer.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`q-localizer-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/q-localizer-v1.0.0) | 2026-10-10 | [_qLocalizer.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/q-localizer-v1.0.0/_qLocalizer.lua) | 5 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=q-localizer&expanded=true)
+[Релизы на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=q-localizer&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -28,13 +24,6 @@ qLocalization автоматически локализует интерфейс
 2. Переименуйте скачанный файл в `!_qLocalizer.lua`.
 3. Поместите файл в папку `scripts` рядом со скриптами, которым нужна локализация.
 4. Перезагрузите Lua-скрипты.
-
-## Что нового
-
-**Первая публикация в каталоге**
-
-- Добавлена сторонняя библиотека qLocalization для автоматической локализации Lua-интерфейсов.
-- Оригинальный автор — qfun (qfun_g9s); это не моя разработка.
 
 ---
 
@@ -56,10 +45,3 @@ qLocalization automatically localizes Lua script interfaces. It was developed fo
 2. Rename the downloaded file to `!_qLocalizer.lua`.
 3. Place the file in the `scripts` folder alongside scripts that need localization.
 4. Reload the Lua scripts.
-
-## Changelog
-
-**First catalog release**
-
-- Added the third-party qLocalization library for automatic localization of Lua interfaces.
-- Original author: qfun (qfun_g9s); this is not my work.

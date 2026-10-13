@@ -3,9 +3,13 @@
 отправляет Lone Druid безопасно фармить лес, пока вы управляете медведем / farms the jungle with Lone Druid while you control the bear
 
 <!-- releases:start -->
-Последняя версия: [`v1.7` — `ld_farm.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/ld-farm-v1.7/ld_farm.lua)
+Скачать: [ld_farm.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/ld-farm-v1.7/ld_farm.lua) — `ld-farm-v1.7`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=ld-farm&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`ld-farm-v1.7`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/ld-farm-v1.7) | 2026-10-13 | [ld_farm.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/ld-farm-v1.7/ld_farm.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=ld-farm&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

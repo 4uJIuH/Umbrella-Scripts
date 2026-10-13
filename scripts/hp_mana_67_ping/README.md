@@ -3,13 +3,9 @@
 сообщения при достижении значений HP и маны, оканчивающихся на 67 / chat messages when HP or mana reaches a value ending in 67
 
 <!-- releases:start -->
-Скачать: [hp_mana_67_ping.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua) — `hp-mana-67-ping-v1.0.1`, 2026-10-10
+Последняя версия: [`v1.0.1` — `hp_mana_67_ping.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`hp-mana-67-ping-v1.0.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/hp-mana-67-ping-v1.0.1) | 2026-10-10 | [hp_mana_67_ping.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua) | 1 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=hp-mana-67-ping&expanded=true)
+[Релизы на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=hp-mana-67-ping&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -31,13 +27,6 @@ Lua-скрипт для Dota 2, который отслеживает здоро
 4. Откройте настройки: `General → HP/Mana 67 Ping → Settings`.
 
 Примечание: GitHub скачивает библиотеку как `_qLocalizer.lua`; переименуй её в `!_qLocalizer.lua` перед загрузкой Lua-скриптов.
-
-## Что нового
-
-## Обновление 1.0.1
-
-- При достижении 67% HP или маны отправляется стандартный игровой alert.
-- Добавлен отдельный бинд для независимого отслеживания достижения 67%.
 
 ---
 
@@ -62,10 +51,3 @@ A Dota 2 Lua script that tracks the hero's health and mana and sends a message t
 4. Open settings: `General → HP/Mana 67 Ping → Settings`.
 
 Note: GitHub downloads the library as `_qLocalizer.lua`; rename it to `!_qLocalizer.lua` before loading Lua scripts.
-
-## Changelog
-
-## Update 1.0.1
-
-- Sends the standard in-game alert when HP or mana reaches 67%.
-- Added a separate bind to track reaching 67% independently.

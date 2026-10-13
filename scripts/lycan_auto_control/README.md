@@ -3,9 +3,13 @@
 отправляет волков пушить, а подконтрольных юнитов — фармить лес / sends wolves to push and dominated units to farm the jungle
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `lycan_auto_control.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/lycan-auto-control-v1.0.0/lycan_auto_control.lua)
+Скачать: [lycan_auto_control.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/lycan-auto-control-v1.0.0/lycan_auto_control.lua) — `lycan-auto-control-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=lycan-auto-control&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`lycan-auto-control-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/lycan-auto-control-v1.0.0) | 2026-10-13 | [lycan_auto_control.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/lycan-auto-control-v1.0.0/lycan_auto_control.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=lycan-auto-control&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
