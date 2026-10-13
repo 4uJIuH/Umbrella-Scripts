@@ -1167,6 +1167,56 @@
           "Install it in a compatible development tool using that tool’s instructions."
         ]
       }
+    },
+    {
+      "id": "anti_rubick",
+      "tag": "anti-rubick",
+      "title": "Anti-Rubick",
+      "kind": "lua",
+      "category": "dota",
+      "file": "anti_rubick.lua",
+      "author": "⚔LegaXye禪 (Discord: legaxye)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/anti_rubick",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=anti-rubick&expanded=true",
+      "needs_q_localizer": false,
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/anti_rubick/anti_rubick.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/anti-rubick-v1.0.0/anti_rubick.lua"
+      },
+      "ru": {
+        "tagline": "защита выбранных способностей от кражи Рубиком",
+        "about": "Anti-Rubick помогает защитить важные способности от Spell Steal Рубика. После применения отмеченной способности скрипт может использовать выбранную способность-прикрытие, чтобы изменить последнее использованное заклинание. Список защитных и прикрывающих способностей, их приоритет и задержка настраиваются отдельно для каждого героя. Каналящиеся способности не защищаются. Автор: ⚔LegaXye禪 (Discord: legaxye).",
+        "features": [
+          "Выбор способностей, которые нужно защитить, и способностей-прикрытий",
+          "Перетаскивание для настройки приоритета способностей-прикрытий",
+          "Настройка задержки применения и дистанции обнаружения Рубика",
+          "Учет невидимого Рубика, Linken's Sphere и Mirror Shield",
+          "Каналящиеся способности не защищаются"
+        ],
+        "install": [
+          "Поместите `anti_rubick.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте настройки `Scripts → General → Utility → Anti-Rubick → Spell Cover`."
+        ]
+      },
+      "en": {
+        "tagline": "protect selected spells from Rubick's Spell Steal",
+        "about": "Anti-Rubick helps protect important abilities from Rubick's Spell Steal. After a marked ability is used, the script can cast a selected cover ability to change the last spell used. Protected spells, cover spells, their priority, and the delay can be configured separately for each hero. Channeled abilities are not protected. Author: ⚔LegaXye禪 (Discord: legaxye).",
+        "features": [
+          "Select abilities to protect and abilities to use as covers",
+          "Drag cover abilities to set their priority",
+          "Configure the cast delay and Rubick detection range",
+          "Account for an unseen Rubick, Linken's Sphere, and Mirror Shield",
+          "Channeled abilities are not protected"
+        ],
+        "install": [
+          "Place `anti_rubick.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Scripts → General → Utility → Anti-Rubick → Spell Cover`."
+        ]
+      }
     }
   ]
 }
