@@ -3,9 +3,13 @@
 собирает комбо для Dota 1x6 в одном Lua-файле / packs Dota 1x6 hero combos into one Lua file
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `dota1x6_pack.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dota1x6_pack/dota1x6_pack.lua)
+Скачать: [dota1x6_pack.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dota-1x6-pack-v1.0.0/dota1x6_pack.lua) — `dota-1x6-pack-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=dota-1x6-pack&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`dota-1x6-pack-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/dota-1x6-pack-v1.0.0) | 2026-10-13 | [dota1x6_pack.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dota-1x6-pack-v1.0.0/dota1x6_pack.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=dota-1x6-pack&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
