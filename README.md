@@ -38,6 +38,7 @@
 - [Magnus Skewer Ally](scripts/magnus_skewer_ally) — направляет Skewer в выбранного союзника во встроенном комбо
 - [Better Better Techies Combo](scripts/better_better_techies_combo) — комбо на Techies с двумя режимами и автоматическим отходом
 - [Chat Translator](scripts/chat_translator) — автоматически переводит игровой чат между английским и русским
+- [Hero Grid](scripts/hero_grid) — загружает пользовательские сетки героев из JSON
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -123,6 +124,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Magnus Skewer Ally](scripts/magnus_skewer_ally) — redirects the built-in Magnus combo's Skewer towards an ally
 - [Better Better Techies Combo](scripts/better_better_techies_combo) — a Techies combo with two modes and an automatic disengage
 - [Chat Translator](scripts/chat_translator) — automatically translates in-game chat between English and Russian
+- [Hero Grid](scripts/hero_grid) — loads custom hero grids from JSON files
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -172,7 +174,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | script | downloads | latest |
 | --- | --- | --- |
 | [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 4 | `tinker-turret-dodge-v1.1.5` |
-| [Tinker Auto Farm](scripts/tinker_auto_farm) | 4 | `tinker-auto-farm-v1.0.4` |
+| [Tinker Auto Farm](scripts/tinker_auto_farm) | 5 | `tinker-auto-farm-v1.0.4` |
 | [Auto Shackleshot](scripts/auto_shackleshot) | 2 | `auto-shackleshot-v1.0.0` |
 | [Auto Spark](scripts/auto_spark) | 1 | `auto-spark-v1.0.0` |
 | [Rune Destruction](scripts/rune_destruction) | 1 | `rune-destruction-v1.0.2` |
@@ -183,7 +185,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 4 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 5 | `script-manager-v2.0.3` |
+| [Script Manager](scripts/script_manager) | 5 | `script-manager-v2.0.4` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |

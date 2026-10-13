@@ -3,10 +3,11 @@
 каталог скриптов Umbrella с установкой и обновлениями / an Umbrella script catalog with script installation and updates
 
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.3/script_manager.lua) — `script-manager-v2.0.3`, 2026-10-13
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.4/script_manager.lua) — `script-manager-v2.0.4`, 2026-10-13
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
+| [`script-manager-v2.0.4`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.4) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.4/script_manager.lua) | 0 |
 | [`script-manager-v2.0.3`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.3) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.3/script_manager.lua) | 0 |
 | [`script-manager-v2.0.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.2) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.2/script_manager.lua) | 0 |
 | [`script-manager-v2.0.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.1) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.1/script_manager.lua) | 0 |
@@ -50,6 +51,11 @@ Script Manager объединяет каталог скриптов в отде�
 4. Откройте `Scripts → Scripts → Script Manager`, включите его и назначьте клавишу для открытия панели.
 
 ## Что нового
+
+# Обновление v2.0.4
+
+- Пакетные установки поддерживают дополнительные JSON-файлы рядом с Lua-скриптом; для них не требуется создание подпапок.
+- Hero Grid устанавливается вместе с тремя примерами сеток.
 
 # Обновление v2.0.3
 
