@@ -375,7 +375,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | --- | --- | --- |
 | [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 1 | `tinker-turret-dodge-v1.1.5` |
 | [Tinker Auto Farm](scripts/tinker_auto_farm) | 1 | `tinker-auto-farm-v1.0.4` |
-| [Script Manager](scripts/script_manager) | 16 | `script-manager-v2.0.5` |
+| [Script Manager](scripts/script_manager) | 15 | `script-manager-v2.0.5` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
@@ -412,7 +412,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [MoM Sabre Abuse](scripts/mom_sabre_abuse) | 0 | `mom-sabre-abuse-v2.0.0` |
 | [Tinker 1x6 Farm](scripts/tinker_1x6_farm) | 0 | `tinker-1x6-farm-v1.0.0` |
 | [Forge Spirit Helper](scripts/forge_spirit_helper) | 0 | `forge-spirit-helper-v1.0.0` |
-| [Gank Threat](scripts/gank_threat) | 0 | `gank-threat-v1.0.0` |
+| [Gank Threat](scripts/gank_threat) | 1 | `gank-threat-v1.0.0` |
 | [Tinker Helper](scripts/tinker_helper) | 0 | `tinker-helper-v1.0.0` |
 | [Old HUD](scripts/old_hud) | 0 | `old-hud-v1.0.0` |
 | [Illusion Tracker](scripts/illusion_tracker) | 0 | `illusion-tracker-v1.0.0` |
@@ -463,6 +463,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Dark Carnival Path Tokens](scripts/dark_carnival_path_tokens) | 0 | `dark-carnival-path-tokens-v1.0.0` |
 | [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) | 0 | `lone-druid-bear-ai-deluxe-v1.0.0` |
 | [Ward Triangulator](scripts/ward_triangulator) | 0 | `ward-triangulator-v1.0.0` |
+| [Muerta Dead Shot](scripts/muerta_dead_shot) | 0 | `muerta-dead-shot-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
