@@ -18,6 +18,7 @@
 
 - Три режима: «Фарм леса», «Фарм линии», «Фарм только безопасных линий под вышкой»
 - Автоматический Blink при опасности
+- В Script Manager 2.0.2+ устанавливает `Tinker.lua` и все файлы `lib` одной кнопкой
 - Карта выбора кемпов для фарма, открывается по бинду
 - «Фарм леса» — фарм выбранных на карте кемпов
 - «Фарм линии» — фармит под вышкой и за ней; улучшенная логика поиска врагов, не рекомендуется к использованию
@@ -26,11 +27,16 @@
 
 ## Установка
 
-**Через Script Manager 2.0.2 и новее:** нажмите «Установить» — `Tinker.lua` и все файлы из `lib` будут установлены автоматически.
-
-**Вручную:** скачайте и распакуйте `Tinker-Auto-Farm.zip`, поместите `Tinker.lua` и папку `lib` в `umbrella\scripts`, затем перезагрузите Lua-скрипты и откройте настройки `Scripts → Scripts → Tinker`.
+1. Скачайте и распакуйте `Tinker-Auto-Farm.zip`.
+2. Поместите `Tinker.lua` и папку `lib` в `umbrella\scripts`.
+3. Перезагрузите Lua-скрипты.
+4. Откройте настройки: `Scripts → Scripts → Tinker`.
 
 ## Что нового
+
+**update v1.0.4**
+
+- Script Manager теперь устанавливает `Tinker.lua` и файлы из `lib` автоматически; ручная установка из ZIP остается доступна.
 
 **update v1.0.3**
 
@@ -51,6 +57,7 @@ A script for automatic farming on Tinker. Supports jungle, lane, and safe-lane-u
 
 - Three modes: Farm Woods, Farm Lane, and Farm Only Safe Lanes Under Tower
 - Automatically Blinks when in danger
+- Script Manager 2.0.2+ installs `Tinker.lua` and all `lib` files with one click
 - A map for selecting which camps to farm, opened with a bind
 - Farm Woods farms the camps selected on the map
 - Farm Lane farms under and beyond the tower; enemy detection was improved, but this mode is not recommended for use
@@ -59,11 +66,16 @@ A script for automatic farming on Tinker. Supports jungle, lane, and safe-lane-u
 
 ## Install
 
-**With Script Manager 2.0.2 or newer:** click Install; `Tinker.lua` and every file in `lib` are installed automatically.
-
-**Manually:** download and extract `Tinker-Auto-Farm.zip`, place `Tinker.lua` and the `lib` folder in `umbrella\scripts`, then reload the Lua scripts and open `Scripts → Scripts → Tinker`.
+1. Download and extract `Tinker-Auto-Farm.zip`.
+2. Place `Tinker.lua` and the `lib` folder in `umbrella\scripts`.
+3. Reload the Lua scripts.
+4. Open settings: `Scripts → Scripts → Tinker`.
 
 ## Changelog
+
+**update v1.0.4**
+
+- Script Manager now installs `Tinker.lua` and the files in `lib` automatically; manual installation from the ZIP remains available.
 
 **update v1.0.3**
 

@@ -3,10 +3,11 @@
 каталог скриптов Umbrella с установкой и обновлениями / an Umbrella script catalog with script installation and updates
 
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.1/script_manager.lua) — `script-manager-v2.0.1`, 2026-10-13
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.2/script_manager.lua) — `script-manager-v2.0.2`, 2026-10-13
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
+| [`script-manager-v2.0.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.2) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.2/script_manager.lua) | 0 |
 | [`script-manager-v2.0.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.1) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.1/script_manager.lua) | 0 |
 | [`script-manager-v2.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.0) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.0/script_manager.lua) | 2 |
 | [`script-manager-v1.6.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.6.0) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.6.0/script_manager.lua) | 0 |
@@ -51,8 +52,9 @@ Script Manager объединяет каталог скриптов в отде�
 
 # Обновление v2.0.2
 
-- Добавлена установка многофайловых Lua-пакетов; Tinker Auto Farm устанавливается кнопкой вместе с папкой `lib`.
-- Ссылки на ZIP сохранены для обратной совместимости со старыми версиями менеджера.
+- Добавлена установка Lua-пакетов из нескольких файлов; Tinker Auto Farm устанавливается кнопкой вместе с папкой `lib`.
+- Каталог сохраняет ZIP-ссылку для старых версий менеджера, а обновлённый менеджер использует прямые ссылки на файлы пакета.
+- При ошибке загрузки пакет не устанавливается частично; файлы восстанавливаются, если запись пакета не удалась.
 
 # Обновление v2.0.1
 
@@ -103,7 +105,8 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 # Update v2.0.2
 
 - Added multi-file Lua package installation; Tinker Auto Farm is installed with its `lib` folder using the Install button.
-- ZIP links remain available for compatibility with older manager versions.
+- The catalog retains its ZIP URL for older manager versions while updated managers use direct package file URLs.
+- Failed downloads do not install partial packages; files are restored if writing the package fails.
 
 # Update v2.0.1
 
