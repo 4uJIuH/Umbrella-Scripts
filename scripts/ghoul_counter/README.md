@@ -3,9 +3,13 @@
 отправляет арифметический отсчёт в чат по бинду / sends a chat arithmetic countdown with a bind
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `ghoul_counter.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/ghoul_counter/ghoul_counter.lua)
+Скачать: [ghoul_counter.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/ghoul-counter-v1.0.0/ghoul_counter.lua) — `ghoul-counter-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=ghoul-counter&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`ghoul-counter-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/ghoul-counter-v1.0.0) | 2026-10-13 | [ghoul_counter.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/ghoul-counter-v1.0.0/ghoul_counter.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=ghoul-counter&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
