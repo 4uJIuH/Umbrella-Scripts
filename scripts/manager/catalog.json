@@ -571,6 +571,166 @@
       "manual": true,
       "needs_q_localizer": false,
       "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)"
+    },
+    {
+      "id": "disable_tracker",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/disable_tracker/ugnetenie.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/disable-tracker-v1.0.0/ugnetenie.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "0x10ma (Discord: _0x10ma_)"
+    },
+    {
+      "id": "russian_roulette",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/russian_roulette/russian_roulette.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/russian-roulette-v1.0.0/russian_roulette.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Yud3x (Discord: yud3xx)"
+    },
+    {
+      "id": "mom_swapper",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mom_swapper/mom_swapper.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/mom-swapper-v1.0.0/mom_swapper.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "+ (Discord: obsessed.caress)",
+      "heroes": [
+        "sven",
+        "muerta"
+      ]
+    },
+    {
+      "id": "botle",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/botle/botle.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/botle-abuse-v1.0.0/botle.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Trineks (Discord: trineks)"
+    },
+    {
+      "id": "action_recorder",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/action_recorder/action_recorder.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/action-recorder-v1.0.0/action_recorder.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "okea (Discord: okea)"
+    },
+    {
+      "id": "io_overcharge",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/io_overcharge/io_overcharge.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/io-overcharge-v1.0.0/io_overcharge.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u0444\u0440\u0438\u0433\u0438\u0434\u043d\u044b\u0439 [\u0440\u0430\u0437\u0443\u043c] (Discord: .emocry)",
+      "heroes": [
+        "wisp"
+      ]
+    },
+    {
+      "id": "arc_warden_utilities",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_utilities/arc_warden_utilities.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-utilities-v1.0.0/arc_warden_utilities.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Nev1r0Psixx0z",
+      "heroes": [
+        "arc_warden"
+      ]
+    },
+    {
+      "id": "backwards_cast",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/backwards_cast/backwards_cast.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/backwards-cast-v1.0.0/backwards_cast.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "dami\u044f (Discord: vacnul)"
+    },
+    {
+      "id": "forge_spirit_farm_beta",
+      "version": "0.1.0-beta.1",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/forge_spirit_farm_beta/forge_spirit_farm.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/forge-spirit-farm-beta-v0.1.0-beta.1/forge_spirit_farm.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "okea (Discord: okea)",
+      "heroes": [
+        "invoker"
+      ]
+    },
+    {
+      "id": "selection_camera",
+      "version": "1.1.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/selection_camera/selection_camera.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/selection-camera-v1.1.0/selection_camera.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "chizhak (Discord: stulipelky)"
+    },
+    {
+      "id": "spirit_breaker_bara",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/spirit_breaker_bara/bara.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-breaker-bara-v1.0.0/bara.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "! \u0434\u0430\u0439 \u0435\u0433\u043e (Discord: 0ghq)",
+      "heroes": [
+        "spirit_breaker"
+      ]
+    },
+    {
+      "id": "ghoul_counter",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/ghoul_counter/ghoul_counter.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/ghoul-counter-v1.0.0/ghoul_counter.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "kuonsetsu (Discord: kuonsetsu)"
+    },
+    {
+      "id": "invoker_jarvis",
+      "version": "1.3.1",
+      "url": "https://github.com/gdhost4-eng/umbrella-invoker-jarvis/releases/download/v1.3.1/invoker_jarvis.lua",
+      "release": "https://github.com/gdhost4-eng/umbrella-invoker-jarvis/releases/download/v1.3.1/invoker_jarvis.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u0437\u0430\u0432\u0442\u0440\u0430 \u043d\u0435 \u0431\u0443\u0434\u0435\u0442 (Discord: n1fogen)",
+      "heroes": [
+        "invoker"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "umbrella_tiktok",
+      "version": "1.3.1",
+      "url": "https://github.com/gdhost4-eng/umbrella-tiktok/releases/download/v1.3.1/tiktok.lua",
+      "release": "https://github.com/gdhost4-eng/umbrella-tiktok/releases/download/v1.3.1/tiktok.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u0437\u0430\u0432\u0442\u0440\u0430 \u043d\u0435 \u0431\u0443\u0434\u0435\u0442 (Discord: n1fogen)",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "invoker_autostack",
+      "version": "1.4.2",
+      "url": "https://github.com/gdhost4-eng/umbrella-invoker-autostack/releases/download/v1.4.2/invoker_autostack.lua",
+      "release": "https://github.com/gdhost4-eng/umbrella-invoker-autostack/releases/download/v1.4.2/invoker_autostack.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u0437\u0430\u0432\u0442\u0440\u0430 \u043d\u0435 \u0431\u0443\u0434\u0435\u0442 (Discord: n1fogen)",
+      "heroes": [
+        "invoker"
+      ],
+      "version_marker": "NONE"
     }
   ]
 }

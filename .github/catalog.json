@@ -2348,6 +2348,716 @@
           "Open `Scripts → Utility → Lualingo` and select Open Lualingo."
         ]
       }
+    },
+    {
+      "id": "disable_tracker",
+      "tag": "disable-tracker",
+      "title": "Disable Tracker",
+      "kind": "lua",
+      "category": "dota",
+      "file": "ugnetenie.lua",
+      "author": "0x10ma (Discord: _0x10ma_)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/disable_tracker",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=disable-tracker&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/disable_tracker/ugnetenie.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/disable-tracker-v1.0.0/ugnetenie.lua"
+      },
+      "ru": {
+        "tagline": "считает время под разными эффектами контроля",
+        "about": "Показывает, сколько времени герой провёл под оглушениями, безмолвием, обезоруживанием и другими дизейблами.",
+        "features": [
+          "Отслеживает несколько типов контроля и ограничений",
+          "Показывает текущий эффект и сводную статистику",
+          "Положение панели можно перемещать"
+        ],
+        "install": [
+          "Поместите `ugnetenie.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Настройте индикатор в разделе General → Main → Oppression Indicator."
+        ]
+      },
+      "en": {
+        "tagline": "tracks time spent under disabling effects",
+        "about": "Shows how long your hero has been affected by stuns, silences, disarms, and other disables.",
+        "features": [
+          "Tracks several types of disables and restrictions",
+          "Shows the current effect and a summary",
+          "The panel can be repositioned"
+        ],
+        "install": [
+          "Place `ugnetenie.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Configure the indicator under General → Main → Oppression Indicator."
+        ]
+      }
+    },
+    {
+      "id": "russian_roulette",
+      "tag": "russian-roulette",
+      "title": "Russian Roulette",
+      "kind": "lua",
+      "category": "dota",
+      "file": "russian_roulette.lua",
+      "author": "Yud3x (Discord: yud3xx)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/russian_roulette",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=russian-roulette&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/russian_roulette/russian_roulette.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/russian-roulette-v1.0.0/russian_roulette.lua"
+      },
+      "ru": {
+        "tagline": "игровая рулетка с выбором пуль",
+        "about": "Шуточная рулетка с настраиваемым числом пуль и экранным барабаном. При попадании скрипт может уронить случайный предмет, после чего герой атакует его.",
+        "features": [
+          "Настраиваемое число пуль и запуск кнопкой или биндом",
+          "Экранный барабан и сообщение с результатом",
+          "Опциональное действие может повредить или уничтожить выброшенный предмет; используйте на свой риск"
+        ],
+        "install": [
+          "Поместите `russian_roulette.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Перед включением ознакомьтесь с переключателем разбивания предмета."
+        ]
+      },
+      "en": {
+        "tagline": "a game of roulette with configurable bullets",
+        "about": "A joke roulette with a configurable number of bullets and an on-screen cylinder. On a hit, the script can drop a random item and make the hero attack it.",
+        "features": [
+          "Choose the bullet count and trigger the roulette with a button or bind",
+          "On-screen cylinder and result message",
+          "The optional action may damage or destroy the dropped item; use at your own risk"
+        ],
+        "install": [
+          "Place `russian_roulette.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Review the item-breaking toggle before enabling it."
+        ]
+      }
+    },
+    {
+      "id": "mom_swapper",
+      "tag": "mom-swapper",
+      "title": "MoM Swapper",
+      "kind": "lua",
+      "category": "dota",
+      "file": "mom_swapper.lua",
+      "heroes": [
+        "sven",
+        "muerta"
+      ],
+      "author": "+ (Discord: obsessed.caress)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/mom_swapper",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=mom-swapper&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mom_swapper/mom_swapper.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/mom-swapper-v1.0.0/mom_swapper.lua"
+      },
+      "ru": {
+        "tagline": "автоматически или вручную меняет MoM на Echo Sabre или Specialist's Array",
+        "about": "Пересобирает Mask of Madness в Echo Sabre или Specialist's Array и обратно, используя общий компонент Broadsword. В исходном описании отмечены Sven и Muerta.",
+        "features": [
+          "Автоматический и ручной режимы",
+          "Выбор второго предмета и настройка биндов",
+          "Защиты от свободных слотов, повторных переключений и прерываний"
+        ],
+        "install": [
+          "Поместите `mom_swapper.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте настройки героя и выберите режим переключения."
+        ]
+      },
+      "en": {
+        "tagline": "swaps MoM with Echo Sabre or Specialist's Array",
+        "about": "Rebuilds Mask of Madness into Echo Sabre or Specialist's Array and back using their shared Broadsword component. Sven and Muerta are listed in the supplied description.",
+        "features": [
+          "Automatic and manual modes",
+          "Choose the secondary item and configure binds",
+          "Safeguards for free inventory slots, repeated switching, and interruptions"
+        ],
+        "install": [
+          "Place `mom_swapper.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open the hero settings and choose a swap mode."
+        ]
+      }
+    },
+    {
+      "id": "botle",
+      "tag": "botle-abuse",
+      "title": "Botle Abuse",
+      "kind": "lua",
+      "category": "dota",
+      "file": "botle.lua",
+      "author": "Trineks (Discord: trineks)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/botle",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=botle-abuse&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/botle/botle.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/botle-abuse-v1.0.0/botle.lua"
+      },
+      "ru": {
+        "tagline": "автоматизирует перестановку предметов перед использованием Bottle",
+        "about": "Перекладывает выбранные предметы между ячейками инвентаря при использовании Bottle. Можно указать предметы, которые не нужно трогать.",
+        "features": [
+          "Обрабатывает только основные слоты",
+          "Список исключений настраивается в меню",
+          "Восстанавливает расположение предметов после цикла"
+        ],
+        "install": [
+          "Поместите `botle.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте Scripts → Other → Абуз ботла."
+        ]
+      },
+      "en": {
+        "tagline": "automates item rearrangement before using Bottle",
+        "about": "Moves selected items between inventory slots when Bottle is used. Items to leave untouched can be selected in the menu.",
+        "features": [
+          "Operates only on the main inventory slots",
+          "Configurable item exclusion list",
+          "Restores item positions after the sequence"
+        ],
+        "install": [
+          "Place `botle.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open Scripts → Other → Абуз ботла."
+        ]
+      }
+    },
+    {
+      "id": "action_recorder",
+      "tag": "action-recorder",
+      "title": "Action Recorder",
+      "kind": "lua",
+      "category": "dota",
+      "file": "action_recorder.lua",
+      "author": "okea (Discord: okea)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/action_recorder",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=action-recorder&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/action_recorder/action_recorder.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/action-recorder-v1.0.0/action_recorder.lua"
+      },
+      "ru": {
+        "tagline": "записывает и воспроизводит действия игрока",
+        "about": "Записывает последовательность действий и позволяет воспроизвести её позднее.",
+        "features": [
+          "Управление записью и воспроизведением через меню и бинды",
+          "Слоты записи, импорт и экспорт",
+          "Настройки отображения и отладки"
+        ],
+        "install": [
+          "Поместите `action_recorder.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте Scripts → Scripts → Action Recorder."
+        ]
+      },
+      "en": {
+        "tagline": "records and replays player actions",
+        "about": "Records a sequence of actions and lets you replay it later.",
+        "features": [
+          "Control recording and playback from the menu and binds",
+          "Recording slots, import, and export",
+          "Display and debug settings"
+        ],
+        "install": [
+          "Place `action_recorder.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open Scripts → Scripts → Action Recorder."
+        ]
+      }
+    },
+    {
+      "id": "io_overcharge",
+      "tag": "io-overcharge",
+      "title": "Io Overcharge",
+      "kind": "lua",
+      "category": "dota",
+      "file": "io_overcharge.lua",
+      "heroes": [
+        "wisp"
+      ],
+      "author": "фригидный [разум] (Discord: .emocry)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/io_overcharge",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=io-overcharge&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/io_overcharge/io_overcharge.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/io-overcharge-v1.0.0/io_overcharge.lua"
+      },
+      "ru": {
+        "tagline": "жмёт Overcharge, когда связанный союзник использует ультимейт",
+        "about": "Находит союзника под Tether и применяет Overcharge при использовании его ключевой способности.",
+        "features": [
+          "Порог маны и настраиваемая задержка реакции",
+          "Опциональная проверка боя и радиуса врагов",
+          "Проверяет, что Io не оглушён и не заглушён",
+          "Отдельные настройки в Heroes → Io → Overcharge"
+        ],
+        "install": [
+          "Поместите `io_overcharge.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте Heroes → Hero List → Io → Overcharge."
+        ]
+      },
+      "en": {
+        "tagline": "casts Overcharge when the tethered ally uses an ultimate",
+        "about": "Finds the ally connected by Tether and casts Overcharge when that ally uses a tracked key ability.",
+        "features": [
+          "Mana threshold and configurable reaction delay",
+          "Optional combat and enemy-radius checks",
+          "Checks that Io is not stunned or silenced",
+          "Settings under Heroes → Io → Overcharge"
+        ],
+        "install": [
+          "Place `io_overcharge.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open Heroes → Hero List → Io → Overcharge."
+        ]
+      }
+    },
+    {
+      "id": "arc_warden_utilities",
+      "tag": "arc-warden-utilities",
+      "title": "Arc Warden Utilities",
+      "kind": "lua",
+      "category": "dota",
+      "file": "arc_warden_utilities.lua",
+      "heroes": [
+        "arc_warden"
+      ],
+      "author": "Nev1r0Psixx0z",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/arc_warden_utilities",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-utilities&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_utilities/arc_warden_utilities.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-utilities-v1.0.0/arc_warden_utilities.lua"
+      },
+      "ru": {
+        "tagline": "набор утилит для Arc Warden и Tempest Double",
+        "about": "Объединяет автоперекладывание предметов, блокирование хуков и перекатов клоном, а также Auto Spark с режимом каста только под стан. Автор указывает, что часть функций основана на работах других авторов.",
+        "features": [
+          "Перекладывает выбранные предметы между инвентарём и рюкзаком",
+          "Пытается блокировать Meat Hook и Rolling Boulder клоном",
+          "Содержит Auto Spark с фильтром по стану",
+          "В описании исходника отдельно упомянуты работы <@737572019247251537> и <@757209868833914881>"
+        ],
+        "install": [
+          "Поместите `arc_warden_utilities.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте Heroes → Hero List → Arc Warden → Утилиты."
+        ]
+      },
+      "en": {
+        "tagline": "a set of utilities for Arc Warden and Tempest Double",
+        "about": "Combines automatic item repositioning, clone-based hook and Rolling Boulder blocks, and Auto Spark with a stun-only option. The author notes that some features are based on other authors' work.",
+        "features": [
+          "Moves selected items between inventory and backpack",
+          "Attempts to block Meat Hook and Rolling Boulder with the clone",
+          "Includes Auto Spark with a stun filter",
+          "The supplied description credits work by <@737572019247251537> and <@757209868833914881>"
+        ],
+        "install": [
+          "Place `arc_warden_utilities.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open Heroes → Hero List → Arc Warden → Утилиты."
+        ]
+      }
+    },
+    {
+      "id": "backwards_cast",
+      "tag": "backwards-cast",
+      "title": "Back Cast",
+      "kind": "lua",
+      "category": "dota",
+      "file": "backwards_cast.lua",
+      "author": "damiя (Discord: vacnul)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/backwards_cast",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=backwards-cast&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/backwards_cast/backwards_cast.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/backwards-cast-v1.0.0/backwards_cast.lua"
+      },
+      "ru": {
+        "tagline": "кастует направленные способности без разворота героя",
+        "about": "Позволяет направлять некоторые способности с фиксированной дальностью, не разворачивая героя. Автор заявляет поддержку 37 способностей.",
+        "features": [
+          "Выбор способностей, для которых включён режим",
+          "Без задержки при неподвижном герое; во время движения возможна задержка",
+          "Поддерживает способности нескольких героев"
+        ],
+        "install": [
+          "Поместите `backwards_cast.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте General → Main → Back Cast и включите Enable."
+        ]
+      },
+      "en": {
+        "tagline": "casts directional abilities without turning the hero",
+        "about": "Lets you aim selected fixed-range abilities without turning the hero. The author reports support for 37 abilities.",
+        "features": [
+          "Choose which abilities use the behavior",
+          "No delay while standing still; casting while moving may be delayed",
+          "Supports abilities across multiple heroes"
+        ],
+        "install": [
+          "Place `backwards_cast.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open General → Main → Back Cast and enable it."
+        ]
+      }
+    },
+    {
+      "id": "forge_spirit_farm_beta",
+      "tag": "forge-spirit-farm-beta",
+      "title": "Forge Spirit Farm (Beta)",
+      "kind": "lua",
+      "category": "dota",
+      "file": "forge_spirit_farm.lua",
+      "heroes": [
+        "invoker"
+      ],
+      "author": "okea (Discord: okea)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/forge_spirit_farm_beta",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=forge-spirit-farm-beta&expanded=true",
+      "initial": {
+        "version": "0.1.0-beta.1",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/forge_spirit_farm_beta/forge_spirit_farm.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/forge-spirit-farm-beta-v0.1.0-beta.1/forge_spirit_farm.lua"
+      },
+      "ru": {
+        "tagline": "бета-автофарм и стаки на Forge Spirits",
+        "about": "Бета-версия управления Forge Spirits с фармом линий и попытками стакать кемпы. Автор предупреждает, что многие функции ещё требуют проверки и работают нестабильно.",
+        "features": [
+          "Назначение ролей «Стакер» и «Авто» для духов",
+          "Выбор кемпов на карте и настраиваемое время отхода",
+          "Фарм линий и попытки ломать руны",
+          "Предварительная бета: возможны ошибки, сборки и поведение юнитов не проверены"
+        ],
+        "install": [
+          "Поместите `forge_spirit_farm.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Тестируйте только если готовы к ошибкам; автор помечает эту сборку как нестабильную."
+        ]
+      },
+      "en": {
+        "tagline": "beta Forge Spirit farming and camp stacking",
+        "about": "A beta controller for Forge Spirits that farms lanes and attempts camp stacks. The author warns that several features are untested and unstable.",
+        "features": [
+          "Assign Stacker and Auto roles to spirits",
+          "Select camps on the map and configure the retreat time",
+          "Lane farming and attempted rune breaking",
+          "Early beta: errors are possible and unit behavior has not been validated"
+        ],
+        "install": [
+          "Place `forge_spirit_farm.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Test only if you accept possible bugs; the author labels this build unstable."
+        ]
+      }
+    },
+    {
+      "id": "selection_camera",
+      "tag": "selection-camera",
+      "title": "Selection Camera",
+      "kind": "lua",
+      "category": "dota",
+      "file": "selection_camera.lua",
+      "author": "chizhak (Discord: stulipelky)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/selection_camera",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=selection-camera&expanded=true",
+      "initial": {
+        "version": "1.1.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/selection_camera/selection_camera.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/selection-camera-v1.1.0/selection_camera.lua"
+      },
+      "ru": {
+        "tagline": "переносит камеру к выбранному юниту или группе",
+        "about": "При смене группы или управляемого юнита один раз переносит камеру к активной цели или центру группы, не включая постоянное слежение.",
+        "features": [
+          "Режим цели: активный юнит или центр выбранной группы",
+          "Поддерживает управляемых юнитов, клонов и иллюзии",
+          "Можно отключить реакцию на выбор основного героя",
+          "Индикатор состояния и журнал переходов"
+        ],
+        "install": [
+          "Поместите `selection_camera.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Настройте Selection Camera в General → Main."
+        ]
+      },
+      "en": {
+        "tagline": "moves the camera to the selected unit or group",
+        "about": "On a selection change, moves the camera once to the active unit or group center without enabling continuous follow.",
+        "features": [
+          "Choose the active unit or the center of the selected group",
+          "Supports controllable units, clones, and illusions",
+          "Can ignore selection changes that include the main hero",
+          "Status indicator and jump log"
+        ],
+        "install": [
+          "Place `selection_camera.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Configure Selection Camera under General → Main."
+        ]
+      }
+    },
+    {
+      "id": "spirit_breaker_bara",
+      "tag": "spirit-breaker-bara",
+      "title": "Spirit Breaker Combo & Ghoul 1000-7",
+      "kind": "lua",
+      "category": "dota",
+      "file": "bara.lua",
+      "heroes": [
+        "spirit_breaker"
+      ],
+      "author": "! дай его (Discord: 0ghq)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/spirit_breaker_bara",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=spirit-breaker-bara&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/spirit_breaker_bara/bara.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-breaker-bara-v1.0.0/bara.lua"
+      },
+      "ru": {
+        "tagline": "комбо для Spirit Breaker с предметами и чат-отсчётом",
+        "about": "Использует Bulldoze перед столкновением, может нажать Nether Strike и активировать предметы. Дополнительно умеет ставить игру на паузу и отправлять настраиваемый числовой отсчёт в чат.",
+        "features": [
+          "Опциональные Bulldoze и Nether Strike при столкновении",
+          "Автоматическое применение выбранных предметов",
+          "Отдельные переключатели паузы и сообщений в командный или общий чат",
+          "Чат-отсчёт включён по умолчанию в исходнике; отключите его, если не хотите отправлять сообщения"
+        ],
+        "install": [
+          "Поместите `bara.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Отключите Auto Pause On Impact и 1000-7 Chat Countdown, если эти действия не нужны."
+        ]
+      },
+      "en": {
+        "tagline": "Spirit Breaker combo with items and a chat countdown",
+        "about": "Uses Bulldoze before impact, can cast Nether Strike, and activates items. It can also pause the game and send a configurable numeric countdown to chat.",
+        "features": [
+          "Optional Bulldoze and Nether Strike at impact",
+          "Automatically uses selected items",
+          "Separate toggles for pausing and sending messages to team or all chat",
+          "Chat countdown is enabled by default in the source; disable it if you do not want messages sent"
+        ],
+        "install": [
+          "Place `bara.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Disable Auto Pause On Impact and 1000-7 Chat Countdown if you do not want those actions."
+        ]
+      }
+    },
+    {
+      "id": "ghoul_counter",
+      "tag": "ghoul-counter",
+      "title": "1000-7 Counter",
+      "kind": "lua",
+      "category": "dota",
+      "file": "ghoul_counter.lua",
+      "author": "kuonsetsu (Discord: kuonsetsu)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/ghoul_counter",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=ghoul-counter&expanded=true",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/ghoul_counter/ghoul_counter.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/ghoul-counter-v1.0.0/ghoul_counter.lua"
+      },
+      "ru": {
+        "tagline": "отправляет арифметический отсчёт в чат по бинду",
+        "about": "Запускает и останавливает обратный отсчёт с настраиваемым шагом, задержкой и каналом чата.",
+        "features": [
+          "Старт и остановка по F9 или выбранному бинду",
+          "Настраиваемые начальное значение, шаг, задержка и канал",
+          "Можно добавить финальное сообщение"
+        ],
+        "install": [
+          "Поместите `ghoul_counter.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте General → Main → Interface → 1000-7."
+        ]
+      },
+      "en": {
+        "tagline": "sends a chat arithmetic countdown with a bind",
+        "about": "Starts and stops a countdown with configurable step, delay, and chat channel.",
+        "features": [
+          "Start and stop with F9 or a selected bind",
+          "Configure the starting value, step, delay, and channel",
+          "Optional final message"
+        ],
+        "install": [
+          "Place `ghoul_counter.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open General → Main → Interface → 1000-7."
+        ]
+      }
+    },
+    {
+      "id": "invoker_jarvis",
+      "tag": "invoker-jarvis",
+      "title": "Invoker Jarvis",
+      "kind": "lua",
+      "category": "dota",
+      "file": "invoker_jarvis.lua",
+      "version_marker": "NONE",
+      "heroes": [
+        "invoker"
+      ],
+      "author": "завтра не будет (Discord: n1fogen)",
+      "source_url": "https://github.com/gdhost4-eng/umbrella-invoker-jarvis",
+      "releases_url": "https://github.com/gdhost4-eng/umbrella-invoker-jarvis/releases",
+      "initial": {
+        "version": "1.3.1",
+        "date": "2026-10-01",
+        "url": "https://github.com/gdhost4-eng/umbrella-invoker-jarvis/releases/download/v1.3.1/invoker_jarvis.lua",
+        "release": "https://github.com/gdhost4-eng/umbrella-invoker-jarvis/releases/download/v1.3.1/invoker_jarvis.lua"
+      },
+      "ru": {
+        "tagline": "голосовой помощник для Invoker",
+        "about": "Голосом вызывает и применяет способности и предметы, а также запускает заранее настроенные комбо Invoker.",
+        "features": [
+          "Команды для способностей, предметов, сфер, телепорта и прокачки",
+          "Запуск комбо из меню Invoker",
+          "Скрипт Lua можно установить отдельно; для голосового управления также требуется Jarvis.exe из оригинального репозитория"
+        ],
+        "install": [
+          "Установите `invoker_jarvis.lua` через менеджер или скачайте его из <a href=\"https://github.com/gdhost4-eng/umbrella-invoker-jarvis/releases\" target=\"_blank\" rel=\"noopener\">официального раздела Releases</a>.",
+          "Чтобы включить голосовые команды, скачайте и запустите `Jarvis.exe` только из оригинального репозитория автора.",
+          "В игре откройте Heroes → Invoker → Jarvis."
+        ]
+      },
+      "en": {
+        "tagline": "voice assistant for Invoker",
+        "about": "Uses voice to invoke and cast abilities and items, and to start preconfigured Invoker combos.",
+        "features": [
+          "Commands for abilities, items, orbs, teleport, and leveling",
+          "Starts combos from the Invoker menu",
+          "The Lua script can be installed separately; voice control also requires Jarvis.exe from the original repository"
+        ],
+        "install": [
+          "Install `invoker_jarvis.lua` through the manager or download it from the author's <a href=\"https://github.com/gdhost4-eng/umbrella-invoker-jarvis/releases\" target=\"_blank\" rel=\"noopener\">official Releases</a>.",
+          "For voice commands, download and run `Jarvis.exe` only from the author's original repository.",
+          "In game, open Heroes → Invoker → Jarvis."
+        ]
+      }
+    },
+    {
+      "id": "umbrella_tiktok",
+      "tag": "umbrella-tiktok",
+      "title": "TikTok",
+      "kind": "lua",
+      "category": "dota",
+      "file": "tiktok.lua",
+      "version_marker": "NONE",
+      "author": "завтра не будет (Discord: n1fogen)",
+      "source_url": "https://github.com/gdhost4-eng/umbrella-tiktok",
+      "releases_url": "https://github.com/gdhost4-eng/umbrella-tiktok/releases",
+      "initial": {
+        "version": "1.3.1",
+        "date": "2026-10-08",
+        "url": "https://github.com/gdhost4-eng/umbrella-tiktok/releases/download/v1.3.1/tiktok.lua",
+        "release": "https://github.com/gdhost4-eng/umbrella-tiktok/releases/download/v1.3.1/tiktok.lua"
+      },
+      "ru": {
+        "tagline": "встроенный просмотрщик TikTok",
+        "about": "Добавляет интерфейс для просмотра TikTok в Umbrella. По описанию автора для доступа может понадобиться сторонний обходчик.",
+        "features": [
+          "Открывает вкладку TikTok в разделе скриптов",
+          "Поставляется и обновляется автором в отдельном GitHub-репозитории",
+          "Доступность зависит от внешних сетевых ограничений и сервисов"
+        ],
+        "install": [
+          "Скачайте `tiktok.lua` из <a href=\"https://github.com/gdhost4-eng/umbrella-tiktok/releases\" target=\"_blank\" rel=\"noopener\">официальных релизов автора</a> или используйте менеджер.",
+          "Поместите файл в `umbrella\\scripts` и перезагрузите Lua-скрипты.",
+          "Сторонние сетевые обходчики не входят в поставку этого репозитория."
+        ]
+      },
+      "en": {
+        "tagline": "an embedded TikTok viewer",
+        "about": "Adds a TikTok viewing interface to Umbrella. The author notes that a third-party network workaround may be needed for access.",
+        "features": [
+          "Adds a TikTok tab to the scripts section",
+          "Maintained and updated by the author in a separate GitHub repository",
+          "Availability depends on external network restrictions and services"
+        ],
+        "install": [
+          "Download `tiktok.lua` from the author's <a href=\"https://github.com/gdhost4-eng/umbrella-tiktok/releases\" target=\"_blank\" rel=\"noopener\">official releases</a> or use the manager.",
+          "Place the file in `umbrella\\scripts` and reload Lua scripts.",
+          "Third-party network workarounds are not included in this repository."
+        ]
+      }
+    },
+    {
+      "id": "invoker_autostack",
+      "tag": "invoker-autostack",
+      "title": "Invoker AutoStack",
+      "kind": "lua",
+      "category": "dota",
+      "file": "invoker_autostack.lua",
+      "version_marker": "NONE",
+      "heroes": [
+        "invoker"
+      ],
+      "author": "завтра не будет (Discord: n1fogen)",
+      "source_url": "https://github.com/gdhost4-eng/umbrella-invoker-autostack",
+      "releases_url": "https://github.com/gdhost4-eng/umbrella-invoker-autostack/releases",
+      "initial": {
+        "version": "1.4.2",
+        "date": "2026-09-30",
+        "url": "https://github.com/gdhost4-eng/umbrella-invoker-autostack/releases/download/v1.4.2/invoker_autostack.lua",
+        "release": "https://github.com/gdhost4-eng/umbrella-invoker-autostack/releases/download/v1.4.2/invoker_autostack.lua"
+      },
+      "ru": {
+        "tagline": "автоматически стакает кемпы Tornado за Invoker",
+        "about": "Планирует применение Tornado по времени падения крипов и корректирует тайминг на основе результата.",
+        "features": [
+          "Автоматический стак кемпов",
+          "Учитывает выбранный кемп и время полёта",
+          "Скрипт и обновления предоставляет автор в отдельном репозитории"
+        ],
+        "install": [
+          "Установите `invoker_autostack.lua` через менеджер или скачайте из <a href=\"https://github.com/gdhost4-eng/umbrella-invoker-autostack/releases\" target=\"_blank\" rel=\"noopener\">официальных релизов</a>.",
+          "Поместите файл в `umbrella\\scripts` и перезагрузите Lua-скрипты.",
+          "Настройте управление в разделе Invoker."
+        ]
+      },
+      "en": {
+        "tagline": "automatically stacks camps with Invoker's Tornado",
+        "about": "Schedules Tornado around creep drop timing and adjusts the timing based on the result.",
+        "features": [
+          "Automatic camp stacking",
+          "Accounts for the selected camp and travel time",
+          "The author maintains the script and updates in a separate repository"
+        ],
+        "install": [
+          "Install `invoker_autostack.lua` through the manager or download it from the author's <a href=\"https://github.com/gdhost4-eng/umbrella-invoker-autostack/releases\" target=\"_blank\" rel=\"noopener\">official releases</a>.",
+          "Place the file in `umbrella\\scripts` and reload Lua scripts.",
+          "Configure the controls under Invoker."
+        ]
+      }
     }
   ]
 }
