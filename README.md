@@ -21,6 +21,13 @@
 - [Script Manager](scripts/script_manager) — каталог скриптов Umbrella с установкой и обновлениями
 - [Dynamic Island](scripts/dynamic_island_dota) — интерактивный островок с уведомлениями, таймерами и показателями матча
 - [Tinker Smart Escape](scripts/tinker_smart_escape) — побег Тинкера к курсору по одной клавише
+- [Lane Pull](scripts/lane_pull) — выпул вражеской волны крипом с Доминатора
+- [DS Spot Block](scripts/ds_spot_block) — блок спота Вакуумом за Dark Seer
+- [Custom Background](scripts/custom_background) — свои картинки на фоне меню
+- [Auto Stack](scripts/auto_stack) — автостак кемпов за Кунку и Инвокера
+- [Draft Helper](scripts/draft_helper) — подсказки на драфте и сборка предметов
+- [MusicUI](scripts/musicui) — оверлей плеера: трек, обложка, эквалайзер, текст
+- [Umbrella Lua Developer Skill](scripts/umbrella_lua) — Навык разработчика для создания Lua-скриптов Umbrella
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -89,6 +96,13 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Script Manager](scripts/script_manager) — an Umbrella script catalog with script installation and updates
 - [Dynamic Island](scripts/dynamic_island_dota) — an interactive island for match stats, alerts, and timers
 - [Tinker Smart Escape](scripts/tinker_smart_escape) — escape towards the cursor with a single key
+- [Lane Pull](scripts/lane_pull) — pull the enemy wave with your Dominator creep
+- [DS Spot Block](scripts/ds_spot_block) — Vacuum spot block for Dark Seer
+- [Custom Background](scripts/custom_background) — your own pictures behind the menu
+- [Auto Stack](scripts/auto_stack) — camp stacking for Kunkka and Invoker
+- [Draft Helper](scripts/draft_helper) — draft hints and item builds
+- [MusicUI](scripts/musicui) — player overlay: track, cover, equalizer, lyrics
+- [Umbrella Lua Developer Skill](scripts/umbrella_lua) — Developer skill for creating Umbrella Lua scripts
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.

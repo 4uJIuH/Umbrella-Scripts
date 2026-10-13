@@ -151,6 +151,7 @@ def build_readme(script, rels):
         "",
     ]
     path = BASE / "scripts" / script["id"] / "README.md"
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(NL.join(parts).rstrip() + NL, encoding="utf-8", newline=NL)
     return len(mine)
 

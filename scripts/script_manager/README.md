@@ -2,14 +2,13 @@
 
 каталог скриптов Umbrella с установкой и обновлениями / an Umbrella script catalog with script installation and updates
 
-Visual/UI authors: watahell / papagdetto.
-
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.0/script_manager.lua) — `script-manager-v2.0.0`, 2026-10-13
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.1/script_manager.lua) — `script-manager-v2.0.1`, 2026-10-13
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`script-manager-v2.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.0) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.0/script_manager.lua) | 0 |
+| [`script-manager-v2.0.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.1) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.1/script_manager.lua) | 0 |
+| [`script-manager-v2.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.0.0) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.0.0/script_manager.lua) | 2 |
 | [`script-manager-v1.6.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.6.0) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.6.0/script_manager.lua) | 0 |
 | [`script-manager-v1.5.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.5.0) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.5.0/script_manager.lua) | 0 |
 | [`script-manager-v1.4.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v1.4.0) | 2026-10-12 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v1.4.0/script_manager.lua) | 1 |
@@ -27,7 +26,7 @@ Visual/UI authors: watahell / papagdetto.
 
 ## Что умеет
 
-Script Manager объединяет каталог скриптов в отдельной настраиваемой панели: показывает описания, авторов и версии, поддерживает поиск, фильтры по героям и категориям, а также установку и удаление.
+Script Manager объединяет каталог скриптов в отдельной настраиваемой панели: показывает описания, авторов и версии, поддерживает поиск, фильтры по героям и категориям, а также установку и удаление. Визуальная/UI-часть: watahell / papagdetto.
 
 - Загружает общий каталог с сайта и показывает скрипты по категориям, героям и статусу установки
 - Отображает описания, возможности, автора, источник и доступную версию выбранного скрипта
@@ -35,9 +34,10 @@ Script Manager объединяет каталог скриптов в отде�
 - Автоматически проверяет каталог при запуске; проверку можно повторить вручную или настроить периодичность
 - Устанавливает и обновляет отдельные скрипты, создавая резервную копию заменяемого файла
 - Устанавливает `!_qLocalizer.lua`, если он нужен выбранному скрипту и ещё не установлен
-- Показывает ZIP- и RAR-пакеты для скачивания и ручной установки
+- Показывает ZIP-пакеты для скачивания и ручной распаковки
 - Позволяет менять тему, акцентный цвет и поведение перезапуска после установки
 - Поддерживает собственное обновление под тем же именем `script_manager.lua`
+- Автор визуальной/UI-части: watahell / papagdetto
 
 ## Установка
 
@@ -48,12 +48,12 @@ Script Manager объединяет каталог скриптов в отде�
 
 ## Что нового
 
-**Обновление v2.0.1**
+# Обновление v2.0.1
 
-- Добавлены скрипты But3rflys и их последние версии из репозитория автора.
-- Добавлено распознавание установленных версий скриптов без встроенного маркера версии.
-- Фильтр героев теперь строится по явному полю `heroes`; общие скрипты остаются без привязки к герою.
-- Поддерживается загрузка RAR-пакетов для ручной установки.
+- Добавлены скрипты и актуальные релизы автора But3rflys, а также авторство в карточках каталога.
+- Для скриптов без встроенного маркера версии запоминается установленная версия, чтобы корректно показывать обновления.
+- Фильтр героев использует только явное поле `heroes`; общие скрипты больше не определяются по совпадениям в описаниях.
+- Добавлена загрузка RAR-пакетов для ручной установки.
 - Автор визуальной/UI-части: watahell / papagdetto.
 
 **Обновление v2.0.0**
@@ -71,9 +71,7 @@ Script Manager объединяет каталог скриптов в отде�
 
 ## What it does
 
-Script Manager brings the script catalog into a customizable panel. It shows descriptions, authors, and versions, supports search and hero/category filters, and installs or removes scripts.
-
-Visual/UI authors: watahell / papagdetto.
+Script Manager brings the script catalog into a customizable panel. It shows descriptions, authors, and versions, supports search and hero/category filters, and installs or removes scripts. Visual/UI design: watahell / papagdetto.
 
 - Loads the shared website catalog and groups scripts by category, hero, and installation status
 - Shows a selected script's description, features, author, source, and available version
@@ -81,9 +79,10 @@ Visual/UI authors: watahell / papagdetto.
 - Checks the catalog on startup, with manual refresh and configurable recheck intervals
 - Installs and updates individual scripts while keeping a backup of replaced files
 - Installs `!_qLocalizer.lua` when a selected script requires it and it is missing
-- Lists ZIP and RAR packages for download and manual installation
+- Lists ZIP packages for download and manual extraction
 - Lets users change the theme, accent color, and post-install restart behavior
 - Supports self-updates while keeping the `script_manager.lua` filename
+- Visual/UI authors: watahell / papagdetto
 
 ## Install
 
@@ -94,11 +93,11 @@ Visual/UI authors: watahell / papagdetto.
 
 ## Changelog
 
-**Update v2.0.1**
+# Update v2.0.1
 
-- Added But3rflys scripts and their latest releases from the author's repository.
-- Added installed-version tracking for scripts without an embedded version marker.
-- Hero filtering now uses the explicit `heroes` field; general scripts remain unassigned.
+- Added But3rflys scripts and their latest releases, with author attribution in catalog cards.
+- Records the installed version of scripts without an embedded marker so available updates are detected correctly.
+- Hero filtering now uses only the explicit `heroes` field; general scripts are no longer matched to heroes from their descriptions.
 - Added RAR package downloads for manual installation.
 - Visual/UI authors: watahell / papagdetto.
 
