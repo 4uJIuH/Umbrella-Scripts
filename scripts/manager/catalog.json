@@ -1230,7 +1230,7 @@
     {
       "id": "creep_control",
       "version": "1.0.0",
-      "url": "https://github.com/4uJIuH/umbrella-scripts/releases/download/creep-control-v1.0.0/creep_control.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/56c07695203c9915e6b82d07864149de5fcf3f7c/scripts/creep_control/creep_control.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/creep-control-v1.0.0/creep_control.lua",
       "manual": false,
       "needs_q_localizer": false,
