@@ -174,6 +174,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Script Manager](scripts/script_manager) | 5 | `script-manager-v2.0.1` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 0 | `custom-stats-v1.0.0` |
+| [Bloodrage AutoCast](scripts/bloodrage_autocast) | 0 | `bloodrage-autocast-v1.0.0` |
 | [Anti-Rubick](scripts/anti_rubick) | 0 | `anti-rubick-v1.0.0` |
 
 <picture>
