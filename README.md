@@ -347,6 +347,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Shadow Demon Poison 5](scripts/sd_poison_5) | 0 | `sd-poison-5-v1.0.0` |
 | [Techies Auto Miner](scripts/techies_auto_miner) | 0 | `techies-auto-miner-v1.1` |
 | [Broodmother Camp Blocker](scripts/brood_camp_blocker) | 0 | `brood-camp-blocker-v1.6` |
+| [Hoodwink Blast Off Catch](scripts/hoodwink_bushwhack_techies) | 0 | `hoodwink-bushwhack-techies-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
