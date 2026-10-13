@@ -3,9 +3,13 @@
 устанавливает, удаляет и обновляет скрипты из ScriptIvMarket / installs, removes, and updates scripts from ScriptIvMarket
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `market.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/market/market.lua)
+Скачать: [market.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/market-v1.0.0/market.lua) — `market-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=market&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`market-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/market-v1.0.0) | 2026-10-13 | [market.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/market-v1.0.0/market.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=market&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

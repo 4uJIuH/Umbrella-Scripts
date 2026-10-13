@@ -3,13 +3,9 @@
 командует клону Arc Warden спасать настоящего героя / orders Arc Warden's clone to save the real hero
 
 <!-- releases:start -->
-Скачать: [arc_warden_clone_safe_me.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-clone-safe-me-v1.0.0/arc_warden_clone_safe_me.lua) — `arc-warden-clone-safe-me-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `arc_warden_clone_safe_me.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_clone_safe_me/arc_warden_clone_safe_me.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`arc-warden-clone-safe-me-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/arc-warden-clone-safe-me-v1.0.0) | 2026-10-13 | [arc_warden_clone_safe_me.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-clone-safe-me-v1.0.0/arc_warden_clone_safe_me.lua) | 0 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-clone-safe-me&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-clone-safe-me&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
