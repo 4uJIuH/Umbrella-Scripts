@@ -3,9 +3,13 @@
 автоматизирует Fire Spirits и спасительную Supernova / automates Fire Spirits and emergency Supernova
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `smartnova.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/phoenix_smartnova/smartnova.lua)
+Скачать: [smartnova.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/phoenix-smartnova-v1.0.0/smartnova.lua) — `phoenix-smartnova-v1.0.0`, 2026-10-13
 
-[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=phoenix-smartnova&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`phoenix-smartnova-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/phoenix-smartnova-v1.0.0) | 2026-10-13 | [smartnova.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/phoenix-smartnova-v1.0.0/smartnova.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=phoenix-smartnova&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -21,6 +25,12 @@ Phoenix SmartNova заранее подготавливает Fire Spirits и а
 1. Нажмите «Установить» в Script Manager или поместите smartnova.lua в umbrella\scripts.
 2. Перезагрузите Lua-скрипты.
 3. Откройте Heroes → Hero List → Phoenix → Супернова → Авто-Яйцо и Духи.
+
+## Что нового
+
+# Обновление 1.0.0
+
+- Первый выпуск автоматизации Fire Spirits и Supernova для Phoenix.
 
 ---
 
@@ -39,3 +49,9 @@ Phoenix SmartNova prepares Fire Spirits in advance and automatically uses Supern
 1. Click Install in Script Manager or place smartnova.lua in umbrella\scripts.
 2. Reload Lua scripts.
 3. Open Heroes → Hero List → Phoenix → Супернова → Авто-Яйцо и Духи.
+
+## Changelog
+
+# Update 1.0.0
+
+- Initial release of Phoenix Fire Spirits and Supernova automation.
