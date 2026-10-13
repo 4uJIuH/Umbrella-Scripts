@@ -427,6 +427,15 @@
       ]
     },
     {
+      "id": "weather",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/weather/weather.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/weather-v1.0.0/weather.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "! M0RC1 (Discord: wh1teray)"
+    },
+    {
       "id": "behavior_score_helper",
       "version": "1.0.0",
       "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/737fa07af44cc5169305966becd888ddecc0cd1d/scripts/behavior_score_helper/BehaviorScoreHelper.lua",

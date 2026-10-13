@@ -1737,6 +1737,52 @@
       }
     },
     {
+      "id": "weather",
+      "tag": "weather",
+      "title": "Weather",
+      "kind": "lua",
+      "category": "auxiliary",
+      "file": "weather.lua",
+      "version_marker": "VERSION",
+      "needs_q_localizer": false,
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/weather/weather.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/weather-v1.0.0/weather.lua"
+      },
+      "ru": {
+        "tagline": "меняет визуальную погоду на карте",
+        "about": "Косметический скрипт для смены визуальной погоды карты в Dota 2. Автор: ! M0RC1 (Discord: wh1teray).",
+        "features": [
+          "Выбор стандартного вида, зимы, дождя, сакуры, болота, осени, пустыни, весны, ада или северного сияния",
+          "Меняет клиентскую переменную cl_weather"
+        ],
+        "install": [
+          "Нажмите «Установить» в Script Manager или поместите weather.lua в umbrella\\scripts.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте Changer → Main → Погода и выберите нужный вариант."
+        ]
+      },
+      "en": {
+        "tagline": "changes the visual map weather",
+        "about": "A cosmetic script for changing the visual map weather in Dota 2. Author: ! M0RC1 (Discord: wh1teray).",
+        "features": [
+          "Select default weather, winter, rain, sakura, swamp, autumn, desert, spring, hell, or northern lights",
+          "Changes the client-side cl_weather convar"
+        ],
+        "install": [
+          "Click Install in Script Manager or place weather.lua in umbrella\\scripts.",
+          "Reload Lua scripts.",
+          "Open Changer → Main → Погода and select a weather effect."
+        ]
+      },
+      "author": "! M0RC1 (Discord: wh1teray)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/weather",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=weather&expanded=true",
+      "manager_catalog": true
+    },
+    {
       "id": "behavior_score_helper",
       "tag": "behavior-score-helper",
       "title": "BehaviorScoreHelper",
