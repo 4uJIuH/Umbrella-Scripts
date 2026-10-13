@@ -436,6 +436,42 @@
       "author": "! M0RC1 (Discord: wh1teray)"
     },
     {
+      "id": "visage_familiar_tp",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/visage_familiar_tp/garguliatp.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/visage-familiar-tp-v1.0.0/garguliatp.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "! M0RC1 (Discord: wh1teray)",
+      "heroes": [
+        "visage"
+      ]
+    },
+    {
+      "id": "grimstroke_helper",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/grimstroke_helper/grimstroke_helper.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/grimstroke-helper-v1.0.0/grimstroke_helper.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "! M0RC1 (Discord: wh1teray)",
+      "heroes": [
+        "grimstroke"
+      ]
+    },
+    {
+      "id": "phoenix_smartnova",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/phoenix_smartnova/smartnova.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/phoenix-smartnova-v1.0.0/smartnova.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "! M0RC1 (Discord: wh1teray)",
+      "heroes": [
+        "phoenix"
+      ]
+    },
+    {
       "id": "behavior_score_helper",
       "version": "1.0.0",
       "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/737fa07af44cc5169305966becd888ddecc0cd1d/scripts/behavior_score_helper/BehaviorScoreHelper.lua",

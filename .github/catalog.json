@@ -1783,6 +1783,159 @@
       "manager_catalog": true
     },
     {
+      "id": "visage_familiar_tp",
+      "tag": "visage-familiar-tp",
+      "title": "Visage Familiar TP Helper",
+      "kind": "lua",
+      "category": "dota",
+      "file": "garguliatp.lua",
+      "version_marker": "VERSION",
+      "needs_q_localizer": false,
+      "heroes": [
+        "visage"
+      ],
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/visage_familiar_tp/garguliatp.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/visage-familiar-tp-v1.0.0/garguliatp.lua"
+      },
+      "ru": {
+        "tagline": "синхронно отводит гаргулий Визажа и запускает Recall",
+        "about": "Visage Familiar TP Helper помогает синхронно применить Recall к гаргульям при телепортации Визажа и заранее отвести их в безопасное место. Автор: ! M0RC1 (Discord: wh1teray).",
+        "features": [
+          "Отслеживает телепортацию Визажа и синхронно запускает Recall на гаргульях",
+          "Ищет безопасную позицию в лесу или за ближайшей союзной вышкой",
+          "Настраиваемый лимит отхода 0,5–3 секунды и отображение статуса с перезарядкой"
+        ],
+        "install": [
+          "Нажмите «Установить» в Script Manager или поместите garguliatp.lua в umbrella\\scripts.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте Heroes → Hero List → Visage → Familiar TP Helper."
+        ]
+      },
+      "en": {
+        "tagline": "synchronizes Familiar Recall and retreats Visage's familiars",
+        "about": "Visage Familiar TP Helper synchronizes Familiar Recall when Visage teleports and moves familiars to a safer location beforehand. Author: ! M0RC1 (Discord: wh1teray).",
+        "features": [
+          "Detects Visage teleporting and starts Recall on familiars together",
+          "Looks for a safe position among trees or behind a nearby allied tower",
+          "Configurable 0.5–3 second retreat limit and optional status/cooldown display"
+        ],
+        "install": [
+          "Click Install in Script Manager or place garguliatp.lua in umbrella\\scripts.",
+          "Reload Lua scripts.",
+          "Open Heroes → Hero List → Visage → Familiar TP Helper."
+        ]
+      },
+      "author": "! M0RC1 (Discord: wh1teray)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/visage_familiar_tp",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=visage-familiar-tp&expanded=true",
+      "manager_catalog": true
+    },
+    {
+      "id": "grimstroke_helper",
+      "tag": "grimstroke-helper",
+      "title": "Grimstroke Helper",
+      "kind": "lua",
+      "category": "dota",
+      "file": "grimstroke_helper.lua",
+      "version_marker": "VERSION",
+      "needs_q_localizer": false,
+      "heroes": [
+        "grimstroke"
+      ],
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/grimstroke_helper/grimstroke_helper.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/grimstroke-helper-v1.0.0/grimstroke_helper.lua"
+      },
+      "ru": {
+        "tagline": "подбирает цели для Ink Swell и управляет Dark Portrait",
+        "about": "Grimstroke Helper помогает автоматически выбирать союзника для Ink Swell и управлять иллюзией Dark Portrait. Автор: ! M0RC1 (Discord: wh1teray).",
+        "features": [
+          "Выбирает союзника для Ink Swell по близости к врагу, с настройкой разрешённых целей и каста на себя",
+          "Управляет Dark Portrait и приоритизирует видимых вражеских героев с низким здоровьем",
+          "Настраивает поведение иллюзии, когда врагов не видно; панель целей можно перемещать"
+        ],
+        "install": [
+          "Нажмите «Установить» в Script Manager или поместите grimstroke_helper.lua в umbrella\\scripts.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте Heroes → Hero List → Grimstroke → Helper."
+        ]
+      },
+      "en": {
+        "tagline": "selects Ink Swell targets and controls Dark Portrait",
+        "about": "Grimstroke Helper automatically selects an ally for Ink Swell and controls the Dark Portrait illusion. Author: ! M0RC1 (Discord: wh1teray).",
+        "features": [
+          "Selects an Ink Swell ally by proximity to enemies, with configurable allowed targets and self-cast",
+          "Controls Dark Portrait and prioritizes visible enemy heroes with low health",
+          "Configures illusion behavior when enemies are not visible; the target panel is draggable"
+        ],
+        "install": [
+          "Click Install in Script Manager or place grimstroke_helper.lua in umbrella\\scripts.",
+          "Reload Lua scripts.",
+          "Open Heroes → Hero List → Grimstroke → Helper."
+        ]
+      },
+      "author": "! M0RC1 (Discord: wh1teray)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/grimstroke_helper",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=grimstroke-helper&expanded=true",
+      "manager_catalog": true
+    },
+    {
+      "id": "phoenix_smartnova",
+      "tag": "phoenix-smartnova",
+      "title": "Phoenix SmartNova",
+      "kind": "lua",
+      "category": "dota",
+      "file": "smartnova.lua",
+      "version_marker": "VERSION",
+      "needs_q_localizer": false,
+      "heroes": [
+        "phoenix"
+      ],
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-13",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/phoenix_smartnova/smartnova.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/phoenix-smartnova-v1.0.0/smartnova.lua"
+      },
+      "ru": {
+        "tagline": "автоматизирует Fire Spirits и спасительную Supernova",
+        "about": "Phoenix SmartNova заранее подготавливает Fire Spirits и автоматически применяет Supernova, когда Фениксу угрожает критический урон. Автор: ! M0RC1 (Discord: wh1teray).",
+        "features": [
+          "Оценивает угрозу и распределяет Fire Spirits между ближайшими врагами",
+          "Автоматически применяет Supernova при достижении настраиваемого порога здоровья",
+          "Поддерживает экстренный каст при высоком входящем уроне и необязательную отладочную информацию"
+        ],
+        "install": [
+          "Нажмите «Установить» в Script Manager или поместите smartnova.lua в umbrella\\scripts.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте Heroes → Hero List → Phoenix → Супернова → Авто-Яйцо и Духи."
+        ]
+      },
+      "en": {
+        "tagline": "automates Fire Spirits and emergency Supernova",
+        "about": "Phoenix SmartNova prepares Fire Spirits in advance and automatically uses Supernova when Phoenix is in danger of critical damage. Author: ! M0RC1 (Discord: wh1teray).",
+        "features": [
+          "Estimates threats and distributes Fire Spirits among nearby enemies",
+          "Automatically uses Supernova at a configurable health threshold",
+          "Supports emergency casts under heavy incoming damage and optional debug information"
+        ],
+        "install": [
+          "Click Install in Script Manager or place smartnova.lua in umbrella\\scripts.",
+          "Reload Lua scripts.",
+          "Open Heroes → Hero List → Phoenix → Супернова → Авто-Яйцо и Духи."
+        ]
+      },
+      "author": "! M0RC1 (Discord: wh1teray)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/phoenix_smartnova",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=phoenix-smartnova&expanded=true",
+      "manager_catalog": true
+    },
+    {
       "id": "behavior_score_helper",
       "tag": "behavior-score-helper",
       "title": "BehaviorScoreHelper",
