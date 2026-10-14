@@ -140,6 +140,7 @@
 - [Script Market](scripts/market) — устанавливает, удаляет и обновляет скрипты из ScriptIvMarket
 - [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) — панель ранга, прогресса MMR и статистики сессии
 - [Glyph Timer](scripts/glyph_timer) — показывает таймер глифа над башнями и крипами
+- [Rampage Timer](scripts/rampage_timer_h) — таймер серии убийств с панелью в стиле Liquid Glass
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -327,6 +328,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Script Market](scripts/market) — installs, removes, and updates scripts from ScriptIvMarket
 - [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) — rank, MMR progress, and session-statistics panel
 - [Glyph Timer](scripts/glyph_timer) — shows glyph timers above towers and creeps
+- [Rampage Timer](scripts/rampage_timer_h) — a kill-streak timer with a Liquid Glass-style panel
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -460,11 +462,11 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Enemy Cooldowns](scripts/enemy_cooldowns) | 0 | `enemy-cooldowns-v1.0.0` |
 | [Can Teleport Out](scripts/can_teleport_out) | 0 | `can-teleport-out-v1.0.0` |
 | [Camp Stacker](scripts/stacker) | 0 | `camp-stacker-v1.0.0` |
-| [Auto-Ruin](scripts/auto_ruin) | 0 | `auto-ruin-v1.0.0` |
 | [Broodmother Helper](scripts/broodmother_helper) | 0 | `broodmother-helper-v2.1` |
 | [Script Market](scripts/market) | 0 | `market-v1.0.0` |
 | [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) | 1 | `mmr-tracker-ultimate-v1.0.0` |
 | [Glyph Timer](scripts/glyph_timer) | 0 | `glyph-timer-v1.0.0` |
+| [Rampage Timer](scripts/rampage_timer_h) | 0 | `rampage-timer-h-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
