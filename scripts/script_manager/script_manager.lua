@@ -1648,8 +1648,15 @@ function market.ensure_nlz(done)
 end
 
 function market.download(s, done)
-	local urls = { s.url }
-	if #s.files == 0 and s.release and s.release ~= s.url then urls[2] = s.release end
+	local urls = {}
+	local release_is_asset = type(s.release) == "string"
+		and s.release:match("^https://github%.com/[^/]+/[^/]+/releases/download/") ~= nil
+	if release_is_asset and s.release ~= s.url then urls[#urls + 1] = s.release end
+	if type(s.url) == "string" and s.url ~= "" then urls[#urls + 1] = s.url end
+	if #s.files == 0 and type(s.release) == "string" and s.release ~= ""
+		and s.release ~= s.url and not release_is_asset then
+		urls[#urls + 1] = s.release
+	end
 
 	local function try(i, prev_key, prev_detail)
 		if not urls[i] then return done(nil, prev_key or "sm_e_net", prev_detail) end

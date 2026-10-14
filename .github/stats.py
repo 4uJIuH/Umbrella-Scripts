@@ -4,6 +4,7 @@ import os
 import re
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -46,8 +47,22 @@ def match(name, tag):
     return None
 
 
+def github_repo(url):
+    parsed = urllib.parse.urlparse(url or "")
+    parts = [part for part in parsed.path.split("/") if part]
+    if parsed.netloc.lower() != "github.com" or len(parts) < 2:
+        return None
+    return parts[0] + "/" + parts[1].removesuffix(".git")
+
+
 def fetch():
     rows = []
+    external = {}
+    for script in CATALOG["scripts"]:
+        repo = github_repo(script.get("source_url"))
+        if repo and repo.lower() != REPO.lower():
+            external.setdefault(repo, []).append(script)
+
     for repo in [REPO]:
         for rel in api("https://api.github.com/repos/%s/releases?per_page=100" % repo):
             if rel.get("draft"):
@@ -60,6 +75,25 @@ def fetch():
                     "script": match(a["name"], rel["tag_name"]),
                     "date": (rel.get("published_at") or "")[:10],
                     "downloads": a["download_count"],
+                })
+    for repo, scripts in sorted(external.items()):
+        by_file = {}
+        for script in scripts:
+            by_file.setdefault(script.get("file", "").lower(), []).append(script)
+        for rel in api("https://api.github.com/repos/%s/releases?per_page=100" % repo):
+            if rel.get("draft"):
+                continue
+            for asset in rel.get("assets", []):
+                matches = by_file.get(asset.get("name", "").lower(), [])
+                if not matches:
+                    continue
+                rows.append({
+                    "repo": repo,
+                    "tag": rel["tag_name"],
+                    "file": asset["name"],
+                    "script": matches[0]["id"] if len(matches) == 1 else None,
+                    "date": (rel.get("published_at") or "")[:10],
+                    "downloads": asset["download_count"],
                 })
     return rows
 
