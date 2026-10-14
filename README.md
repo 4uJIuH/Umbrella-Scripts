@@ -378,8 +378,16 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | script | downloads | latest |
 | --- | --- | --- |
 | [Tinker Auto Farm](scripts/tinker_auto_farm) | 1 | `tinker-auto-farm-v1.0.4` |
-| [Script Manager](scripts/script_manager) | 46 | `script-manager-v2.2.0` |
+| [Script Manager](scripts/script_manager) | 46 | `script-manager-v2.2.1` |
+| [Dynamic Island](scripts/dynamic_island_dota) | 590 | `v2.5.3` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
+| [Lane Pull](scripts/lane_pull) | 236 | `lane-pull-v1.0.4` |
+| [DS Spot Block](scripts/ds_spot_block) | 47 | `ds-spot-block-v1.0.1` |
+| [Custom Background](scripts/custom_background) | 36 | `custom-background-v1.0.0` |
+| [Auto Stack](scripts/auto_stack) | 129 | `auto-stack-v1.1.0` |
+| [Draft Helper](scripts/draft_helper) | 1240 | `draft-helper-v2.0.0-beta.20` |
+| [MusicUI](scripts/musicui) | 679 | `musicui-v1.0.8` |
+| [Umbrella Lua Developer Skill](scripts/umbrella_lua) | 188 | `umbrella-lua-v1.0.4` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
 | [Naga PT Abuse](scripts/naga_pt_abuse) | 1 | `naga-pt-abuse-v1.0.0` |
@@ -398,11 +406,13 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [MoM Swapper](scripts/mom_swapper) | 0 | `mom-swapper-v1.0.0` |
 | [Botle Abuse](scripts/botle) | 0 | `botle-abuse-v1.0.0` |
 | [Io Overcharge](scripts/io_overcharge) | 0 | `io-overcharge-v1.0.0` |
-| [Back Cast](scripts/backwards_cast) | 0 | `backwards-cast-v1.0.0` |
 | [Forge Spirit Farm (Beta)](scripts/forge_spirit_farm_beta) | 0 | `forge-spirit-farm-beta-v0.1.0-beta.1` |
 | [Selection Camera](scripts/selection_camera) | 0 | `selection-camera-v1.1.0` |
 | [Spirit Breaker Combo & Ghoul 1000-7](scripts/spirit_breaker_bara) | 0 | `spirit-breaker-bara-v1.0.0` |
 | [1000-7 Counter](scripts/ghoul_counter) | 0 | `ghoul-counter-v1.0.0` |
+| [Invoker Jarvis](scripts/invoker_jarvis) | 26 | `v1.3.1` |
+| [TikTok](scripts/umbrella_tiktok) | 252 | `v1.3.2` |
+| [Invoker AutoStack](scripts/invoker_autostack) | 57 | `v1.4.2` |
 | [Old Last Match](scripts/old_last_match) | 0 | `old-last-match-v1.0.0` |
 | [Unusual Secret](scripts/unusual_secret) | 0 | `unusual-secret-v2.1.0` |
 | [Windranger Powershot Killsteal](scripts/windranger_powershot) | 0 | `windranger-powershot-v1.0.0` |
@@ -440,6 +450,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Lone Druid Auto Farm](scripts/ld_farm) | 0 | `ld-farm-v1.7` |
 | [Unusual Effects](scripts/unusual_cosmetics) | 0 | `unusual-cosmetics-v1.0.0` |
 | [Techies Tazer Dispel](scripts/techies_tazer_dispel) | 0 | `techies-tazer-dispel-v1.0.0` |
+| [SteamSync](scripts/steam_sync) | 197 | `v1.0.1` |
 | [Techies Brain Combo](scripts/techies_brain) | 0 | `techies-brain-v0.2.6` |
 | [Creep Control](scripts/creep_control) | 1 | `creep-control-v1.0.1` |
 | [KOTL Illuminate Pro](scripts/kotl_illuminate_pro) | 0 | `kotl-illuminate-pro-v1.0.0` |
@@ -457,6 +468,8 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Eul / Wind Waker Blink Helper](scripts/eul_wind_waker_blink_helper) | 0 | `eul-wind-waker-blink-helper-v1.0.0` |
 | [Dark Carnival Path Tokens](scripts/dark_carnival_path_tokens) | 0 | `dark-carnival-path-tokens-v1.0.0` |
 | [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) | 1 | `lone-druid-bear-ai-deluxe-v1.0.0` |
+| [Lina Hero Brain](scripts/lina_hero_brain) | 48 | `v0.5.173` |
+| [Sniper Hero Brain](scripts/sniper_hero_brain) | 179 | `v6.15.277` |
 | [Ward Triangulator](scripts/ward_triangulator) | 0 | `ward-triangulator-v1.0.0` |
 | [Muerta Dead Shot](scripts/muerta_dead_shot) | 0 | `muerta-dead-shot-v1.0.0` |
 | [Enemy Cooldowns](scripts/enemy_cooldowns) | 0 | `enemy-cooldowns-v1.0.0` |
