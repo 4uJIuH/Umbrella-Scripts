@@ -1,3 +1,7 @@
+# Update v2.2.1
+
+- Downloads and updates now use GitHub Release assets when available; scripts without release assets keep using their existing URL.
+
 # Update v2.2.0
 
 - Added a pink theme.

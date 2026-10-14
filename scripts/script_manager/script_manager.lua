@@ -581,7 +581,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.2.0"
+local VERSION = "2.2.1"
 
 local K = {
 	CFG = "script_market",
