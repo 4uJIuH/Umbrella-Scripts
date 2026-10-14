@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`invoker-ss-v138`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/invoker-ss-v138) | 2026-10-13 | [invoker_ss.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-ss-v138/invoker_ss.lua) | 0 |
+| [`invoker-ss-v138`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/invoker-ss-v138) | 2026-10-13 | [invoker_ss.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-ss-v138/invoker_ss.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=invoker-ss&expanded=true)
 <!-- releases:end -->

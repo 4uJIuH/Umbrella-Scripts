@@ -3,13 +3,9 @@
 возвращает важные предметы из рюкзака после гибели с Эгидой / moves a priority item from the backpack after dying with Aegis
 
 <!-- releases:start -->
-Скачать: [auto_aegis_mover.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-aegis-mover-v1.0.0/auto_aegis_mover.lua) — `auto-aegis-mover-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `auto_aegis_mover.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/auto_aegis_mover/auto_aegis_mover.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`auto-aegis-mover-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/auto-aegis-mover-v1.0.0) | 2026-10-13 | [auto_aegis_mover.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-aegis-mover-v1.0.0/auto_aegis_mover.lua) | 2 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-aegis-mover&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-aegis-mover&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -26,14 +22,6 @@ Auto Aegis Mover отслеживает Эгиду и после гибели г
 1. Поместите `auto_aegis_mover.lua` в `umbrella\scripts`.
 2. Перезагрузите Lua-скрипты.
 3. Настройки находятся в `Scripts → General → Utility → Inventory → Auto Aegis Mover`.
-
-## Что нового
-
-# 1.0.0
-
-- Первый релиз Auto Aegis Mover.
-- Добавлен перенос приоритетного предмета из рюкзака в слот Эгиды после гибели.
-- Добавлена настройка приоритетов предметов и заполнения свободных ячеек.
 
 ---
 
@@ -53,11 +41,3 @@ Auto Aegis Mover tracks Aegis and, after the hero dies, moves a selected backpac
 1. Place `auto_aegis_mover.lua` in `umbrella\scripts`.
 2. Reload the Lua scripts.
 3. Settings are under `Scripts → General → Utility → Inventory → Auto Aegis Mover`.
-
-## Changelog
-
-# 1.0.0
-
-- Initial release of Auto Aegis Mover.
-- Move a priority backpack item into the Aegis slot after death.
-- Configure item priorities and optional empty-slot refill.

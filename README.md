@@ -374,12 +374,11 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | script | downloads | latest |
 | --- | --- | --- |
 | [Tinker Auto Farm](scripts/tinker_auto_farm) | 1 | `tinker-auto-farm-v1.0.4` |
-| [Script Manager](scripts/script_manager) | 39 | `script-manager-v2.2.0` |
+| [Script Manager](scripts/script_manager) | 45 | `script-manager-v2.2.0` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
 | [Naga PT Abuse](scripts/naga_pt_abuse) | 1 | `naga-pt-abuse-v1.0.0` |
-| [Auto Aegis Mover](scripts/auto_aegis_mover) | 2 | `auto-aegis-mover-v1.0.0` |
 | [Invoker Combo Switcher](scripts/invoker_combo_switcher) | 1 | `invoker-combo-switcher-v1.0.0` |
 | [Magnus Skewer Ally](scripts/magnus_skewer_ally) | 1 | `magnus-skewer-ally-v1.0.0` |
 | [Better Better Techies Combo](scripts/better_better_techies_combo) | 2 | `better-better-techies-combo-v1.0.0` |
@@ -406,11 +405,11 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [MoM Sabre Abuse](scripts/mom_sabre_abuse) | 0 | `mom-sabre-abuse-v2.0.0` |
 | [Tinker 1x6 Farm](scripts/tinker_1x6_farm) | 0 | `tinker-1x6-farm-v1.0.0` |
 | [Forge Spirit Helper](scripts/forge_spirit_helper) | 0 | `forge-spirit-helper-v1.0.0` |
-| [Gank Threat](scripts/gank_threat) | 3 | `gank-threat-v1.0.0` |
+| [Gank Threat](scripts/gank_threat) | 9 | `gank-threat-v1.0.0` |
 | [Tinker Helper](scripts/tinker_helper) | 0 | `tinker-helper-v1.0.0` |
 | [Old HUD](scripts/old_hud) | 0 | `old-hud-v1.0.0` |
 | [Illusion Tracker](scripts/illusion_tracker) | 0 | `illusion-tracker-v1.0.0` |
-| [Map Chat Troll](scripts/maptroll) | 0 | `maptroll-v1.0.0` |
+| [Map Chat Troll](scripts/maptroll) | 1 | `maptroll-v1.0.0` |
 | [Creep Aggro](scripts/creep_aggro) | 0 | `creep-aggro-v1.0.0` |
 | [Nyx Assassin Auto Burrow](scripts/nyx_auto_burrow) | 0 | `nyx-auto-burrow-v1.0.0` |
 | [Dawnbreaker Solar Guardian Auto-Save Helper](scripts/dawnbreaker_solar_guardian) | 1 | `dawnbreaker-solar-guardian-v1.0.0` |
@@ -422,23 +421,23 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Techies Auto Miner](scripts/techies_auto_miner) | 0 | `techies-auto-miner-v1.1` |
 | [Broodmother Camp Blocker](scripts/brood_camp_blocker) | 0 | `brood-camp-blocker-v1.6` |
 | [Hoodwink Blast Off Catch](scripts/hoodwink_bushwhack_techies) | 0 | `hoodwink-bushwhack-techies-v1.0.0` |
-| [Ringmaster Eul Combo](scripts/ringmaster_eul_combo) | 2 | `ringmaster-eul-combo-v1.0.0` |
+| [Ringmaster Eul Combo](scripts/ringmaster_eul_combo) | 3 | `ringmaster-eul-combo-v1.0.0` |
 | [Spirit Breaker Charge Combo](scripts/spirit_breaker_charge) | 3 | `spirit-breaker-charge-v1.0.0` |
-| [Ward Predictor](scripts/ward_predictor) | 1 | `ward-predictor-v1.0.0` |
-| [Invoker SS](scripts/invoker_ss) | 0 | `invoker-ss-v138` |
-| [Sentry](scripts/sentry) | 2 | `sentry-v1.0.0` |
-| [Changer](scripts/changer) | 1 | `changer-v1.0.0` |
-| [Self Play](scripts/self_play_bot) | 3 | `self-play-v1.0.0` |
-| [Farm Pattern 2.5](scripts/farm_pattern) | 1 | `farm-pattern-v2.5` |
-| [Win Condition Engine](scripts/win_condition_engine) | 8 | `win-condition-engine-v1.0.0` |
-| [Invoker (beta)](scripts/invoker_beta) | 4 | `invoker-beta-v1.0.0` |
+| [Ward Predictor](scripts/ward_predictor) | 3 | `ward-predictor-v1.0.0` |
+| [Invoker SS](scripts/invoker_ss) | 1 | `invoker-ss-v138` |
+| [Sentry](scripts/sentry) | 3 | `sentry-v1.0.0` |
+| [Changer](scripts/changer) | 4 | `changer-v1.0.0` |
+| [Self Play](scripts/self_play_bot) | 4 | `self-play-v1.0.0` |
+| [Farm Pattern 2.5](scripts/farm_pattern) | 2 | `farm-pattern-v2.5` |
+| [Win Condition Engine](scripts/win_condition_engine) | 10 | `win-condition-engine-v1.0.0` |
+| [Invoker (beta)](scripts/invoker_beta) | 5 | `invoker-beta-v1.0.0` |
 | [Kez Combo](scripts/kez_combo) | 5 | `kez-combo-v1.0.0` |
-| [Techies Combo](scripts/techies_combo) | 2 | `techies-combo-v1.0.0` |
+| [Techies Combo](scripts/techies_combo) | 3 | `techies-combo-v1.0.0` |
 | [Lone Druid Auto Farm](scripts/ld_farm) | 0 | `ld-farm-v1.7` |
 | [Unusual Effects](scripts/unusual_cosmetics) | 0 | `unusual-cosmetics-v1.0.0` |
 | [Techies Tazer Dispel](scripts/techies_tazer_dispel) | 0 | `techies-tazer-dispel-v1.0.0` |
 | [Techies Brain Combo](scripts/techies_brain) | 0 | `techies-brain-v0.2.6` |
-| [Creep Control](scripts/creep_control) | 1 | `creep-control-v1.0.0` |
+| [Creep Control](scripts/creep_control) | 1 | `creep-control-v1.0.1` |
 | [KOTL Illuminate Pro](scripts/kotl_illuminate_pro) | 0 | `kotl-illuminate-pro-v1.0.0` |
 | [Lycan Auto Control](scripts/lycan_auto_control) | 1 | `lycan-auto-control-v1.0.0` |
 | [Mute Voice Lines](scripts/mute_voice_lines) | 0 | `mute-voice-lines-v1.0.0` |
@@ -447,7 +446,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Team Maphack](scripts/team_maphack) | 0 | `team-maphack-v1.0.0` |
 | [Last Seen Trajectory](scripts/lastseen_trajectory) | 0 | `lastseen-trajectory-v1.0.0` |
 | [KOTL Auto Chakra](scripts/kotl_auto_chakra) | 0 | `kotl-auto-chakra-v1.0.0` |
-| [SF Feast of Souls Abuse](scripts/sf_feast_of_souls_abuse) | 0 | `sf-feast-of-souls-v4.0` |
+| [SF Feast of Souls Abuse](scripts/sf_feast_of_souls_abuse) | 1 | `sf-feast-of-souls-v4.0` |
 | [Block Creep Attack During Feast](scripts/sf_block_creep_attack) | 0 | `sf-block-creep-attack-v1.2` |
 | [Anti-Cyclone BKB](scripts/sf_anti_cyclone_bkb) | 0 | `sf-anti-cyclone-bkb-v2.0` |
 | [Control Ally](scripts/control_ally) | 0 | `control-ally-v1.0.0` |

@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`maptroll-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/maptroll-v1.0.0) | 2026-10-13 | [maptroll.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/maptroll-v1.0.0/maptroll.lua) | 0 |
+| [`maptroll-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/maptroll-v1.0.0) | 2026-10-13 | [maptroll.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/maptroll-v1.0.0/maptroll.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=maptroll&expanded=true)
 <!-- releases:end -->

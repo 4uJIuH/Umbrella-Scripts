@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`sentry-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/sentry-v1.0.0) | 2026-10-13 | [sentry.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/sentry-v1.0.0/sentry.lua) | 2 |
+| [`sentry-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/sentry-v1.0.0) | 2026-10-13 | [sentry.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/sentry-v1.0.0/sentry.lua) | 3 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=sentry&expanded=true)
 <!-- releases:end -->
