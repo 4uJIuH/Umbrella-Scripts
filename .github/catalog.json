@@ -6453,6 +6453,56 @@
           "Open `General → Main → Glyph Timer`."
         ]
       }
+    },
+    {
+      "id": "rampage_timer_h",
+      "tag": "rampage-timer-h",
+      "title": "Rampage Timer",
+      "kind": "lua",
+      "category": "auxiliary",
+      "file": "rampage_timer_h.lua",
+      "author": "убил себя в октябре (Discord: akurisee)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/rampage_timer_h",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=rampage-timer-h&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/rampage_timer_h/rampage_timer_h.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/rampage-timer-h-v1.0.0/rampage_timer_h.lua"
+      },
+      "ru": {
+        "tagline": "таймер серии убийств с панелью в стиле Liquid Glass",
+        "about": "Показывает текущую серию убийств и время до её сброса. Панель оформлена в стиле Liquid Glass и может перемещаться по экрану.",
+        "features": [
+          "Отображает названия уровней серии: Kill, Double Kill, Triple Kill, Ultra Kill и Rampage",
+          "Показывает оставшееся время 18-секундного окна серии",
+          "Настраиваемые минимальная серия для показа и масштаб панели",
+          "Перемещаемая панель с сохранением позиции и настройкой блокировки",
+          "Можно показывать панель в ожидании новой серии"
+        ],
+        "install": [
+          "Поместите `rampage_timer_h.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Scripts → Other → Rampage Timer`."
+        ]
+      },
+      "en": {
+        "tagline": "a kill-streak timer with a Liquid Glass-style panel",
+        "about": "Shows the current kill streak and the time remaining before it resets. The Liquid Glass-style panel can be moved around the screen.",
+        "features": [
+          "Displays streak labels: Kill, Double Kill, Triple Kill, Ultra Kill, and Rampage",
+          "Shows the remaining time in the 18-second streak window",
+          "Configurable minimum streak to display and panel scale",
+          "Draggable panel with saved position and a lock option",
+          "Can keep the panel visible while waiting for a new streak"
+        ],
+        "install": [
+          "Place `rampage_timer_h.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `Scripts → Other → Rampage Timer`."
+        ]
+      }
     }
   ]
 }

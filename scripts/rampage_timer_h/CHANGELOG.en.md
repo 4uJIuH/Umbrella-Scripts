@@ -1,0 +1,3 @@
+- Added a kill-streak timer with an 18-second reset window.
+- Added a Liquid Glass-style panel with scaling and drag support.
+- Added a minimum streak display setting and an idle display option.
