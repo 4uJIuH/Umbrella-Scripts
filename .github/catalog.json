@@ -2980,10 +2980,10 @@
       "source_url": "https://github.com/gdhost4-eng/umbrella-tiktok",
       "releases_url": "https://github.com/gdhost4-eng/umbrella-tiktok/releases",
       "initial": {
-        "version": "1.3.1",
-        "date": "2026-10-08",
-        "url": "https://github.com/gdhost4-eng/umbrella-tiktok/releases/download/v1.3.1/tiktok.lua",
-        "release": "https://github.com/gdhost4-eng/umbrella-tiktok/releases/download/v1.3.1/tiktok.lua"
+        "version": "1.3.2",
+        "date": "2026-10-14",
+        "url": "https://github.com/gdhost4-eng/umbrella-tiktok/releases/download/v1.3.2/tiktok.lua",
+        "release": "https://github.com/gdhost4-eng/umbrella-tiktok/releases/download/v1.3.2/tiktok.lua"
       },
       "ru": {
         "tagline": "встроенный просмотрщик TikTok",

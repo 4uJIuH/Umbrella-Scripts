@@ -3,7 +3,7 @@
 встроенный просмотрщик TikTok / an embedded TikTok viewer
 
 <!-- releases:start -->
-Последняя версия: [`v1.3.1` — `tiktok.lua`](https://github.com/gdhost4-eng/umbrella-tiktok/releases/download/v1.3.1/tiktok.lua)
+Последняя версия: [`v1.3.2` — `tiktok.lua`](https://github.com/gdhost4-eng/umbrella-tiktok/releases/download/v1.3.2/tiktok.lua)
 
 [Релизы автора на GitHub](https://github.com/gdhost4-eng/umbrella-tiktok/releases)
 <!-- releases:end -->
