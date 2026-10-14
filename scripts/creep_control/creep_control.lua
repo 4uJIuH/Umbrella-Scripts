@@ -20,12 +20,12 @@ local attack_target = {}
 local waiting = {}
 local tower_aggro = {}
 local push_target = {}
+local push_bans = {}
+local cast_cache = {}
 local fort_pos = nil
-local shop_pos = {}
 local debug_units = {}
 local debug_second = 0.0
-local debug_font = nil
-local ORDER_ID = "creep_control"
+local debug_font = Render.LoadFont("Verdana", Enum.FontCreate.FONTFLAG_ANTIALIAS, 500)
 
 local ui = {}
 
@@ -50,21 +50,16 @@ ui.abilities:ToolTip("Юнит применяет свои скиллы по н�
 ui.pushers = group:Switch("Lane role for push summons", true, "\u{f140}")
 ui.pushers:ToolTip("Форжи, эйдолоны, волки Люкана и пеньки Фуриона бьют лайновых крипов и пушат вышки вместо леса")
 
-ui.manual_hold = group:Slider("Player order override", 5, 60, 25, function(value)
-	return tostring(value) .. "s"
-end)
-ui.manual_hold:ToolTip("После твоего приказа скрипт не трогает этого юнита. Пока он у тебя выделен — тоже не трогает. Таймер — пауза после снятия выделения")
-
 ui.kite_tower = group:Switch("Dive towers only with allied creeps", true, "\u{f4d8}")
 ui.kite_tower:ToolTip("Без своей волны юнит ждёт на границе радиуса вышки, а не лезет под неё")
 
 ui.avoid = group:Switch("Avoid enemy heroes", true, "\u{f70c}")
-ui.avoid:ToolTip("Вражеский герой рядом — камп банится на минуту, юнит уходит на другой")
+ui.avoid:ToolTip("Вражеский герой рядом — камп или линия банится на минуту, юнит отходит от героя")
 
 ui.avoid_radius = group:Slider("Avoid radius", 400, 2000, 700, "%d")
 
 ui.retreat = group:Switch("Retreat to fountain on low HP", true, "\u{f004}")
-ui.retreat:ToolTip("Юнит уходит на свой фонтан и стоит там, пока HP не станет полным")
+ui.retreat:ToolTip("Юнит уходит на свой фонтан, пока не подлечится. Иллюзии не отступают")
 
 ui.retreat_hp = group:Slider("Retreat below HP", 5, 60, 25, "%d%%")
 
@@ -90,24 +85,34 @@ ui.filter_spirit_bear = filters:Switch(
 	"panorama/images/spellicons/lone_druid_spirit_bear_png.vtex_c"
 )
 
+-- Keyed by entity index; tables are cleared in place so these references stay valid.
+local PER_UNIT = {
+	last_orders, manual_hold, last_attack, assigned, escape_until, next_cast,
+	retreating, attack_target, waiting, tower_aggro, push_target, cast_cache,
+}
+
+local function clear(t)
+	for k in pairs(t) do t[k] = nil end
+end
+
 local function reset_state()
-	last_orders = {}
-	manual_hold = {}
-	last_attack = {}
-	assigned = {}
-	camp_bans = {}
-	camp_empty = {}
-	ancient_camp = {}
-	escape_until = {}
-	next_cast = {}
-	retreating = {}
-	attack_target = {}
-	waiting = {}
-	tower_aggro = {}
-	push_target = {}
+	for i = 1, #PER_UNIT do clear(PER_UNIT[i]) end
+	clear(camp_bans)
+	clear(push_bans)
+	clear(camp_empty)
+	clear(ancient_camp)
 	debug_units = {}
-	shop_pos = {}
 	next_run = 0.0
+end
+
+-- Entity indices are reused, so state of gone units must not leak to new ones.
+local function purge_gone(alive)
+	for i = 1, #PER_UNIT do
+		local t = PER_UNIT[i]
+		for idx in pairs(t) do
+			if not alive[idx] then t[idx] = nil end
+		end
+	end
 end
 
 local function refresh_disabled()
@@ -116,7 +121,6 @@ local function refresh_disabled()
 	ui.ancients:Disabled(not on)
 	ui.abilities:Disabled(not on)
 	ui.pushers:Disabled(not on)
-	ui.manual_hold:Disabled(not on)
 	ui.kite_tower:Disabled(not on or not ui.pushers:Get())
 	ui.avoid:Disabled(not on)
 	ui.avoid_radius:Disabled(not on or not ui.avoid:Get())
@@ -128,8 +132,6 @@ local function refresh_disabled()
 	ui.filter_summons:Disabled(not on)
 	ui.filter_spirit_bear:Disabled(not on)
 end
-
-ui.toggle_bind:Properties("Creep Control", nil, true)
 
 ui.enable:SetCallback(function()
 	refresh_disabled()
@@ -145,14 +147,21 @@ ui.avoid:SetCallback(function() refresh_disabled() end)
 ui.retreat:SetCallback(function() refresh_disabled() end)
 ui.pushers:SetCallback(function() refresh_disabled() end)
 
+ui.toggle_bind:SetKeyCallback(function(_, _, event)
+	if event ~= Enum.EKeyEvent.EKeyEvent_KEY_DOWN then return end
+	ui.enable:Set(not ui.enable:Get())
+end)
+
 local UPDATE_INTERVAL   = 0.15
 local REISSUE_INTERVAL  = 1.20
 local REISSUE_JITTER    = 0.60
 local POS_EPS           = 120.0
+local MANUAL_HOLD       = 5.0
 local CAMP_RADIUS       = 420.0
 local CAMP_RADIUS_MAX   = 620.0
 local CAMP_BOX_MARGIN   = 200.0
 local CAMP_MIN_EXTENT   = 250.0
+local CURATED_MATCH_RADIUS = 600.0
 local CAMP_ARRIVE       = 550.0
 local CAMP_ENGAGE       = 900.0
 local FIGHT_RADIUS      = 600.0
@@ -162,7 +171,8 @@ local PASSBY_RADIUS     = 1100.0
 local PASSBY_MARGIN     = 200.0
 local CAST_INTERVAL     = 0.35
 local CAST_RANGE_FALLBACK = 400.0
-local ABILITY_MAX_SLOT  = 25
+local ABILITY_MAX_SLOT  = 24
+local CAST_CACHE_TTL    = 2.0
 local ESCAPE_GRACE      = 8.0
 local ATTACK_IDLE_GRACE = 1.5
 local THREAT_NEAR       = 1600.0
@@ -181,15 +191,22 @@ local KITE_MARGIN       = 60.0
 local TOWER_WATCH_EXTRA = 250.0
 local DEAGGRO_TIME      = 1.0
 local DEAGGRO_EXTRA     = 80.0
+local FLEE_DISTANCE     = 800.0
+local FLEE_ANGLES       = { 0.0, math.pi / 4, -math.pi / 4, math.pi / 2, -math.pi / 2 }
+local LIFETIME_MARGIN   = 5.0
+
+-- Dota modifiers that carry the expiry time of illusions and timed summons.
+local LIFETIME_MODS = { "modifier_illusion", "modifier_kill" }
 
 local PUSH_PATTERNS = { "forged_spirit", "eidolon", "lycan_wolf", "furion_treant" }
 
-local BACKDOOR_MODS = { modifier_backdoor_protection_active = true }
+local BACKDOOR_MODS = { "modifier_backdoor_protection_active" }
 
 local BARRACKS_THREAT = 900.0
+local PUSH_PATH_CANDIDATES = 3
 
 local BH = Enum.AbilityBehavior
-local SKIP_BEHAVIOR =
+local SKIP_BEHAVIOR = math.floor(
 	BH.DOTA_ABILITY_BEHAVIOR_HIDDEN
 	| BH.DOTA_ABILITY_BEHAVIOR_PASSIVE
 	| BH.DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE
@@ -199,9 +216,10 @@ local SKIP_BEHAVIOR =
 	| BH.DOTA_ABILITY_BEHAVIOR_AURA
 	| BH.DOTA_ABILITY_BEHAVIOR_AUTOCAST
 	| BH.DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING
-local UNIT_TARGET_BEHAVIOR = BH.DOTA_ABILITY_BEHAVIOR_UNIT_TARGET
-local POINT_BEHAVIOR = BH.DOTA_ABILITY_BEHAVIOR_POINT
-local NO_TARGET_BEHAVIOR = BH.DOTA_ABILITY_BEHAVIOR_NO_TARGET
+)
+local UNIT_TARGET_BEHAVIOR = math.floor(BH.DOTA_ABILITY_BEHAVIOR_UNIT_TARGET)
+local POINT_BEHAVIOR = math.floor(BH.DOTA_ABILITY_BEHAVIOR_POINT)
+local NO_TARGET_BEHAVIOR = math.floor(BH.DOTA_ABILITY_BEHAVIOR_NO_TARGET)
 
 local TT = Enum.TargetTeam
 local CASTABLE_TARGET_TEAM = {
@@ -219,15 +237,17 @@ local ISSUER_PASSED_UNIT = Enum.PlayerOrderIssuer.DOTA_ORDER_ISSUER_PASSED_UNIT_
 local UT = Enum.UnitTypeFlags
 local UNIT_SCAN_FLAGS = UT.TYPE_HERO | UT.TYPE_CONSIDERED_HERO | UT.TYPE_CREEP | UT.TYPE_LANE_CREEP
 
+local CT = Enum.ECampType
+local CAMP_TYPE_NAME = {
+	[CT.ECampType_SMALL] = "small",
+	[CT.ECampType_MEDIUM] = "medium",
+	[CT.ECampType_LARGE] = "large",
+	[CT.ECampType_ANCIENT] = "ancient",
+}
+
 local TEAM_BOTH = Enum.TeamType.TEAM_BOTH
 local TEAM_ENEMY = Enum.TeamType.TEAM_ENEMY
 local TEAM_FRIEND = Enum.TeamType.TEAM_FRIEND
-local SHOP_HOME = Enum.ShopType.DOTA_SHOP_HOME
-local TYPE_SHOP = Enum.UnitTypeFlags.TYPE_SHOP
-local STATE = Enum.ModifierState
-local CAST_READY = Enum.AbilityCastResult.READY
-local TARGET_TYPE = Enum.TargetType
-local GAME_IN_PROGRESS = Enum.GameState.DOTA_GAMERULES_STATE_GAME_IN_PROGRESS
 
 local ABILITY_DENY_PATTERNS = {
 	"_return$",
@@ -292,97 +312,58 @@ local camps = nil
 local camps_refined = false
 local camps_matched = 0
 
-local function ancient_camp_type()
-	local types = Enum.ECampType
-	if not types then return nil end
-	return types.ECampType_ANCIENT
-end
-
-local function camp_type_name(value)
-	local types = Enum.ECampType
-	if not types or value == nil then return nil end
-	if value == types.ECampType_ANCIENT then return "ancient" end
-	if value == types.ECampType_LARGE then return "large" end
-	if value == types.ECampType_MEDIUM then return "medium" end
-	if value == types.ECampType_SMALL then return "small" end
-	return nil
-end
-
-local function camp_from_box(box)
-	local min, max = box.min, box.max
-	local cx = (min:GetX() + max:GetX()) * 0.5
-	local cy = (min:GetY() + max:GetY()) * 0.5
-	local cz = (min:GetZ() + max:GetZ()) * 0.5
-	local extent = math.max(
-		math.abs(max:GetX() - min:GetX()),
-		math.abs(max:GetY() - min:GetY())
-	) * 0.5
-	return Vector(cx, cy, cz),
-		math.max(extent, CAMP_MIN_EXTENT),
-		math.min(CAMP_RADIUS_MAX, math.max(CAMP_RADIUS, extent + CAMP_BOX_MARGIN))
-end
-
-local function enrich_camp_from_api(camp)
-	if not Camps or not Camps.InRadius or not Camp then return end
-	local near = Camps.InRadius(camp.pos, CAMP_RADIUS)
-	if not near or #near == 0 then return end
-	local best, best_d = nil, math.huge
-	for i = 1, #near do
-		local ent = near[i]
-		local pos = Entity.GetAbsOrigin(ent)
-		local d = camp.pos:Distance2D(pos)
-		if d < best_d then
-			best, best_d = ent, d
+local function refine_camps_from_api()
+	local raw = Camps.GetAll()
+	if not raw or #raw == 0 then return false end
+	local matched = 0
+	for i = 1, #raw do
+		local box = Camp.GetCampBox(raw[i])
+		if box and box.min and box.max then
+			local cx = (box.min:GetX() + box.max:GetX()) * 0.5
+			local cy = (box.min:GetY() + box.max:GetY()) * 0.5
+			local cz = (box.min:GetZ() + box.max:GetZ()) * 0.5
+			local extent = math.max(
+				math.abs(box.max:GetX() - box.min:GetX()),
+				math.abs(box.max:GetY() - box.min:GetY())
+			) * 0.5
+			local best, best_dist = nil, CURATED_MATCH_RADIUS * CURATED_MATCH_RADIUS
+			for id = 1, #camps do
+				local dx = camps[id].pos:GetX() - cx
+				local dy = camps[id].pos:GetY() - cy
+				local dist = dx * dx + dy * dy
+				if dist < best_dist then best, best_dist = camps[id], dist end
+			end
+			if best and (best.matched_dist == nil or best_dist < best.matched_dist) then
+				best.matched_dist = best_dist
+				best.pos = Vector(cx, cy, cz)
+				best.exit = math.max(extent, CAMP_MIN_EXTENT)
+				best.radius = math.min(CAMP_RADIUS_MAX, math.max(CAMP_RADIUS, extent + CAMP_BOX_MARGIN))
+				local kind = Camp.GetType(raw[i])
+				best.type_name = CAMP_TYPE_NAME[kind]
+				best.ancient = kind == CT.ECampType_ANCIENT
+				matched = matched + 1
+			end
 		end
 	end
-	if not best then return end
-	local box = Camp.GetCampBox and Camp.GetCampBox(best)
-	if box and box.min and box.max then
-		local pos, exit, radius = camp_from_box(box)
-		camp.pos = pos
-		camp.exit = exit
-		camp.radius = radius
-		camp.min = box.min
-		camp.max = box.max
-		camp.pos:SetGroundZ()
-	end
-	if Camp.GetType then
-		local kind = Camp.GetType(best)
-		local ancientType = ancient_camp_type()
-		camp.ancient = ancientType ~= nil and kind == ancientType
-		camp.type_name = camp_type_name(kind)
-	end
-end
-
-local function build_camps_from_data()
-	local list = {}
-	for i = 1, #RADIANT_CAMP_DATA do
-		local c = RADIANT_CAMP_DATA[i]
-		list[#list + 1] = {
-			pos = Vector(c[1], c[2], c[3]),
-			radiant = true,
-			radius = CAMP_RADIUS,
-		}
-	end
-	for i = 1, #DIRE_CAMP_DATA do
-		local c = DIRE_CAMP_DATA[i]
-		list[#list + 1] = {
-			pos = Vector(c[1], c[2], c[3]),
-			radiant = false,
-			radius = CAMP_RADIUS,
-		}
-	end
-	for i = 1, #list do
-		enrich_camp_from_api(list[i])
-	end
-	return list
+	camps_matched = matched
+	return matched > 0
 end
 
 local function ensure_camps()
-	if camps then return end
-	camps = build_camps_from_data()
-	camps_matched = #camps
-	camps_refined = true
+	if not camps then
+		camps = {}
+		for i = 1, #RADIANT_CAMP_DATA do
+			local c = RADIANT_CAMP_DATA[i]
+			camps[#camps + 1] = { pos = Vector(c[1], c[2], c[3]), radiant = true, radius = CAMP_RADIUS }
+		end
+		for i = 1, #DIRE_CAMP_DATA do
+			local c = DIRE_CAMP_DATA[i]
+			camps[#camps + 1] = { pos = Vector(c[1], c[2], c[3]), radiant = false, radius = CAMP_RADIUS }
+		end
+	end
+	if not camps_refined then
+		camps_refined = refine_camps_from_api()
+	end
 end
 
 local function camp_is_ancient(id)
@@ -426,7 +407,6 @@ local function passes_filter(u)
 end
 
 local function append_spirit_bears(units, known, my_id, my_team, my_hero)
-	if not CustomEntities or not CustomEntities.GetSpiritBear then return end
 	local heroes = Heroes.GetAll()
 	for i = 1, #heroes do
 		local hero = heroes[i]
@@ -461,90 +441,6 @@ local function own_fort(my_team)
 	return nil
 end
 
-local function shop_position(my_team)
-	if shop_pos[my_team] then return shop_pos[my_team] end
-	local shops = NPCs.GetAll(TYPE_SHOP)
-	if not shops then return nil end
-	local home = own_fort(my_team)
-	local best, best_dist = nil, math.huge
-	for i = 1, #shops do
-		local shop = shops[i]
-		if Entity.GetTeamNum(shop) == my_team then
-			local pos = Entity.GetAbsOrigin(shop)
-			local dist = home and pos:Distance2D(home) or 0
-			if dist < best_dist then
-				best, best_dist = pos, dist
-			end
-		end
-	end
-	if best then
-		shop_pos[my_team] = best
-		return best
-	end
-	return nil
-end
-
-local function retreat_point(ctx)
-	return shop_position(ctx.my_team) or fountain_position(ctx.my_radiant)
-end
-
-local function has_any_state(u, list)
-	for i = 1, #list do
-		if NPC.HasState(u, list[i]) then return true end
-	end
-	return false
-end
-
-local ORDER_BLOCK_STATES = {
-	STATE.MODIFIER_STATE_STUNNED,
-	STATE.MODIFIER_STATE_HEXED,
-	STATE.MODIFIER_STATE_FEARED,
-	STATE.MODIFIER_STATE_FROZEN,
-	STATE.MODIFIER_STATE_NIGHTMARED,
-	STATE.MODIFIER_STATE_TAUNTED,
-	STATE.MODIFIER_STATE_COMMAND_RESTRICTED,
-	STATE.MODIFIER_STATE_IGNORING_MOVE_AND_ATTACK_ORDERS,
-	STATE.MODIFIER_STATE_OUT_OF_GAME,
-}
-
-local MOVE_BLOCK_STATES = {
-	STATE.MODIFIER_STATE_ROOTED,
-	STATE.MODIFIER_STATE_IGNORING_MOVE_ORDERS,
-}
-
-local ATTACK_BLOCK_STATES = {
-	STATE.MODIFIER_STATE_DISARMED,
-	STATE.MODIFIER_STATE_CANNOT_TARGET_ENEMIES,
-}
-
-local VICTIM_BLOCK_STATES = {
-	STATE.MODIFIER_STATE_INVULNERABLE,
-	STATE.MODIFIER_STATE_UNTARGETABLE,
-	STATE.MODIFIER_STATE_UNTARGETABLE_ENEMY,
-	STATE.MODIFIER_STATE_ATTACK_IMMUNE,
-	STATE.MODIFIER_STATE_UNSELECTABLE,
-}
-
-local function orders_blocked(u)
-	return has_any_state(u, ORDER_BLOCK_STATES)
-end
-
-local function move_blocked(u)
-	return orders_blocked(u) or has_any_state(u, MOVE_BLOCK_STATES)
-end
-
-local function attack_blocked(u)
-	return orders_blocked(u) or has_any_state(u, ATTACK_BLOCK_STATES)
-end
-
-local function attackable_enemy(n)
-	if not Entity.IsAlive(n) then return false end
-	if NPC.IsWaitingToSpawn(n) then return false end
-	if not NPC.IsKillable(n) then return false end
-	if has_any_state(n, VICTIM_BLOCK_STATES) then return false end
-	return true
-end
-
 local function safe_offset(camp, home, distance, key)
 	if camp[key] then return camp[key] end
 	local pos = camp.pos
@@ -574,124 +470,88 @@ end
 
 local function wait_position(camp, home)
 	local distance = camp.exit and (camp.exit + WAIT_MARGIN) or WAIT_DISTANCE
-	local dest = safe_offset(camp, home, distance, "wait")
-	if dest == camp.pos then
-		dest = dest:Clone()
-		camp.wait = dest
-	end
-	dest:SetGroundZ()
-	return dest
+	return safe_offset(camp, home, distance, "wait")
 end
 
 local function unit_speed(u)
-	local speed = NPC.GetMoveSpeed and NPC.GetMoveSpeed(u) or nil
+	local speed = NPC.GetMoveSpeed(u)
 	if not speed or speed <= 0 then
-		speed = NPC.GetBaseSpeed and NPC.GetBaseSpeed(u) or nil
+		speed = NPC.GetBaseSpeed(u)
 	end
 	if not speed or speed <= 0 then return FALLBACK_SPEED end
 	return speed
 end
 
-local function path_length(start, dest)
-	local straight = start:Distance2D(dest)
-	if not GridNav or not GridNav.BuildPath then return straight end
-	if GridNav.IsTraversableFromTo and GridNav.IsTraversableFromTo(start, dest, false) == false then
-		return math.huge
+-- How far the unit can walk before it expires; math.huge for permanent units.
+local function reach_distance(u, now)
+	local left = math.huge
+	for i = 1, #LIFETIME_MODS do
+		local mod = NPC.GetModifier(u, LIFETIME_MODS[i])
+		if mod then
+			local die = Modifier.GetDieTime(mod)
+			if die and die > now then left = math.min(left, die - now) end
+		end
 	end
-	local path = GridNav.BuildPath(start, dest, false)
-	if not path or #path < 2 then return straight end
-	local len = 0.0
-	for i = 2, #path do
-		len = len + path[i - 1]:Distance2D(path[i])
+	if left == math.huge then return math.huge end
+	return math.max(0.0, left - LIFETIME_MARGIN) * unit_speed(u)
+end
+
+-- Walkable point away from the nearest visible threat, or nil if none is close.
+local function flee_point(u_pos, threats)
+	local ux, uy = u_pos:GetX(), u_pos:GetY()
+	local nearest, best = nil, THREAT_NEAR_SQR
+	for i = 1, #threats do
+		local d = threats[i]:DistanceSqr2D(u_pos)
+		if d < best then nearest, best = threats[i], d end
 	end
-	if len <= 0 then return straight end
-	return len
+	if not nearest then return nil end
+	local base = math.atan(uy - nearest:GetY(), ux - nearest:GetX())
+	for i = 1, #FLEE_ANGLES do
+		local a = base + FLEE_ANGLES[i]
+		local p = Vector(ux + math.cos(a) * FLEE_DISTANCE, uy + math.sin(a) * FLEE_DISTANCE, u_pos:GetZ())
+		if GridNav.IsTraversable(p) then return p end
+	end
+	return nil
 end
 
 local function game_clock()
-	local t = GameRules.GetDOTATime(false, false)
-	if not t or t <= 0 then
-		t = GameRules.GetGameTime() - (GameRules.GetGameStartTime() or 0)
+	local t = GameRules.GetGameTime() - GameRules.GetGameStartTime()
+	if t <= 0 then
+		t = GameRules.GetDOTATime(false, false) or 0
 	end
 	if t < 0 then return 0 end
 	return t
 end
 
-local function in_match()
-	if not Engine.IsInGame() then return false end
-	if GameRules.IsPaused() then return false end
-	local state = GameRules.GetGameState()
-	return state == GAME_IN_PROGRESS
-end
-
 local function neutrals_near(pos, radius, my_team)
 	local found = {}
-	local list = NPCs.InRadius(pos, radius, my_team, TEAM_BOTH, true, false)
+	local list = NPCs.InRadius(pos, radius, my_team, TEAM_BOTH, true, true)
 	for i = 1, #list do
 		local n = list[i]
 		if NPC.IsNeutral(n)
 			and Entity.GetTeamNum(n) ~= my_team
-			and (Entity.IsAlive(n) or NPC.IsWaitingToSpawn(n))
-			and not NPC.IsRoshan(n) then
+			and Entity.IsAlive(n)
+			and not NPC.IsRoshan(n)
+			and not NPC.IsWaitingToSpawn(n) then
 			found[#found + 1] = n
 		end
 	end
 	return found
 end
 
-local function ready_units(list)
-	local ready = {}
-	if not list then return ready end
-	for i = 1, #list do
-		if attackable_enemy(list[i]) then
-			ready[#ready + 1] = list[i]
-		end
-	end
-	return ready
-end
-
-local function in_camp_box(pos, camp)
-	if camp.min and camp.max then
-		local x, y = pos:GetX(), pos:GetY()
-		local m = CAMP_BOX_MARGIN
-		return x >= camp.min:GetX() - m and x <= camp.max:GetX() + m
-			and y >= camp.min:GetY() - m and y <= camp.max:GetY() + m
-	end
-	return pos:IsInRange2D(camp.pos, camp.radius or CAMP_RADIUS)
-end
-
 local function camp_neutrals(camp, my_team)
-	local reach = camp.radius or CAMP_RADIUS
-	if camp.min and camp.max then
-		local dx = (camp.max:GetX() - camp.min:GetX()) * 0.5 + CAMP_BOX_MARGIN
-		local dy = (camp.max:GetY() - camp.min:GetY()) * 0.5 + CAMP_BOX_MARGIN
-		reach = math.max(reach, math.sqrt(dx * dx + dy * dy))
-	end
-	local found = neutrals_near(camp.pos, reach, my_team)
-	if not camp.min then return found end
-	local inside = {}
-	for i = 1, #found do
-		if in_camp_box(Entity.GetAbsOrigin(found[i]), camp) then
-			inside[#inside + 1] = found[i]
-		end
-	end
-	return inside
-end
-
-local function scan_live_camps(my_team)
-	local live = {}
-	for id = 1, #camps do
-		if #camp_neutrals(camps[id], my_team) > 0 then
-			camp_empty[id] = nil
-			live[id] = true
-		end
-	end
-	return live
+	return neutrals_near(camp.pos, camp.radius or CAMP_RADIUS, my_team)
 end
 
 local function nearest_of(list, pos)
-	if not list or #list == 0 then return nil end
-	local best = pos:ClosestToPoint(list)
+	local px, py = pos:GetX(), pos:GetY()
+	local best, best_d = nil, math.huge
+	for i = 1, #list do
+		local x, y = Entity.GetAbsOriginXYZ(list[i])
+		local dx, dy = x - px, y - py
+		local d = dx * dx + dy * dy
+		if d < best_d then best, best_d = list[i], d end
+	end
 	return best
 end
 
@@ -738,26 +598,12 @@ local function camp_open(id, now)
 	return true
 end
 
-local function pick_camp(ctx, u_pos, relaxed, skip_id)
+local function pick_camp(ctx, u_pos, relaxed, reach)
 	local now = ctx.now
-	local live = ctx.live
-	local any_live = false
-	if live then
-		for id = 1, #camps do
-			if id ~= skip_id
-				and live[id]
-				and camps[id].radiant == ctx.my_radiant
-				and not (ctx.skip_ancients and camp_is_ancient(id))
-				and (camp_bans[id] or 0) <= now then
-				any_live = true
-				break
-			end
-		end
-	end
 	local best, best_score = nil, math.huge
 	for id = 1, #camps do
 		local camp = camps[id]
-		if id ~= skip_id and camp.radiant == ctx.my_radiant then
+		if camp.radiant == ctx.my_radiant then
 			local usable
 			if ctx.skip_ancients and camp_is_ancient(id) then
 				usable = false
@@ -766,11 +612,9 @@ local function pick_camp(ctx, u_pos, relaxed, skip_id)
 			else
 				usable = camp_open(id, now) and (ctx.load[id] or 0) < ctx.limit
 			end
-			if usable and not relaxed and any_live and not live[id] then
-				usable = false
-			end
+			local score = usable and camp.pos:Distance2D(u_pos) or 0
+			if usable and reach and score * PATH_DETOUR > reach then usable = false end
 			if usable then
-				local score = path_length(u_pos, camp.pos)
 				for i = 1, #ctx.threats do
 					if camp.pos:DistanceSqr2D(ctx.threats[i]) < THREAT_NEAR_SQR then
 						score = score + THREAT_PENALTY
@@ -784,28 +628,51 @@ local function pick_camp(ctx, u_pos, relaxed, skip_id)
 	return best
 end
 
-local function nearest_live_camp(ctx, u_pos, current_id, load)
-	local now = ctx.now
-	local live = ctx.live
-	local current_len = current_id and path_length(u_pos, camps[current_id].pos) or math.huge
-	local best, best_len = nil, math.huge
+local function nearest_live_camp(u_pos, my_team, my_radiant, now, skip_ancients, current_id, load)
+	local current_dist = current_id and camps[current_id].pos:Distance2D(u_pos) or math.huge
+	local best, best_dist = nil, math.huge
 	for id = 1, #camps do
 		if id ~= current_id
-			and camps[id].radiant == ctx.my_radiant
+			and camps[id].radiant == my_radiant
 			and (camp_bans[id] or 0) <= now
 			and (load[id] or 0) == 0
-			and not (ctx.skip_ancients and camp_is_ancient(id))
-			and (not live or live[id]) then
-			local len = path_length(u_pos, camps[id].pos)
-			if len < best_len then
-				best, best_len = id, len
+			and not (skip_ancients and camp_is_ancient(id)) then
+			local dist = camps[id].pos:Distance2D(u_pos)
+			if dist < best_dist then
+				if dist < PASSBY_RADIUS and dist + PASSBY_MARGIN < current_dist then
+					local neutrals = camp_neutrals(camps[id], my_team)
+					if #neutrals > 0 then
+						camp_empty[id] = nil
+						if has_ancient(neutrals) then
+							ancient_camp[id] = true
+						end
+						if not (skip_ancients and camp_is_ancient(id)) then
+							best, best_dist = id, dist
+						end
+					end
+				elseif dist + SWITCH_MARGIN < current_dist and (camp_empty[id] or 0) <= now then
+					best, best_dist = id, dist
+				end
 			end
 		end
 	end
-	if best and best_len + PASSBY_MARGIN < current_len then
-		return best
+	return best
+end
+
+local function nearest_other_camp_distance(u_pos, my_radiant, now, load, skip_ancients, current_id)
+	local best = math.huge
+	for id = 1, #camps do
+		if id ~= current_id
+			and camps[id].radiant == my_radiant
+			and (camp_bans[id] or 0) <= now
+			and (camp_empty[id] or 0) <= now
+			and (load[id] or 0) == 0
+			and not (skip_ancients and camp_is_ancient(id)) then
+			local dist = camps[id].pos:Distance2D(u_pos)
+			if dist < best then best = dist end
+		end
 	end
-	return nil
+	return best
 end
 
 local function enemy_team(my_team)
@@ -824,97 +691,16 @@ local function is_pusher(u)
 	return false
 end
 
-local function building_lane(building)
-	local name = NPC.GetUnitName(building)
-	if not name then return nil end
-	return name:match("_tower%d_(%a+)") or name:match("_rax_(%a+)")
-end
-
-local function building_tier(building)
-	local name = NPC.GetUnitName(building)
-	if not name then return 99 end
-	return tonumber(name:match("_tower(%d)") or "") or 99
-end
-
-local function enemy_lane_creeps(my_team)
+local function enemy_lane_creeps(u)
 	local found = {}
-	local list = NPCs.GetAll(UT.TYPE_LANE_CREEP)
-	if not list then return found end
-	local e_team = enemy_team(my_team)
+	local list = Entity.GetUnitsInRadius(u, CREEP_SEARCH, TEAM_ENEMY, true, true)
 	for i = 1, #list do
 		local n = list[i]
-		if NPC.IsLaneCreep(n)
-			and not NPC.IsNeutral(n)
-			and Entity.GetTeamNum(n) == e_team
-			and (Entity.IsAlive(n) or NPC.IsWaitingToSpawn(n)) then
+		if NPC.IsLaneCreep(n) and Entity.IsAlive(n) and not NPC.IsWaitingToSpawn(n) then
 			found[#found + 1] = n
 		end
 	end
 	return found
-end
-
-local function landmark_lane(pos, towers, raxes)
-	local best_lane, best_d = nil, math.huge
-	local function consider(entry)
-		if not entry or not entry.lane or not entry.pos then return end
-		local d = pos:DistanceSqr2D(entry.pos)
-		if d < best_d then
-			best_d, best_lane = d, entry.lane
-		end
-	end
-	for i = 1, #towers do
-		consider(towers[i])
-	end
-	if raxes then
-		for i = 1, #raxes do
-			consider(raxes[i])
-		end
-	end
-	return best_lane
-end
-
-local function creeps_for_lane(creeps, entry, u_pos, towers, raxes)
-	if not entry or not entry.lane then
-		return creeps
-	end
-	local found = {}
-	for i = 1, #creeps do
-		local n = creeps[i]
-		local pos = Entity.GetAbsOrigin(n)
-		local lane = landmark_lane(pos, towers, raxes)
-		if lane == entry.lane
-			or pos:IsInRange2D(u_pos, CREEP_SEARCH)
-			or pos:IsInRange2D(entry.pos, CREEP_SEARCH) then
-			found[#found + 1] = n
-		end
-	end
-	return found
-end
-
-local function front_victim(idx, list, enemy_home)
-	if not list or #list == 0 then return nil end
-	local previous = attack_target[idx]
-	if previous then
-		for i = 1, #list do
-			if Entity.GetIndex(list[i]) == previous then
-				return list[i]
-			end
-		end
-	end
-	local victim = nil
-	if enemy_home then
-		local best_d = math.huge
-		for i = 1, #list do
-			local d = Entity.GetAbsOrigin(list[i]):DistanceSqr2D(enemy_home)
-			if d < best_d then
-				victim, best_d = list[i], d
-			end
-		end
-	else
-		victim = list[1]
-	end
-	attack_target[idx] = victim and Entity.GetIndex(victim) or nil
-	return victim
 end
 
 local function build_enemy_towers(e_team)
@@ -927,7 +713,6 @@ local function build_enemy_towers(e_team)
 				tower = tower,
 				pos = Entity.GetAbsOrigin(tower),
 				threat = (NPC.GetAttackRange(tower) or 700.0) + TOWER_MARGIN,
-				lane = building_lane(tower),
 			}
 		end
 	end
@@ -940,7 +725,8 @@ local function build_enemy_barracks(e_team)
 	for i = 1, #raxes do
 		local rax = raxes[i]
 		if Entity.GetTeamNum(rax) == e_team and Entity.IsAlive(rax) then
-			local lane = building_lane(rax)
+			local name = NPC.GetUnitName(rax)
+			local lane = name and name:match("_rax_(%a+)")
 			if lane then
 				list[#list + 1] = {
 					tower = rax,
@@ -959,14 +745,14 @@ local function build_push_targets(tower_list, rax_list)
 	local lanes = {}
 	for i = 1, #tower_list do
 		local entry = tower_list[i]
-		local tier = building_tier(entry.tower)
-		local lane = entry.lane or "base"
+		local name = NPC.GetUnitName(entry.tower)
+		local tier = tonumber(name and name:match("_tower(%d)") or "") or 99
+		local lane = (name and name:match("_tower%d_(%a+)")) or "base"
 		local current = lanes[lane]
 		if not current or tier < current.tier then
 			lanes[lane] = {
 				tower = entry.tower,
 				tier = tier,
-				lane = lane,
 				pos = entry.pos,
 				threat = entry.threat,
 			}
@@ -1022,21 +808,49 @@ local function backdoor_active(building)
 	return NPC.HasAnyModifier(building, BACKDOOR_MODS) == true
 end
 
-local function choose_push_target(list, u_pos)
-	if #list == 0 then return nil end
-	local best, best_dist = nil, math.huge
+local function path_length(from, to)
+	local path = GridNav.BuildPath(from, to, true)
+	if not path or #path < 2 then
+		return from:Distance2D(to)
+	end
+	local total = 0.0
+	for i = 2, #path do
+		total = total + path[i]:Distance2D(path[i - 1])
+	end
+	return total
+end
+
+local function push_banned(tower, now)
+	return (push_bans[Entity.GetIndex(tower)] or 0) > now
+end
+
+local function choose_push_target(list, u_pos, reach, now)
+	local ranked = {}
 	for i = 1, #list do
-		local dist = list[i].pos:DistanceSqr2D(u_pos)
-		if dist < best_dist then
-			best, best_dist = list[i], dist
+		if not push_banned(list[i].tower, now) then
+			ranked[#ranked + 1] = { entry = list[i], dist = list[i].pos:DistanceSqr2D(u_pos) }
+		end
+	end
+	if #ranked == 0 then return nil end
+	table.sort(ranked, function(a, b) return a.dist < b.dist end)
+	local best, best_cost = nil, math.huge
+	local limit = math.min(#ranked, PUSH_PATH_CANDIDATES)
+	for i = 1, limit do
+		local cost = path_length(u_pos, ranked[i].entry.pos)
+		if cost <= reach and cost < best_cost then
+			best, best_cost = ranked[i].entry, cost
 		end
 	end
 	return best
 end
 
-local function pinned_push_target(idx, list)
+local function pinned_push_target(idx, list, now)
 	local pinned = push_target[idx]
 	if not pinned then return nil end
+	if (push_bans[pinned] or 0) > now then
+		push_target[idx] = nil
+		return nil
+	end
 	for i = 1, #list do
 		if Entity.GetIndex(list[i].tower) == pinned then
 			return list[i]
@@ -1080,87 +894,20 @@ local function remember(idx, mode, pos, target, now)
 end
 
 local function safe_to_target(entity)
-	if not ui.humanizer:Get() then return true end
-	if not Humanizer or not Humanizer.IsSafeTarget or not entity then return true end
-	local ok = Humanizer.IsSafeTarget(entity)
-	if ok == nil then return true end
-	return ok == true
-end
-
-local function can_issue()
-	if not Humanizer or not Humanizer.OrdersCanBeCastedThisTick then return true end
-	return Humanizer.OrdersCanBeCastedThisTick() > 0
-end
-
-local function matches_target_type(ability, victim)
-	local tt = Ability.GetTargetType(ability) or 0
-	if tt == 0 then return false end
-	if (tt & TARGET_TYPE.DOTA_UNIT_TARGET_CUSTOM) ~= 0 then return true end
-	if NPC.IsHero(victim) or NPC.IsConsideredHero(victim) then
-		if (tt & TARGET_TYPE.DOTA_UNIT_TARGET_HERO) ~= 0 then return true end
-	end
-	if NPC.IsStructure(victim) or NPC.IsTower(victim) or NPC.IsBarracks(victim) or NPC.IsFort(victim) then
-		if (tt & TARGET_TYPE.DOTA_UNIT_TARGET_BUILDING) ~= 0 then return true end
-	end
-	if NPC.IsCreep(victim) or NPC.IsLaneCreep(victim) or NPC.IsNeutral(victim) then
-		if (tt & TARGET_TYPE.DOTA_UNIT_TARGET_CREEP) ~= 0 then return true end
-		if (tt & TARGET_TYPE.DOTA_UNIT_TARGET_BASIC) ~= 0 then return true end
-		if (tt & TARGET_TYPE.DOTA_UNIT_TARGET_OTHER) ~= 0 then return true end
-	end
-	return false
-end
-
-local function can_send(u, mode, victim)
-	if orders_blocked(u) then return false end
-	if mode == "attack" then
-		return not attack_blocked(u) and victim ~= nil and attackable_enemy(victim)
-	end
-	if mode == "farm" or mode == "push" then
-		return not move_blocked(u) and not attack_blocked(u)
-	end
-	if mode == "hold" then
-		return not orders_blocked(u)
-	end
-	return not move_blocked(u)
-end
-
-local function order_move(unit, dest)
-	if not can_issue() then return false end
-	NPC.MoveTo(unit, dest, false, false, false, false, ORDER_ID)
-	return true
+	if not ui.humanizer:Get() or not entity then return true end
+	return Humanizer.IsSafeTarget(entity) ~= false
 end
 
 local function order_attack_move(player, unit, pos)
-	if not can_issue() then return false end
-	Player.PrepareUnitOrders(
-		player, ORDER_ATTACK_MOVE, nil, pos, nil, ISSUER_PASSED_UNIT, unit,
-		false, false, false, false, ORDER_ID
-	)
-	return true
+	Player.PrepareUnitOrders(player, ORDER_ATTACK_MOVE, nil, pos, nil, ISSUER_PASSED_UNIT, unit)
 end
 
 local function order_attack_target(player, unit, target)
-	if not can_issue() then return false end
-	Player.AttackTarget(player, unit, target, false, false, false, ORDER_ID)
-	return true
+	Player.PrepareUnitOrders(player, ORDER_ATTACK_TARGET, target, nil, nil, ISSUER_PASSED_UNIT, unit)
 end
 
-local function order_hold(player, unit)
-	if not can_issue() then return false end
-	Player.HoldPosition(player, unit, false, false, false, ORDER_ID)
-	return true
-end
-
-local function order_cast(_, __, order, target, pos, ability)
-	if not can_issue() then return false end
-	if order == ORDER_CAST_TARGET then
-		Ability.CastTarget(ability, target, false, false, false, ORDER_ID)
-	elseif order == ORDER_CAST_POSITION then
-		Ability.CastPosition(ability, pos, false, false, false, ORDER_ID)
-	else
-		Ability.CastNoTarget(ability, false, false, false, ORDER_ID)
-	end
-	return true
+local function order_cast(player, unit, order, target, pos, ability)
+	Player.PrepareUnitOrders(player, order, target, pos, ability, ISSUER_PASSED_UNIT, unit)
 end
 
 local function ability_denied(name)
@@ -1171,13 +918,43 @@ local function ability_denied(name)
 	return false
 end
 
+-- Name, behavior and target team are static per ability, so they are scanned once per TTL.
+local function cast_candidates(unit, idx, now)
+	local cached = cast_cache[idx]
+	if cached and cached.until_t > now then return cached.list end
+	local list = {}
+	for slot = 0, ABILITY_MAX_SLOT do
+		local ability = NPC.GetAbilityByIndex(unit, slot)
+		if ability
+			and not Ability.IsPassive(ability)
+			and not ability_denied(Ability.GetName(ability) or "") then
+			local behavior = math.floor(Ability.GetBehavior(ability) or 0)
+			if (behavior & SKIP_BEHAVIOR) == 0 then
+				local order = nil
+				if (behavior & UNIT_TARGET_BEHAVIOR) ~= 0 then
+					if CASTABLE_TARGET_TEAM[Ability.GetTargetTeam(ability)] then
+						order = ORDER_CAST_TARGET
+					end
+				elseif (behavior & POINT_BEHAVIOR) ~= 0 then
+					order = ORDER_CAST_POSITION
+				elseif (behavior & NO_TARGET_BEHAVIOR) ~= 0 then
+					order = ORDER_CAST_NO_TARGET
+				end
+				if order then
+					list[#list + 1] = { ability = ability, order = order }
+				end
+			end
+		end
+	end
+	cast_cache[idx] = { until_t = now + CAST_CACHE_TTL, list = list }
+	return list
+end
+
 local function try_cast(player, unit, idx, u_pos, neutrals, now)
 	if (next_cast[idx] or 0) > now then return false end
-	if orders_blocked(unit)
-		or NPC.HasState(unit, STATE.MODIFIER_STATE_SILENCED)
-		or NPC.IsChannellingAbility(unit) then
-		return false
-	end
+	local candidates = cast_candidates(unit, idx, now)
+	if #candidates == 0 then return false end
+	if NPC.IsSilenced(unit) or NPC.IsStunned(unit) or NPC.IsChannellingAbility(unit) then return false end
 
 	local victim = nearest_of(neutrals, u_pos)
 	if not victim then return false end
@@ -1185,42 +962,21 @@ local function try_cast(player, unit, idx, u_pos, neutrals, now)
 	local victim_dist = victim_pos:Distance2D(u_pos)
 	local mana = NPC.GetMana(unit)
 
-	for slot = 0, ABILITY_MAX_SLOT do
-		local ability = NPC.GetAbilityByIndex(unit, slot)
-		if ability
-			and Ability.GetLevel(ability) > 0
+	for i = 1, #candidates do
+		local ability, order = candidates[i].ability, candidates[i].order
+		if Ability.GetLevel(ability) > 0
 			and not Ability.IsHidden(ability)
-			and not Ability.IsPassive(ability)
 			and not Ability.IsInAbilityPhase(ability)
-			and Ability.IsActivated(ability)
-			and Ability.CanBeExecuted(ability) == CAST_READY
-			and Ability.IsCastable(ability, mana)
-			and not ability_denied(Ability.GetName(ability) or "") then
-			local behavior = Ability.GetBehavior(ability) or 0
-			if (behavior & SKIP_BEHAVIOR) == 0 then
-				local range = Ability.GetCastRange(ability) or 0
-				if range <= 0 then range = CAST_RANGE_FALLBACK end
-				local order, target, pos = nil, nil, nil
-				if (behavior & UNIT_TARGET_BEHAVIOR) ~= 0 then
-					if CASTABLE_TARGET_TEAM[Ability.GetTargetTeam(ability)]
-						and matches_target_type(ability, victim)
-						and victim_dist <= range
-						and safe_to_target(victim) then
-						order, target = ORDER_CAST_TARGET, victim
-					end
-				elseif (behavior & POINT_BEHAVIOR) ~= 0 then
-					if victim_dist <= range then
-						order, pos = ORDER_CAST_POSITION, victim_pos
-					end
-				elseif (behavior & NO_TARGET_BEHAVIOR) ~= 0 then
-					if victim_dist <= range then
-						order = ORDER_CAST_NO_TARGET
-					end
-				end
-				if order and order_cast(player, unit, order, target, pos, ability) then
-					next_cast[idx] = now + CAST_INTERVAL
-					return true
-				end
+			and Ability.IsCastable(ability, mana) then
+			local range = Ability.GetCastRange(ability) or 0
+			if range <= 0 then range = CAST_RANGE_FALLBACK end
+			if victim_dist <= range
+				and (order ~= ORDER_CAST_TARGET or safe_to_target(victim)) then
+				local target = order == ORDER_CAST_TARGET and victim or nil
+				local pos = order == ORDER_CAST_POSITION and victim_pos or nil
+				order_cast(player, unit, order, target, pos, ability)
+				next_cast[idx] = now + CAST_INTERVAL
+				return true
 			end
 		end
 	end
@@ -1238,70 +994,72 @@ end
 
 local function tick_retreat(ctx, u, idx, u_pos, health_pct)
 	release(idx, ctx.load)
-	local dest = retreat_point(ctx)
-	local at_shop = NPC.IsInRangeOfShop(u, SHOP_HOME, false)
-	local mode = at_shop and "hold" or "home"
-	if can_send(u, mode, nil) and need_reissue(u, idx, mode, dest, nil, ctx.now) then
-		local sent = at_shop and order_hold(ctx.player, u) or order_move(u, dest)
-		if sent then
-			remember(idx, mode, dest, nil, ctx.now)
-		end
+	local dest = fountain_position(ctx.my_radiant)
+	if need_reissue(u, idx, "home", dest, nil, ctx.now) then
+		NPC.MoveTo(u, dest)
+		remember(idx, "home", dest, nil, ctx.now)
 	end
 	if ctx.debug_on then
 		debug_units[#debug_units + 1] = {
 			pos = u_pos,
-			text = string.format("%s | hp %.0f%%", mode, health_pct),
+			text = string.format("home | hp %.0f%%", health_pct),
 		}
 	end
 end
 
-local function tick_pusher(ctx, u, idx, u_pos)
+local tick_farmer
+
+local function tick_pusher(ctx, u, idx, u_pos, reach)
 	local now = ctx.now
+
+	local escaping = ctx.avoid_on and (escape_until[idx] or 0) > now
+	if ctx.avoid_on and not escaping then
+		local near = Entity.GetHeroesInRadius(u, ctx.avoid_radius, TEAM_ENEMY, true, true)
+		if #near > 0 then
+			if push_target[idx] then
+				push_bans[push_target[idx]] = now + CAMP_BAN_TIME
+				push_target[idx] = nil
+			end
+			escape_until[idx] = now + ESCAPE_GRACE
+			escaping = true
+		end
+	end
+
+	local creeps = enemy_lane_creeps(u)
+	local targets = ctx.target_list()
+	local entry = pinned_push_target(idx, targets, now)
+	if not entry then
+		entry = choose_push_target(targets, u_pos, reach, now)
+		if entry then
+			push_target[idx] = Entity.GetIndex(entry.tower)
+		end
+	end
+
+	if not escaping and not entry and #creeps == 0 then
+		return tick_farmer(ctx, u, idx, u_pos, reach)
+	end
+
 	release(idx, ctx.load)
 	waiting[idx] = nil
 
 	local mode, dest, target, victim = nil, nil, nil, nil
 	local casted = false
-	local all_creeps = ctx.enemy_creeps
-	local targets = ctx.target_list()
-	local entry = pinned_push_target(idx, targets)
-	if not entry then
-		entry = choose_push_target(targets, u_pos)
-		if entry then
-			push_target[idx] = Entity.GetIndex(entry.tower)
-		end
-	end
-	local creeps = creeps_for_lane(all_creeps, entry, u_pos, ctx.tower_list(), ctx.rax_list())
-
 	local aggro = tower_deaggro(ctx, u, idx, u_pos)
-	local threat_near = false
-	if ctx.avoid_on then
-		local near = Entity.GetHeroesInRadius(u, ctx.avoid_radius, TEAM_ENEMY, true, true)
-		threat_near = #near > 0
-	end
 
-	if threat_near then
+	if escaping then
 		attack_target[idx] = nil
 		mode = "flee"
-		dest = retreat_point(ctx)
+		dest = flee_point(u_pos, ctx.threats) or fountain_position(ctx.my_radiant)
 	elseif aggro then
 		attack_target[idx] = nil
 		mode = "deaggro"
 		dest = aggro.dest
 	elseif #creeps > 0 then
-		local ready = ready_units(creeps)
-		if #ready > 0 then
-			victim = front_victim(idx, ready, ctx.enemy_home)
-			if victim then
-				mode = "attack"
-				target = attack_target[idx]
-				dest = Entity.GetAbsOrigin(victim)
-			end
-		else
-			attack_target[idx] = nil
-			local spawning = front_victim(idx, creeps, ctx.enemy_home)
-			mode = "push"
-			dest = spawning and Entity.GetAbsOrigin(spawning) or u_pos
+		victim = sticky_victim(idx, creeps, u_pos)
+		if victim then
+			mode = "attack"
+			target = attack_target[idx]
+			dest = Entity.GetAbsOrigin(victim)
 		end
 	elseif entry then
 		attack_target[idx] = nil
@@ -1311,7 +1069,7 @@ local function tick_pusher(ctx, u, idx, u_pos)
 		attack_target[idx] = nil
 	end
 
-	if ctx.kite_on and entry and dest and mode and mode ~= "deaggro" and mode ~= "flee" then
+	if ctx.kite_on and entry and mode and mode ~= "deaggro" and mode ~= "flee" then
 		local threat = entry.threat or ((NPC.GetAttackRange(entry.tower) or 700.0) + TOWER_MARGIN)
 		if dest:DistanceSqr2D(entry.pos) < threat * threat
 			and (not ctx.allied_near(entry) or backdoor_active(entry.tower)) then
@@ -1323,11 +1081,8 @@ local function tick_pusher(ctx, u, idx, u_pos)
 		end
 	end
 
-	if ctx.use_abilities and mode == "attack" then
-		local ready = ready_units(creeps)
-		if #ready > 0 then
-			casted = try_cast(ctx.player, u, idx, u_pos, ready, now)
-		end
+	if ctx.use_abilities and mode == "attack" and #creeps > 0 then
+		casted = try_cast(ctx.player, u, idx, u_pos, creeps, now)
 	end
 
 	if ctx.debug_on then
@@ -1341,32 +1096,19 @@ local function tick_pusher(ctx, u, idx, u_pos)
 		return
 	end
 
-	if mode and not casted and can_send(u, mode, victim) and need_reissue(u, idx, mode, dest, target, now) then
-		local sent = false
+	if mode and not casted and need_reissue(u, idx, mode, dest, target, now) then
 		if mode == "attack" then
-			if victim and NPC.IsLaneCreep(victim) and not NPC.IsNeutral(victim) then
-				sent = order_attack_target(ctx.player, u, victim)
-			end
-		elseif mode == "push" and entry and dest == entry.pos then
-			local range = (NPC.GetAttackRange(u) or 0) + (NPC.GetAttackRangeBonus(u) or 0)
-			if range < 100 then range = 100 end
-			if NPC.IsEntityInRange(u, entry.tower, range) then
-				sent = order_attack_target(ctx.player, u, entry.tower)
-			else
-				sent = order_move(u, dest)
-			end
+			order_attack_target(ctx.player, u, victim)
 		elseif mode == "kite" or mode == "deaggro" or mode == "flee" then
-			sent = order_move(u, dest)
+			NPC.MoveTo(u, dest)
 		else
-			sent = order_move(u, dest)
+			order_attack_move(ctx.player, u, dest)
 		end
-		if sent then
-			remember(idx, mode, dest, target, now)
-		end
+		remember(idx, mode, dest, target, now)
 	end
 end
 
-local function tick_farmer(ctx, u, idx, u_pos)
+function tick_farmer(ctx, u, idx, u_pos, reach)
 	local now = ctx.now
 	local load = ctx.load
 	local near_creeps = neutrals_near(u_pos, FIGHT_RADIUS, ctx.my_team)
@@ -1396,13 +1138,16 @@ local function tick_farmer(ctx, u, idx, u_pos)
 	end
 
 	if not id then
-		id = pick_camp(ctx, u_pos, false) or pick_camp(ctx, u_pos, true)
+		id = pick_camp(ctx, u_pos, false, reach)
+			or pick_camp(ctx, u_pos, true, reach)
+			or pick_camp(ctx, u_pos, true)
 		if id then
 			assigned[idx] = id
 			load[id] = (load[id] or 0) + 1
 		end
 	elseif not escaping and not fighting and u_pos:Distance2D(camps[id].pos) > CAMP_ARRIVE then
-		local better = nearest_live_camp(ctx, u_pos, id, load)
+		local better =
+			nearest_live_camp(u_pos, ctx.my_team, ctx.my_radiant, now, ctx.skip_ancients, id, load)
 		if better then
 			release(idx, load)
 			assigned[idx] = better
@@ -1411,17 +1156,7 @@ local function tick_farmer(ctx, u, idx, u_pos)
 		end
 	end
 
-	if not id then
-		if escaping then
-			local dest = retreat_point(ctx)
-			if can_send(u, "flee", nil) and need_reissue(u, idx, "flee", dest, nil, now) then
-				if order_move(u, dest) then
-					remember(idx, "flee", dest, nil, now)
-				end
-			end
-		end
-		return
-	end
+	if not id then return end
 
 	local camp = camps[id]
 	local camp_dist = u_pos:Distance2D(camp.pos)
@@ -1446,7 +1181,7 @@ local function tick_farmer(ctx, u, idx, u_pos)
 
 	if escaping then
 		mode = "flee"
-		dest = id and camps[id].pos or retreat_point(ctx)
+		dest = flee_point(u_pos, ctx.threats) or dest
 	elseif aggro then
 		attack_target[idx] = nil
 		mode = "deaggro"
@@ -1460,37 +1195,39 @@ local function tick_farmer(ctx, u, idx, u_pos)
 			mode = nil
 		elseif creeps_alive then
 			waiting[idx] = nil
-			local ready = ready_units(neutrals)
-			if #ready > 0 then
-				victim = sticky_victim(idx, ready, u_pos)
-				if victim then
-					mode = "attack"
-					target = attack_target[idx]
-					dest = Entity.GetAbsOrigin(victim)
-				end
-				if ctx.use_abilities then
-					casted = try_cast(ctx.player, u, idx, u_pos, ready, now)
-				end
-			else
-				attack_target[idx] = nil
-				mode = "farm"
-				dest = camp.pos
+			victim = sticky_victim(idx, neutrals, u_pos)
+			if victim then
+				mode = "attack"
+				target = attack_target[idx]
+				dest = Entity.GetAbsOrigin(victim)
+			end
+			if ctx.use_abilities then
+				casted = try_cast(ctx.player, u, idx, u_pos, neutrals, now)
 			end
 		elseif camp_dist < CAMP_ARRIVE or waiting[idx] == id then
 			attack_target[idx] = nil
-			waiting[idx] = nil
-			if ctx.live then ctx.live[id] = nil end
-			release(idx, load)
-			local next_id = pick_camp(ctx, u_pos, false, id) or pick_camp(ctx, u_pos, true, id)
-			if next_id then
-				assigned[idx] = next_id
-				load[next_id] = (load[next_id] or 0) + 1
-				id = next_id
-				camp = camps[id]
-				camp_dist = u_pos:Distance2D(camp.pos)
-				mode = "travel"
-				dest = camp.pos
+			local to_spawn = 60.0 - ctx.second
+			local hold_here = false
+			if ctx.wait_window > 0 then
+				hold_here = to_spawn <= ctx.wait_window
+				if not hold_here then
+					local other = nearest_other_camp_distance(
+						u_pos, ctx.my_radiant, now, load, ctx.skip_ancients, id)
+					if other == math.huge then
+						hold_here = true
+					else
+						hold_here = other * PATH_DETOUR / unit_speed(u) + TRAVEL_SLACK >= to_spawn
+					end
+				end
+			end
+			if hold_here then
+				waiting[idx] = id
+				mode = "wait"
+				dest = wait_position(camp, ctx.home)
 			else
+				waiting[idx] = nil
+				camp_empty[id] = now + to_spawn + 1.0
+				release(idx, load)
 				mode = nil
 			end
 		else
@@ -1515,18 +1252,15 @@ local function tick_farmer(ctx, u, idx, u_pos)
 		return
 	end
 
-	if mode and not casted and can_send(u, mode, victim) and need_reissue(u, idx, mode, dest, target, now) then
-		local sent = false
+	if mode and not casted and need_reissue(u, idx, mode, dest, target, now) then
 		if mode == "attack" then
-			sent = order_attack_target(ctx.player, u, victim)
+			order_attack_target(ctx.player, u, victim)
 		elseif mode == "farm" then
-			sent = order_attack_move(ctx.player, u, dest)
+			order_attack_move(ctx.player, u, dest)
 		else
-			sent = order_move(u, dest)
+			NPC.MoveTo(u, dest)
 		end
-		if sent then
-			remember(idx, mode, dest, target, now)
-		end
+		remember(idx, mode, dest, target, now)
 	end
 end
 
@@ -1546,7 +1280,6 @@ local function process()
 	local home = own_fort(my_team)
 
 	local now = GameRules.GetGameTime()
-	local live_camps = scan_live_camps(my_team)
 	local clock = game_clock()
 	local second = clock % 60
 
@@ -1556,6 +1289,7 @@ local function process()
 	local use_abilities = ui.abilities:Get()
 	local retreat_on = ui.retreat:Get()
 	local retreat_hp = ui.retreat_hp:Get()
+	local retreat_resume = math.min(95.0, retreat_hp + 30.0)
 	local wait_window = ui.wait_respawn:Get()
 	local pushers_on = ui.pushers:Get()
 	local kite_on = ui.kite_tower:Get()
@@ -1567,9 +1301,6 @@ local function process()
 	end
 
 	local scanned = NPCs.GetAll(UNIT_SCAN_FLAGS)
-	if not scanned or #scanned == 0 then
-		scanned = NPCs.GetAll()
-	end
 
 	local units = {}
 	for i = 1, #scanned do
@@ -1584,21 +1315,9 @@ local function process()
 		alive[Entity.GetIndex(units[i])] = true
 	end
 	append_spirit_bears(units, alive, my_id, my_team, hero)
+	purge_gone(alive)
 
-	if #units == 0 then
-		assigned = {}
-		waiting = {}
-		return
-	end
-
-	for idx in pairs(assigned) do
-		if not alive[idx] then
-			assigned[idx] = nil
-			waiting[idx] = nil
-			tower_aggro[idx] = nil
-			push_target[idx] = nil
-		end
-	end
+	if #units == 0 then return end
 
 	local open_count = 0
 	for id = 1, #camps do
@@ -1606,9 +1325,19 @@ local function process()
 			open_count = open_count + 1
 		end
 	end
+	local pusher_flags = {}
+	local farmers = 0
+	for i = 1, #units do
+		local u = units[i]
+		pusher_flags[i] = pushers_on and is_pusher(u)
+		if not pusher_flags[i] and not retreating[Entity.GetIndex(u)] then
+			farmers = farmers + 1
+		end
+	end
+
 	local limit = 1
 	if open_count > 0 then
-		limit = math.max(1, math.ceil(#units / open_count))
+		limit = math.max(1, math.ceil(farmers / open_count))
 	end
 
 	local load = {}
@@ -1616,53 +1345,20 @@ local function process()
 		load[id] = (load[id] or 0) + 1
 	end
 
-	local selected_now = {}
-	local selected_units = Player.GetSelectedUnits(player)
-	if selected_units then
-		for i = 1, #selected_units do
-			local sidx = Entity.GetIndex(selected_units[i])
-			if sidx then selected_now[sidx] = true end
-		end
-	end
-
 	local threats = visible_threats(my_team)
-
-	local e_team = enemy_team(my_team)
-	local enemy_home = nil
-	local forts = NPCs.GetAll(UT.TYPE_FORT)
-	if forts then
-		for i = 1, #forts do
-			if Entity.GetTeamNum(forts[i]) == e_team then
-				enemy_home = Entity.GetAbsOrigin(forts[i])
-				break
-			end
-		end
-	end
-	if not enemy_home then
-		enemy_home = fountain_position(not my_radiant)
-	end
-	local enemy_creeps = enemy_lane_creeps(my_team)
 
 	local enemy_towers = nil
 	local function enemy_tower_list()
 		if not enemy_towers then
-			enemy_towers = build_enemy_towers(e_team)
+			enemy_towers = build_enemy_towers(enemy_team(my_team))
 		end
 		return enemy_towers
-	end
-
-	local enemy_raxes = nil
-	local function enemy_rax_list()
-		if not enemy_raxes then
-			enemy_raxes = build_enemy_barracks(e_team)
-		end
-		return enemy_raxes
 	end
 
 	local push_targets = nil
 	local function push_target_list()
 		if not push_targets then
-			push_targets = build_push_targets(enemy_tower_list(), enemy_rax_list())
+			push_targets = build_push_targets(enemy_tower_list(), build_enemy_barracks(enemy_team(my_team)))
 		end
 		return push_targets
 	end
@@ -1673,7 +1369,7 @@ local function process()
 		local cached = allied_cache[key]
 		if cached ~= nil then return cached end
 		local found = false
-		local list = NPCs.InRadius(entry.pos, ALLIED_RADIUS, my_team, TEAM_FRIEND, true, false)
+		local list = NPCs.InRadius(entry.pos, ALLIED_RADIUS, my_team, TEAM_FRIEND, true, true)
 		for i = 1, #list do
 			if NPC.IsLaneCreep(list[i]) then
 				found = true
@@ -1702,12 +1398,8 @@ local function process()
 		kite_on = kite_on,
 		debug_on = debug_on,
 		tower_list = enemy_tower_list,
-		rax_list = enemy_rax_list,
 		target_list = push_target_list,
 		allied_near = allied_creeps_near,
-		enemy_home = enemy_home,
-		enemy_creeps = enemy_creeps,
-		live = live_camps,
 	}
 
 	for i = 1, #units do
@@ -1720,67 +1412,51 @@ local function process()
 		end
 
 		local hold = manual_hold[idx]
-		local held = false
-		if hold then
-			if selected_now[idx] then
-				held = true
-			elseif hold > now then
-				held = true
-			else
-				manual_hold[idx] = nil
-				last_orders[idx] = nil
-			end
+		local held = hold ~= nil and hold > now
+		if hold and not held then
+			manual_hold[idx] = nil
+			last_orders[idx] = nil
 		end
 
-		local pushing = pushers_on and is_pusher(u)
+		local pushing = pusher_flags[i]
 
 		local health_pct = 100.0
 		local going_home = false
-		if not retreat_on then
+		if not retreat_on or pushing or NPC.IsIllusion(u) then
 			retreating[idx] = nil
 		elseif not held then
-			local health = Entity.GetHealth(u) or 0
 			local max_health = Entity.GetMaxHealth(u) or 0
 			if max_health > 0 then
-				health_pct = health / max_health * 100.0
+				health_pct = (Entity.GetHealth(u) or 0) / max_health * 100.0
 			end
 			if retreating[idx] then
-				if max_health > 0 and health >= max_health then
-					retreating[idx] = nil
-				end
+				if health_pct >= retreat_resume then retreating[idx] = nil end
 			elseif health_pct <= retreat_hp then
 				retreating[idx] = true
 			end
 			going_home = retreating[idx] == true
 		end
 
-		if held then
-			if debug_on then
-				debug_units[#debug_units + 1] = { pos = u_pos, text = "manual" }
-			end
-		elseif not orders_blocked(u) then
-			if going_home then
-				tick_retreat(ctx, u, idx, u_pos, health_pct)
-			elseif pushing then
-				tick_pusher(ctx, u, idx, u_pos)
-			else
-				tick_farmer(ctx, u, idx, u_pos)
-			end
+		if going_home then
+			tick_retreat(ctx, u, idx, u_pos, health_pct)
+		elseif not held and pushing then
+			tick_pusher(ctx, u, idx, u_pos, reach_distance(u, now))
+		elseif not held then
+			tick_farmer(ctx, u, idx, u_pos, reach_distance(u, now))
 		end
 
 	end
 end
 
+local DEBUG_TITLE_POS = Vec2(40, 240)
+local DEBUG_TITLE_COLOR = Color(255, 220, 120, 255)
+local DEBUG_UNIT_COLOR = Color(120, 255, 160, 255)
+
 local script = {}
 
 function script.OnUpdate()
-	if ui.toggle_bind:Get() ~= Enum.ButtonCode.KEY_NONE
-		and ui.toggle_bind:IsToggled() ~= ui.enable:Get() then
-		ui.enable:Set(ui.toggle_bind:IsToggled())
-	end
-
 	if not ui.enable:Get() then return end
-	if not in_match() then return end
+	if not Engine.IsInGame() then return end
 
 	local now = GameRules.GetGameTime()
 	if now < next_run then return end
@@ -1789,38 +1465,25 @@ function script.OnUpdate()
 	process()
 end
 
-function script.OnNpcSpawned(npc)
+function script.OnNpcSpawned()
 	if not ui.enable:Get() then return end
 	next_run = 0.0
-	if not npc or not camps then return end
-	if not NPC.IsNeutral(npc) then return end
-	local pos = Entity.GetAbsOrigin(npc)
-	for id = 1, #camps do
-		local camp = camps[id]
-		if pos:Distance2D(camp.pos) <= (camp.radius or CAMP_RADIUS) then
-			camp_empty[id] = nil
-		end
-	end
 end
 
 function script.OnDraw()
 	if not ui.enable:Get() or not ui.debug:Get() then return end
 	if not Engine.IsInGame() then return end
 
-	if not debug_font then
-		debug_font = Render.LoadFont("Verdana", Enum.FontCreate.FONTFLAG_ANTIALIAS, 500)
-	end
-
-	Render.Text(debug_font, 16, string.format("CreepControl | second %.1f | route %d",
-		debug_second, camps and #camps or 0),
-		Vec2(40, 240), Color(255, 220, 120, 255))
+	Render.Text(debug_font, 16, string.format("CreepControl | second %.1f | camps live %d/%d",
+		debug_second, camps_matched, camps and #camps or 0),
+		DEBUG_TITLE_POS, DEBUG_TITLE_COLOR)
 
 	for i = 1, #debug_units do
 		local entry = debug_units[i]
 		local screen, visible = Render.WorldToScreen(entry.pos)
 		if visible then
 			Render.Text(debug_font, 14, entry.text, Vec2(screen:GetX() - 60, screen:GetY() - 40),
-				Color(120, 255, 160, 255))
+				DEBUG_UNIT_COLOR)
 		end
 	end
 end
@@ -1828,7 +1491,6 @@ end
 function script.OnPrepareUnitOrders(data)
 	if not ui.enable:Get() then return true end
 	if not data or not data.npc then return true end
-	if data.identifier == ORDER_ID then return true end
 
 	local player = Players.GetLocal()
 	if not player or data.player ~= player then return true end
@@ -1837,14 +1499,12 @@ function script.OnPrepareUnitOrders(data)
 	if my_id < 0 then return true end
 
 	local hero = Heroes.GetLocal()
-	local until_t = GameRules.GetGameTime() + ui.manual_hold:Get()
+	local until_t = GameRules.GetGameTime() + MANUAL_HOLD
 
 	local function mark(unit)
 		if not unit or unit == hero then return end
 		if not controllable_by_me(unit, my_id) then return end
-		local idx = Entity.GetIndex(unit)
-		manual_hold[idx] = until_t
-		last_orders[idx] = nil
+		manual_hold[Entity.GetIndex(unit)] = until_t
 	end
 
 	mark(data.npc)
@@ -1862,7 +1522,6 @@ end
 function script.OnGameEnd()
 	reset_state()
 	fort_pos = nil
-	shop_pos = {}
 	camps = nil
 	camps_refined = false
 	camps_matched = 0

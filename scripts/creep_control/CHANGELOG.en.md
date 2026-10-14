@@ -1,0 +1,4 @@
+- Fixed unit-state cleanup so reused entity indexes do not inherit stale orders.
+- Improved camp selection and behavior for controlled units with limited lifetimes.
+- Added safe retreat-point selection away from nearby visible threats.
+- Optimized ability scanning and push-target selection.
