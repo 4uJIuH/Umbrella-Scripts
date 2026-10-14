@@ -6405,6 +6405,54 @@
           "Reload scripts and open `Scripts → Other → MMR Tracker Ultimate`."
         ]
       }
+    },
+    {
+      "id": "glyph_timer",
+      "tag": "glyph-timer",
+      "title": "Glyph Timer",
+      "kind": "lua",
+      "category": "dota",
+      "file": "glyph_timer.lua",
+      "author": "Xianeas (Discord: xianeas)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/glyph_timer",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=glyph-timer&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/glyph_timer/glyph_timer.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/glyph-timer-v1.0.0/glyph_timer.lua"
+      },
+      "ru": {
+        "tagline": "показывает таймер глифа над башнями и крипами",
+        "about": "Отображает оставшееся время действия глифа защиты над затронутыми юнитами и строениями. Автор отмечает, что скрипт создан с помощью ИИ.",
+        "features": [
+          "Полоса прогресса и оставшееся время над башнями, другими строениями и крипами",
+          "Фильтры для крипов, строений, союзников и врагов",
+          "Группировка близких таймеров отдельно для крипов и строений с отображением количества",
+          "Настройка размера, смещения, шрифта, цветов, тени и свечения"
+        ],
+        "install": [
+          "Поместите `glyph_timer.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `General → Main → Glyph Timer`."
+        ]
+      },
+      "en": {
+        "tagline": "shows glyph timers above towers and creeps",
+        "about": "Displays the remaining duration of the glyph protection effect above affected units and buildings. The author notes that the script was created with AI assistance.",
+        "features": [
+          "Progress bar and remaining time above towers, other buildings, and creeps",
+          "Filters for creeps, buildings, allies, and enemies",
+          "Clusters nearby timers separately for creeps and buildings, with a count",
+          "Configurable size, offset, font, colors, shadow, and glow"
+        ],
+        "install": [
+          "Place `glyph_timer.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `General → Main → Glyph Timer`."
+        ]
+      }
     }
   ]
 }

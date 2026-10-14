@@ -1,0 +1,4 @@
+- Added a remaining-duration glyph timer above towers, buildings, and creeps.
+- Added ally/enemy filters and clustering for nearby timers.
+- Added bar, font, color, shadow, and glow settings.
+- Created by the author with AI assistance.
