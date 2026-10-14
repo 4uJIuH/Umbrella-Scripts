@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`ringmaster-eul-combo-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/ringmaster-eul-combo-v1.0.0) | 2026-10-13 | [ringmaster_eul_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/ringmaster-eul-combo-v1.0.0/ringmaster_eul_combo.lua) | 0 |
+| [`ringmaster-eul-combo-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/ringmaster-eul-combo-v1.0.0) | 2026-10-13 | [ringmaster_eul_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/ringmaster-eul-combo-v1.0.0/ringmaster_eul_combo.lua) | 2 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=ringmaster-eul-combo&expanded=true)
 <!-- releases:end -->

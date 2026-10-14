@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`auto-aegis-mover-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/auto-aegis-mover-v1.0.0) | 2026-10-13 | [auto_aegis_mover.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-aegis-mover-v1.0.0/auto_aegis_mover.lua) | 1 |
+| [`auto-aegis-mover-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/auto-aegis-mover-v1.0.0) | 2026-10-13 | [auto_aegis_mover.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-aegis-mover-v1.0.0/auto_aegis_mover.lua) | 2 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-aegis-mover&expanded=true)
 <!-- releases:end -->

@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`lone-druid-bear-ai-deluxe-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/lone-druid-bear-ai-deluxe-v1.0.0) | 2026-10-13 | [lone_druid_bear_ai_deluxe.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/lone-druid-bear-ai-deluxe-v1.0.0/lone_druid_bear_ai_deluxe.lua) | 0 |
+| [`lone-druid-bear-ai-deluxe-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/lone-druid-bear-ai-deluxe-v1.0.0) | 2026-10-13 | [lone_druid_bear_ai_deluxe.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/lone-druid-bear-ai-deluxe-v1.0.0/lone_druid_bear_ai_deluxe.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=lone-druid-bear-ai-deluxe&expanded=true)
 <!-- releases:end -->

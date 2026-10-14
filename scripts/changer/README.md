@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`changer-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/changer-v1.0.0) | 2026-10-13 | [changer.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/changer-v1.0.0/changer.lua) | 0 |
+| [`changer-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/changer-v1.0.0) | 2026-10-13 | [changer.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/changer-v1.0.0/changer.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=changer&expanded=true)
 <!-- releases:end -->

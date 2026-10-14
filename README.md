@@ -374,18 +374,18 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | script | downloads | latest |
 | --- | --- | --- |
 | [Tinker Auto Farm](scripts/tinker_auto_farm) | 1 | `tinker-auto-farm-v1.0.4` |
-| [Script Manager](scripts/script_manager) | 19 | `script-manager-v2.2.0` |
+| [Script Manager](scripts/script_manager) | 39 | `script-manager-v2.2.0` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
 | [Naga PT Abuse](scripts/naga_pt_abuse) | 1 | `naga-pt-abuse-v1.0.0` |
-| [Auto Aegis Mover](scripts/auto_aegis_mover) | 1 | `auto-aegis-mover-v1.0.0` |
+| [Auto Aegis Mover](scripts/auto_aegis_mover) | 2 | `auto-aegis-mover-v1.0.0` |
 | [Invoker Combo Switcher](scripts/invoker_combo_switcher) | 1 | `invoker-combo-switcher-v1.0.0` |
 | [Magnus Skewer Ally](scripts/magnus_skewer_ally) | 1 | `magnus-skewer-ally-v1.0.0` |
 | [Better Better Techies Combo](scripts/better_better_techies_combo) | 2 | `better-better-techies-combo-v1.0.0` |
 | [Chat Translator](scripts/chat_translator) | 0 | `chat-translator-v1.0.0` |
 | [Hero Grid](scripts/hero_grid) | 0 | `hero-grid-v1.0.0` |
-| [Weather](scripts/weather) | 0 | `weather-v1.0.0` |
+| [Weather](scripts/weather) | 1 | `weather-v1.0.0` |
 | [Visage Familiar TP Helper](scripts/visage_familiar_tp) | 0 | `visage-familiar-tp-v1.0.0` |
 | [Grimstroke Helper](scripts/grimstroke_helper) | 0 | `grimstroke-helper-v1.0.0` |
 | [Phoenix SmartNova](scripts/phoenix_smartnova) | 0 | `phoenix-smartnova-v1.0.0` |
@@ -406,7 +406,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [MoM Sabre Abuse](scripts/mom_sabre_abuse) | 0 | `mom-sabre-abuse-v2.0.0` |
 | [Tinker 1x6 Farm](scripts/tinker_1x6_farm) | 0 | `tinker-1x6-farm-v1.0.0` |
 | [Forge Spirit Helper](scripts/forge_spirit_helper) | 0 | `forge-spirit-helper-v1.0.0` |
-| [Gank Threat](scripts/gank_threat) | 1 | `gank-threat-v1.0.0` |
+| [Gank Threat](scripts/gank_threat) | 3 | `gank-threat-v1.0.0` |
 | [Tinker Helper](scripts/tinker_helper) | 0 | `tinker-helper-v1.0.0` |
 | [Old HUD](scripts/old_hud) | 0 | `old-hud-v1.0.0` |
 | [Illusion Tracker](scripts/illusion_tracker) | 0 | `illusion-tracker-v1.0.0` |
@@ -422,25 +422,25 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Techies Auto Miner](scripts/techies_auto_miner) | 0 | `techies-auto-miner-v1.1` |
 | [Broodmother Camp Blocker](scripts/brood_camp_blocker) | 0 | `brood-camp-blocker-v1.6` |
 | [Hoodwink Blast Off Catch](scripts/hoodwink_bushwhack_techies) | 0 | `hoodwink-bushwhack-techies-v1.0.0` |
-| [Ringmaster Eul Combo](scripts/ringmaster_eul_combo) | 0 | `ringmaster-eul-combo-v1.0.0` |
-| [Spirit Breaker Charge Combo](scripts/spirit_breaker_charge) | 0 | `spirit-breaker-charge-v1.0.0` |
-| [Ward Predictor](scripts/ward_predictor) | 0 | `ward-predictor-v1.0.0` |
+| [Ringmaster Eul Combo](scripts/ringmaster_eul_combo) | 2 | `ringmaster-eul-combo-v1.0.0` |
+| [Spirit Breaker Charge Combo](scripts/spirit_breaker_charge) | 3 | `spirit-breaker-charge-v1.0.0` |
+| [Ward Predictor](scripts/ward_predictor) | 1 | `ward-predictor-v1.0.0` |
 | [Invoker SS](scripts/invoker_ss) | 0 | `invoker-ss-v138` |
-| [Sentry](scripts/sentry) | 1 | `sentry-v1.0.0` |
-| [Changer](scripts/changer) | 0 | `changer-v1.0.0` |
-| [Self Play](scripts/self_play_bot) | 1 | `self-play-v1.0.0` |
-| [Farm Pattern 2.5](scripts/farm_pattern) | 0 | `farm-pattern-v2.5` |
-| [Win Condition Engine](scripts/win_condition_engine) | 1 | `win-condition-engine-v1.0.0` |
-| [Invoker (beta)](scripts/invoker_beta) | 1 | `invoker-beta-v1.0.0` |
-| [Kez Combo](scripts/kez_combo) | 1 | `kez-combo-v1.0.0` |
-| [Techies Combo](scripts/techies_combo) | 0 | `techies-combo-v1.0.0` |
+| [Sentry](scripts/sentry) | 2 | `sentry-v1.0.0` |
+| [Changer](scripts/changer) | 1 | `changer-v1.0.0` |
+| [Self Play](scripts/self_play_bot) | 3 | `self-play-v1.0.0` |
+| [Farm Pattern 2.5](scripts/farm_pattern) | 1 | `farm-pattern-v2.5` |
+| [Win Condition Engine](scripts/win_condition_engine) | 8 | `win-condition-engine-v1.0.0` |
+| [Invoker (beta)](scripts/invoker_beta) | 4 | `invoker-beta-v1.0.0` |
+| [Kez Combo](scripts/kez_combo) | 5 | `kez-combo-v1.0.0` |
+| [Techies Combo](scripts/techies_combo) | 2 | `techies-combo-v1.0.0` |
 | [Lone Druid Auto Farm](scripts/ld_farm) | 0 | `ld-farm-v1.7` |
 | [Unusual Effects](scripts/unusual_cosmetics) | 0 | `unusual-cosmetics-v1.0.0` |
 | [Techies Tazer Dispel](scripts/techies_tazer_dispel) | 0 | `techies-tazer-dispel-v1.0.0` |
 | [Techies Brain Combo](scripts/techies_brain) | 0 | `techies-brain-v0.2.6` |
-| [Creep Control](scripts/creep_control) | 0 | `creep-control-v1.0.0` |
+| [Creep Control](scripts/creep_control) | 1 | `creep-control-v1.0.0` |
 | [KOTL Illuminate Pro](scripts/kotl_illuminate_pro) | 0 | `kotl-illuminate-pro-v1.0.0` |
-| [Lycan Auto Control](scripts/lycan_auto_control) | 0 | `lycan-auto-control-v1.0.0` |
+| [Lycan Auto Control](scripts/lycan_auto_control) | 1 | `lycan-auto-control-v1.0.0` |
 | [Mute Voice Lines](scripts/mute_voice_lines) | 0 | `mute-voice-lines-v1.0.0` |
 | [Tinker Glimmer during Rearm](scripts/tinker_glimmer_rearm) | 0 | `tinker-glimmer-rearm-v1.3` |
 | [Dota No Limit](scripts/dota_no_limit) | 0 | `dota-no-limit-v1.0.0` |
@@ -453,7 +453,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Control Ally](scripts/control_ally) | 0 | `control-ally-v1.0.0` |
 | [Eul / Wind Waker Blink Helper](scripts/eul_wind_waker_blink_helper) | 0 | `eul-wind-waker-blink-helper-v1.0.0` |
 | [Dark Carnival Path Tokens](scripts/dark_carnival_path_tokens) | 0 | `dark-carnival-path-tokens-v1.0.0` |
-| [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) | 0 | `lone-druid-bear-ai-deluxe-v1.0.0` |
+| [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) | 1 | `lone-druid-bear-ai-deluxe-v1.0.0` |
 | [Ward Triangulator](scripts/ward_triangulator) | 0 | `ward-triangulator-v1.0.0` |
 | [Muerta Dead Shot](scripts/muerta_dead_shot) | 0 | `muerta-dead-shot-v1.0.0` |
 | [Enemy Cooldowns](scripts/enemy_cooldowns) | 0 | `enemy-cooldowns-v1.0.0` |
@@ -463,12 +463,12 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Auto-Ruin](scripts/auto_ruin) | 0 | `auto-ruin-v1.0.0` |
 | [Broodmother Helper](scripts/broodmother_helper) | 0 | `broodmother-helper-v2.1` |
 | [Script Market](scripts/market) | 0 | `market-v1.0.0` |
-| [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) | 0 | `mmr-tracker-ultimate-v1.0.0` |
+| [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) | 1 | `mmr-tracker-ultimate-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
   <img alt="Downloads over time" src=".github/stats/stats-light.svg" width="840">
 </picture>
 
-2026-10-13
+2026-10-14
 <!-- stats:end -->
