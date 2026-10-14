@@ -63,38 +63,39 @@ def fetch():
         if repo and repo.lower() != REPO.lower():
             external.setdefault(repo, []).append(script)
 
-    for repo in [REPO]:
-        for rel in api("https://api.github.com/repos/%s/releases?per_page=100" % repo):
-            if rel.get("draft"):
-                continue
-            for a in rel.get("assets", []):
-                rows.append({
-                    "repo": repo,
-                    "tag": rel["tag_name"],
-                    "file": a["name"],
-                    "script": match(a["name"], rel["tag_name"]),
-                    "date": (rel.get("published_at") or "")[:10],
-                    "downloads": a["download_count"],
-                })
-    for repo, scripts in sorted(external.items()):
+    for repo in [REPO] + sorted(external):
         by_file = {}
-        for script in scripts:
+        for script in external.get(repo, []):
             by_file.setdefault(script.get("file", "").lower(), []).append(script)
-        for rel in api("https://api.github.com/repos/%s/releases?per_page=100" % repo):
-            if rel.get("draft"):
-                continue
-            for asset in rel.get("assets", []):
-                matches = by_file.get(asset.get("name", "").lower(), [])
-                if not matches:
+
+        page = 1
+        while True:
+            releases = api(
+                "https://api.github.com/repos/%s/releases?per_page=100&page=%d"
+                % (repo, page)
+            )
+            for rel in releases:
+                if rel.get("draft"):
                     continue
-                rows.append({
-                    "repo": repo,
-                    "tag": rel["tag_name"],
-                    "file": asset["name"],
-                    "script": matches[0]["id"] if len(matches) == 1 else None,
-                    "date": (rel.get("published_at") or "")[:10],
-                    "downloads": asset["download_count"],
-                })
+                for asset in rel.get("assets", []):
+                    if repo == REPO:
+                        script_id = match(asset["name"], rel["tag_name"])
+                    else:
+                        matches = by_file.get(asset.get("name", "").lower(), [])
+                        script_id = matches[0]["id"] if len(matches) == 1 else None
+                        if not matches:
+                            continue
+                    rows.append({
+                        "repo": repo,
+                        "tag": rel["tag_name"],
+                        "file": asset["name"],
+                        "script": script_id,
+                        "date": (rel.get("published_at") or "")[:10],
+                        "downloads": asset["download_count"],
+                    })
+            if len(releases) < 100:
+                break
+            page += 1
     return rows
 
 

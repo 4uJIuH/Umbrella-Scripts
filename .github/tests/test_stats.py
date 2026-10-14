@@ -44,6 +44,32 @@ class StatsTests(unittest.TestCase):
         self.assertEqual(rows[1]["script"], "external_script")
         self.assertEqual(rows[1]["repo"], "author/project")
 
+    def test_fetch_paginates_past_the_first_100_releases(self):
+        catalog = {
+            "repo": "owner/catalog",
+            "scripts": [
+                {"id": "anti_rubick", "tag": "anti-rubick", "title": "Anti-Rubick",
+                 "file": "anti_rubick.lua"},
+            ],
+        }
+        first_page = [
+            {"tag_name": "other-v1.0.%d" % i, "assets": []}
+            for i in range(100)
+        ]
+        second_page = [{
+            "tag_name": "anti-rubick-v1.0.0",
+            "published_at": "2026-10-13T02:57:01Z",
+            "assets": [{"name": "anti_rubick.lua", "download_count": 1}],
+        }]
+        with patch.object(stats, "CATALOG", catalog), patch.object(stats, "REPO", "owner/catalog"), \
+                patch.object(stats, "api", side_effect=[first_page, second_page]) as api:
+            rows = stats.fetch()
+
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["script"], "anti_rubick")
+        self.assertEqual(rows[0]["downloads"], 1)
+        self.assertIn("page=2", api.call_args_list[1].args[0])
+
 
 if __name__ == "__main__":
     unittest.main()
