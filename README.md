@@ -139,6 +139,7 @@
 - [Broodmother Helper](scripts/broodmother_helper) — автоконтроль, преследование и фарм пауков Broodmother
 - [Script Market](scripts/market) — устанавливает, удаляет и обновляет скрипты из ScriptIvMarket
 - [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) — панель ранга, прогресса MMR и статистики сессии
+- [Glyph Timer](scripts/glyph_timer) — показывает таймер глифа над башнями и крипами
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -325,6 +326,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Broodmother Helper](scripts/broodmother_helper) — Broodmother spider control, chasing, and farming
 - [Script Market](scripts/market) — installs, removes, and updates scripts from ScriptIvMarket
 - [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) — rank, MMR progress, and session-statistics panel
+- [Glyph Timer](scripts/glyph_timer) — shows glyph timers above towers and creeps
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -374,7 +376,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | script | downloads | latest |
 | --- | --- | --- |
 | [Tinker Auto Farm](scripts/tinker_auto_farm) | 1 | `tinker-auto-farm-v1.0.4` |
-| [Script Manager](scripts/script_manager) | 45 | `script-manager-v2.2.0` |
+| [Script Manager](scripts/script_manager) | 46 | `script-manager-v2.2.0` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
@@ -427,9 +429,9 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Invoker SS](scripts/invoker_ss) | 1 | `invoker-ss-v138` |
 | [Sentry](scripts/sentry) | 3 | `sentry-v1.0.0` |
 | [Changer](scripts/changer) | 4 | `changer-v1.0.0` |
-| [Self Play](scripts/self_play_bot) | 4 | `self-play-v1.0.0` |
+| [Self Play](scripts/self_play_bot) | 5 | `self-play-v1.0.0` |
 | [Farm Pattern 2.5](scripts/farm_pattern) | 2 | `farm-pattern-v2.5` |
-| [Win Condition Engine](scripts/win_condition_engine) | 10 | `win-condition-engine-v1.0.0` |
+| [Win Condition Engine](scripts/win_condition_engine) | 11 | `win-condition-engine-v1.0.0` |
 | [Invoker (beta)](scripts/invoker_beta) | 5 | `invoker-beta-v1.0.0` |
 | [Kez Combo](scripts/kez_combo) | 5 | `kez-combo-v1.0.0` |
 | [Techies Combo](scripts/techies_combo) | 3 | `techies-combo-v1.0.0` |
@@ -457,12 +459,12 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Muerta Dead Shot](scripts/muerta_dead_shot) | 0 | `muerta-dead-shot-v1.0.0` |
 | [Enemy Cooldowns](scripts/enemy_cooldowns) | 0 | `enemy-cooldowns-v1.0.0` |
 | [Can Teleport Out](scripts/can_teleport_out) | 0 | `can-teleport-out-v1.0.0` |
-| [Auto Courier Gem](scripts/auto_courier_gem) | 0 | `auto-courier-gem-v1.0.0` |
 | [Camp Stacker](scripts/stacker) | 0 | `camp-stacker-v1.0.0` |
 | [Auto-Ruin](scripts/auto_ruin) | 0 | `auto-ruin-v1.0.0` |
 | [Broodmother Helper](scripts/broodmother_helper) | 0 | `broodmother-helper-v2.1` |
 | [Script Market](scripts/market) | 0 | `market-v1.0.0` |
 | [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) | 1 | `mmr-tracker-ultimate-v1.0.0` |
+| [Glyph Timer](scripts/glyph_timer) | 0 | `glyph-timer-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

@@ -3,13 +3,9 @@
 отправляет курьера за выпавшим Gem и возвращает его в тайник / sends the courier to pick up a dropped Gem and return it to stash
 
 <!-- releases:start -->
-Скачать: [auto_courier_gem.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-courier-gem-v1.0.0/auto_courier_gem.lua) — `auto-courier-gem-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `auto_courier_gem.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/auto_courier_gem/auto_courier_gem.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`auto-courier-gem-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/auto-courier-gem-v1.0.0) | 2026-10-13 | [auto_courier_gem.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-courier-gem-v1.0.0/auto_courier_gem.lua) | 0 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-courier-gem&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-courier-gem&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
