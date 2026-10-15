@@ -3123,6 +3123,1034 @@
       },
       "date": "2026-10-14",
       "version_marker": "NONE"
+    },
+    {
+      "id": "arc_warden_control_rune",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_control_rune/arc_warden_control_rune.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_control_rune/arc_warden_control_rune.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Nev1r0Psixx0z (Discord: nev1r0psixx0z)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Arc Warden \u2192 \u041a\u043e\u043d\u0442\u0440\u043e\u043b\u044c \u0420\u0443\u043d"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Arc Warden \u2192 \u041a\u043e\u043d\u0442\u0440\u043e\u043b\u044c \u0420\u0443\u043d"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "arc_warden"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "treecutter_plus",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/treecutter_plus/opti.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/treecutter_plus/opti.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "0x10ma (Discord: _0x10ma_)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility \u2192 TreeCutter+"
+        ],
+        "en": [
+          "Scripts \u2192 Utility \u2192 TreeCutter+"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "tinker_fear_of_god",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_fear_of_god/fear_of_god.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_fear_of_god/fear_of_god.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "okakchik (Discord: okakchik)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Tinker \u2192 Tinker Fear of God Combo"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Tinker \u2192 Tinker Fear of God Combo"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "tinker"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "arc_warden_high_five",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_high_five/high_five.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_high_five/high_five.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Yerka (Discord: argenov)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Arc Warden \u2192 Arc Warden \u2192 \u041f\u044f\u0442\u044e\u043d\u044f"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Arc Warden \u2192 Arc Warden \u2192 \u041f\u044f\u0442\u044e\u043d\u044f"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "arc_warden"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "creep_block",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/creep_block/creep_block.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/creep_block/creep_block.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Yerka (Discord: argenov)",
+      "menu": {
+        "ru": [
+          "Creeps \u2192 Main \u2192 Creep Block"
+        ],
+        "en": [
+          "Creeps \u2192 Main \u2192 Creep Block"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "ember_spirit_sticky_trainer",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/ember_spirit_sticky_trainer/ember_spirit_sticky_trainer.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/ember_spirit_sticky_trainer/ember_spirit_sticky_trainer.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Mei.dota (Discord: mei.dota)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Ember Spirit Custom"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Ember Spirit Custom"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "ember_spirit"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "pt_mana_abuse",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/pt_mana_abuse/pt_mana_abuse.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/pt_mana_abuse/pt_mana_abuse.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Yerka (Discord: argenov)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 PT Abuse \u2192 Main"
+        ],
+        "en": [
+          "Scripts \u2192 PT Abuse \u2192 Main"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "marci_dust_delivery",
+      "version": "1.5.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/marci_dust_delivery/marci_dust_delivery.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/marci_dust_delivery/marci_dust_delivery.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Yerka (Discord: argenov)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Marci \u2192 Dusts",
+          "Scripts \u2192 Marci \u2192 Marci \u2192 Dusts"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Marci \u2192 Dusts",
+          "Scripts \u2192 Marci \u2192 Marci \u2192 Dusts"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "marci"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "arc_warden_rune_control",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_rune_control/arcwagner.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_rune_control/arcwagner.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "kael'thas' (Discord: feit._.)",
+      "menu": {
+        "ru": [
+          "Creeps \u2192 Arc moggers \u2192 Arc Warden Rune Control"
+        ],
+        "en": [
+          "Creeps \u2192 Arc moggers \u2192 Arc Warden Rune Control"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "arc_warden"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "cooldown_ping",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/cooldown_ping/CooldownPing.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/cooldown_ping/CooldownPing.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Flutter (Discord: ic3v0ke)",
+      "menu": {
+        "ru": [
+          "General \u2192 Cooldown Ping \u2192 Cooldown Ping"
+        ],
+        "en": [
+          "General \u2192 Cooldown Ping \u2192 Cooldown Ping"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "beastmaster_razorbacks",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/beastmaster_razorbacks/beastmaster.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/beastmaster_razorbacks/beastmaster.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u041b\u0451\u0445\u0430 (Discord: 1ngoverin)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Heroes \u2192 Beastmaster \u2192 Razorbacks \u2192 Settings"
+        ],
+        "en": [
+          "Scripts \u2192 Heroes \u2192 Beastmaster \u2192 Razorbacks \u2192 Settings"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "beastmaster"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "juggernaut_ward_control",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/juggernaut_ward_control/JuggernautWardControl.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/juggernaut_ward_control/JuggernautWardControl.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u82b1\u66c7\u308a hanagumori (Discord: euphoria2k)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Juggernaut \u2192 Main Settings \u2192 Ward Control"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Juggernaut \u2192 Main Settings \u2192 Ward Control"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "juggernaut"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "invoker_auto_alacrity",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_auto_alacrity/Auto_Alacrity.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_auto_alacrity/Auto_Alacrity.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "kotzzinski (Discord: kotzzinski)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 Alacrity"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 Alacrity"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "invoker"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "snapfire_cookie_landing",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/snapfire_cookie_landing/snapfire_cookie_landing.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/snapfire_cookie_landing/snapfire_cookie_landing.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "GojoShiz (Discord: gojoshiz)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Main \u2192 Snapfire \u2192 Firesnap Cookie \u2192 Self Cookie"
+        ],
+        "en": [
+          "Heroes \u2192 Main \u2192 Snapfire \u2192 Firesnap Cookie \u2192 Self Cookie"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "snapfire"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "mute_all_voice_phrases",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mute_all_voice_phrases/MuteAllVoicePhrases.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mute_all_voice_phrases/MuteAllVoicePhrases.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "bftv (Discord: worldviberussia)",
+      "menu": {
+        "ru": [
+          "Miscellaneous \u2192 In Game \u2192 Mute Voice Phrases"
+        ],
+        "en": [
+          "Miscellaneous \u2192 In Game \u2192 Mute Voice Phrases"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "mini_games",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mini_games/mini_games.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mini_games/mini_games.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u043b\u0435\u0445\u0430 \u0432\u0430\u043d\u044f \u0438 \u0432\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility \u2192 \u041c\u0438\u043d\u0438-\u0438\u0433\u0440\u044b"
+        ],
+        "en": [
+          "Scripts \u2192 Utility \u2192 \u041c\u0438\u043d\u0438-\u0438\u0433\u0440\u044b"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "mmr_log",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mmr_log/mmr_log.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/mmr_log/mmr_log.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "CODEX (Discord: _codex_7)",
+      "menu": {
+        "ru": [
+          "MMR Tracker \u2192 Stats \u2192 Overview"
+        ],
+        "en": [
+          "MMR Tracker \u2192 Stats \u2192 Overview"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "invoker_sunstrike_on_tp",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_sunstrike_on_tp/invokersunstikevtp.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_sunstrike_on_tp/invokersunstikevtp.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u2027 \u207a zxqiren \u00b4\u1d54 (Discord: zxqirrn)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 Auto Usage \u2192 Sun Strike Settings"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 Auto Usage \u2192 Sun Strike Settings"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "invoker"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "autopick",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/autopick/autopick.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/autopick/autopick.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Sodinokibi (Discord: sodinokibi_)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Main \u2192 \u0410\u0432\u0442\u043e-\u043f\u0438\u043a"
+        ],
+        "en": [
+          "Scripts \u2192 Main \u2192 \u0410\u0432\u0442\u043e-\u043f\u0438\u043a"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "SCRIPT_VERSION"
+    },
+    {
+      "id": "txt_spoofer",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/txt_spoofer/txtspoofer.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/txt_spoofer/txtspoofer.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "0x10ma (Discord: _0x10ma_)",
+      "menu": {
+        "ru": [
+          "General \u2192 Visuals \u2192 TXT Spoofer"
+        ],
+        "en": [
+          "General \u2192 Visuals \u2192 TXT Spoofer"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "zeus_heavenly_jump_range",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/zeus_heavenly_jump_range/zeus_heavenly_jump_range.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/zeus_heavenly_jump_range/zeus_heavenly_jump_range.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "GojoShiz (Discord: gojoshiz)",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 Zeus Heavenly Jump \u2192 Visuals \u2192 Main"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Zeus Heavenly Jump \u2192 Visuals \u2192 Main"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "zuus"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "meepo_v2",
+      "version": "2.0.0-beta.1",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/meepo_v2/meepo_v2.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/meepo_v2/meepo_v2.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "megamind (Discord: just_clipsx)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Meepo \u2192 Meepo Panel"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Meepo \u2192 Meepo Panel"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "meepo"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "abaddon_borrowed_time_plus_one",
+      "version": "1.0.0-beta.1",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/abaddon_borrowed_time_plus_one/borrowed_time_plus_one.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/abaddon_borrowed_time_plus_one/borrowed_time_plus_one.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "/\\ (Discord: sediksss)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Abaddon \u2192 \u0410\u0432\u0442\u043e\u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0435 \u2192 borrowed time",
+          "Heroes \u2192 Hero List \u2192 Abaddon \u2192 \u0410\u0432\u0442\u043e-\u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0435 \u2192 borrowed time",
+          "Heroes \u2192 Hero List \u2192 Abaddon \u2192 Auto Usage \u2192 borrowed time",
+          "Heroes \u2192 Hero List \u2192 Abaddon \u2192 borrowed time \u2192 borrowed time",
+          "uc.zone \u2192 Quality of Life \u2192 Abaddon \u2192 borrowed time \u2192 borrowed time"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Abaddon \u2192 Auto Usage \u2192 borrowed time",
+          "Heroes \u2192 Hero List \u2192 Abaddon \u2192 borrowed time \u2192 borrowed time",
+          "uc.zone \u2192 Quality of Life \u2192 Abaddon \u2192 borrowed time \u2192 borrowed time"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "abaddon"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "zmeyka",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/zmeyka/zmeyka.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/zmeyka/zmeyka.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "azumi (Discord: azumiq)",
+      "menu": {
+        "ru": [
+          "General \u2192 \u0417\u043c\u0435\u0439\u043a\u0430 \u2192 \u0417\u043c\u0435\u0439\u043a\u0430"
+        ],
+        "en": [
+          "General \u2192 Snake Game \u2192 Snake Game"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "dota_imba",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dota_imba/dota_imba.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dota_imba/dota_imba.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "whyme? (Discord: whymequestions)",
+      "menu": {
+        "ru": [
+          "General \u2192 dota imba \u2192 Main"
+        ],
+        "en": [
+          "General \u2192 dota imba \u2192 Main"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "earth_spirit_boulder_helper",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/earth_spirit_boulder_helper/earth_spirit_boulder_helper.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/earth_spirit_boulder_helper/earth_spirit_boulder_helper.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "CODEX (Discord: _codex_7)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 HEROES \u2192 Earth Spirit \u2192 Boulder Helper \u2192 Settings"
+        ],
+        "en": [
+          "Scripts \u2192 HEROES \u2192 Earth Spirit \u2192 Boulder Helper \u2192 Settings"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "earth_spirit"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "walrus_kick_assist",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/walrus_kick_assist/walrus_kick_assist.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/walrus_kick_assist/walrus_kick_assist.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "haze.fff (Discord: josaph_h)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Tusk \u2192 Walrus Kick Assist",
+          "General \u2192 Tusk \u2192 Walrus Kick Assist"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Tusk \u2192 Walrus Kick Assist",
+          "General \u2192 Tusk \u2192 Walrus Kick Assist"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "tusk"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "techies_tazer_auto_detonate",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/techies_tazer_auto_detonate/techies_tazer_auto_detonate.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/techies_tazer_auto_detonate/techies_tazer_auto_detonate.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u82b1\u66c7\u308a hanagumori (Discord: euphoria2k)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Techies \u2192 Main Settings \u2192 Auto Dispel"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Techies \u2192 Main Settings \u2192 Auto Dispel"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "techies"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "invoker_tp_sun_strike",
+      "version": "1.8.6",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_tp_sun_strike/invoker_tp_sun_strike.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_tp_sun_strike/invoker_tp_sun_strike.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u041b\u0451\u0445\u0430 (Discord: 1ngoverin)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 TP Sun Strike",
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 TP Filter",
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 TP Interface"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 TP Sun Strike",
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 TP Filter",
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 TP Interface"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "invoker"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "courier_build_route",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/courier_build_route/courier_build.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/courier_build_route/courier_build.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "nie (Discord: internetfanat)",
+      "menu": {
+        "ru": [
+          "Miscellaneous \u2192 In Game \u2192 Courier \u2192 Main \u2192 Courier"
+        ],
+        "en": [
+          "Miscellaneous \u2192 In Game \u2192 Courier \u2192 Main \u2192 Courier"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "brood_pull_s",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/brood_pull_s/brood_pull_s.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/brood_pull_s/brood_pull_s.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "cuter as a vampire (Discord: internetenemy)",
+      "menu": {
+        "ru": [
+          "General \u2192 Lane Pull \u2192 lane_pull"
+        ],
+        "en": [
+          "General \u2192 Lane Pull \u2192 lane_pull"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "broodmother"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "force_cookie_cursor_cast",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/force_cookie_cursor_cast/forcecookies.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/force_cookie_cursor_cast/forcecookies.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "haze.fff (Discord: josaph_h)",
+      "menu": {
+        "ru": [
+          "Miscellaneous \u2192 In Game \u2192 \u0418\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0435 \u043f\u043e \u043a\u0443\u0440\u0441\u043e\u0440\u0443"
+        ],
+        "en": [
+          "Miscellaneous \u2192 In Game \u2192 \u0418\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0435 \u043f\u043e \u043a\u0443\u0440\u0441\u043e\u0440\u0443"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "abaddon_auto_mist_coil",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/abaddon_auto_mist_coil/AutoMistCoil.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/abaddon_auto_mist_coil/AutoMistCoil.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u82b1\u66c7\u308a hanagumori (Discord: euphoria2k)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Abaddon \u2192 Auto Usage \u2192 AutoMistCoil"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Abaddon \u2192 Auto Usage \u2192 AutoMistCoil"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "abaddon"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "void_spirit_escape",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/void_spirit_escape/void_spirit_escape.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/void_spirit_escape/void_spirit_escape.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u82b1\u66c7\u308a hanagumori (Discord: euphoria2k)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Void Spirit \u2192 Main Settings \u2192 Escape Module"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Void Spirit \u2192 Main Settings \u2192 Escape Module"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "void_spirit"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "pogoda_ui",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/pogoda_ui/PogodaUI.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/pogoda_ui/PogodaUI.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u041b\u0451\u0445\u0430 (Discord: 1ngoverin)",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 PogodaUI"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 PogodaUI"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "fog_of_war_predictor",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/fog_of_war_predictor/FogOfWarPredictor.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/fog_of_war_predictor/FogOfWarPredictor.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u82b1\u66c7\u308a hanagumori (Discord: euphoria2k)",
+      "menu": {
+        "ru": [
+          "Info Screen \u2192 Main \u2192 Heroes Overlay \u2192 Main \u2192 Fog Prediction"
+        ],
+        "en": [
+          "Info Screen \u2192 Main \u2192 Heroes Overlay \u2192 Main \u2192 Fog Prediction"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "tree_cutter_bf2",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tree_cutter_bf2/bf2.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tree_cutter_bf2/bf2.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Forever (Discord: hideshot)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Main \u2192 Tree Cutter"
+        ],
+        "en": [
+          "Scripts \u2192 Main \u2192 Tree Cutter"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "session_info",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/session_info/SessionInfo.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/session_info/SessionInfo.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "kotzzinski (Discord: kotzzinski)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Other \u2192 Session Info \u2192 Main",
+          "Scripts \u2192 Other \u2192 Session Info \u2192 Settings"
+        ],
+        "en": [
+          "Scripts \u2192 Other \u2192 Session Info \u2192 Main",
+          "Scripts \u2192 Other \u2192 Session Info \u2192 Settings"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "autofocus",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/autofocus/AutoFocus.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/autofocus/AutoFocus.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "hori (Discord: cssf_)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Settings \u2192 General \u2192 Units Controller \u2192 AutoFocus"
+        ],
+        "en": [
+          "Heroes \u2192 Settings \u2192 General \u2192 Units Controller \u2192 AutoFocus"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "techies"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "warlock_control_golems",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/warlock_control_golems/WarlockControlGolems.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/warlock_control_golems/WarlockControlGolems.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u82b1\u66c7\u308a hanagumori (Discord: euphoria2k)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Warlock \u2192 Main Settings \u2192 Control Golems"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Warlock \u2192 Main Settings \u2192 Control Golems"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "warlock"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "dust_radius",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dust_radius/dust_radius.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dust_radius/dust_radius.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "OutByte@archik in ~/bio (Discord: outbytenochek)",
+      "menu": {
+        "ru": [
+          "Info Screen \u2192 Main \u2192 Radius \u2192 Main \u2192 Others Settings \u2192 Dust Radius"
+        ],
+        "en": [
+          "Info Screen \u2192 Main \u2192 Radius \u2192 Main \u2192 Others Settings \u2192 Dust Radius"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "cosmic_menu",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/cosmic_menu/CosmicMenu.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/cosmic_menu/CosmicMenu.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u82b1\u66c7\u308a hanagumori (Discord: euphoria2k)",
+      "menu": {
+        "ru": [
+          "Changer \u2192 Main \u2192 CosmicMenu \u2192 Settings",
+          "General \u2192 Main \u2192 CosmicMenu \u2192 Settings"
+        ],
+        "en": [
+          "Changer \u2192 Main \u2192 CosmicMenu \u2192 Settings",
+          "General \u2192 Main \u2192 CosmicMenu \u2192 Settings"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "tinker_tweak",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_tweak/TinkerTweak.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_tweak/TinkerTweak.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "7synxet (Discord: texnys7)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Tinker \u2192 Tinker Misc Functions \u2192 \u0422\u0432\u0438\u043a\u0438 Tinker"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Tinker \u2192 Tinker Misc Functions \u2192 \u0422\u0432\u0438\u043a\u0438 Tinker"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "tinker"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "flutter_fx",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/flutter_fx/FlutterFX.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/flutter_fx/FlutterFX.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "Flutter (Discord: ic3v0ke)",
+      "menu": {
+        "ru": [
+          "General \u2192 Combat Text FX \u2192 Flutter Combat"
+        ],
+        "en": [
+          "General \u2192 Combat Text FX \u2192 Flutter Combat"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "tinker_glimmer_combo",
+      "version": "1.2.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_glimmer_combo/tincomb_v1.2.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_glimmer_combo/tincomb_v1.2.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "okakchik (Discord: okakchik)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Tinker \u2192 Tinker Misc Functions \u2192 \u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043a\u043e\u043c\u0431\u043e \u0441 \u0433\u043b\u0438\u043c\u0435\u0440\u043e\u043c",
+          "Heroes \u2192 Hero List \u2192 Tinker \u2192 Tinker Misc Functions \u2192 \u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043f\u043e\u0431\u0435\u0433\u0430"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Tinker \u2192 Tinker Misc Functions \u2192 \u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043a\u043e\u043c\u0431\u043e \u0441 \u0433\u043b\u0438\u043c\u0435\u0440\u043e\u043c",
+          "Heroes \u2192 Hero List \u2192 Tinker \u2192 Tinker Misc Functions \u2192 \u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043f\u043e\u0431\u0435\u0433\u0430"
+        ]
+      },
+      "date": "2026-10-15",
+      "heroes": [
+        "tinker"
+      ],
+      "version_marker": "NONE"
+    },
+    {
+      "id": "toxic_chat_guard",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/toxic_chat_guard/ToxicChatGuard.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/toxic_chat_guard/ToxicChatGuard.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "serioga5035 (Discord: serioga5035)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility \u2192 Toxic Chat Guard \u2192 \u041e\u0441\u043d\u043e\u0432\u043d\u043e\u0435",
+          "Scripts \u2192 Utility \u2192 Toxic Chat Guard \u2192 \u041c\u043e\u043d\u0438\u0442\u043e\u0440"
+        ],
+        "en": [
+          "Scripts \u2192 Utility \u2192 Toxic Chat Guard \u2192 \u041e\u0441\u043d\u043e\u0432\u043d\u043e\u0435",
+          "Scripts \u2192 Utility \u2192 Toxic Chat Guard \u2192 \u041c\u043e\u043d\u0438\u0442\u043e\u0440"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "auto_unsleep",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/auto_unsleep/AutoUnsleep.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/auto_unsleep/AutoUnsleep.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u82b1\u66c7\u308a hanagumori (Discord: euphoria2k)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Settings \u2192 General \u2192 Units Controller \u2192 AutoUnsleep"
+        ],
+        "en": [
+          "Heroes \u2192 Settings \u2192 General \u2192 Units Controller \u2192 AutoUnsleep"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "follow_selected_hero",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/follow_selected_hero/FollowSelectedHero.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/follow_selected_hero/FollowSelectedHero.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "64qt (Discord: 32tq)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility \u2192 Follow Hero"
+        ],
+        "en": [
+          "Scripts \u2192 Utility \u2192 Follow Hero"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "radial_chat",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/radial_chat/RadialChat.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/radial_chat/RadialChat.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "love (Discord: etolove)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility \u2192 RadialChat \u2192 Main"
+        ],
+        "en": [
+          "Scripts \u2192 Utility \u2192 RadialChat \u2192 Main"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
     }
   ]
 }

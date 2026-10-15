@@ -121,6 +121,268 @@ OVERRIDES = {
             "Scripts → User Scripts → Windranger Powershot",
         ],
     },
+    "arc_warden_control_rune": {
+        "ru": ["Heroes → Hero List → Arc Warden → Контроль Рун"],
+        "en": ["Heroes → Hero List → Arc Warden → Контроль Рун"],
+    },
+    "treecutter_plus": {
+        "ru": ["Scripts → Utility → TreeCutter+"],
+        "en": ["Scripts → Utility → TreeCutter+"],
+    },
+    "tinker_fear_of_god": {
+        "ru": ["Heroes → Hero List → Tinker → Tinker Fear of God Combo"],
+        "en": ["Heroes → Hero List → Tinker → Tinker Fear of God Combo"],
+    },
+    "arc_warden_high_five": {
+        "ru": ["Heroes → Hero List → Arc Warden → Arc Warden → Пятюня"],
+        "en": ["Heroes → Hero List → Arc Warden → Arc Warden → Пятюня"],
+    },
+    "creep_block": {
+        "ru": ["Creeps → Main → Creep Block"],
+        "en": ["Creeps → Main → Creep Block"],
+    },
+    "ember_spirit_sticky_trainer": {
+        "ru": ["Heroes → Hero List → Ember Spirit Custom"],
+        "en": ["Heroes → Hero List → Ember Spirit Custom"],
+    },
+    "pt_mana_abuse": {
+        "ru": ["Scripts → PT Abuse → Main"],
+        "en": ["Scripts → PT Abuse → Main"],
+    },
+    "marci_dust_delivery": {
+        "ru": [
+            "Heroes → Hero List → Marci → Dusts",
+            "Scripts → Marci → Marci → Dusts",
+        ],
+        "en": [
+            "Heroes → Hero List → Marci → Dusts",
+            "Scripts → Marci → Marci → Dusts",
+        ],
+    },
+    "arc_warden_rune_control": {
+        "ru": ["Creeps → Arc moggers → Arc Warden Rune Control"],
+        "en": ["Creeps → Arc moggers → Arc Warden Rune Control"],
+    },
+    "cooldown_ping": {
+        "ru": ["General → Cooldown Ping → Cooldown Ping"],
+        "en": ["General → Cooldown Ping → Cooldown Ping"],
+    },
+    "beastmaster_razorbacks": {
+        "ru": ["Scripts → Heroes → Beastmaster → Razorbacks → Settings"],
+        "en": ["Scripts → Heroes → Beastmaster → Razorbacks → Settings"],
+    },
+    "juggernaut_ward_control": {
+        "ru": ["Heroes → Hero List → Juggernaut → Main Settings → Ward Control"],
+        "en": ["Heroes → Hero List → Juggernaut → Main Settings → Ward Control"],
+    },
+    "invoker_auto_alacrity": {
+        "ru": ["Heroes → Hero List → Invoker → Alacrity"],
+        "en": ["Heroes → Hero List → Invoker → Alacrity"],
+    },
+    "snapfire_cookie_landing": {
+        "ru": ["Heroes → Main → Snapfire → Firesnap Cookie → Self Cookie"],
+        "en": ["Heroes → Main → Snapfire → Firesnap Cookie → Self Cookie"],
+    },
+    "mute_all_voice_phrases": {
+        "ru": ["Miscellaneous → In Game → Mute Voice Phrases"],
+        "en": ["Miscellaneous → In Game → Mute Voice Phrases"],
+    },
+    "mini_games": {
+        "ru": ["Scripts → Utility → Мини-игры"],
+        "en": ["Scripts → Utility → Мини-игры"],
+    },
+    "mmr_log": {
+        "ru": ["MMR Tracker → Stats → Overview"],
+        "en": ["MMR Tracker → Stats → Overview"],
+    },
+    "invoker_sunstrike_on_tp": {
+        "ru": ["Heroes → Hero List → Invoker → Auto Usage → Sun Strike Settings"],
+        "en": ["Heroes → Hero List → Invoker → Auto Usage → Sun Strike Settings"],
+    },
+    "autopick": {
+        "ru": ["Scripts → Main → Авто-пик"],
+        "en": ["Scripts → Main → Авто-пик"],
+    },
+    "txt_spoofer": {
+        "ru": ["General → Visuals → TXT Spoofer"],
+        "en": ["General → Visuals → TXT Spoofer"],
+    },
+    "zeus_heavenly_jump_range": {
+        "ru": ["General → Main → Zeus Heavenly Jump → Visuals → Main"],
+        "en": ["General → Main → Zeus Heavenly Jump → Visuals → Main"],
+    },
+    "meepo_v2": {
+        "ru": ["Heroes → Hero List → Meepo → Meepo Panel"],
+        "en": ["Heroes → Hero List → Meepo → Meepo Panel"],
+    },
+    "abaddon_borrowed_time_plus_one": {
+        "ru": [
+            "Heroes → Hero List → Abaddon → Автоиспользование → borrowed time",
+            "Heroes → Hero List → Abaddon → Авто-использование → borrowed time",
+            "Heroes → Hero List → Abaddon → Auto Usage → borrowed time",
+            "Heroes → Hero List → Abaddon → borrowed time → borrowed time",
+            "uc.zone → Quality of Life → Abaddon → borrowed time → borrowed time",
+        ],
+        "en": [
+            "Heroes → Hero List → Abaddon → Auto Usage → borrowed time",
+            "Heroes → Hero List → Abaddon → borrowed time → borrowed time",
+            "uc.zone → Quality of Life → Abaddon → borrowed time → borrowed time",
+        ],
+    },
+    "zmeyka": {
+        "ru": ["General → Змейка → Змейка"],
+        "en": ["General → Snake Game → Snake Game"],
+    },
+    "dota_imba": {
+        "ru": ["General → dota imba → Main"],
+        "en": ["General → dota imba → Main"],
+    },
+    "earth_spirit_boulder_helper": {
+        "ru": ["Scripts → HEROES → Earth Spirit → Boulder Helper → Settings"],
+        "en": ["Scripts → HEROES → Earth Spirit → Boulder Helper → Settings"],
+    },
+    "walrus_kick_assist": {
+        "ru": [
+            "Heroes → Hero List → Tusk → Walrus Kick Assist",
+            "General → Tusk → Walrus Kick Assist",
+        ],
+        "en": [
+            "Heroes → Hero List → Tusk → Walrus Kick Assist",
+            "General → Tusk → Walrus Kick Assist",
+        ],
+    },
+    "techies_tazer_auto_detonate": {
+        "ru": ["Heroes → Hero List → Techies → Main Settings → Auto Dispel"],
+        "en": ["Heroes → Hero List → Techies → Main Settings → Auto Dispel"],
+    },
+    "invoker_tp_sun_strike": {
+        "ru": [
+            "Heroes → Hero List → Invoker → TP Sun Strike",
+            "Heroes → Hero List → Invoker → TP Filter",
+            "Heroes → Hero List → Invoker → TP Interface",
+        ],
+        "en": [
+            "Heroes → Hero List → Invoker → TP Sun Strike",
+            "Heroes → Hero List → Invoker → TP Filter",
+            "Heroes → Hero List → Invoker → TP Interface",
+        ],
+    },
+    "courier_build_route": {
+        "ru": ["Miscellaneous → In Game → Courier → Main → Courier"],
+        "en": ["Miscellaneous → In Game → Courier → Main → Courier"],
+    },
+    "brood_pull_s": {
+        "ru": ["General → Lane Pull → lane_pull"],
+        "en": ["General → Lane Pull → lane_pull"],
+    },
+    "force_cookie_cursor_cast": {
+        "ru": ["Miscellaneous → In Game → Использование по курсору"],
+        "en": ["Miscellaneous → In Game → Использование по курсору"],
+    },
+    "abaddon_auto_mist_coil": {
+        "ru": ["Heroes → Hero List → Abaddon → Auto Usage → AutoMistCoil"],
+        "en": ["Heroes → Hero List → Abaddon → Auto Usage → AutoMistCoil"],
+    },
+    "void_spirit_escape": {
+        "ru": ["Heroes → Hero List → Void Spirit → Main Settings → Escape Module"],
+        "en": ["Heroes → Hero List → Void Spirit → Main Settings → Escape Module"],
+    },
+    "pogoda_ui": {
+        "ru": ["General → Main → PogodaUI"],
+        "en": ["General → Main → PogodaUI"],
+    },
+    "fog_of_war_predictor": {
+        "ru": ["Info Screen → Main → Heroes Overlay → Main → Fog Prediction"],
+        "en": ["Info Screen → Main → Heroes Overlay → Main → Fog Prediction"],
+    },
+    "tree_cutter_bf2": {
+        "ru": ["Scripts → Main → Tree Cutter"],
+        "en": ["Scripts → Main → Tree Cutter"],
+    },
+    "session_info": {
+        "ru": [
+            "Scripts → Other → Session Info → Main",
+            "Scripts → Other → Session Info → Settings",
+        ],
+        "en": [
+            "Scripts → Other → Session Info → Main",
+            "Scripts → Other → Session Info → Settings",
+        ],
+    },
+    "autofocus": {
+        "ru": ["Heroes → Settings → General → Units Controller → AutoFocus"],
+        "en": ["Heroes → Settings → General → Units Controller → AutoFocus"],
+    },
+    "warlock_control_golems": {
+        "ru": [
+            "Heroes → Hero List → Warlock → Main Settings → Control Golems"
+        ],
+        "en": [
+            "Heroes → Hero List → Warlock → Main Settings → Control Golems"
+        ],
+    },
+    "dust_radius": {
+        "ru": [
+            "Info Screen → Main → Radius → Main → Others Settings → Dust Radius"
+        ],
+        "en": [
+            "Info Screen → Main → Radius → Main → Others Settings → Dust Radius"
+        ],
+    },
+    "cosmic_menu": {
+        "ru": [
+            "Changer → Main → CosmicMenu → Settings",
+            "General → Main → CosmicMenu → Settings",
+        ],
+        "en": [
+            "Changer → Main → CosmicMenu → Settings",
+            "General → Main → CosmicMenu → Settings",
+        ],
+    },
+    "tinker_tweak": {
+        "ru": [
+            "Heroes → Hero List → Tinker → Tinker Misc Functions → Твики Tinker"
+        ],
+        "en": [
+            "Heroes → Hero List → Tinker → Tinker Misc Functions → Твики Tinker"
+        ],
+    },
+    "flutter_fx": {
+        "ru": ["General → Combat Text FX → Flutter Combat"],
+        "en": ["General → Combat Text FX → Flutter Combat"],
+    },
+    "tinker_glimmer_combo": {
+        "ru": [
+            "Heroes → Hero List → Tinker → Tinker Misc Functions → Настройки комбо с глимером",
+            "Heroes → Hero List → Tinker → Tinker Misc Functions → Настройки побега",
+        ],
+        "en": [
+            "Heroes → Hero List → Tinker → Tinker Misc Functions → Настройки комбо с глимером",
+            "Heroes → Hero List → Tinker → Tinker Misc Functions → Настройки побега",
+        ],
+    },
+    "toxic_chat_guard": {
+        "ru": [
+            "Scripts → Utility → Toxic Chat Guard → Основное",
+            "Scripts → Utility → Toxic Chat Guard → Монитор",
+        ],
+        "en": [
+            "Scripts → Utility → Toxic Chat Guard → Основное",
+            "Scripts → Utility → Toxic Chat Guard → Монитор",
+        ],
+    },
+    "auto_unsleep": {
+        "ru": ["Heroes → Settings → General → Units Controller → AutoUnsleep"],
+        "en": ["Heroes → Settings → General → Units Controller → AutoUnsleep"],
+    },
+    "follow_selected_hero": {
+        "ru": ["Scripts → Utility → Follow Hero"],
+        "en": ["Scripts → Utility → Follow Hero"],
+    },
+    "radial_chat": {
+        "ru": ["Scripts → Utility → RadialChat → Main"],
+        "en": ["Scripts → Utility → RadialChat → Main"],
+    },
 }
 
 
