@@ -651,6 +651,7 @@
         "features": [
           "Загружает общий каталог с сайта и показывает скрипты по категориям, героям и статусу установки",
           "Отображает описания, возможности, автора, источник и доступную версию выбранного скрипта",
+          "Показывает путь к меню скрипта в его карточке",
           "Ищет скрипты и сортирует каталог, установленные файлы и доступные обновления",
           "Автоматически проверяет каталог при запуске; проверку можно повторить вручную или настроить периодичность",
           "Устанавливает и обновляет отдельные скрипты, создавая резервную копию заменяемого файла",
@@ -674,6 +675,7 @@
         "features": [
           "Loads the shared website catalog and groups scripts by category, hero, and installation status",
           "Shows a selected script's description, features, author, source, and available version",
+          "Shows the script's menu path on its details card",
           "Searches and sorts the catalog, installed files, and available updates",
           "Checks the catalog on startup, with manual refresh and configurable recheck intervals",
           "Installs and updates individual scripts while keeping a backup of replaced files",

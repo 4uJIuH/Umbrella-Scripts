@@ -1,3 +1,8 @@
+# Update v2.6.0
+
+- Each script's menu location is now shown in a dedicated, easy-to-find section on its details card.
+- Localized menu paths and multiple paths per script are supported.
+
 # Update v2.5.0
 
 - Scripts that install together with a folder (`lib` for Tinker Auto Farm, `filters` for BehaviorScoreHelper) now show a bright notice on their page: which empty folder to create in the scripts folder before installing.

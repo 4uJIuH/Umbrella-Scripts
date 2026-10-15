@@ -1,3 +1,4 @@
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -82,9 +83,13 @@ class DiscordSyncTests(unittest.TestCase):
             / "script_manager"
             / "script_manager.lua"
         )
-        new_source = source_path.read_bytes().replace(
-            b'local VERSION = "2.5.0"', b'local VERSION = "2.1.0"'
+        new_source, replacements = re.subn(
+            rb'local VERSION = "[^"]+"',
+            b'local VERSION = "2.1.0"',
+            source_path.read_bytes(),
+            count=1,
         )
+        self.assertEqual(replacements, 1)
         messages = [
             {
                 "id": "101",

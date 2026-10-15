@@ -342,9 +342,6 @@ local localization = qLocalization.new({
 		sm_cat_auxiliary = "Tools",
 		sm_cat_universal = "Universal",
 		sm_nav_authors = "Authors",
-		sm_nav_locations = "Menu paths",
-		sm_menu_location = "Menu location",
-		sm_menu_unknown = "The path could not be determined from the available source files.",
 
 		sm_search = "Search",
 		sm_sort_catalog = "Catalog order",
@@ -409,6 +406,8 @@ local localization = qLocalization.new({
 		sm_lib_nlz = "qLocalization",
 		sm_lib_none = "Not needed",
 		sm_about = "About",
+		sm_menu_path = "Menu path",
+		sm_menu_unknown = "Not specified",
 		sm_features = "Features",
 
 		sm_restart_t = "Restart needed",
@@ -510,9 +509,6 @@ local localization = qLocalization.new({
 		sm_cat_auxiliary = "Инструменты",
 		sm_cat_universal = "Универсальные",
 		sm_nav_authors = "Авторы",
-		sm_nav_locations = "Пути меню",
-		sm_menu_location = "Расположение меню",
-		sm_menu_unknown = "Путь не удалось определить по доступным исходникам.",
 
 		sm_search = "Поиск",
 		sm_sort_catalog = "Как в каталоге",
@@ -580,6 +576,8 @@ local localization = qLocalization.new({
 		sm_lib_nlz = "qLocalization",
 		sm_lib_none = "Не нужна",
 		sm_about = "Описание",
+		sm_menu_path = "Путь в меню",
+		sm_menu_unknown = "Не указан",
 		sm_features = "Возможности",
 
 		sm_restart_t = "Нужен перезапуск",
@@ -664,7 +662,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.5.0"
+local VERSION = "2.6.0"
 
 local K = {
 	CFG = "script_market",
@@ -693,7 +691,7 @@ local K = {
 	G = {
 		all = "\u{f03a}", installed = "\u{f058}", updates = "\u{f358}", heroes = "\u{f007}",
 		dota = "\u{f11b}", deadlock = "\u{f06d}", auxiliary = "\u{f0ad}",
-		authors = "\u{f0c0}", locations = "\u{f0c9}", universal = "\u{f0ac}",
+		authors = "\u{f0c0}", universal = "\u{f0ac}",
 		search = "\u{f002}", clear = "\u{f057}", sort = "\u{f160}", refresh = "\u{f2f9}", sliders = "\u{f1de}",
 		warn = "\u{f071}", folder = "\u{f07b}",
 		back = "\u{f053}", down = "\u{f078}", up = "\u{f077}", check = "\u{f00c}", store = "\u{f54e}", clock = "\u{f017}",
@@ -1555,6 +1553,25 @@ function text.list(items)
 	return out
 end
 
+-- menu routes such as "Scripts → Scripts → Script Manager"
+function text.routes(items)
+	local out = {}
+	if type(items) ~= "table" then return out end
+	for _, item in ipairs(items) do
+		local route = text.clean(item):gsub("%s*%-%>%s*", " → ")
+		local parts, from = {}, 1
+		while from <= #route + 1 do
+			local a, b = route:find(" → ", from, true)
+			local part = route:sub(from, (a or #route + 1) - 1):gsub("^%s+", ""):gsub("%s+$", "")
+			if part ~= "" then parts[#parts + 1] = part end
+			if not a then break end
+			from = b + 1
+		end
+		if #parts > 0 then out[#out + 1] = parts end
+	end
+	return out
+end
+
 function text.humanize(id)
 	return (id:gsub("_", " "):gsub("(%a)([%w]*)", function(a, b) return a:upper() .. b end))
 end
@@ -1745,8 +1762,8 @@ function market.build(catalog, meta)
 				about = { ru = text.clean(ru.about), en = text.clean(en.about) },
 				features = { ru = text.list(ru.features), en = text.list(en.features) },
 				menu = {
-					ru = text.list(type(e.menu) == "table" and e.menu.ru),
-					en = text.list(type(e.menu) == "table" and e.menu.en),
+					ru = text.routes(type(e.menu) == "table" and e.menu.ru or nil),
+					en = text.routes(type(e.menu) == "table" and e.menu.en or nil),
 				},
 			}
 			item.dirs = market.package_dirs(package_files)
@@ -1798,8 +1815,7 @@ function market.build(catalog, meta)
 	local lib = catalog.q_localizer
 	S.nlz_src = type(lib) == "table" and ver.valid(lib.version) and web.trusted(lib.url) and lib or nil
 
-	local nav_ok = S.nav == "all" or S.nav == "installed" or S.nav == "updates" or S.nav == "heroes"
-		or S.nav == "authors" or S.nav == "locations" or present[S.nav]
+	local nav_ok = S.nav == "all" or S.nav == "installed" or S.nav == "updates" or S.nav == "heroes" or S.nav == "authors" or present[S.nav]
 	if not nav_ok then S.nav = "all" end
 	if S.view == "detail" and not BY_ID[S.sel] then S.view = "list" end
 	market.scan()
@@ -2079,22 +2095,13 @@ function market.has_hero(s, id)
 	return false
 end
 
-function market.menu_paths(s)
-	local paths = s.menu and s.menu[S.lang]
-	if type(paths) ~= "table" or #paths == 0 then
-		paths = s.menu and s.menu.en
-	end
-	return type(paths) == "table" and paths or {}
-end
-
 function market.hidden(s)
 	return not S.set.beta and ver.pre(s.latest) and not S.inst[s.id]
 end
 
 function market.list()
 	local q = S.query:lower()
-	local in_cat = S.nav ~= "all" and S.nav ~= "installed" and S.nav ~= "updates"
-		and S.nav ~= "heroes" and S.nav ~= "authors" and S.nav ~= "locations"
+	local in_cat = S.nav ~= "all" and S.nav ~= "installed" and S.nav ~= "updates" and S.nav ~= "heroes" and S.nav ~= "authors"
 	local out = {}
 	for _, s in ipairs(SCRIPTS) do
 		local k = market.status(s)
@@ -2111,9 +2118,6 @@ function market.list()
 		if ok and q ~= "" then
 			ok = s.title:lower():find(q, 1, true) ~= nil or tr(s.tag):lower():find(q, 1, true) ~= nil
 				or (s.author_name ~= nil and s.author_name:lower():find(q, 1, true) ~= nil)
-			if not ok then
-				ok = table.concat(market.menu_paths(s), " "):lower():find(q, 1, true) ~= nil
-			end
 		end
 		if ok then out[#out + 1] = s end
 	end
@@ -2380,8 +2384,6 @@ function view.sidebar()
 	view.nav_item(12, y, 196, "heroes", L("sm_nav_heroes"), K.G.heroes, S.hero_total)
 	y = y + 36
 	view.nav_item(12, y, 196, "authors", L("sm_nav_authors"), K.G.authors, #S.authors)
-	y = y + 36
-	view.nav_item(12, y, 196, "locations", L("sm_nav_locations"), K.G.locations, #SCRIPTS)
 	y = y + 36
 	for _, cat in ipairs(CATS) do
 		local n = 0
@@ -2658,12 +2660,7 @@ function view.row(s, rx, y, rw, interactive, sep)
 		local used = tx + tw + ((va > 0.01 and S.vers[s.id]) and (8 + g.width(400, 12, S.vers[s.id])) or 0)
 		if lx - g.width(400, 12, label) > used + 12 then g.text(400, 12, label, lx, y + 28, T.t4, 1, "r") end
 	end
-	local subtitle = tr(s.tag)
-	if S.nav == "locations" then
-		local paths = market.menu_paths(s)
-		subtitle = #paths > 0 and table.concat(paths, " · ") or L("sm_menu_unknown")
-	end
-	g.text(400, 13, g.fit(400, 13, subtitle, rw - 70 - 136 - 12), tx, y + 47, T.t3)
+	g.text(400, 13, g.fit(400, 13, tr(s.tag), rw - 70 - 136 - 12), tx, y + 47, T.t3)
 	if interactive then view.action(s, rx + rw - 12, y + 36) end
 	if sep then g.hl(rx + 70, y + 72, rw - 70 - 12, T.white, C.line / 255) end
 end
@@ -2998,12 +2995,52 @@ function view.dir_window()
 	g.a = S.alpha
 end
 
+-- where the script puts its own menu: Scripts → Scripts → Script Manager
+function view.menu_path(s, cx, y, cw)
+	local routes = s.menu[S.lang]
+	if #routes == 0 then routes = s.menu.en end
+	local pad = 16
+	local line_h = 24
+	local rows = math.max(1, #routes)
+	local h = 14 + 18 + 6 + rows * line_h + 8
+	local sep_w = g.width(500, 14, " → ")
+	local max_w = cw - pad * 2 - 24
+
+	g.rect(cx, y, cw, h, T.white, 12, 0.04)
+	g.frame(cx, y, cw, h, T.white, 12, C.line / 255)
+	g.glyph(K.G.folder, 11, cx + pad + 6, y + 14 + 9, K.ACCENT_TEXT)
+	g.text(400, 12, L("sm_menu_path"), cx + pad + 24, y + 14 + 9, T.t4)
+
+	local ry = y + 14 + 18 + 6
+	if #routes == 0 then
+		g.text(500, 14, L("sm_menu_unknown"), cx + pad, ry + line_h / 2, T.t4)
+		return y + h
+	end
+	for _, parts in ipairs(routes) do
+		local total = sep_w * (#parts - 1)
+		for _, part in ipairs(parts) do total = total + g.width(600, 14, part) end
+		local cy = ry + line_h / 2
+		if total <= max_w then
+			local x = cx + pad
+			for i, part in ipairs(parts) do
+				local last = i == #parts
+				x = x + g.text(600, 14, part, x, cy, last and K.ACCENT_TEXT or T.t1)
+				if not last then x = x + g.text(500, 14, " → ", x, cy, T.t4) end
+			end
+		else
+			g.text(600, 14, g.fit(600, 14, table.concat(parts, " → "), max_w), cx + pad, cy, T.t1)
+		end
+		ry = ry + line_h
+	end
+	return y + h
+end
+
 function view.detail()
 	local s = BY_ID[S.sel]
 	local x0, w0 = K.SIDE, K.W - K.SIDE
 	hit.add(x0, 0, w0, K.TOP, "drag", { down = view.start_drag })
 
-	local back_keys = { all = "sm_nav_all", installed = "sm_nav_installed", updates = "sm_nav_updates", heroes = "sm_nav_heroes", authors = "sm_nav_authors", locations = "sm_nav_locations" }
+	local back_keys = { all = "sm_nav_all", installed = "sm_nav_installed", updates = "sm_nav_updates", heroes = "sm_nav_heroes", authors = "sm_nav_authors" }
 	local back = L(back_keys[S.nav] or ("sm_cat_" .. S.nav))
 	if S.nav == "heroes" and S.hero then back = market.hero_name(S.hero) end
 	if S.nav == "authors" and S.author and S.author_by[S.author] then back = S.author_by[S.author].name end
@@ -3114,7 +3151,9 @@ function view.detail()
 	end
 	y = y + 68
 	g.hl(cx, y, cw, T.white, C.line / 255)
-	y = y + 28
+	y = y + 22
+
+	y = view.menu_path(s, cx, y, cw) + 22
 
 	if #s.heroes > 0 then
 		local hx = cx
@@ -3153,22 +3192,6 @@ function view.detail()
 		end
 		if s.source then g.text(400, 12, L("sm_source") .. ": " .. s.source, x, y + 6, T.t4) end
 		y = y + 28
-	end
-
-	local menu_paths = market.menu_paths(s)
-	g.text(700, 17, L("sm_menu_location"), cx, y + 11, T.t1)
-	y = y + 22 + 12
-	if #menu_paths == 0 then
-		local lines = g.wrap(400, 14, L("sm_menu_unknown"), cw)
-		for i, line in ipairs(lines) do g.text(400, 14, line, cx, y + (i - 1) * 22 + 11, T.t2) end
-		y = y + #lines * 22 + 28
-	else
-		for _, route in ipairs(menu_paths) do
-			local lines = g.wrap(400, 13, route, cw)
-			for i, line in ipairs(lines) do g.text(400, 13, line, cx, y + (i - 1) * 20 + 10, T.t2) end
-			y = y + #lines * 20 + 8
-		end
-		y = y + 18
 	end
 
 	local about_text = tr(s.about)
