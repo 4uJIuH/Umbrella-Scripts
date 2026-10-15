@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`dawnbreaker-solar-guardian-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/dawnbreaker-solar-guardian-v1.0.0) | 2026-10-13 | [dawnbreaker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dawnbreaker-solar-guardian-v1.0.0/dawnbreaker.lua) | 1 |
+| [`dawnbreaker-solar-guardian-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/dawnbreaker-solar-guardian-v1.0.0) | 2026-10-13 | [dawnbreaker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dawnbreaker-solar-guardian-v1.0.0/dawnbreaker.lua) | 3 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=dawnbreaker-solar-guardian&expanded=true)
 <!-- releases:end -->

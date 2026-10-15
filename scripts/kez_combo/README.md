@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`kez-combo-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/kez-combo-v1.0.0) | 2026-10-13 | [kez_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/kez-combo-v1.0.0/kez_combo.lua) | 5 |
+| [`kez-combo-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/kez-combo-v1.0.0) | 2026-10-13 | [kez_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/kez-combo-v1.0.0/kez_combo.lua) | 6 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=kez-combo&expanded=true)
 <!-- releases:end -->
