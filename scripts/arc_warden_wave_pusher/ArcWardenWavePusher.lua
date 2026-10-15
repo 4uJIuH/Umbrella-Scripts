@@ -37,6 +37,8 @@ local STR = {
         attack_lead_tip = "Временной буфер (в миллисекундах) для компенсации урона от летящих снарядов союзных крипов",
         draw_target = "Отображать цель в мире",
         draw_target_tip = "Отображает цветное кольцо под текущей целью пуша клона (голубое - дальник, золотое - знаменосец)",
+        hero_override = "Уступать комбо и при врагах рядом",
+        hero_override_tip = "Мгновенно уступает 100% контроля базовому комбо/игроку, если зажата клавиша комбо или в радиусе 1500 есть вражеский герой",
     },
     en = {
         enable = "Smart Wave Pusher",
@@ -51,6 +53,8 @@ local STR = {
         attack_lead_tip = "Time buffer (in milliseconds) to compensate for ally creep projectile damage",
         draw_target = "Draw Target in World",
         draw_target_tip = "Renders a colored ring under clone's current focus target (cyan - ranged, gold - flagbearer)",
+        hero_override = "Yield to Combo & Nearby Heroes",
+        hero_override_tip = "Instantly yields 100% control to base combo/player if combo key is active or an enemy hero is within 1500 range",
     }
 }
 
@@ -117,6 +121,9 @@ ui.attack_lead:ToolTip(init_T.attack_lead_tip)
 ui.draw_target = auto_play_group:Switch(init_T.draw_target, true, "\u{f5a9}")
 ui.draw_target:ToolTip(init_T.draw_target_tip)
 
+ui.hero_override = auto_play_group:Switch(init_T.hero_override, true, "\u{f06e}")
+ui.hero_override:ToolTip(init_T.hero_override_tip)
+
 -- Привязка видимости поднастроек к главному переключателю
 local function update_visibility(widget)
     local enabled = widget:Get()
@@ -125,6 +132,7 @@ local function update_visibility(widget)
     ui.priority_flagbearer:Visible(enabled)
     ui.attack_lead:Visible(enabled)
     ui.draw_target:Visible(enabled)
+    ui.hero_override:Visible(enabled)
 end
 
 ui.enable:SetCallback(update_visibility, true)
@@ -151,6 +159,8 @@ local function apply_lang()
         ui.attack_lead:ToolTip(T.attack_lead_tip)
         ui.draw_target:ForceLocalization(T.draw_target)
         ui.draw_target:ToolTip(T.draw_target_tip)
+        ui.hero_override:ForceLocalization(T.hero_override)
+        ui.hero_override:ToolTip(T.hero_override_tip)
     end)
 end
 
@@ -217,6 +227,83 @@ local function GetClone(my_hero)
     end
 
     return nil
+end
+
+local combo_binds_cached = nil
+
+local function GetComboBinds()
+    if combo_binds_cached and #combo_binds_cached > 0 then
+        return combo_binds_cached
+    end
+
+    local binds = {}
+    pcall(function()
+        local b1 = Menu.Find("Heroes", "Hero List", "Arc Warden", "Clone Settings", "Clone Settings", "Clone Combo Key")
+        if b1 then table.insert(binds, b1) end
+
+        local b2 = Menu.Find("Heroes", "Hero List", "Arc Warden", "Main Settings", "Hero Settings", "Combo Key")
+        if b2 then table.insert(binds, b2) end
+    end)
+
+    if #binds > 0 then
+        combo_binds_cached = binds
+    end
+    return binds
+end
+
+local function IsComboActive()
+    local binds = GetComboBinds()
+    for _, b in ipairs(binds) do
+        if b then
+            if b.IsDown and b:IsDown() then
+                return true
+            end
+            if b.IsToggled and b:IsToggled() then
+                return true
+            end
+        end
+    end
+    return false
+end
+
+local function GetOrigin(obj)
+    if not obj then return nil end
+    if Entity and Entity.IsEntity and Entity.IsEntity(obj) then
+        return Entity.GetAbsOrigin(obj)
+    end
+    local ok_ent, origin = pcall(Entity.GetAbsOrigin, obj)
+    if ok_ent and origin then return origin end
+
+    local ok_vec, x = pcall(function() return obj.x end)
+    if ok_vec and x then return obj end
+
+    return nil
+end
+
+--- Проверяет наличие живого видимого вражеского героя рядом с точкой/сущностью
+---@param pos_or_entity Vector|CEntity
+---@param max_range number
+---@return boolean, CHero?
+local function IsEnemyHeroNear(pos_or_entity, max_range)
+    local check_pos = GetOrigin(pos_or_entity)
+    if not check_pos then return false end
+
+    local my_hero = Heroes.GetLocal()
+    if not my_hero then return false end
+    local my_team = Entity.GetTeamNum(my_hero)
+
+    local all_heroes = Heroes.GetAll()
+    if not all_heroes then return false end
+
+    for _, h in ipairs(all_heroes) do
+        if h and Entity.IsAlive(h) and not Entity.IsDormant(h) and Entity.GetTeamNum(h) ~= my_team then
+            local h_pos = Entity.GetAbsOrigin(h)
+            if h_pos and (h_pos - check_pos):Length2D() <= max_range then
+                return true, h
+            end
+        end
+    end
+    return false
 end
 
 --- Сканирует пачку вражеских крипов на широкой дистанции (до 1800)
@@ -584,18 +671,38 @@ function WavePusher.OnPrepareUnitOrders(data)
         return true
     end
 
-    -- 3. Если базовый скрипт атакует или кастует в героя — это геройское комбо!
-    if data.target and NPC.IsHero(data.target) then
+    local hero_override_on = not ui.hero_override or ui.hero_override:Get()
+
+    -- 3. Если зажата клавиша комбо (Clone Combo Key или Main Hero Combo Key) — 100% уступаем комбо!
+    if hero_override_on and IsComboActive() then
         last_hero_action_time = cur_time
         return true
     end
 
-    -- 4. Если недавно велся бой с героем, не вмешиваемся
-    if (cur_time - last_hero_action_time) < 1.8 then
+    -- 4. Если базовый скрипт атакует или кастует во вражеского героя — это геройское комбо!
+    if data.target and NPC.IsHero(data.target) and not Entity.IsSameTeam(my_hero, data.target) then
+        last_hero_action_time = cur_time
         return true
     end
 
-    -- 5. Текущая приоритетная цель аддона
+    -- 5. Если приказ по точке (Спарк, Купол, Глейпнир, Движение) отдан рядом с вражеским героем
+    if hero_override_on and data.position and IsEnemyHeroNear(data.position, 1000) then
+        last_hero_action_time = cur_time
+        return true
+    end
+
+    -- 6. Если рядом с клоном находится вражеский герой (в радиусе 1500) — идет бой/угроза!
+    if hero_override_on and IsEnemyHeroNear(clone, 1500) then
+        last_hero_action_time = cur_time
+        return true
+    end
+
+    -- 7. Если недавно велся бой с героем (в течение 2.5 сек), не вмешиваемся
+    if (cur_time - last_hero_action_time) < 2.5 then
+        return true
+    end
+
+    -- 8. Текущая приоритетная цель аддона
     local target = (active_priority_target and Entity.IsAlive(active_priority_target)) and active_priority_target or nil
     -- Если активной цели нет (все дальники и знаменосец зачищены) — полностью разрешаем базовый пуш!
     if not target then
@@ -758,8 +865,26 @@ function WavePusher.OnUpdate()
         end
     end
 
-    -- Уступаем герою при комбо
-    if (cur_time - last_hero_action_time) < 1.8 then
+    local hero_override_on = not ui.hero_override or ui.hero_override:Get()
+
+    -- 1. Если зажата клавиша комбо чита — 100% уступаем комбо!
+    if hero_override_on and IsComboActive() then
+        UpdateVisualRing(nil)
+        active_priority_target = nil
+        last_hero_action_time = cur_time
+        return
+    end
+
+    -- 2. Если рядом с клоном находится вражеский герой (в радиусе 1500) — уступаем боевому комбо и авто-плею!
+    if hero_override_on and IsEnemyHeroNear(clone, 1500) then
+        UpdateVisualRing(nil)
+        active_priority_target = nil
+        last_hero_action_time = cur_time
+        return
+    end
+
+    -- 3. Уступаем герою при недавнем бое (2.5 сек)
+    if (cur_time - last_hero_action_time) < 2.5 then
         UpdateVisualRing(nil)
         return
     end
