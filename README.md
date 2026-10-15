@@ -232,6 +232,7 @@
 - [Sunbeam](scripts/luchik) — ревнивый смайлик-компаньон, который реагирует на события матча
 - [Deny Taunt](scripts/deny_taunt) — шуточные сообщения противнику после деная крипа
 - [PudgeHook AI](scripts/pudge_hook_ai) — автоматический Meat Hook по врагам и спасение союзников
+- [Arc Warden Wave Pusher](scripts/arc_warden_wave_pusher) — умный пуш крип-волн клоном Arc Warden
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -511,6 +512,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Sunbeam](scripts/luchik) — a jealous emoji companion reacting to match events
 - [Deny Taunt](scripts/deny_taunt) — playful chat lines after denying a creep
 - [PudgeHook AI](scripts/pudge_hook_ai) — automated Meat Hook targeting and ally saves
+- [Arc Warden Wave Pusher](scripts/arc_warden_wave_pusher) — smart creep-wave pushing with Arc Warden's clone
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -578,7 +580,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [DS Spot Block](scripts/ds_spot_block) | 48 | `ds-spot-block-v1.0.1` |
 | [Custom Background](scripts/custom_background) | 39 | `custom-background-v1.0.0` |
 | [Auto Stack](scripts/auto_stack) | 136 | `auto-stack-v1.1.0` |
-| [Draft Helper](scripts/draft_helper) | 1278 | `draft-helper-v2.0.0-beta.20` |
+| [Draft Helper](scripts/draft_helper) | 1279 | `draft-helper-v2.0.0-beta.20` |
 | [MusicUI](scripts/musicui) | 690 | `musicui-v1.0.8` |
 | [Umbrella Lua Developer Skill](scripts/umbrella_lua) | 192 | `umbrella-lua-v1.0.4` |
 | [Custom Stats](scripts/custom_stats) | 4 | `custom-stats-v1.0.0` |
@@ -686,6 +688,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rampage Timer](scripts/rampage_timer_h) | 0 | `rampage-timer-h-v1.0.0` |
 | [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) | 3 | `lone-druid-bear-ai-deluxe-v1.0.0` |
 | [PudgeHook AI](scripts/pudge_hook_ai) | 0 | `pudge-hook-ai-v1.0.0` |
+| [Arc Warden Wave Pusher](scripts/arc_warden_wave_pusher) | 0 | `arc-warden-wave-pusher-v1.0.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
