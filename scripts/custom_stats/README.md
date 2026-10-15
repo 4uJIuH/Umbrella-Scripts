@@ -3,13 +3,9 @@
 настраиваемая панель статистики матча вместо панели Dota Plus / a customizable match-stats panel to replace Dota Plus stats
 
 <!-- releases:start -->
-Скачать: [custom_stats.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/custom-stats-v1.0.0/custom_stats.lua) — `custom-stats-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `custom_stats.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/custom-stats-v1.0.0/custom_stats.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`custom-stats-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/custom-stats-v1.0.0) | 2026-10-13 | [custom_stats.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/custom-stats-v1.0.0/custom_stats.lua) | 4 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=custom-stats&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=custom-stats&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -27,14 +23,6 @@
 2. Перезагрузите Lua-скрипты.
 3. Откройте `Info Screen → Main → Custom Stats`.
 4. Для сравнения получите бесплатный API-ключ на <a href="https://stratz.com/api" target="_blank" rel="noopener">stratz.com/api</a> и вставьте его в шестерёнку у пункта «Сравнение с другими».
-
-## Что нового
-
-# 1.0.0
-
-- Первый релиз Custom Stats.
-- Настраиваемая панель основной и расширенной статистики матча.
-- Необязательное сравнение со средними показателями Stratz по API-ключу.
 
 ---
 
@@ -55,11 +43,3 @@ Displays KDA, net worth, and creeps in a compact panel. Click it to expand more 
 2. Reload the Lua scripts.
 3. Open `Info Screen → Main → Custom Stats`.
 4. For comparisons, get a free API key from <a href="https://stratz.com/api" target="_blank" rel="noopener">stratz.com/api</a> and enter it in the gear next to “Compare with others”.
-
-## Changelog
-
-# 1.0.0
-
-- Initial Custom Stats release.
-- Customizable panel for core and expanded match statistics.
-- Optional Stratz average comparison using an API key.

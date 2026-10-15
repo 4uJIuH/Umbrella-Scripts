@@ -3,9 +3,13 @@
 повышает порядочность: авто GG, авто репорт и авто лайк / raises your behavior score: auto GG, auto report, and auto like
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `BehaviorScoreHelper.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/behavior_score_helper/BehaviorScoreHelper.lua)
+Скачать: [BehaviorScoreHelper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/behavior-score-helper-v1.1.0/BehaviorScoreHelper.lua) — `behavior-score-helper-v1.1.0`, 2026-10-15
 
-[Релизы на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=behavior-score-helper&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`behavior-score-helper-v1.1.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/behavior-score-helper-v1.1.0) | 2026-10-15 | [BehaviorScoreHelper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/behavior-score-helper-v1.1.0/BehaviorScoreHelper.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=behavior-score-helper&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -24,9 +28,28 @@ BehaviorScoreHelper — утилита автоматизации повышен
 ## Установка
 
 1. Нажмите «Установить» в Script Manager: он загрузит `BehaviorScoreHelper.lua`, qLocalization и четыре файла фильтров в `umbrella\scripts` и `umbrella\scripts\filters`.
-2. Для ручной установки скачайте `BehaviorScoreHelper.lua`, четыре файла из папки `filters` и `!_qLocalizer.lua`; поместите их в `umbrella\scripts` и `umbrella\scripts\filters`.
+2. При ручной установке скачайте `BehaviorScoreHelper.lua`, четыре файла из папки `filters` и `!_qLocalizer.lua`; разместите их в соответствующих папках `umbrella\scripts` и `umbrella\scripts\filters`.
 3. Перезагрузите Lua-скрипты.
 4. Откройте `Scripts → Utility → Порядочность` и включите нужные вкладки: Авто GG, Авто Репорт, Авто Репорт (Фид) и Авто Лайк.
+
+Примечание: GitHub скачивает библиотеку как `_qLocalizer.lua`; переименуй её в `!_qLocalizer.lua` перед загрузкой Lua-скриптов.
+
+## Что нового
+
+# Обновление v1.1.0
+
+- Добавлена локализация интерфейса на русский и английский языки через qLocalization.
+- Script Manager устанавливает qLocalization вместе со скриптом.
+- Добавлена ручная установка локализатора и файлов фильтров в инструкции.
+
+# Обновление v1.0.0
+
+- Первый релиз BehaviorScoreHelper.
+- Авто GG и приветствие союзников в начале матча.
+- Авто репорт токсичных сообщений по файлам фильтров (мат и запрещённые слова) с режимами поиска и белым списком.
+- Авто репорт за ранний выкуп (фид).
+- Авто лайк на экране итогов матча.
+- Script Manager устанавливает скрипт вместе с файлами фильтров в `scripts/filters`.
 
 ---
 
@@ -48,6 +71,25 @@ BehaviorScoreHelper is a Dota 2 utility that automates raising your behavior sco
 ## Install
 
 1. Click Install in Script Manager to download `BehaviorScoreHelper.lua`, qLocalization, and the four filter files into `umbrella\scripts` and `umbrella\scripts\filters`.
-2. For manual installation, download `BehaviorScoreHelper.lua`, the four files from the `filters` folder, and `!_qLocalizer.lua`; place them in `umbrella\scripts` and `umbrella\scripts\filters`.
+2. For manual installation, download `BehaviorScoreHelper.lua`, the four files from the `filters` folder, and `!_qLocalizer.lua`; place them in the corresponding `umbrella\scripts` and `umbrella\scripts\filters` folders.
 3. Reload the Lua scripts.
 4. Open `Scripts → Utility → Behavior Score` and enable the tabs you need: Auto GG, Auto Report, Auto Report (Feed), and Auto Like.
+
+Note: GitHub downloads the library as `_qLocalizer.lua`; rename it to `!_qLocalizer.lua` before loading Lua scripts.
+
+## Changelog
+
+# Update v1.1.0
+
+- Added Russian and English interface localization through qLocalization.
+- Script Manager now installs qLocalization with the script.
+- Added manual installation instructions for the localizer and filter files.
+
+# Update v1.0.0
+
+- Initial release of BehaviorScoreHelper.
+- Auto GG and a greeting for allies at the start of the match.
+- Auto report for toxic chat messages using filter files (profanity and banned words), with search modes and a whitelist.
+- Auto report for early buybacks (feeding).
+- Auto like on the post-match screen.
+- Script Manager installs the script together with the filter files into `scripts/filters`.

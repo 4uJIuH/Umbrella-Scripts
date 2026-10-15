@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`mom-sabre-abuse-v2.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/mom-sabre-abuse-v2.0.0) | 2026-10-13 | [mom_sabre_abuse.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/mom-sabre-abuse-v2.0.0/mom_sabre_abuse.lua) | 1 |
+| [`mom-sabre-abuse-v2.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/mom-sabre-abuse-v2.0.0) | 2026-10-13 | [mom_sabre_abuse.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/mom-sabre-abuse-v2.0.0/mom_sabre_abuse.lua) | 2 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=mom-sabre-abuse&expanded=true)
 <!-- releases:end -->
