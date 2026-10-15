@@ -3,10 +3,11 @@
 каталог скриптов Umbrella с установкой и обновлениями / an Umbrella script catalog with script installation and updates
 
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.2.1/script_manager.lua) — `script-manager-v2.2.1`, 2026-10-14
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.3.0/script_manager.lua) — `script-manager-v2.3.0`, 2026-10-15
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
+| [`script-manager-v2.3.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.3.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.3.0/script_manager.lua) | 0 |
 | [`script-manager-v2.2.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.2.1) | 2026-10-14 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.2.1/script_manager.lua) | 0 |
 | [`script-manager-v2.2.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.2.0) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.2.0/script_manager.lua) | 29 |
 | [`script-manager-v2.1.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.1.0) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.1.0/script_manager.lua) | 0 |
@@ -46,6 +47,14 @@ Script Manager объединяет каталог скриптов в отде�
 4. Откройте `Scripts → Scripts → Script Manager`, включите его и назначьте клавишу для открытия панели.
 
 ## Что нового
+
+# Обновление v2.3.0
+
+- В окне менеджера появилась кнопка закрытия в правом верхнем углу.
+- Добавлена сортировка «По дате обновления»: новые версии сверху, при этой сортировке дата показана в списке рядом с каждым скриптом.
+- В карточке скрипта на видном месте указано, когда он обновлялся в последний раз.
+- В настройки добавлено автообновление (по умолчанию выключено): после проверки каталога установленные скрипты обновляются сами. Предрелизные версии ставятся только при включённых бета-версиях.
+- Автоматический перезапуск скриптов теперь дожидается окончания всех загрузок.
 
 # Обновление v2.2.1
 
@@ -127,6 +136,14 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 4. Open `Scripts → Scripts → Script Manager`, enable it, and assign a key to open the panel.
 
 ## Changelog
+
+# Update v2.3.0
+
+- Added a close button in the top-right corner of the manager window.
+- Added a "By update date" sort: newest versions first, with the date shown next to each script in the list while this sort is active.
+- A script's card now shows, front and center, when it was last updated.
+- Added an auto-update setting (off by default): after the catalog is checked, installed scripts update on their own. Pre-release versions are installed only when beta versions are enabled.
+- The automatic script restart now waits for all running downloads to finish.
 
 # Update v2.2.1
 

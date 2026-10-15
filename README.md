@@ -388,8 +388,8 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Dorman Combo Assistant](scripts/dorman_combo_assistant) | 1 | `dorman-combo-assistant-v1.0.0` |
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
-| [qLocalization](scripts/q_localizer) | 21 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 49 | `script-manager-v2.2.1` |
+| [qLocalization](scripts/q_localizer) | 22 | `q-localizer-v1.0.0` |
+| [Script Manager](scripts/script_manager) | 49 | `script-manager-v2.3.0` |
 | [Dynamic Island](scripts/dynamic_island_dota) | 590 | `v2.5.3` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Lane Pull](scripts/lane_pull) | 236 | `lane-pull-v1.0.4` |
@@ -430,16 +430,16 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Invoker Jarvis](scripts/invoker_jarvis) | 26 | `v1.3.1` |
 | [TikTok](scripts/umbrella_tiktok) | 252 | `v1.3.2` |
 | [Invoker AutoStack](scripts/invoker_autostack) | 57 | `v1.4.2` |
-| [Old Last Match](scripts/old_last_match) | 0 | `old-last-match-v1.0.0` |
+| [Old Last Match](scripts/old_last_match) | 1 | `old-last-match-v1.0.0` |
 | [Unusual Secret](scripts/unusual_secret) | 0 | `unusual-secret-v2.1.0` |
-| [Atmospheric Fog Restorer](scripts/atmospheric_fog) | 0 | `atmospheric-fog-v1.0.0` |
+| [Atmospheric Fog Restorer](scripts/atmospheric_fog) | 1 | `atmospheric-fog-v1.0.0` |
 | [Windranger Powershot Killsteal](scripts/windranger_powershot) | 0 | `windranger-powershot-v1.0.0` |
 | [MoM Sabre Abuse](scripts/mom_sabre_abuse) | 0 | `mom-sabre-abuse-v2.0.0` |
 | [Tinker 1x6 Farm](scripts/tinker_1x6_farm) | 0 | `tinker-1x6-farm-v1.0.0` |
 | [Forge Spirit Helper](scripts/forge_spirit_helper) | 0 | `forge-spirit-helper-v1.0.0` |
 | [Gank Threat](scripts/gank_threat) | 9 | `gank-threat-v1.0.0` |
 | [Tinker Helper](scripts/tinker_helper) | 0 | `tinker-helper-v1.0.0` |
-| [Old HUD](scripts/old_hud) | 0 | `old-hud-v1.0.0` |
+| [Old HUD](scripts/old_hud) | 1 | `old-hud-v1.0.0` |
 | [Illusion Tracker](scripts/illusion_tracker) | 0 | `illusion-tracker-v1.0.0` |
 | [Arc Warden Clone Safe Me](scripts/arc_warden_clone_safe_me) | 0 | `arc-warden-clone-safe-me-v1.0.0` |
 | [Arc Warden Multi Stack](scripts/arc_warden_multi_stack) | 0 | `arc-warden-multi-stack-v1.0.0` |
@@ -464,7 +464,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Self Play](scripts/self_play_bot) | 5 | `self-play-v1.0.0` |
 | [Farm Pattern 2.5](scripts/farm_pattern) | 2 | `farm-pattern-v2.5` |
 | [Win Condition Engine](scripts/win_condition_engine) | 11 | `win-condition-engine-v1.0.0` |
-| [Invoker (beta)](scripts/invoker_beta) | 5 | `invoker-beta-v1.0.0` |
+| [Invoker (beta)](scripts/invoker_beta) | 6 | `invoker-beta-v1.0.0` |
 | [Kez Combo](scripts/kez_combo) | 5 | `kez-combo-v1.0.0` |
 | [Techies Combo](scripts/techies_combo) | 3 | `techies-combo-v1.0.0` |
 | [Lone Druid Auto Farm](scripts/ld_farm) | 0 | `ld-farm-v1.7` |
@@ -495,7 +495,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Enemy Cooldowns](scripts/enemy_cooldowns) | 0 | `enemy-cooldowns-v1.0.0` |
 | [Can Teleport Out](scripts/can_teleport_out) | 0 | `can-teleport-out-v1.0.0` |
 | [Auto Courier Gem](scripts/auto_courier_gem) | 0 | `auto-courier-gem-v1.0.0` |
-| [Camp Stacker](scripts/stacker) | 0 | `camp-stacker-v1.0.0` |
+| [Camp Stacker](scripts/stacker) | 1 | `camp-stacker-v1.0.0` |
 | [Auto-Ruin](scripts/auto_ruin) | 0 | `auto-ruin-v1.0.0` |
 | [Broodmother Helper](scripts/broodmother_helper) | 0 | `broodmother-helper-v2.1` |
 | [Script Market](scripts/market) | 0 | `market-v1.0.0` |

@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`camp-stacker-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/camp-stacker-v1.0.0) | 2026-10-13 | [stacker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/camp-stacker-v1.0.0/stacker.lua) | 0 |
+| [`camp-stacker-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/camp-stacker-v1.0.0) | 2026-10-13 | [stacker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/camp-stacker-v1.0.0/stacker.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=camp-stacker&expanded=true)
 <!-- releases:end -->
