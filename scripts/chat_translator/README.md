@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`chat-translator-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/chat-translator-v1.0.0) | 2026-10-13 | [chat_translator.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/chat-translator-v1.0.0/chat_translator.lua) | 0 |
+| [`chat-translator-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/chat-translator-v1.0.0) | 2026-10-13 | [chat_translator.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/chat-translator-v1.0.0/chat_translator.lua) | 3 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=chat-translator&expanded=true)
 <!-- releases:end -->

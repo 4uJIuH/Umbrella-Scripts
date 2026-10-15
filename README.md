@@ -141,6 +141,55 @@
 - [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) — панель ранга, прогресса MMR и статистики сессии
 - [Glyph Timer](scripts/glyph_timer) — показывает таймер глифа над башнями и крипами
 - [Rampage Timer](scripts/rampage_timer_h) — таймер серии убийств с панелью в стиле Liquid Glass
+- [Arc Warden Control Rune](scripts/arc_warden_control_rune) — контролирует руны Арком и его клоном
+- [TreeCutter+](scripts/treecutter_plus) — помогает прокладывать короткий путь через деревья
+- [Tinker Fear of God Combo](scripts/tinker_fear_of_god) — комбо и побег для старой версии Тинкера
+- [Arc Warden High Five](scripts/arc_warden_high_five) — автоматически отбивает «пятюню» клоном Арка
+- [Creep Block](scripts/creep_block) — экспериментальный блок крипов подконтрольными юнитами
+- [Ember Spirit Sticky Trainer](scripts/ember_spirit_sticky_trainer) — тренировочный комбо-скрипт с предиктом ремнантов и побегом
+- [PT Mana Abuse](scripts/pt_mana_abuse) — проверяет ману при переключении Power Treads на интеллект
+- [Marci Dust Delivery](scripts/marci_dust_delivery) — автоматически доставляет и использует Dust за Marci
+- [Arc Warden Rune Control](scripts/arc_warden_rune_control) — контролирует руну клоном Арка Вардена
+- [Cooldown Ping](scripts/cooldown_ping) — сообщает команде о кулдаунах способностей и предметов
+- [Beastmaster Razorbacks](scripts/beastmaster_razorbacks) — умное управление кабанами Beastmaster
+- [Juggernaut Ward Control](scripts/juggernaut_ward_control) — умно управляет Healing Ward Джаггернаута
+- [Invoker Auto Alacrity](scripts/invoker_auto_alacrity) — автоматически вызывает Alacrity и применяет к выбранной цели
+- [Snapfire Cookie Landing](scripts/snapfire_cookie_landing) — показывает место приземления и радиус стана Firesnap Cookie
+- [Mute All Voice Phrases](scripts/mute_all_voice_phrases) — приглушает голосовые фразы, включая фразы Dota Plus
+- [Mini Games](scripts/mini_games) — набор мини-игр и развлечений во вкладке Scripts
+- [MMR Log](scripts/mmr_log) — ведёт журнал MMR и ежедневную статистику матчей
+- [Invoker Sun Strike on TP](scripts/invoker_sunstrike_on_tp) — применяет Sun Strike на телепортящегося врага при летальном уроне
+- [Авто-пик](scripts/autopick) — автоматически выбирает героя по приоритетам для каждой роли
+- [TXT Spoofer](scripts/txt_spoofer) — находит и заменяет текстовые надписи в меню
+- [Zeus Heavenly Jump Range](scripts/zeus_heavenly_jump_range) — показывает дальность прыжка Heavenly Jump и цели молнии
+- [Meepo V2](scripts/meepo_v2) — бета-набор автоматизации и настроек для Meepo
+- [Abaddon Borrowed Time+1](scripts/abaddon_borrowed_time_plus_one) — берёт ульт Abaddon, когда ожидается опасный урон
+- [Змейка](scripts/zmeyka) — мини-игра «Змейка» с настраиваемыми режимами
+- [Dota Imba](scripts/dota_imba) — утилита для ролла рун и выбора наград в кастомке
+- [Earth Spirit Boulder Helper](scripts/earth_spirit_boulder_helper) — показывает ориентиры для попадания Rolling Boulder
+- [Walrus Kick Assist](scripts/walrus_kick_assist) — ассистирует с комбо Walrus Kick, Snowball и Blink
+- [Techies Reactive Tazer Auto-Detonate](scripts/techies_tazer_auto_detonate) — взрывает Reactive Tazer при опасных эффектах у врага
+- [Invoker TP Sun Strike](scripts/invoker_tp_sun_strike) — наводит Sun Strike на телепорты и поддерживает ручное применение
+- [Courier Build Route](scripts/courier_build_route) — отправляет курьера по маршруту к фонтану
+- [Brood Pull S](scripts/brood_pull_s) — помогает Broodmother отводить крипов на линии
+- [Force Cookie Cursor Cast](scripts/force_cookie_cursor_cast) — направляет Force, Pike и Firesnap Cookie к курсору
+- [Abaddon AutoMistCoil](scripts/abaddon_auto_mist_coil) — автоматически лечит союзников способностью Mist Coil
+- [Void Spirit Escape](scripts/void_spirit_escape) — последовательно использует способности и предметы для побега
+- [PogodaUI](scripts/pogoda_ui) — показывает погоду и прогноз для выбранного города
+- [Fog of War Predictor](scripts/fog_of_war_predictor) — оценивает вероятное положение врагов в тумане войны
+- [Tree Cutter](scripts/tree_cutter_bf2) — автоматически рубит ближайшие деревья Quelling Blade или Battle Fury
+- [Session Info](scripts/session_info) — панель MMR, статистики матчей и текущей игровой сессии
+- [AutoFocus](scripts/autofocus) — переключает атаки на важные вражеские призывы и объекты
+- [Warlock Control Golems](scripts/warlock_control_golems) — управляет големами Warlock после применения Chaotic Offering
+- [Dust Radius](scripts/dust_radius) — показывает радиус уже применённого Dust
+- [CosmicMenu](scripts/cosmic_menu) — добавляет анимированный космический фон в меню чита
+- [TinkerTweak](scripts/tinker_tweak) — набор визуальных помощников и твиков для Tinker
+- [FlutterFX](scripts/flutter_fx) — настраиваемые визуальные цифры урона и лечения
+- [Tinker Glimmer Combo](scripts/tinker_glimmer_combo) — комбо и модуль побега для Tinker с Glimmer Cape
+- [Toxic Chat Guard](scripts/toxic_chat_guard) — локально выявляет токсичные сообщения в игровом чате
+- [AutoUnsleep](scripts/auto_unsleep) — будит героев из Nightmare с помощью подконтрольных юнитов
+- [Follow Selected Hero](scripts/follow_selected_hero) — ассистент следования и поддержки выбранного героя
+- [RadialChat](scripts/radial_chat) — колесо быстрого ввода сообщений в командный и общий чат
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -329,6 +378,55 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) — rank, MMR progress, and session-statistics panel
 - [Glyph Timer](scripts/glyph_timer) — shows glyph timers above towers and creeps
 - [Rampage Timer](scripts/rampage_timer_h) — a kill-streak timer with a Liquid Glass-style panel
+- [Arc Warden Control Rune](scripts/arc_warden_control_rune) — controls runes with Arc Warden and his clone
+- [TreeCutter+](scripts/treecutter_plus) — helps cut a shortcut through trees
+- [Tinker Fear of God Combo](scripts/tinker_fear_of_god) — combo and escape script for the older Tinker
+- [Arc Warden High Five](scripts/arc_warden_high_five) — automatically returns High Fives with Arc Warden's clone
+- [Creep Block](scripts/creep_block) — experimental creep blocking with controllable units
+- [Ember Spirit Sticky Trainer](scripts/ember_spirit_sticky_trainer) — a training combo script with Remnant prediction and escape
+- [PT Mana Abuse](scripts/pt_mana_abuse) — checks mana after switching Power Treads to Intelligence
+- [Marci Dust Delivery](scripts/marci_dust_delivery) — automatically delivers and uses Dust as Marci
+- [Arc Warden Rune Control](scripts/arc_warden_rune_control) — controls a rune with an Arc Warden clone
+- [Cooldown Ping](scripts/cooldown_ping) — notifies the team about ability and item cooldowns
+- [Beastmaster Razorbacks](scripts/beastmaster_razorbacks) — smart Beastmaster boar control
+- [Juggernaut Ward Control](scripts/juggernaut_ward_control) — smart Juggernaut Healing Ward control
+- [Invoker Auto Alacrity](scripts/invoker_auto_alacrity) — automatically invokes Alacrity and casts it on a selected target
+- [Snapfire Cookie Landing](scripts/snapfire_cookie_landing) — shows the Firesnap Cookie landing point and stun radius
+- [Mute All Voice Phrases](scripts/mute_all_voice_phrases) — mutes voice phrases, including Dota Plus lines
+- [Mini Games](scripts/mini_games) — a collection of mini-games and diversions under Scripts
+- [MMR Log](scripts/mmr_log) — tracks MMR changes and daily match statistics
+- [Invoker Sun Strike on TP](scripts/invoker_sunstrike_on_tp) — casts Sun Strike on teleporting enemies when it is lethal
+- [Авто-пик](scripts/autopick) — automatically picks a hero using role-specific priorities
+- [TXT Spoofer](scripts/txt_spoofer) — finds and replaces text labels in the menu
+- [Zeus Heavenly Jump Range](scripts/zeus_heavenly_jump_range) — shows Heavenly Jump distance and lightning targets
+- [Meepo V2](scripts/meepo_v2) — a beta automation and settings suite for Meepo
+- [Abaddon Borrowed Time+1](scripts/abaddon_borrowed_time_plus_one) — learns Abaddon's ultimate when dangerous damage is predicted
+- [Змейка](scripts/zmeyka) — a Snake mini-game with configurable modes
+- [Dota Imba](scripts/dota_imba) — a utility for rerolling runes and selecting custom-game rewards
+- [Earth Spirit Boulder Helper](scripts/earth_spirit_boulder_helper) — shows aiming markers for Rolling Boulder
+- [Walrus Kick Assist](scripts/walrus_kick_assist) — assists with Walrus Kick, Snowball, and Blink combos
+- [Techies Reactive Tazer Auto-Detonate](scripts/techies_tazer_auto_detonate) — detonates Reactive Tazer when enemies have selected effects
+- [Invoker TP Sun Strike](scripts/invoker_tp_sun_strike) — aims Sun Strike at teleporting enemies and supports manual casts
+- [Courier Build Route](scripts/courier_build_route) — sends your courier along a route toward the fountain
+- [Brood Pull S](scripts/brood_pull_s) — helps Broodmother pull lane creeps
+- [Force Cookie Cursor Cast](scripts/force_cookie_cursor_cast) — aims Force, Pike, and Firesnap Cookie toward the cursor
+- [Abaddon AutoMistCoil](scripts/abaddon_auto_mist_coil) — automatically heals allies with Mist Coil
+- [Void Spirit Escape](scripts/void_spirit_escape) — sequences abilities and items to escape danger
+- [PogodaUI](scripts/pogoda_ui) — shows current weather and forecast for a selected city
+- [Fog of War Predictor](scripts/fog_of_war_predictor) — estimates where enemies may be in the fog of war
+- [Tree Cutter](scripts/tree_cutter_bf2) — automatically chops nearby trees with Quelling Blade or Battle Fury
+- [Session Info](scripts/session_info) — an MMR, match-statistics, and current-session panel
+- [AutoFocus](scripts/autofocus) — focuses attacks on high-value enemy summons and objects
+- [Warlock Control Golems](scripts/warlock_control_golems) — controls Warlock's golems after Chaotic Offering
+- [Dust Radius](scripts/dust_radius) — shows the radius of Dust that has already been used
+- [CosmicMenu](scripts/cosmic_menu) — adds an animated cosmic backdrop to the cheat menu
+- [TinkerTweak](scripts/tinker_tweak) — visual helpers and tweaks for Tinker
+- [FlutterFX](scripts/flutter_fx) — customizable floating damage and healing numbers
+- [Tinker Glimmer Combo](scripts/tinker_glimmer_combo) — a Tinker combo and escape module with Glimmer Cape
+- [Toxic Chat Guard](scripts/toxic_chat_guard) — locally detects toxic messages in in-game chat
+- [AutoUnsleep](scripts/auto_unsleep) — wakes heroes from Nightmare using controllable units
+- [Follow Selected Hero](scripts/follow_selected_hero) — follow and support assistant for a selected hero
+- [RadialChat](scripts/radial_chat) — radial message wheel for team and all chat
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -377,9 +475,9 @@ This third-party library is by qfun (qfun_g9s), not my script.
 <!-- stats:start -->
 | script | downloads | latest |
 | --- | --- | --- |
-| [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 6 | `tinker-turret-dodge-v1.1.5` |
-| [Tinker Auto Farm](scripts/tinker_auto_farm) | 10 | `tinker-auto-farm-v1.0.4` |
-| [Auto Shackleshot](scripts/auto_shackleshot) | 2 | `auto-shackleshot-v1.0.0` |
+| [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 8 | `tinker-turret-dodge-v1.1.5` |
+| [Tinker Auto Farm](scripts/tinker_auto_farm) | 11 | `tinker-auto-farm-v1.0.4` |
+| [Auto Shackleshot](scripts/auto_shackleshot) | 3 | `auto-shackleshot-v1.0.0` |
 | [Auto Spark](scripts/auto_spark) | 1 | `auto-spark-v1.0.0` |
 | [Rune Destruction](scripts/rune_destruction) | 2 | `rune-destruction-v1.0.2` |
 | [Earth Spirit Kick Combo](scripts/earth_spirit_kick_combo) | 1 | `earth-spirit-kick-combo-v1.0.0` |
@@ -388,29 +486,29 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Dorman Combo Assistant](scripts/dorman_combo_assistant) | 1 | `dorman-combo-assistant-v1.0.0` |
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
-| [qLocalization](scripts/q_localizer) | 23 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 59 | `script-manager-v2.7.1` |
-| [Dynamic Island](scripts/dynamic_island_dota) | 592 | `v2.5.3` |
+| [qLocalization](scripts/q_localizer) | 26 | `q-localizer-v1.0.0` |
+| [Script Manager](scripts/script_manager) | 72 | `script-manager-v2.7.1` |
+| [Dynamic Island](scripts/dynamic_island_dota) | 594 | `v2.5.3` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 1 | `tinker-smart-escape-v1.0.0` |
-| [Lane Pull](scripts/lane_pull) | 236 | `lane-pull-v1.0.4` |
-| [DS Spot Block](scripts/ds_spot_block) | 47 | `ds-spot-block-v1.0.1` |
+| [Lane Pull](scripts/lane_pull) | 239 | `lane-pull-v1.0.4` |
+| [DS Spot Block](scripts/ds_spot_block) | 48 | `ds-spot-block-v1.0.1` |
 | [Custom Background](scripts/custom_background) | 36 | `custom-background-v1.0.0` |
-| [Auto Stack](scripts/auto_stack) | 129 | `auto-stack-v1.1.0` |
-| [Draft Helper](scripts/draft_helper) | 1243 | `draft-helper-v2.0.0-beta.20` |
-| [MusicUI](scripts/musicui) | 680 | `musicui-v1.0.8` |
+| [Auto Stack](scripts/auto_stack) | 130 | `auto-stack-v1.1.0` |
+| [Draft Helper](scripts/draft_helper) | 1255 | `draft-helper-v2.0.0-beta.20` |
+| [MusicUI](scripts/musicui) | 684 | `musicui-v1.0.8` |
 | [Umbrella Lua Developer Skill](scripts/umbrella_lua) | 189 | `umbrella-lua-v1.0.4` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
 | [Naga PT Abuse](scripts/naga_pt_abuse) | 1 | `naga-pt-abuse-v1.0.0` |
-| [Auto Aegis Mover](scripts/auto_aegis_mover) | 3 | `auto-aegis-mover-v1.0.0` |
+| [Auto Aegis Mover](scripts/auto_aegis_mover) | 4 | `auto-aegis-mover-v1.0.0` |
 | [Anti-Rubick](scripts/anti_rubick) | 2 | `anti-rubick-v1.0.0` |
 | [Arc Warden Blocker](scripts/arc_warden_blocker) | 1 | `arc-warden-blocker-v1.0.0` |
 | [Invoker Combo Switcher](scripts/invoker_combo_switcher) | 2 | `invoker-combo-switcher-v1.0.0` |
 | [Magnus Skewer Ally](scripts/magnus_skewer_ally) | 1 | `magnus-skewer-ally-v1.0.0` |
-| [Better Better Techies Combo](scripts/better_better_techies_combo) | 2 | `better-better-techies-combo-v1.0.0` |
-| [Chat Translator](scripts/chat_translator) | 0 | `chat-translator-v1.0.0` |
+| [Better Better Techies Combo](scripts/better_better_techies_combo) | 3 | `better-better-techies-combo-v1.0.0` |
+| [Chat Translator](scripts/chat_translator) | 3 | `chat-translator-v1.0.0` |
 | [Hero Grid](scripts/hero_grid) | 1 | `hero-grid-v1.0.0` |
-| [Weather](scripts/weather) | 1 | `weather-v1.0.0` |
+| [Weather](scripts/weather) | 2 | `weather-v1.0.0` |
 | [Visage Familiar TP Helper](scripts/visage_familiar_tp) | 0 | `visage-familiar-tp-v1.0.0` |
 | [Grimstroke Helper](scripts/grimstroke_helper) | 0 | `grimstroke-helper-v1.0.0` |
 | [Phoenix SmartNova](scripts/phoenix_smartnova) | 0 | `phoenix-smartnova-v1.0.0` |
@@ -419,26 +517,26 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Russian Roulette](scripts/russian_roulette) | 0 | `russian-roulette-v1.0.0` |
 | [MoM Swapper](scripts/mom_swapper) | 0 | `mom-swapper-v1.0.0` |
 | [Botle Abuse](scripts/botle) | 0 | `botle-abuse-v1.0.0` |
-| [Action Recorder](scripts/action_recorder) | 1 | `action-recorder-v1.0.0` |
+| [Action Recorder](scripts/action_recorder) | 2 | `action-recorder-v1.0.0` |
 | [Io Overcharge](scripts/io_overcharge) | 0 | `io-overcharge-v1.0.0` |
 | [Arc Warden Utilities](scripts/arc_warden_utilities) | 0 | `arc-warden-utilities-v1.1.0` |
-| [Back Cast](scripts/backwards_cast) | 0 | `backwards-cast-v1.0.0` |
+| [Back Cast](scripts/backwards_cast) | 1 | `backwards-cast-v1.0.0` |
 | [Forge Spirit Farm (Beta)](scripts/forge_spirit_farm_beta) | 0 | `forge-spirit-farm-beta-v0.1.0-beta.1` |
 | [Selection Camera](scripts/selection_camera) | 0 | `selection-camera-v1.1.0` |
 | [Spirit Breaker Combo & Ghoul 1000-7](scripts/spirit_breaker_bara) | 0 | `spirit-breaker-bara-v1.0.0` |
 | [1000-7 Counter](scripts/ghoul_counter) | 0 | `ghoul-counter-v1.0.0` |
-| [Invoker Jarvis](scripts/invoker_jarvis) | 26 | `v1.3.1` |
-| [TikTok](scripts/umbrella_tiktok) | 253 | `v1.3.2` |
-| [Invoker AutoStack](scripts/invoker_autostack) | 57 | `v1.4.2` |
+| [Invoker Jarvis](scripts/invoker_jarvis) | 28 | `v1.3.1` |
+| [TikTok](scripts/umbrella_tiktok) | 256 | `v1.3.2` |
+| [Invoker AutoStack](scripts/invoker_autostack) | 58 | `v1.4.2` |
 | [Old Last Match](scripts/old_last_match) | 1 | `old-last-match-v1.0.0` |
-| [Unusual Secret](scripts/unusual_secret) | 0 | `unusual-secret-v2.1.0` |
+| [Unusual Secret](scripts/unusual_secret) | 1 | `unusual-secret-v2.1.0` |
 | [Atmospheric Fog Restorer](scripts/atmospheric_fog) | 1 | `atmospheric-fog-v1.0.0` |
-| [Windranger Powershot Killsteal](scripts/windranger_powershot) | 0 | `windranger-powershot-v1.0.0` |
+| [Windranger Powershot Killsteal](scripts/windranger_powershot) | 1 | `windranger-powershot-v1.0.0` |
 | [MoM Sabre Abuse](scripts/mom_sabre_abuse) | 0 | `mom-sabre-abuse-v2.0.0` |
 | [Tinker 1x6 Farm](scripts/tinker_1x6_farm) | 0 | `tinker-1x6-farm-v1.0.0` |
-| [Forge Spirit Helper](scripts/forge_spirit_helper) | 0 | `forge-spirit-helper-v1.0.0` |
-| [Gank Threat](scripts/gank_threat) | 9 | `gank-threat-v1.0.0` |
-| [Tinker Helper](scripts/tinker_helper) | 0 | `tinker-helper-v1.0.0` |
+| [Forge Spirit Helper](scripts/forge_spirit_helper) | 1 | `forge-spirit-helper-v1.0.0` |
+| [Gank Threat](scripts/gank_threat) | 12 | `gank-threat-v1.0.0` |
+| [Tinker Helper](scripts/tinker_helper) | 2 | `tinker-helper-v1.0.0` |
 | [Old HUD](scripts/old_hud) | 1 | `old-hud-v1.0.0` |
 | [Illusion Tracker](scripts/illusion_tracker) | 0 | `illusion-tracker-v1.0.0` |
 | [Arc Warden Clone Safe Me](scripts/arc_warden_clone_safe_me) | 0 | `arc-warden-clone-safe-me-v1.0.0` |
@@ -446,7 +544,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Map Chat Troll](scripts/maptroll) | 1 | `maptroll-v1.0.0` |
 | [Creep Aggro](scripts/creep_aggro) | 0 | `creep-aggro-v1.0.0` |
 | [Nyx Assassin Auto Burrow](scripts/nyx_auto_burrow) | 0 | `nyx-auto-burrow-v1.0.0` |
-| [Dawnbreaker Solar Guardian Auto-Save Helper](scripts/dawnbreaker_solar_guardian) | 1 | `dawnbreaker-solar-guardian-v1.0.0` |
+| [Dawnbreaker Solar Guardian Auto-Save Helper](scripts/dawnbreaker_solar_guardian) | 3 | `dawnbreaker-solar-guardian-v1.0.0` |
 | [Dota 1x6 Pack](scripts/dota1x6_pack) | 0 | `dota-1x6-pack-v1.0.0` |
 | [Kez Raptor Dance Dispel](scripts/kez_raptor_dispel) | 0 | `kez-raptor-dispel-v1.0.0` |
 | [Huskar Life Break](scripts/huskar_life_break) | 0 | `huskar-life-break-v1.0.0` |
@@ -463,9 +561,9 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Changer](scripts/changer) | 4 | `changer-v1.0.0` |
 | [Self Play](scripts/self_play_bot) | 5 | `self-play-v1.0.0` |
 | [Farm Pattern 2.5](scripts/farm_pattern) | 2 | `farm-pattern-v2.5` |
-| [Win Condition Engine](scripts/win_condition_engine) | 11 | `win-condition-engine-v1.0.0` |
+| [Win Condition Engine](scripts/win_condition_engine) | 12 | `win-condition-engine-v1.0.0` |
 | [Invoker (beta)](scripts/invoker_beta) | 8 | `invoker-beta-v1.0.0` |
-| [Kez Combo](scripts/kez_combo) | 5 | `kez-combo-v1.0.0` |
+| [Kez Combo](scripts/kez_combo) | 6 | `kez-combo-v1.0.0` |
 | [Techies Combo](scripts/techies_combo) | 3 | `techies-combo-v1.0.0` |
 | [Lone Druid Auto Farm](scripts/ld_farm) | 0 | `ld-farm-v1.7` |
 | [Unusual Effects](scripts/unusual_cosmetics) | 0 | `unusual-cosmetics-v1.0.0` |
@@ -473,14 +571,14 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [SteamSync](scripts/steam_sync) | 197 | `v1.0.1` |
 | [Techies Brain Combo](scripts/techies_brain) | 0 | `techies-brain-v0.2.6` |
 | [Creep Control](scripts/creep_control) | 1 | `creep-control-v1.0.1` |
-| [KOTL Illuminate Pro](scripts/kotl_illuminate_pro) | 1 | `kotl-illuminate-pro-v1.0.0` |
+| [KOTL Illuminate Pro](scripts/kotl_illuminate_pro) | 3 | `kotl-illuminate-pro-v1.0.0` |
 | [Lycan Auto Control](scripts/lycan_auto_control) | 1 | `lycan-auto-control-v1.0.0` |
 | [Mute Voice Lines](scripts/mute_voice_lines) | 0 | `mute-voice-lines-v1.0.0` |
 | [Tinker Glimmer during Rearm](scripts/tinker_glimmer_rearm) | 0 | `tinker-glimmer-rearm-v1.3` |
 | [Dota No Limit](scripts/dota_no_limit) | 0 | `dota-no-limit-v1.0.0` |
 | [Team Maphack](scripts/team_maphack) | 0 | `team-maphack-v1.0.0` |
 | [Last Seen Trajectory](scripts/lastseen_trajectory) | 0 | `lastseen-trajectory-v1.0.0` |
-| [KOTL Auto Chakra](scripts/kotl_auto_chakra) | 0 | `kotl-auto-chakra-v1.0.0` |
+| [KOTL Auto Chakra](scripts/kotl_auto_chakra) | 1 | `kotl-auto-chakra-v1.0.0` |
 | [SF Feast of Souls Abuse](scripts/sf_feast_of_souls_abuse) | 1 | `sf-feast-of-souls-v4.0` |
 | [Block Creep Attack During Feast](scripts/sf_block_creep_attack) | 0 | `sf-block-creep-attack-v1.2` |
 | [Anti-Cyclone BKB](scripts/sf_anti_cyclone_bkb) | 0 | `sf-anti-cyclone-bkb-v2.0` |
@@ -494,13 +592,13 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Muerta Dead Shot](scripts/muerta_dead_shot) | 0 | `muerta-dead-shot-v1.0.0` |
 | [Enemy Cooldowns](scripts/enemy_cooldowns) | 0 | `enemy-cooldowns-v1.0.0` |
 | [Can Teleport Out](scripts/can_teleport_out) | 0 | `can-teleport-out-v1.0.0` |
-| [Auto Courier Gem](scripts/auto_courier_gem) | 0 | `auto-courier-gem-v1.0.0` |
+| [Auto Courier Gem](scripts/auto_courier_gem) | 1 | `auto-courier-gem-v1.0.0` |
 | [Camp Stacker](scripts/stacker) | 2 | `camp-stacker-v1.0.0` |
-| [Auto-Ruin](scripts/auto_ruin) | 0 | `auto-ruin-v1.0.0` |
+| [Auto-Ruin](scripts/auto_ruin) | 1 | `auto-ruin-v1.0.0` |
 | [Broodmother Helper](scripts/broodmother_helper) | 0 | `broodmother-helper-v2.1` |
-| [Script Market](scripts/market) | 1 | `market-v1.0.0` |
-| [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) | 1 | `mmr-tracker-ultimate-v1.0.0` |
-| [Glyph Timer](scripts/glyph_timer) | 1 | `glyph-timer-v1.0.0` |
+| [Script Market](scripts/market) | 2 | `market-v1.0.0` |
+| [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) | 2 | `mmr-tracker-ultimate-v1.0.0` |
+| [Glyph Timer](scripts/glyph_timer) | 3 | `glyph-timer-v1.0.0` |
 | [Rampage Timer](scripts/rampage_timer_h) | 0 | `rampage-timer-h-v1.0.0` |
 
 <picture>

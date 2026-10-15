@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`win-condition-engine-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/win-condition-engine-v1.0.0) | 2026-10-13 | [win_condition_engine.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/win-condition-engine-v1.0.0/win_condition_engine.lua) | 11 |
+| [`win-condition-engine-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/win-condition-engine-v1.0.0) | 2026-10-13 | [win_condition_engine.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/win-condition-engine-v1.0.0/win_condition_engine.lua) | 12 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=win-condition-engine&expanded=true)
 <!-- releases:end -->
