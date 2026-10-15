@@ -3,13 +3,9 @@
 автоприменение Bloodrage у Bloodseeker по переключаемому бинду / toggle-bind auto-cast for Bloodseeker's Bloodrage
 
 <!-- releases:start -->
-Скачать: [bloodrage.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/bloodrage-autocast-v1.0.0/bloodrage.lua) — `bloodrage-autocast-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `bloodrage.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/bloodrage-autocast-v1.0.0/bloodrage.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`bloodrage-autocast-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/bloodrage-autocast-v1.0.0) | 2026-10-13 | [bloodrage.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/bloodrage-autocast-v1.0.0/bloodrage.lua) | 1 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=bloodrage-autocast&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=bloodrage-autocast&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -25,13 +21,6 @@
 1. Поместите `bloodrage.lua` в `umbrella\scripts`.
 2. Перезагрузите Lua-скрипты.
 3. Откройте `Scripts → Scripts → Bloodrage` и настройте переключаемый бинд (по умолчанию F).
-
-## Что нового
-
-# 1.0.0
-
-- Первый релиз Bloodrage AutoCast.
-- Добавлено автоматическое применение первой способности Bloodseeker с переключаемым биндом.
 
 ---
 
@@ -50,10 +39,3 @@ Automatically casts Bloodseeker's first ability when it is ready. Auto-cast is c
 1. Place `bloodrage.lua` in `umbrella\scripts`.
 2. Reload the Lua scripts.
 3. Open `Scripts → Scripts → Bloodrage` and configure the toggle bind (F by default).
-
-## Changelog
-
-# 1.0.0
-
-- Initial Bloodrage AutoCast release.
-- Added toggle-bind activation for automatically casting Bloodseeker's first ability.
