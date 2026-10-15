@@ -340,6 +340,8 @@ local localization = qLocalization.new({
 		sm_cat_dota = "Dota 2",
 		sm_cat_deadlock = "Deadlock",
 		sm_cat_auxiliary = "Tools",
+		sm_cat_universal = "Universal",
+		sm_nav_authors = "Authors",
 
 		sm_search = "Search",
 		sm_sort_catalog = "Catalog order",
@@ -444,7 +446,6 @@ local localization = qLocalization.new({
 		sm_check_start = "On launch",
 		sm_check_hour = "Every hour",
 		sm_set_auto = "Auto-update",
-		sm_set_auto_note = "Installs new versions on its own",
 		sm_set_beta = "Beta versions",
 		sm_set_restart = "Restart",
 		sm_restart_ask = "Ask",
@@ -494,6 +495,8 @@ local localization = qLocalization.new({
 		sm_cat_dota = "Dota 2",
 		sm_cat_deadlock = "Deadlock",
 		sm_cat_auxiliary = "Инструменты",
+		sm_cat_universal = "Универсальные",
+		sm_nav_authors = "Авторы",
 
 		sm_search = "Поиск",
 		sm_sort_catalog = "Как в каталоге",
@@ -601,7 +604,6 @@ local localization = qLocalization.new({
 		sm_check_start = "При запуске",
 		sm_check_hour = "Каждый час",
 		sm_set_auto = "Автообновление",
-		sm_set_auto_note = "Устанавливает новые версии сама",
 		sm_set_beta = "Бета-версии",
 		sm_set_restart = "Перезапуск",
 		sm_restart_ask = "Спрашивать",
@@ -636,7 +638,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.3.0"
+local VERSION = "2.4.0"
 
 local K = {
 	CFG = "script_market",
@@ -665,6 +667,7 @@ local K = {
 	G = {
 		all = "\u{f03a}", installed = "\u{f058}", updates = "\u{f358}", heroes = "\u{f007}",
 		dota = "\u{f11b}", deadlock = "\u{f06d}", auxiliary = "\u{f0ad}",
+		authors = "\u{f0c0}", universal = "\u{f0ac}",
 		search = "\u{f002}", clear = "\u{f057}", sort = "\u{f160}", refresh = "\u{f2f9}", sliders = "\u{f1de}",
 		back = "\u{f053}", down = "\u{f078}", up = "\u{f077}", check = "\u{f00c}", store = "\u{f54e}", clock = "\u{f017}",
 	},
@@ -732,7 +735,28 @@ local STYLE = {
 	behavior_score_helper = { "\u{f164}", PAL.green },
 }
 
-local CAT_ORDER = { "dota", "deadlock", "auxiliary" }
+-- "universal" is a virtual category: Dota 2 scripts that are not tied to any hero
+local CAT_ORDER = { "dota", "universal", "deadlock", "auxiliary" }
+local REAL_CATS = { dota = true, deadlock = true, auxiliary = true }
+
+-- scripts that are real tools (not gameplay): they always go to "Tools"
+local TOOL_IDS = {
+	market = true,          -- installs/updates scripts from ScriptIvMarket
+	lualingo = true,        -- Lua / Umbrella API lessons
+	action_recorder = true, -- records and replays actions
+	chat_translator = true, -- chat translation utility
+}
+
+-- hero-specific scripts that have no "heroes" field in the catalog yet
+local HERO_FIX = {
+	forge_spirit_helper = "invoker", invoker_ss = "invoker", invoker_beta = "invoker",
+	ringmaster_eul_combo = "ringmaster", spirit_breaker_charge = "spirit_breaker",
+	kez_combo = "kez", ld_farm = "lone_druid", lycan_auto_control = "lycan",
+	tinker_glimmer_rearm = "tinker",
+	techies_combo = "techies", techies_tazer_dispel = "techies", techies_brain = "techies",
+	kotl_illuminate_pro = "keeper_of_the_light", kotl_auto_chakra = "keeper_of_the_light",
+	sf_feast_of_souls_abuse = "nevermore", sf_block_creep_attack = "nevermore", sf_anti_cyclone_bkb = "nevermore",
+}
 
 local SCRIPTS = {}
 local BY_ID = {}
@@ -815,7 +839,7 @@ local FONT_NAMES = { inter = "Inter", segoe = "Segoe UI", candara = "Candara", c
 local S = {
 	open = true, alpha = 0, wx = nil, wy = nil, lang = "en",
 	scale = Config.ReadInt(K.CFG, "scale", 100),
-	nav = "all", view = "list", sel = nil, hero = nil, hero_n = {}, hero_total = 0, hero_names = {}, images = {},
+	nav = "all", view = "list", sel = nil, hero = nil, author = nil, authors = {}, author_by = {}, hero_n = {}, hero_total = 0, hero_names = {}, images = {},
 	sort = Config.ReadString(K.CFG, "sort", "catalog"),
 	inst_first = Config.ReadInt(K.CFG, "inst_first", 0) == 1,
 	sort_open = false, menu = nil,
@@ -1592,8 +1616,7 @@ function market.build(catalog, meta)
 		end
 	end
 
-	local cat_set = {}
-	for _, c in ipairs(CAT_ORDER) do cat_set[c] = true end
+	local cat_set = REAL_CATS
 
 	for i = #SCRIPTS, 1, -1 do SCRIPTS[i] = nil end
 	for id in pairs(BY_ID) do BY_ID[id] = nil end
@@ -1642,13 +1665,15 @@ function market.build(catalog, meta)
 				file = file,
 				source = e.url:match("githubusercontent%.com/([^/]+/[^/]+)/") or e.url:match("github%.com/([^/]+/[^/]+)/"),
 				author = text.clean(e.author) ~= "" and text.clean(e.author) or (type(m.author) == "string" and text.clean(m.author) ~= "" and text.clean(m.author) or nil),
-				cat = cat_set[m.category] and m.category or "auxiliary",
+				cat = TOOL_IDS[e.id] and "auxiliary" or cat_set[m.category] and m.category or "auxiliary",
 				glyph = style[1], color = style[2],
 				tag = { ru = text.cap(text.clean(ru.tagline)), en = text.cap(text.clean(en.tagline)) },
 				about = { ru = text.clean(ru.about), en = text.clean(en.about) },
 				features = { ru = text.list(ru.features), en = text.list(en.features) },
 			}
 			item.heroes = market.parse_heroes(e.heroes or e.hero) or {}
+			if #item.heroes == 0 and HERO_FIX[item.id] then item.heroes = market.parse_heroes(HERO_FIX[item.id]) or {} end
+			item.author_key, item.author_name = market.author(item.author)
 			SCRIPTS[#SCRIPTS + 1] = item
 			BY_ID[item.id] = item
 		end
@@ -1662,8 +1687,30 @@ function market.build(catalog, meta)
 		end
 	end
 
+	S.authors, S.author_by = {}, {}
+	for _, s in ipairs(SCRIPTS) do
+		if s.author_key then
+			local a = S.author_by[s.author_key]
+			if not a then
+				a = { key = s.author_key, name = s.author_name, n = 0 }
+				S.author_by[a.key] = a
+				S.authors[#S.authors + 1] = a
+			end
+			a.n = a.n + 1
+			if #s.author_name > #a.name then a.name = s.author_name end
+		end
+	end
+	table.sort(S.authors, function(a, b)
+		if a.n ~= b.n then return a.n > b.n end
+		return a.name:lower() < b.name:lower()
+	end)
+	if S.author and not S.author_by[S.author] then S.author = nil end
+
 	local present = {}
-	for _, s in ipairs(SCRIPTS) do present[s.cat] = true end
+	for _, s in ipairs(SCRIPTS) do
+		present[s.cat] = true
+		if market.universal(s) then present.universal = true end
+	end
 	for i = #CATS, 1, -1 do CATS[i] = nil end
 	for _, c in ipairs(CAT_ORDER) do
 		if present[c] then CATS[#CATS + 1] = c end
@@ -1672,7 +1719,7 @@ function market.build(catalog, meta)
 	local lib = catalog.q_localizer
 	S.nlz_src = type(lib) == "table" and ver.valid(lib.version) and web.trusted(lib.url) and lib or nil
 
-	local nav_ok = S.nav == "all" or S.nav == "installed" or S.nav == "updates" or S.nav == "heroes" or present[S.nav]
+	local nav_ok = S.nav == "all" or S.nav == "installed" or S.nav == "updates" or S.nav == "heroes" or S.nav == "authors" or present[S.nav]
 	if not nav_ok then S.nav = "all" end
 	if S.view == "detail" and not BY_ID[S.sel] then S.view = "list" end
 	market.scan()
@@ -1915,6 +1962,28 @@ function market.tick()
 	end
 end
 
+-- "Nick (Discord: handle); base by ..." -> stable key + display name
+function market.author(raw)
+	if type(raw) ~= "string" then return nil end
+	local str = (raw:gsub('"', ""))
+	local primary = str:match("^([^;]*)") or str
+	local handle = primary:match("[Dd]iscord:%s*([^%);]+)")
+	handle = handle and handle:gsub("%s+$", "") or nil
+	local name = (primary:gsub("%s*%(.*$", ""):gsub("^%s+", ""):gsub("%s+$", ""))
+	if name:lower():match("^discord:") then name = handle or "" end
+	if name == "" then return nil end
+	return (handle or name):lower(), name
+end
+
+function market.universal(s)
+	return s.cat == "dota" and #s.heroes == 0
+end
+
+function market.in_cat(s, cat)
+	if cat == "universal" then return market.universal(s) end
+	return s.cat == cat
+end
+
 function market.has_hero(s, id)
 	for _, hid in ipairs(s.heroes) do
 		if hid == id then return true end
@@ -1928,7 +1997,7 @@ end
 
 function market.list()
 	local q = S.query:lower()
-	local in_cat = S.nav ~= "all" and S.nav ~= "installed" and S.nav ~= "updates" and S.nav ~= "heroes"
+	local in_cat = S.nav ~= "all" and S.nav ~= "installed" and S.nav ~= "updates" and S.nav ~= "heroes" and S.nav ~= "authors"
 	local out = {}
 	for _, s in ipairs(SCRIPTS) do
 		local k = market.status(s)
@@ -1936,11 +2005,15 @@ function market.list()
 		if S.nav == "heroes" and S.hero then
 			ok = ok and market.has_hero(s, S.hero)
 		end
+		if S.nav == "authors" and S.author then
+			ok = ok and s.author_key == S.author
+		end
 		if S.nav == "installed" and not S.inst[s.id] then ok = false end
 		if S.nav == "updates" and k ~= "update" and not (k == "busy" and S.inst[s.id]) then ok = false end
-		if in_cat and s.cat ~= S.nav then ok = false end
+		if in_cat and not market.in_cat(s, S.nav) then ok = false end
 		if ok and q ~= "" then
 			ok = s.title:lower():find(q, 1, true) ~= nil or tr(s.tag):lower():find(q, 1, true) ~= nil
+				or (s.author_name ~= nil and s.author_name:lower():find(q, 1, true) ~= nil)
 		end
 		if ok then out[#out + 1] = s end
 	end
@@ -2118,7 +2191,7 @@ end
 local view = {}
 
 local function list_key()
-	return tostring(S.nav) .. ":" .. tostring(S.hero) .. ":" .. tostring(S.query)
+	return tostring(S.nav) .. ":" .. tostring(S.hero) .. ":" .. tostring(S.author) .. ":" .. tostring(S.query)
 end
 
 function view.go(name, sel)
@@ -2157,7 +2230,7 @@ function view.nav_item(x, y, w, id, label, glyph, count, badge)
 		g.text(400, 12, tostring(count), x + w - 10, y + 17, T.t4, 1 - bk, "r")
 	end
 	hit.add(x, y, w, 34, "nav:" .. id, { click = function()
-		S.nav, S.hero = id, nil
+		S.nav, S.hero, S.author = id, nil, nil
 		view.go("list")
 	end })
 end
@@ -2206,10 +2279,12 @@ function view.sidebar()
 	y = y + 20
 	view.nav_item(12, y, 196, "heroes", L("sm_nav_heroes"), K.G.heroes, S.hero_total)
 	y = y + 36
+	view.nav_item(12, y, 196, "authors", L("sm_nav_authors"), K.G.authors, #S.authors)
+	y = y + 36
 	for _, cat in ipairs(CATS) do
 		local n = 0
 		for _, s in ipairs(SCRIPTS) do
-			if s.cat == cat then n = n + 1 end
+			if market.in_cat(s, cat) then n = n + 1 end
 		end
 		view.nav_item(12, y, 196, cat, L("sm_cat_" .. cat), K.G[cat], n)
 		y = y + 36
@@ -2518,16 +2593,24 @@ function view.list()
 		g.a = base
 	end
 
-	local head = S.nav == "heroes" and S.hero
+	local ah = S.nav == "authors" and S.author and S.author_by[S.author] or nil
+	local head = (S.nav == "heroes" and S.hero) or ah
 	if head then
 		local hv = anim.hover("hero_back")
 		g.rect(rx, y + 4, rw, 44, T.white, 12, 0.05 * hv)
 		g.glyph(K.G.back, 12, rx + 24, y + 26, T.t3)
-		g.hero(S.hero, rx + 42, y + 12, 28, 1, 8)
-		local name_w = g.text(600, 15, market.hero_name(S.hero), rx + 82, y + 26, T.t1)
+		local title
+		if ah then
+			view.avatar(ah.name, rx + 42, y + 12, 28)
+			title = g.fit(600, 15, ah.name, rw - 82 - 60)
+		else
+			g.hero(S.hero, rx + 42, y + 12, 28, 1, 8)
+			title = market.hero_name(S.hero)
+		end
+		local name_w = g.text(600, 15, title, rx + 82, y + 26, T.t1)
 		g.text(400, 12, tostring(#list), rx + 82 + name_w + 10, y + 27, T.t4)
 		hit.add(rx, y + 4, rw, 44, "hero_back", { click = function()
-			S.hero = nil
+			S.hero, S.author = nil, nil
 			view.go("list")
 		end })
 	end
@@ -2586,6 +2669,70 @@ function view.list()
 		g.text(400, 13, L(d), cx, cy + 24, T.t4, ea, "c")
 	end
 	view.end_scroll(y + S.scroll - K.TOP + 16)
+end
+
+function view.avatar(name, x, y, size)
+	local initial = "?"
+	for _, c in ipairs(g.chars(name)) do
+		if c:match("%w") or #c > 1 then initial = c:upper() break end
+	end
+	local h = 0
+	for i = 1, #name do h = (h * 31 + name:byte(i)) % 100003 end
+	local col = PAL[PAL_ORDER[h % #PAL_ORDER + 1]]
+	g.rect(x, y, size, size, col, size / 2, 0.18)
+	g.text(700, math.floor(size * 0.46), initial, x + size / 2, y + size / 2, col, 1, "c")
+end
+
+function view.pick_author(key)
+	S.author = key
+	S.query, S.qc, S.qa, S.q_off, S.focus = "", 0, nil, 0, false
+	view.go("list")
+end
+
+function view.authors()
+	local x0, w0 = K.SIDE, K.W - K.SIDE
+	hit.add(x0, 0, w0, K.TOP, "drag", { down = view.start_drag })
+	view.search(x0 + 24, 16, w0 - 48 - K.CLOSE - 10)
+
+	local q = S.query:lower()
+	local list = {}
+	for _, a in ipairs(S.authors) do
+		if q == "" or a.name:lower():find(q, 1, true) ~= nil or a.key:find(q, 1, true) ~= nil then
+			list[#list + 1] = a
+		end
+	end
+
+	view.scroll_area(x0, K.TOP, w0, K.H - K.TOP)
+	local cx, cw = x0 + 24, w0 - 48
+	local cols, gap, th = 3, 8, 46
+	local tw = (cw - gap * (cols - 1)) / cols
+	local y = K.TOP - S.scroll + 4
+
+	g.text(600, 11, string.format("%s (%d)", L("sm_nav_authors"), #list), cx + 4, y + 7, T.t4)
+	y = y + 24
+	for i, a in ipairs(list) do
+		local col, row = (i - 1) % cols, math.floor((i - 1) / cols)
+		local tx, ty = cx + col * (tw + gap), y + row * (th + gap)
+		if ty + th >= K.TOP - 4 and ty <= K.H then
+			local key = "author:" .. a.key
+			g.rect(tx, ty, tw, th, T.white, 10, 0.04 + 0.05 * anim.hover(key))
+			view.avatar(a.name, tx + 9, ty + 9, 28)
+			local str = tostring(a.n)
+			local count_w = math.max(20, g.width(700, 11, str) + 12)
+			g.rect(tx + tw - 10 - count_w, ty + th / 2 - 9, count_w, 18, K.ACCENT, 9, 0.28)
+			g.text(700, 11, str, tx + tw - 10 - count_w / 2, ty + th / 2, K.ACCENT_TEXT, 1, "c")
+			local room = tw - 46 - 10 - count_w - 6
+			g.text(500, 13, g.fit(500, 13, a.name, room), tx + 46, ty + th / 2, T.t1)
+			hit.add(tx, ty, tw, th, key, { click = function() view.pick_author(a.key) end })
+		end
+	end
+	y = y + math.ceil(#list / cols) * (th + gap) + 14
+
+	if #list == 0 then
+		g.text(600, 15, L("sm_empty_search"), x0 + w0 / 2, K.TOP + 140, T.t2, 1, "c")
+		g.text(400, 13, L("sm_empty_search_d"), x0 + w0 / 2, K.TOP + 164, T.t4, 1, "c")
+	end
+	view.end_scroll(y + S.scroll - K.TOP + 12)
 end
 
 function view.pick_hero(id)
@@ -2659,9 +2806,10 @@ function view.detail()
 	local x0, w0 = K.SIDE, K.W - K.SIDE
 	hit.add(x0, 0, w0, K.TOP, "drag", { down = view.start_drag })
 
-	local back_keys = { all = "sm_nav_all", installed = "sm_nav_installed", updates = "sm_nav_updates", heroes = "sm_nav_heroes" }
+	local back_keys = { all = "sm_nav_all", installed = "sm_nav_installed", updates = "sm_nav_updates", heroes = "sm_nav_heroes", authors = "sm_nav_authors" }
 	local back = L(back_keys[S.nav] or ("sm_cat_" .. S.nav))
 	if S.nav == "heroes" and S.hero then back = market.hero_name(S.hero) end
+	if S.nav == "authors" and S.author and S.author_by[S.author] then back = S.author_by[S.author].name end
 	local bw = 6 + 18 + 4 + g.width(500, 13, back) + 12
 	local hv = anim.hover("back")
 	g.rect(x0 + 16, 17, bw, 34, T.white, 9, 0.08 * hv)
@@ -2790,8 +2938,19 @@ function view.detail()
 	if s.author or s.source then
 		local x = cx
 		if s.author then
-			local label = g.fit(500, 12, L("sm_author") .. ": " .. s.author, cw / 2)
-			x = x + g.text(500, 12, label, x, y + 6, T.t3) + 20
+			local label = g.fit(500, 12, L("sm_author") .. ": " .. (s.author_name or s.author), cw / 2)
+			local lw = g.width(500, 12, label)
+			if s.author_key then
+				local ahv = anim.hover("d_author")
+				g.text(500, 12, label, x, y + 6, anim.mix(T.t3, T.t1, ahv))
+				hit.add(x, y - 4, lw, 20, "d_author", { click = function()
+					S.nav, S.hero, S.author = "authors", nil, s.author_key
+					view.go("list")
+				end })
+			else
+				g.text(500, 12, label, x, y + 6, T.t3)
+			end
+			x = x + lw + 20
 		end
 		if s.source then g.text(400, 12, L("sm_source") .. ": " .. s.source, x, y + 6, T.t4) end
 		y = y + 28
@@ -2962,7 +3121,7 @@ function view.settings()
 
 	card("sm_g_updates", {
 		pick_row("check"),
-		{ label = "sm_set_auto", note = function() return L("sm_set_auto_note") end, draw = function(ry, right)
+		{ label = "sm_set_auto", draw = function(ry, right)
 			view.switch(right - 34, ry + 10, S.set.auto, "auto", function()
 				S.set.auto = not S.set.auto
 				save("auto", S.set.auto and 1 or 0)
@@ -3072,7 +3231,7 @@ function view.window()
 	g.rect(0, 0, K.W, K.H, C.win, 16, opacity)
 	view.sidebar()
 
-	local key = S.view .. ":" .. S.nav .. ":" .. tostring(S.sel) .. ":" .. tostring(S.hero)
+	local key = S.view .. ":" .. S.nav .. ":" .. tostring(S.sel) .. ":" .. tostring(S.hero) .. ":" .. tostring(S.author)
 	if key ~= S.page_key then
 		S.page_key = key
 		anim.snap("page", 0)
@@ -3089,6 +3248,9 @@ function view.window()
 	elseif S.nav == "heroes" and not S.hero then
 		S.sort_open = false
 		view.heroes()
+	elseif S.nav == "authors" and not S.author then
+		S.sort_open = false
+		view.authors()
 	else
 		view.list()
 		local mk = anim.menu("sort", S.sort_open)

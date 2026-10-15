@@ -1,3 +1,8 @@
+# Update v2.4.0
+
+- Added an Authors section with search and filtering by author.
+- Hero-independent scripts are now grouped under Universal; improved catalog classification for tools and heroes.
+
 # Update v2.3.0
 
 - Added a close button in the top-right corner of the manager window.
