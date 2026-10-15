@@ -38,7 +38,7 @@ Script Manager объединяет каталог скриптов в отде�
 - Устанавливает и обновляет отдельные скрипты, создавая резервную копию заменяемого файла
 - Устанавливает многофайловые Lua-пакеты и создает необходимые подпапки
 - Устанавливает `!_qLocalizer.lua`, если он нужен выбранному скрипту и ещё не установлен
-- Показывает ZIP-пакеты для скачивания и ручной распаковки
+- Устанавливает архивные пакеты с поддерживаемым файловым манифестом; архивы без него доступны для ручной распаковки
 - Позволяет менять тему, акцентный цвет и поведение перезапуска после установки
 - Поддерживает собственное обновление под тем же именем `script_manager.lua`
 - Автор визуальной/UI-части: watahell / papagdetto
@@ -51,6 +51,11 @@ Script Manager объединяет каталог скриптов в отде�
 4. Откройте `Scripts → Scripts → Script Manager`, включите его и назначьте клавишу для открытия панели.
 
 ## Что нового
+
+# Обновление v2.7.0
+
+- Установка пакетов поддерживает вложенные папки и до 200 Lua/JSON-файлов. Self Play и LuaLingo можно устанавливать кнопкой, без ручной распаковки архива.
+- Для пакетов с манифестом проверяются имена файлов, ссылки и размер JSON; ZIP/RAR без списка файлов по-прежнему скачиваются для ручной установки.
 
 # Обновление v2.6.0
 
@@ -143,7 +148,7 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 - Installs and updates individual scripts while keeping a backup of replaced files
 - Installs multi-file Lua packages and creates their required subfolders
 - Installs `!_qLocalizer.lua` when a selected script requires it and it is missing
-- Lists ZIP packages for download and manual extraction
+- Installs archive packages with a supported file manifest; archives without one remain available for manual extraction
 - Lets users change the theme, accent color, and post-install restart behavior
 - Supports self-updates while keeping the `script_manager.lua` filename
 - Visual/UI authors: watahell / papagdetto
@@ -156,6 +161,11 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 4. Open `Scripts → Scripts → Script Manager`, enable it, and assign a key to open the panel.
 
 ## Changelog
+
+# Update v2.7.0
+
+- Package installation now supports nested folders and up to 200 Lua/JSON files. Self Play and LuaLingo can be installed with the Install button instead of manually extracting their archives.
+- Packages are validated against their manifest paths, trusted URLs, and JSON size limit; ZIP/RAR downloads without a file manifest still require manual installation.
 
 # Update v2.6.0
 

@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/lualingo/lualingo.zip",
+  "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/lualingo/lualingo.zip",
+  "date": "2026-10-13",
+  "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/lualingo/lualingo.lua",
+  "files": [
+    {
+      "path": "lualingo/tasks.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/lualingo/lualingo/tasks.lua"
+    }
+  ]
+}

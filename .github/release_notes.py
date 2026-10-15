@@ -5,6 +5,7 @@ import re
 import sys
 import zipfile
 from pathlib import Path
+from urllib.parse import quote
 
 from menu_locations import paths_for
 
@@ -16,6 +17,31 @@ NL = chr(10)
 PACKAGE_FILE = re.compile(
     r"[A-Za-z0-9_-][A-Za-z0-9_.-]*\.json|filters/filter_[A-Za-z0-9_-]+_cached\.txt"
 )
+# files that Script Manager installs with the install button: Lua and JSON, up to three
+# nested folders, a name may start with "!" (must match package_path in script_manager.lua)
+PACKAGE_PATH = re.compile(
+    r"(?:[A-Za-z0-9_-]+/){0,3}[A-Za-z0-9_!-][A-Za-z0-9_. !-]*\.(?:lua|json)"
+)
+MAX_PACKAGE_FILES = 200
+
+
+def raw_url(raw_base, relative):
+    return raw_base + quote(relative, safe="/")
+
+
+def package_entries(script, raw_base, paths, root):
+    """Manifest `files` entries for paths (relative to root), checked against what the manager accepts."""
+    if len(paths) > MAX_PACKAGE_FILES:
+        raise SystemExit("%s: a package may hold at most %d files" % (script["id"], MAX_PACKAGE_FILES))
+    entries = []
+    for relative in sorted(paths):
+        if not PACKAGE_PATH.fullmatch(relative):
+            raise SystemExit("unsupported package file path: %r" % relative)
+        entries.append({
+            "path": relative,
+            "url": raw_url(raw_base, (root / relative).relative_to(BASE).as_posix()),
+        })
+    return entries
 
 
 def find(tag):
@@ -231,26 +257,27 @@ def write_manifest(script, tag, sha):
     }
     if "package" in script:
         package_dir = BASE / "scripts" / script["id"] / script["package"]
-        lib_dir = package_dir / "lib"
-        if lib_dir.is_dir():
-            raw_base = "https://raw.githubusercontent.com/%s/%s/" % (REPO, sha)
-            data["install_url"] = raw_base + source_path
-            files = sorted(path for path in lib_dir.glob("*.lua") if path.is_file())
-            if not files:
-                raise SystemExit("package has no Lua files in lib: %s" % package_dir)
-            if len(files) > 64 or any(
-                not re.fullmatch(r"lib/[A-Za-z0-9_-]+\.lua",
-                                 path.relative_to(package_dir).as_posix())
-                for path in files
-            ):
-                raise SystemExit("package contains unsupported library paths: %s" % package_dir)
-            data["files"] = [
-                {
-                    "path": path.relative_to(package_dir).as_posix(),
-                    "url": raw_base + path.relative_to(BASE).as_posix(),
-                }
-                for path in files
-            ]
+        raw_base = "https://raw.githubusercontent.com/%s/%s/" % (REPO, sha)
+        main = script_source_path(script)
+        paths = [
+            path.relative_to(package_dir).as_posix()
+            for path in package_dir.rglob("*")
+            if path.is_file() and path != main and path.suffix.lower() in (".lua", ".json")
+        ]
+        if paths:
+            data["install_url"] = raw_url(raw_base, source_path)
+            data["files"] = package_entries(script, raw_base, paths, package_dir)
+    elif script.get("archive_files"):
+        script_dir = BASE / "scripts" / script["id"]
+        raw_base = "https://raw.githubusercontent.com/%s/%s/" % (REPO, sha)
+        main = script_source_path(script)
+        paths = [
+            name for name in script["archive_files"]
+            if (script_dir / name) != main and Path(name).suffix.lower() in (".lua", ".json")
+        ]
+        if paths:
+            data["install_url"] = raw_url(raw_base, source_path)
+            data["files"] = package_entries(script, raw_base, paths, script_dir)
     elif script.get("package_files"):
         script_dir = BASE / "scripts" / script["id"]
         raw_base = "https://raw.githubusercontent.com/%s/%s/" % (REPO, sha)

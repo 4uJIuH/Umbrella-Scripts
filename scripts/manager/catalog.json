@@ -928,7 +928,14 @@
           "Scripts \u2192 Utility \u2192 Lualingo"
         ]
       },
-      "date": "2026-10-13"
+      "date": "2026-10-13",
+      "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/lualingo/lualingo.lua",
+      "files": [
+        {
+          "path": "lualingo/tasks.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/lualingo/lualingo/tasks.lua"
+        }
+      ]
     },
     {
       "id": "disable_tracker",
@@ -1940,6 +1947,429 @@
         ]
       },
       "date": "2026-10-13",
+      "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/Self%20Play.lua",
+      "files": [
+        {
+          "path": "!_qLocalizer.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/%21_qLocalizer.lua"
+        },
+        {
+          "path": "!_qMCP_dota2.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/%21_qMCP_dota2.lua"
+        },
+        {
+          "path": "self_play/active_items.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/active_items.lua"
+        },
+        {
+          "path": "self_play/awareness.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/awareness.lua"
+        },
+        {
+          "path": "self_play/base_defense.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/base_defense.lua"
+        },
+        {
+          "path": "self_play/camera.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/camera.lua"
+        },
+        {
+          "path": "self_play/cast_geometry.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/cast_geometry.lua"
+        },
+        {
+          "path": "self_play/catalog.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/catalog.lua"
+        },
+        {
+          "path": "self_play/combat.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/combat.lua"
+        },
+        {
+          "path": "self_play/consumables.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/consumables.lua"
+        },
+        {
+          "path": "self_play/creep_block.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/creep_block.lua"
+        },
+        {
+          "path": "self_play/data/abilities.json",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/data/abilities.json"
+        },
+        {
+          "path": "self_play/data/guides.json",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/data/guides.json"
+        },
+        {
+          "path": "self_play/data/heroes.json",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/data/heroes.json"
+        },
+        {
+          "path": "self_play/data/items.json",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/data/items.json"
+        },
+        {
+          "path": "self_play/detection.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/detection.lua"
+        },
+        {
+          "path": "self_play/deward.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/deward.lua"
+        },
+        {
+          "path": "self_play/domination.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/domination.lua"
+        },
+        {
+          "path": "self_play/draft.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/draft.lua"
+        },
+        {
+          "path": "self_play/engagement.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/engagement.lua"
+        },
+        {
+          "path": "self_play/excuses.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/excuses.lua"
+        },
+        {
+          "path": "self_play/fights.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/fights.lua"
+        },
+        {
+          "path": "self_play/help_rotation.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/help_rotation.lua"
+        },
+        {
+          "path": "self_play/hero_archetypes.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/hero_archetypes.lua"
+        },
+        {
+          "path": "self_play/hero_policy.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/hero_policy.lua"
+        },
+        {
+          "path": "self_play/heroes/aim.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/aim.lua"
+        },
+        {
+          "path": "self_play/heroes/ancient_apparition.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/ancient_apparition.lua"
+        },
+        {
+          "path": "self_play/heroes/arc_tasks.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/arc_tasks.lua"
+        },
+        {
+          "path": "self_play/heroes/arc_warden.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/arc_warden.lua"
+        },
+        {
+          "path": "self_play/heroes/axe.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/axe.lua"
+        },
+        {
+          "path": "self_play/heroes/brewmaster.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/brewmaster.lua"
+        },
+        {
+          "path": "self_play/heroes/broodmother.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/broodmother.lua"
+        },
+        {
+          "path": "self_play/heroes/chen.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/chen.lua"
+        },
+        {
+          "path": "self_play/heroes/clinkz.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/clinkz.lua"
+        },
+        {
+          "path": "self_play/heroes/common.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/common.lua"
+        },
+        {
+          "path": "self_play/heroes/dawnbreaker.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/dawnbreaker.lua"
+        },
+        {
+          "path": "self_play/heroes/dazzle.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/dazzle.lua"
+        },
+        {
+          "path": "self_play/heroes/earth_spirit.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/earth_spirit.lua"
+        },
+        {
+          "path": "self_play/heroes/ember_spirit.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/ember_spirit.lua"
+        },
+        {
+          "path": "self_play/heroes/hoodwink.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/hoodwink.lua"
+        },
+        {
+          "path": "self_play/heroes/huskar.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/huskar.lua"
+        },
+        {
+          "path": "self_play/heroes/invoker.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/invoker.lua"
+        },
+        {
+          "path": "self_play/heroes/io.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/io.lua"
+        },
+        {
+          "path": "self_play/heroes/kez.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/kez.lua"
+        },
+        {
+          "path": "self_play/heroes/lone_druid.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/lone_druid.lua"
+        },
+        {
+          "path": "self_play/heroes/mars.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/mars.lua"
+        },
+        {
+          "path": "self_play/heroes/meepo.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/meepo.lua"
+        },
+        {
+          "path": "self_play/heroes/morphling.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/morphling.lua"
+        },
+        {
+          "path": "self_play/heroes/phoenix.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/phoenix.lua"
+        },
+        {
+          "path": "self_play/heroes/primal_beast.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/primal_beast.lua"
+        },
+        {
+          "path": "self_play/heroes/razor.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/razor.lua"
+        },
+        {
+          "path": "self_play/heroes/registry.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/registry.lua"
+        },
+        {
+          "path": "self_play/heroes/rubick.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/rubick.lua"
+        },
+        {
+          "path": "self_play/heroes/shadow_demon.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/shadow_demon.lua"
+        },
+        {
+          "path": "self_play/heroes/shadow_fiend.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/shadow_fiend.lua"
+        },
+        {
+          "path": "self_play/heroes/snapfire.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/snapfire.lua"
+        },
+        {
+          "path": "self_play/heroes/sniper.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/sniper.lua"
+        },
+        {
+          "path": "self_play/heroes/storm_spirit.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/storm_spirit.lua"
+        },
+        {
+          "path": "self_play/heroes/tactics.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/tactics.lua"
+        },
+        {
+          "path": "self_play/heroes/techies.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/techies.lua"
+        },
+        {
+          "path": "self_play/heroes/timbersaw.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/timbersaw.lua"
+        },
+        {
+          "path": "self_play/heroes/tinker.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/tinker.lua"
+        },
+        {
+          "path": "self_play/heroes/tinker_farming.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/tinker_farming.lua"
+        },
+        {
+          "path": "self_play/heroes/tinker_march.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/tinker_march.lua"
+        },
+        {
+          "path": "self_play/heroes/treant.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/treant.lua"
+        },
+        {
+          "path": "self_play/heroes/void_spirit.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/void_spirit.lua"
+        },
+        {
+          "path": "self_play/heroes/winter_wyvern.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/winter_wyvern.lua"
+        },
+        {
+          "path": "self_play/heroes/witch_doctor.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/heroes/witch_doctor.lua"
+        },
+        {
+          "path": "self_play/intent.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/intent.lua"
+        },
+        {
+          "path": "self_play/inventory_cleanup.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/inventory_cleanup.lua"
+        },
+        {
+          "path": "self_play/jungle.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/jungle.lua"
+        },
+        {
+          "path": "self_play/lane_geometry.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/lane_geometry.lua"
+        },
+        {
+          "path": "self_play/lane_rules.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/lane_rules.lua"
+        },
+        {
+          "path": "self_play/lane_spacing.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/lane_spacing.lua"
+        },
+        {
+          "path": "self_play/last_hit.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/last_hit.lua"
+        },
+        {
+          "path": "self_play/localization.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/localization.lua"
+        },
+        {
+          "path": "self_play/map_farm.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/map_farm.lua"
+        },
+        {
+          "path": "self_play/matchmaking.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/matchmaking.lua"
+        },
+        {
+          "path": "self_play/mobility.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/mobility.lua"
+        },
+        {
+          "path": "self_play/navigation.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/navigation.lua"
+        },
+        {
+          "path": "self_play/neutral_items.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/neutral_items.lua"
+        },
+        {
+          "path": "self_play/objectives.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/objectives.lua"
+        },
+        {
+          "path": "self_play/persist.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/persist.lua"
+        },
+        {
+          "path": "self_play/planner.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/planner.lua"
+        },
+        {
+          "path": "self_play/positioning.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/positioning.lua"
+        },
+        {
+          "path": "self_play/protracker.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/protracker.lua"
+        },
+        {
+          "path": "self_play/queue_account.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/queue_account.lua"
+        },
+        {
+          "path": "self_play/recovery.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/recovery.lua"
+        },
+        {
+          "path": "self_play/roshan.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/roshan.lua"
+        },
+        {
+          "path": "self_play/runes.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/runes.lua"
+        },
+        {
+          "path": "self_play/shop.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/shop.lua"
+        },
+        {
+          "path": "self_play/spell_intel.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/spell_intel.lua"
+        },
+        {
+          "path": "self_play/spell_policy.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/spell_policy.lua"
+        },
+        {
+          "path": "self_play/support_camps.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/support_camps.lua"
+        },
+        {
+          "path": "self_play/support_policy.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/support_policy.lua"
+        },
+        {
+          "path": "self_play/talents.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/talents.lua"
+        },
+        {
+          "path": "self_play/task_policy.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/task_policy.lua"
+        },
+        {
+          "path": "self_play/teamplay.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/teamplay.lua"
+        },
+        {
+          "path": "self_play/teleports.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/teleports.lua"
+        },
+        {
+          "path": "self_play/timeline.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/timeline.lua"
+        },
+        {
+          "path": "self_play/tower_safety.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/tower_safety.lua"
+        },
+        {
+          "path": "self_play/translations.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/translations.lua"
+        },
+        {
+          "path": "self_play/units.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/units.lua"
+        },
+        {
+          "path": "self_play/user_builds.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/user_builds.lua"
+        },
+        {
+          "path": "self_play/vision.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c955dd889876bf1898ad01e9a8650e5628a9bb9e/scripts/self_play_bot/package/self_play/vision.lua"
+        }
+      ],
       "version_marker": "NONE"
     },
     {

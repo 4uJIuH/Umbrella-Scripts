@@ -7,10 +7,10 @@ the workflow skips the empty commit. Concurrent manifest pushes retry after
 rebasing on the latest `main`.
 Tinker Auto Farm is packaged from `scripts/tinker_auto_farm/package` as
 `Tinker-Auto-Farm.zip`. Self Play is packaged from
-`scripts/self_play_bot/package` as `Self-Play.zip`; this bundle is extracted
-manually into the scripts folder. Package directories are zipped as-is. Packages
-with a `lib/*.lua` directory also receive the Script Manager install manifest
-used by Tinker Auto Farm. Other scripts attach their Lua file directly.
+`scripts/self_play_bot/package` as `Self-Play.zip`. Package and archive manifests
+can also provide direct file URLs for Script Manager installation, including
+nested Lua/JSON files; archives without such a manifest remain manual downloads.
+Package directories are zipped as-is. Other scripts attach their Lua file directly.
 
 1. Update the matching script sources and both changelogs.
 2. Commit the changes.

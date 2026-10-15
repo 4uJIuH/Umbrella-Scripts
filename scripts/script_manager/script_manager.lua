@@ -662,7 +662,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.6.0"
+local VERSION = "2.7.0"
 
 local K = {
 	CFG = "script_market",
@@ -1323,6 +1323,46 @@ end
 
 local fs = {}
 
+-- a file a package may install, relative to the scripts folder: up to three nested folders,
+-- Lua and JSON files (a name may start with "!"), plus the cached profanity filters
+local PACKAGE_MAX_FILES = 200
+
+local function package_path(path)
+	if type(path) ~= "string" or #path > 120 or path:find("..", 1, true) or path:find("//", 1, true)
+		or path:find("\\", 1, true) then
+		return false
+	end
+	if path:match("^filters/filter_[%w_%-]+_cached%.txt$") then return true end
+	local parts = {}
+	for part in path:gmatch("[^/]+") do parts[#parts + 1] = part end
+	if #parts == 0 or #parts > 4 or path:sub(1, 1) == "/" or path:sub(-1) == "/" then return false end
+	for i = 1, #parts - 1 do
+		if not parts[i]:match("^[%w_%-]+$") then return false end
+	end
+	local name = parts[#parts]
+	return name:match("^[%w_%-!][%w%._%- !]*%.lua$") ~= nil or name:match("^[%w_%-!][%w%._%- !]*%.json$") ~= nil
+end
+
+-- every folder a list of package paths needs, parents first ("a", "a/b", ...)
+local function package_folders(paths)
+	local out, seen = {}, {}
+	for _, path in ipairs(paths) do
+		local prefix = nil
+		for part in path:gmatch("([^/]+)/") do
+			prefix = prefix and (prefix .. "/" .. part) or part
+			if not seen[prefix] then
+				seen[prefix] = true
+				out[#out + 1] = prefix
+			end
+		end
+	end
+	table.sort(out, function(a, b)
+		if #a ~= #b then return #a < #b end
+		return a < b
+	end)
+	return out
+end
+
 function fs.dir()
 	if S.dir then return S.dir end
 	local base = Engine.GetCheatDirectory()
@@ -1374,27 +1414,20 @@ end
 
 function fs.save_package(dir, files)
 	local previous = {}
-	local needs_lib = false
-	local needs_filters = false
+	local paths = {}
 	for _, file in ipairs(files) do
 		if type(file) ~= "table" or type(file.path) ~= "string" or type(file.body) ~= "string" then
 			return false, "sm_e_valid"
 		end
-		if file.path:match("^lib/[%w_%-]+%.lua$") then
-			needs_lib = true
-		elseif file.path:match("^filters/filter_[%w_%-]+_cached%.txt$") then
-			needs_filters = true
-		elseif file.path:find("..", 1, true)
-			or not (file.path:match("^[%w_%-][%w%._%- ]*%.lua$")
-				or file.path:match("^[%w_%-][%w%._%- ]*%.json$")) then
-			return false, "sm_e_valid"
-		end
+		if not package_path(file.path) then return false, "sm_e_valid" end
 		if file.name ~= nil and file.name ~= file.path then
 			return false, "sm_e_valid"
 		end
+		paths[#paths + 1] = file.path
 	end
-	if needs_lib and not fs.ensure_dir(dir .. "lib") then return false, "sm_e_folder" end
-	if needs_filters and not fs.ensure_dir(dir .. "filters") then return false, "sm_e_folder" end
+	for _, folder in ipairs(package_folders(paths)) do
+		if not fs.ensure_dir(dir .. folder:gsub("/", "\\")) then return false, "sm_e_folder" end
+	end
 	for _, file in ipairs(files) do
 		previous[file.path] = fs.read(dir .. file.path:gsub("/", "\\"))
 	end
@@ -1646,29 +1679,20 @@ function market.hero_name(id)
 end
 
 function market.package_path(path)
-	return type(path) == "string" and (path:match("^lib/[%w_%-]+%.lua$") ~= nil
-		or (not path:find("..", 1, true) and (path:match("^[%w_%-][%w%._%- ]*%.lua$") ~= nil
-			or path:match("^[%w_%-][%w%._%- ]*%.json$") ~= nil
-			or path:match("^filters/filter_[%w_%-]+_cached%.txt$") ~= nil)))
+	return package_path(path)
 end
 
--- top-level folders (lib, filters) that a package needs next to its main file
+-- folders (lib, filters, self_play/heroes, ...) that a package needs next to its main file
 function market.package_dirs(files)
-	local dirs, seen = {}, {}
-	for _, file in ipairs(files) do
-		local name = file.path:match("^([%w_%-]+)/")
-		if name and not seen[name] then
-			seen[name] = true
-			dirs[#dirs + 1] = name
-		end
-	end
-	return dirs
+	local paths = {}
+	for _, file in ipairs(files) do paths[#paths + 1] = file.path end
+	return package_folders(paths)
 end
 
 function market.missing_dirs(s, dir)
 	local missing = {}
 	for _, name in ipairs(s.dirs) do
-		if not fs.ensure_dir(dir .. name) then missing[#missing + 1] = name end
+		if not fs.ensure_dir(dir .. name:gsub("/", "\\")) then missing[#missing + 1] = name end
 	end
 	return missing
 end
@@ -1716,7 +1740,7 @@ function market.build(catalog, meta)
 		local package_files, package_valid = {}, true
 		local package_seen = {}
 		if type(e) == "table" and e.files ~= nil then
-			if type(e.files) ~= "table" or #e.files == 0 or #e.files > 64 then
+			if type(e.files) ~= "table" or #e.files == 0 or #e.files > PACKAGE_MAX_FILES then
 				package_valid = false
 			else
 				for _, entry in ipairs(e.files) do
@@ -1730,13 +1754,16 @@ function market.build(catalog, meta)
 				end
 			end
 		end
-		local package_file = type(e) == "table" and type(e.install_url) == "string"
-			and e.install_url:match("([^/?]+)$") or ""
+		local function url_name(url)
+			local name = type(url) == "string" and url:match("([^/?]+)$") or ""
+			return (name:gsub("%%(%x%x)", function(h) return string.char(tonumber(h, 16)) end))
+		end
+		local package_file = type(e) == "table" and url_name(e.install_url) or ""
 		local package_install = type(e) == "table" and package_valid and #package_files > 0
 			and package_file:match("%.lua$") ~= nil and web.trusted(e.install_url)
 		if not package_install then package_files = {} end
 		local install_url = package_install and e.install_url or type(e) == "table" and e.url or nil
-		local file = type(install_url) == "string" and install_url:match("([^/?]+)$") or ""
+		local file = url_name(install_url)
 		local ext = file:match("^[%w%._%- ]+%.(%a+)$")
 		ext = type(ext) == "string" and ext:lower() or ""
 		if type(e) == "table" and type(e.id) == "string" and ver.valid(e.version) and web.trusted(install_url)
@@ -1920,7 +1947,7 @@ function market.download(s, done)
 	local urls = {}
 	local release_is_asset = type(s.release) == "string"
 		and s.release:match("^https://github%.com/[^/]+/[^/]+/releases/download/") ~= nil
-	if release_is_asset and s.release ~= s.url then urls[#urls + 1] = s.release end
+	if #s.files == 0 and release_is_asset and s.release ~= s.url then urls[#urls + 1] = s.release end
 	if type(s.url) == "string" and s.url ~= "" then urls[#urls + 1] = s.url end
 	if #s.files == 0 and type(s.release) == "string" and s.release ~= ""
 		and s.release ~= s.url and not release_is_asset then
@@ -1937,7 +1964,7 @@ function market.download(s, done)
 						or body:sub(1, 7) == "Rar!\26\7\0"
 						or body:sub(1, 8) == "Rar!\26\7\1\0"
 				else
-					valid = #body > 100 and body:sub(1, 1) ~= "<"
+					valid = #body > 100 and body:sub(1, 1) ~= "<" and body:sub(1, 2) ~= "PK" and body:sub(1, 4) ~= "Rar!"
 					if valid and s.version_marker ~= "NONE" then
 						valid = body:match(s.version_marker .. '%s*=%s*"([^"]+)"') == s.latest
 					end
@@ -1963,7 +1990,7 @@ function market.download_files(s, done)
 		web.get(file.url, function(body, key, detail)
 			if not body then return done(nil, key, detail) end
 			if #body < 100 or body:sub(1, 1) == "<" then return done(nil, "sm_e_valid") end
-			if file.path:match("%.json$") then
+			if file.path:match("%.json$") and #body < 300000 then
 				local ok, parsed = pcall(function() return JSON:decode(body) end)
 				if not ok or type(parsed) ~= "table" then return done(nil, "sm_e_valid") end
 			end

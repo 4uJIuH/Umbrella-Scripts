@@ -1,3 +1,8 @@
+# Update v2.7.0
+
+- Package installation now supports nested folders and up to 200 Lua/JSON files. Self Play and LuaLingo can be installed with the Install button instead of manually extracting their archives.
+- Packages are validated against their manifest paths, trusted URLs, and JSON size limit; ZIP/RAR downloads without a file manifest still require manual installation.
+
 # Update v2.6.0
 
 - Each script's menu location is now shown in a dedicated, easy-to-find section on its details card.
