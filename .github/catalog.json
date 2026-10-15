@@ -10962,6 +10962,53 @@
           "Open `Heroes → Hero List → Pudge → PudgeHook AI`."
         ]
       }
+    },
+    {
+      "id": "arc_warden_wave_pusher",
+      "tag": "arc-warden-wave-pusher",
+      "title": "Arc Warden Wave Pusher",
+      "kind": "lua",
+      "category": "dota",
+      "file": "ArcWardenWavePusher.lua",
+      "heroes": [
+        "arc_warden"
+      ],
+      "author": "Kishin | 鬼神阿修羅 (Discord: madnessvessel)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/arc_warden_wave_pusher",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-wave-pusher&expanded=true",
+      "version_marker": "NONE",
+      "ru": {
+        "tagline": "умный пуш крип-волн клоном Arc Warden",
+        "about": "Дополнение для автоигры клона Arc Warden: помогает эффективнее забирать крипов волны, распределяя атаки и Spark Wraith по приоритетным целям. После дальников и знаменосца отдаёт зачистку мили-крипов и вышек базовому скрипту; при комбо по герою уступает управление.",
+        "features": [
+          "Рассчитывает урон Spark Wraith и планирует атаки по дальним крипам, чтобы не тратить лишние удары",
+          "Приоритет целей: дальники, затем знаменосец, затем мили-крипы",
+          "Выбирает позицию для атаки дальников и знаменосца и ставит Magnetic Field под клона",
+          "Подсвечивает текущую цель кольцом: голубым для дальника, золотым для знаменосца",
+          "Передаёт зачистку мили-крипов и вышек базовому скрипту и уступает ему во время комбо по герою"
+        ],
+        "install": [
+          "Поместите `ArcWardenWavePusher.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Heroes → Hero List → Arc Warden → Clone Settings → Auto Play Settings → Умный пуш пачек`."
+        ]
+      },
+      "en": {
+        "tagline": "smart creep-wave pushing with Arc Warden's clone",
+        "about": "An add-on for Arc Warden clone auto-play that helps secure more lane creeps by prioritizing attacks and Spark Wraiths. After ranged creeps and the flagbearer are handled, it yields melee creeps and towers to the base script; it also yields control during hero combos.",
+        "features": [
+          "Accounts for Spark Wraith damage and plans attacks on ranged creeps to avoid wasted hits",
+          "Target priority: ranged creeps, then the flagbearer, then melee creeps",
+          "Positions to reach ranged creeps and the flagbearer, and places Magnetic Field under the clone",
+          "Highlights the current target with a ring: cyan for ranged creeps and gold for the flagbearer",
+          "Yields melee creep and tower cleanup to the base script and yields during hero combos"
+        ],
+        "install": [
+          "Place `ArcWardenWavePusher.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Heroes → Hero List → Arc Warden → Clone Settings → Auto Play Settings → Умный пуш пачек`."
+        ]
+      }
     }
   ]
 }
