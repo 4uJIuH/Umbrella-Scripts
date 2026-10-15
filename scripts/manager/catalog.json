@@ -5056,9 +5056,9 @@
     },
     {
       "id": "arc_warden_wave_pusher",
-      "version": "1.0.1",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/5ec7d720d8714a434353dce7837b6441b0e68372/scripts/arc_warden_wave_pusher/ArcWardenWavePusher.lua",
-      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-wave-pusher-v1.0.1/ArcWardenWavePusher.lua",
+      "version": "1.1.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/4c85653bddb1b765e22f8ceef09fe99ece6a6ee3/scripts/arc_warden_wave_pusher/ArcWardenWavePusher.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-wave-pusher-v1.1.0/ArcWardenWavePusher.lua",
       "manual": false,
       "needs_q_localizer": false,
       "author": "Kishin | \u9b3c\u795e\u963f\u4fee\u7f85 (Discord: madnessvessel)",
