@@ -22,30 +22,100 @@
 local SCRIPT_NAME = "ArcWardenWavePusher"
 local ORDER_IDENTIFIER = "AW_Wave_Pusher"
 
+--#region Localization
+local STR = {
+    ru = {
+        enable = "Умный пуш пачек",
+        enable_tip = "Умное дополнение для пуша копией: расчет урона Спарка, минимум тычек по дальникам, купол и ластхит знаменосца",
+        smart_pos = "Умная позиция и Magnetic Field",
+        smart_pos_tip = "Подходит в точку, откуда достает до дальников и знаменосца, и только потом ставит купол Magnetic Field",
+        spark_ranged = "Спарк под дальника",
+        spark_ranged_tip = "Ставит Spark Wraith строго под крипа-дальника с точным расчетом урона",
+        priority_flag = "Приоритет знаменосца",
+        priority_flag_tip = "После дальников переключается на крипа-знаменосца и гарантированно забирает золото",
+        attack_lead = "Упреждение ластхита (мс)",
+        attack_lead_tip = "Временной буфер (в миллисекундах) для компенсации урона от летящих снарядов союзных крипов",
+        draw_target = "Отображать цель в мире",
+        draw_target_tip = "Отображает цветное кольцо под текущей целью пуша клона (голубое - дальник, золотое - знаменосец)",
+    },
+    en = {
+        enable = "Smart Wave Pusher",
+        enable_tip = "Smart clone pushing: calculates Spark damage, minimum attacks on ranged creeps, Magnetic Field positioning, and flagbearer last-hitting",
+        smart_pos = "Smart Position & Magnetic Field",
+        smart_pos_tip = "Positions clone to reach both ranged creeps and flagbearer before deploying Magnetic Field",
+        spark_ranged = "Spark on Ranged Creep",
+        spark_ranged_tip = "Casts Spark Wraith directly on ranged creep with exact damage calculation",
+        priority_flag = "Prioritize Flagbearer",
+        priority_flag_tip = "Switches to flagbearer creep after ranged creeps to guarantee bounty gold",
+        attack_lead = "Last-hit Attack Lead (ms)",
+        attack_lead_tip = "Time buffer (in milliseconds) to compensate for ally creep projectile damage",
+        draw_target = "Draw Target in World",
+        draw_target_tip = "Renders a colored ring under clone's current focus target (cyan - ranged, gold - flagbearer)",
+    }
+}
+
+local function cheat_lang_code()
+    local code = nil
+    pcall(function()
+        local w = Menu.Find("SettingsHidden", "", "", "", "Main", "Language")
+        if w then
+            local list = w:List()
+            local idx = w:Get() or 0
+            local name = list and list[idx + 1]
+            if name then
+                local s = string.upper(tostring(name))
+                if s:find("RU", 1, true) then
+                    code = "ru"
+                elseif s:find("EN", 1, true) then
+                    code = "en"
+                end
+            end
+        end
+    end)
+    return code
+end
+
+local function cur_lang()
+    local code = cheat_lang_code()
+    if code then return code end
+    local ok, g = pcall(function()
+        if Steam and Steam.GetGameLanguage then return Steam.GetGameLanguage() end
+    end)
+    if ok and g then
+        local s = string.lower(tostring(g))
+        if s:sub(1, 2) == "ru" then return "ru" end
+    end
+    return "en"
+end
+--#endregion
+
 local ui = {}
 
 --#region Menu Setup
 local auto_play_group = Menu.Create("Heroes", "Hero List", "Arc Warden", "Clone Settings", "Auto Play Settings")
 
+local init_lang = cur_lang()
+local init_T = STR[init_lang] or STR.en
+
 -- Главный переключатель
-ui.enable = auto_play_group:Switch("Умный пуш пачек", true, "\u{f0e7}")
-ui.enable:ToolTip("Умное дополнение для пуша копией: расчет урона Спарка, минимум тычек по дальникам, купол и ластхит знаменосца")
+ui.enable = auto_play_group:Switch(init_T.enable, true, "\u{f0e7}")
+ui.enable:ToolTip(init_T.enable_tip)
 
 -- Поднастройки
-ui.smart_position = auto_play_group:Switch("Умная позиция и Magnetic Field", true, "\u{f0c8}")
-ui.smart_position:ToolTip("Подходит в точку, откуда достает до дальников и знаменосца, и только потом ставит купол Magnetic Field")
+ui.smart_position = auto_play_group:Switch(init_T.smart_pos, true, "\u{f0c8}")
+ui.smart_position:ToolTip(init_T.smart_pos_tip)
 
-ui.spark_ranged = auto_play_group:Switch("Спарк под дальника", true, "\u{f06d}")
-ui.spark_ranged:ToolTip("Ставит Spark Wraith строго под крипа-дальника с точным расчетом урона")
+ui.spark_ranged = auto_play_group:Switch(init_T.spark_ranged, true, "\u{f06d}")
+ui.spark_ranged:ToolTip(init_T.spark_ranged_tip)
 
-ui.priority_flagbearer = auto_play_group:Switch("Приоритет знаменосца", true, "\u{f024}")
-ui.priority_flagbearer:ToolTip("После дальников переключается на крипа-знаменосца и гарантированно забирает золото")
+ui.priority_flagbearer = auto_play_group:Switch(init_T.priority_flag, true, "\u{f024}")
+ui.priority_flagbearer:ToolTip(init_T.priority_flag_tip)
 
-ui.attack_lead = auto_play_group:Slider("Упреждение ластхита (мс)", 0, 150, 40, "%d мс")
-ui.attack_lead:ToolTip("Временной буфер (в миллисекундах) для компенсации урона от летящих снарядов союзных крипов")
+ui.attack_lead = auto_play_group:Slider(init_T.attack_lead, 0, 150, 40, (init_lang == "ru" and "%d мс" or "%d ms"))
+ui.attack_lead:ToolTip(init_T.attack_lead_tip)
 
-ui.draw_target = auto_play_group:Switch("Отображать цель в мире", true, "\u{f5a9}")
-ui.draw_target:ToolTip("Отображает цветное кольцо под текущей целью пуша клона (голубое - дальник, золотое - знаменосец)")
+ui.draw_target = auto_play_group:Switch(init_T.draw_target, true, "\u{f5a9}")
+ui.draw_target:ToolTip(init_T.draw_target_tip)
 
 -- Привязка видимости поднастроек к главному переключателю
 local function update_visibility(widget)
@@ -58,6 +128,41 @@ local function update_visibility(widget)
 end
 
 ui.enable:SetCallback(update_visibility, true)
+
+-- Динамическое обновление локализации при смене языка
+local last_applied_lang = init_lang
+
+local function apply_lang()
+    local lang = cur_lang()
+    if lang == last_applied_lang then return end
+    last_applied_lang = lang
+
+    local T = STR[lang] or STR.en
+    pcall(function()
+        ui.enable:ForceLocalization(T.enable)
+        ui.enable:ToolTip(T.enable_tip)
+        ui.smart_position:ForceLocalization(T.smart_pos)
+        ui.smart_position:ToolTip(T.smart_pos_tip)
+        ui.spark_ranged:ForceLocalization(T.spark_ranged)
+        ui.spark_ranged:ToolTip(T.spark_ranged_tip)
+        ui.priority_flagbearer:ForceLocalization(T.priority_flag)
+        ui.priority_flagbearer:ToolTip(T.priority_flag_tip)
+        ui.attack_lead:ForceLocalization(T.attack_lead)
+        ui.attack_lead:ToolTip(T.attack_lead_tip)
+        ui.draw_target:ForceLocalization(T.draw_target)
+        ui.draw_target:ToolTip(T.draw_target_tip)
+    end)
+end
+
+pcall(function()
+    local lang_w = Menu.Find("SettingsHidden", "", "", "", "Main", "Language")
+    if lang_w then
+        lang_w:SetCallback(function()
+            last_applied_lang = nil
+            apply_lang()
+        end)
+    end
+end)
 --#endregion
 
 --#region Runtime State
@@ -584,6 +689,8 @@ function WavePusher.OnPrepareUnitOrders(data)
 end
 
 function WavePusher.OnUpdate()
+    apply_lang()
+
     if not ui.enable:Get() then
         UpdateVisualRing(nil)
         active_priority_target = nil
