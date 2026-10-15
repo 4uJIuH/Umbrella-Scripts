@@ -282,11 +282,13 @@ def write_manifest(script, tag, sha):
         script_dir = BASE / "scripts" / script["id"]
         raw_base = "https://raw.githubusercontent.com/%s/%s/" % (REPO, sha)
         package_files = script["package_files"]
-        if not isinstance(package_files, list) or not package_files or len(package_files) > 64:
-            raise SystemExit("package_files must contain 1-64 files")
+        if not isinstance(package_files, list) or not package_files or len(package_files) > MAX_PACKAGE_FILES:
+            raise SystemExit("package_files must contain 1-%d files" % MAX_PACKAGE_FILES)
         files = []
         for name in package_files:
-            if not isinstance(name, str) or not PACKAGE_FILE.fullmatch(name):
+            if not isinstance(name, str) or not (
+                PACKAGE_PATH.fullmatch(name) or PACKAGE_FILE.fullmatch(name)
+            ):
                 raise SystemExit("unsupported package file name: %r" % name)
             path = script_dir / name
             if not path.is_file():

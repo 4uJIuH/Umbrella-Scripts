@@ -18,7 +18,7 @@
 
 ## Установка
 
-1. Скачайте `scripts/achievements.lua` и папку `ulib` из <a href="https://github.com/iseetwop/achievements" target="_blank" rel="noopener">репозитория автора</a>.
+1. Нажмите «Установить» у Achievements в Script Manager, чтобы установить скрипт и все файлы `ulib`. Для ручной установки скачайте файлы из <a href="https://github.com/iseetwop/achievements" target="_blank" rel="noopener">репозитория автора</a>.
 2. Поместите Lua-файл в `umbrella\scripts`, а содержимое `ulib` — в `umbrella\scripts\ulib`.
 3. Откройте данные матчей Dota и перезагрузите Lua-скрипты.
 4. Настройки: General → Achievements. Для некоторых игровых событий нужны небезопасные функции чита.
@@ -37,7 +37,7 @@ A beta Steam-style achievement tracker. The author's repository provides the cur
 
 ## Install
 
-1. Download `scripts/achievements.lua` and the `ulib` folder from the <a href="https://github.com/iseetwop/achievements" target="_blank" rel="noopener">author's repository</a>.
+1. Click Install for Achievements in Script Manager to install the script and all `ulib` files. For manual installation, download the files from the <a href="https://github.com/iseetwop/achievements" target="_blank" rel="noopener">author's repository</a>.
 2. Place the Lua file in `umbrella\scripts` and `ulib` in `umbrella\scripts\ulib`.
 3. Enable public Dota match data and reload the Lua scripts.
 4. Settings: General → Achievements. Some game events require unsafe cheat functions.

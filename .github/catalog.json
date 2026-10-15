@@ -3124,12 +3124,31 @@
       "author_github": "iseetwop",
       "source_url": "https://github.com/iseetwop/achievements",
       "version_marker": "NONE",
-      "manual": true,
+      "manual": false,
       "initial": {
         "version": "1.0.0",
         "date": "2026-10-13",
         "url": "https://raw.githubusercontent.com/iseetwop/achievements/92655a35189923606ef3485a113f04bcd20fd3b1/scripts/achievements.lua",
-        "release": "https://github.com/iseetwop/achievements"
+        "release": "https://github.com/iseetwop/achievements",
+        "install_url": "https://raw.githubusercontent.com/iseetwop/achievements/92655a35189923606ef3485a113f04bcd20fd3b1/scripts/achievements.lua",
+        "files": [
+          {
+            "path": "ulib/http.lua",
+            "url": "https://raw.githubusercontent.com/iseetwop/achievements/92655a35189923606ef3485a113f04bcd20fd3b1/ulib/http.lua"
+          },
+          {
+            "path": "ulib/icons.lua",
+            "url": "https://raw.githubusercontent.com/iseetwop/achievements/92655a35189923606ef3485a113f04bcd20fd3b1/ulib/icons.lua"
+          },
+          {
+            "path": "ulib/store.lua",
+            "url": "https://raw.githubusercontent.com/iseetwop/achievements/92655a35189923606ef3485a113f04bcd20fd3b1/ulib/store.lua"
+          },
+          {
+            "path": "ulib/timer.lua",
+            "url": "https://raw.githubusercontent.com/iseetwop/achievements/92655a35189923606ef3485a113f04bcd20fd3b1/ulib/timer.lua"
+          }
+        ]
       },
       "ru": {
         "tagline": "достижения и прогресс по истории матчей и событиям игры",
@@ -3140,7 +3159,7 @@
           "Хранит отдельный прогресс для каждого аккаунта"
         ],
         "install": [
-          "Скачайте `scripts/achievements.lua` и папку `ulib` из <a href=\"https://github.com/iseetwop/achievements\" target=\"_blank\" rel=\"noopener\">репозитория автора</a>.",
+          "Нажмите «Установить» у Achievements в Script Manager, чтобы скачать скрипт и все файлы `ulib`.",
           "Поместите Lua-файл в `umbrella\\scripts`, а содержимое `ulib` — в `umbrella\\scripts\\ulib`.",
           "Откройте данные матчей Dota и перезагрузите Lua-скрипты.",
           "Настройки: General → Achievements. Для некоторых игровых событий нужны небезопасные функции чита."
@@ -3155,7 +3174,7 @@
           "Keeps separate progress for each account"
         ],
         "install": [
-          "Download `scripts/achievements.lua` and the `ulib` folder from the <a href=\"https://github.com/iseetwop/achievements\" target=\"_blank\" rel=\"noopener\">author's repository</a>.",
+          "Click Install for Achievements in Script Manager to download the script and all `ulib` files.",
           "Place the Lua file in `umbrella\\scripts` and `ulib` in `umbrella\\scripts\\ulib`.",
           "Enable public Dota match data and reload the Lua scripts.",
           "Settings: General → Achievements. Some game events require unsafe cheat functions."
@@ -3437,12 +3456,32 @@
       "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/gank_threat",
       "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=gank-threat&expanded=true",
       "version_marker": "NONE",
-      "manual": true,
+      "manual": false,
+      "package_files": [
+        "ulib/icons.lua",
+        "ulib/panel.lua",
+        "ulib/timer.lua"
+      ],
       "initial": {
         "version": "1.0.0",
         "date": "2026-10-13",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/gank_threat/gank_threat.lua",
-        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/gank-threat-v1.0.0/gank_threat.lua"
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/gank-threat-v1.0.0/gank_threat.lua",
+        "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/gank_threat/gank_threat.lua",
+        "files": [
+          {
+            "path": "ulib/icons.lua",
+            "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/585e12dda729607b6e31eace28eb1259f2434fe5/scripts/gank_threat/ulib/icons.lua"
+          },
+          {
+            "path": "ulib/panel.lua",
+            "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/585e12dda729607b6e31eace28eb1259f2434fe5/scripts/gank_threat/ulib/panel.lua"
+          },
+          {
+            "path": "ulib/timer.lua",
+            "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/585e12dda729607b6e31eace28eb1259f2434fe5/scripts/gank_threat/ulib/timer.lua"
+          }
+        ]
       },
       "ru": {
         "tagline": "оценивает угрозу ганка и время подхода врагов",
@@ -3450,10 +3489,10 @@
         "features": [
           "Предупреждает о телепортации к герою, в том числе из тумана войны",
           "Показывает ближайших и скрытых врагов с оценкой маршрута и времени",
-          "Файлы `ulib` доступны отдельно в исходниках; сам скрипт скачивается как Lua-файл, не ZIP"
+          "Кнопка установки в Script Manager скачивает скрипт и все необходимые файлы `ulib`"
         ],
         "install": [
-          "Скачайте `gank_threat.lua` и поместите его в `umbrella\\scripts`.",
+          "Нажмите «Установить» у Gank Threat в Script Manager, чтобы скачать скрипт и все файлы `ulib`.",
           "Скопируйте папку `ulib` из <a href=\"https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/gank_threat/ulib\" target=\"_blank\" rel=\"noopener\">исходников</a> в `umbrella\\scripts\\ulib`.",
           "Перезагрузите Lua-скрипты. Настройки: General → Gank Threat."
         ]
@@ -3464,10 +3503,10 @@
         "features": [
           "Warns about incoming teleports, including those hidden by fog of war",
           "Tracks nearby and unseen enemies with route and arrival estimates",
-          "The `ulib` files are linked separately; the script downloads as a Lua file, not a ZIP"
+          "The Script Manager Install button downloads the script and all required `ulib` files"
         ],
         "install": [
-          "Download `gank_threat.lua` and place it in `umbrella\\scripts`.",
+          "Click Install for Gank Threat in Script Manager to download the script and all `ulib` files.",
           "Copy the `ulib` folder from the <a href=\"https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/gank_threat/ulib\" target=\"_blank\" rel=\"noopener\">source files</a> into `umbrella\\scripts\\ulib`.",
           "Reload the Lua scripts. Settings: General → Gank Threat."
         ]
@@ -3531,12 +3570,35 @@
       "author_github": "iseetwop",
       "source_url": "https://github.com/iseetwop/counteritems",
       "version_marker": "NONE",
-      "manual": true,
+      "manual": false,
       "initial": {
         "version": "1.0.0",
         "date": "2026-10-13",
         "url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/scripts/counter_items.lua",
-        "release": "https://github.com/iseetwop/counteritems"
+        "release": "https://github.com/iseetwop/counteritems",
+        "install_url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/scripts/counter_items.lua",
+        "files": [
+          {
+            "path": "ulib/http.lua",
+            "url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/ulib/http.lua"
+          },
+          {
+            "path": "ulib/icons.lua",
+            "url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/ulib/icons.lua"
+          },
+          {
+            "path": "ulib/panel.lua",
+            "url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/ulib/panel.lua"
+          },
+          {
+            "path": "ulib/store.lua",
+            "url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/ulib/store.lua"
+          },
+          {
+            "path": "ulib/timer.lua",
+            "url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/ulib/timer.lua"
+          }
+        ]
       },
       "ru": {
         "tagline": "подсказывает контр-предметы против героев и их покупок",
@@ -3547,7 +3609,7 @@
           "Для установки нужны `scripts/counter_items.lua` и папка `ulib` из репозитория автора"
         ],
         "install": [
-          "Скачайте `scripts/counter_items.lua` и `ulib` из <a href=\"https://github.com/iseetwop/counteritems\" target=\"_blank\" rel=\"noopener\">репозитория автора</a>.",
+          "Нажмите «Установить» у Counter Items в Script Manager, чтобы скачать скрипт и все файлы `ulib`.",
           "Поместите Lua-файл в `umbrella\\scripts`, а папку `ulib` — в `umbrella\\scripts\\ulib`.",
           "Перезагрузите Lua-скрипты. Настройки: General → Counter Items."
         ]
@@ -3561,7 +3623,7 @@
           "Installation requires `scripts/counter_items.lua` and the author's `ulib` folder"
         ],
         "install": [
-          "Download `scripts/counter_items.lua` and `ulib` from the <a href=\"https://github.com/iseetwop/counteritems\" target=\"_blank\" rel=\"noopener\">author's repository</a>.",
+          "Click Install for Counter Items in Script Manager to download the script and all `ulib` files.",
           "Place the Lua file in `umbrella\\scripts` and `ulib` in `umbrella\\scripts\\ulib`.",
           "Reload the Lua scripts. Settings: General → Counter Items."
         ]

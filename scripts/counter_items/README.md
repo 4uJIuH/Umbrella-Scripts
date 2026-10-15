@@ -18,7 +18,7 @@
 
 ## Установка
 
-1. Скачайте `scripts/counter_items.lua` и `ulib` из <a href="https://github.com/iseetwop/counteritems" target="_blank" rel="noopener">репозитория автора</a>.
+1. Нажмите «Установить» у Counter Items в Script Manager, чтобы установить скрипт и все файлы `ulib`. Для ручной установки скачайте файлы из <a href="https://github.com/iseetwop/counteritems" target="_blank" rel="noopener">репозитория автора</a>.
 2. Поместите Lua-файл в `umbrella\scripts`, а папку `ulib` — в `umbrella\scripts\ulib`.
 3. Перезагрузите Lua-скрипты. Настройки: General → Counter Items.
 
@@ -36,6 +36,6 @@ Analyzes enemy picks and items to suggest counters. This is an unversioned proje
 
 ## Install
 
-1. Download `scripts/counter_items.lua` and `ulib` from the <a href="https://github.com/iseetwop/counteritems" target="_blank" rel="noopener">author's repository</a>.
+1. Click Install for Counter Items in Script Manager to install the script and all `ulib` files. For manual installation, download the files from the <a href="https://github.com/iseetwop/counteritems" target="_blank" rel="noopener">author's repository</a>.
 2. Place the Lua file in `umbrella\scripts` and `ulib` in `umbrella\scripts\ulib`.
 3. Reload the Lua scripts. Settings: General → Counter Items.

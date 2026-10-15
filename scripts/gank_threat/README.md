@@ -22,7 +22,7 @@
 
 ## Установка
 
-1. Скачайте `gank_threat.lua` и поместите его в `umbrella\scripts`.
+1. Нажмите «Установить» у Gank Threat в Script Manager: он скачает скрипт и нужные файлы в `umbrella\scripts\ulib`.
 2. Скопируйте папку `ulib` из <a href="https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/gank_threat/ulib" target="_blank" rel="noopener">исходников</a> в `umbrella\scripts\ulib`.
 3. Перезагрузите Lua-скрипты. Настройки: General → Gank Threat.
 
@@ -40,6 +40,6 @@ Shows enemies who may reach the hero and estimates how long they could take. The
 
 ## Install
 
-1. Download `gank_threat.lua` and place it in `umbrella\scripts`.
+1. Click Install for Gank Threat in Script Manager; it downloads the script and required files into `umbrella\scripts\ulib`.
 2. Copy the `ulib` folder from the <a href="https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/gank_threat/ulib" target="_blank" rel="noopener">source files</a> into `umbrella\scripts\ulib`.
 3. Reload the Lua scripts. Settings: General → Gank Threat.

@@ -1260,7 +1260,7 @@
       "version": "1.0.0",
       "url": "https://raw.githubusercontent.com/iseetwop/achievements/92655a35189923606ef3485a113f04bcd20fd3b1/scripts/achievements.lua",
       "release": "https://github.com/iseetwop/achievements",
-      "manual": true,
+      "manual": false,
       "needs_q_localizer": false,
       "author": "! 666 (Discord: isee2p)",
       "menu": {
@@ -1272,6 +1272,25 @@
         ]
       },
       "date": "2026-10-13",
+      "install_url": "https://raw.githubusercontent.com/iseetwop/achievements/92655a35189923606ef3485a113f04bcd20fd3b1/scripts/achievements.lua",
+      "files": [
+        {
+          "path": "ulib/http.lua",
+          "url": "https://raw.githubusercontent.com/iseetwop/achievements/92655a35189923606ef3485a113f04bcd20fd3b1/ulib/http.lua"
+        },
+        {
+          "path": "ulib/icons.lua",
+          "url": "https://raw.githubusercontent.com/iseetwop/achievements/92655a35189923606ef3485a113f04bcd20fd3b1/ulib/icons.lua"
+        },
+        {
+          "path": "ulib/store.lua",
+          "url": "https://raw.githubusercontent.com/iseetwop/achievements/92655a35189923606ef3485a113f04bcd20fd3b1/ulib/store.lua"
+        },
+        {
+          "path": "ulib/timer.lua",
+          "url": "https://raw.githubusercontent.com/iseetwop/achievements/92655a35189923606ef3485a113f04bcd20fd3b1/ulib/timer.lua"
+        }
+      ],
       "version_marker": "NONE"
     },
     {
@@ -1401,7 +1420,7 @@
       "version": "1.0.0",
       "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/gank_threat/gank_threat.lua",
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/gank-threat-v1.0.0/gank_threat.lua",
-      "manual": true,
+      "manual": false,
       "needs_q_localizer": false,
       "author": "! 666 (Discord: isee2p)",
       "menu": {
@@ -1413,6 +1432,21 @@
         ]
       },
       "date": "2026-10-13",
+      "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/gank_threat/gank_threat.lua",
+      "files": [
+        {
+          "path": "ulib/icons.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/585e12dda729607b6e31eace28eb1259f2434fe5/scripts/gank_threat/ulib/icons.lua"
+        },
+        {
+          "path": "ulib/panel.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/585e12dda729607b6e31eace28eb1259f2434fe5/scripts/gank_threat/ulib/panel.lua"
+        },
+        {
+          "path": "ulib/timer.lua",
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/585e12dda729607b6e31eace28eb1259f2434fe5/scripts/gank_threat/ulib/timer.lua"
+        }
+      ],
       "version_marker": "NONE"
     },
     {
@@ -1442,7 +1476,7 @@
       "version": "1.0.0",
       "url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/scripts/counter_items.lua",
       "release": "https://github.com/iseetwop/counteritems",
-      "manual": true,
+      "manual": false,
       "needs_q_localizer": false,
       "author": "! 666 (Discord: isee2p)",
       "menu": {
@@ -1454,6 +1488,29 @@
         ]
       },
       "date": "2026-10-13",
+      "install_url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/scripts/counter_items.lua",
+      "files": [
+        {
+          "path": "ulib/http.lua",
+          "url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/ulib/http.lua"
+        },
+        {
+          "path": "ulib/icons.lua",
+          "url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/ulib/icons.lua"
+        },
+        {
+          "path": "ulib/panel.lua",
+          "url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/ulib/panel.lua"
+        },
+        {
+          "path": "ulib/store.lua",
+          "url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/ulib/store.lua"
+        },
+        {
+          "path": "ulib/timer.lua",
+          "url": "https://raw.githubusercontent.com/iseetwop/counteritems/d311fade07de899a638fe89167b31d4d17e9b704/ulib/timer.lua"
+        }
+      ],
       "version_marker": "NONE"
     },
     {
