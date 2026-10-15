@@ -1,3 +1,8 @@
+# Update v2.5.0
+
+- Scripts that install together with a folder (`lib` for Tinker Auto Farm, `filters` for BehaviorScoreHelper) now show a bright notice on their page: which empty folder to create in the scripts folder before installing.
+- If Script Manager cannot create that folder by itself, a window with the folder name and a Continue button opens instead of a quiet error; once the folder exists, the install carries on.
+
 # Update v2.4.0
 
 - Added an Authors section with search and filtering by author.

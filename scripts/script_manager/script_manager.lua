@@ -424,6 +424,16 @@ local localization = qLocalization.new({
 		sm_ok = "Got it",
 		sm_manual_t = "Downloaded",
 		sm_manual_msg = "%s was downloaded to your scripts folder. Follow the package's installation instructions.",
+		sm_dir_hint_t1 = "Create the folder %s first",
+		sm_dir_hint_tn = "Create the folders %s first",
+		sm_dir_hint_b = "Before installing, open your scripts folder and create an empty folder with this name inside it. Leave it empty: Script Manager will download all the files into it by itself.",
+		sm_dir_hint_in = "Scripts folder:",
+		sm_dir_t1 = "Create the folder %s",
+		sm_dir_tn = "Create the folders %s",
+		sm_dir_b = "Script Manager could not create it by itself, and the script will not load without it. Create an empty folder with this name in the scripts folder, then press Continue.",
+		sm_dir_miss = "The folder was not found yet. Check the name and the location.",
+		sm_dir_go = "Continue",
+		sm_dir_cancel = "Cancel",
 
 		sm_e_dir = "Scripts folder is unavailable",
 		sm_e_url = "Address is not trusted",
@@ -582,6 +592,16 @@ local localization = qLocalization.new({
 		sm_ok = "Понятно",
 		sm_manual_t = "Скачано",
 		sm_manual_msg = "%s скачан в папку скриптов. Следуй инструкции по установке из этого пакета.",
+		sm_dir_hint_t1 = "Сначала создайте папку %s",
+		sm_dir_hint_tn = "Сначала создайте папки %s",
+		sm_dir_hint_b = "Перед установкой откройте папку со скриптами и создайте в ней пустую папку с таким именем. Оставьте её пустой: Script Manager сам скачает в неё все файлы.",
+		sm_dir_hint_in = "Папка скриптов:",
+		sm_dir_t1 = "Создайте папку %s",
+		sm_dir_tn = "Создайте папки %s",
+		sm_dir_b = "Script Manager не смог создать её сам, а без неё скрипт не загрузится. Создайте пустую папку с таким именем в папке скриптов и нажмите «Продолжить».",
+		sm_dir_miss = "Папка пока не найдена. Проверьте название и расположение.",
+		sm_dir_go = "Продолжить",
+		sm_dir_cancel = "Отмена",
 
 		sm_e_dir = "Папка скриптов недоступна",
 		sm_e_url = "Адрес не из доверенных",
@@ -638,7 +658,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.4.0"
+local VERSION = "2.5.0"
 
 local K = {
 	CFG = "script_market",
@@ -669,6 +689,7 @@ local K = {
 		dota = "\u{f11b}", deadlock = "\u{f06d}", auxiliary = "\u{f0ad}",
 		authors = "\u{f0c0}", universal = "\u{f0ac}",
 		search = "\u{f002}", clear = "\u{f057}", sort = "\u{f160}", refresh = "\u{f2f9}", sliders = "\u{f1de}",
+		warn = "\u{f071}", folder = "\u{f07b}",
 		back = "\u{f053}", down = "\u{f078}", up = "\u{f077}", check = "\u{f00c}", store = "\u{f54e}", clock = "\u{f017}",
 	},
 }
@@ -847,7 +868,7 @@ local S = {
 	query = "", focus = false, confirm = nil, qc = 0, qa = nil, q_off = 0, q_drag = false, q_click = 0, q_blink = 0,
 	foot = "idle", foot_until = 0, changed = {}, note = nil, reload_at = nil,
 	net = { state = "idle", at = 0, stamp = 0, err = nil, loaded = false },
-	inst = {}, busy = {}, nlz = nil, nlz_wait = nil, dir = nil,
+	inst = {}, busy = {}, nlz = nil, nlz_wait = nil, dir = nil, dw = nil, dw_open = false,
 	set = {
 		check = Config.ReadString(K.CFG, "check", "start"),
 		auto = Config.ReadInt(K.CFG, "auto", 0) == 1,
@@ -1608,6 +1629,53 @@ function market.package_path(path)
 			or path:match("^filters/filter_[%w_%-]+_cached%.txt$") ~= nil)))
 end
 
+-- top-level folders (lib, filters) that a package needs next to its main file
+function market.package_dirs(files)
+	local dirs, seen = {}, {}
+	for _, file in ipairs(files) do
+		local name = file.path:match("^([%w_%-]+)/")
+		if name and not seen[name] then
+			seen[name] = true
+			dirs[#dirs + 1] = name
+		end
+	end
+	return dirs
+end
+
+function market.missing_dirs(s, dir)
+	local missing = {}
+	for _, name in ipairs(s.dirs) do
+		if not fs.ensure_dir(dir .. name) then missing[#missing + 1] = name end
+	end
+	return missing
+end
+
+-- opens the "create this folder" window
+function market.need_dirs(s, names, miss)
+	S.busy[s.id] = nil
+	S.dw = { id = s.id, dirs = names, miss = miss == true }
+	S.dw_open = true
+end
+
+function market.dir_close()
+	S.dw_open = false
+end
+
+function market.dir_retry()
+	local d = S.dw
+	local s = d and BY_ID[d.id]
+	if not s then return market.dir_close() end
+	local dir = fs.dir()
+	if not dir then return market.dir_close() end
+	local missing = market.missing_dirs(s, dir)
+	if #missing > 0 then
+		d.dirs, d.miss = missing, true
+		return
+	end
+	S.dw_open = false
+	market.run(s.id)
+end
+
 function market.build(catalog, meta)
 	local described = {}
 	if meta and type(meta.scripts) == "table" then
@@ -1671,6 +1739,7 @@ function market.build(catalog, meta)
 				about = { ru = text.clean(ru.about), en = text.clean(en.about) },
 				features = { ru = text.list(ru.features), en = text.list(en.features) },
 			}
+			item.dirs = market.package_dirs(package_files)
 			item.heroes = market.parse_heroes(e.heroes or e.hero) or {}
 			if #item.heroes == 0 and HERO_FIX[item.id] then item.heroes = market.parse_heroes(HERO_FIX[item.id]) or {} end
 			item.author_key, item.author_name = market.author(item.author)
@@ -1764,6 +1833,11 @@ end
 
 function market.fail(s, key, detail)
 	S.busy[s.id] = nil
+	if key == "sm_e_folder" and #s.dirs > 0 then
+		local dir = fs.dir()
+		local missing = dir and market.missing_dirs(s, dir) or {}
+		return market.need_dirs(s, #missing > 0 and missing or s.dirs)
+	end
 	market.note("sm_err_t", s.title .. ". " .. L(key) .. (detail and (": " .. detail) or ""))
 end
 
@@ -1880,6 +1954,9 @@ function market.run(id)
 
 	local dir = fs.dir()
 	if not dir then return market.fail(s, "sm_e_dir") end
+
+	local missing = market.missing_dirs(s, dir)
+	if #missing > 0 then return market.need_dirs(s, missing) end
 
 	local function fetch()
 		market.download(s, function(body, key, detail)
@@ -2801,6 +2878,96 @@ function view.heroes()
 	view.end_scroll(y + S.scroll - K.TOP + 12)
 end
 
+local ORANGE = PAL.orange
+
+-- folder chips: [folder icon] name, returns the x after the last chip
+function view.dir_chips(names, x, cy, size, alpha)
+	for _, name in ipairs(names) do
+		local w = 14 + size + 8 + g.width(700, size, name) + 16
+		local h = size + 18
+		g.rect(x, cy - h / 2, w, h, T.dark, 9, 0.45 * alpha)
+		g.frame(x, cy - h / 2, w, h, ORANGE, 9, 0.7 * alpha)
+		g.glyph(K.G.folder, size, x + 14 + size / 2, cy, ORANGE, alpha)
+		g.text(700, size, name, x + 14 + size + 8, cy, T.t1, alpha)
+		x = x + w + 8
+	end
+	return x
+end
+
+-- bright notice under the script header: which folder to create before installing
+function view.dir_hint(s, cx, y, cw)
+	local title = string.format(L(#s.dirs == 1 and "sm_dir_hint_t1" or "sm_dir_hint_tn"), table.concat(s.dirs, ", "))
+	local tx = cx + 16 + 40 + 14
+	local tw = cw - (tx - cx) - 16
+	local lines = g.wrap(400, 13, L("sm_dir_hint_b"), tw)
+	local h = 16 + 22 + 6 + #lines * 20 + 14 + 34 + 16
+	local pulse = 0.55 + 0.25 * math.sin(S.now * 3)
+	g.rect(cx, y, cw, h, ORANGE, 14, 0.13)
+	g.frame(cx, y, cw, h, ORANGE, 14, pulse, 1.5)
+	g.rect(cx + 16, y + 16, 40, 40, ORANGE, 12, 0.24)
+	g.glyph(K.G.warn, 18, cx + 16 + 20, y + 16 + 20, ORANGE)
+	g.text(700, 16, g.fit(700, 16, title, tw), tx, y + 16 + 11, ORANGE)
+	local ly = y + 16 + 22 + 6
+	for i, line in ipairs(lines) do g.text(400, 13, line, tx, ly + (i - 1) * 20 + 10, T.t2) end
+	local cy = ly + #lines * 20 + 14 + 17
+	local nx = view.dir_chips(s.dirs, tx, cy, 13, 1)
+	local path = L("sm_dir_hint_in") .. " " .. (fs.dir() or "umbrella\\scripts\\")
+	local room = cx + cw - 16 - nx - 6
+	if room > 80 then g.text(400, 12, g.fit(400, 12, path, room), nx + 6, cy, T.t3) end
+	return y + h + 24
+end
+
+-- window shown when the folder could not be created automatically
+function view.dir_window()
+	local ka = anim.tween("dw", S.dw_open and 1 or 0, 0.18)
+	local d = S.dw
+	if ka < 0.01 or not d then return end
+	g.a = S.alpha
+	g.rect(0, 0, K.W, K.H, { 0, 0, 0 }, 16, 0.62 * ka)
+	if S.dw_open then hit.add(0, 0, K.W, K.H, "dw_bg") end
+
+	g.a = S.alpha * ka
+	local w = 460
+	local tw = w - 48
+	local title = string.format(L(#d.dirs == 1 and "sm_dir_t1" or "sm_dir_tn"), table.concat(d.dirs, ", "))
+	local lines = g.wrap(400, 13, L("sm_dir_b"), tw)
+	local path = L("sm_dir_hint_in") .. " " .. (fs.dir() or "umbrella\\scripts\\")
+	local h = 24 + 44 + 18 + #lines * 21 + 16 + 44 + 12 + 18 + (d.miss and 28 or 0) + 22 + 38 + 22
+	local x = (K.W - w) / 2
+	local y = (K.H - h) / 2 + 12 * (1 - ka)
+
+	g.rect(x, y, w, h, C.menu, 16, 1)
+	g.rect(x, y, w, h, ORANGE, 16, 0.08)
+	g.frame(x, y, w, h, ORANGE, 16, 0.55 + 0.25 * math.sin(S.now * 3), 1.5)
+	if S.dw_open then hit.add(x, y, w, h, "dw_card") end
+
+	g.rect(x + 24, y + 24, 44, 44, ORANGE, 14, 0.26)
+	g.glyph(K.G.warn, 20, x + 24 + 22, y + 24 + 22, ORANGE)
+	g.text(700, 19, g.fit(700, 19, title, w - 24 - 44 - 14 - 24), x + 24 + 44 + 14, y + 24 + 22, T.t1)
+
+	local cy = y + 24 + 44 + 18
+	for i, line in ipairs(lines) do g.text(400, 13, line, x + 24, cy + (i - 1) * 21 + 10, T.t2) end
+	cy = cy + #lines * 21 + 16
+
+	g.rect(x + 24, cy, tw, 44, T.dark, 12, 0.4)
+	view.dir_chips(d.dirs, x + 24 + 12, cy + 22, 15, ka)
+	cy = cy + 44 + 12
+	g.text(400, 12, g.fit(400, 12, path, tw), x + 24, cy + 9, T.t3)
+	cy = cy + 18
+	if d.miss then
+		g.text(600, 13, g.fit(600, 13, L("sm_dir_miss"), tw), x + 24, cy + 18, T.red)
+		cy = cy + 28
+	end
+	cy = cy + 22
+
+	local live = S.dw_open
+	local go_w = g.width(600, 13, L("sm_dir_go")) + 48
+	local cancel_w = g.width(500, 13, L("sm_dir_cancel")) + 40
+	view.pill(x + w - 24 - go_w, cy, go_w, 38, L("sm_dir_go"), "white", live and "dw_go" or nil, market.dir_retry, 13)
+	view.pill(x + w - 24 - go_w - 8 - cancel_w, cy, cancel_w, 38, L("sm_dir_cancel"), "ghost", live and "dw_cancel" or nil, market.dir_close, 13)
+	g.a = S.alpha
+end
+
 function view.detail()
 	local s = BY_ID[S.sel]
 	local x0, w0 = K.SIDE, K.W - K.SIDE
@@ -2896,6 +3063,8 @@ function view.detail()
 		g.text(600, 12, g.fit(600, 12, label, chip_w - 14 - 11 - 6 - 14), cx + 100 + 14 + 11 + 6, y + 68, K.ACCENT_TEXT)
 	end
 	y = y + 80 + 28
+
+	if #s.dirs > 0 and v == nil then y = view.dir_hint(s, cx, y, cw) end
 
 	local stats
 	if k == "update" then
@@ -3262,6 +3431,7 @@ function view.window()
 	g.frame(0, 0, K.W, K.H, T.white, 16, 0.09)
 	g.hl(18, 0, K.W - 36, K.ACCENT_TEXT, 0.35 * S.alpha)
 	view.grip()
+	view.dir_window()
 end
 
 local JS_SINK = [[
@@ -3352,7 +3522,9 @@ function input.key(key)
 		return
 	end
 	if key == KEY.KEY_ESCAPE then
-		if S.sort_open or S.menu then
+		if S.dw_open then
+			market.dir_close()
+		elseif S.sort_open or S.menu then
 			S.sort_open, S.menu = false, nil
 		elseif S.view ~= "list" then
 			view.go("list")
@@ -3423,6 +3595,7 @@ function script.OnKeyEvent(e)
 	local over = inside(mx, my)
 	if e.event == Enum.EKeyEvent.EKeyEvent_SCROLL_UP or e.event == Enum.EKeyEvent.EKeyEvent_SCROLL_DOWN then
 		if not over then return true end
+		if S.dw_open then return false end
 		for i = #hit.list, 1, -1 do
 			local h = hit.list[i]
 			if h[5] == "content" and mx >= h[1] and mx < h[3] and my >= h[2] and my < h[4] then
