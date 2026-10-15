@@ -3,13 +3,9 @@
 отправляет пауков Брудмазер блокировать спавн кемпов / sends Broodmother's spiders to block neutral camp spawns
 
 <!-- releases:start -->
-Скачать: [brood_camp_blocker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/brood-camp-blocker-v1.6/brood_camp_blocker.lua) — `brood-camp-blocker-v1.6`, 2026-10-13
+Последняя версия: [`v1.6` — `brood_camp_blocker.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/brood_camp_blocker/brood_camp_blocker.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`brood-camp-blocker-v1.6`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/brood-camp-blocker-v1.6) | 2026-10-13 | [brood_camp_blocker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/brood-camp-blocker-v1.6/brood_camp_blocker.lua) | 0 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=brood-camp-blocker&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=brood-camp-blocker&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

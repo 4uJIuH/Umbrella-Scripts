@@ -3,11 +3,12 @@
 каталог скриптов Umbrella с установкой и обновлениями / an Umbrella script catalog with script installation and updates
 
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.5.0/script_manager.lua) — `script-manager-v2.5.0`, 2026-10-15
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.6.0/script_manager.lua) — `script-manager-v2.6.0`, 2026-10-15
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`script-manager-v2.5.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.5.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.5.0/script_manager.lua) | 0 |
+| [`script-manager-v2.6.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.6.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.6.0/script_manager.lua) | 0 |
+| [`script-manager-v2.5.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.5.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.5.0/script_manager.lua) | 3 |
 | [`script-manager-v2.4.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.4.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.4.0/script_manager.lua) | 2 |
 | [`script-manager-v2.3.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.3.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.3.0/script_manager.lua) | 3 |
 | [`script-manager-v2.2.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.2.1) | 2026-10-14 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.2.1/script_manager.lua) | 0 |
@@ -31,6 +32,7 @@ Script Manager объединяет каталог скриптов в отде�
 
 - Загружает общий каталог с сайта и показывает скрипты по категориям, героям и статусу установки
 - Отображает описания, возможности, автора, источник и доступную версию выбранного скрипта
+- Показывает путь к меню скрипта в его карточке
 - Ищет скрипты и сортирует каталог, установленные файлы и доступные обновления
 - Автоматически проверяет каталог при запуске; проверку можно повторить вручную или настроить периодичность
 - Устанавливает и обновляет отдельные скрипты, создавая резервную копию заменяемого файла
@@ -49,6 +51,11 @@ Script Manager объединяет каталог скриптов в отде�
 4. Откройте `Scripts → Scripts → Script Manager`, включите его и назначьте клавишу для открытия панели.
 
 ## Что нового
+
+# Обновление v2.6.0
+
+- Путь к меню каждого скрипта вынесен в отдельный наглядный блок в его карточке.
+- Поддерживаются локализованные пути и несколько путей меню для одного скрипта.
 
 # Обновление v2.5.0
 
@@ -130,6 +137,7 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 
 - Loads the shared website catalog and groups scripts by category, hero, and installation status
 - Shows a selected script's description, features, author, source, and available version
+- Shows the script's menu path on its details card
 - Searches and sorts the catalog, installed files, and available updates
 - Checks the catalog on startup, with manual refresh and configurable recheck intervals
 - Installs and updates individual scripts while keeping a backup of replaced files
@@ -148,6 +156,11 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 4. Open `Scripts → Scripts → Script Manager`, enable it, and assign a key to open the panel.
 
 ## Changelog
+
+# Update v2.6.0
+
+- Each script's menu location is now shown in a dedicated, easy-to-find section on its details card.
+- Localized menu paths and multiple paths per script are supported.
 
 # Update v2.5.0
 

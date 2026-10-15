@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`hero-grid-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/hero-grid-v1.0.0) | 2026-10-13 | [hero_grid.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/hero-grid-v1.0.0/hero_grid.lua) | 0 |
+| [`hero-grid-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/hero-grid-v1.0.0) | 2026-10-13 | [hero_grid.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/hero-grid-v1.0.0/hero_grid.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=hero-grid&expanded=true)
 <!-- releases:end -->

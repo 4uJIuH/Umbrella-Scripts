@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`kotl-illuminate-pro-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/kotl-illuminate-pro-v1.0.0) | 2026-10-13 | [kotl_illuminate_pro.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/kotl-illuminate-pro-v1.0.0/kotl_illuminate_pro.lua) | 0 |
+| [`kotl-illuminate-pro-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/kotl-illuminate-pro-v1.0.0) | 2026-10-13 | [kotl_illuminate_pro.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/kotl-illuminate-pro-v1.0.0/kotl_illuminate_pro.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=kotl-illuminate-pro&expanded=true)
 <!-- releases:end -->

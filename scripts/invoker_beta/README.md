@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`invoker-beta-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/invoker-beta-v1.0.0) | 2026-10-13 | [invoker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-beta-v1.0.0/invoker.lua) | 6 |
+| [`invoker-beta-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/invoker-beta-v1.0.0) | 2026-10-13 | [invoker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-beta-v1.0.0/invoker.lua) | 8 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=invoker-beta&expanded=true)
 <!-- releases:end -->

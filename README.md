@@ -377,8 +377,8 @@ This third-party library is by qfun (qfun_g9s), not my script.
 <!-- stats:start -->
 | script | downloads | latest |
 | --- | --- | --- |
-| [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 4 | `tinker-turret-dodge-v1.1.5` |
-| [Tinker Auto Farm](scripts/tinker_auto_farm) | 7 | `tinker-auto-farm-v1.0.4` |
+| [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 6 | `tinker-turret-dodge-v1.1.5` |
+| [Tinker Auto Farm](scripts/tinker_auto_farm) | 9 | `tinker-auto-farm-v1.0.4` |
 | [Auto Shackleshot](scripts/auto_shackleshot) | 2 | `auto-shackleshot-v1.0.0` |
 | [Auto Spark](scripts/auto_spark) | 1 | `auto-spark-v1.0.0` |
 | [Rune Destruction](scripts/rune_destruction) | 2 | `rune-destruction-v1.0.2` |
@@ -388,15 +388,15 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Dorman Combo Assistant](scripts/dorman_combo_assistant) | 1 | `dorman-combo-assistant-v1.0.0` |
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
-| [qLocalization](scripts/q_localizer) | 22 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 54 | `script-manager-v2.5.0` |
-| [Dynamic Island](scripts/dynamic_island_dota) | 590 | `v2.5.3` |
-| [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
+| [qLocalization](scripts/q_localizer) | 23 | `q-localizer-v1.0.0` |
+| [Script Manager](scripts/script_manager) | 57 | `script-manager-v2.6.0` |
+| [Dynamic Island](scripts/dynamic_island_dota) | 591 | `v2.5.3` |
+| [Tinker Smart Escape](scripts/tinker_smart_escape) | 1 | `tinker-smart-escape-v1.0.0` |
 | [Lane Pull](scripts/lane_pull) | 236 | `lane-pull-v1.0.4` |
 | [DS Spot Block](scripts/ds_spot_block) | 47 | `ds-spot-block-v1.0.1` |
 | [Custom Background](scripts/custom_background) | 36 | `custom-background-v1.0.0` |
 | [Auto Stack](scripts/auto_stack) | 129 | `auto-stack-v1.1.0` |
-| [Draft Helper](scripts/draft_helper) | 1242 | `draft-helper-v2.0.0-beta.20` |
+| [Draft Helper](scripts/draft_helper) | 1243 | `draft-helper-v2.0.0-beta.20` |
 | [MusicUI](scripts/musicui) | 680 | `musicui-v1.0.8` |
 | [Umbrella Lua Developer Skill](scripts/umbrella_lua) | 189 | `umbrella-lua-v1.0.4` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
@@ -409,12 +409,12 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Magnus Skewer Ally](scripts/magnus_skewer_ally) | 1 | `magnus-skewer-ally-v1.0.0` |
 | [Better Better Techies Combo](scripts/better_better_techies_combo) | 2 | `better-better-techies-combo-v1.0.0` |
 | [Chat Translator](scripts/chat_translator) | 0 | `chat-translator-v1.0.0` |
-| [Hero Grid](scripts/hero_grid) | 0 | `hero-grid-v1.0.0` |
+| [Hero Grid](scripts/hero_grid) | 1 | `hero-grid-v1.0.0` |
 | [Weather](scripts/weather) | 1 | `weather-v1.0.0` |
 | [Visage Familiar TP Helper](scripts/visage_familiar_tp) | 0 | `visage-familiar-tp-v1.0.0` |
 | [Grimstroke Helper](scripts/grimstroke_helper) | 0 | `grimstroke-helper-v1.0.0` |
 | [Phoenix SmartNova](scripts/phoenix_smartnova) | 0 | `phoenix-smartnova-v1.0.0` |
-| [BehaviorScoreHelper](scripts/behavior_score_helper) | 0 | `behavior-score-helper-v1.0.0` |
+| [BehaviorScoreHelper](scripts/behavior_score_helper) | 1 | `behavior-score-helper-v1.0.0` |
 | [Disable Tracker](scripts/disable_tracker) | 0 | `disable-tracker-v1.0.0` |
 | [Russian Roulette](scripts/russian_roulette) | 0 | `russian-roulette-v1.0.0` |
 | [MoM Swapper](scripts/mom_swapper) | 0 | `mom-swapper-v1.0.0` |
@@ -464,7 +464,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Self Play](scripts/self_play_bot) | 5 | `self-play-v1.0.0` |
 | [Farm Pattern 2.5](scripts/farm_pattern) | 2 | `farm-pattern-v2.5` |
 | [Win Condition Engine](scripts/win_condition_engine) | 11 | `win-condition-engine-v1.0.0` |
-| [Invoker (beta)](scripts/invoker_beta) | 6 | `invoker-beta-v1.0.0` |
+| [Invoker (beta)](scripts/invoker_beta) | 8 | `invoker-beta-v1.0.0` |
 | [Kez Combo](scripts/kez_combo) | 5 | `kez-combo-v1.0.0` |
 | [Techies Combo](scripts/techies_combo) | 3 | `techies-combo-v1.0.0` |
 | [Lone Druid Auto Farm](scripts/ld_farm) | 0 | `ld-farm-v1.7` |
@@ -473,7 +473,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [SteamSync](scripts/steam_sync) | 197 | `v1.0.1` |
 | [Techies Brain Combo](scripts/techies_brain) | 0 | `techies-brain-v0.2.6` |
 | [Creep Control](scripts/creep_control) | 1 | `creep-control-v1.0.1` |
-| [KOTL Illuminate Pro](scripts/kotl_illuminate_pro) | 0 | `kotl-illuminate-pro-v1.0.0` |
+| [KOTL Illuminate Pro](scripts/kotl_illuminate_pro) | 1 | `kotl-illuminate-pro-v1.0.0` |
 | [Lycan Auto Control](scripts/lycan_auto_control) | 1 | `lycan-auto-control-v1.0.0` |
 | [Mute Voice Lines](scripts/mute_voice_lines) | 0 | `mute-voice-lines-v1.0.0` |
 | [Tinker Glimmer during Rearm](scripts/tinker_glimmer_rearm) | 0 | `tinker-glimmer-rearm-v1.3` |
@@ -500,7 +500,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Broodmother Helper](scripts/broodmother_helper) | 0 | `broodmother-helper-v2.1` |
 | [Script Market](scripts/market) | 0 | `market-v1.0.0` |
 | [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) | 1 | `mmr-tracker-ultimate-v1.0.0` |
-| [Glyph Timer](scripts/glyph_timer) | 0 | `glyph-timer-v1.0.0` |
+| [Glyph Timer](scripts/glyph_timer) | 1 | `glyph-timer-v1.0.0` |
 | [Rampage Timer](scripts/rampage_timer_h) | 0 | `rampage-timer-h-v1.0.0` |
 
 <picture>
