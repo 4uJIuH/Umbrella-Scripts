@@ -42,6 +42,8 @@ Script Manager объединяет каталог скриптов в отде�
 - Устанавливает многофайловые Lua-пакеты и создает необходимые подпапки
 - Устанавливает `!_qLocalizer.lua`, если он нужен выбранному скрипту и ещё не установлен
 - Показывает ZIP-пакеты для скачивания и ручной распаковки
+- Оптимизирован для большого каталога: отображает только карточки в области просмотра
+- Поддерживает плавную прокрутку каталога и отдельную прокрутку настроек
 - Позволяет менять тему, акцентный цвет и поведение перезапуска после установки
 - Позволяет выбрать, открывать ли окно после перезагрузки скриптов, и назначить клавишу открытия
 - Поддерживает собственное обновление под тем же именем `script_manager.lua`
@@ -55,6 +57,12 @@ Script Manager объединяет каталог скриптов в отде�
 4. Откройте `Scripts → Scripts → Script Manager`, включите его и назначьте клавишу для открытия панели.
 
 ## Что нового
+
+# Обновление v2.9.0
+
+- Оптимизирована работа большого каталога: списки и счётчики обновлений кэшируются, а карточки за пределами экрана не отрисовываются.
+- Улучшена прокрутка: движение стало плавнее, быстрые прокрутки ускоряются, а настройки прокручиваются отдельно.
+- Добавлены визуальные подсказки при наведении и индикаторы прокрутки.
 
 # Обновление v2.8.0
 
@@ -162,6 +170,8 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 - Installs multi-file Lua packages and creates their required subfolders
 - Installs `!_qLocalizer.lua` when a selected script requires it and it is missing
 - Lists ZIP packages for download and manual extraction
+- Optimizes large catalogs by drawing only cards in the viewport
+- Provides smooth catalog scrolling and a separately scrollable settings page
 - Lets users change the theme, accent color, and post-install restart behavior
 - Lets users choose whether the window opens after script reloads and assign its opening key
 - Supports self-updates while keeping the `script_manager.lua` filename
@@ -175,6 +185,12 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 4. Open `Scripts → Scripts → Script Manager`, enable it, and assign a key to open the panel.
 
 ## Changelog
+
+# Update v2.9.0
+
+- Improved performance with large catalogs by caching lists and update counts and skipping cards outside the viewport.
+- Refined scrolling with smoother movement, acceleration on rapid wheel input, and a separately scrollable settings page.
+- Added hover feedback and scroll-position indicators.
 
 # Update v2.8.0
 

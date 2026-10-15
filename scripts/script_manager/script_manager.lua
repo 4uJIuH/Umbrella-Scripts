@@ -682,7 +682,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.8.0"
+local VERSION = "2.9.0"
 
 local K = {
 	CFG = "script_market",
@@ -1648,12 +1648,54 @@ function market.status(s)
 	return ver.cmp(v, s.latest) < 0 and "update" or "current"
 end
 
-function market.updates()
+function market.updates_build()
 	local out = {}
 	for _, s in ipairs(SCRIPTS) do
 		if market.status(s) == "update" then out[#out + 1] = s end
 	end
 	return out
+end
+
+-- list / updates / category counters were rebuilt (filter + sort) on every frame.
+-- Now cached: rebuilt immediately when inputs change, otherwise at most every 0.15s.
+local CACHE_TTL = 0.15
+local cache = {}
+
+function market.list()
+	local key = table.concat({ S.nav, S.query, S.sort, tostring(S.inst_first), tostring(S.hero), tostring(S.author),
+		S.lang, tostring(S.set.beta), #SCRIPTS }, "|")
+	local c = cache.list
+	if not c or c.key ~= key or S.now - c.t > CACHE_TTL then
+		c = { key = key, t = S.now, v = market.list_build() }
+		cache.list = c
+	end
+	return c.v
+end
+
+function market.updates()
+	local c = cache.upd
+	if not c or c.n ~= #SCRIPTS or S.now - c.t > CACHE_TTL then
+		c = { n = #SCRIPTS, t = S.now, v = market.updates_build() }
+		cache.upd = c
+	end
+	return c.v
+end
+
+function market.cat_count(cat)
+	local c = cache.cats
+	if not c or c.n ~= #SCRIPTS or S.now - c.t > CACHE_TTL * 2 then
+		c = { n = #SCRIPTS, t = S.now, v = {} }
+		cache.cats = c
+	end
+	local v = c.v[cat]
+	if v == nil then
+		v = 0
+		for _, sc in ipairs(SCRIPTS) do
+			if market.in_cat(sc, cat) then v = v + 1 end
+		end
+		c.v[cat] = v
+	end
+	return v
 end
 
 function market.installed_count()
@@ -2161,7 +2203,7 @@ function market.hidden(s)
 	return not S.set.beta and ver.pre(s.latest) and not S.inst[s.id]
 end
 
-function market.list()
+function market.list_build()
 	local q = S.query:lower()
 	local in_cat = S.nav ~= "all" and S.nav ~= "installed" and S.nav ~= "updates" and S.nav ~= "heroes" and S.nav ~= "authors"
 	local out = {}
@@ -2371,7 +2413,7 @@ function view.go(name, sel)
 	S.view, S.sel, S.confirm, S.sort_open, S.menu = name, sel or S.sel, nil, false, nil
 	S.rows = {}
 	S.scroll, S.scroll_to = restore, restore
-	anim.snap("scroll", restore)
+	view.scroll_snap(restore)
 end
 
 function view.nav_item(x, y, w, id, label, glyph, count, badge)
@@ -2448,11 +2490,7 @@ function view.sidebar()
 	view.nav_item(12, y, 196, "authors", L("sm_nav_authors"), K.G.authors, #S.authors)
 	y = y + 36
 	for _, cat in ipairs(CATS) do
-		local n = 0
-		for _, s in ipairs(SCRIPTS) do
-			if market.in_cat(s, cat) then n = n + 1 end
-		end
-		view.nav_item(12, y, 196, cat, L("sm_cat_" .. cat), K.G[cat], n)
+		view.nav_item(12, y, 196, cat, L("sm_cat_" .. cat), K.G[cat], market.cat_count(cat))
 		y = y + 36
 	end
 
@@ -2509,11 +2547,29 @@ function view.start_drag(mx, my)
 	S.drag = { mx = mx, my = my, wx = S.wx, wy = S.wy }
 end
 
+function view.scroll_snap(v)
+	S.scroll_f, S.scroll = v, v
+end
+
+-- frame-rate independent exponential smoothing (the old tween restarted on every wheel tick and felt jerky);
+-- the value used for layout is snapped to whole pixels so text and rects never shimmer while moving
 function view.scroll_area(x, y, w, h)
 	S.view_h, S.area = h, { x, y, w, h }
-	S.scroll = anim.tween("scroll", S.scroll_to, 0.24)
+	local f = S.scroll_f or S.scroll
+	local diff = S.scroll_to - f
+	if math.abs(diff) * g.s < 0.5 then
+		f = S.scroll_to
+	else
+		f = f + diff * (1 - math.exp(-S.dt * 18))
+	end
+	S.scroll_f = f
+	S.scroll = math.floor(f * g.s + 0.5) / g.s
 	hit.add(x, y, w, h, "content", { wheel = function(dir)
-		S.scroll_to = clamp(S.scroll_to + dir * K.WHEEL, 0, math.max(0, S.content_h - S.view_h))
+		-- fast consecutive ticks accelerate a bit
+		S.wheel_n = (S.now - (S.wheel_t or -10) < 0.12) and math.min((S.wheel_n or 0) + 1, 6) or 0
+		S.wheel_t = S.now
+		local step = K.WHEEL * (1 + S.wheel_n * 0.25)
+		S.scroll_to = clamp(S.scroll_to + dir * step, 0, math.max(0, S.content_h - S.view_h))
 		S.scroll_t = S.now
 	end })
 	g.clip(x, y, w, h)
@@ -2525,7 +2581,14 @@ function view.end_scroll(content_h)
 	local max_scroll = math.max(0, content_h - S.view_h)
 	if S.scroll_to > max_scroll then
 		S.scroll_to = max_scroll
-		anim.snap("scroll", max_scroll)
+		view.scroll_snap(max_scroll)
+	end
+	do -- edge hairlines show that there is more content above / below
+		local fx, fy, fw, fh = S.area[1] + 18, S.area[2], S.area[3] - 36, S.area[4]
+		local ta = clamp(S.scroll / 14, 0, 1)
+		if ta > 0.01 then g.hl(fx, fy, fw, T.white, 0.08 * ta) end
+		local ba = clamp((max_scroll - S.scroll) / 14, 0, 1)
+		if ba > 0.01 then g.hl(fx, fy + fh - 1, fw, T.white, 0.06 * ba) end
 	end
 	if max_scroll <= 0 then return end
 
@@ -2546,7 +2609,7 @@ function view.end_scroll(content_h)
 		local rel = (my - g.y) / g.s - ay - 8 - thumb / 2
 		local v = clamp(rel / span, 0, 1) * max_scroll
 		S.scroll_to = v
-		anim.snap("scroll", v)
+		view.scroll_snap(v)
 		S.sb_drag = { my = my, scroll = v, k = max_scroll / span }
 		S.scroll_t = S.now
 	end })
@@ -2700,9 +2763,14 @@ end
 function view.row(s, rx, y, rw, interactive, sep)
 	local id = "row:" .. s.id
 	local hv = interactive and anim.hover(id) or 0
-	g.rect(rx, y, rw, 72, T.white, 12, 0.04 * hv)
+	g.rect(rx, y, rw, 72, T.white, 12, 0.055 * hv)
+	if hv > 0.01 then
+		g.frame(rx, y, rw, 72, T.white, 12, 0.07 * hv)
+		g.rect(rx + 2, y + 22, 3, 28, K.ACCENT, 2, 0.9 * hv)
+	end
 	if interactive then hit.add(rx, y, rw - 136, 72, id, { click = function() view.go("detail", s.id) end }) end
-	g.rect(rx + 12, y + 14, 44, 44, s.color, 12, 0.15)
+	g.rect(rx + 12, y + 14, 44, 44, s.color, 12, 0.15 + 0.08 * hv)
+	g.frame(rx + 12, y + 14, 44, 44, s.color, 12, 0.2 + 0.2 * hv)
 	g.glyph(s.glyph, 18, rx + 34, y + 36, s.color)
 	local tx = rx + 70
 	local tw = g.text(600, 14, s.title, tx, y + 27, T.t1)
@@ -2783,35 +2851,49 @@ function view.list()
 
 	local live = {}
 	local cursor = (show_banner and 62 or 0) + (head and 52 or 0)
-	for _, s in ipairs(list) do
-		local r = S.rows[s.id]
+	for _, sc in ipairs(list) do
+		local r = S.rows[sc.id]
 		if not r then
-			r = {}
-			S.rows[s.id] = r
-			anim.snap("ry:" .. s.id, cursor)
-			anim.snap("ra:" .. s.id, 0)
+			r = { k_ry = "ry:" .. sc.id, k_ra = "ra:" .. sc.id }
+			S.rows[sc.id] = r
+			anim.snap(r.k_ry, cursor)
+			anim.snap(r.k_ra, 0)
 		end
-		r.ty, r.live, r.s = cursor, true, s
-		live[s.id] = true
+		r.ty, r.live, r.s = cursor, true, sc
+		live[sc.id] = true
 		cursor = cursor + 73
 	end
 	local base = g.a
+	-- only rows that intersect the viewport are drawn (the catalog has 200+ rows, each ~15 draw calls)
+	local v_top, v_bot = K.TOP - 73, K.H
 	for id, r in pairs(S.rows) do
 		if not live[id] then
 			r.live = false
-			local a = anim.tween("ra:" .. id, 0, 0.16)
+			local a = anim.tween(r.k_ra, 0, 0.16)
 			if a <= 0.01 then
 				S.rows[id] = nil
 			else
-				g.a = base * a
-				view.row(r.s, rx, y + anim.tween("ry:" .. id, r.ty, 0.26, ease_in_out), rw, false, false)
+				local ry = y + anim.tween(r.k_ry, r.ty, 0.26, ease_in_out)
+				if ry > v_top and ry < v_bot then
+					g.a = base * a
+					view.row(r.s, rx, ry, rw, false, false)
+				end
 			end
 		end
 	end
-	for i, s in ipairs(list) do
-		local r = S.rows[s.id]
-		g.a = base * anim.tween("ra:" .. s.id, 1, 0.2)
-		view.row(s, rx, y + anim.tween("ry:" .. s.id, r.ty, 0.26, ease_in_out), rw, true, i < #list)
+	for i, sc in ipairs(list) do
+		local r = S.rows[sc.id]
+		local t = S.tweens[r.k_ry]
+		local moving = t ~= nil and t.k < 1
+		local target_y = y + r.ty
+		-- settled rows far outside the viewport are skipped without touching their tweens
+		if moving or (target_y > v_top and target_y < v_bot) then
+			local ry = y + anim.tween(r.k_ry, r.ty, 0.26, ease_in_out)
+			if ry > v_top and ry < v_bot then
+				g.a = base * anim.tween(r.k_ra, 1, 0.2)
+				view.row(sc, rx, ry, rw, true, i < #list)
+			end
+		end
 	end
 	g.a = base
 	y = y + cursor
@@ -2835,6 +2917,12 @@ function view.list()
 		g.text(400, 13, L(d), cx, cy + 24, T.t4, ea, "c")
 	end
 	view.end_scroll(y + S.scroll - K.TOP + 16)
+end
+
+function view.tile_bg(x, y, w, h, key)
+	local hv = anim.hover(key)
+	g.rect(x, y, w, h, T.white, 10, 0.04 + 0.05 * hv)
+	if hv > 0.01 then g.frame(x, y, w, h, K.ACCENT_TEXT, 10, 0.4 * hv) end
 end
 
 function view.avatar(name, x, y, size)
@@ -2881,7 +2969,7 @@ function view.authors()
 		local tx, ty = cx + col * (tw + gap), y + row * (th + gap)
 		if ty + th >= K.TOP - 4 and ty <= K.H then
 			local key = "author:" .. a.key
-			g.rect(tx, ty, tw, th, T.white, 10, 0.04 + 0.05 * anim.hover(key))
+			view.tile_bg(tx, ty, tw, th, key)
 			view.avatar(a.name, tx + 9, ty + 9, 28)
 			local str = tostring(a.n)
 			local count_w = math.max(20, g.width(700, 11, str) + 12)
@@ -2932,7 +3020,7 @@ function view.heroes()
 		if ty + th < K.TOP - 4 or ty > K.H then return end
 		local key = "hero:" .. id
 		local n = S.hero_n[id] or 0
-		g.rect(tx, ty, tw, th, T.white, 10, 0.04 + 0.05 * anim.hover(key))
+		view.tile_bg(tx, ty, tw, th, key)
 		g.hero(id, tx + 9, ty + 9, 28, n > 0 and 1 or 0.45, 8)
 		local count_w = 0
 		if n > 0 then
@@ -3429,11 +3517,13 @@ end
 
 function view.settings()
 	local x0, w0 = K.SIDE, K.W - K.SIDE
-	hit.add(x0, 0, w0, K.H, "drag", { down = view.start_drag })
+	hit.add(x0, 0, w0, K.TOP, "drag", { down = view.start_drag })
 	local cx, cw = x0 + 24, w0 - 48
-	local y = 24
-	g.text(700, 20, L("sm_settings"), cx + 4, y + 12, T.t1)
-	y = y + 24 + 18
+	g.text(700, 20, L("sm_settings"), cx + 4, 24 + 12, T.t1)
+
+	-- everything below the title scrolls like in the other tabs
+	view.scroll_area(x0, K.TOP, w0, K.H - K.TOP)
+	local y = K.TOP - 2 - S.scroll
 
 	local menus = {}
 
@@ -3451,8 +3541,10 @@ function view.settings()
 		g.text(600, 11, L(title), cx + 4, y + 7, T.t4)
 		y = y + 22
 		g.rect(cx, y, cw, 8 + #rows * 40, C.card, 10)
+		g.frame(cx, y, cw, 8 + #rows * 40, T.white, 10, 0.05)
 		for i, row in ipairs(rows) do
 			local ry = y + 4 + (i - 1) * 40
+			if i > 1 then g.hl(cx + 14, ry, cw - 28, T.white, 0.045) end
 			g.text(400, 13, L(row.label), cx + 14, ry + 20, T.t5)
 			if row.note then
 				g.text(400, 12, row.note(), cx + 14 + g.width(400, 13, L(row.label)) + 10, ry + 20, T.t4)
@@ -3512,7 +3604,12 @@ function view.settings()
 		end },
 	})
 
+	view.end_scroll(y + S.scroll - K.TOP + 6)
+
+	-- dropdown menus are drawn above the clip so they are not cut off by the scroll area
 	for _, m in ipairs(menus) do
+		local mh = 8 + #SETS[m[3]] * 28
+		m[2] = clamp(m[2], K.TOP, math.max(K.TOP, K.H - 8 - mh))
 		view.dropdown_menu(m[1], m[2], m[3], SETS[m[3]], m[4], function(o)
 			S.set[m[3]] = o
 			save(m[3], o)
@@ -3764,7 +3861,7 @@ function script.OnFrame()
 		local d = S.sb_drag
 		local v = clamp(d.scroll + (my - d.my) / g.s * d.k, 0, math.max(0, S.content_h - S.view_h))
 		S.scroll_to = v
-		anim.snap("scroll", v)
+		view.scroll_snap(v)
 		S.scroll_t = S.now
 	end
 	if S.resize then

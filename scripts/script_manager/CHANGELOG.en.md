@@ -1,3 +1,9 @@
+# Update v2.9.0
+
+- Improved performance with large catalogs by caching lists and update counts and skipping cards outside the viewport.
+- Refined scrolling with smoother movement, acceleration on rapid wheel input, and a separately scrollable settings page.
+- Added hover feedback and scroll-position indicators.
+
 # Update v2.8.0
 
 - Choose whether the window opens automatically after script reloads or only from its assigned key.
