@@ -1,4 +1,4 @@
-# Денай-токсик
+# Deny Taunt
 
 шуточные сообщения противнику после деная крипа / playful chat lines after denying a creep
 

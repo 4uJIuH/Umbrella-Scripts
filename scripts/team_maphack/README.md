@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`team-maphack-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/team-maphack-v1.0.0) | 2026-10-13 | [team_maphack.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/team-maphack-v1.0.0/team_maphack.lua) | 1 |
+| [`team-maphack-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/team-maphack-v1.0.0) | 2026-10-13 | [team_maphack.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/team-maphack-v1.0.0/team_maphack.lua) | 2 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=team-maphack&expanded=true)
 <!-- releases:end -->

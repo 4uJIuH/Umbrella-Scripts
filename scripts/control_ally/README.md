@@ -3,13 +3,9 @@
 комбо для союзного героя под совместным управлением / combo control for a shared-control allied hero
 
 <!-- releases:start -->
-Скачать: [control_ally.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/control-ally-v1.0.0/control_ally.lua) — `control-ally-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `control_ally.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/control_ally/control_ally.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`control-ally-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/control-ally-v1.0.0) | 2026-10-13 | [control_ally.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/control-ally-v1.0.0/control_ally.lua) | 1 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=control-ally&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=control-ally&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

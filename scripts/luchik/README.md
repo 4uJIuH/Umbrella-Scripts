@@ -1,4 +1,4 @@
-# Лучик
+# Sunbeam
 
 ревнивый смайлик-компаньон, который реагирует на события матча / a jealous emoji companion reacting to match events
 

@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`ward-triangulator-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/ward-triangulator-v1.0.0) | 2026-10-13 | [ward_triangulator.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/ward-triangulator-v1.0.0/ward_triangulator.lua) | 1 |
+| [`ward-triangulator-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/ward-triangulator-v1.0.0) | 2026-10-13 | [ward_triangulator.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/ward-triangulator-v1.0.0/ward_triangulator.lua) | 4 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=ward-triangulator&expanded=true)
 <!-- releases:end -->

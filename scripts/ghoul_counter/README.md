@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`ghoul-counter-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/ghoul-counter-v1.0.0) | 2026-10-13 | [ghoul_counter.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/ghoul-counter-v1.0.0/ghoul_counter.lua) | 0 |
+| [`ghoul-counter-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/ghoul-counter-v1.0.0) | 2026-10-13 | [ghoul_counter.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/ghoul-counter-v1.0.0/ghoul_counter.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=ghoul-counter&expanded=true)
 <!-- releases:end -->

@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`spirit-breaker-bara-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/spirit-breaker-bara-v1.0.0) | 2026-10-13 | [bara.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-breaker-bara-v1.0.0/bara.lua) | 0 |
+| [`spirit-breaker-bara-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/spirit-breaker-bara-v1.0.0) | 2026-10-13 | [bara.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-breaker-bara-v1.0.0/bara.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=spirit-breaker-bara&expanded=true)
 <!-- releases:end -->

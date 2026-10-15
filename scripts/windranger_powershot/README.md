@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`windranger-powershot-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/windranger-powershot-v1.0.0) | 2026-10-13 | [Windranger.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/windranger-powershot-v1.0.0/Windranger.lua) | 1 |
+| [`windranger-powershot-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/windranger-powershot-v1.0.0) | 2026-10-13 | [Windranger.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/windranger-powershot-v1.0.0/Windranger.lua) | 3 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=windranger-powershot&expanded=true)
 <!-- releases:end -->
