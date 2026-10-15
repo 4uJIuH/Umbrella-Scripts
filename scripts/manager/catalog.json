@@ -759,38 +759,38 @@
     },
     {
       "id": "behavior_score_helper",
-      "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/737fa07af44cc5169305966becd888ddecc0cd1d/scripts/behavior_score_helper/BehaviorScoreHelper.lua",
-      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/behavior-score-helper-v1.0.0/BehaviorScoreHelper.lua",
+      "version": "1.1.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/8a27987574d5bc1cc5f079dbc9fdef5938ba1937/scripts/behavior_score_helper/BehaviorScoreHelper.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/behavior-score-helper-v1.1.0/BehaviorScoreHelper.lua",
       "manual": false,
-      "needs_q_localizer": false,
+      "needs_q_localizer": true,
       "author": "4uJIuH",
       "menu": {
         "ru": [
           "Scripts \u2192 Utility \u2192 \u041f\u043e\u0440\u044f\u0434\u043e\u0447\u043d\u043e\u0441\u0442\u044c"
         ],
         "en": [
-          "Scripts \u2192 Utility \u2192 \u041f\u043e\u0440\u044f\u0434\u043e\u0447\u043d\u043e\u0441\u0442\u044c"
+          "Scripts \u2192 Utility \u2192 Behavior Score"
         ]
       },
-      "date": "2026-10-13",
-      "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/737fa07af44cc5169305966becd888ddecc0cd1d/scripts/behavior_score_helper/BehaviorScoreHelper.lua",
+      "date": "2026-10-15",
+      "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/8a27987574d5bc1cc5f079dbc9fdef5938ba1937/scripts/behavior_score_helper/BehaviorScoreHelper.lua",
       "files": [
         {
           "path": "filters/filter_profanity_english_cached.txt",
-          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/737fa07af44cc5169305966becd888ddecc0cd1d/scripts/behavior_score_helper/filters/filter_profanity_english_cached.txt"
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/8a27987574d5bc1cc5f079dbc9fdef5938ba1937/scripts/behavior_score_helper/filters/filter_profanity_english_cached.txt"
         },
         {
           "path": "filters/filter_profanity_russian_cached.txt",
-          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/737fa07af44cc5169305966becd888ddecc0cd1d/scripts/behavior_score_helper/filters/filter_profanity_russian_cached.txt"
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/8a27987574d5bc1cc5f079dbc9fdef5938ba1937/scripts/behavior_score_helper/filters/filter_profanity_russian_cached.txt"
         },
         {
           "path": "filters/filter_banned_english_cached.txt",
-          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/737fa07af44cc5169305966becd888ddecc0cd1d/scripts/behavior_score_helper/filters/filter_banned_english_cached.txt"
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/8a27987574d5bc1cc5f079dbc9fdef5938ba1937/scripts/behavior_score_helper/filters/filter_banned_english_cached.txt"
         },
         {
           "path": "filters/filter_banned_russian_cached.txt",
-          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/737fa07af44cc5169305966becd888ddecc0cd1d/scripts/behavior_score_helper/filters/filter_banned_russian_cached.txt"
+          "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/8a27987574d5bc1cc5f079dbc9fdef5938ba1937/scripts/behavior_score_helper/filters/filter_banned_russian_cached.txt"
         }
       ],
       "version_marker": "SCRIPT_VERSION"
