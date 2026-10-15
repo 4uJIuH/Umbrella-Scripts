@@ -340,11 +340,13 @@ local function supply(ctx, inventory)
 				Item.GetStockCount(observer.id, ctx.team)))
 		end
 	end
-	if supportOnly and ctx.now >= (state.nextSentry or 0) and deward.needed(ctx) then
+	if supportOnly and ctx.clock < 600 and ctx.now >= (state.nextGrenade or 0)
+		and not NPC.GetItem(ctx.hero, "item_blood_grenade", true) then name = "blood_grenade" end
+	if (supportOnly or ctx.role == 3) and ctx.now >= (state.nextSentry or 0) then
 		local _, entries = shop.inventory(ctx)
 		local sentries = 0
 		for _, entry in ipairs(entries) do sentries = sentries + vision.sentries(entry.item) end
-		if sentries == 0 then name = "ward_sentry" end
+		if sentries == 0 and (deward.needed(ctx) or (ctx.role >= 4 and ctx.clock < 90)) then name = "ward_sentry" end
 	end
 	name = detectionSupply or name
 	if not name then return false end
@@ -353,6 +355,7 @@ local function supply(ctx, inventory)
 	state.nextSupply = ctx.now + 30
 	if name == "ward_observer" then state.nextObserver = ctx.now + (ctx.role == 2 and 240 or 180) end
 	if name == "ward_sentry" then state.nextSentry = ctx.now + 60 end
+	if name == "blood_grenade" then state.nextGrenade = ctx.now + 120 end
 	if name == "dust" then state.nextDust = ctx.now + 30 end
 	Player.PrepareUnitOrders(ctx.player, Enum.UnitOrder.DOTA_UNIT_ORDER_PURCHASE_ITEM, item.id, Vector(0, 0, 0), item.id,
 		Enum.PlayerOrderIssuer.DOTA_ORDER_ISSUER_PASSED_UNIT_ONLY, ctx.hero, false, false, false, true, "self_play_supply", false)
@@ -400,11 +403,7 @@ function shop.courier(ctx, secret)
 		return
 	end
 	if hasStash and not hasItems then
-		if NPC.IsInRangeOfShop(courier, Enum.ShopType.DOTA_SHOP_HOME, true) then
-			courierCast(ctx, courier, "courier_take_stash_items")
-		else
-			courierCast(ctx, courier, "courier_return_stash_items")
-		end
+		courierCast(ctx, courier, "courier_take_stash_items")
 	elseif hasItems and Entity.IsAlive(ctx.hero) and (not ctx.retreating or ctx.recoveryTask and ctx.recoveryTask.phase == "regen") then
 		if full then ctx.shop.fullDeliveryAt = ctx.shop.fullDeliveryAt or ctx.now end
 		courierCast(ctx, courier, "courier_transfer_items")
@@ -424,12 +423,21 @@ local function complete(ctx, name)
 	saveProgress(ctx)
 end
 
+local function goldSpent(ctx)
+	local data = Player.GetTeamPlayer(ctx.player)
+	return data and (data.gold_spent_on_items or 0) + (data.gold_spent_on_consumables or 0) or nil
+end
+
 function shop.pending(ctx, inventory)
 	local state, pending = ctx.shop, ctx.shop.pending
 	if not pending then return false end
 	if ctx.planner.componentCount(state.items, inventory, pending.name) > pending.count
 		or ctx.planner.owns(state.items, inventory, pending.goal) then state.pending = nil; return false end
-	if pending.cost > 0 and Player.GetTotalGold(ctx.player) < pending.gold - pending.cost * 0.5 then pending.spent = true end
+	if pending.cost > 0 then
+		local spentNow = goldSpent(ctx)
+		if spentNow and pending.spentGold and spentNow > pending.spentGold
+			or Player.GetTotalGold(ctx.player) < pending.gold - pending.cost * 0.5 then pending.spent = true end
+	end
 	local wait = pending.spent and 120 or 8
 	if ctx.now - pending.time < wait then
 		state.status = (pending.spent and "Await paid item delivery: " or "Confirm purchase: ") .. pending.name
@@ -535,7 +543,11 @@ function shop.run(ctx)
 		Enum.PlayerOrderIssuer.DOTA_ORDER_ISSUER_PASSED_UNIT_ONLY, buyer, false, false, false, true, "self_play_purchase", false)
 	state.startedGoal = name
 	state.pending = {name = nextItem, goal = name, count = ctx.planner.componentCount(state.items, inventory, nextItem), time = ctx.now,
-		gold = goldBefore, cost = cost}
+		gold = goldBefore, cost = cost, spentGold = goldSpent(ctx)}
+	if ctx.ui and ctx.ui.debug and ctx.ui.debug:Get() then
+		Log.Write(string.format("[SelfPlay shop] buy order=%s need=%s gold=%d buyer=%s have=%d", name, nextItem, goldBefore,
+			buyer == ctx.hero and "hero" or "courier", ctx.planner.componentCount(state.items, inventory, nextItem)))
+	end
 end
 
 return shop

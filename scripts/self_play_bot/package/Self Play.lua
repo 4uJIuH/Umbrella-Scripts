@@ -35,6 +35,7 @@ local draft = require("self_play.draft")
 local localization = require("self_play.localization")
 local taskPolicy = require("self_play.task_policy")
 local mapFarm = require("self_play.map_farm")
+local laneRotation = require("self_play.lane_rotation")
 local persist = require("self_play.persist")
 local heroPolicy = require("self_play.hero_policy")
 
@@ -50,8 +51,8 @@ local cfg = {
 	turboLaneEnd = 360, turboBlockEnd = 30,
 	fountainHealth = 0.68, fountainMana = 0.45, fountainHoldTimeout = 3, fountainEnter = 0.5,
 	creepFallback = true, laneDiscipline = true, carryHoldLane = true, turboHunt = true,
-	watchdogTime = 5, riverExit = true, roleSnap = true, loneSoak = true, ditherLock = true, humanizer = true,
-	coexist = false,
+	watchdogTime = 5, riverExit = true, roleSnap = true, loneSoak = true, laneRotation = true, ditherLock = true, humanizer = true,
+	coexist = false, confidence = 0.5,
 	autoStack = true,
 	home = {[2] = Vector(-7200, -6600, 256), [3] = Vector(7100, 6500, 256)},
 	anchors = {
@@ -62,6 +63,7 @@ local cfg = {
 }
 
 local ui, renderContext
+local reconnectState = {nextAttempt = 0, attempts = 0}
 do
 	local tab = localization.group(Menu.Create("Scripts", "Self Play", "Main"))
 	local page = tab:Create("Bot")
@@ -72,7 +74,7 @@ do
 		role = general:Combo("Role", {"Auto", "1 Carry", "2 Mid", "3 Offlane", "4 Soft support", "5 Hard support"}, 0),
 		lane = general:Combo("Lane", {"Auto", "Top", "Mid", "Bottom"}, 0),
 		draw = general:Switch("Show status", true),
-		camera = general:Switch("Follow hero camera", false),
+		camera = general:Switch("Follow hero camera", true),
 		debug = general:Switch("Write decision diagnostics", false),
 	}
 	do
@@ -133,6 +135,11 @@ do
 		local group = ui.groups["Economy and travel"]
 		ui.fountainEnter = group:Slider("Fountain health %", 0, 100, math.floor(cfg.fountainEnter * 100), "%d%%")
 		ui.fountainEnter:SetCallback(function(widget) cfg.fountainEnter = widget:Get() / 100 end, true)
+	end
+	do
+		local group = ui.groups["Combat and control"]
+		ui.confidence = group:Slider("Confidence", 0, 100, math.floor(cfg.confidence * 100), "%d%%")
+		ui.confidence:SetCallback(function(widget) cfg.confidence = widget:Get() / 100 end, true)
 	end
 	do
 		local userBuilds = require("self_play.user_builds")
@@ -1172,7 +1179,7 @@ end
 
 function helpers.stop(ctx)
 	if ctx.lastOrder == "hold" then return true end
-	Player.HoldPosition(ctx.player, ctx.hero, false, false, true)
+	Player.HoldPosition(ctx.player, ctx.hero, false, false, true, "self_play_hold")
 	ctx.countOrder()
 	ctx.lastOrder, ctx.attackTarget = "hold", nil
 	return true
@@ -1288,7 +1295,7 @@ function helpers.move(ctx, position, mode, allowTower, tolerance)
 	end
 	if ctx.lastOrder == "move" and ctx.lastMoveOrder and ctx.now - ctx.lastMoveOrder < 0.3
 		and ctx.moveGoal and helpers.distance(ctx.moveGoal, goal) < 200 then return true, "waiting" end
-	NPC.MoveTo(ctx.hero, position, false, false, false, true)
+	NPC.MoveTo(ctx.hero, position, false, true, false, true, "self_play_move")
 	ctx.countOrder()
 	ctx.attackTarget = nil
 	ctx.moveTarget, ctx.moveGoal, ctx.moveCommand = requested or goal, position, position
@@ -1772,6 +1779,11 @@ function core.run()
 	ctx.nextTick = ctx.now + cfg.tick
 	ctx.clock = gameState == Enum.GameState.DOTA_GAMERULES_STATE_PRE_GAME and -1 or ctx.now - GameRules.GetGameStartTime()
 	ctx.position = Entity.GetAbsOrigin(hero)
+	local _, heroOnScreen = Render.WorldToScreen(ctx.position)
+	if not heroOnScreen then
+		ctx.mode = "Paused: camera away from hero"
+		return
+	end
 	local currentHealth = Entity.GetHealth(hero)
 	ctx.healthLost = ctx.previousHealth and math.max(0, ctx.previousHealth - currentHealth) or 0
 	if ctx.healthLost > 0 then ctx.lastDamaged = ctx.now end
@@ -1837,7 +1849,8 @@ function core.run()
 		ctx.intent, ctx.teleportOrder = nil, nil
 		ctx.clearTask, ctx.teamTask, ctx.regroupTask = nil, nil, nil
 		ctx.runeTask, ctx.aggroTask, ctx.spacingTask, ctx.laneGoal, ctx.aimTask, ctx.wardTask = nil, nil, nil, nil, nil, nil
-		ctx.riverTask, ctx.jungleState = nil, nil
+		if (ctx.laneRotTask or ctx.crowdSince) and ui.debug:Get() then Log.Write("[SelfPlay lane rotation] reset: hero dead") end
+		ctx.riverTask, ctx.jungleState, ctx.laneRotTask, ctx.crowdSince = nil, nil, nil, nil
 		ctx.mapFarm, ctx.mapFarmBlocked = nil, nil
 		ctx.recoveryTask, ctx.dewardTask = nil, nil
 		ctx.disengage, ctx.waveFallback, ctx.waveBlocked = nil, nil, nil
@@ -1932,7 +1945,7 @@ function core.run()
 	if lastHit.finishHero(ctx) then return end
 	if ctx.settings.spells and not profileLocked and ctx.heroModule and ctx.heroModule.opportunity
 		and ctx.heroModule.opportunity(ctx, combat) then return end
-	if not profileLocked and not ctx.hardRetreat and ctx.teamTask and ctx.teamTask.fighting and teamplay.run(ctx) then return end
+	if not profileLocked and not ctx.hardRetreat and ctx.teamTask and ctx.teamTask.fighting and (ctx.role ~= 1 or fights.carryReady(ctx) or ctx.baseDefense ~= nil) and (ctx.role ~= 2 or fights.midReady(ctx) or ctx.baseDefense ~= nil or not ctx.teamTask.goal or ctx.distance(ctx.position, ctx.teamTask.goal) <= 1800) and teamplay.run(ctx) then return end
 	if ctx.aggroTask and positioning.aggro(ctx) then return end
 		if not ctx.hardRetreat and not ctx.intent and not profileLocked and (ctx.role ~= 1 or fights.carryReady(ctx)) then
 		local opportunity = engagement.choose(ctx)
@@ -1980,7 +1993,7 @@ function core.run()
 	if not profileLocked and not ctx.retreating and positioning.respond(ctx) then return end
 	if not profileLocked and ctx.campTask and core.camp(ctx) then return end
 	if not ctx.intent and not profileLocked and not ctx.retreating then
-		if ctx.teamTask and ctx.teamTask.kind == "push" and teamplay.run(ctx) then return end
+		if ctx.teamTask and ctx.teamTask.kind == "push" and (ctx.role ~= 1 or fights.carryReady(ctx) or ctx.baseDefense ~= nil) and (ctx.role ~= 2 or fights.midReady(ctx) or ctx.baseDefense ~= nil or not ctx.teamTask.goal or ctx.distance(ctx.position, ctx.teamTask.goal) <= 1800) and teamplay.run(ctx) then return end
 		if ctx.teamTask and ctx.teamTask.kind == "roshan" and teamplay.run(ctx) then return end
 		if teamplay.loot(ctx) then return end
 	end
@@ -1988,7 +2001,7 @@ function core.run()
 	if not ctx.intent and not profileLocked and not ctx.objectiveTask and runes.run(ctx, ctx.farmCandidate) then return end
 	if heroModules.update(ctx, combat, ctx.retreating) then return end
 	if ctx.aimTask and combat.run(ctx, ctx.retreating) then return end
-	if not ctx.intent and ctx.target and not ctx.hardRetreat and ctx.health > 0.45
+	if not ctx.intent and ctx.target and not ctx.hardRetreat and ctx.health > 0.45 - engagement.boldness(ctx) * 0.28
 		and Entity.GetHealth(ctx.target) <= NPC.GetTrueDamage(hero) * NPC.GetArmorDamageMultiplier(ctx.target) * 2
 		and helpers.distance(ctx.position, Entity.GetAbsOrigin(ctx.target)) < NPC.GetAttackRange(hero) + NPC.GetAttackRangeBonus(hero) + 300 then
 		intent.begin(ctx, ctx.target, "hero", true)
@@ -2013,6 +2026,7 @@ function core.run()
 	if jungle.run(ctx, true) then return end
 	if positioning.aggro(ctx) then return end
 	if positioning.creepWaveFallback(ctx) then return end
+	if laneRotation.run(ctx) then return end
 	if positioning.soakAlone(ctx) then return end
 	if positioning.fightCreeps(ctx) then return end
 	local farm = ctx.farmCandidate
@@ -2160,7 +2174,8 @@ function selfPlay.OnPrepareUnitOrders(data)
 		ctx.pauseUntil = GameRules.GetGameTime() + cfg.manualPause
 		ctx.campTask, ctx.aimTask, ctx.runeTask, ctx.clearTask, ctx.teamTask, ctx.regroupTask = nil, nil, nil, nil, nil, nil
 		ctx.aggroTask, ctx.spacingTask, ctx.laneGoal, ctx.heroHarass = nil, nil, nil, nil
-		ctx.riverTask, ctx.jungleState = nil, nil
+		if (ctx.laneRotTask or ctx.crowdSince) and ui.debug:Get() then Log.Write("[SelfPlay lane rotation] reset: manual control") end
+		ctx.riverTask, ctx.jungleState, ctx.laneRotTask, ctx.crowdSince = nil, nil, nil, nil
 		ctx.afterDeath, ctx.edgeWaitSince = nil, nil
 		ctx.mapFarm = nil
 		ctx.recoveryTask, ctx.dewardTask = nil, nil
@@ -2285,10 +2300,79 @@ function selfPlay.OnGameEnd()
 	helpers.reset()
 end
 
+local function panelInfo(panel)
+	if not panel or not panel:IsValid() then return "none" end
+	local parts = {}
+	if panel:HasID() then parts[#parts + 1] = "id=" .. tostring(panel:GetID()) end
+	local classes = panel:GetClassList()
+	if classes then parts[#parts + 1] = "class=" .. table.concat(classes, "|") end
+	parts[#parts + 1] = "children=" .. tostring(panel:GetChildCount())
+	return table.concat(parts, " ")
+end
+
+local function reconnectTree(panel, depth)
+	if not panel or depth > 6 then return nil end
+	if not panel:IsValid() then return nil end
+	local count = panel:GetChildCount()
+	for index = 0, count - 1 do
+		local child = panel:GetChild(index)
+		if child and child:IsValid() then
+			if child:HasClass("CanReconnect") then return child end
+			if child:HasID() then
+				local id = child:GetID()
+				if type(id) == "string" and id:lower():find("reconnect", 1, true) then return child end
+			end
+			local found = reconnectTree(child, depth + 1)
+			if found then return found end
+		end
+	end
+	return nil
+end
+
+local function reconnectTarget(root)
+	if not root or not root:IsValid() then return nil end
+	for _, name in ipairs({"DOTAPlay", "DOTA_GamePanel", "HUD", "DOTA_LoadingScreen"}) do
+		local panel = Panorama.GetPanelByName(name, true)
+		if panel and panel:IsValid() then
+			local found = reconnectTree(panel, 0)
+			if found then return found, panel end
+		end
+	end
+	if root and root:IsValid() and root:HasClass("CanReconnect") then return root, root end
+	return nil, root
+end
+
 function selfPlay.OnUpdateEx()
 	helpers.settings()
 	camera.update(ui.enabled:Get() and ui.camera:Get())
 	local now = matchmaking.update(ui.matchmaking, ui.role:Get())
+	local uiState = Engine.GetUIState()
+	if Engine.IsInGame() then
+		reconnectState.attempts = 0
+		reconnectState.nextAttempt = now + 5
+	elseif now >= reconnectState.nextAttempt then
+		reconnectState.nextAttempt = now + 5
+		local play = Panorama.GetPanelByName("DOTAPlay", true)
+		local target, host = reconnectTarget(play)
+		if target and target:IsVisible() then
+			local sent = Engine.RunScript(
+				"$.DispatchEvent('PointerDown', $.GetContextPanel(), 'mouse');"
+				.. "$.DispatchEvent('PointerUp', $.GetContextPanel(), 'mouse');"
+				.. "$.DispatchEvent('Activated', $.GetContextPanel(), 'mouse');", target)
+			reconnectState.attempts = reconnectState.attempts + 1
+			if ui.debug:Get() then
+				Log.Write(string.format("[SelfPlay reconnect] uiState=%d dashboard=%s attempt=%d sent=%s target=%s",
+					uiState, tostring(uiState == Enum.UIState.DOTA_GAME_UI_STATE_DASHBOARD),
+					reconnectState.attempts, tostring(sent), panelInfo(target)))
+			end
+		else
+			if ui.debug:Get() and reconnectState.attempts > 0 then
+				Log.Write(string.format("[SelfPlay reconnect] uiState=%d dashboard=%s no control play=%s",
+					uiState, tostring(uiState == Enum.UIState.DOTA_GAME_UI_STATE_DASHBOARD), panelInfo(play)))
+			end
+			reconnectState.attempts = 0
+		end
+	end
 	if ui.enabled:Get() then draft.update(ui.draft, ui.role:Get(), now) end
 	excuses.update(ui.excuses)
 end

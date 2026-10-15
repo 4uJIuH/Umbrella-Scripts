@@ -120,6 +120,7 @@ end
 local function step(ui, role)
 	if Engine.CanAcceptMatch() then
 		if state.now >= state.nextAccept then Engine.AcceptMatch(1); state.nextAccept = state.now + 3 end
+		state.acceptedUntil = state.now + 60
 		state.status, state.nextQueue = "Match accepted; waiting to connect", state.now + 15
 		state.blocked = true
 		return state.now
@@ -127,6 +128,7 @@ local function step(ui, role)
 	local play = Panorama.GetPanelByName("DOTAPlay", true)
 	if Engine.IsInGame() or Players.GetLocal() or Heroes.GetLocal() then
 		state.pending, state.searching, state.ownedSearch = nil, false, false
+		state.acceptedUntil = nil
 		state.status, state.nextQueue = "Match in progress", state.now + 10
 		state.blocked = true
 		return state.now
@@ -139,6 +141,15 @@ local function step(ui, role)
 		state.status, state.nextQueue = blocked, state.now + 10
 		state.blocked = true
 		return state.now
+	end
+	if state.acceptedUntil then
+		if state.now < state.acceptedUntil then
+			state.status, state.nextQueue = "Match accepted; waiting to connect", state.now + 10
+			state.blocked = true
+			return state.now
+		end
+		state.acceptedUntil = nil
+		Log.Write("[SelfPlay queue] Accepted match did not launch within 60s; re-queueing")
 	end
 	if state.blocked then state.blocked, state.status = false, "Waiting to queue" end
 	if state.now >= (state.nextRefresh or 0) then
@@ -207,6 +218,7 @@ function matchmaking.update(ui, role)
 		if not enabled then
 			local stop = state.pending or state.ownedSearch
 			state.pending, state.searching, state.ownedSearch, state.forcedSingleDraft = nil, false, false, false
+			state.acceptedUntil = nil
 			if stop then
 				state.cancel = {started = state.now, nextSend = state.now + 0.25}
 				send("CMsgStopFindingMatch", 7036, {})
@@ -241,6 +253,7 @@ function matchmaking.gameEnd()
 	state.now = chronos.nanotime()
 	state.cancel = nil
 	state.pending, state.searching, state.ownedSearch, state.forcedSingleDraft = nil, false, false, false
+	state.acceptedUntil = nil
 	state.nextQueue, state.status = state.now + 10, "Game ended; waiting for client to return"
 	if state.rotation > 0 then
 		state.games = state.games + 1

@@ -1,3 +1,8 @@
+# Update v2.8.0
+
+- Choose whether the window opens automatically after script reloads or only from its assigned key.
+- Assign the opening key directly in Script Manager settings; the selected key is displayed, Escape cancels, and Backspace clears it.
+
 # Update v2.7.1
 
 - Fixed downloads for manually installed Lua files: Gank Threat, Achievements, and Counter Items are no longer rejected by ZIP/RAR validation.

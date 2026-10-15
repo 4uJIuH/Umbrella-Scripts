@@ -383,6 +383,262 @@ OVERRIDES = {
         "ru": ["Scripts → Utility → RadialChat → Main"],
         "en": ["Scripts → Utility → RadialChat → Main"],
     },
+    "interactive_menu": {
+        "ru": [
+            "General → Main → InteractiveMenu RU → ⚙ General / Общее",
+            "General → Main → InteractiveMenu RU → ◈ Palette / Палитра",
+            "General → Main → InteractiveMenu RU → ✦ Particles / Частицы",
+            "General → Main → InteractiveMenu RU → ⌘ Web / Паутинка",
+        ],
+        "en": [
+            "General → Main → InteractiveMenu RU → ⚙ General / Общее",
+            "General → Main → InteractiveMenu RU → ◈ Palette / Палитра",
+            "General → Main → InteractiveMenu RU → ✦ Particles / Частицы",
+            "General → Main → InteractiveMenu RU → ⌘ Web / Паутинка",
+        ],
+    },
+    "ranks_mmr_tracker": {
+        "ru": [
+            "Scripts → Other → MMR Tracker Ultimate → Settings → Main",
+            "Scripts → Other → MMR Tracker Ultimate → Settings → Statistics",
+            "Scripts → Other → MMR Tracker Ultimate → Settings → Calculator",
+            "Scripts → Other → MMR Tracker Ultimate → Settings → Tilt Guard",
+        ],
+        "en": [
+            "Scripts → Other → MMR Tracker Ultimate → Settings → Main",
+            "Scripts → Other → MMR Tracker Ultimate → Settings → Statistics",
+            "Scripts → Other → MMR Tracker Ultimate → Settings → Calculator",
+            "Scripts → Other → MMR Tracker Ultimate → Settings → Tilt Guard",
+        ],
+    },
+    "lycan_auto_howl": {
+        "ru": [
+            "General → Main → Lycan Auto Howl → Auto Howl → Основное",
+            "General → Main → Lycan Auto Howl → Auto Howl → День / Ночь",
+            "General → Main → Lycan Auto Howl → Auto Howl → Детект",
+            "General → Main → Lycan Auto Howl → Auto Howl → Панель",
+        ],
+        "en": [
+            "General → Main → Lycan Auto Howl → Auto Howl → Основное",
+            "General → Main → Lycan Auto Howl → Auto Howl → День / Ночь",
+            "General → Main → Lycan Auto Howl → Auto Howl → Детект",
+            "General → Main → Lycan Auto Howl → Auto Howl → Панель",
+        ],
+    },
+    "sf_requiem_radius": {
+        "ru": ["Heroes → Hero List → Shadow Fiend → Requiem Radius → Main"],
+        "en": ["Heroes → Hero List → Shadow Fiend → Requiem Radius → Main"],
+    },
+    "dotaplus_tracker": {
+        "ru": ["Info Screen → Main → Tracker → Main → Settings"],
+        "en": ["Info Screen → Main → Tracker → Main → Settings"],
+    },
+    "illuminate_visualizer": {
+        "ru": [
+            "General → Main → Illuminate Visualizer → Settings → Main"
+        ],
+        "en": [
+            "General → Main → Illuminate Visualizer → Settings → Main"
+        ],
+    },
+    "aegis_blinkout_cone": {
+        "ru": [
+            "General → Main → Конус блинка после Aegis → Настройки → Общее"
+        ],
+        "en": [
+            "General → Main → Конус блинка после Aegis → Настройки → Общее"
+        ],
+    },
+    "natures_call_block": {
+        "ru": [
+            "Heroes → Hero List → Nature's Prophet → Nature Call Block → Settings"
+        ],
+        "en": [
+            "Heroes → Hero List → Nature's Prophet → Nature Call Block → Settings"
+        ],
+    },
+    "remote_auto_search": {
+        "ru": [
+            "Miscellaneous → Other → Message Recorder → Main → Auto Search Game",
+            "Miscellaneous → Other → Message Recorder → Main → Ntfy Remote Queue",
+            "Miscellaneous → Other → Message Recorder → Main → Key Emulator",
+        ],
+        "en": [
+            "Miscellaneous → Other → Message Recorder → Main → Auto Search Game",
+            "Miscellaneous → Other → Message Recorder → Main → Ntfy Remote Queue",
+            "Miscellaneous → Other → Message Recorder → Main → Key Emulator",
+        ],
+    },
+    "opendota_stats_tracker": {
+        "ru": ["Info Screen → Main → Tracker → Main → Settings"],
+        "en": ["Info Screen → Main → Tracker → Main → Settings"],
+    },
+    "dark_carnival_suggest_heroes": {
+        "ru": ["General → Main → Dark Carnival → Main → Настройки"],
+        "en": ["General → Main → Dark Carnival → Main → Настройки"],
+    },
+    "meepo_auto_escape": {
+        "ru": ["Heroes → Hero List → Meepo → Meepo → Saver"],
+        "en": ["Heroes → Hero List → Meepo → Meepo → Saver"],
+    },
+    "incoming_damage_hud": {
+        "ru": [
+            "Scripts → Main → Incoming DMG → Incoming DMG → Main",
+            "Scripts → Main → Incoming DMG → Incoming DMG → Display",
+        ],
+        "en": [
+            "Scripts → Main → Incoming DMG → Incoming DMG → Main",
+            "Scripts → Main → Incoming DMG → Incoming DMG → Display",
+        ],
+    },
+    "ntfy_match_notifier": {
+        "ru": [
+            "UCZone → Utilities → Ntfy → Match Notifier → On Accept/Resolve"
+        ],
+        "en": [
+            "UCZone → Utilities → Ntfy → Match Notifier → On Accept/Resolve"
+        ],
+    },
+    "auto_summons_kiting": {
+        "ru": ["Scripts → Other → Auto Summons → Main → Main"],
+        "en": ["Scripts → Other → Auto Summons → Main → Main"],
+    },
+    "dazzle_support": {
+        "ru": [
+            "Heroes → Hero List → Dazzle → Dazzle Support RUS → General",
+            "Heroes → Hero List → Dazzle → Dazzle Support RUS → E - Shallow Grave",
+            "Heroes → Hero List → Dazzle → Dazzle Support RUS → W - Shadow Wave",
+            "Heroes → Hero List → Dazzle → Dazzle Support RUS → Items",
+            "Heroes → Hero List → Dazzle → Dazzle Support RUS → Визуалы",
+        ],
+        "en": [
+            "Heroes → Hero List → Dazzle → Dazzle Support RUS → General",
+            "Heroes → Hero List → Dazzle → Dazzle Support RUS → E - Shallow Grave",
+            "Heroes → Hero List → Dazzle → Dazzle Support RUS → W - Shadow Wave",
+            "Heroes → Hero List → Dazzle → Dazzle Support RUS → Items",
+            "Heroes → Hero List → Dazzle → Dazzle Support RUS → Визуалы",
+        ],
+    },
+    "kotl_illuminate_kill_release": {
+        "ru": [
+            "General → Utility → kotl_illuminate → KOTL → Auto Illuminate"
+        ],
+        "en": [
+            "General → Utility → kotl_illuminate → KOTL → Auto Illuminate"
+        ],
+    },
+    "hero_speed_overlay": {
+        "ru": [
+            "Info Screen → Main → Heroes Overlay → Main → Speed Check"
+        ],
+        "en": [
+            "Info Screen → Main → Heroes Overlay → Main → Speed Check"
+        ],
+    },
+    "ai_chat_responder": {
+        "ru": [
+            "Scripts → User Scripts → AI Chat Responder → Main → AI Responder",
+            "Scripts → User Scripts → AI Chat Responder → Main → Enemy Warnings",
+        ],
+        "en": [
+            "Scripts → User Scripts → AI Chat Responder → Main → AI Responder",
+            "Scripts → User Scripts → AI Chat Responder → Main → Enemy Warnings",
+        ],
+    },
+    "windranger_combo": {
+        "ru": [
+            "Heroes → Hero List → Windranger → Windranger Combo → Combo Settings",
+            "Heroes → Hero List → Windranger → Windranger Combo → Ability Toggle",
+            "Heroes → Hero List → Windranger → Windranger Combo → Shackle Options",
+            "Heroes → Hero List → Windranger → Windranger Combo → Visuals",
+        ],
+        "en": [
+            "Heroes → Hero List → Windranger → Windranger Combo → Combo Settings",
+            "Heroes → Hero List → Windranger → Windranger Combo → Ability Toggle",
+            "Heroes → Hero List → Windranger → Windranger Combo → Shackle Options",
+            "Heroes → Hero List → Windranger → Windranger Combo → Visuals",
+        ],
+    },
+    "lone_druid_bear_ai_deluxe": {
+        "ru": ["Heroes → Hero List → Lone Druid → Bear AI Deluxe"],
+        "en": ["Heroes → Hero List → Lone Druid → Bear AI Deluxe"],
+    },
+    "ultrashizfrenia_laugh": {
+        "ru": [
+            "Miscellaneous → In Game → ULTRASHIZOFRENIA laugh → Main → General"
+        ],
+        "en": [
+            "Miscellaneous → In Game → ULTRASHIZOFRENIA laugh → Main → General"
+        ],
+    },
+    "ultrashizfrenia_high_five": {
+        "ru": [
+            "Miscellaneous → In Game → ULTRASHIZOFRENIA Auto High Five → Main → General"
+        ],
+        "en": [
+            "Miscellaneous → In Game → ULTRASHIZOFRENIA Auto High Five → Main → General"
+        ],
+    },
+    "rubick_last_spell": {
+        "ru": ["Heroes → Rubick → Last Spell ESP → Main → Settings"],
+        "en": ["Heroes → Rubick → Last Spell ESP → Main → Settings"],
+    },
+    "invoker_combo_panel": {
+        "ru": ["Heroes → Hero List → Invoker → Invoker Combo Panel"],
+        "en": ["Heroes → Hero List → Invoker → Invoker Combo Panel"],
+    },
+    "invoker_ice_wall_farm": {
+        "ru": ["Heroes → Hero List → Invoker → Ice Wall Farm"],
+        "en": ["Heroes → Hero List → Invoker → Ice Wall Farm"],
+    },
+    "meepo_block": {
+        "ru": ["General → Blocker → Meepo Blocker"],
+        "en": ["General → Blocker → Meepo Blocker"],
+    },
+    "pt_strength_low_hp": {
+        "ru": ["Scripts → Combat → PTabs"],
+        "en": ["Scripts → Combat → PTabs"],
+    },
+    "combine_lock_click": {
+        "ru": ["General → Items → Combine Lock → Main → Main"],
+        "en": ["General → Items → Combine Lock → Main → Main"],
+    },
+    "invoker_ice_wall_cursor": {
+        "ru": ["Heroes → Hero List → Invoker → Main Settings → Cast On Cursor"],
+        "en": ["Heroes → Hero List → Invoker → Main Settings → Cast On Cursor"],
+    },
+    "chaos_knight_crit_guard": {
+        "ru": ["Heroes → Hero List → Chaos Knight"],
+        "en": ["Heroes → Hero List → Chaos Knight"],
+    },
+    "witch_doctor_ward_controller": {
+        "ru": ["Heroes → Hero List → Witch Doctor → Main Settings → Ward Settings"],
+        "en": ["Heroes → Hero List → Witch Doctor → Main Settings → Ward Settings"],
+    },
+    "sense_metrics": {
+        "ru": ["General → Sense Metrics → Sense"],
+        "en": ["General → Sense Metrics → Sense"],
+    },
+    "terrorblade_conjure_spam": {
+        "ru": ["General → Terrorblade → Conjure Image → Settings → Conjure Spam"],
+        "en": ["General → Terrorblade → Conjure Image → Settings → Conjure Spam"],
+    },
+    "invoker_alacrity_allies_panel": {
+        "ru": ["Heroes → Hero List → Invoker → Alacrity Allies Panel"],
+        "en": ["Heroes → Hero List → Invoker → Alacrity Allies Panel"],
+    },
+    "html_widget": {
+        "ru": ["General → Main → HTML Widget"],
+        "en": ["General → Main → HTML Widget"],
+    },
+    "synoptic_forecast": {
+        "ru": ["Scripts → Utility → Синоптик → Main"],
+        "en": ["Scripts → Utility → Синоптик → Main"],
+    },
+    "pedometer": {
+        "ru": ["Scripts → Utility → Шагомер → Main"],
+        "en": ["Scripts → Utility → Шагомер → Main"],
+    },
 }
 
 

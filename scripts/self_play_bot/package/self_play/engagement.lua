@@ -6,6 +6,17 @@ local function visible(unit)
 	return unit and Entity.IsEntity(unit) and Entity.IsAlive(unit) and not Entity.IsDormant(unit) and NPC.IsVisible(unit)
 end
 
+function engagement.boldness(ctx)
+	local value = (ctx.settings and ctx.settings.confidence or 0.5) - 0.5
+	if value < -0.5 then return -0.5 end
+	if value > 0.5 then return 0.5 end
+	return value
+end
+
+local function boldness(ctx)
+	return engagement.boldness(ctx)
+end
+
 local function strength(unit)
 	local health = Entity.GetHealth(unit) / math.max(1, Entity.GetMaxHealth(unit))
 	return NPC.GetTrueDamage(unit) / math.max(0.3, NPC.GetSecondsPerAttack(unit, false)) * (0.4 + health * 0.6)
@@ -154,7 +165,9 @@ function engagement.assess(ctx, target)
 	local ownBarriers = NPC.GetBarriers(ctx.hero)
 	local shield = ownBarriers and ownBarriers.all.current or 0
 	local remaining = hp + healing + shield - incoming - selfCost
-	local safe = killTime <= 8 and immediate < (hp + shield) * 0.6 and remaining > math.max(maximum * 0.15, hp * 0.3)
+	local bold = boldness(ctx)
+	local safe = killTime <= 8 + bold * 3 and immediate < (hp + shield) * (0.6 + bold * 0.45)
+		and remaining > math.max(maximum * 0.15 + bold * maximum * 0.12, hp * (0.3 + bold * 0.35))
 	local exchange = 2.5
 	local seconds = math.max(0, exchange - approach - casting)
 	local extra, cost = 0, 0
@@ -188,7 +201,9 @@ function engagement.keep(decision)
 end
 
 function engagement.choose(ctx)
-	if ctx.hardRetreat or ctx.recovering or ctx.health < 0.2 or ctx.clock < 35 then return nil end
+	local bold = boldness(ctx)
+	if ctx.hardRetreat or ctx.health < 0.2 - bold * 0.15 or ctx.clock < 35 then return nil end
+	if ctx.recovering and bold <= 0 then return nil end
 	local liveCast = false
 	for _, target in ipairs(ctx.enemies) do
 		if visible(target) and NPC.IsChannellingAbility(target) then liveCast = true; break end
@@ -224,7 +239,7 @@ function engagement.choose(ctx)
 				for _, enemy in ipairs(ctx.enemies) do
 					if visible(enemy) and ctx.distance(Entity.GetAbsOrigin(enemy), position) < 900 then hostile = hostile + strength(enemy) end
 				end
-				local favorable = friendly >= hostile * 1.15
+				local favorable = friendly >= hostile * (1.15 - bold * 0.4)
 				local interrupt = NPC.IsChannellingAbility(target)
 				local controlled = NPC.IsStunned(target) or NPC.HasState(target, Enum.ModifierState.MODIFIER_STATE_ROOTED)
 				local facing = NPC.IsAttacking(target) and NPC.FindFacingNPC(target, nil, Enum.TeamType.TEAM_ENEMY, 25, NPC.GetAttackRange(target) + 100)
@@ -233,8 +248,9 @@ function engagement.choose(ctx)
 					and (favorable or occupied or range >= NPC.GetAttackRange(target) + 150)
 				local advantage = favorable and ctx.health > 0.62 and approach < 1.6
 				local incoming = ctx.laneThreat and ctx.laneThreat.incoming or 0
-				local safe = winning or retaliation or ctx.health >= 0.4 and friendly >= hostile * (kill and 0.65 or 0.95) and ((ctx.creepPressure or 0) < 3 or kill)
-					and incoming < Entity.GetHealth(ctx.hero) * (kill and 0.65 or 0.32)
+				local safe = winning or retaliation or ctx.health >= 0.4 - bold * 0.2 and friendly >= hostile * ((kill and 0.65 or 0.95) - bold * 0.3)
+					and ((ctx.creepPressure or 0) < 3 or kill)
+					and incoming < Entity.GetHealth(ctx.hero) * ((kill and 0.65 or 0.32) + bold * 0.33)
 				if safe and assessment and (winning or retaliation or assessment.trade or assessment.assist)
 					and (winning or retaliation or kill or interrupt or joining or controlled or trade or advantage) then
 					local score = (kill and 110 or 0) + (interrupt and 85 or 0) + (joining and 75 or 0)

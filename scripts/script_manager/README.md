@@ -42,6 +42,7 @@ Script Manager объединяет каталог скриптов в отде�
 - Устанавливает `!_qLocalizer.lua`, если он нужен выбранному скрипту и ещё не установлен
 - Показывает ZIP-пакеты для скачивания и ручной распаковки
 - Позволяет менять тему, акцентный цвет и поведение перезапуска после установки
+- Позволяет выбрать, открывать ли окно после перезагрузки скриптов, и назначить клавишу открытия в настройках
 - Поддерживает собственное обновление под тем же именем `script_manager.lua`
 - Автор визуальной/UI-части: watahell / papagdetto
 
@@ -53,6 +54,11 @@ Script Manager объединяет каталог скриптов в отде�
 4. Откройте `Scripts → Scripts → Script Manager`, включите его и назначьте клавишу для открытия панели.
 
 ## Что нового
+
+# Обновление v2.8.0
+
+- Добавлен выбор режима открытия окна: автоматически после перезагрузки скриптов или только по назначенной клавише.
+- Клавишу открытия можно назначить прямо в настройках Script Manager; отображается её название, а Escape отменяет назначение и Backspace очищает его.
 
 # Обновление v2.7.1
 
@@ -156,6 +162,7 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 - Installs `!_qLocalizer.lua` when a selected script requires it and it is missing
 - Lists ZIP packages for download and manual extraction
 - Lets users change the theme, accent color, and post-install restart behavior
+- Lets users choose whether the window opens after script reloads and assign its opening key in settings
 - Supports self-updates while keeping the `script_manager.lua` filename
 - Visual/UI authors: watahell / papagdetto
 
@@ -167,6 +174,11 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 4. Open `Scripts → Scripts → Script Manager`, enable it, and assign a key to open the panel.
 
 ## Changelog
+
+# Update v2.8.0
+
+- Choose whether the window opens automatically after script reloads or only from its assigned key.
+- Assign the opening key directly in Script Manager settings; the selected key is displayed, Escape cancels, and Backspace clears it.
 
 # Update v2.7.1
 

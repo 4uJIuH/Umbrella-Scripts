@@ -641,13 +641,14 @@
       "file": "script_manager.lua",
       "author": "4uJIuH",
       "initial": {
-        "version": "2.0.1",
-        "date": "2026-10-13",
-        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/script_manager/script_manager.lua"
+        "version": "2.8.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/script_manager/script_manager.lua",
+        "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.8.0/script_manager.lua"
       },
       "ru": {
         "tagline": "каталог скриптов Umbrella с установкой и обновлениями",
-        "about": "Script Manager объединяет каталог скриптов в отдельной настраиваемой панели: показывает описания, авторов и версии, поддерживает поиск, фильтры по героям и категориям, а также установку и удаление. Визуальная/UI-часть: watahell / papagdetto.",
+        "about": "Script Manager объединяет каталог скриптов в отдельной настраиваемой панели: показывает описания, авторов и версии, поддерживает поиск, фильтры по героям и категориям, а также установку и удаление. Можно выбрать, открывать ли окно после перезагрузки скриптов, и назначить клавишу открытия. Визуальная/UI-часть: watahell / papagdetto.",
         "features": [
           "Загружает общий каталог с сайта и показывает скрипты по категориям, героям и статусу установки",
           "Отображает описания, возможности, автора, источник и доступную версию выбранного скрипта",
@@ -659,6 +660,7 @@
           "Устанавливает `!_qLocalizer.lua`, если он нужен выбранному скрипту и ещё не установлен",
           "Показывает ZIP-пакеты для скачивания и ручной распаковки",
           "Позволяет менять тему, акцентный цвет и поведение перезапуска после установки",
+          "Позволяет выбрать, открывать ли окно после перезагрузки скриптов, и назначить клавишу открытия",
           "Поддерживает собственное обновление под тем же именем `script_manager.lua`",
           "Автор визуальной/UI-части: watahell / papagdetto"
         ],
@@ -671,7 +673,7 @@
       },
       "en": {
         "tagline": "an Umbrella script catalog with script installation and updates",
-        "about": "Script Manager brings the script catalog into a customizable panel. It shows descriptions, authors, and versions, supports search and hero/category filters, and installs or removes scripts. Visual/UI design: watahell / papagdetto.",
+        "about": "Script Manager brings the script catalog into a customizable panel. It shows descriptions, authors, and versions, supports search and hero/category filters, and installs or removes scripts. Choose whether the window opens after script reloads and assign its opening key in settings. Visual/UI design: watahell / papagdetto.",
         "features": [
           "Loads the shared website catalog and groups scripts by category, hero, and installation status",
           "Shows a selected script's description, features, author, source, and available version",
@@ -683,6 +685,7 @@
           "Installs `!_qLocalizer.lua` when a selected script requires it and it is missing",
           "Lists ZIP packages for download and manual extraction",
           "Lets users change the theme, accent color, and post-install restart behavior",
+          "Lets users choose whether the window opens after script reloads and assign its opening key",
           "Supports self-updates while keeping the `script_manager.lua` filename",
           "Visual/UI authors: watahell / papagdetto"
         ],
@@ -6588,7 +6591,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_control_rune/arc_warden_control_rune.lua"
       },
-      "heroes": ["arc_warden"],
+      "heroes": [
+        "arc_warden"
+      ],
       "ru": {
         "tagline": "контролирует руны Арком и его клоном",
         "about": "По бинду перемещает Арка Вардена и Темпест-Дабла к руне и применяет Magnetic Field с учётом уровня способности.",
@@ -6679,7 +6684,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_fear_of_god/fear_of_god.lua"
       },
-      "heroes": ["tinker"],
+      "heroes": [
+        "tinker"
+      ],
       "ru": {
         "tagline": "комбо и побег для старой версии Тинкера",
         "about": "Скрипт для Тинкера в кастомных играх с комбо, настройками предметов и побегом. Совместим только с патчем 7.32; для 7.28 не адаптирован.",
@@ -6725,7 +6732,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_high_five/high_five.lua"
       },
-      "heroes": ["arc_warden"],
+      "heroes": [
+        "arc_warden"
+      ],
       "ru": {
         "tagline": "автоматически отбивает «пятюню» клоном Арка",
         "about": "Автоматически реагирует на запросы High Five, используя Темпест-Дабла. Может отвечать как своим союзникам, так и вражеским героям.",
@@ -6816,7 +6825,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/ember_spirit_sticky_trainer/ember_spirit_sticky_trainer.lua"
       },
-      "heroes": ["ember_spirit"],
+      "heroes": [
+        "ember_spirit"
+      ],
       "ru": {
         "tagline": "тренировочный комбо-скрипт с предиктом ремнантов и побегом",
         "about": "Настраиваемый тренер для Ember Spirit с выбором и фиксацией цели, движением между противниками, комбо через ремнанты и системой побега. Автоматические приказы работают только на карте hero_demo_main; вне неё скрипт показывает заблокированный статус.",
@@ -6909,7 +6920,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/marci_dust_delivery/marci_dust_delivery.lua"
       },
-      "heroes": ["marci"],
+      "heroes": [
+        "marci"
+      ],
       "ru": {
         "tagline": "автоматически доставляет и использует Dust за Marci",
         "about": "Если замеченный противник в радиусе 400–1050 становится невидимым и у Marci нет Dust, скрипт запускает покупку и доставку через курьера, освобождая слот при необходимости. Автор предупреждает, что версия экспериментальная и может содержать ошибки.",
@@ -6957,7 +6970,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/arc_warden_rune_control/arcwagner.lua"
       },
-      "heroes": ["arc_warden"],
+      "heroes": [
+        "arc_warden"
+      ],
       "ru": {
         "tagline": "контролирует руну клоном Арка Вардена",
         "about": "По нажатию бинда вызывает Tempest Double и отправляет его контролировать руну с помощью Magnetic Field, пока оригинальный герой может направиться к другой руне.",
@@ -7048,7 +7063,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/beastmaster_razorbacks/beastmaster.lua"
       },
-      "heroes": ["beastmaster"],
+      "heroes": [
+        "beastmaster"
+      ],
       "ru": {
         "tagline": "умное управление кабанами Beastmaster",
         "about": "Автоматизированные кабаны помогают в бою и фарме, не заменяя полностью ручное управление. Скрипт поддерживает настройку, ручные приказы и подсказки к функциям.",
@@ -7096,7 +7113,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/juggernaut_ward_control/JuggernautWardControl.lua"
       },
-      "heroes": ["juggernaut"],
+      "heroes": [
+        "juggernaut"
+      ],
       "ru": {
         "tagline": "умно управляет Healing Ward Джаггернаута",
         "about": "Автоматически управляет существующим Healing Ward: удерживает его рядом с союзниками для лечения и отводит от врагов и опасных крипов, пытающихся уничтожить вард.",
@@ -7144,7 +7163,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_auto_alacrity/Auto_Alacrity.lua"
       },
-      "heroes": ["invoker"],
+      "heroes": [
+        "invoker"
+      ],
       "ru": {
         "tagline": "автоматически вызывает Alacrity и применяет к выбранной цели",
         "about": "По бинду применяет готовую Alacrity или вызывает её через последовательность сфер Invoker. Панель позволяет включать цели, менять их приоритет перетаскиванием и видеть, кто находится в радиусе.",
@@ -7192,7 +7213,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/snapfire_cookie_landing/snapfire_cookie_landing.lua"
       },
-      "heroes": ["snapfire"],
+      "heroes": [
+        "snapfire"
+      ],
       "ru": {
         "tagline": "показывает место приземления и радиус стана Firesnap Cookie",
         "about": "Рисует предсказанную область приземления и радиус воздействия Firesnap Cookie с учётом бонусов к радиусу. Перед прыжком скрипт может повернуть Snapfire к курсору; автор отмечает возможный сбой при небольшом угле поворота.",
@@ -7379,7 +7402,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_sunstrike_on_tp/invokersunstikevtp.lua"
       },
-      "heroes": ["invoker"],
+      "heroes": [
+        "invoker"
+      ],
       "ru": {
         "tagline": "применяет Sun Strike на телепортящегося врага при летальном уроне",
         "about": "Отслеживает вражеские телепорты и пытается попасть Sun Strike, только если урон должен быть летальным.",
@@ -7517,7 +7542,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/zeus_heavenly_jump_range/zeus_heavenly_jump_range.lua"
       },
-      "heroes": ["zuus"],
+      "heroes": [
+        "zuus"
+      ],
       "ru": {
         "tagline": "показывает дальность прыжка Heavenly Jump и цели молнии",
         "about": "Отображает радиус перемещения Heavenly Jump и отмечает цели, которых заденет молния. Круг показывает дальность прыжка, а не увеличенный радиус самой молнии.",
@@ -7563,7 +7590,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/meepo_v2/meepo_v2.lua"
       },
-      "heroes": ["meepo"],
+      "heroes": [
+        "meepo"
+      ],
       "ru": {
         "tagline": "бета-набор автоматизации и настроек для Meepo",
         "about": "Бета-скрипт для Meepo с настройками комбинаций, утилит, предметов, автоматического спасения и AutoFarm. Автор продолжает разработку — возможны изменения и ошибки.",
@@ -7611,7 +7640,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/abaddon_borrowed_time_plus_one/borrowed_time_plus_one.lua"
       },
-      "heroes": ["abaddon"],
+      "heroes": [
+        "abaddon"
+      ],
       "ru": {
         "tagline": "берёт ульт Abaddon, когда ожидается опасный урон",
         "about": "Оценивает ожидаемый урон по Abaddon за выбранное окно времени и при угрозе изучает Borrowed Time, если ульт ещё не прокачан. Бета-скрипт; автор отмечает, что некоторые внезапные источники урона невозможно предсказать заранее.",
@@ -7751,7 +7782,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/earth_spirit_boulder_helper/earth_spirit_boulder_helper.lua"
       },
-      "heroes": ["earth_spirit"],
+      "heroes": [
+        "earth_spirit"
+      ],
       "ru": {
         "tagline": "показывает ориентиры для попадания Rolling Boulder",
         "about": "Помогает прицеливаться Rolling Boulder: отображает траекторию и отмечает Stone Remnant, который продлевает дальность. Можно настроить цвета и показывать разметку по переключателю или бинду.",
@@ -7799,7 +7832,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/walrus_kick_assist/walrus_kick_assist.lua"
       },
-      "heroes": ["tusk"],
+      "heroes": [
+        "tusk"
+      ],
       "ru": {
         "tagline": "ассистирует с комбо Walrus Kick, Snowball и Blink",
         "about": "По бинду помогает выбрать цель и направление удара Tusk. Поддерживает выбор по союзнику, скоплению союзников или курсору, автоматический Snowball, Blink и сбивание Linken's Sphere; содержит HUD и проверки Lotus.",
@@ -7847,7 +7882,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/techies_tazer_auto_detonate/techies_tazer_auto_detonate.lua"
       },
-      "heroes": ["techies"],
+      "heroes": [
+        "techies"
+      ],
       "ru": {
         "tagline": "взрывает Reactive Tazer при опасных эффектах у врага",
         "about": "Автоматически детонирует уже активный Reactive Tazer, когда в радиусе есть враг с выбранным эффектом от Force Staff, Hurricane Pike, Ghost или Ethereal Blade. Само умение Tazer скрипт не применяет.",
@@ -7893,7 +7930,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_tp_sun_strike/invoker_tp_sun_strike.lua"
       },
-      "heroes": ["invoker"],
+      "heroes": [
+        "invoker"
+      ],
       "ru": {
         "tagline": "наводит Sun Strike на телепорты и поддерживает ручное применение",
         "about": "Отслеживает телепортации врагов и предсказывает точку Sun Strike. Поддерживает фильтры целей, проверку летального урона и порога здоровья, панель интерфейса и ручной Sun Strike по курсору.",
@@ -7988,7 +8027,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/brood_pull_s/brood_pull_s.lua"
       },
-      "heroes": ["broodmother"],
+      "heroes": [
+        "broodmother"
+      ],
       "ru": {
         "tagline": "помогает Broodmother отводить крипов на линии",
         "about": "По бинду выполняет отвод крипов на выбранные линии и показывает подсказки по точкам и времени. Автор сообщает, что скрипт адаптируется для обеих сторон.",
@@ -8083,7 +8124,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/abaddon_auto_mist_coil/AutoMistCoil.lua"
       },
-      "heroes": ["abaddon"],
+      "heroes": [
+        "abaddon"
+      ],
       "ru": {
         "tagline": "автоматически лечит союзников способностью Mist Coil",
         "about": "Выбирает союзную цель и автоматически применяет Mist Coil для лечения с настраиваемыми порогами здоровья и параметрами приоритета.",
@@ -8129,7 +8172,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/void_spirit_escape/void_spirit_escape.lua"
       },
-      "heroes": ["void_spirit"],
+      "heroes": [
+        "void_spirit"
+      ],
       "ru": {
         "tagline": "последовательно использует способности и предметы для побега",
         "about": "При удержании бинда направляет Void Spirit к фонтану и использует доступные способности и отмеченные предметы для выхода из опасности.",
@@ -8367,7 +8412,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/autofocus/AutoFocus.lua"
       },
-      "heroes": ["techies"],
+      "heroes": [
+        "techies"
+      ],
       "ru": {
         "tagline": "переключает атаки на важные вражеские призывы и объекты",
         "about": "Ищет приоритетные цели — Tombstone, Phoenix Egg и различные вражеские варды — и направляет атаковать их Techies или подконтрольные юниты. Радиус и типы атакующих настраиваются.",
@@ -8413,7 +8460,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/warlock_control_golems/WarlockControlGolems.lua"
       },
-      "heroes": ["warlock"],
+      "heroes": [
+        "warlock"
+      ],
       "ru": {
         "tagline": "управляет големами Warlock после применения Chaotic Offering",
         "about": "После призыва големы атакуют ближайших врагов, а если подходящих целей нет — направляются продавливать линию. Панель показывает количество големов, их текущие задачи и оставшееся время жизни.",
@@ -8553,7 +8602,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_tweak/TinkerTweak.lua"
       },
-      "heroes": ["tinker"],
+      "heroes": [
+        "tinker"
+      ],
       "ru": {
         "tagline": "набор визуальных помощников и твиков для Tinker",
         "about": "Скрипт показывает радиусы Laser, Warp Flare и Blink, помогает оценить направление Blink после Eul's или Wind Waker и содержит настройки Blink-помощников для сохранения позиционки.",
@@ -8644,7 +8695,9 @@
         "date": "2026-10-15",
         "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_glimmer_combo/tincomb_v1.2.lua"
       },
-      "heroes": ["tinker"],
+      "heroes": [
+        "tinker"
+      ],
       "ru": {
         "tagline": "комбо и модуль побега для Tinker с Glimmer Cape",
         "about": "Скрипт для Tinker с настраиваемым комбо, помощником радиусов и модулем побега. Для побега можно выбрать предметы, использовать турели и задать направление к фонтану или курсору.",
@@ -8861,6 +8914,1898 @@
           "Reload Lua scripts.",
           "Open `Scripts → Utility → RadialChat → Main`.",
           "The selected phrase is sent to the corresponding chat when you release the keybind."
+        ]
+      }
+    },
+    {
+      "id": "interactive_menu",
+      "tag": "interactive-menu",
+      "title": "InteractiveMenu",
+      "kind": "lua",
+      "category": "dota",
+      "file": "InteractiveMenu.lua",
+      "author": "Лёха (Discord: 1ngoverin)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/interactive_menu",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=interactive-menu&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/interactive_menu/InteractiveMenu.lua"
+      },
+      "ru": {
+        "tagline": "анимированный фон и эффекты для меню Umbrella",
+        "about": "Визуальная тема для меню с частицами, соединениями, следом курсора и плавными эффектами открытия. Настраиваются палитра, цветовые переливы, плотность частиц и оформление.",
+        "features": [
+          "Анимированный фон с частицами и соединениями",
+          "Эффекты курсора и плавные переходы меню",
+          "Настраиваемые цвета, яркость, скорость и плотность эффектов",
+          "Русский и английский интерфейс"
+        ],
+        "install": [
+          "Поместите `InteractiveMenu.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `General → Main → InteractiveMenu RU` и настройте фон и эффекты."
+        ]
+      },
+      "en": {
+        "tagline": "animated backdrop and effects for the Umbrella menu",
+        "about": "A visual menu theme with particles, connecting lines, cursor trails, and smooth opening effects. Customize the palette, color transitions, particle density, and appearance.",
+        "features": [
+          "Animated background with particles and connections",
+          "Cursor effects and smooth menu transitions",
+          "Configurable colors, brightness, speed, and effect density",
+          "Russian and English interface"
+        ],
+        "install": [
+          "Place `InteractiveMenu.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `General → Main → InteractiveMenu RU` to configure the background and effects."
+        ]
+      }
+    },
+    {
+      "id": "ranks_mmr_tracker",
+      "tag": "ranks-mmr-tracker",
+      "title": "MMR Tracker Ultimate",
+      "kind": "lua",
+      "category": "dota",
+      "file": "Ranks.lua",
+      "author": "! 666 (Discord: isee2p)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/ranks_mmr_tracker",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=ranks-mmr-tracker&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/ranks_mmr_tracker/Ranks.lua"
+      },
+      "ru": {
+        "tagline": "панель MMR с целью, историей матчей и защитой от тильта",
+        "about": "Показывает прогресс MMR за текущую сессию и недавние матчи, рассчитывает количество побед до пользовательской цели и учитывает средний прирост MMR и Double Down. При большом падении рейтинга может показать предупреждение.",
+        "features": [
+          "Настраиваемая цель MMR и калькулятор необходимых побед",
+          "Учет среднего изменения рейтинга и жетонов Double Down",
+          "История до десяти недавних матчей и статистика текущей сессии",
+          "Настраиваемые позиция и прозрачность панели",
+          "Предупреждение Tilt Guard при потере заданного количества MMR"
+        ],
+        "install": [
+          "Поместите `Ranks.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Scripts → Other → MMR Tracker Ultimate → Settings`."
+        ]
+      },
+      "en": {
+        "tagline": "MMR panel with a custom goal, match history, and tilt guard",
+        "about": "Displays current-session MMR progress and recent matches, calculates wins needed to reach a custom goal, and accounts for average MMR gain and Double Down tokens. It can warn you after a configured rating loss.",
+        "features": [
+          "Custom MMR goal and required-wins calculator",
+          "Average rating change and Double Down token support",
+          "Up to ten recent matches and current-session statistics",
+          "Configurable panel position and opacity",
+          "Tilt Guard warning after a configured MMR loss"
+        ],
+        "install": [
+          "Place `Ranks.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `Scripts → Other → MMR Tracker Ultimate → Settings`."
+        ]
+      }
+    },
+    {
+      "id": "lycan_auto_howl",
+      "tag": "lycan-auto-howl",
+      "title": "Lycan Auto Howl",
+      "kind": "lua",
+      "category": "dota",
+      "file": "howl.lua",
+      "author": "Лёха (Discord: 1ngoverin)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/lycan_auto_howl",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=lycan-auto-howl&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/lycan_auto_howl/howl.lua"
+      },
+      "heroes": [
+        "lycan"
+      ],
+      "ru": {
+        "tagline": "автоматически применяет Howl по условиям здоровья и урона",
+        "about": "Следит за здоровьем союзных героев и применяет Howl при достижении заданного порога здоровья или резком снижении HP. Настраиваются дневной радиус и глобальное обнаружение ночью.",
+        "features": [
+          "Триггеры по порогу HP и скорости потери здоровья",
+          "Отдельные настройки дневного и ночного радиуса",
+          "Проверка маны и задержка между применениями",
+          "Панель состояния и параметры отображения"
+        ],
+        "install": [
+          "Поместите `howl.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `General → Main → Lycan Auto Howl`."
+        ]
+      },
+      "en": {
+        "tagline": "automatically casts Howl based on health and damage conditions",
+        "about": "Monitors allied heroes and casts Howl when their health reaches a configured threshold or drops rapidly. Configure daytime range and global detection at night.",
+        "features": [
+          "Triggers based on HP threshold and health-loss rate",
+          "Separate daytime and nighttime range options",
+          "Mana check and delay between casts",
+          "Status panel and display settings"
+        ],
+        "install": [
+          "Place `howl.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `General → Main → Lycan Auto Howl`."
+        ]
+      }
+    },
+    {
+      "id": "sf_requiem_radius",
+      "tag": "sf-requiem-radius",
+      "title": "Shadow Fiend Requiem Radius",
+      "kind": "lua",
+      "category": "dota",
+      "file": "sf_requiem_radius.lua",
+      "author": "Almazz ♡ (Discord: almazzik_228)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/sf_requiem_radius",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=sf-requiem-radius&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/sf_requiem_radius/sf_requiem_radius.lua"
+      },
+      "heroes": [
+        "nevermore"
+      ],
+      "ru": {
+        "tagline": "визуализирует радиус Requiem of Souls",
+        "about": "Отображает предполагаемую область действия ультимейта Shadow Fiend. Режим показа, цвет, толщину и тип эффекта можно настроить.",
+        "features": [
+          "Круг, пульсирующая пунктирная линия или кольцевой эффект",
+          "Показ по готовности способности, во время применения или постоянно",
+          "Настраиваемые цвет и толщина"
+        ],
+        "install": [
+          "Поместите `sf_requiem_radius.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Heroes → Hero List → Shadow Fiend → Requiem Radius → Main`."
+        ]
+      },
+      "en": {
+        "tagline": "visualizes the Requiem of Souls radius",
+        "about": "Displays the estimated area of Shadow Fiend's ultimate. Configure when it is shown, its color, thickness, and visual effect.",
+        "features": [
+          "Circle, pulsing dashed line, or ring effect",
+          "Show when the ability is ready, while casting, or always",
+          "Configurable color and thickness"
+        ],
+        "install": [
+          "Place `sf_requiem_radius.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `Heroes → Hero List → Shadow Fiend → Requiem Radius → Main`."
+        ]
+      }
+    },
+    {
+      "id": "dotaplus_tracker",
+      "tag": "dotaplus-tracker",
+      "title": "STRATZ Live Stats Tracker",
+      "kind": "lua",
+      "category": "dota",
+      "file": "dotaplus.lua",
+      "author": "1 вовчик (Discord: shukuchhi)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/dotaplus_tracker",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=dotaplus-tracker&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dotaplus_tracker/dotaplus.lua"
+      },
+      "ru": {
+        "tagline": "сравнивает игровые показатели героя со статистикой STRATZ",
+        "about": "Сопоставляет текущие убийства, смерти, помощи, крипстат, networth, GPM и XPM с данными STRATZ для выбранного ранга и роли. Данные кэшируются локально и отображаются настраиваемой панелью. Для запросов требуется личный API-токен STRATZ.",
+        "features": [
+          "Сравнение игровых показателей с выбранным рангом и ролью",
+          "Обновление сравнительных данных через STRATZ API",
+          "Локальный кэш для повторного использования загруженных данных",
+          "Настраиваемые позиция, масштаб и отображаемые показатели",
+          "Скрытие стандартных Panorama-плашек статистики"
+        ],
+        "install": [
+          "Поместите `dotaplus.lua` в `umbrella\\scripts`.",
+          "Получите личный токен на `https://stratz.com/api`.",
+          "В локальной копии файла замените `API HERE` в строке `STRATZ_TOKEN` на свой токен. Не публикуйте и не отправляйте файл с личным токеном.",
+          "Перезагрузите Lua-скрипты и откройте `Info Screen → Main → Tracker → Main → Settings`."
+        ]
+      },
+      "en": {
+        "tagline": "compares live hero performance with STRATZ statistics",
+        "about": "Compares current kills, deaths, assists, last hits, net worth, GPM, and XPM with STRATZ data for a selected rank and role. Results are cached locally and shown in a configurable panel. A personal STRATZ API token is required for requests.",
+        "features": [
+          "Compare live performance with a selected rank and role",
+          "Fetch benchmark data through the STRATZ API",
+          "Local cache for reuse of downloaded data",
+          "Configurable panel position, scale, and displayed metrics",
+          "Hide the default Panorama statistics panels"
+        ],
+        "install": [
+          "Place `dotaplus.lua` in `umbrella\\scripts`.",
+          "Get a personal token at `https://stratz.com/api`.",
+          "In your local copy, replace `API HERE` in `STRATZ_TOKEN` with your token. Do not publish or share a file containing your personal token.",
+          "Reload Lua scripts and open `Info Screen → Main → Tracker → Main → Settings`."
+        ]
+      }
+    },
+    {
+      "id": "illuminate_visualizer",
+      "tag": "illuminate-visualizer",
+      "title": "Illuminate Visualizer",
+      "kind": "lua",
+      "category": "dota",
+      "file": "IlluminateVisualizer.lua",
+      "author": "chizhak (Discord: stulipelky)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/illuminate_visualizer",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=illuminate-visualizer&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/illuminate_visualizer/IlluminateVisualizer.lua"
+      },
+      "heroes": [
+        "keeper_of_the_light"
+      ],
+      "ru": {
+        "tagline": "показывает направление и реальную зону Illuminate",
+        "about": "Визуализирует направление и область попадания Illuminate, включая версию Spirit Form. Рисует коридор с закруглённым концом, а во время зарядки показывает прогресс применения. Для местного, союзного и вражеского Keeper of the Light используются отдельные настройки и цвета.",
+        "features": [
+          "Поддержка обычного Illuminate и Spirit Form",
+          "Коридор применения с округлой конечной зоной вместо прямоугольной оценки",
+          "Анимированное заполнение по мере зарядки способности",
+          "Отдельные цвета и переключатели для союзников и врагов",
+          "Настройки геометрии, прозрачности и подписей"
+        ],
+        "install": [
+          "Поместите `IlluminateVisualizer.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `General → Main → Illuminate Visualizer → Settings → Main`."
+        ]
+      },
+      "en": {
+        "tagline": "visualizes Illuminate direction and effective hit area",
+        "about": "Visualizes the direction and hit area of Illuminate, including Spirit Form. It draws a corridor with a rounded end cap and shows cast progress while channeling. Local, allied, and enemy Keeper of the Light units have separate options and colors.",
+        "features": [
+          "Supports regular Illuminate and Spirit Form",
+          "Cast corridor with a rounded endpoint instead of a rectangular estimate",
+          "Animated fill that tracks channel progress",
+          "Separate colors and toggles for allies and enemies",
+          "Configurable geometry, opacity, and labels"
+        ],
+        "install": [
+          "Place `IlluminateVisualizer.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `General → Main → Illuminate Visualizer → Settings → Main`."
+        ]
+      }
+    },
+    {
+      "id": "aegis_blinkout_cone",
+      "tag": "aegis-blinkout-cone",
+      "title": "Aegis Blinkout Cone",
+      "kind": "lua",
+      "category": "dota",
+      "file": "aegis_blinkout_cone.lua",
+      "author": "chizhak (Discord: stulipelky)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/aegis_blinkout_cone",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=aegis-blinkout-cone&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/aegis_blinkout_cone/aegis_blinkout_cone.lua"
+      },
+      "ru": {
+        "tagline": "показывает направление Blink после возрождения с Aegis",
+        "about": "Рисует конус возможного Blink от позиции смерти в направлении, куда герой смотрел до гибели. Помимо визуальной подсказки, включает опциональный спам Blink по курсору в коротком окне до и после возрождения; эту функцию можно отключить.",
+        "features": [
+          "Визуальный конус направления и дальности Blink",
+          "Настраиваемые угол, цвета и продолжительность показа",
+          "Учитывает Aegis и доступные предметы Blink",
+          "Опциональный бинд спама Blink по курсору до и после возрождения"
+        ],
+        "install": [
+          "Поместите `aegis_blinkout_cone.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `General → Main → Конус блинка после Aegis → Настройки → Общее`.",
+          "Спам Blink включён по умолчанию; отключите его в настройках, если нужна только визуальная подсказка."
+        ]
+      },
+      "en": {
+        "tagline": "shows a Blink direction cone after an Aegis respawn",
+        "about": "Draws a possible Blink cone from the death location in the direction the hero faced before dying. In addition to the visual guide, it includes optional cursor-directed Blink spam in a short window before and after respawn; this feature can be disabled.",
+        "features": [
+          "Visual cone for Blink direction and range",
+          "Configurable angle, colors, and display duration",
+          "Accounts for Aegis and available Blink items",
+          "Optional cursor-directed Blink spam bind before and after respawn"
+        ],
+        "install": [
+          "Place `aegis_blinkout_cone.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `General → Main → Конус блинка после Aegis → Настройки → Общее`.",
+          "Blink spam is enabled by default; disable it in settings if you only want the visual guide."
+        ]
+      }
+    },
+    {
+      "id": "natures_call_block",
+      "tag": "natures-call-block",
+      "title": "Nature's Call Block",
+      "kind": "lua",
+      "category": "dota",
+      "file": "NaturesCallBlock.lua",
+      "author": "darkroom (Discord: dark.r00m)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/natures_call_block",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=natures-call-block&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/natures_call_block/NaturesCallBlock.lua"
+      },
+      "heroes": [
+        "furion"
+      ],
+      "ru": {
+        "tagline": "помогает блокировать врагов способностью Nature's Call",
+        "about": "Размещает деревья, созданные Nature's Call, рядом с выбранным врагом, чтобы ограничить его перемещение. Доступны автоматический режим и применение по бинду, а также настройки смещения.",
+        "features": [
+          "Размещение деревьев рядом с выбранной целью",
+          "Автоматический режим или активация по бинду",
+          "Настройка смещения точки блокировки"
+        ],
+        "install": [
+          "Поместите `NaturesCallBlock.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Heroes → Hero List → Nature's Prophet → Nature Call Block`."
+        ]
+      },
+      "en": {
+        "tagline": "helps block enemies with Nature's Call",
+        "about": "Places trees created by Nature's Call near a selected enemy to restrict their movement. Choose automatic activation or a keybind and configure the placement offset.",
+        "features": [
+          "Places trees near a selected target",
+          "Automatic mode or keybind activation",
+          "Configurable block position offset"
+        ],
+        "install": [
+          "Place `NaturesCallBlock.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `Heroes → Hero List → Nature's Prophet → Nature Call Block`."
+        ]
+      }
+    },
+    {
+      "id": "remote_auto_search",
+      "tag": "remote-auto-search",
+      "title": "Remote Auto Search",
+      "kind": "lua",
+      "category": "dota",
+      "file": "remote.lua",
+      "author": "CODEX (Discord: _codex_7)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/remote_auto_search",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=remote-auto-search&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/remote_auto_search/remote.lua"
+      },
+      "ru": {
+        "tagline": "запускает поиск матча удалённой командой через ntfy.sh",
+        "about": "Позволяет удалённо запускать очередь поиска матча через сообщения в ntfy.sh и настраивать режим, регион и тип игры. Также содержит запись параметров поиска, автоочередь после матча и необязательную интеграцию с локальным Key Emulator. Любой, кто узнает имя ntfy-топика, сможет отправить команду запуска очереди.",
+        "features": [
+          "Удалённый запуск поиска через ntfy-команды",
+          "Выбор режимов игры, регионов, рейтингового типа и роли",
+          "Необязательный автоматический поиск после окончания игры",
+          "Встроенные запись параметров поиска и локальный Key Emulator"
+        ],
+        "install": [
+          "Поместите `remote.lua` в `umbrella\\scripts` и перезагрузите Lua-скрипты.",
+          "Настройте режимы и регионы в `Miscellaneous → Other → Message Recorder → Main → Auto Search Game`.",
+          "Для удалённого запуска задайте уникальный приватный топик в `Ntfy Remote Queue`; топик является секретом — не публикуйте и не переиспользуйте его.",
+          "Сообщение `start_queue` в топике запускает поиск матча. Отключите `Enable remote queue`, если удалённые команды не нужны.",
+          "Автоочередь после матча включена по умолчанию; отключите её, если не хотите автоматически искать следующую игру."
+        ]
+      },
+      "en": {
+        "tagline": "starts matchmaking from a remote ntfy.sh command",
+        "about": "Lets you remotely start matchmaking through ntfy.sh messages and configure game mode, region, and match type. It also includes queue recording, auto-queue after a match, and optional integration with a local Key Emulator. Anyone who learns the ntfy topic name can send a queue-start command.",
+        "features": [
+          "Remote matchmaking start through ntfy commands",
+          "Select game modes, regions, ranked type, and role",
+          "Optional auto-queue after a match ends",
+          "Built-in search recording and local Key Emulator"
+        ],
+        "install": [
+          "Place `remote.lua` in `umbrella\\scripts` and reload Lua scripts.",
+          "Configure modes and regions under `Miscellaneous → Other → Message Recorder → Main → Auto Search Game`.",
+          "For remote start, set a unique private topic under `Ntfy Remote Queue`; treat the topic as a secret and do not publish or reuse it.",
+          "Sending `start_queue` to the topic starts matchmaking. Disable `Enable remote queue` if you do not need remote commands.",
+          "Auto-queue after a match is enabled by default; disable it if you do not want another search to start automatically."
+        ]
+      }
+    },
+    {
+      "id": "opendota_stats_tracker",
+      "tag": "opendota-stats-tracker",
+      "title": "OpenDota Stats Tracker",
+      "kind": "lua",
+      "category": "dota",
+      "file": "dotaplus.lua",
+      "author": "64qt (Discord: 32tq)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/opendota_stats_tracker",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=opendota-stats-tracker&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/opendota_stats_tracker/dotaplus.lua"
+      },
+      "ru": {
+        "tagline": "строит статистику игры по последним матчам и данным OpenDota",
+        "about": "Загружает историю матчей и временные ряды показателей героя через OpenDota API, сохраняет данные локально в папке scripts и показывает сравнение с ориентиром в HUD. API-ключ не требуется; кэш обновляется периодически.",
+        "features": [
+          "История матчей и анализ статистики героя",
+          "Сравнение K/D/A, крипов, золота и опыта по времени игры",
+          "Локальный кэш с периодическим обновлением",
+          "Настраиваемые панель, показатели и отладочные данные"
+        ],
+        "install": [
+          "Поместите `dotaplus.lua` в `umbrella\\scripts`.",
+          "Разрешите Umbrella создавать и обновлять локальные файлы кэша в папке `scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Info Screen → Main → Tracker → Main → Settings`."
+        ]
+      },
+      "en": {
+        "tagline": "builds performance statistics from recent matches and OpenDota",
+        "about": "Fetches match history and time-series hero metrics from the OpenDota API, stores data locally in the scripts folder, and displays comparisons in a HUD. No API key is required; the cache is refreshed periodically.",
+        "features": [
+          "Match history and hero-stat analysis",
+          "Compare K/D/A, last hits, gold, and experience over game time",
+          "Local cache with periodic refresh",
+          "Configurable panel, metrics, and debug data"
+        ],
+        "install": [
+          "Place `dotaplus.lua` in `umbrella\\scripts`.",
+          "Allow Umbrella to create and update local cache files in the `scripts` folder.",
+          "Reload Lua scripts.",
+          "Open `Info Screen → Main → Tracker → Main → Settings`."
+        ]
+      }
+    },
+    {
+      "id": "dark_carnival_suggest_heroes",
+      "tag": "dark-carnival-suggest-heroes",
+      "title": "Dark Carnival Suggest Heroes",
+      "kind": "lua",
+      "category": "dota",
+      "file": "dark.lua",
+      "author": "64qt (Discord: 32tq)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/dark_carnival_suggest_heroes",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=dark-carnival-suggest-heroes&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dark_carnival_suggest_heroes/dark.lua"
+      },
+      "ru": {
+        "tagline": "подсказывает героев для получения жетонов Dark Carnival",
+        "about": "Сопоставляет требуемые жетоны с героями, которые могут их дать, и показывает рекомендации во время выбора героя. Можно включить подсказки и настроить глубину планирования.",
+        "features": [
+          "Рекомендации героев для нужных жетонов",
+          "Настраиваемая глубина планирования по ветке",
+          "Обновление и отображение подсказок в фазе выбора"
+        ],
+        "install": [
+          "Поместите `dark.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `General → Main → Dark Carnival → Main → Настройки`."
+        ]
+      },
+      "en": {
+        "tagline": "suggests heroes that grant the Dark Carnival tokens you need",
+        "about": "Matches required tokens to heroes that can grant them and displays recommendations during hero selection. Enable suggestions and configure how far ahead to plan along the branch.",
+        "features": [
+          "Hero recommendations for needed tokens",
+          "Configurable planning depth along the branch",
+          "Refreshable suggestions during hero selection"
+        ],
+        "install": [
+          "Place `dark.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `General → Main → Dark Carnival → Main → Настройки`."
+        ]
+      }
+    },
+    {
+      "id": "meepo_auto_escape",
+      "tag": "meepo-auto-escape",
+      "title": "Meepo Auto Escape",
+      "kind": "lua",
+      "category": "dota",
+      "file": "meepo.lua",
+      "author": "Author not specified",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/meepo_auto_escape",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=meepo-auto-escape&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/meepo_auto_escape/meepo.lua"
+      },
+      "heroes": [
+        "meepo"
+      ],
+      "ru": {
+        "tagline": "автоматически отводит Meepo с низким здоровьем в безопасное место",
+        "about": "Отправляет раненых Meepo к фонтану с помощью Poof на союзного Meepo или свитка телепортации. Поддерживает оценку опасности по полученному урону и автоматический возврат в бой через Poof.",
+        "features": [
+          "Побег по порогу здоровья или оценке недавнего урона",
+          "Спасение через Poof или Town Portal Scroll",
+          "Автоматический возврат вылечившегося Meepo через Poof",
+          "Опция блокировки управления отступающими Meepo"
+        ],
+        "install": [
+          "Поместите `meepo.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Heroes → Hero List → Meepo → Meepo → Saver`."
+        ]
+      },
+      "en": {
+        "tagline": "automatically sends low-health Meepos to safety",
+        "about": "Sends injured Meepos to the fountain using Poof to an allied Meepo or a Town Portal Scroll. It can estimate danger from recent damage and automatically return recovered Meepos to the fight with Poof.",
+        "features": [
+          "Escape based on an HP threshold or recent damage",
+          "Save using Poof or a Town Portal Scroll",
+          "Automatically Poof recovered Meepos back to the fight",
+          "Option to prevent manual orders from interrupting retreating Meepos"
+        ],
+        "install": [
+          "Place `meepo.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `Heroes → Hero List → Meepo → Meepo → Saver`."
+        ]
+      }
+    },
+    {
+      "id": "incoming_damage_hud",
+      "tag": "incoming-damage-hud",
+      "title": "Incoming Damage HUD",
+      "kind": "lua",
+      "category": "dota",
+      "file": "incoming_damage_hud.lua",
+      "author": "kotzzinski (Discord: kotzzinski)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/incoming_damage_hud",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=incoming-damage-hud&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/incoming_damage_hud/incoming_damage_hud.lua"
+      },
+      "ru": {
+        "tagline": "оценивает потенциальный урон врагов по вашему герою",
+        "about": "Показывает ожидаемый урон вражеских способностей и атак с учётом ряда модификаторов, накоплений и пассивных эффектов. Доступны фильтры, предупреждение о летальном уроне и настройка панели. Учет предметов пока не реализован.",
+        "features": [
+          "Расчёт урона вражеских способностей и обычных атак",
+          "Опции учёта критов, пассивных эффектов и периодического урона",
+          "Предупреждение о потенциально летальном уроне",
+          "Настраиваемая панель, цвета, масштаб и радиус поиска",
+          "Инструменты отладки и выгрузка разбивки урона"
+        ],
+        "install": [
+          "Поместите `incoming_damage_hud.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Scripts → Main → Incoming DMG → Incoming DMG`."
+        ]
+      },
+      "en": {
+        "tagline": "estimates potential enemy damage against your hero",
+        "about": "Displays estimated damage from enemy abilities and attacks, accounting for several modifiers, stacks, and passive effects. Configure filters, lethal-damage alerts, and the panel. Item damage is not yet implemented.",
+        "features": [
+          "Estimates enemy ability and attack damage",
+          "Options for critical strikes, passive effects, and damage over time",
+          "Potential lethal-damage alert",
+          "Configurable panel, colors, scale, and search radius",
+          "Debug tools and detailed damage breakdown"
+        ],
+        "install": [
+          "Place `incoming_damage_hud.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `Scripts → Main → Incoming DMG → Incoming DMG`."
+        ]
+      }
+    },
+    {
+      "id": "tinker_turret_double_tap",
+      "tag": "tinker-turret-double-tap",
+      "title": "Tinker Turret Double Tap",
+      "kind": "lua",
+      "category": "dota",
+      "file": "tinkerturret.lua",
+      "author": "CODEX (Discord: _codex_7)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/tinker_turret_double_tap",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=tinker-turret-double-tap&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/tinker_turret_double_tap/tinkerturret.lua"
+      },
+      "heroes": [
+        "tinker"
+      ],
+      "ru": {
+        "tagline": "кастит Deploy Turrets по двойному нажатию E",
+        "about": "Для Tinker перехватывает двойное нажатие E и применяет Deploy Turrets в точку по направлению курсора рядом с героем. Меню у скрипта нет.",
+        "features": [
+          "Двойное нажатие E для применения Deploy Turrets рядом с героем",
+          "Краткий визуальный индикатор направления курсора",
+          "Проверяет готовность способности и наличие маны"
+        ],
+        "install": [
+          "Поместите `tinkerturret.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Меню отсутствует. Дважды нажмите E за короткий интервал; учитывайте конфликты с привязкой E."
+        ]
+      },
+      "en": {
+        "tagline": "casts Deploy Turrets on a double press of E",
+        "about": "For Tinker, intercepts a double press of E and casts Deploy Turrets at a point near the hero in the cursor direction. The script has no menu.",
+        "features": [
+          "Double-tap E to cast Deploy Turrets near the hero",
+          "Brief visual indicator for cursor direction",
+          "Checks ability readiness and mana"
+        ],
+        "install": [
+          "Place `tinkerturret.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "There is no menu. Double-press E quickly; be aware of conflicts with your E keybind."
+        ]
+      }
+    },
+    {
+      "id": "ntfy_match_notifier",
+      "tag": "ntfy-match-notifier",
+      "title": "Ntfy Match Notifier",
+      "kind": "lua",
+      "category": "dota",
+      "file": "notify.lua",
+      "author": "CODEX (Discord: _codex_7)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/ntfy_match_notifier",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=ntfy-match-notifier&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/ntfy_match_notifier/notify.lua"
+      },
+      "ru": {
+        "tagline": "отправляет push-уведомление при принятии матча",
+        "about": "При входе Dota 2 в фазу выбора героя отправляет уведомление через ntfy.sh на подписанный телефон или другое устройство. Имя топика хранится в настройках скрипта.",
+        "features": [
+          "Уведомляет о переходе в фазу выбора героя",
+          "Тестовое уведомление для проверки топика",
+          "Переключатель уведомлений и очистка топика"
+        ],
+        "install": [
+          "Установите приложение ntfy и подпишитесь на уникальный приватный топик.",
+          "Поместите `notify.lua` в `umbrella\\scripts` и перезагрузите Lua-скрипты.",
+          "Откройте `UCZone → Utilities → Ntfy → Match Notifier → On Accept/Resolve` и укажите имя топика.",
+          "Считайте имя топика секретом: любой, кто его знает, может отправить туда уведомление."
+        ]
+      },
+      "en": {
+        "tagline": "sends a push notification when a match is accepted",
+        "about": "When Dota 2 enters hero selection, sends a notification through ntfy.sh to a subscribed phone or other device. The topic name is stored in the script settings.",
+        "features": [
+          "Notifies you when hero selection begins",
+          "Test notification to verify the topic",
+          "Notification toggle and topic clearing"
+        ],
+        "install": [
+          "Install the ntfy app and subscribe to a unique private topic.",
+          "Place `notify.lua` in `umbrella\\scripts` and reload Lua scripts.",
+          "Open `UCZone → Utilities → Ntfy → Match Notifier → On Accept/Resolve` and enter the topic name.",
+          "Treat the topic name as a secret: anyone who knows it can send notifications to it."
+        ]
+      }
+    },
+    {
+      "id": "auto_summons_kiting",
+      "tag": "auto-summons-kiting",
+      "title": "Auto Summons",
+      "kind": "lua",
+      "category": "dota",
+      "file": "AutoSummons.lua",
+      "author": "kotzzinski (Discord: kotzzinski)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/auto_summons_kiting",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=auto-summons-kiting&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/auto_summons_kiting/AutoSummons.lua"
+      },
+      "heroes": [
+        "beastmaster",
+        "invoker"
+      ],
+      "ru": {
+        "tagline": "уводит кабанов и фордж-спиритов от атакующих врагов",
+        "about": "Отслеживает вражеские атаки по вашим кабанам Beastmaster и Forge Spirit Invoker и при необходимости приказывает призыву отступить. Учитывает снаряды атак и может автоматически выключить кайтинг через восемь минут игры.",
+        "features": [
+          "Поддерживает кабанов Beastmaster и Forge Spirit Invoker",
+          "Настраиваемая проверка атаки врага и цели снаряда",
+          "Режим hit-and-run и резервная эвристика для мили-атак",
+          "Сохраняет и возвращает значение автоатаки призывов",
+          "Автоматически выключается через восемь минут"
+        ],
+        "install": [
+          "Поместите `AutoSummons.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Scripts → Other → Auto Summons → Main → Main`."
+        ]
+      },
+      "en": {
+        "tagline": "kites Beastmaster boars and Invoker Forge Spirits away from attackers",
+        "about": "Tracks enemy attacks against your Beastmaster boars and Invoker Forge Spirits and orders threatened summons to retreat. It considers attack projectiles and can automatically disable kiting after eight minutes of game time.",
+        "features": [
+          "Supports Beastmaster boars and Invoker Forge Spirits",
+          "Configurable enemy attack and projectile-target checks",
+          "Hit-and-run mode and melee fallback heuristic",
+          "Saves and restores the summoned-unit auto-attack setting",
+          "Automatically disables itself after eight minutes"
+        ],
+        "install": [
+          "Place `AutoSummons.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `Scripts → Other → Auto Summons → Main → Main`."
+        ]
+      }
+    },
+    {
+      "id": "dazzle_support",
+      "tag": "dazzle-support",
+      "title": "Dazzle Auto Support",
+      "kind": "lua",
+      "category": "dota",
+      "file": "dazzle_support_rus.lua",
+      "author": "Hasan Doğan (Discord: hasandogan1)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/dazzle_support",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=dazzle-support&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dazzle_support/dazzle_support_rus.lua"
+      },
+      "heroes": [
+        "dazzle"
+      ],
+      "ru": {
+        "tagline": "автоматически применяет защитные способности и предметы Dazzle",
+        "about": "Помогает спасать союзников с помощью Shallow Grave, Shadow Wave и защитных предметов. Настраиваются пороги здоровья и условия применения. Автоматическое применение большинства функций включено по умолчанию.",
+        "features": [
+          "Автоматический Shallow Grave на критически раненого союзника",
+          "Автоматическое лечение Shadow Wave",
+          "Поддержка Lotus Orb, Glimmer Cape, Eul's, Pipe, Urn/Vessel и Mekansm/Greaves",
+          "Порог здоровья, режим боя и визуализация радиусов"
+        ],
+        "install": [
+          "Поместите `dazzle_support_rus.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Heroes → Hero List → Dazzle → Dazzle Support RUS`.",
+          "Проверьте переключатели автоматического применения перед игрой."
+        ]
+      },
+      "en": {
+        "tagline": "automatically casts Dazzle's defensive spells and items",
+        "about": "Helps save allies using Shallow Grave, Shadow Wave, and defensive items. Configure health thresholds and casting conditions. Most automatic features are enabled by default.",
+        "features": [
+          "Automatically casts Shallow Grave on a critically injured ally",
+          "Automatic Shadow Wave healing",
+          "Supports Lotus Orb, Glimmer Cape, Eul's, Pipe, Urn/Vessel, and Mekansm/Greaves",
+          "Health thresholds, combat conditions, and range visuals"
+        ],
+        "install": [
+          "Place `dazzle_support_rus.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `Heroes → Hero List → Dazzle → Dazzle Support RUS`.",
+          "Review the automatic-cast toggles before playing."
+        ]
+      }
+    },
+    {
+      "id": "kotl_illuminate_kill_release",
+      "tag": "kotl-illuminate-kill-release",
+      "title": "KOTL Illuminate Kill Release",
+      "kind": "lua",
+      "category": "dota",
+      "file": "kotl_illuminate.lua",
+      "author": "25.12.25 (Discord: barrenrose)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/kotl_illuminate_kill_release",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=kotl-illuminate-kill-release&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/kotl_illuminate_kill_release/kotl_illuminate.lua"
+      },
+      "heroes": [
+        "keeper_of_the_light"
+      ],
+      "ru": {
+        "tagline": "отпускает Illuminate, когда рассчитанного урона достаточно для убийства",
+        "about": "Оценивает здоровье врага и урон заряжаемого Illuminate, затем автоматически отпускает способность при достижении летального урона. Может учитывать Dagon, Radiant Bind, усиление магии и эффекты на цели.",
+        "features": [
+          "Поддерживает обычный Illuminate и Spirit Form",
+          "Учитывает заданный запас урона и минимальное время канала",
+          "Опциональный учёт Dagon, Ethereal Blade, Veil, Vessel и Radiant Bind",
+          "Показывает расчёт урона и здоровья над целью"
+        ],
+        "install": [
+          "Поместите `kotl_illuminate.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `General → Utility → kotl_illuminate → KOTL → Auto Illuminate`."
+        ]
+      },
+      "en": {
+        "tagline": "releases Illuminate when its estimated damage can kill",
+        "about": "Estimates enemy health and the damage of a charging Illuminate, then automatically releases the spell when the calculated damage is lethal. It can account for Dagon, Radiant Bind, spell amplification, and target effects.",
+        "features": [
+          "Supports regular Illuminate and Spirit Form",
+          "Configurable damage buffer and minimum channel time",
+          "Optional Dagon, Ethereal Blade, Veil, Vessel, and Radiant Bind calculations",
+          "Displays estimated damage and target health"
+        ],
+        "install": [
+          "Place `kotl_illuminate.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `General → Utility → kotl_illuminate → KOTL → Auto Illuminate`."
+        ]
+      }
+    },
+    {
+      "id": "hero_speed_overlay",
+      "tag": "hero-speed-overlay",
+      "title": "Hero Speed Overlay",
+      "kind": "lua",
+      "category": "dota",
+      "file": "speed.lua",
+      "author": "xv ⛨ (Discord: requiemcrown)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/hero_speed_overlay",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=hero-speed-overlay&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/hero_speed_overlay/speed.lua"
+      },
+      "ru": {
+        "tagline": "показывает разницу скорости передвижения героев",
+        "about": "Отображает над видимыми вражескими героями их скорость и разницу относительно вашего героя. Цвет помогает быстро оценить, кто быстрее или движется с сопоставимой скоростью.",
+        "features": [
+          "Сравнение скорости вашего героя со скоростью врагов",
+          "Цветовая индикация быстрее / медленнее / примерно одинаковая скорость",
+          "Настраиваемые размер, смещение, цвета и яркость"
+        ],
+        "install": [
+          "Поместите `speed.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Info Screen → Main → Heroes Overlay → Main → Speed Check`."
+        ]
+      },
+      "en": {
+        "tagline": "shows the movement-speed difference between heroes",
+        "about": "Displays visible enemy heroes' movement speed and the difference relative to your hero. Color coding helps show who is faster or moving at a similar speed.",
+        "features": [
+          "Compare your hero's movement speed with enemies",
+          "Color-coded faster / slower / similar speed",
+          "Configurable size, offset, colors, and glow"
+        ],
+        "install": [
+          "Place `speed.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `Info Screen → Main → Heroes Overlay → Main → Speed Check`."
+        ]
+      }
+    },
+    {
+      "id": "ai_chat_responder",
+      "tag": "ai-chat-responder",
+      "title": "AI Chat Responder",
+      "kind": "lua",
+      "category": "dota",
+      "file": "ai_chat_responder.lua",
+      "author": "Rata (Discord: kicapmasin123)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/ai_chat_responder",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=ai-chat-responder&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/ai_chat_responder/ai_chat_responder.lua"
+      },
+      "ru": {
+        "tagline": "отвечает на сообщения в игровом чате через выбранную AI-модель",
+        "about": "Отправляет сообщения из выбранного канала на указанный OpenAI-совместимый API и публикует сгенерированный ответ в игровом чате. Функция выключена по умолчанию. Внешнему сервису передаются сообщения чата и контекст диалога; API-ключ вводится пользователем в настройках.",
+        "features": [
+          "Настраиваемый API endpoint, модель, ключ и системная инструкция",
+          "Выбор каналов чата, истории контекста и задержки ответов",
+          "Отключён по умолчанию",
+          "Поддержка пользовательской системной инструкции в локальном файле"
+        ],
+        "install": [
+          "Поместите `ai_chat_responder.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты и откройте `Scripts → User Scripts → AI Chat Responder → Main → AI Responder`.",
+          "Укажите совместимый API endpoint, модель и личный API-ключ; храните ключ в настройках только на доверенном компьютере.",
+          "Перед включением учтите, что выбранный API-провайдер получает сообщения чата и контекст, нужные для генерации ответа."
+        ]
+      },
+      "en": {
+        "tagline": "replies to in-game chat using a selected AI model",
+        "about": "Sends messages from selected chat channels to a configured OpenAI-compatible API and posts the generated response in in-game chat. The feature is disabled by default. The external service receives chat messages and conversation context; the user supplies the API key in settings.",
+        "features": [
+          "Configurable API endpoint, model, key, and system prompt",
+          "Choose chat channels, context history, and reply cooldown",
+          "Disabled by default",
+          "Supports a custom system prompt stored in a local file"
+        ],
+        "install": [
+          "Place `ai_chat_responder.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts and open `Scripts → User Scripts → AI Chat Responder → Main → AI Responder`.",
+          "Enter a compatible API endpoint, model, and personal API key; keep the key only on a trusted computer.",
+          "Before enabling, note that the selected API provider receives chat messages and context used to generate replies."
+        ]
+      }
+    },
+    {
+      "id": "windranger_combo",
+      "tag": "windranger-combo",
+      "title": "Windranger Combo",
+      "kind": "lua",
+      "category": "dota",
+      "file": "Windranger.lua",
+      "author": "Ariok^^ (Discord: ariok12)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/windranger_combo",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=windranger-combo&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_combo/Windranger.lua"
+      },
+      "heroes": [
+        "windranger"
+      ],
+      "ru": {
+        "tagline": "комбо и визуальные помощники для Windranger",
+        "about": "Скрипт автоматизирует комбо Windranger по бинду и предлагает настройки способностей, поиска цели, Shackleshot и визуальных индикаторов.",
+        "features": [
+          "Бинд комбо и выбор способностей для применения",
+          "Настройка поиска цели около курсора",
+          "Параметры Shackleshot и проверка Linken's Sphere",
+          "HUD состояния, индикатор цели и конус Shackleshot"
+        ],
+        "install": [
+          "Поместите `Windranger.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Heroes → Hero List → Windranger → Windranger Combo`."
+        ]
+      },
+      "en": {
+        "tagline": "combo and visual helpers for Windranger",
+        "about": "Automates a Windranger combo on a keybind and provides options for abilities, target search, Shackleshot, and visual indicators.",
+        "features": [
+          "Combo keybind and selectable abilities",
+          "Configure target search around the cursor",
+          "Shackleshot options and Linken's Sphere check",
+          "Combo HUD, target indicator, and Shackleshot cone"
+        ],
+        "install": [
+          "Place `Windranger.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `Heroes → Hero List → Windranger → Windranger Combo`."
+        ]
+      }
+    },
+    {
+      "id": "lone_druid_bear_ai_deluxe",
+      "tag": "lone-druid-bear-ai-deluxe",
+      "title": "Lone Druid Bear AI Deluxe",
+      "kind": "lua",
+      "category": "dota",
+      "file": "LoneDruidBearAIDeluxe.lua",
+      "author": "Правитель ДНР (Discord: boggog0)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/lone_druid_bear_ai_deluxe",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=lone-druid-bear-ai-deluxe&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/lone_druid_bear_ai_deluxe/LoneDruidBearAIDeluxe.lua"
+      },
+      "heroes": [
+        "lone_druid"
+      ],
+      "ru": {
+        "tagline": "расширенное управление Spirit Bear для Lone Druid",
+        "about": "Предоставляет режимы фарма, пуша и стаков, управление выживанием и предметами медведя, а также горячие клавиши и визуальные настройки. Большинство режимов включаются отдельно.",
+        "features": [
+          "Режимы фарма леса, пуша линии и создания стаков",
+          "Настройки логики с Aghanim's Scepter",
+          "Выживание медведя и управление предметами",
+          "Настраиваемые хоткеи, визуал и язык меню"
+        ],
+        "install": [
+          "Поместите `LoneDruidBearAIDeluxe.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Heroes → Hero List → Lone Druid → Bear AI Deluxe`."
+        ]
+      },
+      "en": {
+        "tagline": "advanced Spirit Bear control for Lone Druid",
+        "about": "Provides farming, pushing, and stacking modes, bear survival and item management, hotkeys, and visual options. Most modes are enabled separately.",
+        "features": [
+          "Forest farming, lane pushing, and camp stacking modes",
+          "Aghanim's Scepter logic options",
+          "Bear survival and item management",
+          "Configurable hotkeys, visuals, and menu language"
+        ],
+        "install": [
+          "Place `LoneDruidBearAIDeluxe.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `Heroes → Hero List → Lone Druid → Bear AI Deluxe`."
+        ]
+      }
+    },
+    {
+      "id": "ultrashizfrenia_laugh",
+      "tag": "ultrashizfrenia-laugh",
+      "title": "ULTRASHIZOFRENIA Auto Laugh",
+      "kind": "lua",
+      "category": "dota",
+      "file": "ultrashizfrenia_laugh.lua",
+      "author": "КРОВЬ ОТВАГА РОДИНА И ЧЕСТЬ (Discord: 4vk)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/ultrashizfrenia_laugh",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=ultrashizfrenia-laugh&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/ultrashizfrenia_laugh/ultrashizfrenia_laugh.lua"
+      },
+      "ru": {
+        "tagline": "периодически отправляет команду игрового смеха",
+        "about": "Автоматически выполняет `/laugh` примерно раз в 16 секунд, пока скрипт включён и ваш герой жив. Функция включена по умолчанию.",
+        "features": [
+          "Автоматическая игровая команда `/laugh`",
+          "Переключатель включения в меню"
+        ],
+        "install": [
+          "Поместите `ultrashizfrenia_laugh.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Miscellaneous → In Game → ULTRASHIZOFRENIA laugh` и отключите функцию, если не хотите автоматический смех."
+        ]
+      },
+      "en": {
+        "tagline": "periodically sends the in-game laugh command",
+        "about": "Automatically executes `/laugh` about every 16 seconds while enabled and your hero is alive. The feature is enabled by default.",
+        "features": [
+          "Automatic in-game `/laugh` command",
+          "Enable toggle in the menu"
+        ],
+        "install": [
+          "Place `ultrashizfrenia_laugh.lua` in `umbrella\\scripts`.",
+          "Reload Lua scripts.",
+          "Open `Miscellaneous → In Game → ULTRASHIZOFRENIA laugh` and disable the feature if you do not want automatic laughter."
+        ]
+      }
+    },
+    {
+      "id": "ultrashizfrenia_high_five",
+      "tag": "ultrashizfrenia-high-five",
+      "title": "ULTRASHIZOFRENIA Auto High Five",
+      "kind": "lua",
+      "category": "dota",
+      "file": "ultrashizfrenia_high_five.lua",
+      "author": "КРОВЬ ОТВАГА РОДИНА И ЧЕСТЬ (Discord: 4vk)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/ultrashizfrenia_high_five",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=ultrashizfrenia-high-five&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/ultrashizfrenia_high_five/ultrashizfrenia_high_five.lua"
+      },
+      "ru": {
+        "tagline": "автоматически отвечает на запрос союзника дать пять",
+        "about": "Если союзный герой в радиусе запросил high five, скрипт применяет способность Plus High Five. Переключатель выключен по умолчанию; скрипт использует XHelpers.",
+        "features": [
+          "Обнаруживает запрос high five поблизости",
+          "Автоматически применяет Plus High Five",
+          "Имеет переключатель включения"
+        ],
+        "install": [
+          "Поместите `ultrashizfrenia_high_five.lua` в `umbrella\\scripts`.",
+          "Убедитесь, что доступны требуемые XHelpers.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Miscellaneous → In Game → ULTRASHIZOFRENIA Auto High Five`."
+        ]
+      },
+      "en": {
+        "tagline": "automatically responds to a nearby ally's high-five request",
+        "about": "When an allied hero nearby requests a high five, the script casts Plus High Five. The enable toggle is off by default; the script uses XHelpers.",
+        "features": [
+          "Detects nearby high-five requests",
+          "Automatically casts Plus High Five",
+          "Includes an enable toggle"
+        ],
+        "install": [
+          "Place `ultrashizfrenia_high_five.lua` in `umbrella\\scripts`.",
+          "Make sure the required XHelpers are available.",
+          "Reload Lua scripts.",
+          "Open `Miscellaneous → In Game → ULTRASHIZOFRENIA Auto High Five`."
+        ]
+      }
+    },
+    {
+      "id": "rubick_last_spell",
+      "tag": "rubick-last-spell",
+      "title": "Rubick Last Spell",
+      "kind": "lua",
+      "category": "dota",
+      "file": "rubick_spells.lua",
+      "heroes": [
+        "rubick"
+      ],
+      "author": "CODEX (Discord: _codex_7)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/rubick_last_spell",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=rubick-last-spell&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/rubick_last_spell/rubick_spells.lua"
+      },
+      "ru": {
+        "tagline": "показывает название последнего использованного заклинания текстом",
+        "about": "Текстовый индикатор последнего использованного заклинания. Помогает, когда стандартное отображение способности пропадает, если враг выходит из поля зрения.",
+        "features": [
+          "Показывает последнее использованное заклинание текстом",
+          "Настраиваются время отображения и внешний вид индикатора",
+          "Можно включить отображение использованных предметов"
+        ],
+        "install": [
+          "Поместите `rubick_spells.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Heroes → Rubick → Last Spell ESP`."
+        ]
+      },
+      "en": {
+        "tagline": "shows the most recently used spell as text",
+        "about": "A text indicator for the most recently used spell. It remains useful when the built-in ability drawing disappears after an enemy leaves vision.",
+        "features": [
+          "Displays the last used spell as text",
+          "Configurable display duration and indicator appearance",
+          "Optionally displays used items"
+        ],
+        "install": [
+          "Place `rubick_spells.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Heroes → Rubick → Last Spell ESP`."
+        ]
+      }
+    },
+    {
+      "id": "invoker_combo_panel",
+      "tag": "invoker-combo-panel",
+      "title": "Invoker Combo Panel",
+      "kind": "lua",
+      "category": "dota",
+      "file": "Invoker_Combo_Panel.lua",
+      "heroes": [
+        "invoker"
+      ],
+      "author": "CHopPY (Discord: choppy8670)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/invoker_combo_panel",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=invoker-combo-panel&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_combo_panel/Invoker_Combo_Panel.lua"
+      },
+      "ru": {
+        "tagline": "настраиваемая панель комбо для Инвокера",
+        "about": "Панель для составления последовательностей способностей и предметов Инвокера. Автор отмечает, что пока не смог добиться надёжного сохранения новых комбо как комбинаций по умолчанию.",
+        "features": [
+          "Добавление способностей и предметов в строку комбо",
+          "Изменение порядка перетаскиванием без пересоздания всей комбинации",
+          "Нажмите на заклинание, чтобы исключить его из комбо",
+          "Сохранение новых комбинаций по умолчанию пока не решено; проверяйте, что настройки сохраняются"
+        ],
+        "install": [
+          "Поместите `Invoker_Combo_Panel.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте настройки в разделе `Heroes → Hero List → Invoker`."
+        ]
+      },
+      "en": {
+        "tagline": "a configurable combo panel for Invoker",
+        "about": "A panel for building Invoker ability and item sequences. The author reports that reliably saving custom combos as defaults is still unresolved.",
+        "features": [
+          "Add abilities and items to the combo sequence",
+          "Reorder entries by dragging and dropping",
+          "Click a spell to exclude it from the combo",
+          "Saving custom combos as defaults is unresolved; verify that settings persist"
+        ],
+        "install": [
+          "Place `Invoker_Combo_Panel.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open the settings under `Heroes → Hero List → Invoker`."
+        ]
+      }
+    },
+    {
+      "id": "invoker_ice_wall_farm",
+      "tag": "invoker-ice-wall-farm",
+      "title": "Invoker Ice Wall Farm",
+      "kind": "lua",
+      "category": "dota",
+      "file": "icewall.lua",
+      "heroes": [
+        "invoker"
+      ],
+      "author": "brbn (Discord: brbnn)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/invoker_ice_wall_farm",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=invoker-ice-wall-farm&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_ice_wall_farm/icewall.lua"
+      },
+      "ru": {
+        "tagline": "индикаторы и автокаст Ice Wall для фарма кемпов",
+        "about": "Показывает точки позиции и разворота, а также линию Ice Wall для фарма среднего и большого кемпов на сторонах Dire и Radiant.",
+        "features": [
+          "Находит ближайшую подходящую точку фарма",
+          "Показывает, где встать и куда повернуться, и отображает линию Ice Wall",
+          "Автоматически применяет Ice Wall при правильной позиции",
+          "Настраиваются длина и дистанция линии, прозрачность, толщина, размер точек и цвет"
+        ],
+        "install": [
+          "Поместите `icewall.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Heroes → Hero List → Invoker → Ice Wall Farm` и включите `Enable` и `Auto Cast Ice Wall`."
+        ]
+      },
+      "en": {
+        "tagline": "Ice Wall indicators and auto-cast for camp farming",
+        "about": "Shows positioning and turn indicators plus the Ice Wall line for farming medium and large camps on the Dire and Radiant sides.",
+        "features": [
+          "Finds the nearest suitable farming position",
+          "Shows where to stand, which way to turn, and the Ice Wall line",
+          "Can cast Ice Wall automatically from the correct position",
+          "Configurable line length, distance, alpha, thickness, dot size, and color"
+        ],
+        "install": [
+          "Place `icewall.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Heroes → Hero List → Invoker → Ice Wall Farm` and enable `Enable` and `Auto Cast Ice Wall`."
+        ]
+      }
+    },
+    {
+      "id": "meepo_block",
+      "tag": "meepo-block",
+      "title": "Meepo Block",
+      "kind": "lua",
+      "category": "dota",
+      "file": "meepo_block.lua",
+      "heroes": [
+        "meepo"
+      ],
+      "author": "cuter as a vampire (Discord: internetenemy)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/meepo_block",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=meepo-block&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/meepo_block/meepo_block.lua"
+      },
+      "ru": {
+        "tagline": "блокирует противника клонами Мипо",
+        "about": "Скрипт для блокирования передвижения противника клонами Мипо с логикой построения блока тремя или четырьмя клонами.",
+        "features": [
+          "Распределяет клонов для блокирования выбранной цели",
+          "Поддерживает варианты блока тремя и четырьмя клонами",
+          "Настройки находятся в `General → Blocker → Meepo Blocker`"
+        ],
+        "install": [
+          "Поместите `meepo_block.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `General → Blocker → Meepo Blocker`."
+        ]
+      },
+      "en": {
+        "tagline": "blocks an enemy with Meepo clones",
+        "about": "A Meepo movement-blocking script with positioning logic for using three or four clones.",
+        "features": [
+          "Positions clones to block a selected target",
+          "Supports three-clone and four-clone blocking patterns",
+          "Settings are under `General → Blocker → Meepo Blocker`"
+        ],
+        "install": [
+          "Place `meepo_block.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `General → Blocker → Meepo Blocker`."
+        ]
+      }
+    },
+    {
+      "id": "pt_strength_low_hp",
+      "tag": "pt-strength-low-hp",
+      "title": "Power Treads Strength on Low HP",
+      "kind": "lua",
+      "category": "dota",
+      "file": "pt_abs.lua",
+      "heroes": [],
+      "author": "dreiki (Discord: dreiki666)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/pt_strength_low_hp",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=pt-strength-low-hp&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/pt_strength_low_hp/pt_abs.lua"
+      },
+      "ru": {
+        "tagline": "переключает Power Treads на силу при низком здоровье",
+        "about": "Переключает Power Treads на силу, когда здоровье опускается ниже заданного порога. Может также реагировать на атаки врагов, а затем возвращать выбранный основной атрибут.",
+        "features": [
+          "Настраиваемый порог здоровья",
+          "Дополнительное переключение на силу при атаках врага",
+          "Возвращает Power Treads на выбранный основной атрибут",
+          "Автор рекомендует вручную выбрать основной атрибут: его автоопределение пока не доработано"
+        ],
+        "install": [
+          "Поместите `pt_abs.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Настройте `Scripts → Combat → PTabs` и вручную выберите основной атрибут."
+        ]
+      },
+      "en": {
+        "tagline": "switches Power Treads to Strength at low health",
+        "about": "Switches Power Treads to Strength below a configured health threshold. It can also react to enemy attacks and then restore the selected primary attribute.",
+        "features": [
+          "Configurable health threshold",
+          "Optional switch to Strength when attacked by enemies",
+          "Restores Power Treads to the selected primary attribute",
+          "The author recommends choosing the primary attribute manually because auto-detection is unfinished"
+        ],
+        "install": [
+          "Place `pt_abs.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Configure `Scripts → Combat → PTabs` and select the primary attribute manually."
+        ]
+      }
+    },
+    {
+      "id": "combine_lock_click",
+      "tag": "combine-lock-click",
+      "title": "Combine Lock Click",
+      "kind": "lua",
+      "category": "dota",
+      "file": "combine_lock_click.lua",
+      "heroes": [],
+      "author": "64qt (Discord: 32tq)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/combine_lock_click",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=combine-lock-click&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/combine_lock_click/combine_lock_click.lua"
+      },
+      "ru": {
+        "tagline": "снимает блокировку объединения предмета по клику",
+        "about": "Небольшой скрипт, который снимает блокировку объединения предмета при нажатии на него.",
+        "features": [
+          "Снимает lock с выбранного предмета по клику",
+          "Настройки находятся в `General → Items → Combine Lock`"
+        ],
+        "install": [
+          "Поместите `combine_lock_click.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `General → Items → Combine Lock`."
+        ]
+      },
+      "en": {
+        "tagline": "unlocks an item on click",
+        "about": "A small script that removes an item combine lock when you click the item.",
+        "features": [
+          "Removes the combine lock from the selected item on click",
+          "Settings are under `General → Items → Combine Lock`"
+        ],
+        "install": [
+          "Place `combine_lock_click.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `General → Items → Combine Lock`."
+        ]
+      }
+    },
+    {
+      "id": "invoker_ice_wall_cursor",
+      "tag": "invoker-ice-wall-cursor",
+      "title": "Invoker Ice Wall on Cursor",
+      "kind": "lua",
+      "category": "dota",
+      "file": "ice_wall_on_cursor.lua",
+      "heroes": [
+        "invoker"
+      ],
+      "author": "64qt (Discord: 32tq)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/invoker_ice_wall_cursor",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=invoker-ice-wall-cursor&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_ice_wall_cursor/ice_wall_on_cursor.lua"
+      },
+      "ru": {
+        "tagline": "направляет Ice Wall в точку курсора",
+        "about": "Показывает предполагаемое положение стены при удержании бинда и применяет Ice Wall в сторону курсора. Скрипт сам не создаёт способность.",
+        "features": [
+          "Показывает положение Ice Wall при удержании бинда",
+          "Применяет стену в сторону курсора",
+          "Для автосоздания способности назначьте Ice Wall на тот же бинд в настройках Инвокера"
+        ],
+        "install": [
+          "Поместите `ice_wall_on_cursor.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Настройте `Heroes → Hero List → Invoker → Main Settings → Cast On Cursor`; при необходимости назначьте Ice Wall на тот же бинд."
+        ]
+      },
+      "en": {
+        "tagline": "aims Invoker Ice Wall at the cursor",
+        "about": "Previews the wall placement while the bind is held and casts Ice Wall toward the cursor. The script does not create the ability itself.",
+        "features": [
+          "Previews Ice Wall placement while holding the bind",
+          "Casts the wall toward the cursor",
+          "To create the ability automatically, bind Ice Wall to the same key in Invoker settings"
+        ],
+        "install": [
+          "Place `ice_wall_on_cursor.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Configure `Heroes → Hero List → Invoker → Main Settings → Cast On Cursor`; bind Ice Wall to the same key if needed."
+        ]
+      }
+    },
+    {
+      "id": "chaos_knight_crit_guard",
+      "tag": "chaos-knight-crit-guard",
+      "title": "Chaos Knight Crit Guard (Experimental)",
+      "kind": "lua",
+      "category": "dota",
+      "file": "chaos_knight_crit.lua",
+      "heroes": [
+        "chaos_knight"
+      ],
+      "author": "kryzz (Discord: killedbykryzz)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/chaos_knight_crit_guard",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=chaos-knight-crit-guard&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/chaos_knight_crit_guard/chaos_knight_crit.lua"
+      },
+      "ru": {
+        "tagline": "экспериментальная отмена атак без критического удара",
+        "about": "Незавершённый экспериментальный скрипт проверяет наличие крита и отменяет атаку, если крит не обнаружен. Автор предупреждает, что повторная атака не реализована и скрипт не готов к использованию.",
+        "features": [
+          "Проверяет наличие критического эффекта перед атакой",
+          "Может отменить обычную атаку, если крит не обнаружен",
+          "Повторная атака не реализована; скрипт не готов к обычному использованию",
+          "Возможны пропущенные атаки и другое нежелательное поведение"
+        ],
+        "install": [
+          "Поместите `chaos_knight_crit.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Скрипт экспериментальный и не рекомендуется для обычной игры."
+        ]
+      },
+      "en": {
+        "tagline": "experimental cancellation of attacks without a critical hit",
+        "about": "An unfinished experimental script that checks for a critical hit and cancels an attack when none is detected. The author says retrying the attack is not implemented and the script is not ready for use.",
+        "features": [
+          "Checks for a critical hit before an attack",
+          "May cancel a normal attack when no critical hit is detected",
+          "Does not retry the attack; not ready for regular use",
+          "Missed attacks and other unwanted behavior are possible"
+        ],
+        "install": [
+          "Place `chaos_knight_crit.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "This is experimental and is not recommended for normal play."
+        ]
+      }
+    },
+    {
+      "id": "witch_doctor_ward_controller",
+      "tag": "witch-doctor-ward-controller",
+      "title": "Witch Doctor Ward Controller",
+      "kind": "lua",
+      "category": "dota",
+      "file": "witch_doctor_ward_controller.lua",
+      "heroes": [
+        "witch_doctor"
+      ],
+      "author": "Tommy (Discord: tommytheitguy)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/witch_doctor_ward_controller",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=witch-doctor-ward-controller&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/witch_doctor_ward_controller/witch_doctor_ward_controller.lua"
+      },
+      "ru": {
+        "tagline": "автоматически направляет Death Ward на героя с низким здоровьем",
+        "about": "Модифицированный контроллер вардов, адаптированный для Death Ward Witch Doctor, включая обычную и усиленную с помощью shard версии.",
+        "features": [
+          "При включении направляет Death Ward атаковать героя противника с наименьшим здоровьем в радиусе",
+          "Поддерживает обычный Death Ward и версию от shard"
+        ],
+        "install": [
+          "Поместите `witch_doctor_ward_controller.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Настройте `Heroes → Hero List → Witch Doctor → Main Settings → Ward Settings`."
+        ]
+      },
+      "en": {
+        "tagline": "automatically targets the lowest-health hero with Death Ward",
+        "about": "A modified ward controller adapted for Witch Doctor Death Ward, including the regular and shard versions.",
+        "features": [
+          "When enabled, orders Death Ward to attack the lowest-health enemy hero in range",
+          "Supports both regular Death Ward and the shard version"
+        ],
+        "install": [
+          "Place `witch_doctor_ward_controller.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Configure `Heroes → Hero List → Witch Doctor → Main Settings → Ward Settings`."
+        ]
+      }
+    },
+    {
+      "id": "sense_metrics",
+      "tag": "sense-metrics",
+      "title": "Sense Metrics",
+      "kind": "lua",
+      "category": "dota",
+      "file": "Neverlose.lua",
+      "heroes": [],
+      "author": "Mor'aithSolVey're (Discord: sea1ark)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/sense_metrics",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=sense-metrics&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/sense_metrics/Neverlose.lua"
+      },
+      "ru": {
+        "tagline": "настраиваемый watermark с ping, FPS и временем",
+        "about": "Информационный watermark в стиле Neverlose с настраиваемыми показателями. Настройки сохраняются в `neverlose_metrics.ini`.",
+        "features": [
+          "Показывает выбранные системные и игровые показатели, включая ping, FPS и время",
+          "Позволяет включать и выключать отдельные элементы",
+          "Сохраняет настройки в INI-файл"
+        ],
+        "install": [
+          "Поместите `Neverlose.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `General → Sense Metrics → Sense`."
+        ]
+      },
+      "en": {
+        "tagline": "a configurable watermark with ping, FPS, and time",
+        "about": "A Neverlose-style information watermark with configurable metrics. Settings are stored in `neverlose_metrics.ini`.",
+        "features": [
+          "Displays selected system and game metrics, including ping, FPS, and time",
+          "Toggle individual elements",
+          "Saves settings to an INI file"
+        ],
+        "install": [
+          "Place `Neverlose.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `General → Sense Metrics → Sense`."
+        ]
+      }
+    },
+    {
+      "id": "terrorblade_conjure_spam",
+      "tag": "terrorblade-conjure-spam",
+      "title": "Terrorblade Conjure Spam",
+      "kind": "lua",
+      "category": "dota",
+      "file": "TerrorbladeConjureSpam.lua",
+      "heroes": [
+        "terrorblade"
+      ],
+      "author": "serioga5035 (Discord: serioga5035)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/terrorblade_conjure_spam",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=terrorblade-conjure-spam&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/terrorblade_conjure_spam/TerrorbladeConjureSpam.lua"
+      },
+      "ru": {
+        "tagline": "использует иллюзии Terrorblade для дополнительного фарма",
+        "about": "Помогает использовать Conjure Image вместе со встроенным фармом иллюзиями, чтобы не упускать дополнительный фарм во время игры.",
+        "features": [
+          "Автоматизирует использование иллюзий Terrorblade в поддерживаемом режиме",
+          "Предназначен для совместной работы со встроенной функцией фарма иллюзиями"
+        ],
+        "install": [
+          "Поместите `TerrorbladeConjureSpam.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Настройте `General → Terrorblade → Conjure Image → Settings → Conjure Spam`."
+        ]
+      },
+      "en": {
+        "tagline": "uses Terrorblade illusions for additional farming",
+        "about": "Helps use Conjure Image alongside built-in illusion farming so additional farm is not missed during play.",
+        "features": [
+          "Automates Terrorblade illusion use in the supported mode",
+          "Designed to work with the built-in illusion-farming feature"
+        ],
+        "install": [
+          "Place `TerrorbladeConjureSpam.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Configure `General → Terrorblade → Conjure Image → Settings → Conjure Spam`."
+        ]
+      }
+    },
+    {
+      "id": "invoker_alacrity_allies_panel",
+      "tag": "invoker-alacrity-allies-panel",
+      "title": "Invoker Alacrity Allies Panel",
+      "kind": "lua",
+      "category": "dota",
+      "file": "invoker_alacrity_allies_panel.lua",
+      "heroes": [
+        "invoker"
+      ],
+      "author": "Polotenchik (Discord: astramakak)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/invoker_alacrity_allies_panel",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=invoker-alacrity-allies-panel&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/invoker_alacrity_allies_panel/invoker_alacrity_allies_panel.lua"
+      },
+      "ru": {
+        "tagline": "выбирает союзников для перенаправления Alacrity",
+        "about": "Добавляет панель выбора союзников. При применении Alacrity перенаправляет способность на ближайшего отмеченного союзника рядом; по умолчанию все союзники выключены.",
+        "features": [
+          "Можно отдельно включать и выключать союзников в панели",
+          "При применении Alacrity выбирает ближайшего отмеченного подходящего союзника",
+          "Если поблизости нет выбранных союзников, обычное применение способности не блокируется"
+        ],
+        "install": [
+          "Поместите `invoker_alacrity_allies_panel.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Heroes → Hero List → Invoker → Alacrity Allies Panel` и выберите союзников."
+        ]
+      },
+      "en": {
+        "tagline": "selects allies to receive redirected Alacrity casts",
+        "about": "Adds an ally-selection panel. When Alacrity is cast, it redirects the spell to the nearest enabled ally nearby; all allies are disabled by default.",
+        "features": [
+          "Enable or disable each ally individually in the panel",
+          "Redirects Alacrity to the nearest enabled eligible ally",
+          "If no selected ally is nearby, the normal cast is not blocked"
+        ],
+        "install": [
+          "Place `invoker_alacrity_allies_panel.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Heroes → Hero List → Invoker → Alacrity Allies Panel` and select allies."
+        ]
+      }
+    },
+    {
+      "id": "html_widget",
+      "tag": "html-widget",
+      "title": "HTML Widget",
+      "kind": "lua",
+      "category": "dota",
+      "file": "html_widget.lua",
+      "heroes": [],
+      "author": "Fabas (Discord: luas0726)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/html_widget",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=html-widget&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/html_widget/html_widget.lua"
+      },
+      "ru": {
+        "tagline": "отображает пользовательские HTML-виджеты в Umbrella",
+        "about": "Предоставляет интерфейс для загрузки и отображения локальных HTML-виджетов в Umbrella. Сам скрипт не содержит готовых HTML-дизайнов.",
+        "features": [
+          "Ищет файлы `.html` в `umbrella\\scripts\\html_widgets`",
+          "Отображает найденные пользовательские HTML-виджеты в игровом интерфейсе",
+          "Используйте только HTML-файлы, которым доверяете"
+        ],
+        "install": [
+          "Поместите `html_widget.lua` в `umbrella\\scripts`.",
+          "Создайте папку `umbrella\\scripts\\html_widgets` и добавьте туда доверенные HTML-виджеты.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `General → Main → HTML Widget`."
+        ]
+      },
+      "en": {
+        "tagline": "displays custom HTML widgets in Umbrella",
+        "about": "Provides an interface for loading and displaying local HTML widgets in Umbrella. The script does not include ready-made HTML designs.",
+        "features": [
+          "Looks for `.html` files in `umbrella\\scripts\\html_widgets`",
+          "Displays discovered custom HTML widgets in the game interface",
+          "Only use HTML files you trust"
+        ],
+        "install": [
+          "Place `html_widget.lua` in `umbrella\\scripts`.",
+          "Create `umbrella\\scripts\\html_widgets` and add trusted HTML widgets there.",
+          "Reload the Lua scripts.",
+          "Open `General → Main → HTML Widget`."
+        ]
+      }
+    },
+    {
+      "id": "synoptic_forecast",
+      "tag": "synoptic-forecast",
+      "title": "Synoptic Forecast",
+      "kind": "lua",
+      "category": "dota",
+      "file": "synoptic.lua",
+      "heroes": [],
+      "author": "Лёха, Ваня и Виталик (Discord: mikropabalo)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/synoptic_forecast",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=synoptic-forecast&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/synoptic_forecast/synoptic.lua"
+      },
+      "ru": {
+        "tagline": "шутливый прогноз погоды по текущей обстановке на линиях",
+        "about": "Раз в несколько минут игрового времени оценивает видимых и пропавших врагов и недавние смерти союзников на линиях, после чего выпускает шуточный прогноз. По умолчанию прогноз отправляется в союзный чат; включите «Только себе», если не хотите отправлять сообщения.",
+        "features": [
+          "Учитывает видимых и пропавших врагов, недавние смерти союзников и число невидимых противников",
+          "По умолчанию выпускает прогноз каждые 5 минут игрового времени; интервал настраивается",
+          "Можно запросить прогноз биндом, скрыть его из чата и показывать только себе",
+          "Можно включить имена пропавших героев и случайную шутку в конце",
+          "Строки прогноза отправляются в союзный чат с паузой между сообщениями"
+        ],
+        "install": [
+          "Поместите `synoptic.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Scripts → Utility → Синоптик`."
+        ]
+      },
+      "en": {
+        "tagline": "a playful weather forecast based on current lane activity",
+        "about": "Every few minutes of game time, checks visible and missing enemies and recent allied deaths on the lanes, then posts a playful forecast. Forecasts are sent to allied chat by default; enable “Only for me” to avoid sending messages.",
+        "features": [
+          "Considers visible and missing enemies, recent allied deaths, and how many enemies are unseen",
+          "Posts a forecast every 5 minutes of game time by default; the interval is configurable",
+          "Request a forecast with a bind, keep it out of chat, and show it only to yourself",
+          "Optionally name missing heroes and add a random joke at the end",
+          "Forecast lines are sent to allied chat with a pause between messages"
+        ],
+        "install": [
+          "Place `synoptic.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Scripts → Utility → Синоптик`."
+        ]
+      }
+    },
+    {
+      "id": "pedometer",
+      "tag": "pedometer",
+      "title": "Pedometer",
+      "kind": "lua",
+      "category": "dota",
+      "file": "pedometer.lua",
+      "heroes": [],
+      "author": "Лёха, Ваня и Виталик (Discord: mikropabalo)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/pedometer",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=pedometer&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/pedometer/pedometer.lua"
+      },
+      "ru": {
+        "tagline": "считает шаги, расстояние и калории героя",
+        "about": "Фитнес-браслет для героя: считает пробег, шаги и примерный расход калорий за матч, за день и за всё время. Результаты сохраняются между играми.",
+        "features": [
+          "Считает километры, шаги и примерные калории за игру, день и всё время",
+          "Блинки и телепорты считает отдельно; передвижение не учитывается, пока герой мёртв",
+          "Сравнивает расстояние с известными объектами и позволяет задать дневную цель шагов",
+          "Показывает счётчик на экране и выдаёт итоги по бинду",
+          "Хвастовство итогами в союзный чат выключено по умолчанию"
+        ],
+        "install": [
+          "Поместите `pedometer.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Scripts → Utility → Шагомер`."
+        ]
+      },
+      "en": {
+        "tagline": "tracks your hero’s steps, distance, and calories",
+        "about": "A fitness tracker for your hero: records distance, steps, and estimated calories per match, per day, and overall. Progress is saved between games.",
+        "features": [
+          "Tracks kilometers, steps, and estimated calories for the match, day, and all time",
+          "Tracks blinks and teleports separately; movement while dead is not counted",
+          "Compares distance with familiar landmarks and supports a daily step goal",
+          "Shows an on-screen counter and displays a summary with a bind",
+          "Sharing results in allied chat is disabled by default"
+        ],
+        "install": [
+          "Place `pedometer.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Scripts → Utility → Шагомер`."
         ]
       }
     }

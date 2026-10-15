@@ -226,6 +226,154 @@ class MenuLocationsTests(unittest.TestCase):
             with self.subTest(script=script_id):
                 self.assertEqual(paths_for(self.by_id[script_id])["en"], paths)
 
+    def test_visual_and_tracker_batch_menu_paths(self):
+        expected = {
+            "interactive_menu": [
+                "General → Main → InteractiveMenu RU → ⚙ General / Общее",
+                "General → Main → InteractiveMenu RU → ◈ Palette / Палитра",
+                "General → Main → InteractiveMenu RU → ✦ Particles / Частицы",
+                "General → Main → InteractiveMenu RU → ⌘ Web / Паутинка",
+            ],
+            "ranks_mmr_tracker": [
+                "Scripts → Other → MMR Tracker Ultimate → Settings → Main",
+                "Scripts → Other → MMR Tracker Ultimate → Settings → Statistics",
+                "Scripts → Other → MMR Tracker Ultimate → Settings → Calculator",
+                "Scripts → Other → MMR Tracker Ultimate → Settings → Tilt Guard",
+            ],
+            "lycan_auto_howl": [
+                "General → Main → Lycan Auto Howl → Auto Howl → Основное",
+                "General → Main → Lycan Auto Howl → Auto Howl → День / Ночь",
+                "General → Main → Lycan Auto Howl → Auto Howl → Детект",
+                "General → Main → Lycan Auto Howl → Auto Howl → Панель",
+            ],
+            "sf_requiem_radius": [
+                "Heroes → Hero List → Shadow Fiend → Requiem Radius → Main"
+            ],
+            "dotaplus_tracker": [
+                "Info Screen → Main → Tracker → Main → Settings"
+            ],
+            "illuminate_visualizer": [
+                "General → Main → Illuminate Visualizer → Settings → Main"
+            ],
+            "aegis_blinkout_cone": [
+                "General → Main → Конус блинка после Aegis → Настройки → Общее"
+            ],
+        }
+        for script_id, paths in expected.items():
+            with self.subTest(script=script_id):
+                self.assertEqual(paths_for(self.by_id[script_id])["en"], paths)
+
+    def test_latest_script_batch_menu_paths(self):
+        expected = {
+            "natures_call_block": [
+                "Heroes → Hero List → Nature's Prophet → Nature Call Block → Settings"
+            ],
+            "remote_auto_search": [
+                "Miscellaneous → Other → Message Recorder → Main → Auto Search Game",
+                "Miscellaneous → Other → Message Recorder → Main → Ntfy Remote Queue",
+                "Miscellaneous → Other → Message Recorder → Main → Key Emulator",
+            ],
+            "opendota_stats_tracker": [
+                "Info Screen → Main → Tracker → Main → Settings"
+            ],
+            "dark_carnival_suggest_heroes": [
+                "General → Main → Dark Carnival → Main → Настройки"
+            ],
+            "meepo_auto_escape": ["Heroes → Hero List → Meepo → Meepo → Saver"],
+            "incoming_damage_hud": [
+                "Scripts → Main → Incoming DMG → Incoming DMG → Main",
+                "Scripts → Main → Incoming DMG → Incoming DMG → Display",
+            ],
+            "ntfy_match_notifier": [
+                "UCZone → Utilities → Ntfy → Match Notifier → On Accept/Resolve"
+            ],
+            "auto_summons_kiting": [
+                "Scripts → Other → Auto Summons → Main → Main"
+            ],
+            "dazzle_support": [
+                "Heroes → Hero List → Dazzle → Dazzle Support RUS → General",
+                "Heroes → Hero List → Dazzle → Dazzle Support RUS → E - Shallow Grave",
+                "Heroes → Hero List → Dazzle → Dazzle Support RUS → W - Shadow Wave",
+                "Heroes → Hero List → Dazzle → Dazzle Support RUS → Items",
+                "Heroes → Hero List → Dazzle → Dazzle Support RUS → Визуалы",
+            ],
+            "kotl_illuminate_kill_release": [
+                "General → Utility → kotl_illuminate → KOTL → Auto Illuminate"
+            ],
+            "hero_speed_overlay": [
+                "Info Screen → Main → Heroes Overlay → Main → Speed Check"
+            ],
+            "ai_chat_responder": [
+                "Scripts → User Scripts → AI Chat Responder → Main → AI Responder",
+                "Scripts → User Scripts → AI Chat Responder → Main → Enemy Warnings",
+            ],
+            "windranger_combo": [
+                "Heroes → Hero List → Windranger → Windranger Combo → Combo Settings",
+                "Heroes → Hero List → Windranger → Windranger Combo → Ability Toggle",
+                "Heroes → Hero List → Windranger → Windranger Combo → Shackle Options",
+                "Heroes → Hero List → Windranger → Windranger Combo → Visuals",
+            ],
+            "lone_druid_bear_ai_deluxe": [
+                "Heroes → Hero List → Lone Druid → Bear AI Deluxe"
+            ],
+            "ultrashizfrenia_laugh": [
+                "Miscellaneous → In Game → ULTRASHIZOFRENIA laugh → Main → General"
+            ],
+            "ultrashizfrenia_high_five": [
+                "Miscellaneous → In Game → ULTRASHIZOFRENIA Auto High Five → Main → General"
+            ],
+        }
+        for script_id, paths in expected.items():
+            with self.subTest(script=script_id):
+                self.assertEqual(paths_for(self.by_id[script_id])["en"], paths)
+
+    def test_latest_user_script_batch_menu_paths(self):
+        expected = {
+            "rubick_last_spell": [
+                "Heroes → Rubick → Last Spell ESP → Main → Settings"
+            ],
+            "invoker_combo_panel": [
+                "Heroes → Hero List → Invoker → Invoker Combo Panel"
+            ],
+            "invoker_ice_wall_farm": [
+                "Heroes → Hero List → Invoker → Ice Wall Farm"
+            ],
+            "meepo_block": ["General → Blocker → Meepo Blocker"],
+            "pt_strength_low_hp": ["Scripts → Combat → PTabs"],
+            "combine_lock_click": [
+                "General → Items → Combine Lock → Main → Main"
+            ],
+            "invoker_ice_wall_cursor": [
+                "Heroes → Hero List → Invoker → Main Settings → Cast On Cursor"
+            ],
+            "chaos_knight_crit_guard": [
+                "Heroes → Hero List → Chaos Knight"
+            ],
+            "witch_doctor_ward_controller": [
+                "Heroes → Hero List → Witch Doctor → Main Settings → Ward Settings"
+            ],
+            "sense_metrics": ["General → Sense Metrics → Sense"],
+            "terrorblade_conjure_spam": [
+                "General → Terrorblade → Conjure Image → Settings → Conjure Spam"
+            ],
+            "invoker_alacrity_allies_panel": [
+                "Heroes → Hero List → Invoker → Alacrity Allies Panel"
+            ],
+            "html_widget": ["General → Main → HTML Widget"],
+        }
+        for script_id, paths in expected.items():
+            with self.subTest(script=script_id):
+                self.assertEqual(paths_for(self.by_id[script_id])["en"], paths)
+
+    def test_daily_utility_script_menu_paths(self):
+        expected = {
+            "synoptic_forecast": ["Scripts → Utility → Синоптик → Main"],
+            "pedometer": ["Scripts → Utility → Шагомер → Main"],
+        }
+        for script_id, paths in expected.items():
+            with self.subTest(script=script_id):
+                self.assertEqual(paths_for(self.by_id[script_id])["en"], paths)
+
     def test_catalog_paths_have_localized_list_shapes(self):
         for script in self.scripts:
             with self.subTest(script=script["id"]):

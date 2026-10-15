@@ -1,7 +1,7 @@
 local vision = {}
 
 function vision.responsible(ctx)
-	return ctx.settings.wards and (ctx.role >= 4 or ctx.role == 2)
+	return ctx.settings.wards and (ctx.role >= 3 or ctx.role == 2)
 end
 
 function vision.observers(item)

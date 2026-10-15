@@ -60,6 +60,29 @@ function fights.carryReady(ctx)
 	return coreItems >= 2
 end
 
+local boots = {
+	item_boots = true, item_power_treads = true, item_phase_boots = true, item_arcane_boots = true,
+	item_tranquil_boots = true, item_guardian_greaves = true, item_travel_boots = true,
+	item_travel_boots_2 = true, item_boots_of_bearing = true,
+}
+
+function fights.midReady(ctx)
+	if ctx.role ~= 2 then return true end
+	local shod, core = false, false
+	for slot = 0, 5 do
+		local item = NPC.GetItemByIndex(ctx.hero, slot)
+		if item then
+			local name = Ability.GetName(item)
+			if boots[name] then shod = true
+			else
+				local record = ctx.catalog.items[name:gsub("^item_", "")]
+				if record and not record.consumable and not record.neutral and (record.cost or 0) >= 2000 then core = true end
+			end
+		end
+	end
+	return shod and core
+end
+
 function fights.canJoin(ctx, point)
 	if ctx.role == 1 and not fights.carryReady(ctx) and ctx.baseDefense == nil then return false end
 	return ctx.role ~= 2 or NPC.GetCurrentLevel(ctx.hero) >= 4 or ctx.baseDefense ~= nil

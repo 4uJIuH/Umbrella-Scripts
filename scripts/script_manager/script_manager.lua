@@ -327,6 +327,16 @@ local localization = qLocalization.new({
 		sm_key_tip = "Opens and closes Script Manager",
 		sm_bind_name = "Script Manager",
 		sm_open = "Open or close the window",
+		sm_open_mode = "Open mode",
+		sm_open_mode_tip = "On reload: the window opens after every script reload, and the button and the bind open or close it. Bind only: the window never opens by itself, only by the bind.",
+		sm_open_mode_reload = "On reload",
+		sm_open_mode_bind = "Bind only",
+		sm_g_open = "OPENING",
+		sm_set_open_mode = "Open mode",
+		sm_set_bind = "Open bind",
+		sm_bind_none = "None",
+		sm_bind_press = "Press a key",
+		sm_bind_hint = "Esc cancels, Backspace clears",
 
 		sm_nav_all = "All",
 		sm_nav_installed = "Installed",
@@ -494,6 +504,16 @@ local localization = qLocalization.new({
 		sm_key_tip = "Открывает и закрывает Script Manager",
 		sm_bind_name = "Script Manager",
 		sm_open = "Открыть или закрыть окно",
+		sm_open_mode = "Режим открытия",
+		sm_open_mode_tip = "При перезагрузке: окно открывается после каждой перезагрузки скриптов, а кнопка и бинд открывают и закрывают его. Только по бинду: окно само не открывается, только по бинду.",
+		sm_open_mode_reload = "При перезагрузке",
+		sm_open_mode_bind = "Только по бинду",
+		sm_g_open = "ОТКРЫТИЕ",
+		sm_set_open_mode = "Режим открытия",
+		sm_set_bind = "Бинд открытия",
+		sm_bind_none = "Нет",
+		sm_bind_press = "Нажмите клавишу",
+		sm_bind_hint = "Esc отменяет, Backspace сбрасывает",
 
 		sm_nav_all = "Все",
 		sm_nav_installed = "Установленные",
@@ -662,7 +682,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.7.1"
+local VERSION = "2.8.0"
 
 local K = {
 	CFG = "script_market",
@@ -852,6 +872,7 @@ local SORTS = {
 }
 
 local SETS = {
+	open_mode = { "reload", "bind" },
 	check = { "start", "hour" },
 	restart = { "ask", "now" },
 	theme = THEME_ORDER,
@@ -874,6 +895,7 @@ local S = {
 	net = { state = "idle", at = 0, stamp = 0, err = nil, loaded = false },
 	inst = {}, busy = {}, nlz = nil, nlz_wait = nil, dir = nil, dw = nil, dw_open = false,
 	set = {
+		open_mode = "reload",
 		check = Config.ReadString(K.CFG, "check", "start"),
 		auto = Config.ReadInt(K.CFG, "auto", 0) == 1,
 		beta = Config.ReadInt(K.CFG, "beta", 0) == 1,
@@ -936,12 +958,19 @@ do
 	ui.enable = g_main:Switch("sm_enable", true, "\u{f011}")
 	ui.enable:ToolTip("sm_enable_tip")
 
+	ui.mode = g_main:Combo("sm_open_mode", { "sm_open_mode_reload", "sm_open_mode_bind" }, 0)
+	ui.mode:ToolTip("sm_open_mode_tip")
+
 	ui.key = g_main:Bind("sm_key", Enum.ButtonCode.KEY_NONE, "\u{f11c}")
 	ui.key:ToolTip("sm_key_tip")
 	ui.key:Properties(L("sm_bind_name"))
 
 	ui.open = g_main:Button("sm_open", function() S.open = not S.open end)
 	ui.open:Icon("\u{f2d0}")
+
+	-- the Umbrella menu keeps the saved mode; the window starts open only in "reload" mode
+	S.set.open_mode = SETS.open_mode[ui.mode:Get() + 1] or "reload"
+	S.open = S.set.open_mode == "reload"
 end
 
 local ROUND = Enum.DrawFlags.RoundCornersAll
@@ -3355,6 +3384,49 @@ function view.swatches(right, cy, order, cur, prefix, color, pick)
 	end
 end
 
+local KEY_NAMES, KEY_WHEEL
+
+local function key_tables()
+	if KEY_NAMES then return end
+	KEY_NAMES, KEY_WHEEL = {}, {}
+	for name, value in pairs(Enum.ButtonCode) do
+		if type(name) == "string" and type(value) == "number" and name:sub(1, 4) == "KEY_" then
+			local short = name:sub(5):gsub("^MOUSE(%d)$", "M%1"):gsub("^PAD_", "NUM ")
+			local old = KEY_NAMES[value]
+			if old == nil or #short < #old then KEY_NAMES[value] = short end
+			if name:find("WHEEL", 1, true) then KEY_WHEEL[value] = true end
+		end
+	end
+end
+
+local function key_name(code)
+	key_tables()
+	if type(code) ~= "number" or code <= 0 then return L("sm_bind_none") end
+	return KEY_NAMES[code] or tostring(code)
+end
+
+local function key_is_wheel(code)
+	key_tables()
+	return KEY_WHEEL[code] == true
+end
+
+-- shows the key of the Umbrella bind; a click starts listening for a new one
+function view.bind_chip(x, y)
+	local id = "bind_chip"
+	local hv = anim.hover(id)
+	local on = anim.tween("bind_on", S.bind_listen and 1 or 0, 0.16)
+	g.rect(x, y, 132, 28, C.dd, 7)
+	local fa = 0.14 * hv * (1 - on)
+	if fa > 0.005 then g.frame(x, y, 132, 28, T.white, 7, fa) end
+	if on > 0.005 then g.frame(x, y, 132, 28, K.ACCENT, 7, 0.9 * on) end
+	local label = S.bind_listen and L("sm_bind_press") or key_name(ui.key:Get())
+	g.text(600, 12, g.fit(600, 12, label, 132 - 16), x + 66, y + 14, S.bind_listen and K.ACCENT_TEXT or T.t5, 1, "c")
+	hit.add(x, y, 132, 28, id, { click = function()
+		S.bind_listen = not S.bind_listen
+		S.menu = nil
+	end })
+end
+
 function view.settings()
 	local x0, w0 = K.SIDE, K.W - K.SIDE
 	hit.add(x0, 0, w0, K.H, "drag", { down = view.start_drag })
@@ -3389,6 +3461,13 @@ function view.settings()
 		end
 		y = y + 8 + #rows * 40 + 20
 	end
+
+	card("sm_g_open", {
+		pick_row("open_mode"),
+		{ label = "sm_set_bind", note = function() return L("sm_bind_hint") end, draw = function(ry, right)
+			view.bind_chip(right - 132, ry + 6)
+		end },
+	})
 
 	card("sm_g_updates", {
 		pick_row("check"),
@@ -3438,6 +3517,11 @@ function view.settings()
 			S.set[m[3]] = o
 			save(m[3], o)
 			if m[3] == "font" then g.refont() end
+			if m[3] == "open_mode" then
+				for i, id in ipairs(SETS.open_mode) do
+					if id == o then ui.mode:Set(i - 1) end
+				end
+			end
 		end, m[5], m[6])
 	end
 end
@@ -3640,6 +3724,11 @@ local script = {}
 
 function script.OnUpdateEx()
 	if not ui.enable:Get() then return end
+	if S.bind_listen then return end
+	if S.bind_skip then
+		if Input.IsKeyDown(S.bind_skip) then return end
+		S.bind_skip = nil
+	end
 	if ui.key:IsPressed() and not Input.IsInputCaptured() and not S.focus then S.open = not S.open end
 end
 
@@ -3653,6 +3742,7 @@ function script.OnFrame()
 	S.lang = localization.GetLanguage() == "ru" and "ru" or "en"
 	market.tick()
 	S.alpha = anim.tween("window", S.open and 1 or 0, 0.18)
+	if not S.open or S.view ~= "settings" then S.bind_listen = false end
 	if not S.open then S.focus = false end
 	input.sink(S.focus and S.open)
 	if S.alpha <= 0 then return end
@@ -3695,6 +3785,16 @@ function script.OnKeyEvent(e)
 	if not ui.enable:Get() or S.alpha <= 0 or not S.open then return true end
 	local mx, my = Input.GetCursorPos()
 	local over = inside(mx, my)
+	if S.bind_listen and e.event == Enum.EKeyEvent.EKeyEvent_KEY_DOWN and e.key ~= KEY.KEY_MOUSE1 and e.key ~= KEY.KEY_MOUSE2 and not key_is_wheel(e.key) then
+		S.bind_listen = false
+		if e.key ~= KEY.KEY_ESCAPE then
+			local code = e.key == KEY.KEY_BACKSPACE and KEY.KEY_NONE or e.key
+			local mode = ui.key:Get(1)
+			ui.key:Set(code, type(mode) == "number" and mode or 0)
+			S.bind_skip = code
+		end
+		return false
+	end
 	if e.event == Enum.EKeyEvent.EKeyEvent_SCROLL_UP or e.event == Enum.EKeyEvent.EKeyEvent_SCROLL_DOWN then
 		if not over then return true end
 		if S.dw_open then return false end
@@ -3750,12 +3850,17 @@ end
 
 ui.enable:SetCallback(function()
 	local on = ui.enable:Get()
+	ui.mode:Disabled(not on)
 	ui.key:Disabled(not on)
 	ui.open:Disabled(not on)
 	if not on then
 		S.focus = false
 		input.sink(false)
 	end
+end, true)
+
+ui.mode:SetCallback(function()
+	S.set.open_mode = SETS.open_mode[ui.mode:Get() + 1] or "reload"
 end, true)
 
 return script
