@@ -1,4 +1,5 @@
-local VERSION = "1.0.0"
+local VERSION = "1.1.0"
+
 local script = {}
 
 local HERO = "npc_dota_hero_arc_warden"
@@ -12,14 +13,33 @@ local AutoInventory = UtilitiesTab:Switch(
     "Предметы из ранца", true, "\u{f290}")
 local AutoInventoryGear = AutoInventory:Gear("Settings")
 local MoveBottle = AutoInventoryGear:Switch(
-    "Перекладывать ботл", true,
+    "Перекладывать Bottle", true,
     "panorama/images/items/bottle_png.vtex_c")
 local MoveMjollnir = AutoInventoryGear:Switch(
-    "Перекладывать Mjollnir при Moon Shard", true,
+    "Перекладывать Mjollnir в ранец при Moon Shard", true,
     "panorama/images/items/mjollnir_png.vtex_c")
 local MoveBKB = AutoInventoryGear:Switch(
-    "Перекладывать BKB в кд при Moon Shard", true,
+    "Перекладывать Black King Bar в ранец при Moon Shard (Если в кд)", true,
     "panorama/images/items/black_king_bar_png.vtex_c")
+
+local CooldownSwap = AutoInventoryGear:MultiSelect(
+    "Перекладывать при КД (по приоритету)",
+    {
+        { "item_black_king_bar", "panorama/images/items/black_king_bar_png.vtex_c", true },
+        { "item_bloodthorn",     "panorama/images/items/bloodthorn_png.vtex_c",     true },
+        { "item_sheepstick",     "panorama/images/items/sheepstick_png.vtex_c",     true },
+        { "item_manta",          "panorama/images/items/manta_png.vtex_c",          true },
+        { "item_satanic",        "panorama/images/items/satanic_png.vtex_c",        true },
+        { "item_mjollnir",       "panorama/images/items/mjollnir_png.vtex_c",       true },
+        { "item_nullifier",      "panorama/images/items/nullifier_png.vtex_c",      true },
+        { "item_swift_blink",    "panorama/images/items/swift_blink_png.vtex_c",    true },
+        { "item_hurricane_pike", "panorama/images/items/hurricane_pike_png.vtex_c", true },
+        { "item_silver_edge",    "panorama/images/items/silver_edge_png.vtex_c",    true },
+        { "item_disperser",      "panorama/images/items/disperser_png.vtex_c",      true },
+    },
+    true
+)
+CooldownSwap:ToolTip("Перекладывает предметы из инвентаря в ранец, пока они на кулдауне. Возвращает обратно, когда КД закончился. Приоритет — сверху вниз.")
 
 AutoInventory:ToolTip("Перекладывает дорогие предметы из ранца в инвентарь, заменяя дешёвые (Branches, Slippers и т.д.).")
 MoveBottle:ToolTip("Разрешает перенос Bottle из ранца в инвентарь. Bottle в инвентаре всё равно не будет выброшен.")
@@ -63,12 +83,8 @@ local SparkGear = SparkBlock:Gear("Settings")
 local spark_mode        = SparkGear:Combo("Режим работы",
     {"Автоматический", "Механический"}, 0)
 local spark_cast_key    = SparkGear:Bind("Клавиша каста", Enum.ButtonCode.KEY_NONE)
-local spark_until       = SparkGear:Slider("Работать до минуты", 1, 30, 10, "%d")
-local spark_min_dist    = SparkGear:Slider("Мин. пройденная дистанция", 0, 300, 40, "%d")
-local spark_stable_time = SparkGear:Slider("Время стабильного движения", 0.1, 2.0, 0.35, "%.2f s")
 local spark_dir_var     = SparkGear:Slider("Отклонение направления", 0, 50, 30, "%d%%")
 local spark_creep_rad   = SparkGear:Slider("Радиус исключения крипов", 375, 600, 375, "%d")
-local spark_stand_time  = SparkGear:Slider("Время неподвижности", 0.1, 2.0, 0.35, "%.2f s")
 
 local spark_stun_only   = SparkGear:Switch("Кастовать ТОЛЬКО под стан", false)
 local spark_stun_margin = SparkGear:Slider("Запас радиуса стана", 0, 200, 80, "%d")
@@ -77,33 +93,10 @@ SparkBlock:ToolTip("Автоматически кастует Spark Wraith по 
 spark_stun_only:ToolTip("Если включено — Spark Wraith кастуется ТОЛЬКО под врагов в стане (Frostbite, Earth Spike, Shackles, Blast Off). Обычная логика отключается.")
 spark_stun_margin:ToolTip("Дополнительный запас радиуса к радиусу способности при касте под стан.")
 
-local SwapItems = UtilitiesTab:Switch(
-    "Смена предметов местами", true,
-    "panorama/images/items/sheepstick_png.vtex_c")
-local SwapItemsGear = SwapItems:Gear("Settings")
-
-local swap_items_enabled = SwapItemsGear:Switch("Включить", true)
-local swap_items_key     = SwapItemsGear:Bind("Клавиша смены", Enum.ButtonCode.KEY_NONE)
-
-local swap_from_combo = SwapItemsGear:Combo("Из инвентаря (менять)", {"—"}, 0)
-local swap_to_combo   = SwapItemsGear:Combo("Из ранца (на что менять)", {"—"}, 0)
-
-SwapItems:ToolTip("Меняет местами выбранный предмет из инвентаря и выбранный предмет из ранца по нажатию клавиши.")
-swap_items_key:ToolTip("Клавиша для смены предметов местами.")
-swap_from_combo:ToolTip("Какой предмет из ИНВЕНТАРЯ менять (уйдёт в ранец).")
-swap_to_combo:ToolTip("Какой предмет из РАНЦА менять (уйдёт в инвентарь).")
-
 local state_inv = { lastMove = 0, pendingItem = nil }
 local state_mjollnir = { lastMove = 0, pendingItem = nil, lastMoonShardActive = false }
 local state_bkb = { pendingItem = nil }
-local state_swap = {
-    lastMove = 0,
-    lastKeyState = false,
-    secondStep = nil,
-    lastInventoryHash = "",
-    invNameMap = {},
-    bpNameMap = {},
-}
+local state_cdswap = { lastMove = 0, pendingItem = nil }
 
 local my_hero = nil
 local tempest_double = nil
@@ -344,11 +337,11 @@ local function hasMoonShardNearby(hero)
     return false
 end
 
-local function isBKBonCooldown(bkb)
-    if not bkb then return false end
-    local ok, cd = pcall(Ability.GetCooldownTimeRemaining, bkb)
+local function isItemOnCooldown(item)
+    if not item then return false end
+    local ok, cd = pcall(Ability.GetCooldownTimeRemaining, item)
     if ok and cd and cd > 0.1 then return true end
-    ok, cd = pcall(Ability.GetCooldown, bkb)
+    ok, cd = pcall(Ability.GetCooldown, item)
     if ok and cd and cd > 0.1 then return true end
     return false
 end
@@ -428,7 +421,7 @@ local function updateMjollnirMove(player, hero, now)
     local bkbInv = findItemInInventory(hero, "item_black_king_bar")
     local bkbBp = findItemInBackpack(hero, "item_black_king_bar")
     local hasBKB = (bkbInv ~= nil) or (bkbBp ~= nil)
-    local bkbOnCooldown = bkbInv and isBKBonCooldown(bkbInv) or false
+    local bkbOnCooldown = bkbInv and isItemOnCooldown(bkbInv) or false
 
     if bkbBp then bkbOnCooldown = true end
 
@@ -449,159 +442,59 @@ local function updateMjollnirMove(player, hero, now)
     end
 end
 
-local function buildItemsList(hero, isBackpack)
-    local names, icons = {}, {}
-    local seen = {}
-    local startSlot = isBackpack and 6 or 0
-    local endSlot = isBackpack and 8 or 5
+local function updateCooldownSwap(player, hero, now)
+    if not AutoInventory:Get() then return end
+    if now - state_cdswap.lastMove < 0.2 then return end
 
-    for slot = startSlot, endSlot do
-        local item = itemAt(hero, slot)
-        if item then
-            local key = getItemNameSafe(item)
-            if key and not seen[key] then
-                seen[key] = true
-                local displayName = getItemDisplayName(item) or key
-                table.insert(names, displayName)
-                table.insert(icons, itemIconPath(key) or "")
-            end
-        end
-    end
-    return names, icons
-end
-
-local function updateSwapCombos(hero)
-    local invNames, invIcons = buildItemsList(hero, false)
-    local bpNames, bpIcons = buildItemsList(hero, true)
-
-    local hash = table.concat(invNames, "|") .. "#" .. table.concat(bpNames, "|")
-    if hash == state_swap.lastInventoryHash then return end
-    state_swap.lastInventoryHash = hash
-
-    state_swap.invNameMap = {}
-    state_swap.bpNameMap = {}
-
-    local fromValue = swap_from_combo:Get()
-    local toValue = swap_to_combo:Get()
-
-    if #invNames == 0 then
-        invNames = {"—"}
-        invIcons = {""}
-    end
-    if #bpNames == 0 then
-        bpNames = {"—"}
-        bpIcons = {""}
-    end
-
-    local ok1 = pcall(swap_from_combo.Update, swap_from_combo, invNames, invIcons)
-    if not ok1 then
-        pcall(swap_from_combo.Update, swap_from_combo, invNames)
-    end
-
-    local ok2 = pcall(swap_to_combo.Update, swap_to_combo, bpNames, bpIcons)
-    if not ok2 then
-        pcall(swap_to_combo.Update, swap_to_combo, bpNames)
-    end
-
-    if fromValue and fromValue < #invNames then
-        pcall(swap_from_combo.Set, swap_from_combo, fromValue)
-    end
-    if toValue and toValue < #bpNames then
-        pcall(swap_to_combo.Set, swap_to_combo, toValue)
-    end
-end
-
-local function getSelectedItemFromCombo(combo, hero, isBackpack)
-    local idx = combo:Get()
-    if idx == nil then return nil end
-
-    local startSlot = isBackpack and 6 or 0
-    local endSlot = isBackpack and 8 or 5
-
-    local counter = 0
-    local seen = {}
-    for slot = startSlot, endSlot do
-        local item = itemAt(hero, slot)
-        if item then
-            local key = getItemNameSafe(item)
-            if key and not seen[key] then
-                seen[key] = true
-                if counter == idx then
-                    return item, slot
+    for _, itemName in ipairs(CooldownSwap:ListEnabled()) do
+        local bpItem = findItemInBackpack(hero, itemName)
+        if bpItem then
+            if not isItemOnCooldown(bpItem) then
+                local toSlot = findEmptyInventorySlot(hero)
+                if toSlot then
+                    local index = Entity.GetIndex(bpItem)
+                    if state_cdswap.pendingItem == index then
+                        state_cdswap.pendingItem = nil
+                    end
+                    state_inv.scriptOrder = true
+                    local ok, result = pcall(Player.PrepareUnitOrders, player,
+                        Enum.UnitOrder.DOTA_UNIT_ORDER_MOVE_ITEM, toSlot,
+                        Vector(0, 0, 0), bpItem,
+                        Enum.PlayerOrderIssuer.DOTA_ORDER_ISSUER_PASSED_UNIT_ONLY, hero,
+                        false, false, false, true, "arc_warden_cdswap_restore", false)
+                    state_inv.scriptOrder = false
+                    if ok and result ~= false then
+                        state_cdswap.lastMove = now
+                        state_cdswap.pendingItem = index
+                        return
+                    end
                 end
-                counter = counter + 1
+            end
+        end
+
+        local invItem = findItemInInventory(hero, itemName)
+        if invItem and isItemOnCooldown(invItem) then
+            local toSlot = findEmptyBackpackSlot(hero)
+            if toSlot then
+                local index = Entity.GetIndex(invItem)
+                if state_cdswap.pendingItem == index then
+                    state_cdswap.pendingItem = nil
+                end
+                state_inv.scriptOrder = true
+                local ok, result = pcall(Player.PrepareUnitOrders, player,
+                    Enum.UnitOrder.DOTA_UNIT_ORDER_MOVE_ITEM, toSlot,
+                    Vector(0, 0, 0), invItem,
+                    Enum.PlayerOrderIssuer.DOTA_ORDER_ISSUER_PASSED_UNIT_ONLY, hero,
+                    false, false, false, true, "arc_warden_cdswap_move", false)
+                state_inv.scriptOrder = false
+                if ok and result ~= false then
+                    state_cdswap.lastMove = now
+                    state_cdswap.pendingItem = index
+                    return
+                end
             end
         end
     end
-    return nil, nil
-end
-
-local function isSwapKeyJustPressed()
-    local key = swap_items_key:Get()
-    if not key or key == Enum.ButtonCode.KEY_NONE then return false end
-
-    local isDown = false
-    local ok, down = pcall(Input.IsKeyDown, key)
-    if ok then isDown = down end
-
-    local justPressed = isDown and not state_swap.lastKeyState
-    state_swap.lastKeyState = isDown
-    return justPressed
-end
-
-local function performSwapStep(player, hero, item, toSlot, orderName, now)
-    state_inv.scriptOrder = true
-    local ok, result = pcall(Player.PrepareUnitOrders, player,
-        Enum.UnitOrder.DOTA_UNIT_ORDER_MOVE_ITEM, toSlot,
-        Vector(0, 0, 0), item,
-        Enum.PlayerOrderIssuer.DOTA_ORDER_ISSUER_PASSED_UNIT_ONLY, hero,
-        false, false, false, true, orderName, false)
-    state_inv.scriptOrder = false
-
-    if ok and result ~= false then
-        state_swap.lastMove = now
-        return true
-    end
-    return false
-end
-
-local function updateSwapItems(player, hero, now)
-    if not SwapItems:Get() then return end
-    if not swap_items_enabled:Get() then return end
-
-    updateSwapCombos(hero)
-
-    if state_swap.secondStep then
-        if now >= state_swap.secondStep.time then
-            local step = state_swap.secondStep
-            state_swap.secondStep = nil
-            if step.item then
-                performSwapStep(player, hero, step.item, step.toSlot,
-                    "arc_warden_swap_step2", now)
-            end
-        end
-        return
-    end
-
-    if now - state_swap.lastMove < 0.4 then return end
-
-    if not isSwapKeyJustPressed() then return end
-
-    local invItem, invSlot = getSelectedItemFromCombo(swap_from_combo, hero, false)
-    local bpItem, bpSlot   = getSelectedItemFromCombo(swap_to_combo, hero, true)
-
-    if not invItem or not bpItem then return end
-
-    if not performSwapStep(player, hero, bpItem, invSlot,
-        "arc_warden_swap_in", now) then
-        return
-    end
-
-    state_swap.secondStep = {
-        item = invItem,
-        toSlot = bpSlot,
-        time = now + 0.15,
-    }
 end
 
 local function IsActiveGameCondition()
@@ -1280,6 +1173,10 @@ local K = {
     UPDATE_INTERVAL = 0.08,
     CAST_LOCK = 0.25,
     HISTORY_CLEANUP = 5.0,
+    WORK_UNTIL_MINUTE = 10,
+    MIN_MOVE_DIST = 40,
+    STABLE_TIME = 0.35,
+    STAND_TIME = 0.35,
 }
 
 local STUN_MODIFIERS = {
@@ -1388,11 +1285,11 @@ local function spark_is_stable_movement(target, now)
     local target_id = Entity.GetIndex(target)
     local history = spark_state.target_history[target_id]
     if not history or #history.positions < 3 then return false end
-    if now - history.times[1] < spark_stable_time:Get() then return false end
+    if now - history.times[1] < K.STABLE_TIME then return false end
 
     local oldest_pos = history.positions[1]
     local current_pos = history.positions[#history.positions]
-    if oldest_pos:Distance2D(current_pos) < spark_min_dist:Get() then return false end
+    if oldest_pos:Distance2D(current_pos) < K.MIN_MOVE_DIST then return false end
 
     local directions = {}
     for i = 1, #history.positions - 1 do
@@ -1414,8 +1311,8 @@ local function spark_is_stationary(target, now)
     local target_id = Entity.GetIndex(target)
     local history = spark_state.target_history[target_id]
     if not history or #history.positions < 3 then return false end
-    if now - history.times[1] < spark_stand_time:Get() then return false end
-    return history.positions[1]:Distance2D(history.positions[#history.positions]) < spark_min_dist:Get()
+    if now - history.times[1] < K.STAND_TIME then return false end
+    return history.positions[1]:Distance2D(history.positions[#history.positions]) < K.MIN_MOVE_DIST
 end
 
 local function spark_get_target_position(local_hero, target, ability, now)
@@ -1472,7 +1369,7 @@ local function updateSparkWraith(now)
     local dota_time = spark_get_game_time()
     if dota_time < spark_state.next_update then return end
     spark_state.next_update = dota_time + K.UPDATE_INTERVAL
-    if dota_time >= spark_until:Get() * 60 or dota_time < 0 or GameRules.IsPaused() then return end
+    if dota_time >= K.WORK_UNTIL_MINUTE * 60 or dota_time < 0 or GameRules.IsPaused() then return end
 
     if dota_time >= spark_state.next_cleanup then
         for target_id, history in pairs(spark_state.target_history) do
@@ -1518,7 +1415,7 @@ function script.OnUpdate()
 
     updateInventory(player, hero, now)
     updateMjollnirMove(player, hero, now)
-    updateSwapItems(player, hero, now)
+    updateCooldownSwap(player, hero, now)
 
     local is_active, _, has_pudge, has_es = IsActiveGameCondition()
     if is_active then
@@ -1570,6 +1467,69 @@ function script.OnDraw()
     end
 end
 
+local RuneDraw = UtilitiesTab:Switch(
+    "Радиус притягивания рун", false,
+    "panorama/images/spellicons/arc_warden_magnetic_field_png.vtex_c")
+RuneDraw:ToolTip("Рисует круг вокруг Arc Warden радиусом притягивания рун от Magnetic Field. Радиус зависит от уровня W (800/1200/1600/2000).")
+
+local RUNE_DRAW_COLOR = Color(0, 200, 255, 180)
+local RUNE_DRAW_THICKNESS = 2
+local RUNE_DRAW_SEGMENTS = 64
+
+local function DrawWorldCircle(center, radius, color, thickness, segments)
+    segments = segments or RUNE_DRAW_SEGMENTS
+    local prevScreen = nil
+    local firstScreen = nil
+
+    for i = 0, segments do
+        local angle = (i / segments) * math.pi * 2
+        local worldPoint = center + Vector(math.cos(angle) * radius, math.sin(angle) * radius, 0)
+        local screenPos, visible = Render.WorldToScreen(worldPoint)
+
+        if visible then
+            if prevScreen then
+                Render.Line(prevScreen, screenPos, color, thickness)
+            else
+                firstScreen = screenPos
+            end
+            prevScreen = screenPos
+        else
+            prevScreen = nil
+        end
+    end
+
+    if firstScreen and prevScreen then
+        Render.Line(prevScreen, firstScreen, color, thickness)
+    end
+end
+
+local function DrawRunePullRadius()
+    if not RuneDraw:Get() then return end
+
+    local hero = my_hero
+    if not hero or not Entity.IsAlive(hero) then
+        hero = localArcWarden()
+        if not hero or not Entity.IsAlive(hero) then return end
+    end
+
+    local mf = NPC.GetAbility(hero, "arc_warden_magnetic_field")
+    if not mf then return end
+
+    local pullRadius = Ability.GetLevelSpecialValueFor(mf, "rune_pull_radius")
+    if not pullRadius or pullRadius <= 0 then return end
+
+    local heroPos = Entity.GetAbsOrigin(hero)
+    if not heroPos then return end
+
+    DrawWorldCircle(heroPos, pullRadius, RUNE_DRAW_COLOR, RUNE_DRAW_THICKNESS)
+end
+
+local _originalOnDraw = script.OnDraw
+script.OnDraw = function()
+    if _originalOnDraw then _originalOnDraw() end
+    DrawRunePullRadius()
+end
+
 function script.OnGameEnd()
     state_inv.lastMove = 0
     state_inv.pendingItem = nil
@@ -1577,12 +1537,8 @@ function script.OnGameEnd()
     state_mjollnir.pendingItem = nil
     state_mjollnir.lastMoonShardActive = false
     state_bkb.pendingItem = nil
-    state_swap.lastMove = 0
-    state_swap.lastKeyState = false
-    state_swap.secondStep = nil
-    state_swap.lastInventoryHash = ""
-    state_swap.invNameMap = {}
-    state_swap.bpNameMap = {}
+    state_cdswap.lastMove = 0
+    state_cdswap.pendingItem = nil
     my_hero = nil
     tempest_double = nil
     active_hooks = {}
