@@ -19,11 +19,12 @@ BehaviorScoreHelper — утилита автоматизации повышен
 - Жалоба уходит тем же пакетом, что и при ручном репорте; после неё автоматически ставится размут
 - Авто репорт за фид: отслеживает ранние выкупы через игровые события и жалуется на союзника или врага, который потратил байбек на ранней минуте (время настраивается)
 - Авто лайк: ставит лайки на экране итогов матча через Panorama UI; можно лайкать только союзников или выбранных героев (иконки героев подгружаются из текущей сессии)
+- Интерфейс локализуется на русский и английский с помощью qLocalization
 
 ## Установка
 
-1. Нажмите «Установить» в Script Manager: он загрузит `BehaviorScoreHelper.lua` и четыре файла фильтров в `umbrella\scripts` и `umbrella\scripts\filters`.
-2. Или скачайте `BehaviorScoreHelper.lua` и положите его вместе с папкой `filters` в `umbrella\scripts`.
+1. Нажмите «Установить» в Script Manager: он загрузит `BehaviorScoreHelper.lua`, qLocalization и четыре файла фильтров в `umbrella\scripts` и `umbrella\scripts\filters`.
+2. Для ручной установки скачайте `BehaviorScoreHelper.lua`, четыре файла из папки `filters` и `!_qLocalizer.lua`; поместите их в `umbrella\scripts` и `umbrella\scripts\filters`.
 3. Перезагрузите Lua-скрипты.
 4. Откройте `Scripts → Utility → Порядочность` и включите нужные вкладки: Авто GG, Авто Репорт, Авто Репорт (Фид) и Авто Лайк.
 
@@ -42,10 +43,11 @@ BehaviorScoreHelper is a Dota 2 utility that automates raising your behavior sco
 - The report is sent with the same packet as a manual report, and the player is unmuted automatically afterwards
 - Auto feed report: tracks early buybacks through game events and reports an ally or enemy who spends a buyback early in the match (time is configurable)
 - Auto like: presses likes on the post-match screen through Panorama UI; like only allies or selected heroes (hero icons are loaded from the current session)
+- The interface is localized in Russian and English with qLocalization
 
 ## Install
 
-1. Click Install in Script Manager to download `BehaviorScoreHelper.lua` and the four filter files into `umbrella\scripts` and `umbrella\scripts\filters`.
-2. Or download `BehaviorScoreHelper.lua` and place it with the `filters` folder in `umbrella\scripts`.
+1. Click Install in Script Manager to download `BehaviorScoreHelper.lua`, qLocalization, and the four filter files into `umbrella\scripts` and `umbrella\scripts\filters`.
+2. For manual installation, download `BehaviorScoreHelper.lua`, the four files from the `filters` folder, and `!_qLocalizer.lua`; place them in `umbrella\scripts` and `umbrella\scripts\filters`.
 3. Reload the Lua scripts.
-4. Open `Scripts → Utility → Порядочность` and enable the tabs you need: Авто GG, Авто Репорт, Авто Репорт (Фид), and Авто Лайк.
+4. Open `Scripts → Utility → Behavior Score` and enable the tabs you need: Auto GG, Auto Report, Auto Report (Feed), and Auto Like.

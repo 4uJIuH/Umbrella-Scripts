@@ -1,8 +1,125 @@
-local SCRIPT_VERSION = "1.0.0"
+local SCRIPT_VERSION = "1.1.0"
 local test = {}
 
 local protobuf = require('protobuf')
 local JSON = require('assets.JSON')
+
+local qLoc = qLocalization
+if type(qLoc) ~= "table" or type(qLoc.new) ~= "function" then
+    local ok, lib = pcall(require, "!_qLocalizer")
+    if ok and type(lib) == "table" and type(lib.new) == "function" then
+        qLoc = lib
+    else
+        qLoc = nil
+        print("[bh_helper] qLocalization not found; using Russian menu labels")
+    end
+end
+
+local translations = {
+    en = {
+        behavior_score = {
+            tab = "Behavior Score",
+            tabs = {
+                gg = "Auto GG",
+                report = "Auto Report",
+                feed = "Auto Report (Feed)",
+                like = "Auto Like",
+            },
+            settings = "Settings",
+            enabled = "Enabled",
+            gg_message = "Message after win/loss",
+            gg_custom = "Custom message",
+            gg_delay = "Delay after throne destruction (sec)",
+            gg_all_chat = "All chat",
+            greet_enabled = "Greet at game start",
+            greet_all_chat = "Send greeting to all chat",
+            greet_message = "Greeting text",
+            report_target = "Target",
+            target_enemies = "Enemies only",
+            target_allies = "Allies only",
+            target_all = "Everyone",
+            report_unmute = "Auto-unmute after report",
+            report_console = "Log to console",
+            report_search = "Search mode",
+            search_exact = "Exact word",
+            search_contains = "Contains substring",
+            search_both = "Both",
+            report_file = "Write reports to file",
+            report_quiet = "Quiet mode (hide banner)",
+            feed_minute = "Buyback minute (before)",
+            like_refresh = "Refresh likes",
+            like_allies = "Allies only",
+            heroes = "Hero selection",
+            like = "Like",
+            gg_options = {
+                message_1 = "Thanks for the game",
+                message_2 = "Thanks for the game, likes for everyone",
+                message_3 = "gg, please give likes",
+                message_4 = "Please give likes",
+                message_5 = "Thanks for the game, likes for everyone",
+                message_6 = "gl next, don't forget to like",
+                custom = "Custom message (from the field below)",
+            },
+        },
+    },
+    ru = {
+        behavior_score = {
+            tab = "Порядочность",
+            tabs = {
+                gg = "Авто GG",
+                report = "Авто Репорт",
+                feed = "Авто Репорт (Фид)",
+                like = "Авто Лайк",
+            },
+            settings = "Настройки",
+            enabled = "Включено",
+            gg_message = "Сообщение при победе/лузе",
+            gg_custom = "Своё сообщение",
+            gg_delay = "Задержка после разрушения трона (сек)",
+            gg_all_chat = "Общий чат",
+            greet_enabled = "Приветствие в начале игры",
+            greet_all_chat = "Приветствие в общий чат",
+            greet_message = "Текст приветствия",
+            report_target = "Цель",
+            target_enemies = "Только враги",
+            target_allies = "Только союзники",
+            target_all = "Все",
+            report_unmute = "Авто-размут после репорта",
+            report_console = "Логировать в консоль",
+            report_search = "Режим поиска",
+            search_exact = "Точное слово",
+            search_contains = "Содержит подстроку",
+            search_both = "Оба",
+            report_file = "Писать репорты в файл",
+            report_quiet = "Тихий режим (скрыть баннер)",
+            feed_minute = "Минута байбека (до)",
+            like_refresh = "Обновить лайк",
+            like_allies = "Только союзники",
+            heroes = "Выбор героев",
+            like = "Лайк",
+            gg_options = {
+                message_1 = "спс за игру",
+                message_2 = "спасибо за игру, лайк всем",
+                message_3 = "gg киньте лайк пж",
+                message_4 = "киньте лайк пж",
+                message_5 = "спасибо за игру, лайкосик всем",
+                message_6 = "gl next лайк не забудьте",
+                custom = "Своё сообщение (из поля ниже)",
+            },
+        },
+    },
+}
+
+local localization = qLoc and qLoc.new(translations) or nil
+local MenuLib = localization and localization.WrapLibrary and localization.WrapLibrary(Menu) or Menu
+
+local function menuLabel(key, fallback)
+    return localization and key or fallback
+end
+
+local function menuOptions(keys, fallback)
+    return localization and keys or fallback
+end
 
 local cyrillic_lower_map = {
     ["А"]="а", ["Б"]="б", ["В"]="в", ["Г"]="г", ["Д"]="д", ["Е"]="е", ["Ё"]="ё", ["Ж"]="ж",
@@ -20,17 +137,17 @@ local function utf8_lower(str)
     return res
 end
 
-local mainMenu = Menu.Create("Scripts", "Utility")
-local mainTab = mainMenu:Create("Порядочность")
+local mainMenu = MenuLib.Create("Scripts", "Utility")
+local mainTab = mainMenu:Create(menuLabel("behavior_score.tab", "Порядочность"))
 mainTab:Icon("\u{f164}")
 
-local tabGG = mainTab:Create("Авто GG")
-local tabReport = mainTab:Create("Авто Репорт")
-local tabFeed = mainTab:Create("Авто Репорт (Фид)")
-local tabLike = mainTab:Create("Авто Лайк")
+local tabGG = mainTab:Create(menuLabel("behavior_score.tabs.gg", "Авто GG"))
+local tabReport = mainTab:Create(menuLabel("behavior_score.tabs.report", "Авто Репорт"))
+local tabFeed = mainTab:Create(menuLabel("behavior_score.tabs.feed", "Авто Репорт (Фид)"))
+local tabLike = mainTab:Create(menuLabel("behavior_score.tabs.like", "Авто Лайк"))
 
-local ggSection = tabGG:Create("Настройки")
-local ggEnabled = ggSection:Switch("Включено", false, "\u{f00c}")
+local ggSection = tabGG:Create(menuLabel("behavior_score.settings", "Настройки"))
+local ggEnabled = ggSection:Switch(menuLabel("behavior_score.enabled", "Включено"), false, "\u{f00c}")
 local ggMessages = {
     "спс за игру",
     "спасибо за игру, лайк всем",
@@ -40,40 +157,57 @@ local ggMessages = {
     "gl next лайк не забудьте",
     "Своё сообщение (из поля ниже)"
 }
-local ggMessageSelect = ggSection:Combo("Сообщение при победе/лузе", ggMessages)
-local ggCustomMessage = ggSection:Input("Своё сообщение", "gg wp")
-local ggDelay = ggSection:Slider("Задержка после разрушения трона (сек)", 0, 5, 0)
-local ggAllChat = ggSection:Switch("Общий чат", true)
+local ggMessageOptions = {
+    "behavior_score.gg_options.message_1",
+    "behavior_score.gg_options.message_2",
+    "behavior_score.gg_options.message_3",
+    "behavior_score.gg_options.message_4",
+    "behavior_score.gg_options.message_5",
+    "behavior_score.gg_options.message_6",
+    "behavior_score.gg_options.custom",
+}
+local ggMessageSelect = ggSection:Combo(menuLabel("behavior_score.gg_message", "Сообщение при победе/лузе"), menuOptions(ggMessageOptions, ggMessages))
+local ggCustomMessage = ggSection:Input(menuLabel("behavior_score.gg_custom", "Своё сообщение"), "gg wp")
+local ggDelay = ggSection:Slider(menuLabel("behavior_score.gg_delay", "Задержка после разрушения трона (сек)"), 0, 5, 0)
+local ggAllChat = ggSection:Switch(menuLabel("behavior_score.gg_all_chat", "Общий чат"), true)
 
-local greetEnabled = ggSection:Switch("Приветствие в начале игры", false, "\u{f0a1}")
-local greetAllChat = ggSection:Switch("Приветствие в общий чат", false)
-local greetMessage = ggSection:Input("Текст приветствия", "gl hf!")
+local greetEnabled = ggSection:Switch(menuLabel("behavior_score.greet_enabled", "Приветствие в начале игры"), false, "\u{f0a1}")
+local greetAllChat = ggSection:Switch(menuLabel("behavior_score.greet_all_chat", "Приветствие в общий чат"), false)
+local greetMessage = ggSection:Input(menuLabel("behavior_score.greet_message", "Текст приветствия"), "gl hf!")
 
-local reportSection = tabReport:Create("Настройки")
-local reportEnabled = reportSection:Switch("Включено", false, "\u{f00c}")
-local reportTargetMode = reportSection:Combo("Цель", {"Только враги", "Только союзники", "Все"})
-local reportAutoUnmute = reportSection:Switch("Авто-размут после репорта", true, "\u{f028}")
-local reportNotify = reportSection:Switch("Логировать в консоль", true)
-local reportMatchMode = reportSection:Combo("Режим поиска", {"Точное слово", "Содержит подстроку", "Оба"})
+local reportSection = tabReport:Create(menuLabel("behavior_score.settings", "Настройки"))
+local reportEnabled = reportSection:Switch(menuLabel("behavior_score.enabled", "Включено"), false, "\u{f00c}")
+local reportTargetMode = reportSection:Combo(menuLabel("behavior_score.report_target", "Цель"), menuOptions({
+    "behavior_score.target_enemies",
+    "behavior_score.target_allies",
+    "behavior_score.target_all",
+}, {"Только враги", "Только союзники", "Все"}))
+local reportAutoUnmute = reportSection:Switch(menuLabel("behavior_score.report_unmute", "Авто-размут после репорта"), true, "\u{f028}")
+local reportNotify = reportSection:Switch(menuLabel("behavior_score.report_console", "Логировать в консоль"), true)
+local reportMatchMode = reportSection:Combo(menuLabel("behavior_score.report_search", "Режим поиска"), menuOptions({
+    "behavior_score.search_exact",
+    "behavior_score.search_contains",
+    "behavior_score.search_both",
+}, {"Точное слово", "Содержит подстроку", "Оба"}))
 reportMatchMode:Icon("\u{f002}")
-local reportLogToFile = reportSection:Switch("Писать репорты в файл", true, "\u{f15c}")
-local reportStreamMode = reportSection:Switch("Тихий режим (скрыть баннер)", false, "\u{f070}")
+local reportLogToFile = reportSection:Switch(menuLabel("behavior_score.report_file", "Писать репорты в файл"), true, "\u{f15c}")
+local reportStreamMode = reportSection:Switch(menuLabel("behavior_score.report_quiet", "Тихий режим (скрыть баннер)"), false, "\u{f070}")
 
-local feedSection = tabFeed:Create("Настройки")
-local feedEnabled = feedSection:Switch("Включено", false, "\u{f00c}")
-local feedMinutes = feedSection:Slider("Минута байбека (до)", 1, 20, 10)
+local feedSection = tabFeed:Create(menuLabel("behavior_score.settings", "Настройки"))
+local feedEnabled = feedSection:Switch(menuLabel("behavior_score.enabled", "Включено"), false, "\u{f00c}")
+local feedMinutes = feedSection:Slider(menuLabel("behavior_score.feed_minute", "Минута байбека (до)"), 1, 20, 10)
 
-local likeSettings = tabLike:Create("Настройки")
-local likes_enabled = likeSettings:Switch("Включено", true, "\u{f00c}")
-local switcherLikeRefresh = likeSettings:Switch("Обновить лайк", false)
+local likeSettings = tabLike:Create(menuLabel("behavior_score.settings", "Настройки"))
+local likes_enabled = likeSettings:Switch(menuLabel("behavior_score.enabled", "Включено"), true, "\u{f00c}")
+local switcherLikeRefresh = likeSettings:Switch(menuLabel("behavior_score.like_refresh", "Обновить лайк"), false)
 switcherLikeRefresh:Icon("\u{f2f9}")
-local alliesOnlySwitch = likeSettings:Switch("Только союзники", false)
+local alliesOnlySwitch = likeSettings:Switch(menuLabel("behavior_score.like_allies", "Только союзники"), false)
 alliesOnlySwitch:Icon("\u{f2b5}")
 
-local likeTeams = tabLike:Create("Выбор героев")
-local likeRad = likeTeams:MultiSelect("Лайк", {}, true)
+local likeTeams = tabLike:Create(menuLabel("behavior_score.heroes", "Выбор героев"))
+local likeRad = likeTeams:MultiSelect(menuLabel("behavior_score.like", "Лайк"), {}, true)
 likeRad:Icon("\u{e5d2}")
-local likeDir = likeTeams:MultiSelect("Лайк", {}, true)
+local likeDir = likeTeams:MultiSelect(menuLabel("behavior_score.like", "Лайк"), {}, true)
 likeDir:Icon("\u{e037}")
 
 local whitelistSubstrings = {

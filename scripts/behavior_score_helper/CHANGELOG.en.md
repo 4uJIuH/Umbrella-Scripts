@@ -1,3 +1,9 @@
+# Update v1.1.0
+
+- Added Russian and English interface localization through qLocalization.
+- Script Manager now installs qLocalization with the script.
+- Added manual installation instructions for the localizer and filter files.
+
 # Update v1.0.0
 
 - Initial release of BehaviorScoreHelper.

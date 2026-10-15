@@ -25,7 +25,7 @@ class MenuLocationsTests(unittest.TestCase):
     def test_documentation_completes_short_menu_calls(self):
         self.assertEqual(
             paths_for(self.by_id["behavior_score_helper"])["en"],
-            ["Scripts → Utility → Порядочность"],
+            ["Scripts → Utility → Behavior Score"],
         )
 
     def test_dynamic_menu_paths_are_explicit(self):
