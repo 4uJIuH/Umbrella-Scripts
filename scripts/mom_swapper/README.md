@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`mom-swapper-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/mom-swapper-v1.0.0) | 2026-10-13 | [mom_swapper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/mom-swapper-v1.0.0/mom_swapper.lua) | 0 |
+| [`mom-swapper-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/mom-swapper-v1.0.0) | 2026-10-13 | [mom_swapper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/mom-swapper-v1.0.0/mom_swapper.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=mom-swapper&expanded=true)
 <!-- releases:end -->

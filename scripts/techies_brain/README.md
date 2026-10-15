@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`techies-brain-v0.2.6`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/techies-brain-v0.2.6) | 2026-10-13 | [techies_brain.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-brain-v0.2.6/techies_brain.lua) | 0 |
+| [`techies-brain-v0.2.6`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/techies-brain-v0.2.6) | 2026-10-13 | [techies_brain.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-brain-v0.2.6/techies_brain.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=techies-brain&expanded=true)
 <!-- releases:end -->

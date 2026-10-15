@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`sd-poison-5-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/sd-poison-5-v1.0.0) | 2026-10-13 | [sd_poison_5.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/sd-poison-5-v1.0.0/sd_poison_5.lua) | 0 |
+| [`sd-poison-5-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/sd-poison-5-v1.0.0) | 2026-10-13 | [sd_poison_5.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/sd-poison-5-v1.0.0/sd_poison_5.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=sd-poison-5&expanded=true)
 <!-- releases:end -->

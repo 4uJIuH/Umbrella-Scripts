@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`huskar-life-break-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/huskar-life-break-v1.0.0) | 2026-10-13 | [huskar_life_break.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/huskar-life-break-v1.0.0/huskar_life_break.lua) | 0 |
+| [`huskar-life-break-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/huskar-life-break-v1.0.0) | 2026-10-13 | [huskar_life_break.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/huskar-life-break-v1.0.0/huskar_life_break.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=huskar-life-break&expanded=true)
 <!-- releases:end -->

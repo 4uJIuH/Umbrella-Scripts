@@ -1,31 +1,31 @@
 # Lone Druid Bear AI Deluxe
 
-автоматически управляет медведем Lone Druid / automatically controls Lone Druid's bear
+расширенное управление Spirit Bear для Lone Druid / advanced Spirit Bear control for Lone Druid
 
 <!-- releases:start -->
 Скачать: [lone_druid_bear_ai_deluxe.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/lone-druid-bear-ai-deluxe-v1.0.0/lone_druid_bear_ai_deluxe.lua) — `lone-druid-bear-ai-deluxe-v1.0.0`, 2026-10-13
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`lone-druid-bear-ai-deluxe-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/lone-druid-bear-ai-deluxe-v1.0.0) | 2026-10-13 | [lone_druid_bear_ai_deluxe.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/lone-druid-bear-ai-deluxe-v1.0.0/lone_druid_bear_ai_deluxe.lua) | 1 |
+| [`lone-druid-bear-ai-deluxe-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/lone-druid-bear-ai-deluxe-v1.0.0) | 2026-10-13 | [lone_druid_bear_ai_deluxe.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/lone-druid-bear-ai-deluxe-v1.0.0/lone_druid_bear_ai_deluxe.lua) | 3 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=lone-druid-bear-ai-deluxe&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
 
-Расширенный ИИ для Spirit Bear с режимами следования, фарма, пуша и стака. Многие функции требуют Aghanim's Scepter.
+Предоставляет режимы фарма, пуша и стаков, управление выживанием и предметами медведя, а также горячие клавиши и визуальные настройки. Большинство режимов включаются отдельно.
 
-- Режимы Follow, Forest Farm и Lane Push; быстрые переключатели F7, F6 и F5
-- Выбирает кемпы и цели для ластхита, стакает и зеркалит атаки героя
-- Отводит медведя при низком здоровье или угрозе, использует Roar и предметы
-- Показывает состояние, инвентарь, режим и цель медведя в перемещаемой панели
+- Режимы фарма леса, пуша линии и создания стаков
+- Настройки логики с Aghanim's Scepter
+- Выживание медведя и управление предметами
+- Настраиваемые хоткеи, визуал и язык меню
 
 ## Установка
 
-1. Поместите `lone_druid_bear_ai_deluxe.lua` в `umbrella\scripts`.
-2. Перезагрузите скрипты и настройте Lone Druid в списке героев.
-3. Проверьте требования к Aghanim's Scepter для режимов фарма, пуша и стака.
+1. Поместите `LoneDruidBearAIDeluxe.lua` в `umbrella\scripts`.
+2. Перезагрузите Lua-скрипты.
+3. Откройте `Heroes → Hero List → Lone Druid → Bear AI Deluxe`.
 
 ---
 
@@ -33,15 +33,15 @@
 
 ## What it does
 
-An expanded AI for Spirit Bear with follow, farm, push, and stack modes. Many features require Aghanim's Scepter.
+Provides farming, pushing, and stacking modes, bear survival and item management, hotkeys, and visual options. Most modes are enabled separately.
 
-- Follow, Forest Farm, and Lane Push modes with F7, F6, and F5 hotkeys
-- Selects camps and last-hit targets, stacks camps, and mirrors the hero's attacks
-- Retreats at low health or under threat, and uses Roar and items
-- Shows the bear's status, inventory, mode, and target in a draggable panel
+- Forest farming, lane pushing, and camp stacking modes
+- Aghanim's Scepter logic options
+- Bear survival and item management
+- Configurable hotkeys, visuals, and menu language
 
 ## Install
 
-1. Place `lone_druid_bear_ai_deluxe.lua` in `umbrella\scripts`.
-2. Reload scripts and configure Lone Druid in the hero list.
-3. Check the Aghanim's Scepter requirements for farm, push, and stack modes.
+1. Place `LoneDruidBearAIDeluxe.lua` in `umbrella\scripts`.
+2. Reload Lua scripts.
+3. Open `Heroes → Hero List → Lone Druid → Bear AI Deluxe`.

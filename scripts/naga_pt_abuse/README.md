@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`naga-pt-abuse-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/naga-pt-abuse-v1.0.0) | 2026-10-13 | [nagapt.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/naga-pt-abuse-v1.0.0/nagapt.lua) | 1 |
+| [`naga-pt-abuse-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/naga-pt-abuse-v1.0.0) | 2026-10-13 | [nagapt.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/naga-pt-abuse-v1.0.0/nagapt.lua) | 3 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=naga-pt-abuse&expanded=true)
 <!-- releases:end -->
