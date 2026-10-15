@@ -3,13 +3,9 @@
 показывает нужные токены и героев для Dark Carnival / shows the tokens and heroes needed for Dark Carnival
 
 <!-- releases:start -->
-Скачать: [dark_carnival_path_tokens.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dark-carnival-path-tokens-v1.0.0/dark_carnival_path_tokens.lua) — `dark-carnival-path-tokens-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `dark_carnival_path_tokens.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dark_carnival_path_tokens/dark_carnival_path_tokens.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`dark-carnival-path-tokens-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/dark-carnival-path-tokens-v1.0.0) | 2026-10-13 | [dark_carnival_path_tokens.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dark-carnival-path-tokens-v1.0.0/dark_carnival_path_tokens.lua) | 2 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=dark-carnival-path-tokens&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=dark-carnival-path-tokens&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
