@@ -3,11 +3,12 @@
 умный пуш крип-волн клоном Arc Warden / smart creep-wave pushing with Arc Warden's clone
 
 <!-- releases:start -->
-Скачать: [ArcWardenWavePusher.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-wave-pusher-v1.0.1/ArcWardenWavePusher.lua) — `arc-warden-wave-pusher-v1.0.1`, 2026-10-15
+Скачать: [ArcWardenWavePusher.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-wave-pusher-v1.1.0/ArcWardenWavePusher.lua) — `arc-warden-wave-pusher-v1.1.0`, 2026-10-15
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`arc-warden-wave-pusher-v1.0.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/arc-warden-wave-pusher-v1.0.1) | 2026-10-15 | [ArcWardenWavePusher.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-wave-pusher-v1.0.1/ArcWardenWavePusher.lua) | 2 |
+| [`arc-warden-wave-pusher-v1.1.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/arc-warden-wave-pusher-v1.1.0) | 2026-10-15 | [ArcWardenWavePusher.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-wave-pusher-v1.1.0/ArcWardenWavePusher.lua) | 0 |
+| [`arc-warden-wave-pusher-v1.0.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/arc-warden-wave-pusher-v1.0.1) | 2026-10-15 | [ArcWardenWavePusher.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-wave-pusher-v1.0.1/ArcWardenWavePusher.lua) | 3 |
 | [`arc-warden-wave-pusher-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/arc-warden-wave-pusher-v1.0.0) | 2026-10-15 | [ArcWardenWavePusher.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-wave-pusher-v1.0.0/ArcWardenWavePusher.lua) | 2 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-wave-pusher&expanded=true)
@@ -22,7 +23,7 @@
 - Выбирает позицию для атаки дальников и знаменосца и ставит Magnetic Field под клона
 - Подсвечивает текущую цель кольцом: голубым для дальника, золотым для знаменосца
 - Передаёт зачистку мили-крипов и вышек базовому скрипту и уступает ему во время комбо по герою
-- Настройка «Уступать комбо и при врагах рядом» приостанавливает пуш при активном комбо или враге рядом; включена по умолчанию
+- Настройка позволяет уступать комбо и приостанавливать пуш при появлении вражеского героя рядом
 - Названия настроек и подсказки переключаются между русским и английским языками
 
 ## Установка
@@ -33,10 +34,10 @@
 
 ## Что нового
 
-## 1.1.0
+# 1.1.0
 
-- Добавлена настройка «Уступать комбо и при врагах рядом»; она включена по умолчанию.
-- При активном комбо или появлении вражеского героя поблизости клон уступает управление.
+- Добавлена настройка, позволяющая клону уступать управление комбо и не начинать пуш, когда рядом есть вражеский герой.
+- Настройка доступна в русском и английском интерфейсах и включена по умолчанию.
 
 ## 1.0.1
 
@@ -56,7 +57,7 @@ An add-on for Arc Warden clone auto-play that helps secure more lane creeps by p
 - Positions to reach ranged creeps and the flagbearer, and places Magnetic Field under the clone
 - Highlights the current target with a ring: cyan for ranged creeps and gold for the flagbearer
 - Yields melee creep and tower cleanup to the base script and yields during hero combos
-- The “Yield to Combo & Nearby Heroes” option pauses pushing for active combos or nearby enemies; enabled by default
+- An option yields to combos and pauses pushing when an enemy hero is nearby
 - Menu labels and tooltips switch between Russian and English
 
 ## Install
@@ -67,10 +68,10 @@ An add-on for Arc Warden clone auto-play that helps secure more lane creeps by p
 
 ## Changelog
 
-## 1.1.0
+# 1.1.0
 
-- Added the “Yield to Combo & Nearby Heroes” option, enabled by default.
-- The clone yields control while a combo is active or an enemy hero is nearby.
+- Added an option for the clone to yield control to combos and pause pushing when an enemy hero is nearby.
+- The option is available in Russian and English and is enabled by default.
 
 ## 1.0.1
 

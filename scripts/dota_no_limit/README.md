@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`dota-no-limit-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/dota-no-limit-v1.0.0) | 2026-10-13 | [dota_no_limit.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dota-no-limit-v1.0.0/dota_no_limit.lua) | 0 |
+| [`dota-no-limit-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/dota-no-limit-v1.0.0) | 2026-10-13 | [dota_no_limit.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dota-no-limit-v1.0.0/dota_no_limit.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=dota-no-limit&expanded=true)
 <!-- releases:end -->

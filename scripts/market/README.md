@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`market-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/market-v1.0.0) | 2026-10-13 | [market.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/market-v1.0.0/market.lua) | 5 |
+| [`market-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/market-v1.0.0) | 2026-10-13 | [market.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/market-v1.0.0/market.lua) | 7 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=market&expanded=true)
 <!-- releases:end -->

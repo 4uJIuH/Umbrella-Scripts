@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`mute-voice-lines-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/mute-voice-lines-v1.0.0) | 2026-10-13 | [mute_voice_lines.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/mute-voice-lines-v1.0.0/mute_voice_lines.lua) | 0 |
+| [`mute-voice-lines-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/mute-voice-lines-v1.0.0) | 2026-10-13 | [mute_voice_lines.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/mute-voice-lines-v1.0.0/mute_voice_lines.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=mute-voice-lines&expanded=true)
 <!-- releases:end -->

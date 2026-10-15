@@ -3,13 +3,9 @@
 автоматизирует Solar Guardian для сейва и контринициации / automates Solar Guardian saves and counter-initiation
 
 <!-- releases:start -->
-Скачать: [dawnbreaker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dawnbreaker-solar-guardian-v1.0.0/dawnbreaker.lua) — `dawnbreaker-solar-guardian-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `dawnbreaker.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dawnbreaker_solar_guardian/dawnbreaker.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`dawnbreaker-solar-guardian-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/dawnbreaker-solar-guardian-v1.0.0) | 2026-10-13 | [dawnbreaker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dawnbreaker-solar-guardian-v1.0.0/dawnbreaker.lua) | 3 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=dawnbreaker-solar-guardian&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=dawnbreaker-solar-guardian&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

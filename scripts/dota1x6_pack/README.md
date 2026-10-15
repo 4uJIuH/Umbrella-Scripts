@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`dota-1x6-pack-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/dota-1x6-pack-v1.0.0) | 2026-10-13 | [dota1x6_pack.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dota-1x6-pack-v1.0.0/dota1x6_pack.lua) | 5 |
+| [`dota-1x6-pack-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/dota-1x6-pack-v1.0.0) | 2026-10-13 | [dota1x6_pack.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dota-1x6-pack-v1.0.0/dota1x6_pack.lua) | 7 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=dota-1x6-pack&expanded=true)
 <!-- releases:end -->

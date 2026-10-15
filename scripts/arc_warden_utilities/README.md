@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`arc-warden-utilities-v1.1.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/arc-warden-utilities-v1.1.0) | 2026-10-15 | [arc_warden_utilities.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-utilities-v1.1.0/arc_warden_utilities.lua) | 5 |
+| [`arc-warden-utilities-v1.1.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/arc-warden-utilities-v1.1.0) | 2026-10-15 | [arc_warden_utilities.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/arc-warden-utilities-v1.1.0/arc_warden_utilities.lua) | 6 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=arc-warden-utilities&expanded=true)
 <!-- releases:end -->
