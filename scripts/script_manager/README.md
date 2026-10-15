@@ -3,10 +3,11 @@
 каталог скриптов Umbrella с установкой и обновлениями / an Umbrella script catalog with script installation and updates
 
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.7.0/script_manager.lua) — `script-manager-v2.7.0`, 2026-10-15
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.7.1/script_manager.lua) — `script-manager-v2.7.1`, 2026-10-15
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
+| [`script-manager-v2.7.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.7.1) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.7.1/script_manager.lua) | 0 |
 | [`script-manager-v2.7.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.7.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.7.0/script_manager.lua) | 0 |
 | [`script-manager-v2.6.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.6.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.6.0/script_manager.lua) | 2 |
 | [`script-manager-v2.5.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.5.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.5.0/script_manager.lua) | 3 |

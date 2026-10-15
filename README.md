@@ -389,7 +389,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 23 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 59 | `script-manager-v2.7.0` |
+| [Script Manager](scripts/script_manager) | 59 | `script-manager-v2.7.1` |
 | [Dynamic Island](scripts/dynamic_island_dota) | 592 | `v2.5.3` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 1 | `tinker-smart-escape-v1.0.0` |
 | [Lane Pull](scripts/lane_pull) | 236 | `lane-pull-v1.0.4` |
@@ -498,7 +498,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Camp Stacker](scripts/stacker) | 2 | `camp-stacker-v1.0.0` |
 | [Auto-Ruin](scripts/auto_ruin) | 0 | `auto-ruin-v1.0.0` |
 | [Broodmother Helper](scripts/broodmother_helper) | 0 | `broodmother-helper-v2.1` |
-| [Script Market](scripts/market) | 0 | `market-v1.0.0` |
+| [Script Market](scripts/market) | 1 | `market-v1.0.0` |
 | [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) | 1 | `mmr-tracker-ultimate-v1.0.0` |
 | [Glyph Timer](scripts/glyph_timer) | 1 | `glyph-timer-v1.0.0` |
 | [Rampage Timer](scripts/rampage_timer_h) | 0 | `rampage-timer-h-v1.0.0` |
