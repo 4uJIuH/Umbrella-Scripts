@@ -8,7 +8,6 @@
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
 | [`creep-control-v1.0.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/creep-control-v1.0.1) | 2026-10-14 | [creep_control.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/creep-control-v1.0.1/creep_control.lua) | 3 |
-| [`creep-control-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/creep-control-v1.0.0) | 2026-10-13 | [creep_control.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/creep-control-v1.0.0/creep_control.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=creep-control&expanded=true)
 <!-- releases:end -->

@@ -687,8 +687,8 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Glyph Timer](scripts/glyph_timer) | 7 | `glyph-timer-v1.0.0` |
 | [Rampage Timer](scripts/rampage_timer_h) | 0 | `rampage-timer-h-v1.0.0` |
 | [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) | 3 | `lone-druid-bear-ai-deluxe-v1.0.0` |
-| [PudgeHook AI](scripts/pudge_hook_ai) | 0 | `pudge-hook-ai-v1.0.0` |
-| [Arc Warden Wave Pusher](scripts/arc_warden_wave_pusher) | 0 | `arc-warden-wave-pusher-v1.0.0` |
+| [PudgeHook AI](scripts/pudge_hook_ai) | 1 | `pudge-hook-ai-v1.0.0` |
+| [Arc Warden Wave Pusher](scripts/arc_warden_wave_pusher) | 0 | `arc-warden-wave-pusher-v1.0.1` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
