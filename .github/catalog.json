@@ -10808,6 +10808,106 @@
           "Open `Scripts → Utility → Шагомер`."
         ]
       }
+    },
+    {
+      "id": "luchik",
+      "tag": "luchik",
+      "title": "Sunbeam",
+      "kind": "lua",
+      "category": "dota",
+      "file": "luchik.lua",
+      "heroes": [],
+      "author": "Лёха, Ваня и Виталик (Discord: mikropabalo)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/luchik",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=luchik&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/luchik/luchik.lua"
+      },
+      "ru": {
+        "tagline": "ревнивый смайлик-компаньон, который реагирует на события матча",
+        "about": "Лучик висит над героем и меняет настроение в зависимости от убийств, здоровья, пропавших врагов, смерти, внимания игрока и близости союзников. Может писать союзникам и рисовать рожицы на миникарте. По умолчанию сообщения, рисунки, звуки и скримеры включены; звуки и экранный эффект видит только игрок.",
+        "features": [
+          "Реагирует на убийства, низкое здоровье, пропавших врагов и смерть героя",
+          "Становится обиженным и ревнивым, если его долго игнорировать или стоять рядом с союзниками",
+          "Меняет выражение в трёх настроениях; на пределе может показать полноэкранный скример",
+          "Может отправлять сообщения союзникам и рисовать рожицы вокруг героя на миникарте",
+          "Настраиваются размер, бинд разговора, чат, рисунки, звуки, громкость, скримеры и шкала злости"
+        ],
+        "install": [
+          "Поместите `luchik.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Scripts → Utility → Лучик`."
+        ]
+      },
+      "en": {
+        "tagline": "a jealous emoji companion reacting to match events",
+        "about": "Sunbeam floats above your hero and reacts to kills, health, missing enemies, deaths, attention, and nearby allies. It can message allies and draw faces on the minimap. Allied messages, minimap drawings, sounds, and jumpscares are enabled by default; sounds and screen effects are local to you.",
+        "features": [
+          "Reacts to kills, low health, missing enemies, and your hero's death",
+          "Gets offended or jealous when ignored or when you stay near allies",
+          "Cycles through three moods and can show a full-screen jumpscare at maximum anger",
+          "Can message allies and draw faces around your hero on the minimap",
+          "Configure size, talk bind, chat, drawings, sounds, volume, jumpscares, and the anger meter"
+        ],
+        "install": [
+          "Place `luchik.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Scripts → Utility → Лучик`."
+        ]
+      }
+    },
+    {
+      "id": "deny_taunt",
+      "tag": "deny-taunt",
+      "title": "Deny Taunt",
+      "kind": "lua",
+      "category": "dota",
+      "file": "deny_taunt.lua",
+      "heroes": [],
+      "author": "Лёха, Ваня и Виталик (Discord: mikropabalo)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/deny_taunt",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=deny-taunt&expanded=true",
+      "version_marker": "NONE",
+      "initial": {
+        "version": "1.0.0",
+        "date": "2026-10-15",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/deny_taunt/deny_taunt.lua"
+      },
+      "ru": {
+        "tagline": "шуточные сообщения противнику после деная крипа",
+        "about": "После деная своего крипа скрипт ищет ближайшего видимого вражеского героя поблизости и с заданным шансом отправляет ему фразу. По умолчанию сообщения идут в общий чат, пауза — 30 секунд, шанс — 70%; можно переключить чат на союзный или отключить скрипт.",
+        "features": [
+          "Автоматически выбирает ближайшего видимого вражеского героя рядом с заденайным крипом",
+          "Использует 12 встроенных русскоязычных фраз и не повторяет одну фразу два раза подряд",
+          "Можно задать собственные фразы через `;`; `{hero}` заменяется именем героя",
+          "Настраиваются общий или союзный чат, пауза между сообщениями и шанс отправки",
+          "Встроенные подколы без мата; общий чат включён по умолчанию"
+        ],
+        "install": [
+          "Поместите `deny_taunt.lua` в `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Scripts → Utility → Денай-токсик`."
+        ]
+      },
+      "en": {
+        "tagline": "playful chat lines after denying a creep",
+        "about": "After you deny one of your creeps, the script finds the nearest visible enemy hero nearby and may send them a line. By default it uses all-chat, a 30-second cooldown, and a 70% chance; you can switch to allied chat or disable it.",
+        "features": [
+          "Finds the nearest visible enemy hero near the denied creep",
+          "Includes 12 Russian-language lines and avoids repeating the same line twice in a row",
+          "Accepts custom semicolon-separated lines; `{hero}` is replaced with the hero's name",
+          "Configure all-chat or allied chat, message cooldown, and send chance",
+          "Built-in lines are non-profane; all-chat is enabled by default"
+        ],
+        "install": [
+          "Place `deny_taunt.lua` in `umbrella\\scripts`.",
+          "Reload the Lua scripts.",
+          "Open `Scripts → Utility → Денай-токсик`."
+        ]
+      }
     }
   ]
 }

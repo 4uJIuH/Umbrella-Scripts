@@ -4993,6 +4993,44 @@
       },
       "date": "2026-10-15",
       "version_marker": "NONE"
+    },
+    {
+      "id": "luchik",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/luchik/luchik.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/luchik/luchik.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u041b\u0451\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility \u2192 \u041b\u0443\u0447\u0438\u043a \u2192 Main"
+        ],
+        "en": [
+          "Scripts \u2192 Utility \u2192 \u041b\u0443\u0447\u0438\u043a \u2192 Main"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
+    },
+    {
+      "id": "deny_taunt",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/deny_taunt/deny_taunt.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/deny_taunt/deny_taunt.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "\u041b\u0451\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility \u2192 \u0414\u0435\u043d\u0430\u0439-\u0442\u043e\u043a\u0441\u0438\u043a \u2192 Main"
+        ],
+        "en": [
+          "Scripts \u2192 Utility \u2192 \u0414\u0435\u043d\u0430\u0439-\u0442\u043e\u043a\u0441\u0438\u043a \u2192 Main"
+        ]
+      },
+      "date": "2026-10-15",
+      "version_marker": "NONE"
     }
   ]
 }

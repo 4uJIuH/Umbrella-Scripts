@@ -195,6 +195,15 @@ class MenuLocationsTests(unittest.TestCase):
             with self.subTest(script=script_id):
                 self.assertEqual(paths_for(self.by_id[script_id])["en"], paths)
 
+    def test_luchik_and_deny_taunt_menu_paths(self):
+        expected = {
+            "luchik": ["Scripts → Utility → Лучик → Main"],
+            "deny_taunt": ["Scripts → Utility → Денай-токсик → Main"],
+        }
+        for script_id, paths in expected.items():
+            with self.subTest(script=script_id):
+                self.assertEqual(paths_for(self.by_id[script_id])["en"], paths)
+
     def test_latest_addition_menu_paths(self):
         expected = {
             "dust_radius": [

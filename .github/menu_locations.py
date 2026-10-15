@@ -639,6 +639,14 @@ OVERRIDES = {
         "ru": ["Scripts → Utility → Шагомер → Main"],
         "en": ["Scripts → Utility → Шагомер → Main"],
     },
+    "luchik": {
+        "ru": ["Scripts → Utility → Лучик → Main"],
+        "en": ["Scripts → Utility → Лучик → Main"],
+    },
+    "deny_taunt": {
+        "ru": ["Scripts → Utility → Денай-токсик → Main"],
+        "en": ["Scripts → Utility → Денай-токсик → Main"],
+    },
 }
 
 
