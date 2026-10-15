@@ -3,13 +3,9 @@
 автоматизирует перестановку предметов перед использованием Bottle / automates item rearrangement before using Bottle
 
 <!-- releases:start -->
-Скачать: [botle.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/botle-abuse-v1.0.0/botle.lua) — `botle-abuse-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `botle.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/botle/botle.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`botle-abuse-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/botle-abuse-v1.0.0) | 2026-10-13 | [botle.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/botle-abuse-v1.0.0/botle.lua) | 0 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=botle-abuse&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=botle-abuse&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

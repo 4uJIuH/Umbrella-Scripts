@@ -3,11 +3,12 @@
 каталог скриптов Umbrella с установкой и обновлениями / an Umbrella script catalog with script installation and updates
 
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.4.0/script_manager.lua) — `script-manager-v2.4.0`, 2026-10-15
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.5.0/script_manager.lua) — `script-manager-v2.5.0`, 2026-10-15
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`script-manager-v2.4.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.4.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.4.0/script_manager.lua) | 0 |
+| [`script-manager-v2.5.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.5.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.5.0/script_manager.lua) | 0 |
+| [`script-manager-v2.4.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.4.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.4.0/script_manager.lua) | 2 |
 | [`script-manager-v2.3.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.3.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.3.0/script_manager.lua) | 3 |
 | [`script-manager-v2.2.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.2.1) | 2026-10-14 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.2.1/script_manager.lua) | 0 |
 | [`script-manager-v2.2.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.2.0) | 2026-10-13 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.2.0/script_manager.lua) | 29 |
@@ -48,6 +49,11 @@ Script Manager объединяет каталог скриптов в отде�
 4. Откройте `Scripts → Scripts → Script Manager`, включите его и назначьте клавишу для открытия панели.
 
 ## Что нового
+
+# Обновление v2.5.0
+
+- Для скриптов, которые ставятся вместе с папкой (`lib` у Tinker Auto Farm, `filters` у BehaviorScoreHelper), в карточке появилась яркая плашка: какую пустую папку нужно создать в папке скриптов перед установкой.
+- Если менеджер не смог создать такую папку сам, вместо тихой ошибки открывается окно с названием папки и кнопкой «Продолжить»: после создания папки установка продолжится.
 
 # Обновление v2.4.0
 
@@ -142,6 +148,11 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 4. Open `Scripts → Scripts → Script Manager`, enable it, and assign a key to open the panel.
 
 ## Changelog
+
+# Update v2.5.0
+
+- Scripts that install together with a folder (`lib` for Tinker Auto Farm, `filters` for BehaviorScoreHelper) now show a bright notice on their page: which empty folder to create in the scripts folder before installing.
+- If Script Manager cannot create that folder by itself, a window with the folder name and a Continue button opens instead of a quiet error; once the folder exists, the install carries on.
 
 # Update v2.4.0
 

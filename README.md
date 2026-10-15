@@ -389,7 +389,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 22 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 52 | `script-manager-v2.4.0` |
+| [Script Manager](scripts/script_manager) | 54 | `script-manager-v2.5.0` |
 | [Dynamic Island](scripts/dynamic_island_dota) | 590 | `v2.5.3` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 0 | `tinker-smart-escape-v1.0.0` |
 | [Lane Pull](scripts/lane_pull) | 236 | `lane-pull-v1.0.4` |
@@ -398,7 +398,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Auto Stack](scripts/auto_stack) | 129 | `auto-stack-v1.1.0` |
 | [Draft Helper](scripts/draft_helper) | 1242 | `draft-helper-v2.0.0-beta.20` |
 | [MusicUI](scripts/musicui) | 680 | `musicui-v1.0.8` |
-| [Umbrella Lua Developer Skill](scripts/umbrella_lua) | 188 | `umbrella-lua-v1.0.4` |
+| [Umbrella Lua Developer Skill](scripts/umbrella_lua) | 189 | `umbrella-lua-v1.0.4` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
 | [Naga PT Abuse](scripts/naga_pt_abuse) | 1 | `naga-pt-abuse-v1.0.0` |
