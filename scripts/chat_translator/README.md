@@ -3,13 +3,9 @@
 автоматически переводит игровой чат между английским и русским / automatically translates in-game chat between English and Russian
 
 <!-- releases:start -->
-Скачать: [chat_translator.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/chat-translator-v1.0.0/chat_translator.lua) — `chat-translator-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `chat_translator.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/chat_translator/chat_translator.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`chat-translator-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/chat-translator-v1.0.0) | 2026-10-13 | [chat_translator.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/chat-translator-v1.0.0/chat_translator.lua) | 4 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=chat-translator&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=chat-translator&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -31,15 +27,6 @@ Chat Translator переводит сообщения игроков с выбо
 2. Перезагрузите Lua-скрипты.
 3. Откройте `Scripts → Scripts → Chat Translator` и включите скрипт.
 4. Выберите направление перевода; цвета настраиваются в шестерёнке. MyMemory включается отдельно.
-
-## Что нового
-
-# 1.0.0
-
-- Первый релиз «Переводчика чата».
-- Добавлен автоматический перевод сообщений чата между английским и русским с выбором направления.
-- Добавлены кэш переводов, пропуск игровых сокращений и резервная цепочка сервисов перевода.
-- Добавлен необязательный перевод собственных сообщений перед отправкой.
 
 ---
 
@@ -64,12 +51,3 @@ Chat Translator translates players' messages in a selected direction: English to
 2. Reload the Lua scripts.
 3. Open `Scripts → Scripts → Chat Translator` and enable the script.
 4. Choose a translation direction; customize colors in the gear menu. MyMemory is opt-in.
-
-## Changelog
-
-# 1.0.0
-
-- Initial Chat Translator release.
-- Added automatic English/Russian chat translation with a configurable direction.
-- Added a translation cache, common gaming phrase skips, and a fallback chain of translation services.
-- Added optional translation of your own messages before sending.

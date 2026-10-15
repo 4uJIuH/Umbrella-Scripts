@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`old-hud-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/old-hud-v1.0.0) | 2026-10-13 | [old_hud.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/old-hud-v1.0.0/old_hud.lua) | 1 |
+| [`old-hud-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/old-hud-v1.0.0) | 2026-10-13 | [old_hud.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/old-hud-v1.0.0/old_hud.lua) | 2 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=old-hud&expanded=true)
 <!-- releases:end -->

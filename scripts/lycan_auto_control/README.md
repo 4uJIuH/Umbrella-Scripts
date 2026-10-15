@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`lycan-auto-control-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/lycan-auto-control-v1.0.0) | 2026-10-13 | [lycan_auto_control.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/lycan-auto-control-v1.0.0/lycan_auto_control.lua) | 1 |
+| [`lycan-auto-control-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/lycan-auto-control-v1.0.0) | 2026-10-13 | [lycan_auto_control.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/lycan-auto-control-v1.0.0/lycan_auto_control.lua) | 2 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=lycan-auto-control&expanded=true)
 <!-- releases:end -->

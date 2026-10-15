@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`unusual-secret-v2.1.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/unusual-secret-v2.1.0) | 2026-10-13 | [Unusual_Secret.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/unusual-secret-v2.1.0/Unusual_Secret.lua) | 2 |
+| [`unusual-secret-v2.1.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/unusual-secret-v2.1.0) | 2026-10-13 | [Unusual_Secret.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/unusual-secret-v2.1.0/Unusual_Secret.lua) | 3 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=unusual-secret&expanded=true)
 <!-- releases:end -->
