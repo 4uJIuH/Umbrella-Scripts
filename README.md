@@ -378,7 +378,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | script | downloads | latest |
 | --- | --- | --- |
 | [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 4 | `tinker-turret-dodge-v1.1.5` |
-| [Tinker Auto Farm](scripts/tinker_auto_farm) | 6 | `tinker-auto-farm-v1.0.4` |
+| [Tinker Auto Farm](scripts/tinker_auto_farm) | 7 | `tinker-auto-farm-v1.0.4` |
 | [Auto Shackleshot](scripts/auto_shackleshot) | 2 | `auto-shackleshot-v1.0.0` |
 | [Auto Spark](scripts/auto_spark) | 1 | `auto-spark-v1.0.0` |
 | [Rune Destruction](scripts/rune_destruction) | 2 | `rune-destruction-v1.0.2` |
@@ -396,16 +396,16 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [DS Spot Block](scripts/ds_spot_block) | 47 | `ds-spot-block-v1.0.1` |
 | [Custom Background](scripts/custom_background) | 36 | `custom-background-v1.0.0` |
 | [Auto Stack](scripts/auto_stack) | 129 | `auto-stack-v1.1.0` |
-| [Draft Helper](scripts/draft_helper) | 1240 | `draft-helper-v2.0.0-beta.20` |
+| [Draft Helper](scripts/draft_helper) | 1241 | `draft-helper-v2.0.0-beta.20` |
 | [MusicUI](scripts/musicui) | 680 | `musicui-v1.0.8` |
 | [Umbrella Lua Developer Skill](scripts/umbrella_lua) | 188 | `umbrella-lua-v1.0.4` |
 | [Custom Stats](scripts/custom_stats) | 1 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 1 | `bloodrage-autocast-v1.0.0` |
 | [Naga PT Abuse](scripts/naga_pt_abuse) | 1 | `naga-pt-abuse-v1.0.0` |
 | [Auto Aegis Mover](scripts/auto_aegis_mover) | 3 | `auto-aegis-mover-v1.0.0` |
-| [Anti-Rubick](scripts/anti_rubick) | 1 | `anti-rubick-v1.0.0` |
+| [Anti-Rubick](scripts/anti_rubick) | 2 | `anti-rubick-v1.0.0` |
 | [Arc Warden Blocker](scripts/arc_warden_blocker) | 1 | `arc-warden-blocker-v1.0.0` |
-| [Invoker Combo Switcher](scripts/invoker_combo_switcher) | 1 | `invoker-combo-switcher-v1.0.0` |
+| [Invoker Combo Switcher](scripts/invoker_combo_switcher) | 2 | `invoker-combo-switcher-v1.0.0` |
 | [Magnus Skewer Ally](scripts/magnus_skewer_ally) | 1 | `magnus-skewer-ally-v1.0.0` |
 | [Better Better Techies Combo](scripts/better_better_techies_combo) | 2 | `better-better-techies-combo-v1.0.0` |
 | [Chat Translator](scripts/chat_translator) | 0 | `chat-translator-v1.0.0` |
@@ -421,7 +421,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Botle Abuse](scripts/botle) | 0 | `botle-abuse-v1.0.0` |
 | [Action Recorder](scripts/action_recorder) | 1 | `action-recorder-v1.0.0` |
 | [Io Overcharge](scripts/io_overcharge) | 0 | `io-overcharge-v1.0.0` |
-| [Arc Warden Utilities](scripts/arc_warden_utilities) | 0 | `arc-warden-utilities-v1.0.0` |
+| [Arc Warden Utilities](scripts/arc_warden_utilities) | 0 | `arc-warden-utilities-v1.1.0` |
 | [Back Cast](scripts/backwards_cast) | 0 | `backwards-cast-v1.0.0` |
 | [Forge Spirit Farm (Beta)](scripts/forge_spirit_farm_beta) | 0 | `forge-spirit-farm-beta-v0.1.0-beta.1` |
 | [Selection Camera](scripts/selection_camera) | 0 | `selection-camera-v1.1.0` |
@@ -508,5 +508,5 @@ This third-party library is by qfun (qfun_g9s), not my script.
   <img alt="Downloads over time" src=".github/stats/stats-light.svg" width="840">
 </picture>
 
-2026-10-14
+2026-10-15
 <!-- stats:end -->
