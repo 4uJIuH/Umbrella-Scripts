@@ -1,3 +1,7 @@
+# Update v2.7.1
+
+- Fixed downloads for manually installed Lua files: Gank Threat, Achievements, and Counter Items are no longer rejected by ZIP/RAR validation.
+
 # Update v2.7.0
 
 - Package installation now supports nested folders and up to 200 Lua/JSON files. Self Play and LuaLingo can be installed with the Install button instead of manually extracting their archives.

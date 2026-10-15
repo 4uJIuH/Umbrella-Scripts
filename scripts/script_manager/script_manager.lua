@@ -662,7 +662,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.7.0"
+local VERSION = "2.7.1"
 
 local K = {
 	CFG = "script_market",
@@ -1960,9 +1960,15 @@ function market.download(s, done)
 			local valid = false
 			if body then
 				if s.manual then
-					valid = body:sub(1, 2) == "PK"
-						or body:sub(1, 7) == "Rar!\26\7\0"
-						or body:sub(1, 8) == "Rar!\26\7\1\0"
+					local is_lua = type(s.file) == "string" and s.file:lower():match("%.lua$") ~= nil
+					if is_lua then
+						valid = #body > 100 and body:sub(1, 1) ~= "<"
+							and body:sub(1, 2) ~= "PK" and body:sub(1, 4) ~= "Rar!"
+					else
+						valid = body:sub(1, 2) == "PK"
+							or body:sub(1, 7) == "Rar!\26\7\0"
+							or body:sub(1, 8) == "Rar!\26\7\1\0"
+					end
 				else
 					valid = #body > 100 and body:sub(1, 1) ~= "<" and body:sub(1, 2) ~= "PK" and body:sub(1, 4) ~= "Rar!"
 					if valid and s.version_marker ~= "NONE" then

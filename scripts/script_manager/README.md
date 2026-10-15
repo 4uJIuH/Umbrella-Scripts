@@ -53,6 +53,10 @@ Script Manager объединяет каталог скриптов в отде�
 
 ## Что нового
 
+# Обновление v2.7.1
+
+- Исправлена загрузка вручную устанавливаемых Lua-файлов: Gank Threat, Achievements и Counter Items больше не отклоняются проверкой ZIP/RAR.
+
 # Обновление v2.7.0
 
 - Установка пакетов поддерживает вложенные папки и до 200 Lua/JSON-файлов. Self Play и LuaLingo можно устанавливать кнопкой, без ручной распаковки архива.
@@ -162,6 +166,10 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 4. Open `Scripts → Scripts → Script Manager`, enable it, and assign a key to open the panel.
 
 ## Changelog
+
+# Update v2.7.1
+
+- Fixed downloads for manually installed Lua files: Gank Threat, Achievements, and Counter Items are no longer rejected by ZIP/RAR validation.
 
 # Update v2.7.0
 
