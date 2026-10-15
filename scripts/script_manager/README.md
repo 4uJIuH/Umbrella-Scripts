@@ -3,11 +3,12 @@
 каталог скриптов Umbrella с установкой и обновлениями / an Umbrella script catalog with script installation and updates
 
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.6.0/script_manager.lua) — `script-manager-v2.6.0`, 2026-10-15
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.7.0/script_manager.lua) — `script-manager-v2.7.0`, 2026-10-15
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`script-manager-v2.6.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.6.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.6.0/script_manager.lua) | 0 |
+| [`script-manager-v2.7.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.7.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.7.0/script_manager.lua) | 0 |
+| [`script-manager-v2.6.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.6.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.6.0/script_manager.lua) | 2 |
 | [`script-manager-v2.5.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.5.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.5.0/script_manager.lua) | 3 |
 | [`script-manager-v2.4.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.4.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.4.0/script_manager.lua) | 2 |
 | [`script-manager-v2.3.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.3.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.3.0/script_manager.lua) | 3 |
@@ -38,7 +39,7 @@ Script Manager объединяет каталог скриптов в отде�
 - Устанавливает и обновляет отдельные скрипты, создавая резервную копию заменяемого файла
 - Устанавливает многофайловые Lua-пакеты и создает необходимые подпапки
 - Устанавливает `!_qLocalizer.lua`, если он нужен выбранному скрипту и ещё не установлен
-- Устанавливает архивные пакеты с поддерживаемым файловым манифестом; архивы без него доступны для ручной распаковки
+- Показывает ZIP-пакеты для скачивания и ручной распаковки
 - Позволяет менять тему, акцентный цвет и поведение перезапуска после установки
 - Поддерживает собственное обновление под тем же именем `script_manager.lua`
 - Автор визуальной/UI-части: watahell / papagdetto
@@ -148,7 +149,7 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 - Installs and updates individual scripts while keeping a backup of replaced files
 - Installs multi-file Lua packages and creates their required subfolders
 - Installs `!_qLocalizer.lua` when a selected script requires it and it is missing
-- Installs archive packages with a supported file manifest; archives without one remain available for manual extraction
+- Lists ZIP packages for download and manual extraction
 - Lets users change the theme, accent color, and post-install restart behavior
 - Supports self-updates while keeping the `script_manager.lua` filename
 - Visual/UI authors: watahell / papagdetto
