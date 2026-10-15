@@ -1,3 +1,7 @@
+# Fix v1.1.1
+
+- Fixed the section and tab names that were displayed as localization keys.
+
 # Update v1.1.0
 
 - Added Russian and English interface localization through qLocalization.

@@ -1,4 +1,4 @@
-local SCRIPT_VERSION = "1.1.0"
+local SCRIPT_VERSION = "1.1.1"
 local test = {}
 
 local protobuf = require('protobuf')
@@ -117,6 +117,13 @@ local function menuLabel(key, fallback)
     return localization and key or fallback
 end
 
+local function menuSection(key, fallback)
+    if localization and type(localization.Localize) == "function" then
+        return localization.Localize(key) or fallback
+    end
+    return fallback
+end
+
 local function menuOptions(keys, fallback)
     return localization and keys or fallback
 end
@@ -138,15 +145,15 @@ local function utf8_lower(str)
 end
 
 local mainMenu = MenuLib.Create("Scripts", "Utility")
-local mainTab = mainMenu:Create(menuLabel("behavior_score.tab", "Порядочность"))
+local mainTab = mainMenu:Create(menuSection("behavior_score.tab", "Порядочность"))
 mainTab:Icon("\u{f164}")
 
-local tabGG = mainTab:Create(menuLabel("behavior_score.tabs.gg", "Авто GG"))
-local tabReport = mainTab:Create(menuLabel("behavior_score.tabs.report", "Авто Репорт"))
-local tabFeed = mainTab:Create(menuLabel("behavior_score.tabs.feed", "Авто Репорт (Фид)"))
-local tabLike = mainTab:Create(menuLabel("behavior_score.tabs.like", "Авто Лайк"))
+local tabGG = mainTab:Create(menuSection("behavior_score.tabs.gg", "Авто GG"))
+local tabReport = mainTab:Create(menuSection("behavior_score.tabs.report", "Авто Репорт"))
+local tabFeed = mainTab:Create(menuSection("behavior_score.tabs.feed", "Авто Репорт (Фид)"))
+local tabLike = mainTab:Create(menuSection("behavior_score.tabs.like", "Авто Лайк"))
 
-local ggSection = tabGG:Create(menuLabel("behavior_score.settings", "Настройки"))
+local ggSection = tabGG:Create(menuSection("behavior_score.settings", "Настройки"))
 local ggEnabled = ggSection:Switch(menuLabel("behavior_score.enabled", "Включено"), false, "\u{f00c}")
 local ggMessages = {
     "спс за игру",
@@ -175,7 +182,7 @@ local greetEnabled = ggSection:Switch(menuLabel("behavior_score.greet_enabled", 
 local greetAllChat = ggSection:Switch(menuLabel("behavior_score.greet_all_chat", "Приветствие в общий чат"), false)
 local greetMessage = ggSection:Input(menuLabel("behavior_score.greet_message", "Текст приветствия"), "gl hf!")
 
-local reportSection = tabReport:Create(menuLabel("behavior_score.settings", "Настройки"))
+local reportSection = tabReport:Create(menuSection("behavior_score.settings", "Настройки"))
 local reportEnabled = reportSection:Switch(menuLabel("behavior_score.enabled", "Включено"), false, "\u{f00c}")
 local reportTargetMode = reportSection:Combo(menuLabel("behavior_score.report_target", "Цель"), menuOptions({
     "behavior_score.target_enemies",
@@ -193,18 +200,18 @@ reportMatchMode:Icon("\u{f002}")
 local reportLogToFile = reportSection:Switch(menuLabel("behavior_score.report_file", "Писать репорты в файл"), true, "\u{f15c}")
 local reportStreamMode = reportSection:Switch(menuLabel("behavior_score.report_quiet", "Тихий режим (скрыть баннер)"), false, "\u{f070}")
 
-local feedSection = tabFeed:Create(menuLabel("behavior_score.settings", "Настройки"))
+local feedSection = tabFeed:Create(menuSection("behavior_score.settings", "Настройки"))
 local feedEnabled = feedSection:Switch(menuLabel("behavior_score.enabled", "Включено"), false, "\u{f00c}")
 local feedMinutes = feedSection:Slider(menuLabel("behavior_score.feed_minute", "Минута байбека (до)"), 1, 20, 10)
 
-local likeSettings = tabLike:Create(menuLabel("behavior_score.settings", "Настройки"))
+local likeSettings = tabLike:Create(menuSection("behavior_score.settings", "Настройки"))
 local likes_enabled = likeSettings:Switch(menuLabel("behavior_score.enabled", "Включено"), true, "\u{f00c}")
 local switcherLikeRefresh = likeSettings:Switch(menuLabel("behavior_score.like_refresh", "Обновить лайк"), false)
 switcherLikeRefresh:Icon("\u{f2f9}")
 local alliesOnlySwitch = likeSettings:Switch(menuLabel("behavior_score.like_allies", "Только союзники"), false)
 alliesOnlySwitch:Icon("\u{f2b5}")
 
-local likeTeams = tabLike:Create(menuLabel("behavior_score.heroes", "Выбор героев"))
+local likeTeams = tabLike:Create(menuSection("behavior_score.heroes", "Выбор героев"))
 local likeRad = likeTeams:MultiSelect(menuLabel("behavior_score.like", "Лайк"), {}, true)
 likeRad:Icon("\u{e5d2}")
 local likeDir = likeTeams:MultiSelect(menuLabel("behavior_score.like", "Лайк"), {}, true)

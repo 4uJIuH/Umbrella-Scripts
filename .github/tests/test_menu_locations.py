@@ -28,6 +28,15 @@ class MenuLocationsTests(unittest.TestCase):
             ["Scripts → Utility → Behavior Score"],
         )
 
+    def test_behavior_score_menu_sections_use_localized_labels(self):
+        source_path = (
+            BASE / "scripts" / "behavior_score_helper" / "BehaviorScoreHelper.lua"
+        )
+        source = source_path.read_text(encoding="utf-8")
+        self.assertIn("local function menuSection(key, fallback)", source)
+        self.assertIn("return localization.Localize(key) or fallback", source)
+        self.assertNotIn(":Create(menuLabel(", source)
+
     def test_dynamic_menu_paths_are_explicit(self):
         paths = paths_for(self.by_id["windranger_powershot"])
         self.assertEqual(
