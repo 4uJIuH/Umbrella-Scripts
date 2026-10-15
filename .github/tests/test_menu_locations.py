@@ -49,6 +49,16 @@ class MenuLocationsTests(unittest.TestCase):
             },
         )
 
+    def test_additional_confirmed_menu_paths_are_available(self):
+        self.assertEqual(
+            paths_for(self.by_id["achievements"])["en"],
+            ["General → Main → Achievements"],
+        )
+        self.assertEqual(
+            paths_for(self.by_id["lane_pull"])["en"],
+            ["Creeps → Main → Lane Pull"],
+        )
+
     def test_catalog_paths_have_localized_list_shapes(self):
         for script in self.scripts:
             with self.subTest(script=script["id"]):

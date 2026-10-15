@@ -8,6 +8,83 @@ STRING_LITERAL = re.compile(r'''^\s*("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')\s*$'''
 ROUTE_SEPARATOR = " → "
 
 OVERRIDES = {
+    "lane_pull": {
+        "ru": ["Creeps → Main → Lane Pull"],
+        "en": ["Creeps → Main → Lane Pull"],
+    },
+    "ds_spot_block": {
+        "ru": ["Heroes → Hero List → Dark Seer → Spot Block"],
+        "en": ["Heroes → Hero List → Dark Seer → Spot Block"],
+    },
+    "custom_background": {
+        "ru": ["Scripts → Scripts → Кастом фон"],
+        "en": ["Scripts → Scripts → Кастом фон"],
+    },
+    "auto_stack": {
+        "ru": ["Heroes → Hero List → Kunkka → Main Settings", "Heroes → Hero List → Invoker → Main Settings"],
+        "en": ["Heroes → Hero List → Kunkka → Main Settings", "Heroes → Hero List → Invoker → Main Settings"],
+    },
+    "draft_helper": {
+        "ru": ["Scripts → Scripts → Draft Helper"],
+        "en": ["Scripts → Scripts → Draft Helper"],
+    },
+    "musicui": {
+        "ru": ["Scripts → Scripts → MusicUI"],
+        "en": ["Scripts → Scripts → MusicUI"],
+    },
+    "mom_swapper": {
+        "ru": ["Scripts → Other → MoM Swapper"],
+        "en": ["Scripts → Other → MoM Swapper"],
+    },
+    "invoker_jarvis": {
+        "ru": ["Heroes → Hero List → Invoker → Jarvis", "Scripts → Scripts → Jarvis"],
+        "en": ["Heroes → Hero List → Invoker → Jarvis", "Scripts → Scripts → Jarvis"],
+    },
+    "umbrella_tiktok": {
+        "ru": ["Scripts → Scripts → TikTok"],
+        "en": ["Scripts → Scripts → TikTok"],
+    },
+    "invoker_autostack": {
+        "ru": ["Heroes → Hero List → Invoker → Автостак", "Scripts → Scripts → Invoker AutoStack"],
+        "en": ["Heroes → Hero List → Invoker → Автостак", "Scripts → Scripts → Invoker AutoStack"],
+    },
+    "achievements": {
+        "ru": ["General → Main → Achievements"],
+        "en": ["General → Main → Achievements"],
+    },
+    "counter_items": {
+        "ru": ["General → Main → Counter Items"],
+        "en": ["General → Main → Counter Items"],
+    },
+    "arc_warden_multi_stack": {
+        "ru": ["Heroes → Hero List → Arc Warden → Мульти Стак"],
+        "en": ["Heroes → Hero List → Arc Warden → Мульти Стак"],
+    },
+    "techies_auto_miner": {
+        "ru": ["Heroes → Hero List → Techies → Авто-минирование"],
+        "en": ["Heroes → Hero List → Techies → Авто-минирование"],
+    },
+    "brood_camp_blocker": {
+        "ru": ["Heroes → Hero List → Broodmother → Авто-блок кемпов"],
+        "en": ["Heroes → Hero List → Broodmother → Авто-блок кемпов"],
+    },
+    "invoker_beta": {
+        "ru": ["Heroes → Hero List → Invoker (Beta)"],
+        "en": ["Heroes → Hero List → Invoker (Beta)"],
+    },
+    "techies_tazer_dispel": {
+        "ru": ["Heroes → Hero List → Techies → Main Settings → Auto Dispel"],
+        "en": ["Heroes → Hero List → Techies → Main Settings → Auto Dispel"],
+    },
+    "dota_no_limit": {
+        "ru": ["Scripts → Item Eater → Eater"],
+        "en": ["Scripts → Item Eater → Eater"],
+    },
+    "eul_wind_waker_blink_helper": {
+        "ru": ["General → Main → Помощник Blink после Eul / Wind Waker"],
+        "en": ["General → Main → Помощник Blink после Eul / Wind Waker"],
+    },
+    # naga_pt_abuse: у скрипта нет меню
     "backwards_cast": {
         "ru": ["General → Main → Скиллы спиной"],
         "en": ["General → Main → Back Cast"],

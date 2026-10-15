@@ -337,8 +337,12 @@
       "needs_q_localizer": false,
       "author": "But3rflys",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Creeps \u2192 Main \u2192 Lane Pull"
+        ],
+        "en": [
+          "Creeps \u2192 Main \u2192 Lane Pull"
+        ]
       },
       "date": "2026-09-20",
       "version_marker": "NONE"
@@ -352,8 +356,12 @@
       "needs_q_localizer": false,
       "author": "But3rflys",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Dark Seer \u2192 Spot Block"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Dark Seer \u2192 Spot Block"
+        ]
       },
       "date": "2026-09-20",
       "heroes": [
@@ -370,8 +378,12 @@
       "needs_q_localizer": false,
       "author": "But3rflys",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 \u041a\u0430\u0441\u0442\u043e\u043c \u0444\u043e\u043d"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 \u041a\u0430\u0441\u0442\u043e\u043c \u0444\u043e\u043d"
+        ]
       },
       "date": "2026-09-20",
       "version_marker": "NONE"
@@ -385,8 +397,14 @@
       "needs_q_localizer": false,
       "author": "But3rflys",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Kunkka \u2192 Main Settings",
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 Main Settings"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Kunkka \u2192 Main Settings",
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 Main Settings"
+        ]
       },
       "date": "2026-09-28",
       "heroes": [
@@ -404,8 +422,12 @@
       "needs_q_localizer": false,
       "author": "But3rflys",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 Draft Helper"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 Draft Helper"
+        ]
       },
       "date": "2026-10-13"
     },
@@ -418,8 +440,12 @@
       "needs_q_localizer": false,
       "author": "But3rflys",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 MusicUI"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 MusicUI"
+        ]
       },
       "date": "2026-09-23"
     },
@@ -949,8 +975,12 @@
       "needs_q_localizer": false,
       "author": "+ (Discord: obsessed.caress)",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Scripts \u2192 Other \u2192 MoM Swapper"
+        ],
+        "en": [
+          "Scripts \u2192 Other \u2192 MoM Swapper"
+        ]
       },
       "date": "2026-10-13",
       "heroes": [
@@ -1141,8 +1171,14 @@
       "needs_q_localizer": false,
       "author": "\u0437\u0430\u0432\u0442\u0440\u0430 \u043d\u0435 \u0431\u0443\u0434\u0435\u0442 (Discord: n1fogen)",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 Jarvis",
+          "Scripts \u2192 Scripts \u2192 Jarvis"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 Jarvis",
+          "Scripts \u2192 Scripts \u2192 Jarvis"
+        ]
       },
       "date": "2026-10-01",
       "heroes": [
@@ -1159,8 +1195,12 @@
       "needs_q_localizer": false,
       "author": "\u0437\u0430\u0432\u0442\u0440\u0430 \u043d\u0435 \u0431\u0443\u0434\u0435\u0442 (Discord: n1fogen)",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 TikTok"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 TikTok"
+        ]
       },
       "date": "2026-10-14",
       "version_marker": "NONE"
@@ -1174,8 +1214,14 @@
       "needs_q_localizer": false,
       "author": "\u0437\u0430\u0432\u0442\u0440\u0430 \u043d\u0435 \u0431\u0443\u0434\u0435\u0442 (Discord: n1fogen)",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 \u0410\u0432\u0442\u043e\u0441\u0442\u0430\u043a",
+          "Scripts \u2192 Scripts \u2192 Invoker AutoStack"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 \u0410\u0432\u0442\u043e\u0441\u0442\u0430\u043a",
+          "Scripts \u2192 Scripts \u2192 Invoker AutoStack"
+        ]
       },
       "date": "2026-09-30",
       "heroes": [
@@ -1211,8 +1257,12 @@
       "needs_q_localizer": false,
       "author": "! 666 (Discord: isee2p)",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "General \u2192 Main \u2192 Achievements"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Achievements"
+        ]
       },
       "date": "2026-10-13",
       "version_marker": "NONE"
@@ -1389,8 +1439,12 @@
       "needs_q_localizer": false,
       "author": "! 666 (Discord: isee2p)",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "General \u2192 Main \u2192 Counter Items"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Counter Items"
+        ]
       },
       "date": "2026-10-13",
       "version_marker": "NONE"
@@ -1464,8 +1518,12 @@
       "needs_q_localizer": false,
       "author": "Nev1r0Psixx0z (Discord: nev1r0psixx0z)",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Arc Warden \u2192 \u041c\u0443\u043b\u044c\u0442\u0438 \u0421\u0442\u0430\u043a"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Arc Warden \u2192 \u041c\u0443\u043b\u044c\u0442\u0438 \u0421\u0442\u0430\u043a"
+        ]
       },
       "date": "2026-10-13",
       "heroes": [
@@ -1694,8 +1752,12 @@
       "needs_q_localizer": true,
       "author": "Discord: guzlichenok",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Techies \u2192 \u0410\u0432\u0442\u043e-\u043c\u0438\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Techies \u2192 \u0410\u0432\u0442\u043e-\u043c\u0438\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435"
+        ]
       },
       "date": "2026-10-13",
       "heroes": [
@@ -1712,8 +1774,12 @@
       "needs_q_localizer": true,
       "author": "Discord: guzlichenok",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Broodmother \u2192 \u0410\u0432\u0442\u043e-\u0431\u043b\u043e\u043a \u043a\u0435\u043c\u043f\u043e\u0432"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Broodmother \u2192 \u0410\u0432\u0442\u043e-\u0431\u043b\u043e\u043a \u043a\u0435\u043c\u043f\u043e\u0432"
+        ]
       },
       "date": "2026-10-13",
       "heroes": [
@@ -1923,8 +1989,12 @@
       "needs_q_localizer": true,
       "author": "64qt (Discord: 32tq)",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Invoker (Beta)"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Invoker (Beta)"
+        ]
       },
       "date": "2026-10-13",
       "version_marker": "NONE"
@@ -2014,8 +2084,12 @@
       "needs_q_localizer": false,
       "author": "Yerka (Discord: argenov); base script by @1006597751640969267",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Techies \u2192 Main Settings \u2192 Auto Dispel"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Techies \u2192 Main Settings \u2192 Auto Dispel"
+        ]
       },
       "date": "2026-10-13",
       "version_marker": "NONE"
@@ -2145,8 +2219,12 @@
       "needs_q_localizer": false,
       "author": "kkk (Discord: skibidisigma8261451)",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "Scripts \u2192 Item Eater \u2192 Eater"
+        ],
+        "en": [
+          "Scripts \u2192 Item Eater \u2192 Eater"
+        ]
       },
       "date": "2026-10-13",
       "version_marker": "NONE"
@@ -2293,8 +2371,12 @@
       "needs_q_localizer": false,
       "author": "chizhak (Discord: stulipelky)",
       "menu": {
-        "ru": [],
-        "en": []
+        "ru": [
+          "General \u2192 Main \u2192 \u041f\u043e\u043c\u043e\u0449\u043d\u0438\u043a Blink \u043f\u043e\u0441\u043b\u0435 Eul / Wind Waker"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 \u041f\u043e\u043c\u043e\u0449\u043d\u0438\u043a Blink \u043f\u043e\u0441\u043b\u0435 Eul / Wind Waker"
+        ]
       },
       "date": "2026-10-13",
       "version_marker": "NONE"
