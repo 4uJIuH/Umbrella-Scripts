@@ -565,14 +565,14 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 31 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 85 | `script-manager-v2.8.0` |
+| [Script Manager](scripts/script_manager) | 87 | `script-manager-v2.8.0` |
 | [Dynamic Island](scripts/dynamic_island_dota) | 596 | `v2.5.3` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 2 | `tinker-smart-escape-v1.0.0` |
 | [Lane Pull](scripts/lane_pull) | 241 | `lane-pull-v1.0.4` |
 | [DS Spot Block](scripts/ds_spot_block) | 48 | `ds-spot-block-v1.0.1` |
 | [Custom Background](scripts/custom_background) | 39 | `custom-background-v1.0.0` |
 | [Auto Stack](scripts/auto_stack) | 134 | `auto-stack-v1.1.0` |
-| [Draft Helper](scripts/draft_helper) | 1265 | `draft-helper-v2.0.0-beta.20` |
+| [Draft Helper](scripts/draft_helper) | 1267 | `draft-helper-v2.0.0-beta.20` |
 | [MusicUI](scripts/musicui) | 690 | `musicui-v1.0.8` |
 | [Umbrella Lua Developer Skill](scripts/umbrella_lua) | 190 | `umbrella-lua-v1.0.4` |
 | [Custom Stats](scripts/custom_stats) | 3 | `custom-stats-v1.0.0` |
@@ -637,7 +637,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Invoker SS](scripts/invoker_ss) | 1 | `invoker-ss-v138` |
 | [Sentry](scripts/sentry) | 3 | `sentry-v1.0.0` |
 | [Changer](scripts/changer) | 6 | `changer-v1.0.0` |
-| [Self Play](scripts/self_play_bot) | 5 | `self-play-v1.0.0` |
+| [Self Play](scripts/self_play_bot) | 5 | `self-play-v1.0.1` |
 | [Farm Pattern 2.5](scripts/farm_pattern) | 2 | `farm-pattern-v2.5` |
 | [Win Condition Engine](scripts/win_condition_engine) | 15 | `win-condition-engine-v1.0.0` |
 | [Invoker (beta)](scripts/invoker_beta) | 8 | `invoker-beta-v1.0.0` |
