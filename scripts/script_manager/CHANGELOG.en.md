@@ -1,3 +1,11 @@
+# Update v2.3.0
+
+- Added a close button in the top-right corner of the manager window.
+- Added a "By update date" sort: newest versions first, with the date shown next to each script in the list while this sort is active.
+- A script's card now shows, front and center, when it was last updated.
+- Added an auto-update setting (off by default): after the catalog is checked, installed scripts update on their own. Pre-release versions are installed only when beta versions are enabled.
+- The automatic script restart now waits for all running downloads to finish.
+
 # Update v2.2.1
 
 - Downloads and updates now use GitHub Release assets when available; scripts without release assets keep using their existing URL.

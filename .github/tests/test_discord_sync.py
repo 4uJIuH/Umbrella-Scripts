@@ -83,7 +83,7 @@ class DiscordSyncTests(unittest.TestCase):
             / "script_manager.lua"
         )
         new_source = source_path.read_bytes().replace(
-            b'local VERSION = "2.2.1"', b'local VERSION = "2.1.0"'
+            b'local VERSION = "2.3.0"', b'local VERSION = "2.1.0"'
         )
         messages = [
             {

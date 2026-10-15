@@ -345,6 +345,30 @@ local localization = qLocalization.new({
 		sm_sort_catalog = "Catalog order",
 		sm_sort_name = "By name",
 		sm_sort_inst = "Installed first",
+		sm_sort_updated = "By update date",
+
+		sm_updated = "Updated",
+		sm_today = "today",
+		sm_yesterday = "yesterday",
+		sm_ago_d_one = "%d day ago",
+		sm_ago_d_many = "%d days ago",
+		sm_ago_m_one = "%d month ago",
+		sm_ago_m_many = "%d months ago",
+		sm_ago_y_one = "%d year ago",
+		sm_ago_y_many = "%d years ago",
+		sm_date = "{m} {d}, {y}",
+		sm_mon_1 = "Jan",
+		sm_mon_2 = "Feb",
+		sm_mon_3 = "Mar",
+		sm_mon_4 = "Apr",
+		sm_mon_5 = "May",
+		sm_mon_6 = "Jun",
+		sm_mon_7 = "Jul",
+		sm_mon_8 = "Aug",
+		sm_mon_9 = "Sep",
+		sm_mon_10 = "Oct",
+		sm_mon_11 = "Nov",
+		sm_mon_12 = "Dec",
 
 		sm_upd_one = "%d update available",
 		sm_upd_few = "%d updates available",
@@ -419,6 +443,8 @@ local localization = qLocalization.new({
 		sm_set_check = "Check",
 		sm_check_start = "On launch",
 		sm_check_hour = "Every hour",
+		sm_set_auto = "Auto-update",
+		sm_set_auto_note = "Installs new versions on its own",
 		sm_set_beta = "Beta versions",
 		sm_set_restart = "Restart",
 		sm_restart_ask = "Ask",
@@ -473,6 +499,33 @@ local localization = qLocalization.new({
 		sm_sort_catalog = "Как в каталоге",
 		sm_sort_name = "По названию",
 		sm_sort_inst = "Установленные сверху",
+		sm_sort_updated = "По дате обновления",
+
+		sm_updated = "Обновлено",
+		sm_today = "сегодня",
+		sm_yesterday = "вчера",
+		sm_ago_d_one = "%d день назад",
+		sm_ago_d_few = "%d дня назад",
+		sm_ago_d_many = "%d дней назад",
+		sm_ago_m_one = "%d месяц назад",
+		sm_ago_m_few = "%d месяца назад",
+		sm_ago_m_many = "%d месяцев назад",
+		sm_ago_y_one = "%d год назад",
+		sm_ago_y_few = "%d года назад",
+		sm_ago_y_many = "%d лет назад",
+		sm_date = "{d} {m} {y}",
+		sm_mon_1 = "янв",
+		sm_mon_2 = "фев",
+		sm_mon_3 = "мар",
+		sm_mon_4 = "апр",
+		sm_mon_5 = "мая",
+		sm_mon_6 = "июн",
+		sm_mon_7 = "июл",
+		sm_mon_8 = "авг",
+		sm_mon_9 = "сен",
+		sm_mon_10 = "окт",
+		sm_mon_11 = "ноя",
+		sm_mon_12 = "дек",
 
 		sm_upd_one = "Доступно %d обновление",
 		sm_upd_few = "Доступно %d обновления",
@@ -547,6 +600,8 @@ local localization = qLocalization.new({
 		sm_set_check = "Проверять",
 		sm_check_start = "При запуске",
 		sm_check_hour = "Каждый час",
+		sm_set_auto = "Автообновление",
+		sm_set_auto_note = "Устанавливает новые версии сама",
 		sm_set_beta = "Бета-версии",
 		sm_set_restart = "Перезапуск",
 		sm_restart_ask = "Спрашивать",
@@ -581,7 +636,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.2.1"
+local VERSION = "2.3.0"
 
 local K = {
 	CFG = "script_market",
@@ -598,6 +653,7 @@ local K = {
 	H = 640,
 	SIDE = 220,
 	TOP = 68,
+	CLOSE = 30,
 	SCALE_MIN = 70,
 	SCALE_MAX = 160,
 	WHEEL = 72,
@@ -610,9 +666,11 @@ local K = {
 		all = "\u{f03a}", installed = "\u{f058}", updates = "\u{f358}", heroes = "\u{f007}",
 		dota = "\u{f11b}", deadlock = "\u{f06d}", auxiliary = "\u{f0ad}",
 		search = "\u{f002}", clear = "\u{f057}", sort = "\u{f160}", refresh = "\u{f2f9}", sliders = "\u{f1de}",
-		back = "\u{f053}", down = "\u{f078}", up = "\u{f077}", check = "\u{f00c}", store = "\u{f54e}",
+		back = "\u{f053}", down = "\u{f078}", up = "\u{f077}", check = "\u{f00c}", store = "\u{f54e}", clock = "\u{f017}",
 	},
 }
+
+K.TOPR = K.W - 24 - K.CLOSE - 10
 
 local T = {
 	t1 = { 245, 245, 247 },
@@ -736,6 +794,11 @@ end
 
 local SORTS = {
 	{ id = "catalog", key = "sm_sort_catalog", cmp = function(a, b) return a.order < b.order end },
+	{ id = "updated", key = "sm_sort_updated", cmp = function(a, b)
+		local da, db = a.date or "", b.date or ""
+		if da ~= db then return da > db end
+		return a.order < b.order
+	end },
 	{ id = "name", key = "sm_sort_name", cmp = function(a, b) return a.title:lower() < b.title:lower() end },
 }
 
@@ -763,6 +826,7 @@ local S = {
 	inst = {}, busy = {}, nlz = nil, nlz_wait = nil, dir = nil,
 	set = {
 		check = Config.ReadString(K.CFG, "check", "start"),
+		auto = Config.ReadInt(K.CFG, "auto", 0) == 1,
 		beta = Config.ReadInt(K.CFG, "beta", 0) == 1,
 		restart = Config.ReadString(K.CFG, "restart", "ask"),
 		theme = Config.ReadString(K.CFG, "theme", "graphite"),
@@ -1356,6 +1420,61 @@ function ver.cmp(a, b)
 	return as < bs and -1 or 1
 end
 
+local when = { cache = {} }
+
+function when.parse(date)
+	if type(date) ~= "string" then return nil end
+	local y, m, d = date:match("^(%d%d%d%d)%-(%d%d)%-(%d%d)$")
+	if not y then return nil end
+	y, m, d = tonumber(y), tonumber(m), tonumber(d)
+	if m < 1 or m > 12 or d < 1 or d > 31 then return nil end
+	return y, m, d
+end
+
+function when.valid(date)
+	return when.parse(date) ~= nil
+end
+
+local function day_number(y, m, d)
+	if m <= 2 then y, m = y - 1, m + 12 end
+	return 365 * y + math.floor(y / 4) - math.floor(y / 100) + math.floor(y / 400)
+		+ math.floor((153 * (m - 3) + 2) / 5) + d
+end
+
+-- release dates come from GitHub in UTC, so "today" is taken in UTC as well
+function when.age(date)
+	local y, m, d = when.parse(date)
+	if not y then return nil end
+	local ty, tm, td = os.date("!%Y-%m-%d"):match("^(%d+)-(%d+)-(%d+)$")
+	if not ty then return nil end
+	return day_number(tonumber(ty), tonumber(tm), tonumber(td)) - day_number(y, m, d)
+end
+
+function when.short(date)
+	local key = S.lang .. ":" .. tostring(date)
+	local out = when.cache[key]
+	if out then return out end
+	local y, m, d = when.parse(date)
+	if not y then return "" end
+	out = L("sm_date"):gsub("{d}", tostring(d)):gsub("{m}", L("sm_mon_" .. m)):gsub("{y}", tostring(y))
+	when.cache[key] = out
+	return out
+end
+
+function when.ago(date)
+	local n = when.age(date)
+	if not n then return nil end
+	if n <= 0 then return L("sm_today") end
+	if n == 1 then return L("sm_yesterday") end
+	if n < 30 then return string.format(plural(n, "sm_ago_d"), n) end
+	if n < 365 then
+		local k = math.floor(n / 30)
+		return string.format(plural(k, "sm_ago_m"), k)
+	end
+	local k = math.floor(n / 365)
+	return string.format(plural(k, "sm_ago_y"), k)
+end
+
 local text = {}
 
 function text.clean(str)
@@ -1513,6 +1632,7 @@ function market.build(catalog, meta)
 			local style = STYLE[e.id] or { "\u{f1c9}", PAL[PAL_ORDER[(i - 1) % #PAL_ORDER + 1]] }
 			local item = {
 				id = e.id, order = i, latest = e.version, url = install_url,
+				date = when.valid(e.date) and e.date or nil,
 				release = web.trusted(e.release) and e.release or nil,
 				manual = e.manual == true and #package_files == 0, files = package_files,
 				nlz = e.needs_q_localizer == true,
@@ -1563,6 +1683,7 @@ function market.finish(ok, err)
 	st.state, st.err, st.at = ok and "ok" or "error", err, os.time()
 	st.next = S.now + (ok and K.RECHECK or 60)
 	st.loaded = st.loaded or ok
+	if ok and S.set.auto then S.auto_due = true end
 end
 
 function market.load()
@@ -1752,6 +1873,14 @@ function market.run(id)
 	end)
 end
 
+-- installs every pending update on its own; pre-releases only when beta versions are on
+function market.auto()
+	if not S.set.auto or S.net.state ~= "ok" then return end
+	for _, s in ipairs(market.updates()) do
+		if S.set.beta or not ver.pre(s.latest) then market.run(s.id) end
+	end
+end
+
 function market.remove(id)
 	if S.confirm ~= id then
 		S.confirm = id
@@ -1775,7 +1904,12 @@ function market.tick()
 		market.load()
 	end
 	if S.foot == "done" and S.now > S.foot_until then S.foot = "idle" end
-	if S.reload_at and S.now >= S.reload_at then
+	if S.auto_due then
+		S.auto_due = false
+		market.auto()
+	end
+	-- let running installs finish first, but never wait longer than a stuck download could take
+	if S.reload_at and S.now >= S.reload_at and (next(S.busy) == nil or S.now >= S.reload_at + 30) then
 		S.reload_at = nil
 		Engine.ReloadScriptSystem()
 	end
@@ -2341,6 +2475,12 @@ function view.row(s, rx, y, rw, interactive, sep)
 	if va > 0.01 and S.vers[s.id] then
 		g.text(400, 12, S.vers[s.id], tx + tw + 8, y + 28, T.t3, va)
 	end
+	if S.sort == "updated" and s.date then
+		local label = when.short(s.date)
+		local lx = rx + rw - 12 - 100
+		local used = tx + tw + ((va > 0.01 and S.vers[s.id]) and (8 + g.width(400, 12, S.vers[s.id])) or 0)
+		if lx - g.width(400, 12, label) > used + 12 then g.text(400, 12, label, lx, y + 28, T.t4, 1, "r") end
+	end
 	g.text(400, 13, g.fit(400, 13, tr(s.tag), rw - 70 - 136 - 12), tx, y + 47, T.t3)
 	if interactive then view.action(s, rx + rw - 12, y + 36) end
 	if sep then g.hl(rx + 70, y + 72, rw - 70 - 12, T.white, C.line / 255) end
@@ -2349,7 +2489,7 @@ end
 function view.list()
 	local x0, w0 = K.SIDE, K.W - K.SIDE
 	hit.add(x0, 0, w0, K.TOP, "drag", { down = view.start_drag })
-	local sort_x = view.sort_button(K.W - 24, 16)
+	local sort_x = view.sort_button(K.TOPR, 16)
 	view.search(x0 + 24, 16, sort_x - 10 - (x0 + 24))
 
 	local list = market.list()
@@ -2457,7 +2597,7 @@ end
 function view.heroes()
 	local x0, w0 = K.SIDE, K.W - K.SIDE
 	hit.add(x0, 0, w0, K.TOP, "drag", { down = view.start_drag })
-	view.search(x0 + 24, 16, w0 - 48)
+	view.search(x0 + 24, 16, w0 - 48 - K.CLOSE - 10)
 
 	local q = S.query:lower()
 	local with, rest = {}, {}
@@ -2594,8 +2734,19 @@ function view.detail()
 	g.rect(cx, y, 80, 80, s.color, 20, 0.15)
 	g.glyph(s.glyph, 32, cx + 40, y + 40, s.color)
 	local title_w = right - 16 - (cx + 100)
-	g.text(700, 26, g.fit(700, 26, s.title, title_w), cx + 100, y + 27, T.t1)
-	g.text(400, 14, g.fit(400, 14, tr(s.tag), title_w), cx + 100, y + 56, T.t3)
+	local title_y, tag_y = 27, 56
+	if s.date then title_y, tag_y = 18, 42 end
+	g.text(700, 26, g.fit(700, 26, s.title, title_w), cx + 100, y + title_y, T.t1)
+	g.text(400, 14, g.fit(400, 14, tr(s.tag), title_w), cx + 100, y + tag_y, T.t3)
+	if s.date then
+		local label = L("sm_updated") .. " " .. when.short(s.date)
+		local ago = when.ago(s.date)
+		if ago then label = label .. "  ·  " .. ago end
+		local chip_w = math.min(title_w, 14 + 11 + 6 + g.width(600, 12, label) + 14)
+		g.rect(cx + 100, y + 56, chip_w, 24, K.ACCENT, 12, 0.16)
+		g.glyph(K.G.clock, 11, cx + 100 + 14 + 5.5, y + 68, K.ACCENT_TEXT)
+		g.text(600, 12, g.fit(600, 12, label, chip_w - 14 - 11 - 6 - 14), cx + 100 + 14 + 11 + 6, y + 68, K.ACCENT_TEXT)
+	end
 	y = y + 80 + 28
 
 	local stats
@@ -2811,6 +2962,13 @@ function view.settings()
 
 	card("sm_g_updates", {
 		pick_row("check"),
+		{ label = "sm_set_auto", note = function() return L("sm_set_auto_note") end, draw = function(ry, right)
+			view.switch(right - 34, ry + 10, S.set.auto, "auto", function()
+				S.set.auto = not S.set.auto
+				save("auto", S.set.auto and 1 or 0)
+				if S.set.auto then S.auto_due = true end
+			end)
+		end },
 		{ label = "sm_set_beta", draw = function(ry, right)
 			view.switch(right - 34, ry + 10, S.set.beta, "beta", function()
 				S.set.beta = not S.set.beta
@@ -2852,6 +3010,22 @@ function view.settings()
 			if m[3] == "font" then g.refont() end
 		end, m[5], m[6])
 	end
+end
+
+function view.close_button()
+	local size = K.CLOSE
+	local x, y = K.W - 24 - size, 19
+	local hv = anim.hover("close")
+	g.rect(x, y, size, size, T.white, 9, 0.05 * (1 - hv))
+	g.rect(x, y, size, size, T.red_bg, 9, hv * 1.3)
+	local c = anim.mix(T.t3, T.red, hv)
+	local cx, cy, r = x + size / 2, y + size / 2, 5
+	g.line(cx - r, cy - r, cx + r, cy + r, c, 1, 1.6)
+	g.line(cx - r, cy + r, cx + r, cy - r, c, 1, 1.6)
+	hit.add(x, y, size, size, "close", { click = function()
+		S.open = false
+		S.sort_open, S.menu = false, nil
+	end })
 end
 
 function view.grip()
@@ -2918,9 +3092,10 @@ function view.window()
 	else
 		view.list()
 		local mk = anim.menu("sort", S.sort_open)
-		if mk > 0.005 then view.sort_menu(K.W - 24, 16 + 36 + 6, mk, S.sort_open) end
+		if mk > 0.005 then view.sort_menu(K.TOPR, 16 + 36 + 6, mk, S.sort_open) end
 	end
 	g.a = S.alpha
+	view.close_button()
 
 	g.frame(0, 0, K.W, K.H, T.white, 16, 0.09)
 	g.hl(18, 0, K.W - 36, K.ACCENT_TEXT, 0.35 * S.alpha)
@@ -2977,7 +3152,7 @@ end
 function input.press(mx, my)
 	local h = hit.at(mx, my)
 	local id, on = h and h[5], h and h[6] or {}
-	if (S.sort_open or S.menu) and not (id and (id:sub(1, 5) == "menu:" or id == "sort" or id:sub(1, 3) == "dd:")) then
+	if (S.sort_open or S.menu) and not (id and (id:sub(1, 5) == "menu:" or id == "sort" or id == "close" or id:sub(1, 3) == "dd:")) then
 		S.sort_open, S.menu = false, nil
 		S.press = { id = false }
 		return

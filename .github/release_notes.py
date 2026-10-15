@@ -1,3 +1,4 @@
+import datetime
 import json
 import os
 import re
@@ -45,6 +46,33 @@ def body(script, tag):
         % (REPO, script["id"]),
     ]
     return NL.join(out) + NL
+
+
+def release_dates():
+    """Publication date of every release tag, taken from the download statistics."""
+    path = GH / "stats" / "stats.jsonl"
+    dates = {}
+    if path.exists():
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            for asset in json.loads(line).get("assets", []):
+                if asset.get("tag") and asset.get("date"):
+                    dates[asset["tag"]] = asset["date"]
+    return dates
+
+
+def version_date(script, version, dates):
+    """Date the current version was published: manifest, then release stats, then the first release."""
+    if version.get("date"):
+        return version["date"]
+    tag = "%s-v%s" % (script["tag"], version["version"])
+    if tag in dates:
+        return dates[tag]
+    initial = script.get("initial")
+    if initial and initial.get("version") == version["version"]:
+        return initial.get("date")
+    return None
 
 
 def manifest_path(script):
@@ -133,6 +161,7 @@ def check_version(script, version):
 
 def write_manager_catalog():
     items = []
+    dates = release_dates()
     for script in CATALOG["scripts"]:
         if script.get("external"):
             continue
@@ -159,6 +188,9 @@ def write_manager_catalog():
             "needs_q_localizer": script.get("needs_q_localizer", False),
             "author": script.get("author") or REPO.split("/", 1)[0],
         }
+        date = version_date(script, version, dates)
+        if date:
+            item["date"] = date
         if version.get("install_url") and version.get("files"):
             item["install_url"] = version["install_url"]
             item["files"] = version["files"]
@@ -192,6 +224,7 @@ def write_manifest(script, tag, sha):
         "url": release_url if "package" in script or "archive_files" in script else
                "https://raw.githubusercontent.com/%s/%s/%s" % (REPO, sha, source_path),
         "release": release_url,
+        "date": datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d"),
     }
     if "package" in script:
         package_dir = BASE / "scripts" / script["id"] / script["package"]

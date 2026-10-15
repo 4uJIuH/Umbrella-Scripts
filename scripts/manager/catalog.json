@@ -13,6 +13,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "4uJIuH",
+      "date": "2026-10-12",
       "heroes": [
         "tinker"
       ]
@@ -25,6 +26,7 @@
       "manual": true,
       "needs_q_localizer": false,
       "author": "4uJIuH",
+      "date": "2026-10-13",
       "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/Tinker.lua",
       "files": [
         {
@@ -140,6 +142,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "4uJIuH",
+      "date": "2026-10-10",
       "heroes": [
         "windrunner"
       ]
@@ -152,6 +155,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "4uJIuH",
+      "date": "2026-10-10",
       "heroes": [
         "arc_warden"
       ]
@@ -163,7 +167,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/rune-destruction-v1.0.2/rune_units.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "4uJIuH"
+      "author": "4uJIuH",
+      "date": "2026-10-10"
     },
     {
       "id": "earth_spirit_kick_combo",
@@ -173,6 +178,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "4uJIuH",
+      "date": "2026-10-10",
       "heroes": [
         "earth_spirit"
       ]
@@ -184,7 +190,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/hp-mana-67-ping-v1.0.1/hp_mana_67_ping.lua",
       "manual": false,
       "needs_q_localizer": true,
-      "author": "4uJIuH"
+      "author": "4uJIuH",
+      "date": "2026-10-10"
     },
     {
       "id": "spirit_bear_pull",
@@ -194,6 +201,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "4uJIuH",
+      "date": "2026-10-10",
       "heroes": [
         "lone_druid"
       ]
@@ -205,7 +213,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.2.1/script_manager.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "4uJIuH"
+      "author": "4uJIuH",
+      "date": "2026-10-14"
     },
     {
       "id": "dynamic_island_dota",
@@ -215,6 +224,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\"ur2m\"",
+      "date": "2026-10-06",
       "version_marker": "SCRIPT_VERSION"
     },
     {
@@ -225,6 +235,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "sataroz",
+      "date": "2026-10-13",
       "heroes": [
         "tinker"
       ]
@@ -237,6 +248,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "But3rflys",
+      "date": "2026-09-20",
       "version_marker": "NONE"
     },
     {
@@ -247,6 +259,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "But3rflys",
+      "date": "2026-09-20",
       "heroes": [
         "dark_seer"
       ],
@@ -260,6 +273,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "But3rflys",
+      "date": "2026-09-20",
       "version_marker": "NONE"
     },
     {
@@ -270,6 +284,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "But3rflys",
+      "date": "2026-09-28",
       "heroes": [
         "kunkka",
         "invoker"
@@ -283,7 +298,8 @@
       "release": "https://github.com/But3rflys/umbrella-work/releases/download/draft-helper-v2.0.0-beta.20/draft_helper.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "But3rflys"
+      "author": "But3rflys",
+      "date": "2026-10-13"
     },
     {
       "id": "musicui",
@@ -292,7 +308,8 @@
       "release": "https://github.com/But3rflys/umbrella-work/releases/download/musicui-v1.0.8/MusicUI.rar",
       "manual": true,
       "needs_q_localizer": false,
-      "author": "But3rflys"
+      "author": "But3rflys",
+      "date": "2026-09-23"
     },
     {
       "id": "custom_stats",
@@ -301,7 +318,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/custom-stats-v1.0.0/custom_stats.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "qhols (Discord: ur2m)"
+      "author": "qhols (Discord: ur2m)",
+      "date": "2026-10-13"
     },
     {
       "id": "bloodrage_autocast",
@@ -311,6 +329,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "z\u0432e\u0437d\u044b \u0443na\u043bu v \u043b\u0443\u0436\u0443 (Discord: rarimember)",
+      "date": "2026-10-13",
       "heroes": [
         "bloodseeker"
       ]
@@ -323,6 +342,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "z\u0432e\u0437d\u044b \u0443na\u043bu v \u043b\u0443\u0436\u0443 (Discord: rarimember)",
+      "date": "2026-10-13",
       "heroes": [
         "naga_siren"
       ]
@@ -334,7 +354,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/auto-aegis-mover-v1.0.0/auto_aegis_mover.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "\u2694LegaXye\u79aa (Discord: legaxye)"
+      "author": "\u2694LegaXye\u79aa (Discord: legaxye)",
+      "date": "2026-10-13"
     },
     {
       "id": "anti_rubick",
@@ -343,7 +364,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/anti-rubick-v1.0.0/anti_rubick.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "\u2694LegaXye\u79aa (Discord: legaxye)"
+      "author": "\u2694LegaXye\u79aa (Discord: legaxye)",
+      "date": "2026-10-13"
     },
     {
       "id": "arc_warden_blocker",
@@ -353,6 +375,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "sataroz (Discord: sataroz)",
+      "date": "2026-10-13",
       "heroes": [
         "arc_warden"
       ]
@@ -365,6 +388,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "sataroz (Discord: sataroz)",
+      "date": "2026-10-13",
       "heroes": [
         "invoker"
       ]
@@ -377,6 +401,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "sataroz (Discord: sataroz)",
+      "date": "2026-10-13",
       "heroes": [
         "magnataur"
       ]
@@ -389,6 +414,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "sataroz (Discord: sataroz)",
+      "date": "2026-10-13",
       "heroes": [
         "techies"
       ]
@@ -400,7 +426,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/chat-translator-v1.0.0/chat_translator.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "\u0444\u0440\u0438\u0433\u0438\u0434\u043d\u044b\u0439 [\u0440\u0430\u0437\u0443\u043c] (Discord: .emocry)"
+      "author": "\u0444\u0440\u0438\u0433\u0438\u0434\u043d\u044b\u0439 [\u0440\u0430\u0437\u0443\u043c] (Discord: .emocry)",
+      "date": "2026-10-13"
     },
     {
       "id": "hero_grid",
@@ -410,6 +437,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "! M0RC1 (Discord: wh1teray)",
+      "date": "2026-10-13",
       "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/61bc57ec3cdac7700297e93cdc0bdce3fa04ef2d/scripts/hero_grid/hero_grid.lua",
       "files": [
         {
@@ -433,7 +461,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/weather-v1.0.0/weather.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "! M0RC1 (Discord: wh1teray)"
+      "author": "! M0RC1 (Discord: wh1teray)",
+      "date": "2026-10-13"
     },
     {
       "id": "visage_familiar_tp",
@@ -443,6 +472,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "! M0RC1 (Discord: wh1teray)",
+      "date": "2026-10-13",
       "heroes": [
         "visage"
       ]
@@ -455,6 +485,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "! M0RC1 (Discord: wh1teray)",
+      "date": "2026-10-13",
       "heroes": [
         "grimstroke"
       ]
@@ -467,6 +498,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "! M0RC1 (Discord: wh1teray)",
+      "date": "2026-10-13",
       "heroes": [
         "phoenix"
       ]
@@ -479,6 +511,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "4uJIuH",
+      "date": "2026-10-13",
       "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/737fa07af44cc5169305966becd888ddecc0cd1d/scripts/behavior_score_helper/BehaviorScoreHelper.lua",
       "files": [
         {
@@ -507,7 +540,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/excuses-v1.0.0/excuses.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)"
+      "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "date": "2026-10-13"
     },
     {
       "id": "creep_obituary",
@@ -516,7 +550,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/creep-obituary-v1.0.0/creep_obituary.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)"
+      "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "date": "2026-10-13"
     },
     {
       "id": "wrapped",
@@ -525,7 +560,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/wrapped-v1.0.0/wrapped.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)"
+      "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "date": "2026-10-13"
     },
     {
       "id": "arc_warden_heist",
@@ -535,6 +571,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "date": "2026-10-13",
       "heroes": [
         "arc_warden"
       ]
@@ -547,6 +584,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "date": "2026-10-13",
       "heroes": [
         "chen"
       ]
@@ -559,6 +597,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "date": "2026-10-13",
       "heroes": [
         "antimage"
       ]
@@ -570,7 +609,8 @@
       "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/lualingo/lualingo.zip",
       "manual": true,
       "needs_q_localizer": false,
-      "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)"
+      "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "date": "2026-10-13"
     },
     {
       "id": "disable_tracker",
@@ -579,7 +619,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/disable-tracker-v1.0.0/ugnetenie.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "0x10ma (Discord: _0x10ma_)"
+      "author": "0x10ma (Discord: _0x10ma_)",
+      "date": "2026-10-13"
     },
     {
       "id": "russian_roulette",
@@ -588,7 +629,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/russian-roulette-v1.0.0/russian_roulette.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "Yud3x (Discord: yud3xx)"
+      "author": "Yud3x (Discord: yud3xx)",
+      "date": "2026-10-13"
     },
     {
       "id": "mom_swapper",
@@ -598,6 +640,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "+ (Discord: obsessed.caress)",
+      "date": "2026-10-13",
       "heroes": [
         "sven",
         "muerta"
@@ -610,7 +653,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/botle-abuse-v1.0.0/botle.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "Trineks (Discord: trineks)"
+      "author": "Trineks (Discord: trineks)",
+      "date": "2026-10-13"
     },
     {
       "id": "action_recorder",
@@ -619,7 +663,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/action-recorder-v1.0.0/action_recorder.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "okea (Discord: okea)"
+      "author": "okea (Discord: okea)",
+      "date": "2026-10-13"
     },
     {
       "id": "io_overcharge",
@@ -629,6 +674,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0444\u0440\u0438\u0433\u0438\u0434\u043d\u044b\u0439 [\u0440\u0430\u0437\u0443\u043c] (Discord: .emocry)",
+      "date": "2026-10-13",
       "heroes": [
         "wisp"
       ]
@@ -641,6 +687,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Nev1r0Psixx0z",
+      "date": "2026-10-15",
       "heroes": [
         "arc_warden"
       ]
@@ -652,7 +699,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/backwards-cast-v1.0.0/backwards_cast.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "dami\u044f (Discord: vacnul)"
+      "author": "dami\u044f (Discord: vacnul)",
+      "date": "2026-10-13"
     },
     {
       "id": "forge_spirit_farm_beta",
@@ -662,6 +710,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "okea (Discord: okea)",
+      "date": "2026-10-13",
       "heroes": [
         "invoker"
       ]
@@ -673,7 +722,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/selection-camera-v1.1.0/selection_camera.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "chizhak (Discord: stulipelky)"
+      "author": "chizhak (Discord: stulipelky)",
+      "date": "2026-10-13"
     },
     {
       "id": "spirit_breaker_bara",
@@ -683,6 +733,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "! \u0434\u0430\u0439 \u0435\u0433\u043e (Discord: 0ghq)",
+      "date": "2026-10-13",
       "heroes": [
         "spirit_breaker"
       ]
@@ -694,7 +745,8 @@
       "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/ghoul-counter-v1.0.0/ghoul_counter.lua",
       "manual": false,
       "needs_q_localizer": false,
-      "author": "kuonsetsu (Discord: kuonsetsu)"
+      "author": "kuonsetsu (Discord: kuonsetsu)",
+      "date": "2026-10-13"
     },
     {
       "id": "invoker_jarvis",
@@ -704,6 +756,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0437\u0430\u0432\u0442\u0440\u0430 \u043d\u0435 \u0431\u0443\u0434\u0435\u0442 (Discord: n1fogen)",
+      "date": "2026-10-01",
       "heroes": [
         "invoker"
       ],
@@ -717,6 +770,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0437\u0430\u0432\u0442\u0440\u0430 \u043d\u0435 \u0431\u0443\u0434\u0435\u0442 (Discord: n1fogen)",
+      "date": "2026-10-14",
       "version_marker": "NONE"
     },
     {
@@ -727,6 +781,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0437\u0430\u0432\u0442\u0440\u0430 \u043d\u0435 \u0431\u0443\u0434\u0435\u0442 (Discord: n1fogen)",
+      "date": "2026-09-30",
       "heroes": [
         "invoker"
       ],
@@ -740,6 +795,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Axis (Discord: ykromanka2)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -750,6 +806,7 @@
       "manual": true,
       "needs_q_localizer": false,
       "author": "! 666 (Discord: isee2p)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -760,6 +817,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u043c\u044f\u0443\u0447\u0443 \u043e\u0434\u043d\u043e\u0439 (Discord: psyterror.ru)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -770,6 +828,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0413\u043e\u043b\u043e\u0434\u0430\u044e \u0434\u0435\u043d\u044c 1 (Discord: nworddestroyer)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -780,6 +839,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\ud835\udc80\ud835\udc86\ud835\udc8dt (Discord: yelt_ls)",
+      "date": "2026-10-13",
       "heroes": [
         "windrunner"
       ],
@@ -793,6 +853,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "cucumberr (Discord: cucumberro)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -803,6 +864,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u043a\u0440\u0435\u0432\u0435\u0442\u043a\u0430 (Discord: krevetych_)",
+      "date": "2026-10-13",
       "heroes": [
         "tinker"
       ],
@@ -816,6 +878,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "russia.mvd (Discord: russia.mvd)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -826,6 +889,7 @@
       "manual": true,
       "needs_q_localizer": false,
       "author": "! 666 (Discord: isee2p)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -836,6 +900,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0435\u0431\u0430\u0448\u0443 \u0432 \u0434\u043e\u0442\u0443 (Discord: trikossik)",
+      "date": "2026-10-13",
       "heroes": [
         "tinker"
       ],
@@ -849,6 +914,7 @@
       "manual": true,
       "needs_q_localizer": false,
       "author": "! 666 (Discord: isee2p)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -859,6 +925,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "noptemis (Discord: xxinxiv)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -869,6 +936,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "447 | dasty4ek (Discord: tontotonoki)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -879,6 +947,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Nev1r0Psixx0z (Discord: nev1r0psixx0z)",
+      "date": "2026-10-13",
       "heroes": [
         "arc_warden"
       ],
@@ -892,6 +961,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Nev1r0Psixx0z (Discord: nev1r0psixx0z)",
+      "date": "2026-10-13",
       "heroes": [
         "arc_warden"
       ],
@@ -905,6 +975,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "kaoru (Discord: hatred_0; attribution unverified)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -915,6 +986,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Wahha (Discord: wahha_)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -925,6 +997,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "! (Discord: so.cn)",
+      "date": "2026-10-13",
       "heroes": [
         "nyx_assassin"
       ],
@@ -938,6 +1011,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "! (Discord: so.cn)",
+      "date": "2026-10-13",
       "heroes": [
         "dawnbreaker"
       ],
@@ -951,6 +1025,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Yerka (Discord: argenov)",
+      "date": "2026-10-13",
       "heroes": [
         "arc_warden",
         "bane",
@@ -987,6 +1062,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Yerka (Discord: argenov)",
+      "date": "2026-10-13",
       "heroes": [
         "kez"
       ],
@@ -1000,6 +1076,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Yerka (Discord: argenov)",
+      "date": "2026-10-13",
       "heroes": [
         "huskar"
       ],
@@ -1013,6 +1090,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Yerka (Discord: argenov)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1023,6 +1101,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\ud81a\uddb9 kaLmar \ud81a\uddb9 (Discord: kalmar322)",
+      "date": "2026-10-13",
       "heroes": [
         "shadow_demon"
       ],
@@ -1036,6 +1115,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Discord: guzlichenok",
+      "date": "2026-10-13",
       "heroes": [
         "techies"
       ],
@@ -1049,6 +1129,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Discord: guzlichenok",
+      "date": "2026-10-13",
       "heroes": [
         "broodmother"
       ],
@@ -1062,6 +1143,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Yerka (Discord: argenov)",
+      "date": "2026-10-13",
       "heroes": [
         "hoodwink"
       ],
@@ -1075,6 +1157,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Yerka (Discord: argenov)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1085,6 +1168,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Yerka (Discord: argenov)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1095,6 +1179,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Yerka (Discord: argenov)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1105,6 +1190,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "L1 (Discord: rapses8); continuation: knoticoooo (Discord: knoticoooo_69011)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1115,6 +1201,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "okea (Discord: okea)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1125,6 +1212,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Yerka (Discord: argenov)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1135,6 +1223,7 @@
       "manual": true,
       "needs_q_localizer": false,
       "author": "64qt (Discord: 32tq); latest update: zurux (Discord: zurux1337)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1145,6 +1234,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "kael'thas' (Discord: feit._)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1155,6 +1245,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Yerka (Discord: argenov)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1165,6 +1256,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "64qt (Discord: 32tq)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1175,6 +1267,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Forever (Discord: hideshot)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1185,6 +1278,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "flatixxx (Discord: flatixxx)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1195,6 +1289,7 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "sediksss (Discord)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1205,6 +1300,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "flatixxx (Discord: flatixxx)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1215,6 +1311,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Yerka (Discord: argenov); base script by @1006597751640969267",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1225,6 +1322,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "wolf.xyz (Discord)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1235,6 +1333,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "punkproof (Discord: punkproof)",
+      "date": "2026-10-14",
       "version_marker": "NONE"
     },
     {
@@ -1245,6 +1344,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u043c\u0430\u043a\u0430\u043a\u0438 (Discord: mamkaki)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1255,6 +1355,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u82b1\u66c7\u308a hanagumori (Discord: euphoria2k)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1265,6 +1366,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "OutByte@archik in ~/bio (Discord: outbytenochek)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1275,6 +1377,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "MorFix (Discord: morfix_kid)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1285,6 +1388,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "kkk (Discord: skibidisigma8261451)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1295,6 +1399,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "1 \u0432\u043e\u0432\u0447\u0438\u043a (Discord: shukuchhi)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1305,6 +1410,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "1 \u0432\u043e\u0432\u0447\u0438\u043a (Discord: shukuchhi)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1315,6 +1421,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "just hate me (Discord: loneuway)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1325,6 +1432,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Snow Storm (Discord: devsnowy)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1335,6 +1443,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Snow Storm (Discord: devsnowy)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1345,6 +1454,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Snow Storm (Discord: devsnowy)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1355,6 +1465,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u82b1\u66c7\u308a (Discord: euphoria2k)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1365,6 +1476,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "chizhak (Discord: stulipelky)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1375,6 +1487,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "64qt (Discord: 32tq)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1385,6 +1498,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "CODEX (Discord: _codex_7)",
+      "date": "2026-10-13",
       "heroes": [
         "lone_druid"
       ],
@@ -1398,6 +1512,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Sesh (Discord: seshidg)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1408,6 +1523,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "cuter as a vampire (Discord: internetenemy)",
+      "date": "2026-10-13",
       "heroes": [
         "muerta"
       ],
@@ -1421,6 +1537,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "64qt (Discord: 32tq)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1431,6 +1548,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "love (Discord: etolove)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1441,6 +1559,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "serioga5035; latest version by sh1shula",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1451,6 +1570,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Sancho (Discord: zpzq)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1461,6 +1581,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "flatixxx (Discord: flatixxx)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1471,6 +1592,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "CODEX (Discord: _codex_7); base by Discord user 395477305830408192",
+      "date": "2026-10-13",
       "heroes": [
         "broodmother"
       ],
@@ -1484,6 +1606,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0420\u043e\u043c\u0431\u0438\u0442 (Discord: derevasha); upstream: madonchik123",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1494,6 +1617,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0420\u043e\u043c\u0431\u0438\u0442 (Discord: derevasha)",
+      "date": "2026-10-13",
       "version_marker": "NONE"
     },
     {
@@ -1504,6 +1628,7 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Xianeas (Discord: xianeas)",
+      "date": "2026-10-14",
       "version_marker": "NONE"
     }
   ]
