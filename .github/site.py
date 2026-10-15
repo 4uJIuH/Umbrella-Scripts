@@ -5,6 +5,8 @@ import shutil
 from collections import Counter
 from pathlib import Path
 
+from menu_locations import paths_for
+
 BASE = Path(__file__).resolve().parents[1]
 GH = BASE / ".github"
 OUT = BASE / "_site"
@@ -71,6 +73,7 @@ def entry(script, folder, kind):
         "folder": folder,
         "ru": script["ru"],
         "en": script["en"],
+        "menu": paths_for(script),
         "preview": preview.exists(),
         "versions": versions,
         "changelog": {

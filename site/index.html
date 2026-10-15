@@ -86,6 +86,7 @@ nav a.on{color:var(--fg);background:var(--sec)}
 .preview{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#000;margin-bottom:28px}
 .preview img{display:block;width:100%}
 .lead{font-size:15px;margin-bottom:14px}
+.menu-route{display:block;color:var(--muted);font-size:14px;padding:8px 10px;margin:0 0 8px;background:var(--sec);border-radius:7px;overflow-wrap:anywhere}
 .feat{list-style:none;display:grid;gap:8px}
 .feat li{display:flex;gap:10px;color:var(--muted)}
 .feat li i{color:var(--faint);font-size:11px;margin-top:5px}
@@ -285,9 +286,14 @@ function changelog(md){
   }).join("")
   return `<div class="block"><h2>${t("changelog")}</h2><div class="log appear" style="--i:3">${parts}</div></div>`
 }
+function escapeText(value){
+  return String(value).replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]))
+}
 function renderScript(id){
   const s=items.find(x=>x.id===id); if(!s)return
   const d=s[lang]
+  const menuPaths=s.menu&&(s.menu[lang]||s.menu.en)||[]
+  const menuBlock=`<div class="block"><h2>${lang==="ru"?"Где находится меню":"Menu location"}</h2>${menuPaths.length?menuPaths.map(path=>`<p class="menu-route">${escapeText(path)}</p>`).join(""):`<p class="lead">${lang==="ru"?"Путь к меню не удалось определить по доступным исходникам.":"The menu path could not be determined from the available source files."}</p>`}</div>`
   const steps=(d.install||T[lang].steps[s.kind]).map(x=>`<li><span>${x.replace("{f}",s.file)}</span></li>`).join("")
   document.getElementById("p-script").innerHTML=`
   <div class="crumb"><a href="#/">${t("nav_catalog")}</a><i class="fa-solid fa-chevron-right" style="font-size:9px"></i><span>${s.title}</span></div>
@@ -297,6 +303,7 @@ function renderScript(id){
   <div class="cols"><div>
     ${s.preview?`<div class="preview appear" style="--i:0"><img src="previews/${s.id}.png" alt="${s.title}"></div>`:""}
     <div class="block"><h2>${t("about")}</h2><p class="lead">${d.about}</p>${d.features.length?`<ul class="feat">${d.features.map((f,i)=>`<li><i class="fa-solid fa-check"></i><span>${f[0].toUpperCase()+f.slice(1)}</span></li>`).join("")}</ul>`:""}</div>
+    ${menuBlock}
     <div class="block"><h2>${t("install")}</h2><ol class="steps">${steps}</ol>${s.needs_q_localizer?`<p class="note" style="margin-top:10px"><i class="fa-solid fa-circle-info"></i><span>${t("localizer_rename")}</span></p>`:""}</div>
     ${changelog(s.changelog[lang])}
   </div>

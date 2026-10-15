@@ -6,6 +6,8 @@ import sys
 import zipfile
 from pathlib import Path
 
+from menu_locations import paths_for
+
 BASE = Path(__file__).resolve().parents[1]
 GH = BASE / ".github"
 CATALOG = json.loads((GH / "catalog.json").read_text(encoding="utf-8"))
@@ -187,6 +189,7 @@ def write_manager_catalog():
             "manual": manual,
             "needs_q_localizer": script.get("needs_q_localizer", False),
             "author": script.get("author") or REPO.split("/", 1)[0],
+            "menu": paths_for(script),
         }
         date = version_date(script, version, dates)
         if date:

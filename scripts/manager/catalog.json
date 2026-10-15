@@ -13,6 +13,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "4uJIuH",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 Tinker"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 Tinker"
+        ]
+      },
       "date": "2026-10-12",
       "heroes": [
         "tinker"
@@ -26,6 +34,14 @@
       "manual": true,
       "needs_q_localizer": false,
       "author": "4uJIuH",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 Tinker"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 Tinker"
+        ]
+      },
       "date": "2026-10-13",
       "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7f968acd77541cbb091dcd880f54ca8555c956a5/scripts/tinker_auto_farm/package/Tinker.lua",
       "files": [
@@ -142,6 +158,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "4uJIuH",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 Auto Shackleshot"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 Auto Shackleshot"
+        ]
+      },
       "date": "2026-10-10",
       "heroes": [
         "windrunner"
@@ -155,6 +179,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "4uJIuH",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 Auto Spark"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 Auto Spark"
+        ]
+      },
       "date": "2026-10-10",
       "heroes": [
         "arc_warden"
@@ -168,6 +200,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "4uJIuH",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 Rune Units"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 Rune Units"
+        ]
+      },
       "date": "2026-10-10"
     },
     {
@@ -178,6 +218,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "4uJIuH",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 Earth Spirit Kick Combo"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Earth Spirit Kick Combo"
+        ]
+      },
       "date": "2026-10-10",
       "heroes": [
         "earth_spirit"
@@ -191,6 +239,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "4uJIuH",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 HP/Mana 67 Ping"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 HP/Mana 67 Ping"
+        ]
+      },
       "date": "2026-10-10"
     },
     {
@@ -201,6 +257,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "4uJIuH",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 Spirit Bear Pull"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Spirit Bear Pull"
+        ]
+      },
       "date": "2026-10-10",
       "heroes": [
         "lone_druid"
@@ -214,6 +278,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "4uJIuH",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 Script Manager"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 Script Manager"
+        ]
+      },
       "date": "2026-10-15"
     },
     {
@@ -224,6 +296,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\"ur2m\"",
+      "menu": {
+        "ru": [
+          "General \u2192 Dynamic Island"
+        ],
+        "en": [
+          "General \u2192 Dynamic Island"
+        ]
+      },
       "date": "2026-10-06",
       "version_marker": "SCRIPT_VERSION"
     },
@@ -235,6 +315,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "sataroz",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Tinker \u2192 Smart Escape"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Tinker \u2192 Smart Escape"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "tinker"
@@ -248,6 +336,10 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "But3rflys",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-09-20",
       "version_marker": "NONE"
     },
@@ -259,6 +351,10 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "But3rflys",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-09-20",
       "heroes": [
         "dark_seer"
@@ -273,6 +369,10 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "But3rflys",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-09-20",
       "version_marker": "NONE"
     },
@@ -284,6 +384,10 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "But3rflys",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-09-28",
       "heroes": [
         "kunkka",
@@ -299,6 +403,10 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "But3rflys",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-10-13"
     },
     {
@@ -309,6 +417,10 @@
       "manual": true,
       "needs_q_localizer": false,
       "author": "But3rflys",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-09-23"
     },
     {
@@ -319,6 +431,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "qhols (Discord: ur2m)",
+      "menu": {
+        "ru": [
+          "Info Screen \u2192 Main \u2192 Custom Stats"
+        ],
+        "en": [
+          "Info Screen \u2192 Main \u2192 Custom Stats"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -329,6 +449,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "z\u0432e\u0437d\u044b \u0443na\u043bu v \u043b\u0443\u0436\u0443 (Discord: rarimember)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 Bloodrage"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 Bloodrage"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "bloodseeker"
@@ -342,6 +470,10 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "z\u0432e\u0437d\u044b \u0443na\u043bu v \u043b\u0443\u0436\u0443 (Discord: rarimember)",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-10-13",
       "heroes": [
         "naga_siren"
@@ -355,6 +487,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u2694LegaXye\u79aa (Discord: legaxye)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 General \u2192 Utility \u2192 Inventory \u2192 Auto Aegis Mover"
+        ],
+        "en": [
+          "Scripts \u2192 General \u2192 Utility \u2192 Inventory \u2192 Auto Aegis Mover"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -365,6 +505,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u2694LegaXye\u79aa (Discord: legaxye)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 General \u2192 Utility \u2192 Anti-Rubick \u2192 Spell Cover"
+        ],
+        "en": [
+          "Scripts \u2192 General \u2192 Utility \u2192 Anti-Rubick \u2192 Spell Cover"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -375,6 +523,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "sataroz (Discord: sataroz)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Arc Warden \u2192 \u0410\u043d\u0442\u0438-\u0425\u0443\u043a \u0438 \u0410\u043d\u0442\u0438-\u0420\u043e\u043b\u043b"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Arc Warden \u2192 Anti-Hook and Anti-Roll"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "arc_warden"
@@ -388,6 +544,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "sataroz (Discord: sataroz)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 Panels Settings \u2192 Combo Switch Binds"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Invoker \u2192 Panels Settings \u2192 Combo Switch Binds"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "invoker"
@@ -401,6 +565,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "sataroz (Discord: sataroz)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Magnus"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Magnus"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "magnataur"
@@ -414,6 +586,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "sataroz (Discord: sataroz)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Techies \u2192 Better Better Techies Combo"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Techies \u2192 Better Better Techies Combo"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "techies"
@@ -427,6 +607,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0444\u0440\u0438\u0433\u0438\u0434\u043d\u044b\u0439 [\u0440\u0430\u0437\u0443\u043c] (Discord: .emocry)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 Chat Translator"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 Chat Translator"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -437,6 +625,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "! M0RC1 (Discord: wh1teray)",
+      "menu": {
+        "ru": [
+          "Changer \u2192 Main \u2192 \u0421\u0435\u0442\u043a\u0438"
+        ],
+        "en": [
+          "Changer \u2192 Main \u2192 \u0421\u0435\u0442\u043a\u0438"
+        ]
+      },
       "date": "2026-10-13",
       "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/61bc57ec3cdac7700297e93cdc0bdce3fa04ef2d/scripts/hero_grid/hero_grid.lua",
       "files": [
@@ -462,6 +658,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "! M0RC1 (Discord: wh1teray)",
+      "menu": {
+        "ru": [
+          "Changer \u2192 Main \u2192 \u041f\u043e\u0433\u043e\u0434\u0430"
+        ],
+        "en": [
+          "Changer \u2192 Main \u2192 \u041f\u043e\u0433\u043e\u0434\u0430"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -472,6 +676,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "! M0RC1 (Discord: wh1teray)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Visage"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Visage"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "visage"
@@ -485,6 +697,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "! M0RC1 (Discord: wh1teray)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Grimstroke"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Grimstroke"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "grimstroke"
@@ -498,6 +718,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "! M0RC1 (Discord: wh1teray)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Phoenix"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Phoenix"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "phoenix"
@@ -511,6 +739,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "4uJIuH",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility \u2192 \u041f\u043e\u0440\u044f\u0434\u043e\u0447\u043d\u043e\u0441\u0442\u044c"
+        ],
+        "en": [
+          "Scripts \u2192 Utility \u2192 \u041f\u043e\u0440\u044f\u0434\u043e\u0447\u043d\u043e\u0441\u0442\u044c"
+        ]
+      },
       "date": "2026-10-13",
       "install_url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/737fa07af44cc5169305966becd888ddecc0cd1d/scripts/behavior_score_helper/BehaviorScoreHelper.lua",
       "files": [
@@ -541,6 +777,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility \u2192 \u041e\u0442\u043c\u0430\u0437\u043a\u0438"
+        ],
+        "en": [
+          "Scripts \u2192 Utility \u2192 \u041e\u0442\u043c\u0430\u0437\u043a\u0438"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -551,6 +795,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility \u2192 \u041d\u0435\u043a\u0440\u043e\u043b\u043e\u0433\u0438"
+        ],
+        "en": [
+          "Scripts \u2192 Utility \u2192 \u041d\u0435\u043a\u0440\u043e\u043b\u043e\u0433\u0438"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -561,6 +813,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility \u2192 Wrapped"
+        ],
+        "en": [
+          "Scripts \u2192 Utility \u2192 Wrapped"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -571,6 +831,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility \u2192 Arc Warden Heist"
+        ],
+        "en": [
+          "Scripts \u2192 Utility \u2192 Arc Warden Heist"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "arc_warden"
@@ -584,6 +852,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility \u2192 Chen Circus"
+        ],
+        "en": [
+          "Scripts \u2192 Utility \u2192 Chen Circus"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "chen"
@@ -597,6 +873,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility \u2192 Anti-Mage"
+        ],
+        "en": [
+          "Scripts \u2192 Utility \u2192 Anti-Mage"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "antimage"
@@ -610,6 +894,14 @@
       "manual": true,
       "needs_q_localizer": false,
       "author": "\u041b\u0435\u0445\u0430, \u0412\u0430\u043d\u044f \u0438 \u0412\u0438\u0442\u0430\u043b\u0438\u043a (Discord: mikropabalo)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility \u2192 Lualingo"
+        ],
+        "en": [
+          "Scripts \u2192 Utility \u2192 Lualingo"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -620,6 +912,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "0x10ma (Discord: _0x10ma_)",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 Oppression Indicator"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Oppression Indicator"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -630,6 +930,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Yud3x (Discord: yud3xx)",
+      "menu": {
+        "ru": [
+          "General \u2192 Fun \u2192 Russian Roulette"
+        ],
+        "en": [
+          "General \u2192 Fun \u2192 Russian Roulette"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -640,6 +948,10 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "+ (Discord: obsessed.caress)",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-10-13",
       "heroes": [
         "sven",
@@ -654,6 +966,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Trineks (Discord: trineks)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Other \u2192 \u0410\u0431\u0443\u0437 \u0431\u043e\u0442\u043b\u0430"
+        ],
+        "en": [
+          "Scripts \u2192 Other \u2192 \u0410\u0431\u0443\u0437 \u0431\u043e\u0442\u043b\u0430"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -664,6 +984,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "okea (Discord: okea)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 Action Recorder"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 Action Recorder"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -674,6 +1002,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0444\u0440\u0438\u0433\u0438\u0434\u043d\u044b\u0439 [\u0440\u0430\u0437\u0443\u043c] (Discord: .emocry)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 Io Overcharge"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 Io Overcharge"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "wisp"
@@ -687,6 +1023,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Nev1r0Psixx0z",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Arc Warden"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Arc Warden"
+        ]
+      },
       "date": "2026-10-15",
       "heroes": [
         "arc_warden"
@@ -700,6 +1044,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "dami\u044f (Discord: vacnul)",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 \u0421\u043a\u0438\u043b\u043b\u044b \u0441\u043f\u0438\u043d\u043e\u0439"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Back Cast"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -710,6 +1062,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "okea (Discord: okea)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 Forge Spirit Farm"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 Forge Spirit Farm"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "invoker"
@@ -723,6 +1083,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "chizhak (Discord: stulipelky)",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 Selection Camera"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Selection Camera"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -733,6 +1101,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "! \u0434\u0430\u0439 \u0435\u0433\u043e (Discord: 0ghq)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Spirit Breaker \u2192 Settings"
+        ],
+        "en": [
+          "Scripts \u2192 Spirit Breaker \u2192 Settings"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "spirit_breaker"
@@ -746,6 +1122,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "kuonsetsu (Discord: kuonsetsu)",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 Interface"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Interface"
+        ]
+      },
       "date": "2026-10-13"
     },
     {
@@ -756,6 +1140,10 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0437\u0430\u0432\u0442\u0440\u0430 \u043d\u0435 \u0431\u0443\u0434\u0435\u0442 (Discord: n1fogen)",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-10-01",
       "heroes": [
         "invoker"
@@ -770,6 +1158,10 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0437\u0430\u0432\u0442\u0440\u0430 \u043d\u0435 \u0431\u0443\u0434\u0435\u0442 (Discord: n1fogen)",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-10-14",
       "version_marker": "NONE"
     },
@@ -781,6 +1173,10 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0437\u0430\u0432\u0442\u0440\u0430 \u043d\u0435 \u0431\u0443\u0434\u0435\u0442 (Discord: n1fogen)",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-09-30",
       "heroes": [
         "invoker"
@@ -795,6 +1191,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Axis (Discord: ykromanka2)",
+      "menu": {
+        "ru": [
+          "General \u2192 Visuals \u2192 Old Last Match"
+        ],
+        "en": [
+          "General \u2192 Visuals \u2192 Old Last Match"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -806,6 +1210,10 @@
       "manual": true,
       "needs_q_localizer": false,
       "author": "! 666 (Discord: isee2p)",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -817,6 +1225,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u043c\u044f\u0443\u0447\u0443 \u043e\u0434\u043d\u043e\u0439 (Discord: psyterror.ru)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 \u0412\u0438\u0437\u0443\u0430\u043b \u2192 \u0421\u0435\u043a\u0440\u0435\u0442\u043d\u044b\u0435 \u044d\u0444\u0444\u0435\u043a\u0442\u044b"
+        ],
+        "en": [
+          "Scripts \u2192 \u0412\u0438\u0437\u0443\u0430\u043b \u2192 \u0421\u0435\u043a\u0440\u0435\u0442\u043d\u044b\u0435 \u044d\u0444\u0444\u0435\u043a\u0442\u044b"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -828,6 +1244,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0413\u043e\u043b\u043e\u0434\u0430\u044e \u0434\u0435\u043d\u044c 1 (Discord: nworddestroyer)",
+      "menu": {
+        "ru": [
+          "Fog Restorer \u2192 World \u2192 Fog"
+        ],
+        "en": [
+          "Fog Restorer \u2192 World \u2192 Fog"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -839,6 +1263,16 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\ud835\udc80\ud835\udc86\ud835\udc8dt (Discord: yelt_ls)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Windranger",
+          "Scripts \u2192 User Scripts \u2192 Windranger Powershot"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Windranger",
+          "Scripts \u2192 User Scripts \u2192 Windranger Powershot"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "windrunner"
@@ -853,6 +1287,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "cucumberr (Discord: cucumberro)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 MoM Sabre Abuse"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 MoM Sabre Abuse"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -864,6 +1306,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u043a\u0440\u0435\u0432\u0435\u0442\u043a\u0430 (Discord: krevetych_)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Tinker"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Tinker"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "tinker"
@@ -878,6 +1328,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "russia.mvd (Discord: russia.mvd)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Invoker"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Invoker"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -889,6 +1347,14 @@
       "manual": true,
       "needs_q_localizer": false,
       "author": "! 666 (Discord: isee2p)",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 Gank Threat"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Gank Threat"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -900,6 +1366,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0435\u0431\u0430\u0448\u0443 \u0432 \u0434\u043e\u0442\u0443 (Discord: trikossik)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Tinker"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Tinker"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "tinker"
@@ -914,6 +1388,10 @@
       "manual": true,
       "needs_q_localizer": false,
       "author": "! 666 (Discord: isee2p)",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -925,6 +1403,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "noptemis (Discord: xxinxiv)",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 Profile"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Profile"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -936,6 +1422,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "447 | dasty4ek (Discord: tontotonoki)",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 Illusion Tracker Pro"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Illusion Tracker Pro"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -947,6 +1441,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Nev1r0Psixx0z (Discord: nev1r0psixx0z)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Arc Warden"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Arc Warden"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "arc_warden"
@@ -961,6 +1463,10 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Nev1r0Psixx0z (Discord: nev1r0psixx0z)",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-10-13",
       "heroes": [
         "arc_warden"
@@ -975,6 +1481,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "kaoru (Discord: hatred_0; attribution unverified)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Other \u2192 Map Chat Troll"
+        ],
+        "en": [
+          "Scripts \u2192 Other \u2192 Map Chat Troll"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -986,6 +1500,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Wahha (Discord: wahha_)",
+      "menu": {
+        "ru": [
+          "Creeps \u2192 \u041f\u0435\u0440\u0435\u0430\u0433\u0440 V2"
+        ],
+        "en": [
+          "Creeps \u2192 Re-Aggro V2"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -997,6 +1519,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "! (Discord: so.cn)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Nyx Assassin"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Nyx Assassin"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "nyx_assassin"
@@ -1011,6 +1541,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "! (Discord: so.cn)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Dawnbreaker"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Dawnbreaker"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "dawnbreaker"
@@ -1025,6 +1563,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Yerka (Discord: argenov)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Invoker"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Invoker"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "arc_warden",
@@ -1062,6 +1608,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Yerka (Discord: argenov)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Kez"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Kez"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "kez"
@@ -1076,6 +1630,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Yerka (Discord: argenov)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Huskar"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Huskar"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "huskar"
@@ -1090,6 +1652,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Yerka (Discord: argenov)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Dragon \u2192 Dragon camp pull"
+        ],
+        "en": [
+          "Scripts \u2192 Dragon \u2192 Dragon camp pull"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1101,6 +1671,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\ud81a\uddb9 kaLmar \ud81a\uddb9 (Discord: kalmar322)",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 SD Poison 5"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 SD Poison 5"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "shadow_demon"
@@ -1115,6 +1693,10 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Discord: guzlichenok",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-10-13",
       "heroes": [
         "techies"
@@ -1129,6 +1711,10 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Discord: guzlichenok",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-10-13",
       "heroes": [
         "broodmother"
@@ -1143,6 +1729,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Yerka (Discord: argenov)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Hoodwink"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Hoodwink"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "hoodwink"
@@ -1157,6 +1751,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Yerka (Discord: argenov)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Ringmaster"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Ringmaster"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1168,6 +1770,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Yerka (Discord: argenov)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Spirit Breaker"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Spirit Breaker"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1179,6 +1789,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Yerka (Discord: argenov)",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 Ward Predictor"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Ward Predictor"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1190,6 +1808,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "L1 (Discord: rapses8); continuation: knoticoooo (Discord: knoticoooo_69011)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Invoker SS"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Invoker SS"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1201,6 +1827,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "okea (Discord: okea)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Scripts \u2192 Sentry"
+        ],
+        "en": [
+          "Scripts \u2192 Scripts \u2192 Sentry"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1212,6 +1846,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Yerka (Discord: argenov)",
+      "menu": {
+        "ru": [
+          "Changer \u2192 Main \u2192 Burning Changer"
+        ],
+        "en": [
+          "Changer \u2192 Main \u2192 Burning Changer"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1223,6 +1865,14 @@
       "manual": true,
       "needs_q_localizer": false,
       "author": "64qt (Discord: 32tq); latest update: zurux (Discord: zurux1337)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Self Play \u2192 Main"
+        ],
+        "en": [
+          "Scripts \u2192 Self Play \u2192 Main"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1234,6 +1884,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "kael'thas' (Discord: feit._)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 User Scripts \u2192 Farm Pattern"
+        ],
+        "en": [
+          "Scripts \u2192 User Scripts \u2192 Farm Pattern"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1245,6 +1903,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "Yerka (Discord: argenov)",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 Win Engine"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Win Engine"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1256,6 +1922,10 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "64qt (Discord: 32tq)",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1267,6 +1937,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Forever (Discord: hideshot)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Kez"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Kez"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1278,6 +1956,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "flatixxx (Discord: flatixxx)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Techies"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Techies"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1289,6 +1975,14 @@
       "manual": false,
       "needs_q_localizer": true,
       "author": "sediksss (Discord)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Lone Druid \u2192 ~Auto-LD"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Lone Druid \u2192 ~Auto-LD"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1300,6 +1994,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "flatixxx (Discord: flatixxx)",
+      "menu": {
+        "ru": [
+          "Changer \u2192 Main \u2192 Unusual Changer"
+        ],
+        "en": [
+          "Changer \u2192 Main \u2192 Unusual Changer"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1311,6 +2013,10 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Yerka (Discord: argenov); base script by @1006597751640969267",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1322,6 +2028,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "wolf.xyz (Discord)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Techies \u2192 Brain"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Techies \u2192 Brain"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1333,6 +2047,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "punkproof (Discord: punkproof)",
+      "menu": {
+        "ru": [
+          "Creeps \u2192 Main \u2192 Creep Control"
+        ],
+        "en": [
+          "Creeps \u2192 Main \u2192 Creep Control"
+        ]
+      },
       "date": "2026-10-14",
       "version_marker": "NONE"
     },
@@ -1344,6 +2066,16 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u043c\u0430\u043a\u0430\u043a\u0438 (Discord: mamkaki)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Keeper Of The Light",
+          "General \u2192 Utility \u2192 KOTL Illuminate"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Keeper Of The Light",
+          "General \u2192 Utility \u2192 KOTL Illuminate"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1355,6 +2087,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u82b1\u66c7\u308a hanagumori (Discord: euphoria2k)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Lycan"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Lycan"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1366,6 +2106,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "OutByte@archik in ~/bio (Discord: outbytenochek)",
+      "menu": {
+        "ru": [
+          "Miscellaneous \u2192 In Game \u2192 Mute Voice Lines"
+        ],
+        "en": [
+          "Miscellaneous \u2192 In Game \u2192 Mute Voice Lines"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1377,6 +2125,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "MorFix (Discord: morfix_kid)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Tinker"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Tinker"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1388,6 +2144,10 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "kkk (Discord: skibidisigma8261451)",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1399,6 +2159,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "1 \u0432\u043e\u0432\u0447\u0438\u043a (Discord: shukuchhi)",
+      "menu": {
+        "ru": [
+          "Miscellaneous \u2192 In Game \u2192 Team MapHack"
+        ],
+        "en": [
+          "Miscellaneous \u2192 In Game \u2192 Team MapHack"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1410,6 +2178,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "1 \u0432\u043e\u0432\u0447\u0438\u043a (Discord: shukuchhi)",
+      "menu": {
+        "ru": [
+          "\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f \u2192 \u041c\u0430\u043f\u0445\u0430\u043a \u2192 \u041f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435"
+        ],
+        "en": [
+          "Information \u2192 Maphack \u2192 Show direction"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1421,6 +2197,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "just hate me (Discord: loneuway)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Keeper Of The Light"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Keeper Of The Light"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1432,6 +2216,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Snow Storm (Discord: devsnowy)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Shadow Fiend"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Shadow Fiend"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1443,6 +2235,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Snow Storm (Discord: devsnowy)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Shadow Fiend"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Shadow Fiend"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1454,6 +2254,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Snow Storm (Discord: devsnowy)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Shadow Fiend"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Shadow Fiend"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1465,6 +2273,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u82b1\u66c7\u308a (Discord: euphoria2k)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Settings \u2192 General \u2192 Units Controller \u2192 Control Ally"
+        ],
+        "en": [
+          "Heroes \u2192 Settings \u2192 General \u2192 Units Controller \u2192 Control Ally"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1476,6 +2292,10 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "chizhak (Discord: stulipelky)",
+      "menu": {
+        "ru": [],
+        "en": []
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1487,6 +2307,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "64qt (Discord: 32tq)",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 Dark Carnival"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Dark Carnival"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1498,6 +2326,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "CODEX (Discord: _codex_7)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Lone Druid"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Lone Druid"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "lone_druid"
@@ -1512,6 +2348,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Sesh (Discord: seshidg)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Other \u2192 Ward Triangulator"
+        ],
+        "en": [
+          "Scripts \u2192 Other \u2192 Ward Triangulator"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1523,6 +2367,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "cuter as a vampire (Discord: internetenemy)",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Muerta \u2192 Main Settings \u2192 Dead Shot"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Muerta \u2192 Main Settings \u2192 Dead Shot"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "muerta"
@@ -1537,6 +2389,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "64qt (Discord: 32tq)",
+      "menu": {
+        "ru": [
+          "Info Screen \u2192 Main \u2192 Heroes Overlay \u2192 Main \u2192 Selected Enemy Cooldowns"
+        ],
+        "en": [
+          "Info Screen \u2192 Main \u2192 Heroes Overlay \u2192 Main \u2192 Selected Enemy Cooldowns"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1548,6 +2408,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "love (Discord: etolove)",
+      "menu": {
+        "ru": [
+          "Info Screen \u2192 Main \u2192 Heroes Overlay"
+        ],
+        "en": [
+          "Info Screen \u2192 Main \u2192 Heroes Overlay"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1559,6 +2427,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "serioga5035; latest version by sh1shula",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Utility"
+        ],
+        "en": [
+          "Scripts \u2192 Utility"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1570,6 +2446,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Sancho (Discord: zpzq)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Stacker \u2192 ST"
+        ],
+        "en": [
+          "Scripts \u2192 Stacker \u2192 ST"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1581,6 +2465,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "flatixxx (Discord: flatixxx)",
+      "menu": {
+        "ru": [
+          "Miscellaneous \u2192 Other \u2192 \u0410\u0432\u0442\u043e-\u0420\u0443\u0438\u043d"
+        ],
+        "en": [
+          "Miscellaneous \u2192 Other \u2192 \u0410\u0432\u0442\u043e-\u0420\u0443\u0438\u043d"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1592,6 +2484,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "CODEX (Discord: _codex_7); base by Discord user 395477305830408192",
+      "menu": {
+        "ru": [
+          "Heroes \u2192 Hero List \u2192 Broodmother"
+        ],
+        "en": [
+          "Heroes \u2192 Hero List \u2192 Broodmother"
+        ]
+      },
       "date": "2026-10-13",
       "heroes": [
         "broodmother"
@@ -1606,6 +2506,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0420\u043e\u043c\u0431\u0438\u0442 (Discord: derevasha); upstream: madonchik123",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Other \u2192 Market"
+        ],
+        "en": [
+          "Scripts \u2192 Other \u2192 Market"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1617,6 +2525,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "\u0420\u043e\u043c\u0431\u0438\u0442 (Discord: derevasha)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Other \u2192 MMR Tracker Ultimate"
+        ],
+        "en": [
+          "Scripts \u2192 Other \u2192 MMR Tracker Ultimate"
+        ]
+      },
       "date": "2026-10-13",
       "version_marker": "NONE"
     },
@@ -1628,6 +2544,14 @@
       "manual": false,
       "needs_q_localizer": false,
       "author": "Xianeas (Discord: xianeas)",
+      "menu": {
+        "ru": [
+          "General \u2192 Main \u2192 Glyph Timer"
+        ],
+        "en": [
+          "General \u2192 Main \u2192 Glyph Timer"
+        ]
+      },
       "date": "2026-10-14",
       "version_marker": "NONE"
     }
