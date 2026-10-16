@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`muerta-dead-shot-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/muerta-dead-shot-v1.0.0) | 2026-10-13 | [muerta_dead_shot.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/muerta-dead-shot-v1.0.0/muerta_dead_shot.lua) | 0 |
+| [`muerta-dead-shot-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/muerta-dead-shot-v1.0.0) | 2026-10-13 | [muerta_dead_shot.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/muerta-dead-shot-v1.0.0/muerta_dead_shot.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=muerta-dead-shot&expanded=true)
 <!-- releases:end -->

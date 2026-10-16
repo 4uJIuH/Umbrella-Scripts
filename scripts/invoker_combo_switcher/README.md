@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`invoker-combo-switcher-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/invoker-combo-switcher-v1.0.0) | 2026-10-13 | [invoker_combo_switcher.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-combo-switcher-v1.0.0/invoker_combo_switcher.lua) | 3 |
+| [`invoker-combo-switcher-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/invoker-combo-switcher-v1.0.0) | 2026-10-13 | [invoker_combo_switcher.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/invoker-combo-switcher-v1.0.0/invoker_combo_switcher.lua) | 5 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=invoker-combo-switcher&expanded=true)
 <!-- releases:end -->

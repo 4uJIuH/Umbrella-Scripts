@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`disable-tracker-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/disable-tracker-v1.0.0) | 2026-10-13 | [ugnetenie.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/disable-tracker-v1.0.0/ugnetenie.lua) | 0 |
+| [`disable-tracker-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/disable-tracker-v1.0.0) | 2026-10-13 | [ugnetenie.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/disable-tracker-v1.0.0/ugnetenie.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=disable-tracker&expanded=true)
 <!-- releases:end -->
