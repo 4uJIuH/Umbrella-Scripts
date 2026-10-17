@@ -233,6 +233,7 @@
 - [Deny Taunt](scripts/deny_taunt) — шуточные сообщения противнику после деная крипа
 - [PudgeHook AI](scripts/pudge_hook_ai) — автоматический Meat Hook по врагам и спасение союзников
 - [Arc Warden Wave Pusher](scripts/arc_warden_wave_pusher) — умный пуш крип-волн клоном Arc Warden
+- [Echo BKB Dodge](scripts/echo_bkb_dodge) — автоматически нажимает BKB при блинке вражеского Earthshaker
 <!-- scripts:ru:end -->
 
 На странице скрипта есть описание, установка, история версий и загрузка.
@@ -513,6 +514,7 @@ Repository: https://github.com/4uJIuH/umbrella-scripts
 - [Deny Taunt](scripts/deny_taunt) — playful chat lines after denying a creep
 - [PudgeHook AI](scripts/pudge_hook_ai) — automated Meat Hook targeting and ally saves
 - [Arc Warden Wave Pusher](scripts/arc_warden_wave_pusher) — smart creep-wave pushing with Arc Warden's clone
+- [Echo BKB Dodge](scripts/echo_bkb_dodge) — automatically uses BKB when an enemy Earthshaker Blinks nearby
 <!-- scripts:en:end -->
 
 The script page includes its description, installation steps, version history, and download.
@@ -573,7 +575,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 73 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 223 | `script-manager-v2.10.5` |
+| [Script Manager](scripts/script_manager) | 231 | `script-manager-v2.10.5` |
 | [Dynamic Island](scripts/dynamic_island_dota) | 622 | `v2.5.3` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 3 | `tinker-smart-escape-v1.0.0` |
 | [Lane Pull](scripts/lane_pull) | 261 | `lane-pull-v1.0.4` |
@@ -605,7 +607,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Botle Abuse](scripts/botle) | 12 | `botle-abuse-v1.0.0` |
 | [Action Recorder](scripts/action_recorder) | 3 | `action-recorder-v1.0.0` |
 | [Io Overcharge](scripts/io_overcharge) | 6 | `io-overcharge-v1.0.0` |
-| [Arc Warden Utilities](scripts/arc_warden_utilities) | 12 | `arc-warden-utilities-v1.1.0` |
+| [Arc Warden Utilities](scripts/arc_warden_utilities) | 14 | `arc-warden-utilities-v1.1.0` |
 | [Back Cast](scripts/backwards_cast) | 15 | `backwards-cast-v1.0.0` |
 | [Forge Spirit Farm (Beta)](scripts/forge_spirit_farm_beta) | 5 | `forge-spirit-farm-beta-v0.1.0-beta.1` |
 | [Selection Camera](scripts/selection_camera) | 3 | `selection-camera-v1.1.0` |
@@ -647,7 +649,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Changer](scripts/changer) | 6 | `changer-v1.0.0` |
 | [Self Play](scripts/self_play_bot) | 6 | `self-play-v1.0.1` |
 | [Farm Pattern 2.5](scripts/farm_pattern) | 4 | `farm-pattern-v2.5` |
-| [Win Condition Engine](scripts/win_condition_engine) | 26 | `win-condition-engine-v1.0.0` |
+| [Win Condition Engine](scripts/win_condition_engine) | 27 | `win-condition-engine-v1.0.0` |
 | [Invoker (beta)](scripts/invoker_beta) | 28 | `invoker-beta-v1.0.0` |
 | [Kez Combo](scripts/kez_combo) | 10 | `kez-combo-v1.0.0` |
 | [Techies Combo](scripts/techies_combo) | 10 | `techies-combo-v1.0.0` |
@@ -671,7 +673,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Control Ally](scripts/control_ally) | 4 | `control-ally-v1.0.0` |
 | [Eul / Wind Waker Blink Helper](scripts/eul_wind_waker_blink_helper) | 3 | `eul-wind-waker-blink-helper-v1.0.0` |
 | [Dark Carnival Path Tokens](scripts/dark_carnival_path_tokens) | 2 | `dark-carnival-path-tokens-v1.0.0` |
-| [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) | 7 | `lone-druid-bear-ai-deluxe-v1.0.0` |
+| [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) | 8 | `lone-druid-bear-ai-deluxe-v1.0.0` |
 | [Lina Hero Brain](scripts/lina_hero_brain) | 48 | `v0.5.173` |
 | [Sniper Hero Brain](scripts/sniper_hero_brain) | 179 | `v6.15.277` |
 | [Ward Triangulator](scripts/ward_triangulator) | 10 | `ward-triangulator-v1.0.0` |
@@ -686,9 +688,10 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) | 9 | `mmr-tracker-ultimate-v1.0.0` |
 | [Glyph Timer](scripts/glyph_timer) | 25 | `glyph-timer-v1.0.0` |
 | [Rampage Timer](scripts/rampage_timer_h) | 0 | `rampage-timer-h-v1.0.0` |
-| [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) | 7 | `lone-druid-bear-ai-deluxe-v1.0.0` |
+| [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) | 8 | `lone-druid-bear-ai-deluxe-v1.0.0` |
 | [PudgeHook AI](scripts/pudge_hook_ai) | 8 | `pudge-hook-ai-v1.0.0` |
 | [Arc Warden Wave Pusher](scripts/arc_warden_wave_pusher) | 24 | `arc-warden-wave-pusher-v1.1.0` |
+| [Echo BKB Dodge](scripts/echo_bkb_dodge) | 0 | `echo-bkb-dodge-v1.2.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">

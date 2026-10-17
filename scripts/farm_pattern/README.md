@@ -3,13 +3,9 @@
 строит и визуализирует маршруты фарма / plans and visualizes efficient farming routes
 
 <!-- releases:start -->
-Скачать: [farm_pattern_2_5.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/farm-pattern-v2.5/farm_pattern_2_5.lua) — `farm-pattern-v2.5`, 2026-10-13
+Последняя версия: [`v2.5` — `farm_pattern_2_5.lua`](https://github.com/4uJIuH/umbrella-scripts/releases/download/farm-pattern-v2.5/farm_pattern_2_5.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`farm-pattern-v2.5`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/farm-pattern-v2.5) | 2026-10-13 | [farm_pattern_2_5.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/farm-pattern-v2.5/farm_pattern_2_5.lua) | 4 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=farm-pattern&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=farm-pattern&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

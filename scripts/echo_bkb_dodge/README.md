@@ -3,9 +3,13 @@
 автоматически нажимает BKB при блинке вражеского Earthshaker / automatically uses BKB when an enemy Earthshaker Blinks nearby
 
 <!-- releases:start -->
-Последняя версия: [`v1.2.0` — `echo_bkb_dodge.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/echo_bkb_dodge/echo_bkb_dodge.lua)
+Скачать: [echo_bkb_dodge.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/echo-bkb-dodge-v1.2.0/echo_bkb_dodge.lua) — `echo-bkb-dodge-v1.2.0`, 2026-10-17
 
-[Релизы на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=echo-bkb-dodge&expanded=true)
+| версия | дата | файл | загрузок |
+| --- | --- | --- | --- |
+| [`echo-bkb-dodge-v1.2.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/echo-bkb-dodge-v1.2.0) | 2026-10-17 | [echo_bkb_dodge.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/echo-bkb-dodge-v1.2.0/echo_bkb_dodge.lua) | 0 |
+
+[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=echo-bkb-dodge&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
@@ -42,4 +46,4 @@ Echo BKB Dodge watches for a confirmed Blink by an enemy Earthshaker and uses BK
 
 1. Place `echo_bkb_dodge.lua` in the `umbrella\scripts` folder.
 2. Reload the Lua scripts.
-3. Open `Scripts → Other → echo_bkb_dodge → Защита → Echo Slam` and enable «Включить защиту».
+3. Open `Scripts → Other → echo_bkb_dodge → Защита → Echo Slam` and enable “Включить защиту”.
