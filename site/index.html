@@ -338,7 +338,7 @@ function renderStats(){
   const show=i=>{
     const p=pts[i],prev=pts[i-1],x=X(i)/w*plot.clientWidth,y=Y(p[1])/h*plot.clientHeight
     guide.style.left=x+"px";dot.style.left=x+"px";dot.style.top=y+"px"
-    const rows=[...new Set([...Object.keys(p[2]),...Object.keys(prev?prev[2]:{})])].map(id=>[id,p[2][id]||0]).sort((a,b)=>b[1]-a[1]).map(([id,v])=>{const s=items.find(x=>x.id===id);return `<div class="row"><i class="fa-solid ${icon(id)}"></i><span>${s?s.title:id}</span><span class="v">${nf(v)}</span>${prev?delta(v,prev[2][id]||0):"<span></span>"}</div>`}).join("")
+    const rows=[...new Set([...Object.keys(p[2]),...Object.keys(prev?prev[2]:{})])].map(id=>{const v=p[2][id]||0;return [id,v,prev?v-(prev[2][id]||0):v]}).filter(r=>!prev||r[2]!==0).sort((a,b)=>b[2]-a[2]||b[1]-a[1]).map(([id,v])=>{const s=items.find(x=>x.id===id);return `<div class="row"><i class="fa-solid ${icon(id)}"></i><span>${s?s.title:id}</span><span class="v">${nf(v)}</span>${prev?delta(v,prev[2][id]||0):"<span></span>"}</div>`}).join("")
     const day=new Date(p[0]+"T00:00:00Z").toLocaleDateString(lang==="ru"?"ru-RU":"en-US",{weekday:"short",day:"numeric",month:"long"})
     ctip.innerHTML=`<div class="d">${day}</div><div class="sum"><b>${nf(p[1])}</b>${prev?delta(p[1],prev[1])+`<span class="d">${t("per_day")}</span>`:""}</div>${rows}${prev&&p[1]<prev[1]?`<div class="warn"><i class="fa-solid fa-circle-info"></i><span>${t("drop")}</span></div>`:""}`
     const tw=ctip.offsetWidth,left=x+16+tw>plot.clientWidth?x-16-tw:x+16
