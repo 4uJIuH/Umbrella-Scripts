@@ -1,3 +1,7 @@
+# Update v2.10.5
+
+- The update's release date is shown next to the version ("2.10.3 → 2.10.4 · today") and no longer overlaps the ratings and the Update button.
+
 # Update v2.10.4
 
 - Scripts by different authors with the same file name (Windranger Powershot and Windranger Combo) no longer overwrite each other: each gets its own file, and installing one no longer marks the other as installed.

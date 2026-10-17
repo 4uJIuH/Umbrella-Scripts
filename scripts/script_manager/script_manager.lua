@@ -696,7 +696,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.10.4"
+local VERSION = "2.10.5"
 
 local K = {
 	CFG = "script_market",
@@ -1914,7 +1914,7 @@ end
 -- 2 = the query is exactly an alias or initials ("wr"), such heroes go first
 function market.hero_match(id, qs, loose)
 	local k = market.hero_keys(id)
-	local hit = false
+	local hit
 	for _, q in ipairs(qs) do
 		if (utf8.len(q) or 0) >= 2 then
 			for _, a in ipairs(k.short) do
@@ -1930,7 +1930,7 @@ function market.hero_match(id, qs, loose)
 			if w:sub(1, #q) == q then hit = 1 end
 		end
 	end
-	return hit
+	return hit or false
 end
 
 function market.package_path(path)
@@ -3112,13 +3112,19 @@ function view.row(s, rx, y, rw, interactive, sep)
 		S.vers[s.id] = nil
 	end
 	local va = anim.tween("rv:" .. s.id, (st == "update" or st == "busy") and 1 or 0, 0.2)
+	local used = tx + tw
 	if va > 0.01 and S.vers[s.id] then
-		g.text(400, 12, S.vers[s.id], tx + tw + 8, y + 28, T.t3, va)
+		local vw = g.text(400, 12, S.vers[s.id], tx + tw + 8, y + 28, T.t3, va)
+		used = used + 8 + vw
+		if s.date and st == "update" then
+			local ago = "· " .. when.ago(s.date)
+			if used + 6 + g.width(400, 12, ago) < rx + rw - 136 - 12 then
+				g.text(400, 12, ago, used + 6, y + 28, T.t4, va)
+			end
+		end
 	end
-	local label = s.date and (S.sort == "updated" and when.short(s.date) or (st == "update" and when.ago(s.date))) or nil
-	if label then
-		local lx = rx + rw - 12 - 100
-		local used = tx + tw + ((va > 0.01 and S.vers[s.id]) and (8 + g.width(400, 12, S.vers[s.id])) or 0)
+	if s.date and S.sort == "updated" and st ~= "update" then
+		local label, lx = when.short(s.date), rx + rw - 136
 		if lx - g.width(400, 12, label) > used + 12 then g.text(400, 12, label, lx, y + 28, T.t4, 1, "r") end
 	end
 	local rate_on = S.rate.url ~= nil
