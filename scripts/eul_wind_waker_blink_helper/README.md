@@ -3,13 +3,9 @@
 визуальные подсказки для Blink после Eul или Wind Waker / visual Blink cues after Eul or Wind Waker
 
 <!-- releases:start -->
-Скачать: [eul_wind_waker_blink_helper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/eul-wind-waker-blink-helper-v1.0.0/eul_wind_waker_blink_helper.lua) — `eul-wind-waker-blink-helper-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `eul_wind_waker_blink_helper.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/eul_wind_waker_blink_helper/eul_wind_waker_blink_helper.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`eul-wind-waker-blink-helper-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/eul-wind-waker-blink-helper-v1.0.0) | 2026-10-13 | [eul_wind_waker_blink_helper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/eul-wind-waker-blink-helper-v1.0.0/eul_wind_waker_blink_helper.lua) | 3 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=eul-wind-waker-blink-helper&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=eul-wind-waker-blink-helper&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

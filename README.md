@@ -573,17 +573,17 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 73 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 220 | `script-manager-v2.10.4` |
+| [Script Manager](scripts/script_manager) | 223 | `script-manager-v2.10.5` |
 | [Dynamic Island](scripts/dynamic_island_dota) | 622 | `v2.5.3` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 3 | `tinker-smart-escape-v1.0.0` |
-| [Lane Pull](scripts/lane_pull) | 260 | `lane-pull-v1.0.4` |
+| [Lane Pull](scripts/lane_pull) | 261 | `lane-pull-v1.0.4` |
 | [DS Spot Block](scripts/ds_spot_block) | 53 | `ds-spot-block-v1.0.1` |
 | [Custom Background](scripts/custom_background) | 43 | `custom-background-v1.0.0` |
 | [Auto Stack](scripts/auto_stack) | 150 | `auto-stack-v1.1.0` |
-| [Draft Helper](scripts/draft_helper) | 1395 | `draft-helper-v2.0.0-beta.20` |
+| [Draft Helper](scripts/draft_helper) | 1396 | `draft-helper-v2.0.0-beta.20` |
 | [MusicUI](scripts/musicui) | 708 | `musicui-v1.0.8` |
 | [Umbrella Lua Developer Skill](scripts/umbrella_lua) | 195 | `umbrella-lua-v1.0.4` |
-| [Custom Stats](scripts/custom_stats) | 10 | `custom-stats-v1.0.0` |
+| [Custom Stats](scripts/custom_stats) | 11 | `custom-stats-v1.0.0` |
 | [Bloodrage AutoCast](scripts/bloodrage_autocast) | 4 | `bloodrage-autocast-v1.0.0` |
 | [Naga PT Abuse](scripts/naga_pt_abuse) | 9 | `naga-pt-abuse-v1.0.0` |
 | [Auto Aegis Mover](scripts/auto_aegis_mover) | 16 | `auto-aegis-mover-v1.0.0` |
@@ -687,8 +687,8 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Glyph Timer](scripts/glyph_timer) | 25 | `glyph-timer-v1.0.0` |
 | [Rampage Timer](scripts/rampage_timer_h) | 0 | `rampage-timer-h-v1.0.0` |
 | [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) | 7 | `lone-druid-bear-ai-deluxe-v1.0.0` |
-| [PudgeHook AI](scripts/pudge_hook_ai) | 7 | `pudge-hook-ai-v1.0.0` |
-| [Arc Warden Wave Pusher](scripts/arc_warden_wave_pusher) | 23 | `arc-warden-wave-pusher-v1.1.0` |
+| [PudgeHook AI](scripts/pudge_hook_ai) | 8 | `pudge-hook-ai-v1.0.0` |
+| [Arc Warden Wave Pusher](scripts/arc_warden_wave_pusher) | 24 | `arc-warden-wave-pusher-v1.1.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
