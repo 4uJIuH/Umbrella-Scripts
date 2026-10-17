@@ -272,9 +272,9 @@
     },
     {
       "id": "script_manager",
-      "version": "2.10.2",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/37ddd4af71688881c2803b17096e438d07acef4b/scripts/script_manager/script_manager.lua",
-      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.2/script_manager.lua",
+      "version": "2.10.3",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/a8fce4466957e9af2e484d6d09eb3ab167566047/scripts/script_manager/script_manager.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.3/script_manager.lua",
       "manual": false,
       "needs_q_localizer": false,
       "author": "4uJIuH",
@@ -4597,8 +4597,8 @@
     {
       "id": "windranger_combo",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_combo/WindRanger.lua",
-      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_combo/WindRanger.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_combo/Windranger.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_combo/Windranger.lua",
       "manual": false,
       "needs_q_localizer": false,
       "author": "Ariok^^ (Discord: ariok12)",
