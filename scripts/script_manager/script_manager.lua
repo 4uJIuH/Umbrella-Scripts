@@ -696,7 +696,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.10.5"
+local VERSION = "2.10.6"
 
 local K = {
 	CFG = "script_market",
@@ -3116,16 +3116,13 @@ function view.row(s, rx, y, rw, interactive, sep)
 	if va > 0.01 and S.vers[s.id] then
 		local vw = g.text(400, 12, S.vers[s.id], tx + tw + 8, y + 28, T.t3, va)
 		used = used + 8 + vw
-		if s.date and st == "update" then
-			local ago = "· " .. when.ago(s.date)
-			if used + 6 + g.width(400, 12, ago) < rx + rw - 136 - 12 then
-				g.text(400, 12, ago, used + 6, y + 28, T.t4, va)
-			end
-		end
 	end
-	if s.date and S.sort == "updated" and st ~= "update" then
-		local label, lx = when.short(s.date), rx + rw - 136
-		if lx - g.width(400, 12, label) > used + 12 then g.text(400, 12, label, lx, y + 28, T.t4, 1, "r") end
+	local label = s.date and (st == "update" and when.ago(s.date) or S.sort == "updated" and when.short(s.date)) or nil
+	if label then
+		label = "· " .. label
+		if used + 6 + g.width(400, 12, label) < rx + rw - 136 - 12 then
+			g.text(400, 12, label, used + 6, y + 28, T.t4)
+		end
 	end
 	local rate_on = S.rate.url ~= nil
 	local err = S.err[s.id]

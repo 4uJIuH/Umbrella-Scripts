@@ -1,3 +1,7 @@
+# Update v2.10.6
+
+- When sorting by update date, the date is shown next to the script name ("BehaviorScoreHelper · Oct 15 2026") instead of above the ratings.
+
 # Update v2.10.5
 
 - The update's release date is shown next to the version ("2.10.3 → 2.10.4 · today") and no longer overlaps the ratings and the Update button.
