@@ -395,6 +395,9 @@ local localization = qLocalization.new({
 		sm_installed = "Installed",
 		sm_remove = "Remove",
 		sm_remove_confirm = "Remove the file?",
+		sm_retry = "Retry",
+		sm_updating_n = "Updating %d of %d",
+		sm_changes = "What's new",
 
 		sm_empty_search = "Nothing found",
 		sm_empty_search_d = "Try another name",
@@ -579,6 +582,9 @@ local localization = qLocalization.new({
 		sm_installed = "Установлен",
 		sm_remove = "Удалить",
 		sm_remove_confirm = "Удалить файл?",
+		sm_retry = "Повторить",
+		sm_updating_n = "Обновление: %d из %d",
+		sm_changes = "Что нового",
 
 		sm_empty_search = "Ничего не найдено",
 		sm_empty_search_d = "Попробуй другое название",
@@ -906,12 +912,12 @@ local S = {
 	sort = Config.ReadString(K.CFG, "sort", "catalog"),
 	inst_first = Config.ReadInt(K.CFG, "inst_first", 0) == 1,
 	sort_open = false, menu = nil,
-	rows = {}, banner_n = 0,
+	rows = {}, banner_text = nil,
 	query = "", focus = false, confirm = nil, qc = 0, qa = nil, q_off = 0, q_drag = false, q_click = 0, q_blink = 0,
 	foot = "idle", foot_until = 0, changed = {}, note = nil, reload_at = nil,
 	net = { state = "idle", at = 0, stamp = 0, err = nil, loaded = false },
 	rate = { url = nil, user = nil, tot = {}, mine = {}, busy = {}, rev = 0 },
-	inst = {}, busy = {}, nlz = nil, nlz_wait = nil, dir = nil, dw = nil, dw_open = false,
+	inst = {}, busy = {}, err = {}, batch = nil, confirm_t = 0, kb_id = nil, pend = {}, pend_t = 0, typed_ok = false, nlz = nil, nlz_wait = nil, dir = nil, dw = nil, dw_open = false,
 	set = {
 		open_mode = "reload",
 		check = Config.ReadString(K.CFG, "check", "start"),
@@ -1449,7 +1455,7 @@ end
 function fs.save(path, text)
 	local old = fs.read(path)
 	local backup = path .. ".script-manager.bak"
-	if old and not fs.read(backup) and not fs.write(backup, old) then return false end
+	if old and not fs.write(backup, old) then return false end
 	local temp = path .. ".script-manager.tmp"
 	if not fs.write(temp, text) then return false end
 	if old then os.remove(path) end
@@ -1668,6 +1674,15 @@ function text.routes(items)
 	return out
 end
 
+function text.lower(str)
+	return (str:lower():gsub("\208([\128-\175])", function(c)
+		local b = c:byte()
+		if b == 0x81 then return "\209\145" end
+		if b >= 0x90 and b <= 0x9F then return "\208" .. string.char(b + 0x20) end
+		if b >= 0xA0 then return "\209" .. string.char(b - 0x20) end
+	end))
+end
+
 function text.humanize(id)
 	return (id:gsub("_", " "):gsub("(%a)([%w]*)", function(a, b) return a:upper() .. b end))
 end
@@ -1680,6 +1695,12 @@ function market.status(s)
 	local v = S.inst[s.id]
 	if not v then return "none" end
 	return ver.cmp(v, s.latest) < 0 and "update" or "current"
+end
+
+function market.progress(s)
+	local n = S.busy[s.id]
+	if #s.files == 0 or type(n) ~= "number" then return L("sm_installing") end
+	return string.format("%s %d/%d", L("sm_installing"), n, #s.files + 1)
 end
 
 function market.updates_build()
@@ -1893,6 +1914,11 @@ function market.build(catalog, meta)
 				tag = { ru = text.cap(text.clean(ru.tagline)), en = text.cap(text.clean(en.tagline)) },
 				about = { ru = text.clean(ru.about), en = text.clean(en.about) },
 				features = { ru = text.list(ru.features), en = text.list(en.features) },
+				changes = {
+					ru = text.list(type(ru.changelog) == "string" and { ru.changelog } or ru.changelog),
+					en = text.list(type(e.changelog) == "string" and { e.changelog } or e.changelog
+						or (type(en.changelog) == "string" and { en.changelog } or en.changelog)),
+				},
 				menu = {
 					ru = text.routes(type(e.menu) == "table" and e.menu.ru or nil),
 					en = text.routes(type(e.menu) == "table" and e.menu.en or nil),
@@ -2068,7 +2094,8 @@ function market.fail(s, key, detail)
 		local missing = dir and market.missing_dirs(s, dir) or {}
 		return market.need_dirs(s, #missing > 0 and missing or s.dirs)
 	end
-	market.note("sm_err_t", s.title .. ". " .. L(key) .. (detail and (": " .. detail) or ""))
+	S.err[s.id] = L(key) .. (detail and (": " .. detail) or "")
+	market.note("sm_err_t", s.title .. ". " .. S.err[s.id])
 end
 
 function market.dismiss()
@@ -2177,6 +2204,7 @@ function market.download_files(s, done)
 				if not ok or type(parsed) ~= "table" then return done(nil, "sm_e_valid") end
 			end
 			downloaded[#downloaded + 1] = { path = file.path, body = body }
+			if S.busy[s.id] then S.busy[s.id] = index + 1 end
 			next_file(index + 1)
 		end)
 	end
@@ -2186,7 +2214,7 @@ end
 function market.run(id)
 	local s = BY_ID[id]
 	if not s or S.busy[id] then return end
-	S.busy[id], S.confirm = 0, nil
+	S.busy[id], S.confirm, S.err[id] = 0, nil, nil
 
 	local dir = fs.dir()
 	if not dir then return market.fail(s, "sm_e_dir") end
@@ -2202,6 +2230,11 @@ function market.run(id)
 				local function complete()
 					if not s.manual and s.version_marker == "NONE" then
 						Config.WriteString(K.CFG, "installed_" .. s.id, s.latest)
+					end
+					if not s.manual then
+						local paths = {}
+						for _, file in ipairs(files) do paths[#paths + 1] = file.path end
+						Config.WriteString(K.CFG, "files_" .. s.id, table.concat(paths, "|"))
 					end
 					S.busy[id] = nil
 					market.scan()
@@ -2222,6 +2255,7 @@ function market.run(id)
 				return complete()
 			end
 			if #s.files == 0 then return finish({}) end
+			S.busy[id] = 1
 			market.download_files(s, finish)
 		end)
 	end
@@ -2241,17 +2275,44 @@ function market.auto()
 	end
 end
 
+function market.owned(s)
+	local out = {}
+	local raw = Config.ReadString(K.CFG, "files_" .. s.id, "")
+	if raw ~= "" then
+		for path in raw:gmatch("[^|]+") do out[#out + 1] = path end
+		return out
+	end
+	for _, file in ipairs(s.files) do out[#out + 1] = file.path end
+	return out
+end
+
 function market.remove(id)
 	if S.confirm ~= id then
-		S.confirm = id
+		S.confirm, S.confirm_t = id, S.now
 		return
 	end
-	S.confirm = nil
+	S.confirm, S.err[id] = nil, nil
 	local s, dir = BY_ID[id], fs.dir()
 	if not s or not dir or not os.remove(dir .. s.file) then
 		if s then market.fail(s, "sm_e_remove") end
 		return
 	end
+	os.remove(dir .. s.file .. ".script-manager.bak")
+	local shared = { [K.NLZ_FILE] = true }
+	for _, o in ipairs(SCRIPTS) do
+		if o.id ~= id and S.inst[o.id] then
+			shared[o.file] = true
+			for _, path in ipairs(market.owned(o)) do shared[path] = true end
+		end
+	end
+	for _, path in ipairs(market.owned(s)) do
+		if not shared[path] and package_path(path) then
+			local full = dir .. path:gsub("/", "\\")
+			os.remove(full)
+			os.remove(full .. ".script-manager.bak")
+		end
+	end
+	Config.WriteString(K.CFG, "files_" .. id, "")
 	market.scan()
 	market.applied(s.title)
 end
@@ -2264,6 +2325,14 @@ function market.tick()
 		market.load()
 	end
 	if S.foot == "done" and S.now > S.foot_until then S.foot = "idle" end
+	if S.confirm and S.now - S.confirm_t > 3 then S.confirm = nil end
+	if S.batch then
+		local left = false
+		for _, id in ipairs(S.batch) do
+			if S.busy[id] then left = true break end
+		end
+		if not left then S.batch = nil end
+	end
 	if S.auto_due then
 		S.auto_due = false
 		market.auto()
@@ -2309,7 +2378,7 @@ function market.hidden(s)
 end
 
 function market.list_build()
-	local q = S.query:lower()
+	local q = text.lower(S.query)
 	local in_cat = S.nav ~= "all" and S.nav ~= "installed" and S.nav ~= "updates" and S.nav ~= "heroes" and S.nav ~= "authors"
 	local out = {}
 	for _, s in ipairs(SCRIPTS) do
@@ -2325,8 +2394,8 @@ function market.list_build()
 		if S.nav == "updates" and k ~= "update" and not (k == "busy" and S.inst[s.id]) then ok = false end
 		if in_cat and not market.in_cat(s, S.nav) then ok = false end
 		if ok and q ~= "" then
-			ok = s.title:lower():find(q, 1, true) ~= nil or tr(s.tag):lower():find(q, 1, true) ~= nil
-				or (s.author_name ~= nil and s.author_name:lower():find(q, 1, true) ~= nil)
+			ok = text.lower(s.title):find(q, 1, true) ~= nil or text.lower(tr(s.tag)):find(q, 1, true) ~= nil
+				or (s.author_name ~= nil and text.lower(s.author_name):find(q, 1, true) ~= nil)
 		end
 		if ok then out[#out + 1] = s end
 	end
@@ -2462,8 +2531,9 @@ function edit.key(key, ctrl, shift)
 		if lo then S.qa = nil else S.focus = false end
 	elseif key == KEY.KEY_ENTER or key == KEY.KEY_PAD_ENTER then
 		S.focus = false
-	elseif not ctrl and CHARS[key] then
-		edit.insert(shift and CHARS[key]:upper() or CHARS[key])
+	elseif not ctrl and CHARS[key] and not S.typed_ok then
+		S.pend[#S.pend + 1] = shift and CHARS[key]:upper() or CHARS[key]
+		S.pend_t = S.now
 	end
 	S.q_blink = S.now
 end
@@ -2731,8 +2801,7 @@ function view.search(x, y, w)
 	local pa = anim.tween("sf_hint", has and 0 or 1, 0.14)
 	local ca = anim.tween("sf_clear", has and 1 or 0, 0.14)
 	hit.add(x, y, w, h, "search", { down = edit.click })
-	g.rect(x, y, w, h, T.white, 10, C.field / 255 + 0.03 * fa)
-	if fa > 0.01 then g.frame(x, y, w, h, K.ACCENT_TEXT, 10, 0.55 * fa) end
+	g.rect(x, y, w, h, T.white, 10, C.field / 255 + 0.06 * fa)
 	local gc = { T.t3[1] + (T.t1[1] - T.t3[1]) * fa, T.t3[2] + (T.t1[2] - T.t3[2]) * fa, T.t3[3] + (T.t1[3] - T.t3[3]) * fa }
 	g.glyph(K.G.search, 13, x + 19, y + h / 2, gc)
 	local tx = x + 36
@@ -2848,9 +2917,11 @@ function view.action(s, right, cy)
 	anim.cross("act:" .. s.id, market.status(s), function(k, live, a)
 		local id = live and "act:" .. s.id or nil
 		if k == "none" or k == "update" or k == "manual" then
-			local label = L(k == "none" and "sm_install" or (k == "update" and "sm_update" or "sm_download"))
+			local failed = S.err[s.id] ~= nil
+			local label = failed and L("sm_retry") or L(k == "none" and "sm_install" or (k == "update" and "sm_update" or "sm_download"))
 			local w = g.width(600, 12, label) + 28
-			view.pill(right - w, cy - 14, w, 28, label, k == "update" and "white" or "soft", id, function() market.run(s.id) end)
+			local kind = failed and "red" or (k == "update" and "white" or "soft")
+			view.pill(right - w, cy - 14, w, 28, label, kind, id, function() market.run(s.id) end)
 		elseif k == "busy" then
 			local cx = right - 14 - 14
 			local r = 11 * (0.8 + 0.2 * a)
@@ -2867,12 +2938,9 @@ end
 
 function view.row(s, rx, y, rw, interactive, sep)
 	local id = "row:" .. s.id
-	local hv = interactive and anim.hover(id) or 0
+	local hv = interactive and math.max(anim.hover(id), anim.tween("kb:" .. s.id, S.kb_id == s.id and 1 or 0, 0.12)) or 0
 	g.rect(rx, y, rw, 72, T.white, 12, 0.055 * hv)
-	if hv > 0.01 then
-		g.frame(rx, y, rw, 72, T.white, 12, 0.07 * hv)
-		g.rect(rx + 2, y + 22, 3, 28, K.ACCENT, 2, 0.9 * hv)
-	end
+	if hv > 0.01 then g.rect(rx + 2, y + 22, 3, 28, K.ACCENT, 2, 0.9 * hv) end
 	if interactive then hit.add(rx, y, rw - 136, 72, id, { click = function() view.go("detail", s.id) end }) end
 	g.rect(rx + 12, y + 14, 44, 44, s.color, 12, 0.15 + 0.08 * hv)
 	g.frame(rx + 12, y + 14, 44, 44, s.color, 12, 0.2 + 0.2 * hv)
@@ -2889,17 +2957,43 @@ function view.row(s, rx, y, rw, interactive, sep)
 	if va > 0.01 and S.vers[s.id] then
 		g.text(400, 12, S.vers[s.id], tx + tw + 8, y + 28, T.t3, va)
 	end
-	if S.sort == "updated" and s.date then
-		local label = when.short(s.date)
+	local label = s.date and (S.sort == "updated" and when.short(s.date) or (st == "update" and when.ago(s.date))) or nil
+	if label then
 		local lx = rx + rw - 12 - 100
 		local used = tx + tw + ((va > 0.01 and S.vers[s.id]) and (8 + g.width(400, 12, S.vers[s.id])) or 0)
 		if lx - g.width(400, 12, label) > used + 12 then g.text(400, 12, label, lx, y + 28, T.t4, 1, "r") end
 	end
 	local rate_on = S.rate.url ~= nil
-	g.text(400, 13, g.fit(400, 13, tr(s.tag), rw - 70 - 136 - 12 - (rate_on and 96 or 0)), tx, y + 47, T.t3)
+	local err = S.err[s.id]
+	g.text(400, 13, g.fit(400, 13, err or tr(s.tag), rw - 70 - 136 - 12 - (rate_on and 96 or 0)), tx, y + 47, err and T.red or T.t3)
 	if rate_on then market.rate_chips(rx + rw - 136, y + 47, s.id, false, true) end
 	if interactive then view.action(s, rx + rw - 12, y + 36) end
 	if sep then g.hl(rx + 70, y + 72, rw - 70 - 12, T.white, C.line / 255) end
+end
+
+function view.kb_move(dir)
+	local list = market.list()
+	if #list == 0 then return end
+	local idx
+	for i, sc in ipairs(list) do
+		if sc.id == S.kb_id then idx = i break end
+	end
+	idx = idx and clamp(idx + dir, 1, #list) or (dir > 0 and 1 or #list)
+	S.kb_id = list[idx].id
+	local ty = (S.list_top or 0) + (idx - 1) * 73
+	if ty < S.scroll_to then
+		S.scroll_to = ty
+	elseif ty + 72 > S.scroll_to + S.view_h then
+		S.scroll_to = ty + 72 - S.view_h
+	end
+	S.scroll_to = clamp(S.scroll_to, 0, math.max(0, S.content_h - S.view_h))
+	S.scroll_t = S.now
+end
+
+function view.empty(cx, cy, glyph, title, desc, a)
+	g.glyph(glyph, 30, cx, cy - 44, T.t4, 0.5 * a)
+	g.text(600, 15, title, cx, cy, T.t2, a, "c")
+	g.text(400, 13, desc, cx, cy + 24, T.t4, a, "c")
 end
 
 function view.list()
@@ -2914,22 +3008,36 @@ function view.list()
 	local y = K.TOP - S.scroll
 	local rx, rw = x0 + 12, w0 - 24
 
-	local show_banner = #updates > 0 and (S.nav == "all" or S.nav == "updates") and S.query == ""
-	if show_banner then S.banner_n = #updates end
+	local batch = S.batch
+	local show_banner = (#updates > 0 or batch ~= nil) and (S.nav == "all" or S.nav == "updates") and S.query == ""
+	if show_banner then
+		if batch then
+			local done = 0
+			for _, id in ipairs(batch) do
+				if not S.busy[id] then done = done + 1 end
+			end
+			S.banner_text = string.format(L("sm_updating_n"), done, #batch)
+		else
+			S.banner_text = string.format(plural(#updates, "sm_upd"), #updates)
+		end
+	end
 	local ba = anim.tween("banner", show_banner and 1 or 0, show_banner and 0.2 or 0.16)
 	if ba > 0.01 then
 		local base = g.a
 		g.a = base * ba
 		local bx, bw = rx + 12, rw - 24
 		g.frame(bx, y, bw, 52, T.white, 12, C.line / 255)
-		g.text(400, 13, string.format(plural(S.banner_n, "sm_upd"), S.banner_n), bx + 16, y + 26, T.t2)
+		g.text(400, 13, S.banner_text or "", bx + 16, y + 26, T.t2)
 		local pw = g.width(600, 12, L("sm_update_all")) + 28
-		if show_banner then
+		if show_banner and not batch then
 			view.pill(bx + bw - 10 - pw, y + 11, pw, 30, L("sm_update_all"), "white", "update_all", function()
-				for _, u in ipairs(updates) do market.run(u.id) end
+				local ids = {}
+				for _, u in ipairs(updates) do ids[#ids + 1] = u.id end
+				S.batch = ids
+				for _, id in ipairs(ids) do market.run(id) end
 			end)
 		else
-			view.pill(bx + bw - 10 - pw, y + 11, pw, 30, L("sm_update_all"), "white")
+			view.pill(bx + bw - 10 - pw, y + 11, pw, 30, L("sm_update_all"), batch and "soft" or "white")
 		end
 		g.a = base
 	end
@@ -2958,6 +3066,7 @@ function view.list()
 
 	local live = {}
 	local cursor = (show_banner and 62 or 0) + (head and 52 or 0)
+	S.list_top = cursor
 	for _, sc in ipairs(list) do
 		local r = S.rows[sc.id]
 		if not r then
@@ -3007,29 +3116,26 @@ function view.list()
 
 	local ea = anim.tween("empty", #list == 0 and 1 or 0, #list == 0 and 0.2 or 0.1)
 	if ea > 0.01 then
-		local t, d = "sm_empty", "sm_empty_d"
+		local t, d, gl = "sm_empty", "sm_empty_d", K.G.all
 		if #SCRIPTS == 0 and S.net.state == "error" then
-			t, d = "sm_err_catalog", "sm_err_catalog_d"
+			t, d, gl = "sm_err_catalog", "sm_err_catalog_d", K.G.warn
 		elseif #SCRIPTS == 0 and S.net.state ~= "ok" then
-			t, d = "sm_loading", "sm_loading_d"
+			t, d, gl = "sm_loading", "sm_loading_d", K.G.refresh
 		elseif S.query ~= "" then
-			t, d = "sm_empty_search", "sm_empty_search_d"
+			t, d, gl = "sm_empty_search", "sm_empty_search_d", K.G.search
 		elseif S.nav == "heroes" and S.hero then
-			t, d = "sm_empty_hero", "sm_empty_hero_d"
+			t, d, gl = "sm_empty_hero", "sm_empty_hero_d", K.G.heroes
 		elseif S.nav == "updates" then
-			t, d = "sm_empty_upd", "sm_empty_upd_d"
+			t, d, gl = "sm_empty_upd", "sm_empty_upd_d", K.G.check
 		end
-		local cx, cy = x0 + w0 / 2, K.TOP + (K.H - K.TOP) / 2 - 20
-		g.text(600, 15, L(t), cx, cy, T.t2, ea, "c")
-		g.text(400, 13, L(d), cx, cy + 24, T.t4, ea, "c")
+		view.empty(x0 + w0 / 2, K.TOP + (K.H - K.TOP) / 2 - 20, gl, L(t), L(d), ea)
 	end
 	view.end_scroll(y + S.scroll - K.TOP + 16)
 end
 
 function view.tile_bg(x, y, w, h, key)
 	local hv = anim.hover(key)
-	g.rect(x, y, w, h, T.white, 10, 0.04 + 0.05 * hv)
-	if hv > 0.01 then g.frame(x, y, w, h, K.ACCENT_TEXT, 10, 0.4 * hv) end
+	g.rect(x, y, w, h, T.white, 10, 0.04 + 0.06 * hv)
 end
 
 function view.avatar(name, x, y, size)
@@ -3055,10 +3161,10 @@ function view.authors()
 	hit.add(x0, 0, w0, K.TOP, "drag", { down = view.start_drag })
 	view.search(x0 + 24, 16, w0 - 48 - K.CLOSE - 10)
 
-	local q = S.query:lower()
+	local q = text.lower(S.query)
 	local list = {}
 	for _, a in ipairs(S.authors) do
-		if q == "" or a.name:lower():find(q, 1, true) ~= nil or a.key:find(q, 1, true) ~= nil then
+		if q == "" or text.lower(a.name):find(q, 1, true) ~= nil or a.key:find(q, 1, true) ~= nil then
 			list[#list + 1] = a
 		end
 	end
@@ -3090,8 +3196,7 @@ function view.authors()
 	y = y + math.ceil(#list / cols) * (th + gap) + 14
 
 	if #list == 0 then
-		g.text(600, 15, L("sm_empty_search"), x0 + w0 / 2, K.TOP + 140, T.t2, 1, "c")
-		g.text(400, 13, L("sm_empty_search_d"), x0 + w0 / 2, K.TOP + 164, T.t4, 1, "c")
+		view.empty(x0 + w0 / 2, K.TOP + 140, K.G.search, L("sm_empty_search"), L("sm_empty_search_d"), 1)
 	end
 	view.end_scroll(y + S.scroll - K.TOP + 12)
 end
@@ -3107,10 +3212,10 @@ function view.heroes()
 	hit.add(x0, 0, w0, K.TOP, "drag", { down = view.start_drag })
 	view.search(x0 + 24, 16, w0 - 48 - K.CLOSE - 10)
 
-	local q = S.query:lower()
+	local q = text.lower(S.query)
 	local with, rest = {}, {}
 	for _, h in ipairs(HEROES) do
-		local found = q == "" or h[2]:lower():find(q, 1, true) ~= nil or market.hero_name(h[1]):lower():find(q, 1, true) ~= nil
+		local found = q == "" or h[2]:lower():find(q, 1, true) ~= nil or text.lower(market.hero_name(h[1])):find(q, 1, true) ~= nil
 		if found then
 			local list = (S.hero_n[h[1]] or 0) > 0 and with or rest
 			list[#list + 1] = h[1]
@@ -3156,8 +3261,7 @@ function view.heroes()
 	section("sm_heroes_all", rest)
 
 	if #with + #rest == 0 then
-		g.text(600, 15, L("sm_empty_search"), x0 + w0 / 2, K.TOP + 140, T.t2, 1, "c")
-		g.text(400, 13, L("sm_empty_search_d"), x0 + w0 / 2, K.TOP + 164, T.t4, 1, "c")
+		view.empty(x0 + w0 / 2, K.TOP + 140, K.G.search, L("sm_empty_search"), L("sm_empty_search_d"), 1)
 	end
 	view.end_scroll(y + S.scroll - K.TOP + 12)
 end
@@ -3170,7 +3274,6 @@ function view.dir_chips(names, x, cy, size, alpha)
 		local w = 14 + size + 8 + g.width(700, size, name) + 16
 		local h = size + 18
 		g.rect(x, cy - h / 2, w, h, T.dark, 9, 0.45 * alpha)
-		g.frame(x, cy - h / 2, w, h, ORANGE, 9, 0.7 * alpha)
 		g.glyph(K.G.folder, size, x + 14 + size / 2, cy, ORANGE, alpha)
 		g.text(700, size, name, x + 14 + size + 8, cy, T.t1, alpha)
 		x = x + w + 8
@@ -3185,9 +3288,7 @@ function view.dir_hint(s, cx, y, cw)
 	local tw = cw - (tx - cx) - 16
 	local lines = g.wrap(400, 13, L("sm_dir_hint_b"), tw)
 	local h = 16 + 22 + 6 + #lines * 20 + 14 + 34 + 16
-	local pulse = 0.55 + 0.25 * math.sin(S.now * 3)
 	g.rect(cx, y, cw, h, ORANGE, 14, 0.13)
-	g.frame(cx, y, cw, h, ORANGE, 14, pulse, 1.5)
 	g.rect(cx + 16, y + 16, 40, 40, ORANGE, 12, 0.24)
 	g.glyph(K.G.warn, 18, cx + 16 + 20, y + 16 + 20, ORANGE)
 	g.text(700, 16, g.fit(700, 16, title, tw), tx, y + 16 + 11, ORANGE)
@@ -3222,7 +3323,7 @@ function view.dir_window()
 
 	g.rect(x, y, w, h, C.menu, 16, 1)
 	g.rect(x, y, w, h, ORANGE, 16, 0.08)
-	g.frame(x, y, w, h, ORANGE, 16, 0.55 + 0.25 * math.sin(S.now * 3), 1.5)
+	g.frame(x, y, w, h, T.white, 16, 0.12)
 	if S.dw_open then hit.add(x, y, w, h, "dw_card") end
 
 	g.rect(x + 24, y + 24, 44, 44, ORANGE, 14, 0.26)
@@ -3315,9 +3416,12 @@ function view.detail()
 
 	local right = cx + cw
 	local act_key = { none = "sm_install", update = "sm_update", manual = "sm_download" }
+	local function act_label(st)
+		return S.err[s.id] and L("sm_retry") or L(act_key[st])
+	end
 	local function act_w(st)
-		if st == "none" or st == "update" or st == "manual" then return g.width(600, 13, L(act_key[st])) + 40 end
-		if st == "busy" then return 14 + g.width(500, 13, L("sm_installing")) + 10 + 24 + 6 end
+		if st == "none" or st == "update" or st == "manual" then return g.width(600, 13, act_label(st)) + 40 end
+		if st == "busy" then return 14 + g.width(500, 13, market.progress(s)) + 10 + 24 + 6 end
 		return 16 + 13 + 7 + g.width(500, 13, L("sm_installed")) + 16
 	end
 	local aw = anim.tween("d_aw:" .. s.id, act_w(k), 0.22, ease_in_out)
@@ -3331,10 +3435,10 @@ function view.detail()
 	anim.cross("d_act:" .. s.id, k, function(st, live, a)
 		local dy = 5 * (1 - a)
 		if act_key[st] then
-			g.text(600, 13, L(act_key[st]), ax + aw / 2, y + 40 + dy, T.dark, 1, "c")
+			g.text(600, 13, act_label(st), ax + aw / 2, y + 40 + dy, S.err[s.id] and T.red or T.dark, 1, "c")
 			if live then hit.add(ax, y + 23, aw, 34, "d_act", { click = function() market.run(s.id) end }) end
 		elseif st == "busy" then
-			g.text(500, 13, L("sm_installing"), right - 6 - 24 - 10, y + 40 + dy, T.t2, 1, "r")
+			g.text(500, 13, market.progress(s), right - 6 - 24 - 10, y + 40 + dy, T.t2, 1, "r")
 			g.ring(right - 6 - 12, y + 40, 9.5 * (0.8 + 0.2 * a), T.white, 0.14, 2.5, 0, 1)
 			g.ring(right - 6 - 12, y + 40, 9.5 * (0.8 + 0.2 * a), T.pill, 1, 2.5, (S.now * 360) % 360, 0.28)
 		else
@@ -3373,20 +3477,39 @@ function view.detail()
 	g.rect(cx, y, 80, 80, s.color, 20, 0.15)
 	g.glyph(s.glyph, 32, cx + 40, y + 40, s.color)
 	local title_w = right - 16 - (cx + 100)
-	local title_y, tag_y = 27, 56
+	local tag = tr(s.tag)
+	local tag_fits = g.width(400, 14, tag) <= title_w
+	local title_y, tag_y, chip_y = 27, 56, 56
 	if s.date then title_y, tag_y = 18, 42 end
+	if not tag_fits then title_y, chip_y = s.date and 24 or 40, 44 end
 	g.text(700, 26, g.fit(700, 26, s.title, title_w), cx + 100, y + title_y, T.t1)
-	g.text(400, 14, g.fit(400, 14, tr(s.tag), title_w), cx + 100, y + tag_y, T.t3)
+	if tag_fits then g.text(400, 14, tag, cx + 100, y + tag_y, T.t3) end
 	if s.date then
 		local label = L("sm_updated") .. " " .. when.short(s.date)
 		local ago = when.ago(s.date)
 		if ago then label = label .. "  ·  " .. ago end
 		local chip_w = math.min(title_w, 14 + 11 + 6 + g.width(600, 12, label) + 14)
-		g.rect(cx + 100, y + 56, chip_w, 24, K.ACCENT, 12, 0.16)
-		g.glyph(K.G.clock, 11, cx + 100 + 14 + 5.5, y + 68, K.ACCENT_TEXT)
-		g.text(600, 12, g.fit(600, 12, label, chip_w - 14 - 11 - 6 - 14), cx + 100 + 14 + 11 + 6, y + 68, K.ACCENT_TEXT)
+		g.rect(cx + 100, y + chip_y, chip_w, 24, K.ACCENT, 12, 0.16)
+		g.glyph(K.G.clock, 11, cx + 100 + 14 + 5.5, y + chip_y + 12, K.ACCENT_TEXT)
+		g.text(600, 12, g.fit(600, 12, label, chip_w - 14 - 11 - 6 - 14), cx + 100 + 14 + 11 + 6, y + chip_y + 12, K.ACCENT_TEXT)
 	end
 	y = y + 80 + 28
+
+	if not tag_fits then
+		local lines = g.wrap(400, 14, tag, cw)
+		for i, line in ipairs(lines) do g.text(400, 14, line, cx, y - 6 + (i - 1) * 22 + 11, T.t3) end
+		y = y + #lines * 22 + 16
+	end
+
+	local err = S.err[s.id]
+	if err then
+		local lines = g.wrap(400, 13, err, cw - 52)
+		local h = 14 + #lines * 19 + 14
+		g.rect(cx, y, cw, h, T.red_bg, 12, 1)
+		g.glyph(K.G.warn, 13, cx + 20, y + 14 + 9, T.red)
+		for i, line in ipairs(lines) do g.text(400, 13, line, cx + 38, y + 14 + (i - 1) * 19 + 9, T.red) end
+		y = y + h + 20
+	end
 
 	if S.rate.url then
 		g.text(600, 13, L("sm_rate"), cx, y + 12, T.t2)
@@ -3425,6 +3548,10 @@ function view.detail()
 		for _, hid in ipairs(s.heroes) do
 			local name = market.hero_name(hid)
 			local w = 6 + 18 + 7 + g.width(500, 12, name) + 12
+			if hx > cx and hx + w > cx + cw then
+				hx = cx
+				y = y + 26 + 6
+			end
 			local chip = "chip:" .. hid
 			g.frame(hx, y, w, 26, T.white, 13, 0.12 + 0.1 * anim.hover(chip))
 			g.hero(hid, hx + 6, y + 4, 18, 1, 9)
@@ -3457,6 +3584,20 @@ function view.detail()
 		end
 		if s.source then g.text(400, 12, L("sm_source") .. ": " .. s.source, x, y + 6, T.t4) end
 		y = y + 28
+	end
+
+	local changes = s.changes[S.lang]
+	if #changes == 0 then changes = s.changes.en end
+	if #changes > 0 and (k == "update" or k == "busy") then
+		g.text(700, 17, L("sm_changes") .. " " .. short_ver(s.latest), cx, y + 11, T.t1)
+		y = y + 22 + 12
+		for _, line in ipairs(changes) do
+			local lines = g.wrap(400, 13, line, cw - 14)
+			g.dot(cx + 2, y + 10, 2, s.color)
+			for li, part in ipairs(lines) do g.text(400, 13, part, cx + 14, y + (li - 1) * 19.5 + 10, T.t2) end
+			y = y + #lines * 19.5 + 8
+		end
+		y = y + 20
 	end
 
 	local about_text = tr(s.about)
@@ -3619,9 +3760,9 @@ function view.bind_chip(x, y)
 	local hv = anim.hover(id)
 	local on = anim.tween("bind_on", S.bind_listen and 1 or 0, 0.16)
 	g.rect(x, y, 132, 28, C.dd, 7)
+	if on > 0.005 then g.rect(x, y, 132, 28, K.ACCENT, 7, 0.22 * on) end
 	local fa = 0.14 * hv * (1 - on)
 	if fa > 0.005 then g.frame(x, y, 132, 28, T.white, 7, fa) end
-	if on > 0.005 then g.frame(x, y, 132, 28, K.ACCENT, 7, 0.9 * on) end
 	local label = S.bind_listen and L("sm_bind_press") or key_name(ui.key:Get())
 	g.text(600, 12, g.fit(600, 12, label, 132 - 16), x + 66, y + 14, S.bind_listen and K.ACCENT_TEXT or T.t5, 1, "c")
 	hit.add(x, y, 132, 28, id, { click = function()
@@ -3848,6 +3989,12 @@ local JS_SINK = [[
 			sink.style.height = '1px';
 			sink.style.opacity = '0';
 			sink.hittest = false;
+			sink.SetPanelEvent('ontextentrychange', () => {
+				if (!sink.IsValid() || sink.text === '') return;
+				const typed = sink.GetAttributeString('typed', '') + sink.text;
+				sink.text = '';
+				sink.SetAttributeString('typed', typed);
+			});
 			const watch = () => {
 				if (!sink.IsValid()) return;
 				if (Date.now() - Number(sink.GetAttributeString('alive', '0')) > %d) return drop();
@@ -3875,6 +4022,31 @@ end
 
 Engine.RunScript(JS_SINK:format("false", K.SINK_TIMEOUT))
 
+function input.poll()
+	local p = input.panel
+	if not p or not p:IsValid() then
+		input.panel = nil
+		if S.now - (input.find_at or -10) < 0.2 then return end
+		input.find_at = S.now
+		p = Panorama.GetPanelByName("ScriptManagerInput", false)
+		if not p then return end
+		input.panel = p
+	end
+	local typed = p:GetAttribute("typed", "")
+	if type(typed) == "string" and typed ~= "" then
+		p:SetAttribute("typed", "")
+		S.typed_ok, S.pend = true, {}
+		local clean = typed:gsub("%c", "")
+		pcall(function()
+			for _, ch in utf8.codes(clean) do edit.insert(utf8.char(ch)) end
+		end)
+		S.q_blink = S.now
+	elseif #S.pend > 0 and S.now - S.pend_t > 0.08 then
+		for _, ch in ipairs(S.pend) do edit.insert(ch) end
+		S.pend = {}
+	end
+end
+
 local function inside(mx, my)
 	return S.wx and mx >= S.wx and my >= S.wy and mx < S.wx + K.W * g.s and my < S.wy + K.H * g.s
 end
@@ -3889,6 +4061,7 @@ function input.press(mx, my)
 	end
 	if id ~= "search" and id ~= "search_clear" then S.focus = false end
 	if id ~= "d_remove" then S.confirm = nil end
+	S.kb_id = nil
 	S.press = { id = id or false, on = on }
 	if on.down then on.down(mx, my) end
 end
@@ -3913,6 +4086,15 @@ function input.end_drag()
 end
 
 function input.key(key)
+	if S.view == "list" and (key == KEY.KEY_UP or key == KEY.KEY_DOWN) then
+		view.kb_move(key == KEY.KEY_DOWN and 1 or -1)
+		return
+	end
+	if S.view == "list" and (key == KEY.KEY_ENTER or key == KEY.KEY_PAD_ENTER) and S.kb_id and BY_ID[S.kb_id] then
+		S.focus = false
+		view.go("detail", S.kb_id)
+		return
+	end
 	if S.focus then
 		local ctrl = Input.IsKeyDown(KEY.KEY_LCONTROL) or Input.IsKeyDown(KEY.KEY_RCONTROL)
 		local shift = Input.IsKeyDown(KEY.KEY_LSHIFT) or Input.IsKeyDown(KEY.KEY_RSHIFT)
@@ -3957,6 +4139,7 @@ function script.OnFrame()
 	if not S.open or S.view ~= "settings" then S.bind_listen = false end
 	if not S.open then S.focus = false end
 	input.sink(S.focus and S.open)
+	if S.focus and S.open then input.poll() end
 	if S.alpha <= 0 then return end
 
 	if S.press and not Input.IsKeyDown(KEY.KEY_MOUSE1, true) then
@@ -4051,6 +4234,11 @@ function script.OnKeyEvent(e)
 			input.sink(true, true)
 			input.key(e.key)
 		end
+		return false
+	end
+	local nav_key = e.key == KEY.KEY_UP or e.key == KEY.KEY_DOWN or e.key == KEY.KEY_ENTER or e.key == KEY.KEY_PAD_ENTER
+	if e.event == Enum.EKeyEvent.EKeyEvent_KEY_DOWN and nav_key and S.view == "list" and over and not Input.IsInputCaptured() then
+		input.key(e.key)
 		return false
 	end
 	if e.event == Enum.EKeyEvent.EKeyEvent_KEY_DOWN and e.key == KEY.KEY_ESCAPE and over and not Input.IsInputCaptured() then

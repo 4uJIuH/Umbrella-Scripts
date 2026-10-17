@@ -1,3 +1,13 @@
+# Update v2.10.3
+
+- If an install or update fails, the button becomes "Retry", and the reason is shown in red on the card and on the script page.
+- While updating all scripts, the banner shows progress ("Updating N of M"), and "Update all" stays disabled until it finishes.
+- The script page shows the changelog of the new version while an update is pending or running.
+- Arrow keys move through the list, and Enter opens the selected script.
+- Search ignores letter case for Cyrillic text too.
+- Installs show per-file progress ("Installing 2/3").
+- Removing a script deletes its files and backups; files shared with other installed scripts are kept.
+
 # Update v2.10.1
 
 - Added sorting by rating (net votes) to the sort menu.
