@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`weather-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/weather-v1.0.0) | 2026-10-13 | [weather.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/weather-v1.0.0/weather.lua) | 6 |
+| [`weather-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/weather-v1.0.0) | 2026-10-13 | [weather.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/weather-v1.0.0/weather.lua) | 7 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=weather&expanded=true)
 <!-- releases:end -->

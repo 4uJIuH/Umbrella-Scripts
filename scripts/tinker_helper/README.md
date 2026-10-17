@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`tinker-helper-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/tinker-helper-v1.0.0) | 2026-10-13 | [tinker_helper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-helper-v1.0.0/tinker_helper.lua) | 6 |
+| [`tinker-helper-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/tinker-helper-v1.0.0) | 2026-10-13 | [tinker_helper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-helper-v1.0.0/tinker_helper.lua) | 7 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=tinker-helper&expanded=true)
 <!-- releases:end -->

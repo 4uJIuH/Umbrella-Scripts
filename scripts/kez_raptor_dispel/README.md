@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`kez-raptor-dispel-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/kez-raptor-dispel-v1.0.0) | 2026-10-13 | [kez_raptor_dispel.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/kez-raptor-dispel-v1.0.0/kez_raptor_dispel.lua) | 3 |
+| [`kez-raptor-dispel-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/kez-raptor-dispel-v1.0.0) | 2026-10-13 | [kez_raptor_dispel.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/kez-raptor-dispel-v1.0.0/kez_raptor_dispel.lua) | 4 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=kez-raptor-dispel&expanded=true)
 <!-- releases:end -->

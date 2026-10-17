@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`script-manager-v2.10.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.2) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.2/script_manager.lua) | 0 |
+| [`script-manager-v2.10.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.2) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.2/script_manager.lua) | 31 |
 | [`script-manager-v2.10.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.1) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.1/script_manager.lua) | 3 |
 | [`script-manager-v2.10.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.0) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.0/script_manager.lua) | 2 |
 | [`script-manager-v2.9.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.9.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.9.0/script_manager.lua) | 70 |

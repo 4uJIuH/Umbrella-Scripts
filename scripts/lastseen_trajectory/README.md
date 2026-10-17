@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`lastseen-trajectory-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/lastseen-trajectory-v1.0.0) | 2026-10-13 | [lastseen_trajectory.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/lastseen-trajectory-v1.0.0/lastseen_trajectory.lua) | 7 |
+| [`lastseen-trajectory-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/lastseen-trajectory-v1.0.0) | 2026-10-13 | [lastseen_trajectory.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/lastseen-trajectory-v1.0.0/lastseen_trajectory.lua) | 9 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=lastseen-trajectory&expanded=true)
 <!-- releases:end -->
