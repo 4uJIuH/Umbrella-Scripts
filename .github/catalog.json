@@ -9908,7 +9908,7 @@
       "title": "Windranger Combo",
       "kind": "lua",
       "category": "dota",
-      "file": "Windranger.lua",
+      "file": "WindRanger.lua",
       "author": "Ariok^^ (Discord: ariok12)",
       "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/windranger_combo",
       "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=windranger-combo&expanded=true",
@@ -9916,7 +9916,7 @@
       "initial": {
         "version": "1.0.0",
         "date": "2026-10-15",
-        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_combo/Windranger.lua"
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_combo/WindRanger.lua"
       },
       "heroes": [
         "windranger"
