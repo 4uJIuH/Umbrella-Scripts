@@ -564,7 +564,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Tinker Turret Dodge](scripts/tinker_turret_dodge) | 16 | `tinker-turret-dodge-v1.1.5` |
 | [Tinker Auto Farm](scripts/tinker_auto_farm) | 12 | `tinker-auto-farm-v1.0.4` |
 | [Auto Shackleshot](scripts/auto_shackleshot) | 9 | `auto-shackleshot-v1.0.0` |
-| [Auto Spark](scripts/auto_spark) | 6 | `auto-spark-v1.0.0` |
+| [Auto Spark](scripts/auto_spark) | 7 | `auto-spark-v1.0.0` |
 | [Rune Destruction](scripts/rune_destruction) | 15 | `rune-destruction-v1.0.2` |
 | [Earth Spirit Kick Combo](scripts/earth_spirit_kick_combo) | 8 | `earth-spirit-kick-combo-v1.0.0` |
 | [HP/Mana 67 Ping](scripts/hp_mana_67_ping) | 3 | `hp-mana-67-ping-v1.0.1` |
@@ -572,8 +572,8 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Dorman Combo Assistant](scripts/dorman_combo_assistant) | 1 | `dorman-combo-assistant-v1.0.0` |
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
-| [qLocalization](scripts/q_localizer) | 57 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 165 | `script-manager-v2.10.1` |
+| [qLocalization](scripts/q_localizer) | 58 | `q-localizer-v1.0.0` |
+| [Script Manager](scripts/script_manager) | 168 | `script-manager-v2.10.2` |
 | [Dynamic Island](scripts/dynamic_island_dota) | 616 | `v2.5.3` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 2 | `tinker-smart-escape-v1.0.0` |
 | [Lane Pull](scripts/lane_pull) | 252 | `lane-pull-v1.0.4` |
@@ -606,7 +606,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Action Recorder](scripts/action_recorder) | 3 | `action-recorder-v1.0.0` |
 | [Io Overcharge](scripts/io_overcharge) | 5 | `io-overcharge-v1.0.0` |
 | [Arc Warden Utilities](scripts/arc_warden_utilities) | 9 | `arc-warden-utilities-v1.1.0` |
-| [Back Cast](scripts/backwards_cast) | 9 | `backwards-cast-v1.0.0` |
+| [Back Cast](scripts/backwards_cast) | 10 | `backwards-cast-v1.0.0` |
 | [Forge Spirit Farm (Beta)](scripts/forge_spirit_farm_beta) | 3 | `forge-spirit-farm-beta-v0.1.0-beta.1` |
 | [Selection Camera](scripts/selection_camera) | 3 | `selection-camera-v1.1.0` |
 | [Spirit Breaker Combo & Ghoul 1000-7](scripts/spirit_breaker_bara) | 2 | `spirit-breaker-bara-v1.0.0` |
@@ -682,13 +682,13 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Camp Stacker](scripts/stacker) | 13 | `camp-stacker-v1.0.0` |
 | [Auto-Ruin](scripts/auto_ruin) | 1 | `auto-ruin-v1.0.0` |
 | [Broodmother Helper](scripts/broodmother_helper) | 0 | `broodmother-helper-v2.1` |
-| [Script Market](scripts/market) | 13 | `market-v1.0.0` |
+| [Script Market](scripts/market) | 14 | `market-v1.0.0` |
 | [MMR Tracker Ultimate](scripts/mmr_tracker_ultimate) | 9 | `mmr-tracker-ultimate-v1.0.0` |
-| [Glyph Timer](scripts/glyph_timer) | 17 | `glyph-timer-v1.0.0` |
+| [Glyph Timer](scripts/glyph_timer) | 18 | `glyph-timer-v1.0.0` |
 | [Rampage Timer](scripts/rampage_timer_h) | 0 | `rampage-timer-h-v1.0.0` |
 | [Lone Druid Bear AI Deluxe](scripts/lone_druid_bear_ai_deluxe) | 5 | `lone-druid-bear-ai-deluxe-v1.0.0` |
 | [PudgeHook AI](scripts/pudge_hook_ai) | 7 | `pudge-hook-ai-v1.0.0` |
-| [Arc Warden Wave Pusher](scripts/arc_warden_wave_pusher) | 17 | `arc-warden-wave-pusher-v1.1.0` |
+| [Arc Warden Wave Pusher](scripts/arc_warden_wave_pusher) | 18 | `arc-warden-wave-pusher-v1.1.0` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/stats/stats-dark.svg">
