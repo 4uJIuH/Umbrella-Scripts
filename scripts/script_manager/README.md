@@ -3,12 +3,13 @@
 каталог скриптов Umbrella с установкой и обновлениями / an Umbrella script catalog with script installation and updates
 
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.3/script_manager.lua) — `script-manager-v2.10.3`, 2026-10-17
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.4/script_manager.lua) — `script-manager-v2.10.4`, 2026-10-17
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`script-manager-v2.10.3`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.3) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.3/script_manager.lua) | 0 |
-| [`script-manager-v2.10.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.2) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.2/script_manager.lua) | 49 |
+| [`script-manager-v2.10.4`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.4) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.4/script_manager.lua) | 0 |
+| [`script-manager-v2.10.3`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.3) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.3/script_manager.lua) | 1 |
+| [`script-manager-v2.10.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.2) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.2/script_manager.lua) | 51 |
 | [`script-manager-v2.10.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.1) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.1/script_manager.lua) | 3 |
 | [`script-manager-v2.10.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.0) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.0/script_manager.lua) | 2 |
 | [`script-manager-v2.9.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.9.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.9.0/script_manager.lua) | 70 |
@@ -60,6 +61,13 @@ Script Manager объединяет каталог скриптов в отде�
 4. Откройте `Scripts → Scripts → Script Manager`, включите его и назначьте клавишу для открытия панели.
 
 ## Что нового
+
+# Обновление v2.10.4
+
+- Скрипты разных авторов с одинаковым именем файла (Windranger Powershot и Windranger Combo) больше не перезаписывают друг друга: каждый сохраняется в свой файл, а установка одного не отмечает другой установленным.
+- Проверка обновлений стала точнее: скрипты скачиваются в свежей версии без кэша GitHub, версия читается только из своей строки, а локальные файлы пересканируются при каждой проверке.
+- Автообновление ставит только то, что действительно установлено, и только когда оно включено.
+- Поиск героев понимает сокращения и прозвища: wr, qop, квопа, wk, скелет, am и другие, а также запрос, набранный в русской раскладке («цк» = wr). Общий поиск находит скрипты по этим сокращениям.
 
 # Обновление v2.10.3
 
@@ -205,6 +213,13 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 4. Open `Scripts → Scripts → Script Manager`, enable it, and assign a key to open the panel.
 
 ## Changelog
+
+# Update v2.10.4
+
+- Scripts by different authors with the same file name (Windranger Powershot and Windranger Combo) no longer overwrite each other: each gets its own file, and installing one no longer marks the other as installed.
+- Update checks are more accurate: scripts are downloaded fresh past GitHub's cache, the version is read only from its own line, and local files are rescanned on every check.
+- Auto-update installs only scripts that are actually installed, and only while it is turned on.
+- Hero search understands abbreviations and nicknames such as wr, qop, wk and am, plus queries typed in the Russian layout ("цк" = wr). The main search finds scripts by these abbreviations too.
 
 # Update v2.10.3
 

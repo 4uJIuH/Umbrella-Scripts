@@ -573,14 +573,14 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 73 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 217 | `script-manager-v2.10.3` |
-| [Dynamic Island](scripts/dynamic_island_dota) | 621 | `v2.5.3` |
+| [Script Manager](scripts/script_manager) | 220 | `script-manager-v2.10.4` |
+| [Dynamic Island](scripts/dynamic_island_dota) | 622 | `v2.5.3` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 3 | `tinker-smart-escape-v1.0.0` |
 | [Lane Pull](scripts/lane_pull) | 260 | `lane-pull-v1.0.4` |
 | [DS Spot Block](scripts/ds_spot_block) | 53 | `ds-spot-block-v1.0.1` |
 | [Custom Background](scripts/custom_background) | 43 | `custom-background-v1.0.0` |
 | [Auto Stack](scripts/auto_stack) | 150 | `auto-stack-v1.1.0` |
-| [Draft Helper](scripts/draft_helper) | 1394 | `draft-helper-v2.0.0-beta.20` |
+| [Draft Helper](scripts/draft_helper) | 1395 | `draft-helper-v2.0.0-beta.20` |
 | [MusicUI](scripts/musicui) | 708 | `musicui-v1.0.8` |
 | [Umbrella Lua Developer Skill](scripts/umbrella_lua) | 195 | `umbrella-lua-v1.0.4` |
 | [Custom Stats](scripts/custom_stats) | 10 | `custom-stats-v1.0.0` |
@@ -613,11 +613,11 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [1000-7 Counter](scripts/ghoul_counter) | 6 | `ghoul-counter-v1.0.0` |
 | [Invoker Jarvis](scripts/invoker_jarvis) | 39 | `v1.3.1` |
 | [TikTok](scripts/umbrella_tiktok) | 285 | `v1.3.2` |
-| [Invoker AutoStack](scripts/invoker_autostack) | 70 | `v1.4.2` |
+| [Invoker AutoStack](scripts/invoker_autostack) | 71 | `v1.4.2` |
 | [Old Last Match](scripts/old_last_match) | 10 | `old-last-match-v1.0.0` |
 | [Unusual Secret](scripts/unusual_secret) | 10 | `unusual-secret-v2.1.0` |
 | [Atmospheric Fog Restorer](scripts/atmospheric_fog) | 5 | `atmospheric-fog-v1.0.0` |
-| [Windranger Powershot Killsteal](scripts/windranger_powershot) | 12 | `windranger-powershot-v1.0.0` |
+| [Windranger Powershot Killsteal](scripts/windranger_powershot) | 13 | `windranger-powershot-v1.0.0` |
 | [MoM Sabre Abuse](scripts/mom_sabre_abuse) | 3 | `mom-sabre-abuse-v2.0.0` |
 | [Tinker 1x6 Farm](scripts/tinker_1x6_farm) | 0 | `tinker-1x6-farm-v1.0.0` |
 | [Forge Spirit Helper](scripts/forge_spirit_helper) | 11 | `forge-spirit-helper-v1.0.0` |
