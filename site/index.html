@@ -118,7 +118,7 @@ code{font:inherit;font-weight:500;color:var(--fg);background:var(--sec);padding:
 .chart-head b{font-size:22px;font-weight:600;letter-spacing:-.01em}
 .chart-head span{color:var(--faint);font-size:13px}
 .chart-head .up{color:var(--ok)}
-.plot{position:relative;margin-left:44px;height:220px;cursor:crosshair;touch-action:pan-y}
+.plot{position:relative;margin-left:44px;height:300px;cursor:crosshair;touch-action:pan-y}
 .plot svg{display:block;width:100%;height:100%;overflow:visible}
 .yax{position:absolute;left:-44px;top:0;bottom:0;width:36px}
 .yax span{position:absolute;right:0;transform:translateY(-50%);font-size:11px;color:var(--faint)}
@@ -350,9 +350,16 @@ function renderStats(){
   plot.onpointerleave=hide
   plot.onpointercancel=hide
   plot.onpointerup=e=>{if(e.pointerType!=="mouse")hide()}
-  document.onpointermove=e=>{if(plot.classList.contains("hover")&&!plot.contains(e.target))hide()}
-  document.onscroll=hide
-  document.documentElement.onmouseleave=hide
+  plot.onmouseleave=hide
+  plot.onpointerout=e=>{if(!e.relatedTarget||!plot.contains(e.relatedTarget))hide()}
+  if(window.__plotOff)window.__plotOff()
+  const away=e=>{if(!plot.isConnected||!e.composedPath().includes(plot))hide()}
+  addEventListener("pointermove",away,true)
+  addEventListener("mousemove",away,true)
+  addEventListener("scroll",hide,true)
+  addEventListener("blur",hide)
+  document.addEventListener("mouseleave",hide)
+  window.__plotOff=()=>{removeEventListener("pointermove",away,true);removeEventListener("mousemove",away,true);removeEventListener("scroll",hide,true);removeEventListener("blur",hide);document.removeEventListener("mouseleave",hide)}
   plot.onpointerdown=plot.onpointermove
   const total=items.reduce((a,s)=>a+s.total,0), top=Math.max(...items.map(s=>s.total))
   stable.innerHTML=`<div class="tr"><span>${t("th_script")}</span><span>${t("th_dl")}</span><span>${t("th_ver")}</span><span>${t("th_share")}</span></div>`+
