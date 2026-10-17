@@ -1,3 +1,10 @@
+# Update v2.10.4
+
+- Scripts by different authors with the same file name (Windranger Powershot and Windranger Combo) no longer overwrite each other: each gets its own file, and installing one no longer marks the other as installed.
+- Update checks are more accurate: scripts are downloaded fresh past GitHub's cache, the version is read only from its own line, and local files are rescanned on every check.
+- Auto-update installs only scripts that are actually installed, and only while it is turned on.
+- Hero search understands abbreviations and nicknames such as wr, qop, wk and am, plus queries typed in the Russian layout ("цк" = wr). The main search finds scripts by these abbreviations too.
+
 # Update v2.10.3
 
 - If an install or update fails, the button becomes "Retry", and the reason is shown in red on the card and on the script page.

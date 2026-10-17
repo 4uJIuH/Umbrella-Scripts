@@ -696,7 +696,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.10.3"
+local VERSION = "2.10.4"
 
 local K = {
 	CFG = "script_market",
@@ -874,6 +874,52 @@ for i, h in ipairs(HEROES) do
 	HERO_BY_ID[h[1]] = { id = h[1], name = h[2], order = i }
 	HERO_KEY[h[1]:gsub("[^%a%d]", "")] = h[1]
 	HERO_KEY[h[2]:lower():gsub("[^%a%d]", "")] = h[1]
+end
+
+-- short names players type in search, besides initials of multi-word names (qop, wk, am...)
+local HERO_ALIAS = {
+	abaddon = "аба абадон абаддон", alchemist = "алх алхимик", ancient_apparition = "аа апарат",
+	antimage = "ам антимаг", arc_warden = "арк аркварден", axe = "акс", bane = "бейн", batrider = "bat бэт бат",
+	beastmaster = "bm бм бист", bloodseeker = "bs бс сикер блудсикер", bounty_hunter = "bh бх баунти",
+	brewmaster = "brew бру панда", bristleback = "bb бб брист", broodmother = "brood бруда паук",
+	centaur = "cent кент кентавр", chaos_knight = "хаос", chen = "чен", clinkz = "клинкз",
+	rattletrap = "clock клок клокверк", crystal_maiden = "cm цм кристалка", dark_seer = "дс сир",
+	dark_willow = "dw виллоу", dawnbreaker = "dawn давн", dazzle = "даз дазл", death_prophet = "дп",
+	disruptor = "disr дизраптор", doom_bringer = "дум", dragon_knight = "дк драгон", drow_ranger = "drow дров дровка",
+	earth_spirit = "esp ес спирит", earthshaker = "шейкер шекер", elder_titan = "титан", ember_spirit = "ember эмбер",
+	enchantress = "ench энча", enigma = "энигма", faceless_void = "fv void войд", grimstroke = "grim грим",
+	gyrocopter = "gyro гиро", hoodwink = "худвинк белка", huskar = "хуск хускар", invoker = "invo инвок инвокер",
+	wisp = "wisp висп виспа", jakiro = "thd джакиро", juggernaut = "jugg джагер джага", keeper_of_the_light = "kotl котл",
+	kez = "кез", kunkka = "кунка", largo = "ларго", legion_commander = "лц легионка", leshrac = "lesh леш лешрак",
+	lich = "лич", life_stealer = "ls naix гуля найкс", lina = "лина", lion = "лион", lone_druid = "лд друид",
+	luna = "луна", lycan = "ликан", magnataur = "magnus magn магнус", marci = "марси", mars = "марс",
+	medusa = "dusa медуза дуза", meepo = "мипо", mirana = "potm мирана", monkey_king = "мк манки",
+	morphling = "morph морф", muerta = "муэрта", naga_siren = "naga нага", furion = "furion фурион фура",
+	necrolyte = "necro некр некрофос", night_stalker = "нс балан", nyx_assassin = "nyx никс", ogre_magi = "ogre огр",
+	omniknight = "omni омник", oracle = "оракл", obsidian_destroyer = "od од", pangolier = "pango панго",
+	phantom_assassin = "па фантомка мортред", phantom_lancer = "пл лансер", phoenix = "феникс", primal_beast = "праймал",
+	puck = "пак", pudge = "пудж", pugna = "пугна", queenofpain = "qopa квопа акаша", razor = "разор", riki = "рики",
+	ringmaster = "rm", rubick = "руби рубик", sand_king = "ск сенд", shadow_demon = "сд", nevermore = "sf сф шадоу невермор",
+	shadow_shaman = "rhasta шаман раста", silencer = "сайленсер", skywrath_mage = "sky скай", slardar = "слардар",
+	slark = "сларк", snapfire = "snap снапфаер бабка", sniper = "снайпер", spectre = "spec спектра",
+	spirit_breaker = "bara бара сб", storm_spirit = "storm шторм", sven = "свен", techies = "течис минер",
+	templar_assassin = "та темпларка", terrorblade = "тб террор", tidehunter = "tide тайд", shredder = "timber тимбер",
+	tinker = "тинкер", tiny = "тини", treant = "трент тринт", troll_warlord = "troll тролль", tusk = "туск",
+	abyssal_underlord = "pitlord андер питлорд", undying = "андаинг", ursa = "урса", vengefulspirit = "venge венга",
+	venomancer = "veno веном веник", viper = "вайпер", visage = "визаж", void_spirit = "войдспирит",
+	warlock = "wl варлок", weaver = "вивер", windrunner = "wr windrunner вр винда виндранер виндраннер",
+	winter_wyvern = "ww виверна", witch_doctor = "wd вд вичдоктор", skeleton_king = "wk вк скелет леорик",
+	zuus = "zeus зевс",
+}
+
+local LAYOUT = {}
+do
+	local ru, en = "йцукенгшщзфывапролдячсмить", "qwertyuiopasdfghjklzxcvbnm"
+	local i = 0
+	for _, cp in utf8.codes(ru) do
+		i = i + 1
+		LAYOUT[cp] = en:sub(i, i)
+	end
 end
 
 local SORTS = {
@@ -1515,6 +1561,12 @@ function web.trusted(url)
 	return false
 end
 
+-- raw.githubusercontent keeps a branch file for minutes: without this a fresh catalog meets an old script
+function web.fresh(url)
+	if not url:match("^https://raw%.githubusercontent%.com/") then return url end
+	return url .. (url:find("?", 1, true) and "&" or "?") .. "_=" .. os.time()
+end
+
 function web.get(url, done)
 	local sent = HTTP.Request("GET", url, { timeout = 20 }, function(response)
 		local code = tonumber(response.code) or 0
@@ -1683,6 +1735,22 @@ function text.lower(str)
 	end))
 end
 
+function text.squash(str)
+	return (text.lower(str):gsub("[%s%p]", ""))
+end
+
+-- query typed with the Russian layout on: "цк" -> "wr"
+function text.latin(str)
+	if not utf8.len(str) then return nil end
+	local out = {}
+	for _, cp in utf8.codes(str) do
+		local c = LAYOUT[cp]
+		if cp > 127 and not c then return nil end
+		out[#out + 1] = c or utf8.char(cp)
+	end
+	return table.concat(out)
+end
+
 function text.humanize(id)
 	return (id:gsub("_", " "):gsub("(%a)([%w]*)", function(a, b) return a:upper() .. b end))
 end
@@ -1764,16 +1832,23 @@ end
 function market.scan()
 	local dir = fs.dir()
 	S.inst = {}
+	cache.list, cache.upd = nil, nil
 	if not dir then return end
 	for _, s in ipairs(SCRIPTS) do
+		s.legacy_hit = false
 		if not s.manual then
 			local body = fs.read(dir .. s.file)
+			local record = Config.ReadString(K.CFG, "installed_" .. s.id, "")
+			if not body and s.legacy and record ~= "" then
+				body = fs.read(dir .. s.legacy)
+				s.legacy_hit = body ~= nil
+			end
 			if body then
 				local version
 				if s.version_marker == "NONE" then
-					version = Config.ReadString(K.CFG, "installed_" .. s.id, "0.0.0")
+					version = record
 				else
-					version = body:match(s.version_marker .. '%s*=%s*"([^"]+)"')
+					version = market.marker(s, body)
 				end
 				S.inst[s.id] = ver.valid(version) and version or "0.0.0"
 			end
@@ -1802,6 +1877,60 @@ function market.hero_name(id)
 	name = type(loc) == "string" and loc ~= "" and loc or HERO_BY_ID[id].name
 	S.hero_names[id] = name
 	return name
+end
+
+function market.hero_keys(id)
+	local h = HERO_BY_ID[id]
+	local loc = market.hero_name(id)
+	if h.keys and h.keys_loc == loc then return h.keys end
+	local k = { names = {}, words = {}, short = {} }
+	for _, name in ipairs({ h.name, loc, (id:gsub("_", " ")) }) do
+		k.names[#k.names + 1] = text.squash(name)
+		local initials = {}
+		for word in text.lower(name):gmatch("[^%s%-]+") do
+			local w = text.squash(word)
+			if w ~= "" then
+				k.words[#k.words + 1] = w
+				initials[#initials + 1] = utf8.char(utf8.codepoint(w, 1))
+			end
+		end
+		if #initials > 1 then k.short[#k.short + 1] = table.concat(initials) end
+	end
+	for alias in (HERO_ALIAS[id] or ""):gmatch("%S+") do k.short[#k.short + 1] = alias end
+	h.keys, h.keys_loc = k, loc
+	return k
+end
+
+function market.hero_query(raw)
+	local q = text.squash(raw)
+	if q == "" then return nil end
+	local out = { q }
+	local lat = text.latin(q)
+	if lat and lat ~= q then out[2] = lat end
+	return out
+end
+
+-- loose: any part of the name ("king"), otherwise only word starts; aliases and initials match by prefix.
+-- 2 = the query is exactly an alias or initials ("wr"), such heroes go first
+function market.hero_match(id, qs, loose)
+	local k = market.hero_keys(id)
+	local hit = false
+	for _, q in ipairs(qs) do
+		if (utf8.len(q) or 0) >= 2 then
+			for _, a in ipairs(k.short) do
+				if a == q then return 2 end
+				if a:sub(1, #q) == q then hit = 1 end
+			end
+		end
+		for _, name in ipairs(k.names) do
+			local at = name:find(q, 1, true)
+			if at and (loose or at == 1) then hit = 1 end
+		end
+		for _, w in ipairs(k.words) do
+			if w:sub(1, #q) == q then hit = 1 end
+		end
+	end
+	return hit
 end
 
 function market.package_path(path)
@@ -1892,7 +2021,7 @@ function market.build(catalog, meta)
 		local file = url_name(install_url)
 		local ext = file:match("^[%w%._%- ]+%.(%a+)$")
 		ext = type(ext) == "string" and ext:lower() or ""
-		if type(e) == "table" and type(e.id) == "string" and ver.valid(e.version) and web.trusted(install_url)
+		if type(e) == "table" and type(e.id) == "string" and not BY_ID[e.id] and ver.valid(e.version) and web.trusted(install_url)
 			and (ext == "lua" or ext == "zip" or ext == "rar") then
 			local m = described[e.id] or {}
 			local ru, en = m.ru or {}, m.en or {}
@@ -1930,6 +2059,18 @@ function market.build(catalog, meta)
 			item.author_key, item.author_name = market.author(item.author)
 			SCRIPTS[#SCRIPTS + 1] = item
 			BY_ID[item.id] = item
+		end
+	end
+
+	-- Windows ignores case, so Windranger.lua and WindRanger.lua of two authors are one file: each gets its own name
+	local names = {}
+	for _, s in ipairs(SCRIPTS) do
+		local key = s.file:lower()
+		names[key] = (names[key] or 0) + 1
+	end
+	for _, s in ipairs(SCRIPTS) do
+		if names[s.file:lower()] > 1 then
+			s.legacy, s.file = s.file, s.id .. (s.file:match("%.%w+$") or "")
 		end
 	end
 
@@ -1977,6 +2118,10 @@ function market.build(catalog, meta)
 	if not nav_ok then S.nav = "all" end
 	if S.view == "detail" and not BY_ID[S.sel] then S.view = "list" end
 	market.scan()
+end
+
+function market.marker(s, body)
+	return body:match("%f[%w_]" .. s.version_marker .. '%s*=%s*"([^"]+)"')
 end
 
 function market.finish(ok, err)
@@ -2059,6 +2204,7 @@ function market.load()
 	local st = S.net
 	if st.state == "loading" then return end
 	st.state, st.err, st.stamp = "loading", nil, st.stamp + 1
+	market.scan()
 	local stamp = os.time() .. "-" .. st.stamp
 
 	web.get(K.CATALOG .. "?_=" .. stamp, function(body, key, detail)
@@ -2159,7 +2305,7 @@ function market.download(s, done)
 
 	local function try(i, prev_key, prev_detail)
 		if not urls[i] then return done(nil, prev_key or "sm_e_net", prev_detail) end
-		web.get(urls[i], function(body, key, detail)
+		web.get(web.fresh(urls[i]), function(body, key, detail)
 			local valid = false
 			if body then
 				if s.manual then
@@ -2175,7 +2321,7 @@ function market.download(s, done)
 				else
 					valid = #body > 100 and body:sub(1, 1) ~= "<" and body:sub(1, 2) ~= "PK" and body:sub(1, 4) ~= "Rar!"
 					if valid and s.version_marker ~= "NONE" then
-						valid = body:match(s.version_marker .. '%s*=%s*"([^"]+)"') == s.latest
+						valid = market.marker(s, body) == s.latest
 					end
 				end
 				if valid then return done(body) end
@@ -2196,7 +2342,7 @@ function market.download_files(s, done)
 		if not web.trusted(file.url) or not market.package_path(file.path) then
 			return done(nil, "sm_e_valid")
 		end
-		web.get(file.url, function(body, key, detail)
+		web.get(web.fresh(file.url), function(body, key, detail)
 			if not body then return done(nil, key, detail) end
 			if #body < 100 or body:sub(1, 1) == "<" then return done(nil, "sm_e_valid") end
 			if file.path:match("%.json$") and #body < 300000 then
@@ -2228,8 +2374,12 @@ function market.run(id)
 			local function finish(files, file_key, file_detail)
 				if not files then return market.fail(s, file_key or "sm_e_net", file_detail) end
 				local function complete()
-					if not s.manual and s.version_marker == "NONE" then
+					if not s.manual then
 						Config.WriteString(K.CFG, "installed_" .. s.id, s.latest)
+					end
+					if s.legacy_hit then
+						os.remove(dir .. s.legacy)
+						os.remove(dir .. s.legacy .. ".script-manager.bak")
 					end
 					if not s.manual then
 						local paths = {}
@@ -2293,11 +2443,12 @@ function market.remove(id)
 	end
 	S.confirm, S.err[id] = nil, nil
 	local s, dir = BY_ID[id], fs.dir()
-	if not s or not dir or not os.remove(dir .. s.file) then
+	local file = s and (s.legacy_hit and s.legacy or s.file)
+	if not s or not dir or not os.remove(dir .. file) then
 		if s then market.fail(s, "sm_e_remove") end
 		return
 	end
-	os.remove(dir .. s.file .. ".script-manager.bak")
+	os.remove(dir .. file .. ".script-manager.bak")
 	local shared = { [K.NLZ_FILE] = true }
 	for _, o in ipairs(SCRIPTS) do
 		if o.id ~= id and S.inst[o.id] then
@@ -2313,6 +2464,7 @@ function market.remove(id)
 		end
 	end
 	Config.WriteString(K.CFG, "files_" .. id, "")
+	Config.WriteString(K.CFG, "installed_" .. id, "")
 	market.scan()
 	market.applied(s.title)
 end
@@ -2379,6 +2531,7 @@ end
 
 function market.list_build()
 	local q = text.lower(S.query)
+	local qs = market.hero_query(S.query)
 	local in_cat = S.nav ~= "all" and S.nav ~= "installed" and S.nav ~= "updates" and S.nav ~= "heroes" and S.nav ~= "authors"
 	local out = {}
 	for _, s in ipairs(SCRIPTS) do
@@ -2396,6 +2549,11 @@ function market.list_build()
 		if ok and q ~= "" then
 			ok = text.lower(s.title):find(q, 1, true) ~= nil or text.lower(tr(s.tag)):find(q, 1, true) ~= nil
 				or (s.author_name ~= nil and text.lower(s.author_name):find(q, 1, true) ~= nil)
+			if not ok and qs then
+				for _, hid in ipairs(s.heroes) do
+					if market.hero_match(hid, qs, false) then ok = true break end
+				end
+			end
 		end
 		if ok then out[#out + 1] = s end
 	end
@@ -3212,13 +3370,14 @@ function view.heroes()
 	hit.add(x0, 0, w0, K.TOP, "drag", { down = view.start_drag })
 	view.search(x0 + 24, 16, w0 - 48 - K.CLOSE - 10)
 
-	local q = text.lower(S.query)
+	local qs = market.hero_query(S.query)
 	local with, rest = {}, {}
 	for _, h in ipairs(HEROES) do
-		local found = q == "" or h[2]:lower():find(q, 1, true) ~= nil or text.lower(market.hero_name(h[1])):find(q, 1, true) ~= nil
+		local found = not qs or market.hero_match(h[1], qs, true)
 		if found then
 			local list = (S.hero_n[h[1]] or 0) > 0 and with or rest
-			list[#list + 1] = h[1]
+			table.insert(list, found == 2 and (list.top or 0) + 1 or #list + 1, h[1])
+			if found == 2 then list.top = (list.top or 0) + 1 end
 		end
 	end
 
