@@ -575,7 +575,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Rem Assistant](scripts/rem_assistant) | 1 | `rem-assistant-v1.0.0` |
 | [Souls Vault / Rem's Tunnel ESP](scripts/vault_tunnel_esp) | 1 | `vault-tunnel-esp-v1.0.0` |
 | [qLocalization](scripts/q_localizer) | 73 | `q-localizer-v1.0.0` |
-| [Script Manager](scripts/script_manager) | 231 | `script-manager-v2.10.5` |
+| [Script Manager](scripts/script_manager) | 231 | `script-manager-v2.10.6` |
 | [Dynamic Island](scripts/dynamic_island_dota) | 622 | `v2.5.3` |
 | [Tinker Smart Escape](scripts/tinker_smart_escape) | 3 | `tinker-smart-escape-v1.0.0` |
 | [Lane Pull](scripts/lane_pull) | 261 | `lane-pull-v1.0.4` |
@@ -615,7 +615,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [1000-7 Counter](scripts/ghoul_counter) | 6 | `ghoul-counter-v1.0.0` |
 | [Invoker Jarvis](scripts/invoker_jarvis) | 39 | `v1.3.1` |
 | [TikTok](scripts/umbrella_tiktok) | 285 | `v1.3.2` |
-| [Invoker AutoStack](scripts/invoker_autostack) | 71 | `v1.4.2` |
+| [Invoker AutoStack](scripts/invoker_autostack) | 72 | `v1.4.2` |
 | [Old Last Match](scripts/old_last_match) | 10 | `old-last-match-v1.0.0` |
 | [Unusual Secret](scripts/unusual_secret) | 10 | `unusual-secret-v2.1.0` |
 | [Atmospheric Fog Restorer](scripts/atmospheric_fog) | 5 | `atmospheric-fog-v1.0.0` |
@@ -656,7 +656,7 @@ This third-party library is by qfun (qfun_g9s), not my script.
 | [Lone Druid Auto Farm](scripts/ld_farm) | 0 | `ld-farm-v1.7` |
 | [Unusual Effects](scripts/unusual_cosmetics) | 2 | `unusual-cosmetics-v1.0.0` |
 | [Techies Tazer Dispel](scripts/techies_tazer_dispel) | 4 | `techies-tazer-dispel-v1.0.0` |
-| [SteamSync](scripts/steam_sync) | 197 | `v1.0.1` |
+| [SteamSync](scripts/steam_sync) | 199 | `v1.0.1` |
 | [Techies Brain Combo](scripts/techies_brain) | 2 | `techies-brain-v0.2.6` |
 | [Creep Control](scripts/creep_control) | 11 | `creep-control-v1.0.1` |
 | [KOTL Illuminate Pro](scripts/kotl_illuminate_pro) | 19 | `kotl-illuminate-pro-v1.0.0` |

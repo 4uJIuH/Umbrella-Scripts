@@ -3,10 +3,11 @@
 каталог скриптов Umbrella с установкой и обновлениями / an Umbrella script catalog with script installation and updates
 
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.5/script_manager.lua) — `script-manager-v2.10.5`, 2026-10-17
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.6/script_manager.lua) — `script-manager-v2.10.6`, 2026-10-17
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
+| [`script-manager-v2.10.6`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.6) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.6/script_manager.lua) | 0 |
 | [`script-manager-v2.10.5`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.5) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.5/script_manager.lua) | 0 |
 | [`script-manager-v2.10.4`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.4) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.4/script_manager.lua) | 6 |
 | [`script-manager-v2.10.3`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.3) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.3/script_manager.lua) | 6 |
@@ -62,6 +63,10 @@ Script Manager объединяет каталог скриптов в отде�
 4. Откройте `Scripts → Scripts → Script Manager`, включите его и назначьте клавишу для открытия панели.
 
 ## Что нового
+
+# Обновление v2.10.6
+
+- При сортировке по дате обновления дата показывается рядом с названием скрипта («BehaviorScoreHelper · 15 окт 2026»), а не над оценками.
 
 # Обновление v2.10.5
 
@@ -218,6 +223,10 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 4. Open `Scripts → Scripts → Script Manager`, enable it, and assign a key to open the panel.
 
 ## Changelog
+
+# Update v2.10.6
+
+- When sorting by update date, the date is shown next to the script name ("BehaviorScoreHelper · Oct 15 2026") instead of above the ratings.
 
 # Update v2.10.5
 
