@@ -272,9 +272,9 @@
     },
     {
       "id": "script_manager",
-      "version": "2.9.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/6508dcb6d8bbdb6a633e97837bd7176d15a64ff5/scripts/script_manager/script_manager.lua",
-      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.9.0/script_manager.lua",
+      "version": "2.10.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/c3190404d074ae16816153fede07b54a0114b451/scripts/script_manager/script_manager.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.0/script_manager.lua",
       "manual": false,
       "needs_q_localizer": false,
       "author": "4uJIuH",
@@ -286,7 +286,7 @@
           "Scripts \u2192 Scripts \u2192 Script Manager"
         ]
       },
-      "date": "2026-10-15"
+      "date": "2026-10-17"
     },
     {
       "id": "dynamic_island_dota",
