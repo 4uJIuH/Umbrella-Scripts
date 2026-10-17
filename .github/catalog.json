@@ -11016,6 +11016,57 @@
           "Open `Heroes → Hero List → Arc Warden → Clone Settings → Auto Play Settings → Умный пуш пачек`."
         ]
       }
+    },
+    {
+      "id": "echo_bkb_dodge",
+      "tag": "echo-bkb-dodge",
+      "title": "Echo BKB Dodge",
+      "kind": "lua",
+      "category": "dota",
+      "file": "echo_bkb_dodge.lua",
+      "heroes": [],
+      "author": "dofamineaddict (Discord: sn3gx)",
+      "source_url": "https://github.com/4uJIuH/umbrella-scripts/tree/main/scripts/echo_bkb_dodge",
+      "releases_url": "https://github.com/4uJIuH/umbrella-scripts/releases?q=echo-bkb-dodge&expanded=true",
+      "version_marker": "NONE",
+      "needs_q_localizer": false,
+      "initial": {
+        "version": "1.2.0",
+        "date": "2026-10-17",
+        "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/echo_bkb_dodge/echo_bkb_dodge.lua"
+      },
+      "ru": {
+        "tagline": "автоматически нажимает BKB при блинке вражеского Earthshaker",
+        "about": "Echo BKB Dodge отслеживает подтверждённый блинк вражеского Earthshaker и использует BKB, только если Echo Slam готов, рядом достаточно союзных юнитов и предмет доступен. Автор: dofamineaddict (Discord: sn3gx).",
+        "features": [
+          "Реагирует на подтверждённый блинк Earthshaker рядом с героем, а не на обычное сближение",
+          "Срабатывает, только если Echo Slam изучен, готов к применению и Шейкеру хватает маны",
+          "Требует не менее трёх союзных юнитов вместе с вашим героем в пределах 700 единиц от вас и точки приземления; учитываются пауки Бруды, иллюзии, герои и крипы",
+          "Проверяет доступность BKB и не отправляет повторную команду при активной невосприимчивости к эффектам",
+          "Может не успеть защитить от мгновенной комбинации Blink и Echo Slam"
+        ],
+        "install": [
+          "Поместите `echo_bkb_dodge.lua` в папку `umbrella\\scripts`.",
+          "Перезагрузите Lua-скрипты.",
+          "Откройте `Scripts → Other → echo_bkb_dodge → Защита → Echo Slam` и включите «Включить защиту»."
+        ]
+      },
+      "en": {
+        "tagline": "automatically uses BKB when an enemy Earthshaker Blinks nearby",
+        "about": "Echo BKB Dodge watches for a confirmed Blink by an enemy Earthshaker and uses BKB only when Echo Slam is ready, enough allied units are nearby, and the item is available. Author: dofamineaddict (Discord: sn3gx).",
+        "features": [
+          "Reacts to a confirmed Earthshaker Blink near your hero, not ordinary movement toward you",
+          "Triggers only when Echo Slam is learned and ready and Earthshaker has enough mana",
+          "Requires at least three allied units including your hero within 700 units of you and the landing point; Broodmother spiders, illusions, heroes, and creeps count",
+          "Checks that BKB is available and avoids another command while debuff immunity is already active",
+          "May not protect against an instant Blink-and-Echo Slam combo"
+        ],
+        "install": [
+          "Place `echo_bkb_dodge.lua` in the `umbrella\\scripts` folder.",
+          "Reload the Lua scripts.",
+          "Open `Scripts → Other → echo_bkb_dodge → Защита → Echo Slam` and enable “Включить защиту”."
+        ]
+      }
     }
   ]
 }

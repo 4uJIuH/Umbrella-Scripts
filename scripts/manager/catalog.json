@@ -5075,6 +5075,25 @@
         "arc_warden"
       ],
       "version_marker": "NONE"
+    },
+    {
+      "id": "echo_bkb_dodge",
+      "version": "1.2.0",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/echo_bkb_dodge/echo_bkb_dodge.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/echo_bkb_dodge/echo_bkb_dodge.lua",
+      "manual": false,
+      "needs_q_localizer": false,
+      "author": "dofamineaddict (Discord: sn3gx)",
+      "menu": {
+        "ru": [
+          "Scripts \u2192 Other \u2192 echo_bkb_dodge \u2192 \u0417\u0430\u0449\u0438\u0442\u0430 \u2192 Echo Slam"
+        ],
+        "en": [
+          "Scripts \u2192 Other \u2192 echo_bkb_dodge \u2192 \u0417\u0430\u0449\u0438\u0442\u0430 \u2192 Echo Slam"
+        ]
+      },
+      "date": "2026-10-17",
+      "version_marker": "NONE"
     }
   ]
 }

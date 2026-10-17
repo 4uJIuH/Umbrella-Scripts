@@ -37,6 +37,15 @@ class MenuLocationsTests(unittest.TestCase):
         self.assertIn("return localization.Localize(key) or fallback", source)
         self.assertNotIn(":Create(menuLabel(", source)
 
+    def test_echo_bkb_dodge_menu_path_matches_install_instructions(self):
+        self.assertEqual(
+            paths_for(self.by_id["echo_bkb_dodge"]),
+            {
+                "ru": ["Scripts → Other → echo_bkb_dodge → Защита → Echo Slam"],
+                "en": ["Scripts → Other → echo_bkb_dodge → Защита → Echo Slam"],
+            },
+        )
+
     def test_dynamic_menu_paths_are_explicit(self):
         paths = paths_for(self.by_id["windranger_powershot"])
         self.assertEqual(
