@@ -272,9 +272,9 @@
     },
     {
       "id": "script_manager",
-      "version": "2.10.3",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/a8fce4466957e9af2e484d6d09eb3ab167566047/scripts/script_manager/script_manager.lua",
-      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.3/script_manager.lua",
+      "version": "2.10.4",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/3daabe140fc9a950b7765d989d7716040d614831/scripts/script_manager/script_manager.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.4/script_manager.lua",
       "manual": false,
       "needs_q_localizer": false,
       "author": "4uJIuH",
