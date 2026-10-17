@@ -4364,8 +4364,8 @@
     {
       "id": "opendota_stats_tracker",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/opendota_stats_tracker/dotaplus.lua",
-      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/opendota_stats_tracker/dotaplus.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/opendota_stats_tracker/opendota_stats_tracker.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/opendota_stats_tracker/opendota_stats_tracker.lua",
       "manual": false,
       "needs_q_localizer": false,
       "author": "64qt (Discord: 32tq)",
@@ -4597,8 +4597,8 @@
     {
       "id": "windranger_combo",
       "version": "1.0.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_combo/WindRanger.lua",
-      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_combo/WindRanger.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_combo/windranger_combo.lua",
+      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_combo/windranger_combo.lua",
       "manual": false,
       "needs_q_localizer": false,
       "author": "Ariok^^ (Discord: ariok12)",

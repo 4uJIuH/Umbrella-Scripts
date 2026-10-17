@@ -3,7 +3,7 @@
 комбо и визуальные помощники для Windranger / combo and visual helpers for Windranger
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `WindRanger.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_combo/WindRanger.lua)
+Последняя версия: [`v1.0.0` — `windranger_combo.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/windranger_combo/windranger_combo.lua)
 
 [Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=windranger-combo&expanded=true)
 <!-- releases:end -->

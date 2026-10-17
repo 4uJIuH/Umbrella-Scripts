@@ -3,7 +3,7 @@
 строит статистику игры по последним матчам и данным OpenDota / builds performance statistics from recent matches and OpenDota
 
 <!-- releases:start -->
-Последняя версия: [`v1.0.0` — `dotaplus.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/opendota_stats_tracker/dotaplus.lua)
+Последняя версия: [`v1.0.0` — `opendota_stats_tracker.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/opendota_stats_tracker/opendota_stats_tracker.lua)
 
 [Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=opendota-stats-tracker&expanded=true)
 <!-- releases:end -->
