@@ -1,3 +1,8 @@
+# Update v2.10.0
+
+- Added script ratings: 👍/👎 counts are shown in the list, and you can vote on a script's page. Pressing the same thumb again removes the vote; pressing the other one switches it.
+- Votes are tied to your Steam ID; if it cannot be read, voting is disabled with a notice.
+
 # Update v2.9.0
 
 - Improved performance with large catalogs by caching lists and update counts and skipping cards outside the viewport.

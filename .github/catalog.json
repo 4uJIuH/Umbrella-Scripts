@@ -1,5 +1,6 @@
 {
   "repo": "4uJIuH/umbrella-scripts",
+  "ratings_url": "https://umbrella-ratings.umbrella-scripts.workers.dev",
   "scripts": [
     {
       "id": "tinker_turret_dodge",

@@ -456,6 +456,9 @@ local localization = qLocalization.new({
 		sm_e_net = "No answer from the server",
 		sm_e_parse = "Catalog could not be read",
 		sm_e_remove = "Could not remove the file",
+		sm_rate = "Rating",
+		sm_rate_nouser = "Voting is unavailable: Steam ID not found",
+		sm_rate_fail = "Vote was not saved",
 
 		sm_settings = "Settings",
 		sm_g_updates = "UPDATES",
@@ -636,6 +639,9 @@ local localization = qLocalization.new({
 		sm_e_net = "Сервер не ответил",
 		sm_e_parse = "Не удалось прочитать каталог",
 		sm_e_remove = "Не удалось удалить файл",
+		sm_rate = "Рейтинг",
+		sm_rate_nouser = "Голосование недоступно: Steam ID не найден",
+		sm_rate_fail = "Голос не сохранён",
 
 		sm_settings = "Настройки",
 		sm_g_updates = "ОБНОВЛЕНИЯ",
@@ -682,7 +688,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.9.0"
+local VERSION = "2.10.0"
 
 local K = {
 	CFG = "script_market",
@@ -714,6 +720,7 @@ local K = {
 		authors = "\u{f0c0}", universal = "\u{f0ac}",
 		search = "\u{f002}", clear = "\u{f057}", sort = "\u{f160}", refresh = "\u{f2f9}", sliders = "\u{f1de}",
 		warn = "\u{f071}", folder = "\u{f07b}",
+		thumb_up = "\u{f164}", thumb_down = "\u{f165}",
 		back = "\u{f053}", down = "\u{f078}", up = "\u{f077}", check = "\u{f00c}", store = "\u{f54e}", clock = "\u{f017}",
 	},
 }
@@ -893,6 +900,7 @@ local S = {
 	query = "", focus = false, confirm = nil, qc = 0, qa = nil, q_off = 0, q_drag = false, q_click = 0, q_blink = 0,
 	foot = "idle", foot_until = 0, changed = {}, note = nil, reload_at = nil,
 	net = { state = "idle", at = 0, stamp = 0, err = nil, loaded = false },
+	rate = { url = nil, user = nil, tot = {}, mine = {}, busy = {} },
 	inst = {}, busy = {}, nlz = nil, nlz_wait = nil, dir = nil, dw = nil, dw_open = false,
 	set = {
 		open_mode = "reload",
@@ -1504,6 +1512,22 @@ function web.get(url, done)
 	if not sent then done(nil, "sm_e_net") end
 end
 
+function web.post(url, body, done)
+	local sent = HTTP.Request("POST", url, {
+		timeout = 20,
+		headers = { ["Content-Type"] = "application/json" },
+		data = body,
+	}, function(response)
+		local code = tonumber(response.code) or 0
+		if code == 200 and type(response.response) == "string" and #response.response > 0 then
+			done(response.response)
+		else
+			done(nil)
+		end
+	end, "script_manager_vote")
+	if not sent then done(nil) end
+end
+
 local ver = {}
 
 function ver.valid(v)
@@ -1927,6 +1951,72 @@ function market.finish(ok, err)
 	if ok and S.set.auto then S.auto_due = true end
 end
 
+function market.rate_id()
+	local ok, id = pcall(GC.GetSteamID)
+	id = ok and tostring(id or "") or ""
+	if id:match("^%d+$") and #id >= 15 and #id <= 20 then return id end
+	return nil
+end
+
+function market.rate_load()
+	local r = S.rate
+	if not r.url then return end
+	r.user = market.rate_id()
+	local url = r.url .. "/ratings" .. (r.user and ("?user=" .. r.user) or "")
+	web.get(url, function(body)
+		if not body then return end
+		local ok, data = pcall(function() return JSON:decode(body) end)
+		if not ok or type(data) ~= "table" or type(data.ratings) ~= "table" then return end
+		r.tot = data.ratings
+		r.mine = type(data.mine) == "table" and data.mine or {}
+	end)
+end
+
+function market.rate_vote(id, vote)
+	local r = S.rate
+	if not r.url or not r.user or r.busy[id] then return end
+	local prev = r.mine[id] or 0
+	local want = prev == vote and 0 or vote
+	r.busy[id] = true
+	web.post(r.url .. "/vote", JSON:encode({ script = id, user = r.user, vote = want }), function(body)
+		r.busy[id] = nil
+		local ok, data = false, nil
+		if body then ok, data = pcall(function() return JSON:decode(body) end) end
+		if ok and type(data) == "table" and tonumber(data.up) and tonumber(data.down) then
+			r.tot[id] = { up = data.up, down = data.down }
+			r.mine[id] = want ~= 0 and want or nil
+		else
+			market.note("sm_err_t", L("sm_rate_fail"))
+		end
+	end)
+end
+
+function market.rate_chips(x, cy, id, interactive, align_r)
+	local r = S.rate
+	local t = r.tot[id] or {}
+	local up, down = tonumber(t.up) or 0, tonumber(t.down) or 0
+	local mine = r.mine[id]
+	local su, sd = tostring(up), tostring(down)
+	local wu = 12 + 5 + g.width(600, 12, su)
+	local wd = 12 + 5 + g.width(600, 12, sd)
+	local sx = align_r and (x - wu - 12 - wd) or x
+	local function chip(cx0, glyph, str, w, on, kind)
+		local cid = "rate:" .. kind .. ":" .. id
+		local hv = interactive and r.user and anim.hover(cid) or 0
+		local col = on and K.ACCENT_TEXT or T.t4
+		if on then g.rect(cx0 - 6, cy - 12, w + 12, 24, K.ACCENT, 12, 0.16) end
+		g.rect(cx0 - 6, cy - 12, w + 12, 24, T.white, 12, 0.08 * hv)
+		g.glyph(glyph, 12, cx0 + 6, cy, col)
+		g.text(600, 12, str, cx0 + 17, cy, col)
+		if interactive and r.user then
+			hit.add(cx0 - 6, cy - 12, w + 12, 24, cid, { click = function() market.rate_vote(id, kind == "up" and 1 or -1) end })
+		end
+	end
+	chip(sx, K.G.thumb_up, su, wu, mine == 1, "up")
+	chip(sx + wu + 12, K.G.thumb_down, sd, wd, mine == -1, "down")
+	return wu + 12 + wd
+end
+
 function market.load()
 	local st = S.net
 	if st.state == "loading" then return end
@@ -1947,6 +2037,9 @@ function market.load()
 			end
 			local built, err = pcall(market.build, catalog, meta)
 			market.finish(built, not built and tostring(err) or nil)
+			local rurl = meta and meta.ratings_url
+			S.rate.url = type(rurl) == "string" and rurl:match("^https://[%w%-%._~:/]+$") and rurl:gsub("/+$", "") or nil
+			market.rate_load()
 		end)
 	end)
 end
@@ -2790,7 +2883,9 @@ function view.row(s, rx, y, rw, interactive, sep)
 		local used = tx + tw + ((va > 0.01 and S.vers[s.id]) and (8 + g.width(400, 12, S.vers[s.id])) or 0)
 		if lx - g.width(400, 12, label) > used + 12 then g.text(400, 12, label, lx, y + 28, T.t4, 1, "r") end
 	end
-	g.text(400, 13, g.fit(400, 13, tr(s.tag), rw - 70 - 136 - 12), tx, y + 47, T.t3)
+	local rate_on = S.rate.url ~= nil
+	g.text(400, 13, g.fit(400, 13, tr(s.tag), rw - 70 - 136 - 12 - (rate_on and 96 or 0)), tx, y + 47, T.t3)
+	if rate_on then market.rate_chips(rx + rw - 136, y + 47, s.id, false, true) end
 	if interactive then view.action(s, rx + rw - 12, y + 36) end
 	if sep then g.hl(rx + 70, y + 72, rw - 70 - 12, T.white, C.line / 255) end
 end
@@ -3280,6 +3375,14 @@ function view.detail()
 		g.text(600, 12, g.fit(600, 12, label, chip_w - 14 - 11 - 6 - 14), cx + 100 + 14 + 11 + 6, y + 68, K.ACCENT_TEXT)
 	end
 	y = y + 80 + 28
+
+	if S.rate.url then
+		g.text(600, 13, L("sm_rate"), cx, y + 12, T.t2)
+		local lw = g.width(600, 13, L("sm_rate"))
+		local cw_chips = market.rate_chips(cx + lw + 24, y + 12, s.id, true, false)
+		if not S.rate.user then g.text(400, 12, L("sm_rate_nouser"), cx + lw + 24 + cw_chips + 20, y + 12, T.t4) end
+		y = y + 24 + 20
+	end
 
 	if #s.dirs > 0 and v == nil then y = view.dir_hint(s, cx, y, cw) end
 

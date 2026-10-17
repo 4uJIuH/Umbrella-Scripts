@@ -1,0 +1,8 @@
+name = "umbrella-ratings"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "umbrella-ratings"
+database_id = "e6aaadb6-76f4-4640-8593-e19f9c54a48f"
