@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`selection-camera-v1.1.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/selection-camera-v1.1.0) | 2026-10-13 | [selection_camera.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/selection-camera-v1.1.0/selection_camera.lua) | 1 |
+| [`selection-camera-v1.1.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/selection-camera-v1.1.0) | 2026-10-13 | [selection_camera.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/selection-camera-v1.1.0/selection_camera.lua) | 3 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=selection-camera&expanded=true)
 <!-- releases:end -->

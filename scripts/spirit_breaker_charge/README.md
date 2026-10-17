@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`spirit-breaker-charge-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/spirit-breaker-charge-v1.0.0) | 2026-10-13 | [spirit_breaker_charge.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-breaker-charge-v1.0.0/spirit_breaker_charge.lua) | 5 |
+| [`spirit-breaker-charge-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/spirit-breaker-charge-v1.0.0) | 2026-10-13 | [spirit_breaker_charge.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/spirit-breaker-charge-v1.0.0/spirit_breaker_charge.lua) | 10 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=spirit-breaker-charge&expanded=true)
 <!-- releases:end -->

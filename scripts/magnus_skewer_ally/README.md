@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`magnus-skewer-ally-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/magnus-skewer-ally-v1.0.0) | 2026-10-13 | [magnus_skewer_ally.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/magnus-skewer-ally-v1.0.0/magnus_skewer_ally.lua) | 4 |
+| [`magnus-skewer-ally-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/magnus-skewer-ally-v1.0.0) | 2026-10-13 | [magnus_skewer_ally.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/magnus-skewer-ally-v1.0.0/magnus_skewer_ally.lua) | 7 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=magnus-skewer-ally&expanded=true)
 <!-- releases:end -->

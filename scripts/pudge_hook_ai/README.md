@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`pudge-hook-ai-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/pudge-hook-ai-v1.0.0) | 2026-10-15 | [PudgeHook.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/pudge-hook-ai-v1.0.0/PudgeHook.lua) | 3 |
+| [`pudge-hook-ai-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/pudge-hook-ai-v1.0.0) | 2026-10-15 | [PudgeHook.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/pudge-hook-ai-v1.0.0/PudgeHook.lua) | 7 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=pudge-hook-ai&expanded=true)
 <!-- releases:end -->

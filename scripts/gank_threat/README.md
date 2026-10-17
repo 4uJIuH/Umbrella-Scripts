@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`gank-threat-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/gank-threat-v1.0.0) | 2026-10-13 | [gank_threat.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/gank-threat-v1.0.0/gank_threat.lua) | 12 |
+| [`gank-threat-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/gank-threat-v1.0.0) | 2026-10-13 | [gank_threat.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/gank-threat-v1.0.0/gank_threat.lua) | 13 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=gank-threat&expanded=true)
 <!-- releases:end -->

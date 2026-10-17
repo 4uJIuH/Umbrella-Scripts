@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`io-overcharge-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/io-overcharge-v1.0.0) | 2026-10-13 | [io_overcharge.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/io-overcharge-v1.0.0/io_overcharge.lua) | 3 |
+| [`io-overcharge-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/io-overcharge-v1.0.0) | 2026-10-13 | [io_overcharge.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/io-overcharge-v1.0.0/io_overcharge.lua) | 5 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=io-overcharge&expanded=true)
 <!-- releases:end -->

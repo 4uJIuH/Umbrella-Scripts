@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`enemy-cooldowns-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/enemy-cooldowns-v1.0.0) | 2026-10-13 | [enemy_cooldowns.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/enemy-cooldowns-v1.0.0/enemy_cooldowns.lua) | 0 |
+| [`enemy-cooldowns-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/enemy-cooldowns-v1.0.0) | 2026-10-13 | [enemy_cooldowns.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/enemy-cooldowns-v1.0.0/enemy_cooldowns.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=enemy-cooldowns&expanded=true)
 <!-- releases:end -->

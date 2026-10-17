@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`mmr-tracker-ultimate-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/mmr-tracker-ultimate-v1.0.0) | 2026-10-13 | [mmr_tracker_ultimate.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/mmr-tracker-ultimate-v1.0.0/mmr_tracker_ultimate.lua) | 8 |
+| [`mmr-tracker-ultimate-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/mmr-tracker-ultimate-v1.0.0) | 2026-10-13 | [mmr_tracker_ultimate.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/mmr-tracker-ultimate-v1.0.0/mmr_tracker_ultimate.lua) | 9 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=mmr-tracker-ultimate&expanded=true)
 <!-- releases:end -->

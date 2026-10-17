@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`eul-wind-waker-blink-helper-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/eul-wind-waker-blink-helper-v1.0.0) | 2026-10-13 | [eul_wind_waker_blink_helper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/eul-wind-waker-blink-helper-v1.0.0/eul_wind_waker_blink_helper.lua) | 0 |
+| [`eul-wind-waker-blink-helper-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/eul-wind-waker-blink-helper-v1.0.0) | 2026-10-13 | [eul_wind_waker_blink_helper.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/eul-wind-waker-blink-helper-v1.0.0/eul_wind_waker_blink_helper.lua) | 2 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=eul-wind-waker-blink-helper&expanded=true)
 <!-- releases:end -->

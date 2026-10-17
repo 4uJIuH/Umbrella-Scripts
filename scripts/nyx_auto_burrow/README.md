@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`nyx-auto-burrow-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/nyx-auto-burrow-v1.0.0) | 2026-10-13 | [nyx_auto_burrow.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/nyx-auto-burrow-v1.0.0/nyx_auto_burrow.lua) | 2 |
+| [`nyx-auto-burrow-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/nyx-auto-burrow-v1.0.0) | 2026-10-13 | [nyx_auto_burrow.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/nyx-auto-burrow-v1.0.0/nyx_auto_burrow.lua) | 3 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=nyx-auto-burrow&expanded=true)
 <!-- releases:end -->

@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`illusion-tracker-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/illusion-tracker-v1.0.0) | 2026-10-13 | [IllusionTracker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/illusion-tracker-v1.0.0/IllusionTracker.lua) | 0 |
+| [`illusion-tracker-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/illusion-tracker-v1.0.0) | 2026-10-13 | [IllusionTracker.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/illusion-tracker-v1.0.0/IllusionTracker.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=illusion-tracker&expanded=true)
 <!-- releases:end -->

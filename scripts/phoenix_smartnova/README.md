@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`phoenix-smartnova-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/phoenix-smartnova-v1.0.0) | 2026-10-13 | [smartnova.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/phoenix-smartnova-v1.0.0/smartnova.lua) | 2 |
+| [`phoenix-smartnova-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/phoenix-smartnova-v1.0.0) | 2026-10-13 | [smartnova.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/phoenix-smartnova-v1.0.0/smartnova.lua) | 4 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=phoenix-smartnova&expanded=true)
 <!-- releases:end -->

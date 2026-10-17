@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`unusual-cosmetics-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/unusual-cosmetics-v1.0.0) | 2026-10-13 | [unusual_cosmetics.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/unusual-cosmetics-v1.0.0/unusual_cosmetics.lua) | 0 |
+| [`unusual-cosmetics-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/unusual-cosmetics-v1.0.0) | 2026-10-13 | [unusual_cosmetics.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/unusual-cosmetics-v1.0.0/unusual_cosmetics.lua) | 2 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=unusual-cosmetics&expanded=true)
 <!-- releases:end -->

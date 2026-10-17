@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`russian-roulette-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/russian-roulette-v1.0.0) | 2026-10-13 | [russian_roulette.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/russian-roulette-v1.0.0/russian_roulette.lua) | 0 |
+| [`russian-roulette-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/russian-roulette-v1.0.0) | 2026-10-13 | [russian_roulette.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/russian-roulette-v1.0.0/russian_roulette.lua) | 1 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=russian-roulette&expanded=true)
 <!-- releases:end -->

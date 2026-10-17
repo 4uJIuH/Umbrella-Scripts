@@ -3,13 +3,9 @@
 считает время под разными эффектами контроля / tracks time spent under disabling effects
 
 <!-- releases:start -->
-Скачать: [ugnetenie.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/disable-tracker-v1.0.0/ugnetenie.lua) — `disable-tracker-v1.0.0`, 2026-10-13
+Последняя версия: [`v1.0.0` — `ugnetenie.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/disable_tracker/ugnetenie.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`disable-tracker-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/disable-tracker-v1.0.0) | 2026-10-13 | [ugnetenie.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/disable-tracker-v1.0.0/ugnetenie.lua) | 1 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=disable-tracker&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=disable-tracker&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет

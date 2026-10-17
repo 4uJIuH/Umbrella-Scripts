@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`techies-tazer-dispel-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/techies-tazer-dispel-v1.0.0) | 2026-10-13 | [techies_tazer_dispel.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-tazer-dispel-v1.0.0/techies_tazer_dispel.lua) | 3 |
+| [`techies-tazer-dispel-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/techies-tazer-dispel-v1.0.0) | 2026-10-13 | [techies_tazer_dispel.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-tazer-dispel-v1.0.0/techies_tazer_dispel.lua) | 4 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=techies-tazer-dispel&expanded=true)
 <!-- releases:end -->

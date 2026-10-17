@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`ward-predictor-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/ward-predictor-v1.0.0) | 2026-10-13 | [ward_predictor.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/ward-predictor-v1.0.0/ward_predictor.lua) | 9 |
+| [`ward-predictor-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/ward-predictor-v1.0.0) | 2026-10-13 | [ward_predictor.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/ward-predictor-v1.0.0/ward_predictor.lua) | 12 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=ward-predictor&expanded=true)
 <!-- releases:end -->
