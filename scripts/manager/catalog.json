@@ -5079,8 +5079,8 @@
     {
       "id": "echo_bkb_dodge",
       "version": "1.2.0",
-      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/echo_bkb_dodge/echo_bkb_dodge.lua",
-      "release": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/echo_bkb_dodge/echo_bkb_dodge.lua",
+      "url": "https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/7cadee85eb1bc35891ccc62826130baec2c3f97c/scripts/echo_bkb_dodge/echo_bkb_dodge.lua",
+      "release": "https://github.com/4uJIuH/umbrella-scripts/releases/download/echo-bkb-dodge-v1.2.0/echo_bkb_dodge.lua",
       "manual": false,
       "needs_q_localizer": false,
       "author": "dofamineaddict (Discord: sn3gx)",
