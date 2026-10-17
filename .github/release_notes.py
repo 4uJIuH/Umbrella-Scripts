@@ -53,6 +53,12 @@ def find(tag):
     return None
 
 
+def latest(text):
+    """Only the newest entry of a changelog: everything before the second heading."""
+    parts = re.split(r"\n(?=#{1,3} |\*\*)", text.strip())
+    return parts[0].strip()
+
+
 def body(script, tag):
     folder = BASE / "scripts" / script["id"]
     version = tag[len(script["tag"]) + 1:]
@@ -61,9 +67,9 @@ def body(script, tag):
     ru = folder / "CHANGELOG.md"
     en = folder / "CHANGELOG.en.md"
     if ru.exists():
-        out += ["### Что нового", "", ru.read_text(encoding="utf-8").strip(), ""]
+        out += ["### Что нового", "", latest(ru.read_text(encoding="utf-8")), ""]
     if en.exists():
-        out += ["### What's new", "", en.read_text(encoding="utf-8").strip(), ""]
+        out += ["### What's new", "", latest(en.read_text(encoding="utf-8")), ""]
     if not ru.exists() and not en.exists():
         out += [script["ru"]["tagline"], "", script["en"]["tagline"], ""]
 

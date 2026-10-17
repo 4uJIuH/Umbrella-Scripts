@@ -1,3 +1,7 @@
+# Update v2.10.1
+
+- Added sorting by rating (net votes) to the sort menu.
+
 # Update v2.10.0
 
 - Added script ratings: 👍/👎 counts are shown in the list, and you can vote on a script's page. Pressing the same thumb again removes the vote; pressing the other one switches it.

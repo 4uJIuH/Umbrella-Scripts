@@ -358,6 +358,7 @@ local localization = qLocalization.new({
 		sm_sort_name = "By name",
 		sm_sort_inst = "Installed first",
 		sm_sort_updated = "By update date",
+		sm_sort_rating = "By rating",
 
 		sm_updated = "Updated",
 		sm_today = "today",
@@ -538,6 +539,7 @@ local localization = qLocalization.new({
 		sm_sort_name = "По названию",
 		sm_sort_inst = "Установленные сверху",
 		sm_sort_updated = "По дате обновления",
+		sm_sort_rating = "По рейтингу",
 
 		sm_updated = "Обновлено",
 		sm_today = "сегодня",
@@ -688,7 +690,7 @@ local UI = localization.WrapLibrary(Menu)
 local L = localization.Get
 local JSON = require("assets.JSON")
 
-local VERSION = "2.10.0"
+local VERSION = "2.10.1"
 
 local K = {
 	CFG = "script_market",
@@ -875,6 +877,14 @@ local SORTS = {
 		if da ~= db then return da > db end
 		return a.order < b.order
 	end },
+	{ id = "rating", key = "sm_sort_rating", cmp = function(a, b, st)
+		local ra, rb = st.rate.tot[a.id] or {}, st.rate.tot[b.id] or {}
+		local ua, ub = tonumber(ra.up) or 0, tonumber(rb.up) or 0
+		local na, nb = ua - (tonumber(ra.down) or 0), ub - (tonumber(rb.down) or 0)
+		if na ~= nb then return na > nb end
+		if ua ~= ub then return ua > ub end
+		return a.order < b.order
+	end },
 	{ id = "name", key = "sm_sort_name", cmp = function(a, b) return a.title:lower() < b.title:lower() end },
 }
 
@@ -900,7 +910,7 @@ local S = {
 	query = "", focus = false, confirm = nil, qc = 0, qa = nil, q_off = 0, q_drag = false, q_click = 0, q_blink = 0,
 	foot = "idle", foot_until = 0, changed = {}, note = nil, reload_at = nil,
 	net = { state = "idle", at = 0, stamp = 0, err = nil, loaded = false },
-	rate = { url = nil, user = nil, tot = {}, mine = {}, busy = {} },
+	rate = { url = nil, user = nil, tot = {}, mine = {}, busy = {}, rev = 0 },
 	inst = {}, busy = {}, nlz = nil, nlz_wait = nil, dir = nil, dw = nil, dw_open = false,
 	set = {
 		open_mode = "reload",
@@ -1687,7 +1697,7 @@ local cache = {}
 
 function market.list()
 	local key = table.concat({ S.nav, S.query, S.sort, tostring(S.inst_first), tostring(S.hero), tostring(S.author),
-		S.lang, tostring(S.set.beta), #SCRIPTS }, "|")
+		S.lang, tostring(S.set.beta), #SCRIPTS, S.rate.rev }, "|")
 	local c = cache.list
 	if not c or c.key ~= key or S.now - c.t > CACHE_TTL then
 		c = { key = key, t = S.now, v = market.list_build() }
@@ -1969,6 +1979,7 @@ function market.rate_load()
 		if not ok or type(data) ~= "table" or type(data.ratings) ~= "table" then return end
 		r.tot = data.ratings
 		r.mine = type(data.mine) == "table" and data.mine or {}
+		r.rev = r.rev + 1
 	end)
 end
 
@@ -1985,6 +1996,7 @@ function market.rate_vote(id, vote)
 		if ok and type(data) == "table" and tonumber(data.up) and tonumber(data.down) then
 			r.tot[id] = { up = data.up, down = data.down }
 			r.mine[id] = want ~= 0 and want or nil
+			r.rev = r.rev + 1
 		else
 			market.note("sm_err_t", L("sm_rate_fail"))
 		end
@@ -2327,7 +2339,7 @@ function market.list_build()
 			local ia, ib = S.inst[a.id] ~= nil, S.inst[b.id] ~= nil
 			if ia ~= ib then return ia end
 		end
-		return cmp(a, b)
+		return cmp(a, b, S)
 	end)
 	return out
 end
