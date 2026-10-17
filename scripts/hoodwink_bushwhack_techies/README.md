@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`hoodwink-bushwhack-techies-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/hoodwink-bushwhack-techies-v1.0.0) | 2026-10-13 | [hoodwink_bushwhack_techies.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/hoodwink-bushwhack-techies-v1.0.0/hoodwink_bushwhack_techies.lua) | 3 |
+| [`hoodwink-bushwhack-techies-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/hoodwink-bushwhack-techies-v1.0.0) | 2026-10-13 | [hoodwink_bushwhack_techies.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/hoodwink-bushwhack-techies-v1.0.0/hoodwink_bushwhack_techies.lua) | 4 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=hoodwink-bushwhack-techies&expanded=true)
 <!-- releases:end -->

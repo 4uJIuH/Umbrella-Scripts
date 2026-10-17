@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`techies-combo-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/techies-combo-v1.0.0) | 2026-10-13 | [techies_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-combo-v1.0.0/techies_combo.lua) | 9 |
+| [`techies-combo-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/techies-combo-v1.0.0) | 2026-10-13 | [techies_combo.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/techies-combo-v1.0.0/techies_combo.lua) | 10 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=techies-combo&expanded=true)
 <!-- releases:end -->

@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`forge-spirit-farm-beta-v0.1.0-beta.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/forge-spirit-farm-beta-v0.1.0-beta.1) | 2026-10-13 | [forge_spirit_farm.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/forge-spirit-farm-beta-v0.1.0-beta.1/forge_spirit_farm.lua) | 3 |
+| [`forge-spirit-farm-beta-v0.1.0-beta.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/forge-spirit-farm-beta-v0.1.0-beta.1) | 2026-10-13 | [forge_spirit_farm.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/forge-spirit-farm-beta-v0.1.0-beta.1/forge_spirit_farm.lua) | 5 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=forge-spirit-farm-beta&expanded=true)
 <!-- releases:end -->

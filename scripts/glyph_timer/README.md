@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`glyph-timer-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/glyph-timer-v1.0.0) | 2026-10-14 | [glyph_timer.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/glyph-timer-v1.0.0/glyph_timer.lua) | 22 |
+| [`glyph-timer-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/glyph-timer-v1.0.0) | 2026-10-14 | [glyph_timer.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/glyph-timer-v1.0.0/glyph_timer.lua) | 25 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=glyph-timer&expanded=true)
 <!-- releases:end -->

@@ -3,11 +3,12 @@
 каталог скриптов Umbrella с установкой и обновлениями / an Umbrella script catalog with script installation and updates
 
 <!-- releases:start -->
-Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.2/script_manager.lua) — `script-manager-v2.10.2`, 2026-10-17
+Скачать: [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.3/script_manager.lua) — `script-manager-v2.10.3`, 2026-10-17
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`script-manager-v2.10.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.2) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.2/script_manager.lua) | 31 |
+| [`script-manager-v2.10.3`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.3) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.3/script_manager.lua) | 0 |
+| [`script-manager-v2.10.2`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.2) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.2/script_manager.lua) | 49 |
 | [`script-manager-v2.10.1`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.1) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.1/script_manager.lua) | 3 |
 | [`script-manager-v2.10.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.10.0) | 2026-10-17 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.10.0/script_manager.lua) | 2 |
 | [`script-manager-v2.9.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/script-manager-v2.9.0) | 2026-10-15 | [script_manager.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/script-manager-v2.9.0/script_manager.lua) | 70 |
@@ -59,6 +60,16 @@ Script Manager объединяет каталог скриптов в отде�
 4. Откройте `Scripts → Scripts → Script Manager`, включите его и назначьте клавишу для открытия панели.
 
 ## Что нового
+
+# Обновление v2.10.3
+
+- Если установка или обновление не удалось, кнопка становится «Повторить», а причина ошибки выводится красным на карточке и на странице скрипта.
+- При обновлении всех скриптов баннер показывает прогресс («Обновление: N из M»), а кнопка «Обновить все» неактивна до конца.
+- На странице скрипта при ожидающем или идущем обновлении показан список изменений новой версии.
+- Стрелки перемещают выбор по списку, Enter открывает выбранный скрипт.
+- Поиск не учитывает регистр для русских букв.
+- Установка показывает прогресс по файлам («Установка 2/3»).
+- Удаление скрипта удаляет его файлы и резервные копии; файлы, общие с другими установленными скриптами, сохраняются.
 
 # Обновление v2.10.1
 
@@ -194,6 +205,16 @@ Script Manager brings the script catalog into a customizable panel. It shows des
 4. Open `Scripts → Scripts → Script Manager`, enable it, and assign a key to open the panel.
 
 ## Changelog
+
+# Update v2.10.3
+
+- If an install or update fails, the button becomes "Retry", and the reason is shown in red on the card and on the script page.
+- While updating all scripts, the banner shows progress ("Updating N of M"), and "Update all" stays disabled until it finishes.
+- The script page shows the changelog of the new version while an update is pending or running.
+- Arrow keys move through the list, and Enter opens the selected script.
+- Search ignores letter case for Cyrillic text too.
+- Installs show per-file progress ("Installing 2/3").
+- Removing a script deletes its files and backups; files shared with other installed scripts are kept.
 
 # Update v2.10.1
 

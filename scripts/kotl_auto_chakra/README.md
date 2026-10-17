@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`kotl-auto-chakra-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/kotl-auto-chakra-v1.0.0) | 2026-10-13 | [kotl_auto_chakra.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/kotl-auto-chakra-v1.0.0/kotl_auto_chakra.lua) | 6 |
+| [`kotl-auto-chakra-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/kotl-auto-chakra-v1.0.0) | 2026-10-13 | [kotl_auto_chakra.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/kotl-auto-chakra-v1.0.0/kotl_auto_chakra.lua) | 7 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=kotl-auto-chakra&expanded=true)
 <!-- releases:end -->

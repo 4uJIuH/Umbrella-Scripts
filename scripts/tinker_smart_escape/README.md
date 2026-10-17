@@ -7,7 +7,7 @@
 
 | версия | дата | файл | загрузок |
 | --- | --- | --- | --- |
-| [`tinker-smart-escape-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/tinker-smart-escape-v1.0.0) | 2026-10-13 | [tinker_smart_escape.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-smart-escape-v1.0.0/tinker_smart_escape.lua) | 2 |
+| [`tinker-smart-escape-v1.0.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/tinker-smart-escape-v1.0.0) | 2026-10-13 | [tinker_smart_escape.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/tinker-smart-escape-v1.0.0/tinker_smart_escape.lua) | 3 |
 
 [Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=tinker-smart-escape&expanded=true)
 <!-- releases:end -->

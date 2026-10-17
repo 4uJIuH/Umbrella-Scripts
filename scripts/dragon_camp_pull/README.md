@@ -3,13 +3,9 @@
 отправляет пачки с линии в лес к приручённому дракону / pulls lane waves into the jungle for a controlled dragon to farm
 
 <!-- releases:start -->
-Скачать: [dragon_camp_pull.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dragon-camp-pull-v1.0/dragon_camp_pull.lua) — `dragon-camp-pull-v1.0`, 2026-10-13
+Последняя версия: [`v1.0` — `dragon_camp_pull.lua`](https://raw.githubusercontent.com/4uJIuH/umbrella-scripts/main/scripts/dragon_camp_pull/dragon_camp_pull.lua)
 
-| версия | дата | файл | загрузок |
-| --- | --- | --- | --- |
-| [`dragon-camp-pull-v1.0`](https://github.com/4uJIuH/umbrella-scripts/releases/tag/dragon-camp-pull-v1.0) | 2026-10-13 | [dragon_camp_pull.lua](https://github.com/4uJIuH/umbrella-scripts/releases/download/dragon-camp-pull-v1.0/dragon_camp_pull.lua) | 0 |
-
-[Все релизы](https://github.com/4uJIuH/umbrella-scripts/releases?q=dragon-camp-pull&expanded=true)
+[Релизы автора на GitHub](https://github.com/4uJIuH/umbrella-scripts/releases?q=dragon-camp-pull&expanded=true)
 <!-- releases:end -->
 
 ## Что умеет
